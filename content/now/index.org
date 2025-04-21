@@ -1,6 +1,6 @@
 #+title: Now
 #+slug: index
-#+date: <2025-04-02 Wed 21:55:00>
+#+date: <2025-04-21 Mon 13:10:00>
 
 This is a [[https://nownownow.com/about][/now]] page.
 
@@ -15,24 +15,23 @@ This is a [[https://nownownow.com/about][/now]] page.
 
 * Media
 
-- Playing a few games:
+- Playing some games:
   - Black Ops 6
   - Dynasty Warriors: Origins
   - Nier: Automata
   - Rocket League
   - Stellar Blade
 - Watching some shows:
-  - Bad Monkey
-  - Ramen Akaneko
-  - Sakamoto Days
-  - Wilfred
+  - A.P. Bio
+  - Archer
+  - Cheers
+  - Initial D
+  - Wildboyz
 
 * Tech
 
-- Working through some GitLab certifications.
-- Achieved my GitHub Foundations cert. Very easy.
-- Migrated source code back to [[https://github.com/ccleberg][GitHub]].
-- Migrated domain back to [[https://cleberg.net][cleberg.net]] from =cmc.pub=.
+- Achieved my GitLab Certified Git Associate certification.
+- Achieved my GitHub Foundations certification.
 - Deleted a bunch of accounts to reduce online footprint. Looking for more ways
   to reduce.
 
@@ -42,6 +41,5 @@ This is a [[https://nownownow.com/about][/now]] page.
   last year. Feels like most of my innovation happens at work, which I can't
   share online.
 - Weather has been warming up, so disc golf frequency is increasing.
-- Meeting new people at the pub nearby.
 
 View the historical [[https://github.com/ccleberg/cleberg.net/commits/main/content/now/index.org][log of changes]] for this page.
