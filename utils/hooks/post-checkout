@@ -1,3 +1,0 @@
-# .git/hooks/post-checkout
-#!/bin/bash
-echo "You're now on branch $(git rev-parse --abbrev-ref HEAD)"
