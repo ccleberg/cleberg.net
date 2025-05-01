@@ -1,0 +1,86 @@
+# cleberg.net
+
+[cleberg.net](https://cleberg.net) is my personal webpage and blog. This
+website and blog utilize the powerful Org-Mode publishing system,
+courtesy of the [weblorg](https://github.com/emacs-love/weblorg) Emacs
+package.
+
+## Features & Configuration
+
+This site leverages the flexibility of Org-Mode to allow for easy
+customization through a simple `publish.el` file. For those
+who are interested in tweaking the underlying configuration, the weblorg
+documentation provides all necessary details on possible settings and
+options.
+
+## Getting Started
+
+To begin exploring or contributing to this project, you\'ll first need
+to set up a local copy of the repository. This can be accomplished by
+running the following commands within Emacs:
+
+``` {.bash org-language="sh"}
+git clone https://git.sr.ht/~cyborg/cleberg.net && \
+cd cleberg.net && \
+emacs -nw
+```
+
+Alternatively, if you prefer working with Doom, simply open any of the
+repository files using `Spc f f` and selecting
+`README.org`. From there, feel free to make any necessary
+changes or customizations.
+
+## Building & Publishing the Site
+
+To test the site locally within Emacs, run the following command
+sequence:
+
+Use the `ENV` environment variable to determine which base
+URL weblorg will use. If ENV is omitted, it will default to
+`localhost:8000`. If `ENV=prod`, weblorg will look
+in the `publish.el` file for the production base URL.
+
+``` {.bash org-language="sh"}
+# production:
+ENV=prod emacs --script publish.el
+
+# development:
+emacs --script publish.el
+```
+
+The resulting files can then be deployed to your desired target using
+any method of your choice, such as `scp` or SFTP.
+
+Alternatively, you may prefer to utilize the provided
+`build.sh` script to automate this process. To do so, simply
+customize and run the script as needed.
+
+``` {.bash org-language="sh"}
+# production:
+ENV=prod ./build.sh
+
+# development:
+./build.sh
+```
+
+### Creating New Blog Posts
+
+To quickly create a new blog post within Emacs, follow these steps:
+
+1.  Run `C-x C-f` (`SPC f f` in Doom) to open a
+    new Org-Mode file.
+2.  Utilize the `insert-file-contents` command by pressing
+    `C-x i`.
+3.  Direct the contents of `template.org` (located at
+    `utils/template.org`) into the newly opened file.
+
+This streamlined process allows you to rapidly generate fresh content
+for cleberg.net, taking advantage of the existing template structure and
+formatting.
+
+## Contributing & Tasks
+
+For those interested in contributing to this project or addressing any
+outstanding issues, please refer to the issues tab. This is where you
+can find a comprehensive list of open tickets or submit a new ticket for
+consideration.
