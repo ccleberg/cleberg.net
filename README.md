@@ -19,7 +19,7 @@ To begin exploring or contributing to this project, you\'ll first need
 to set up a local copy of the repository. This can be accomplished by
 running the following commands within Emacs:
 
-``` {.bash org-language="sh"}
+```shell
 git clone https://git.sr.ht/~cyborg/cleberg.net && \
 cd cleberg.net && \
 emacs -nw
@@ -40,7 +40,7 @@ URL weblorg will use. If ENV is omitted, it will default to
 `localhost:8000`. If `ENV=prod`, weblorg will look
 in the `publish.el` file for the production base URL.
 
-``` {.bash org-language="sh"}
+```shell
 # production:
 ENV=prod emacs --script publish.el
 
@@ -55,7 +55,7 @@ Alternatively, you may prefer to utilize the provided
 `build.sh` script to automate this process. To do so, simply
 customize and run the script as needed.
 
-``` {.bash org-language="sh"}
+```shell
 # production:
 ENV=prod ./build.sh
 
