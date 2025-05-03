@@ -22,7 +22,7 @@
 ;; Index page route
 (weblorg-route
  :name "index"
- :input-pattern "content/index.org"
+ :input-pattern "content/*.org"
  :template "index.html"
  :output ".build/index.html"
  :url "/")
