@@ -1,0 +1,84 @@
+#+date: <2025-05-02 Fri 21:10:00>
+#+title: Trying Out Asahi Linux on the M2 Macbook Pro 16"
+#+description: Read about my experience with Asahi Linux on an M2 Macbook Pro 16".
+#+filetags: :mac:apple:linux:
+#+slug: asahi-linux
+
+* Trying out Asahi Linux
+
+While debating if I should find a replacement laptop and get rid of my Macbook
+Pro, I decided to try [[https://asahilinux.org/][Asahi Linux]].
+
+To put the bottom line up front, I love the experience and support for popular
+features has come a long way since I originally checked out their website a few
+years ago.
+
+From Asahi's website, as seen below, I noticed that almost all targeted features
+are now supported. This is a great jump from the state it was at in 2022 - 2023
+when I last checked.
+
+#+caption: Asahi Linux Device Support
+[[https://img.cleberg.net/blog/20250502-asahi-linux/device_support.png]]
+
+** Installation
+
+Luckily, the installation process is as simple as getting started with a single
+command:
+
+#+begin_src shell
+curl https://alx.sh | sh
+#+end_src
+
+This script will walk you through the standard installation steps to define the
+size of the Linux partition, define your user and hostname, and give you
+instructions on how to boot from the new operating system (OS).
+
+Once the script completes, it will ask you to completely shut down the device,
+boot into the Startup Options menu, and follow a handful of prompts to enable
+your new OS.
+
+** Initial Thoughts
+
+By default, the installer suggests using the KDE (as does the online community),
+so I opted to try KDE. Historically, I have always been a Gnome user when
+utilizing a fully graphical desktop environment (DE), but I'm up for trying
+something new.
+
+KDE on Asahi works wonderfully and supports all of the generic features I'd
+expect from a vanilla installation:
+
+- Snap to tile
+- Theming
+- Graphical updates
+- Sensible default applications (Dolphin, Firefox, KMail, Konsole, KWrite)
+- Support for battery percentages, keyboard backlight control, and miscellaneous
+  sensor controls
+
+#+caption: KDE
+[[https://img.cleberg.net/blog/20250502-asahi-linux/kde.png]]
+
+** Software Support
+
+One thing to keep in mind is that Apple silicon chips (M*) are based on the ARM
+architecture, which means you will need to install software that supports ARM
+(i.e., ARM64/aarch64).
+
+While I have run into a handful of applications that do not have an ARM package
+available, it is not as difficult as it used to be to find suitable apps for all
+purposes on ARM.
+
+* Final Thoughts
+
+I am still in the early days of testing out Asahi Linux, so I will be sure to
+come back and update this post occasionally, but I am very happy with the user
+experience so far. Everything is smooth and I am still able to experience the
+great hardware of the Macbook with the software of Linux.
+
+In addition to the screenshots above, I have been testing out [[https://swaywm.org/][SwayWM]], which is
+slightly more difficult to configure after being away for Linux for a couple
+years. Regardless, it's working on Asahi as well and seems to be suitable for
+daily driving.
+
+Overall, I am glad there's continued support for Asahi and will be supporting
+them through their Open Collective going forward. Cheers to the Asahi team on
+such a great product.
