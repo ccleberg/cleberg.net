@@ -1,12 +1,12 @@
 #+date: <2025-05-02 Fri 21:10:00>
 #+title: Trying Out Asahi Linux on the M2 Macbook Pro 16"
-#+description: Read about my experience with Asahi Linux on an M2 Macbook Pro 16".
+#+description: Read about my experience with Asahi Linux on an M2 MacBook Pro 16".
 #+filetags: :mac:apple:linux:
 #+slug: asahi-linux
 
 * Trying out Asahi Linux
 
-While debating if I should find a replacement laptop and get rid of my Macbook
+While debating if I should find a replacement laptop and get rid of my MacBook
 Pro, I decided to try [[https://asahilinux.org/][Asahi Linux]].
 
 To put the bottom line up front, I love the experience and support for popular
@@ -48,14 +48,76 @@ KDE on Asahi works wonderfully and supports all of the generic features I'd
 expect from a vanilla installation:
 
 - Snap to tile
-- Theming
+- Shell and window themes
 - Graphical updates
 - Sensible default applications (Dolphin, Firefox, KMail, Konsole, KWrite)
 - Support for battery percentages, keyboard backlight control, and miscellaneous
   sensor controls
+- Fast and reliable bluetooth adoption
+- Native game pad support
+
+Here's a quick look at the default desktop. In subsequent screenshots, you'll
+see I started using the WhiteSur theme as it provides a more comfortable layout
+for macOS users.
 
 #+caption: KDE
 [[https://img.cleberg.net/blog/20250502-asahi-linux/kde.png]]
+
+When diving into the system information panel, we can see that this machine is
+running Fedora Linux Asahi Remix 42 on an Apple M2 Pro laptop with 16GB of RAM.
+
+#+caption: System Information
+[[https://img.cleberg.net/blog/20250502-asahi-linux/sysinfo.png]]
+
+As I noted above, the first thing I did after installing Asahi and taking a few
+screenshots was to install and change themes.
+
+I prefer the WhiteSur theme, as I used this theme previously on Linux before I
+switched to macOS. However, I also like themes that incorporate the gruvbox
+color palette, as well as the Nothing theme that uses a dark black and red color
+palette.
+
+#+caption: Themes
+[[https://img.cleberg.net/blog/20250502-asahi-linux/themes.png]]
+
+One of the things I use my laptop for the most is consuming media (music,
+television shows, movies, etc.), so I had to make sure that my bluetooth devices
+would connect properly.
+
+As you can see in the screenshot below, my AirPods Pro 2 connect seamlessly and
+are available for use. By going through the normal button-holding process, I was
+able to pair my AirPods in about 10 seconds.
+
+However, I have noticed that Asahi doesn't support some of the advanced AirPod
+capabilities like pausing media when you remove an AirPod from your ear. The
+lack of these advanced features doesn't bother me, but some people may be.
+
+#+caption: Bluetooth
+[[https://img.cleberg.net/blog/20250502-asahi-linux/bluetooth.png]]
+
+Next, I was able to connect my PS5 controller via USB-C and Asahi picked up the
+connect instantly in the settings menu. You can move the sticks and press all of
+the buttons to see if they're recognized within this settings menu.
+
+#+caption: Game Pad Settings
+[[https://img.cleberg.net/blog/20250502-asahi-linux/gamepad_settings.png]]
+
+I had a bit of an issue launching Steam the first time, as I was getting an AVC
+Denial error from SELinux. To fix this, I had to manually allow the Steam
+application access to the requested resources:
+
+#+begin_src shell
+sudo ausearch -c 'passt' --raw | sudo audit2allow -M my-passt
+sudo semodule -X 300 -i my-passt.pp
+#+end_src
+
+While my MacBook only has 16GB of RAM, which seems to be the bare minimum
+required for the virtualization overhead, I was able to test one or two games
+before they crashed due to RAM errors.
+
+However, I did confirm that my PS5 controller worked natively with these games
+on Steam! I don't think I will be gaming much on this laptop anyway, but it
+seems you should have at least the 32GB models if you want to game on Asahi.
 
 ** Software Support
 
@@ -66,6 +128,39 @@ architecture, which means you will need to install software that supports ARM
 While I have run into a handful of applications that do not have an ARM package
 available, it is not as difficult as it used to be to find suitable apps for all
 purposes on ARM.
+
+*** Signal Desktop
+
+One specific application that has been causing issues is [[https://signal.org/][Signal]]. The download
+page on their website will prompt you to install their Debian-based package,
+which does not work on RPM-based systems (or any other distribution except
+Debian & downstreams, such as Ubuntu).
+
+There are a few different websites offering potential solutions, but I settled
+on the [[https://github.com/kenballus/asahi-signal-desktop/][asahi-signal-desktop]] repository for now.
+
+#+begin_quote
+One thing to note is that this script does not work with all versions of Signal.
+I tested out 7.53.0 and found that the installer did not work at all.
+
+I had to use 7.44.0, as noted in the project's README, for the script to work.
+#+end_quote
+
+The installation process is simple. You can simply clone the repository and run
+the script:
+
+#+begin_src shell
+git clone https://github.com/kenballus/asahi-signal-desktop/
+cd asahi-linux-desktop
+./install_signal.sh 7.44.0
+#+end_src
+
+At this point, Signal should work. However, I have run into constant crashing
+issues, so it's not a great solution.
+
+[[https://github.com/AsamK/signal-cli][signal-cli]] may work, but I have not tested this yet on Asahi. Before I used
+macOS, I used [[https://github.com/isamert/scli][scli]], which provides a TUI for the signal-cli utility and it
+worked wonderfully.
 
 * Final Thoughts
 
