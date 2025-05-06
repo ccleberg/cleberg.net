@@ -42,4 +42,4 @@ This is a [[https://nownownow.com/about][/now]] page.
   share online.
 - Weather has been warming up, so disc golf frequency is increasing.
 
-View the historical [[https://git.sr.ht/~cyborg/cleberg.net/log/main/item/content/now/index.org][log of changes]] for this page.
+View the historical [[https://github.com/ccleberg/cleberg.net/commits/main/content/now/index.org][log of changes]] for this page.
