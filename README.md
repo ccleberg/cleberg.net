@@ -20,7 +20,7 @@ to set up a local copy of the repository. This can be accomplished by
 running the following commands within Emacs:
 
 ```shell
-git clone https://git.sr.ht/~cyborg/cleberg.net && \
+git clone https://github.com/ccleberg/cleberg.net && \
 cd cleberg.net && \
 emacs -nw
 ```
