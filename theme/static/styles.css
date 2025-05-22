@@ -371,7 +371,9 @@ a:visited {
 }
 
 a:hover {
-    text-decoration: underline;
+    background: var(--link);
+    color: var(--bg);
+    text-decoration: none;
 }
 
 img {
@@ -528,8 +530,8 @@ span.tag::before {
         --bg: #141617;
         --bg-bright: #191c1d;
         --fg: #b2aea9;
-        --link: aqua;
-        --code: yellow;
+        --link: yellow;
+        --code: red;
         --border: #333;
     }
 }
