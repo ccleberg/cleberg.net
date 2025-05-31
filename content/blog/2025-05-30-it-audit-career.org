@@ -1,0 +1,164 @@
+#+date: <2025-05-30 Fri 10:53:28>
+#+title: Future-Proof Your Audit Career: Emerging Technologies
+#+description: Practical steps for auditors looking to break into AI, blockchain, cloud, DevOps, and automation-focused assurance roles.
+#+filetags: :audit:
+#+slug: it-audit-career
+
+* Introduction
+
+As trends have shown, the auditing and assurance world is increasingly becoming
+overwhelmed with topics like [[https://kpmg.com/xx/en/what-we-do/services/ai/trusted-ai-framework.html][AI]], [[https://pcaobus.org/Documents/Audits-Involving-Cryptoassets-Spotlight.pdf][Digital Assets]], [[https://kpmg.com/us/en/articles/2023/building-trust-cloud-environments.html][Cloud]], [[https://kpmg.com/us/en/articles/2023/role-of-internal-audit-devops.html][DevOps]], and [[https://kpmg.com/ch/en/insights/technology/audit-transformation.html][Automation]].
+
+While these trends are rapidly transforming businesses and industries, audit
+firms and departments are working hard to ensure they stay aligned with business
+objectives.
+
+Throughout my career, I've seen topics like "AI" evolve from LLM-based projects
+used by data scientists to everyday tools accessible to the masses and integrated
+directly into business operations.
+
+As an auditor, skills in emerging technologies are an invaluable asset that can
+translate into massive career opportunities and long-term job security.
+
+I have experienced this firsthand as topics like automation, AI, cloud
+assurance, and DevOps have kept me in a secure position with significant potential
+for growth and learning.
+
+In this post, I'm going to walk through the process of becoming skilled in an
+emerging technology and how to translate that into a rewarding audit career.
+
+* Step 1: Build a Strong Foundation in Audit & Risk
+
+To start, I want to note that learning about emerging technologies is only
+useful if you already have a base in auditing. You can't audit a cloud
+environment with cloud knowledge alone — you also need to understand the
+fundamentals of auditing.
+
+If you find that you're highly technical already, focus your time on learning
+audit standards and guidance.
+
+You can customize this to any frameworks applicable to your company or industry,
+but these are generally the baseline for an audit career:
+
+- [[https://www.coso.org/Pages/default.aspx][COSO]]
+- [[https://www.nist.gov/cyberframework][NIST CSF]]
+- [[https://www.iso.org/isoiec-27001-information-security.html][ISO/IEC 27001]]
+- [[https://pcaobus.org/][PCAOB]]
+- [[https://www.aicpa-cima.com/resources/assurance][AICPA]]
+
+The consistent theme throughout these frameworks is that audits rely on
+independent parties who provide consistent documentation, appropriate
+considerations of risks and responses, scoping, and reporting.
+
+One of the easiest ways to get this knowledge is by doing. While it can be
+challenging, the concept is straightforward. If you are working in a role within
+a department like internal audit, external audit, risk, compliance, etc., focus
+on performing your role exceptionally and continuously challenge yourself to
+learn more about audit and risk each day you work.
+
+* Step 2: Learn the Tech That's Changing the Profession
+
+Getting to the point of this post, there's a wide range of technologies transforming the audit
+world. To accelerate career growth and discover a niche you enjoy, I've compiled
+a short list of topics that are currently (1) growing in demand, (2) have a need
+for more experts within the audit field, and (3) are expected to remain relevant.
+
+- *Automation & Data Analytics*: Alteryx, Python, Power BI, Tableau
+- *Cloud*: AWS, Azure, GCP, IBM
+- *Blockchain*: Decentralization, smart contracts, chain of custody
+- *DevOps*: Azure DevOps, CI/CD, DevSecOps, GitHub, GitLab, Jenkins
+- *AI/ML*: AI in business, AI in auditing, AI assurance
+
+#+BEGIN_QUOTE
+*Pro Tip*: Tackle one area at a time. You don't need to become an expert, but
+make sure you learn enough to conceptualize the technologies and logic behind
+the topics you're auditing.
+
+If you focus on one at a time, you can dedicate time to that sole topic to
+understand it more deeply before moving on to the next.
+#+END_QUOTE
+
+* Step 3: Earn Certifications That Signal Credibility
+
+If you don't have much experience, or can't demonstrate your knowledge in a
+particular area due to job constraints or otherwise, you can utilize courses
+and certifications to boost your credibility. This is an effective way to
+establish credibility and demonstrate your qualifications.
+
+- [[https://www.isaca.org/credentialing/cisa][CISA (Certified Information Systems Auditor)]]: Core certification for IT
+  auditors covering systems, controls, governance, and assurance.
+- [[https://learn.microsoft.com/en-us/certifications/azure-fundamentals/][Microsoft Azure Fundamentals (AZ-900)]] / [[https://aws.amazon.com/certification/certified-cloud-practitioner/][AWS Certified Cloud Practitioner]]: Entry-level
+  cloud certifications covering core cloud concepts, services, pricing, and
+  security.
+- [[https://www.alteryx.com/certification/designer-core][Alteryx Designer Core Certification]]: Validates your ability to build data
+  prep, blending, and analytics workflows in Alteryx.
+- [[https://www.coursera.org/professional-certificates/ibm-data-science][IBM Data Science Professional Certificate]] (via Coursera): Teaches data
+  science fundamentals, Python, SQL, and AI basics; popular for aspiring data
+  auditors and analysts.
+- Entry-level technical certifications:
+  - [[https://pythoninstitute.org/pcep][PCEP (Certified Entry-Level Python Programmer) by Python Institute]]
+  - [[https://www.edx.org/learn/artificial-intelligence][AI certifications on edX]] covering foundations, governance, and AI ethics.
+  - [[https://www.blockchain-council.org/certifications/certified-blockchain-professional-expert/][Certified Blockchain Expert]]
+
+I have earned the following certifications and have seen great responses
+throughout my career due to the credibility they provided in these focus areas:
+
+- GitLab Certified Git Associate
+- GitHub Foundations
+- Alteryx Designer Core Certified
+- Microsoft Certified: Azure Fundamentals
+- Certified Information Systems Auditor (CISA)
+- Certified Entry-Level Python Programmer (PCEP)
+- Data Science Professional Certificate
+- Cybersecurity Audit Certificate
+
+* Step 4: Join Emerging Tech Projects and Pilots
+
+Once you have the knowledge and, if applicable, the credentials to showcase your
+skills, you need the chance to network and show what you can do.
+
+To do this, I recommend joining a group focused on the topic you're passionate
+about. Normally, this is easiest within your own company. However, sometimes you
+may need to seek other opportunities in your community or online to find the
+project that works best for you.
+
+- Seek opportunities internally: AI pilots, automation and data analysis
+  projects, blockchain initiatives.
+- If they don't exist — propose them.
+- Suggest automating risk assessments, piloting AI tools, or testing continuous
+  assurance routines.
+
+*Why this matters*: These projects become resume differentiators and position
+you for leadership roles.
+
+* Step 5: Build a Network of Tech-Savvy Auditors & Consultants
+
+As a segue from Step 4, ensure that you have a network of like-minded
+individuals who can challenge you and expose you to new ideas. This helps keep
+you sharp and open to innovation. Some suggestions include:
+
+- Join ISACA, local AI/ML meetups, blockchain working groups.
+- Engage with emerging tech communities on LinkedIn — share posts, comment on
+  thought leadership, or publish insights.
+
+* Step 6: Stay Curious and Keep Learning
+
+Last, but not least, keep learning! While you may feel like you know everything,
+there's always more to explore. I enjoy revisiting known problems from different
+perspectives, as it's helped me grow and realize that alternative approaches
+often yield better results with experience.
+
+- The landscape is changing rapidly — stay current on AI regulation, blockchain
+  security, cloud assurance frameworks, or whatever interests you.
+- Subscribe to niche newsletters (e.g., The Cybersecurity 202, AI Ethics
+  Weekly).
+- Take one course or certification per year to stay sharp.
+
+* Closing
+
+You don't need to be an engineer or software developer to thrive in technology —
+but you do need to understand enough to assess risk. With these steps, I have
+found a wonderful and fulfilling career, and I know you can too.
+
+If you have any questions on how to break into tech risk and audit, feel free to
+reach out over email or anywhere else — I would love to connect and chat!
