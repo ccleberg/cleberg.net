@@ -13,8 +13,8 @@
 ;; Define site configuration
 (weblorg-site
  :theme nil
-  :template-vars `(("site_name" . "cleberg.net")
-                  ("site_owner" . "Christian Cleberg <hello@cleberg.net>")
+ :template-vars '(("site_name"        . "cleberg.net")
+                  ("site_owner"       . "Christian Cleberg <hello@cleberg.net>")
                   ("site_description" . "Just a blip of ones and zeroes.")))
 
 ;; Define routes for rendering content
@@ -85,7 +85,7 @@
  :output ".build/services/{{ slug }}.html"
  :url "/services/{{ slug }}.html")
 
-;; Services page route
+;; Now page route
 (weblorg-route
  :name "now"
  :input-pattern "content/now/*.org"
