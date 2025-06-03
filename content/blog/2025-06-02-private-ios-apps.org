@@ -1,0 +1,321 @@
+#+date: <2025-06-03 Tue 11:38:40>
+#+title: Privacy-Friendly iOS Apps for the Paranoid Minimalist
+#+description: If you're a privacy nerd with an iPhone, this one's for you. A hand-picked list of iOS apps and resources to help you stay secure and ditch the data grabs.
+#+filetags: :privacy:ios:
+#+slug: private-ios-apps
+
+In a world where our phones are extensions of ourselves, balancing convenience
+with privacy can feel like a losing battle — especially on iOS, where platform
+restrictions narrow the options. But it's not impossible. There's a growing
+ecosystem of privacy-respecting apps, tools, and communities focused on helping
+iPhone users take back some control.
+
+Below is a curated list of privacy resources, directories, and testing tools
+specifically useful for iOS. Whether you're looking for a better email client, a
+trustworthy VPN, or simply places to learn more, these links are a solid
+starting point.
+
+**Resource Table**
+
+| Name                                   | Type                        |
+|----------------------------------------+-----------------------------|
+| [[https://github.com/pluja/awesome-privacy][Awesome Privacy]]                        | App Lists & Directories     |
+| [[https://www.privacyguides.org/en/os/ios-overview/][PrivacyGuides.org]]                      | App Lists & Directories     |
+| [[https://cyberinsider.com/][CyberInsider]]                           | Guides & Educational        |
+| [[https://ssd.eff.org/module-categories/further-learning][EFF Surveillance Self-Defense]]          | Guides & Educational        |
+| [[https://osintframework.com/][OSINT Framework]]                        | Guides & Educational        |
+| [[https://securityplanner.consumerreports.org/][Security Planner (Consumer Reports)]]    | Guides & Educational        |
+| [[https://discuss.privacyguides.net/][PrivacyGuides Forum]]                    | Community & Discussion      |
+| [[https://www.reddit.com/r/privacy/][r/Privacy]]                              | Community & Discussion      |
+| [[https://www.reddit.com/r/iosprivacy/][r/iOSPrivacy]]                           | Community & Discussion      |
+| [[https://tosdr.org/en/][Terms of Service; Didn't Read (ToS;DR)]] | Policy & Transparency Tools |
+| [[https://browserleaks.com][BrowserLeaks.com]]                       | Privacy Testing & Tools     |
+| [[https://mullvad.net/check][Mullvad Privacy Check]]                  | Privacy Testing & Tools     |
+| [[https://support.apple.com/en-us/HT212025][iOS App Privacy Report (Settings)]]      | Privacy Testing & Tools     |
+| [[https://privacytests.org/][PrivacyTests.org]]                       | Privacy Testing & Tools     |
+
+#+begin_quote
+*Note*: This list focuses solely on iOS-compatible resources and tools. No
+Android comparisons here — just options for those of us living in Apple's walled
+garden.
+#+end_quote
+
+* Email
+
+First and foremost, I like to consider email as my first app on a new device.
+However, the iOS market lacks a wealth of open-source and private email clients.
+There are a few options, such as Proton Mail and Tuta, which are open source and
+private, but they lock you into their ecosystem. Tuta doesn't allow for custom
+domains and neither allows SMTP/IMAP access.
+
+Canary Mail is a decent option, as it is a classic SMTP/IMAP client - and does
+more than most as it's one of the only PGP email clients on iOS - but is closed
+source and the company behind it seems more focused on AI than privacy.
+
+- [[https://proton.me/mail][Proton Mail]] - A more mainstream-feeling app with PGP support built-in. Good if
+  you're looking for something that feels like Apple Mail but with privacy
+  upgrades.
+- [[https://tuta.com/][Tuta]] - Tuta (formerly Tutanota) takes privacy a step further by encrypting
+  subject lines, message content, attachments, and calendar events. It also
+  avoids using phone numbers or third-party services for registration. The iOS
+  app is reliable for the basics. Downsides: no IMAP/SMTP support, so you can't
+  plug it into your own mail clients, and notifications require a premium plan
+  if you want them in real-time. Great if you care about metadata exposure.
+- [[https://canarymail.io/][Canary Mail]] - A more polished, user-friendly email client that supports
+  end-to-end encryption using PGP and their own “SecureSend” feature for
+  encrypted messages. Canary works with multiple mail providers (Gmail, Outlook,
+  etc.), so it's more of a privacy enhancement for existing services rather than
+  a private mail provider itself. Downsides: it's a proprietary, closed-source
+  app, and some privacy features require a subscription. Better than stock Mail
+  for security, but you're still trusting their implementation.
+
+Another suggestion is to use a browser-based web client. You can install browser
+mail clients as progressive web apps (PWAs). For example, I have been using
+[[https://webmail.migadu.com][webmail.migadu.com]] as a progressive email app for a while now and it works great
+for my purposes.
+
+This allows for access to your email without installing an application that
+access native APIs or other potential data sources you may be concerned about.
+This is especially important if you're concerned about allowing permissions to
+device APIs, non-reproducible buils from the App Store, or mobile device
+fingerprints.
+
+Lastly, [[https://blog.thunderbird.net/2025/05/thunderbird-for-mobile-april-2025-progress-report/][Thunderbird iOS]] is under development. Keep an eye out for an alpha or
+beta release later in 2025 or early 2026. I have a feeling that once Thunderbird
+iOS is available, it will easily become the best option for email on iOS.
+
+#+begin_quote
+*I use*: Web-based email on iOS and Thunderbird on my desktop. Once Thunderbird
+releases for iOS, I will probably use that.
+#+end_quote
+
+* Browsers
+
+Your browser is basically the front door to the internet — and also the window,
+mailbox, and security camera. It's where trackers, ads, fingerprinting scripts,
+and data leaks happen most often. Even on a locked-down phone, if your browser
+isn't protecting your traffic, your personal info can quietly leak out through
+third-party scripts, embedded media, and background connections. Choosing a
+privacy-respecting browser is one of the most impactful decisions you can make
+for mobile privacy.
+
+- [[https://apps.apple.com/us/app/firefox-focus-privacy-browser/id1055677337][Firefox Focus]] - A stripped-down, no-nonsense browser from Mozilla. It
+  automatically blocks trackers, erases your browsing history with a tap, and
+  skips extras like tabs or bookmarks. Great for one-off searches and quick
+  visits to privacy-sensitive sites.
+- [[https://duckduckgo.com/app][DuckDuckGo]] - A full-featured private browser with built-in tracker blocking,
+  HTTPS upgrades, and a clear data button. It also integrates DuckDuckGo search
+  and email protection. Solid for daily use if you don't want your browsing
+  activity tied to a bigger tech company.
+- [[https://onionbrowser.com/][Onion Browser]] & [[https://orbot.app/][Orbot]] - Your best bet for anonymous browsing on iOS. Onion
+  Browser routes traffic over Tor, while Orbot can proxy other apps system-wide
+  through Tor. Slower than normal browsers, but excellent for masking your IP
+  and avoiding surveillance.
+- [[https://brave.com/][Brave]] - Privacy-focused with ad and tracker blocking built-in, Brave also runs
+  its own private search engine and supports things like Tor tabs (on desktop,
+  not iOS). On iOS, it's basically a privacy-enhanced Safari/WebKit shell —
+  better than nothing, but subject to Apple's browser engine limits.
+- [[https://www.apple.com/safari/][Safari]] (with caveats) - Surprisingly decent for privacy if you tweak the
+  settings. Enable “Prevent Cross-Site Tracking,” block all cookies, and disable
+  preload for best results. Still, it's tied to your Apple ID and iCloud syncing
+  unless you're careful, so don't treat it as anonymous. For a great baseline
+  configuration, read PrivacyGuide's [[https://www.privacyguides.org/en/mobile-browsers/#safari-ios][Safari]] section.
+
+#+begin_quote
+*I use*: Hardened safari in private mode for every day use, and Onion Browser
+for anonymous browsing.
+#+end_quote
+
+* Messaging
+
+If you're trying to keep conversations off surveillance infrastructure, choosing
+the right messaging app is crucial. Between metadata collection, insecure cloud
+backups, and shady server practices, most mainstream chat apps aren't
+privacy-friendly by design. On iOS, you're a little more limited than on
+Android, but there are still solid options built around end-to-end encryption
+and metadata minimization.
+
+- [[https://signal.org/][Signal]] - The gold standard for secure messaging. Open source, end-to-end
+  encrypted, and runs its own private push notification infrastructure so Apple
+  can't read your message content. Downsides: phone number required for signup
+  (a known metadata weak point).
+- [[https://simplex.chat/][SimpleX]] - A decentralized, phone-number-free messaging system. Uses anonymous
+  message relays and asymmetric keys. Great for pseudonymous chats or if you're
+  tired of number-based identity systems.
+- [[https://getsession.org/][Session]] - A fork of Signal's protocol that eliminates phone numbers entirely.
+  Routes messages through a decentralized onion network (like Tor). Excellent
+  for metadata resistance, though message delivery can sometimes lag.
+- [[https://element.io/][Element]] - Based on the Matrix protocol, offering decentralized, federated
+  chat. Great for groups and communities, with optional end-to-end encryption. A
+  little heavier on resources than the others.
+
+Privacy-friendly messaging isn't perfect on iOS — background sync restrictions
+and notification relay challenges exist — but these tools will cover most needs
+while keeping your data away from corporate servers.
+
+#+begin_quote
+*I use*: Signal for private chats with known people, and Matrix for group chats.
+#+end_quote
+
+* VPNs & Networking
+
+Network traffic is where most surveillance happens. Even with encrypted
+messaging and browsers, your IP address and DNS queries reveal a lot. A good VPN
+or alternative network routing tool masks this, but not all VPNs are
+trustworthy. Avoid “free” services or those lacking transparency.
+
+- [[https://mullvad.net/][Mullvad]] - A no-logs VPN that doesn't require an email or personal info to
+  create an account. Consistently audited and privacy-focused. Their app is
+  excellent on iOS.
+- [[https://www.torproject.org/][Tor]] - Best for anonymity rather than everyday VPN use. Routes your traffic
+  over three relays, obscuring both source and destination. Slower, but
+  unmatched for high-risk browsing.
+- [[https://yggdrasilnetwork.org/installation][Yggdrasil]] - An experimental, encrypted, peer-to-peer mesh network. Less
+  polished for mobile but useful for hobbyists or building private networks
+  between devices.
+
+If you can't self-host or build your own mesh, Mullvad is hands-down the
+cleanest option here. There are other VPN options available, but I haven't
+tested them all so I will simply put my vote for Mullvad here and let you
+research other options if you don't want to use Mullvad.
+
+#+begin_quote
+*I use*: Mullvad for 24/7 usage, and Tor when anonymity is required.
+#+end_quote
+
+* Password Management
+
+Weak, reused passwords are still one of the biggest risks for personal security.
+A good password manager makes it possible to use strong, unique credentials
+without memorizing them all.
+
+- [[https://bitwarden.com/][Bitwarden]] - Open source, audited, and free to self-host. The iOS app
+  integrates with system autofill and Face ID. Solid for most users.
+- [[https://keepassium.com/][KeePassium]] - A KeePass-compatible client for iOS. Local database storage,
+  optional cloud sync, and no external accounts. Excellent if you want full
+  control over your credential store.
+- [[https://keepassxc.org/][KeePassXC]] + Syncing Solution - If you already use KeePass on desktop, sync
+  your database with a secure method like [[https://cryptomator.org/][Cryptomator]]-protected cloud storage,
+  Syncthing, or local-only transfers.
+
+Good password hygiene matters more than people realize, and these apps give you
+control over your vault.
+
+#+begin_quote
+*I use*: Bitwarden Families ($40/year) to protect passwords, passkeys, TOTP
+codes, and secure notes for my family. If I were using a solution solely for
+myself, I would prefer KeePassXC + Syncthing.
+#+end_quote
+
+* Multi-Factor Authentication (MFA)
+
+MFA is essential, but relying on SMS codes or untrusted proprietary apps defeats
+the point. Use open, local, encrypted authenticators where possible.
+
+- [[https://bitwarden.com/products/authenticator/][Bitwarden Authenticator]] - Integrates with the password manager or works
+  standalone. Encrypted backups through Bitwarden.
+- [[https://ente.io/auth/][Ente Auth]] - Open source, end-to-end encrypted TOTP manager. Syncs encrypted
+  via Ente's infrastructure.
+- [[https://www.tofuauth.com/][Tofu]] - Minimal, offline-first TOTP app. No cloud, no telemetry.
+- [[https://raivo-otp.com/][Raivo OTP]] - Open source, native iOS app with secure iCloud backups. Clean
+  interface.
+- [[https://apps.apple.com/us/app/otp-auth/id659877384][OTP Auth]] - A longstanding, trusted TOTP manager with encrypted backups and
+  Apple Watch support. Not open source.
+
+I recommend pairing one of these with strong passwords and a VPN for everyday
+security.
+
+#+begin_quote
+*I use*: Bitwarden Authenticator, previously OTP Auth.
+#+end_quote
+
+* Notes & Personal Data
+
+iCloud Notes and Google Keep aren't exactly privacy havens. If you're storing
+sensitive personal notes, account details, or journal entries, opt for
+encrypted, local-first apps.
+
+- [[https://beorgapp.com/][Beorg]] - An Org-mode-compatible outliner and task manager for iOS. Great for
+  Emacs fans and those managing plaintext files.
+- [[https://obsidian.md/][Obsidian]] - A local Markdown-based notes app. All data stays on your device
+  unless you opt for Obsidian Sync (or your own setup).
+- [[https://standardnotes.com/][Standard Notes]] - End-to-end encrypted notes, with cross-platform sync. Good if
+  you want a straightforward, secure cloud service.
+- [[https://joplinapp.org/][Joplin]] - Open source, Markdown notes with optional encryption and cloud sync
+  (Nextcloud, Dropbox, etc).
+
+These options help decouple your data from major cloud platforms while keeping
+notes portable and encrypted.
+
+#+begin_quote
+*I use*: Beorg, since I love org-mode and no longer use markdown.
+#+end_quote
+
+* Photos & Media
+
+Your camera roll quietly feeds metadata and images to iCloud by default. If you
+want to self-host or encrypt your photo library, here's what works on iOS. At a
+minimum, I suggest disabling iCloud for the Photos app, so the data stays local
+on your device.
+
+- [[https://immich.app/][Immich (self-hosted)]] - Open source, feature-rich, self-hosted photo manager
+  with facial recognition and live photo support. Requires a home server.
+- [[https://ente.io/][Ente Photos]] - End-to-end encrypted photo storage with iOS and web apps. Paid
+  plans, but privacy-first infrastructure.
+
+Good privacy photos apps are rare on iOS — these two are the standout options
+right now.
+
+#+begin_quote
+*I use*: Immich for all photos.
+#+end_quote
+
+* Encryption Utilities
+
+If you're handling sensitive files, you need a proper encryption utility to lock
+them down.
+
+- [[https://cryptomator.org/][Cryptomator]] - Open source, encrypted cloud storage vaults. Integrates with
+  most cloud providers and works locally.
+- [[https://apps.apple.com/us/app/instant-pgp/id1497433694][Instant PGP]] - PGP key generation, import/export, and encrypted message/file
+  creation. Handy for old-school secure comms.
+
+If you're serious about privacy, encrypted storage and messaging layers like
+these are essential.
+
+#+begin_quote
+*I use*: Cryptomator when syncing sensitive data over Syncthing. I no longer
+require Instant PGP since Migadu's webmail client (SnappyMail) supports PGP.
+#+end_quote
+
+* News & Social
+
+Mainstream news and social apps leak all kinds of usage metadata, even when
+you're just lurking. These tools let you follow content with less exposure.
+
+- [[https://netnewswire.com/][NetNewsWire]] - Free, open source RSS reader for iOS. Follow sites without
+  tracking.
+- [[https://www.talklittle.com/three-cheers/][ThreeCheers]] - Privacy-friendly Reddit client for iOS. No official API calls,
+  built-in filtering.
+- [[https://getvoyager.app/][Voyager]] - Clean, independent Mastodon client.
+- [[https://joinmastodon.org/][Mastodon]] - Federated, open source alternative to Twitter.
+- [[https://joinpeertube.org/][PeerTube]] - Decentralized video platform, accessible via web or PWA.
+- [[https://pixelfed.org/][Pixelfed]] - Federated, open source alternative to Instagram.
+
+If you're going to be online, at least let it be on your terms.
+
+#+begin_quote
+*I use*: NetNewsWire (via FreshRSS) for RSS feeds, and Voyager for Lemmy. I have
+used all of these apps and they are great, but I am not very active on social
+sites.
+#+end_quote
+
+* Final Thoughts
+
+This isn't about paranoia — it's about awareness. Every app you use, every
+service you sign into, quietly collects and trades your data. iOS makes true
+anonymity harder than other platforms, but these tools and services give you a
+fighting chance to keep your personal life personal.
+
+If you have other privacy-friendly iOS tools you enjoy, [[mailto:hello@cleberg.net][email me]] — I'm always
+looking for new things to test.
