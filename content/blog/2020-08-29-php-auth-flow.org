@@ -1,8 +1,8 @@
-#+date: <2020-08-29 Sat 00:00:00>
-#+title: Secure and Simple PHP User Authentication Flow for Developers
-#+description: Learn how to implement a secure and straightforward user authentication flow in PHP with MySQL. Step-by-step guide to creating accounts, managing sessions, and handling logouts for web developers.
-#+slug: php-auth-flow
-#+filetags: :php:authentication:mysql:
+#+date:        <2020-08-29 Sat 00:00:00>
+#+title:       Implementation Guide for PHP-Based User Authentication with MySQL Backend
+#+description: Comprehensive guide to developing a secure user login system in PHP utilizing MySQL database, including account creation, session management, and logout procedures.
+#+slug:        php-auth-flow
+#+filetags:    :php:authentication:mysql:
 
 * Introduction
 

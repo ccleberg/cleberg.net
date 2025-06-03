@@ -1,8 +1,8 @@
-#+date: <2020-05-19 Tue 00:00:00>
-#+title: Ultimate Beginner's Guide to Customizing Ubuntu 20.04 for a Personalized Experience
-#+description: Learn how to customize Ubuntu 20.04 with themes, icons, fonts, terminals, and more to create a unique Linux desktop tailored to your style and productivity needs.
-#+slug: customizing-ubuntu
-#+filetags: :ubuntu:customization:gnome:
+#+date:        <2020-05-19 Tue 00:00:00>
+#+title:       Configuration Procedures for Ubuntu 20.04 Desktop Environment
+#+description: Detailed instructions for modifying system appearance and interface elements in Ubuntu 20.04, including setting themes, icon packs, font adjustments, terminal configurations, and related customization parameters.
+#+slug:        customizing-ubuntu
+#+filetags:    :ubuntu:customization:gnome:
 
 * More Information
 

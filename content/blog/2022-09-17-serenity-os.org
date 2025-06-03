@@ -1,8 +1,8 @@
-#+date: <2022-09-17 Sat 00:00:00>
-#+title: Exploring Serenity OS: A Retro-Inspired Unix-Like Operating System
-#+description: Discover Serenity OS, a modern yet nostalgic Unix-like operating system inspired by '90s interfaces. Learn how to build, run, and explore this unique desktop OS.
-#+slug: serenity-os
-#+filetags: :serenityos:operating-system:build-instructions:
+#+date:        <2022-09-17 Sat 00:00:00>
+#+title:       Building and Operating Serenity OS: A Retro-Inspired Unix-Like System
+#+description: Technical overview of Serenity OS including system architecture, building procedures, and operational instructions for this Unix-like operating system with a 1990s user interface style.
+#+slug:        serenity-os
+#+filetags:    :serenityos:operating-system:build-instructions:
 
 * Overview
 

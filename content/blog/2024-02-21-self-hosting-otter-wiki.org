@@ -1,8 +1,8 @@
-#+date: <2024-02-21 Wed 00:00:00>
-#+title: How to Self-Host Your Own Otter Wiki for Seamless Collaboration
-#+description: Step-by-step guide to setting up and securing Otter Wiki using Docker Compose and Nginx reverse proxy for reliable self-hosting.
-#+slug: self-hosting-otter-wiki
-#+filetags: :docker:nginx:wiki:
+#+date:        <2024-02-21 Wed 00:00:00>
+#+title:       Instructions for Self-Hosting Otter Wiki Using Docker Compose and Nginx Proxy
+#+description: Stepwise directions for installing Otter Wiki, configuring Docker Compose environment, and setting up Nginx reverse proxy for secure access.
+#+slug:        self-hosting-otter-wiki
+#+filetags:    :docker:nginx:wiki:
 
 * An Otter Wiki
 

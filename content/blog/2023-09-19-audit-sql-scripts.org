@@ -1,8 +1,8 @@
-#+date: <2023-09-19 Tue 00:00:00>
-#+title: Essential SQL Scripts for Effective Logical Access Auditing
-#+description: Comprehensive SQL scripts to audit user accounts, roles, and privileges across Oracle, Microsoft SQL Server, and MySQL databases for enhanced security and compliance.
-#+slug: audit-sql-scripts
-#+filetags: :database:audit:sql:
+#+date:        <2023-09-19 Tue 00:00:00>
+#+title:       SQL Scripts for Logical Access Audit: User Accounts, Roles, Privileges
+#+description: Collection of SQL queries designed for auditing user access parameters on Oracle, Microsoft SQL Server, and MySQL database systems.
+#+slug:        audit-sql-scripts
+#+filetags:    :database:audit:sql:
 
 * Overview
 

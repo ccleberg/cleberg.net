@@ -1,8 +1,8 @@
-#+date: <2023-01-28 Sat 00:00:00>
-#+title: Self-Hosting Wger: Powerful Workout Manager for Your Own Server
-#+description: Step-by-step guide to self-hosting the Wger workout manager on your server. Manage workouts, nutrition, and weight tracking with this comprehensive fitness tool.
-#+slug: self-hosting-wger
-#+filetags: :self-hosting:wger:workout-manager:
+#+date:        <2023-01-28 Sat 00:00:00>
+#+title:       Instructions for Self-Hosting Wger Workout Management Software on a Server
+#+description: Comprehensive steps for installing, configuring, and operating the Wger workout management application on a dedicated server platform.
+#+slug:        self-hosting-wger
+#+filetags:    :self-hosting:wger:workout-manager:
 
 * Wger: The Self-Hosted Workout Manager
 

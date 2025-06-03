@@ -1,8 +1,8 @@
-#+date: <2022-02-20 Sun 00:00:00>
-#+title: Boost Website Speed with Effective Nginx Static Content Caching
-#+description: Learn how to optimize your website performance with Nginx by efficiently caching static files like CSS, JavaScript, and images for faster load times and improved user experience.
-#+slug: nginx-caching
-#+filetags: :nginx:cache:performance:
+#+date:        <2022-02-20 Sun 00:00:00>
+#+title:       Optimization Techniques for Static Content Caching in Nginx Web Server
+#+description: Detailed methods for configuring Nginx to cache static resources such as CSS, JavaScript, and images to improve website loading times and resource efficiency.
+#+slug:        nginx-caching
+#+filetags:    :nginx:cache:performance:
 
 * Update Your Nginx Config to Cache Static Files
 

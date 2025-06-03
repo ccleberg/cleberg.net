@@ -1,8 +1,8 @@
-#+date: <2023-07-19 Wed 00:00:00>
-#+title: Fix Plex Transcoder Error: Conversion Failed to Start Up
-#+description: Troubleshoot and resolve Plex transcoder startup failures to ensure smooth media playback without conversion errors.
-#+slug: plex-transcoder-errors
-#+filetags: :plex:transcoder:error:
+#+date:        <2023-07-19 Wed 00:00:00>
+#+title:       Troubleshooting Plex Transcoder: Resolving Conversion Startup Failures
+#+description: Technical procedures to identify and correct Plex transcoder failures at startup to maintain uninterrupted media conversion and playback.
+#+slug:        plex-transcoder-errors
+#+filetags:    :plex:transcoder:error:
 
 * Plex Transcoder Error
 

@@ -1,8 +1,8 @@
-#+date: <2023-06-08 Thu 00:00:00>
-#+title: Analyzing Nginx Logs with GoAccess and MaxMind GeoIP Integration
-#+description: Learn how to analyze Nginx access logs using GoAccess with MaxMind GeoIP data for detailed real-time geographical insights and web traffic analysis.
-#+slug: goaccess-geoip
-#+filetags: :nginx:goaccess:geoip:
+#+date:        <2023-06-08 Thu 00:00:00>
+#+title:       Methodology for Analyzing Nginx Access Logs Using GoAccess with MaxMind GeoIP Data
+#+description: Step-by-step instructions to utilize GoAccess tool incorporating MaxMind GeoIP integration for real-time geographic and traffic analysis of Nginx log files.
+#+slug:        goaccess-geoip
+#+filetags:    :nginx:goaccess:geoip:
 
 * Overview
 

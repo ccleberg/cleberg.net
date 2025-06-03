@@ -1,8 +1,8 @@
-#+date: <2020-03-25 Wed 00:00:00>
-#+title: Session - Secure, Private & Decentralized Messenger
-#+description: Discover Session, the private and secure decentralized messenger app offering end-to-end encryption, metadata-free chats, multi-device support, and enhanced privacy features.
-#+slug: session-messenger
-#+filetags: :messenger:privacy:encryption:
+#+date:        <2020-03-25 Wed 00:00:00>
+#+title:       Session Messenger: Architecture and Security Features
+#+description: Technical description of the Session messaging protocol, including end-to-end encryption, metadata minimization, multi-device synchronization, and privacy-centric design.
+#+slug:        session-messenger
+#+filetags:    :messenger:privacy:encryption:
 
 * Privacy Warning
 

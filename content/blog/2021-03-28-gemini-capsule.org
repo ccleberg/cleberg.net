@@ -1,8 +1,8 @@
-#+date: <2021-03-28 Sun 00:00:00>
-#+title: How to Launch Your Own Gemini Capsule Quickly and Easily
-#+description: Step-by-step guide on launching a Gemini capsule for beginners. Learn how to create and deploy your personal Gemini site with simple instructions and best practices.
-#+slug: gemini-capsule
-#+filetags: :gemini:capsule:tutorial:
+#+date:        <2021-03-28 Sun 00:00:00>
+#+title:       Gemini Capsule Deployment Instructions for New Users
+#+description: Incremental procedural guide to initiate and maintain a Gemini capsule server. Covers installation, deployment, and operational best practices for beginners.
+#+slug:        gemini-capsule
+#+filetags:    :gemini:capsule:tutorial:
 
 * What is Gemini?
 

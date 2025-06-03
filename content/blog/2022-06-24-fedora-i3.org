@@ -1,8 +1,8 @@
-#+date: <2022-06-24 Fri 00:00:00>
-#+title: Rediscovering My Passion for Linux
-#+description: Exploring my journey back to Linux, sharing reasons for leaving macOS, and detailing my Fedora and i3 desktop setup.
-#+slug: fedora-i3
-#+filetags: :linux:fedora:i3:
+#+date:        <2022-06-24 Fri 00:00:00>
+#+title:       Returning to Linux: A Configuration Overview of Fedora with i3 Window Manager
+#+description: Examination of the transition from macOS to Linux, including a detailed description of Fedora operating system installation and i3 window manager configuration.
+#+slug:        fedora-i3
+#+filetags:    :linux:fedora:i3:
 
 * Leaving macOS
 

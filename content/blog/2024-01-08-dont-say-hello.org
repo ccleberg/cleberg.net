@@ -1,8 +1,8 @@
-#+date: <2024-01-08 Mon 00:00:00>
-#+title: Don't Say Hello
-#+description: How to improve communication efficiency by avoiding unnecessary greetings in professional messages and get straight to the point.
-#+slug: dont-say-hello
-#+filetags: :communication:efficiency:professional:
+#+date:        <2024-01-08 Mon 00:00:00>
+#+title:       Communication Efficiency: Guidelines to Omit Unnecessary Greetings
+#+description: Technical recommendations for improving professional communication by eliminating non-essential introductory phrases to enhance message clarity.
+#+slug:        dont-say-hello
+#+filetags:    :communication:efficiency:professional:
 
 I recently came back from a winter break and have started working again... only
 to immediately run into the dilemma of people sending me cliffhanger messages

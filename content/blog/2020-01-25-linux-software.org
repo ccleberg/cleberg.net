@@ -1,8 +1,8 @@
-#+date: <2020-01-25 Sat 00:00:00>
-#+title: Essential Linux Software You Should Know About
-#+description: A curated list of must-have Linux software including GUI applications, command-line tools, and installation instructions for popular distributions.
-#+slug: linux-software
-#+filetags: :linux:software:tools:
+#+date:        <2020-01-25 Sat 00:00:00>
+#+title:       Essential Software for Linux Systems: Catalog and Usage
+#+description: Inventory and description of key Linux applications including graphical and command-line tools, with installation instructions for various distributions.
+#+slug:        linux-software
+#+filetags:    :linux:software:tools:
 
 * GUI Applications
 

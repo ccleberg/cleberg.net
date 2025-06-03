@@ -1,8 +1,8 @@
-#+date: <2022-12-23 Fri 00:00:00>
-#+title: Transforming Alpine Linux into a Powerful Desktop OS
-#+description: A comprehensive guide to installing and customizing Alpine Linux for everyday desktop use, covering setup, window manager configuration, and troubleshooting tips.
-#+slug: alpine-desktop
-#+filetags: :alpine:desktop:linux:
+#+date:        <2022-12-23 Fri 00:00:00>
+#+title:       Configuring Alpine Linux for Desktop Environment Usage
+#+description: Stepwise procedures for installing and setting up Alpine Linux as a desktop operating system, including window manager setup and relevant system adjustments.
+#+slug:        alpine-desktop
+#+filetags:    :alpine:desktop:linux:
 
 * Isn't Alpine Linux for Servers?
 

@@ -1,8 +1,8 @@
-#+date: <2021-07-15 Thu 00:00:00>
-#+title: Effortlessly Delete All Your GitLab Repositories at Once
-#+description: Step-by-step guide on how to quickly delete all GitLab repositories using a Python script. Learn to bulk remove projects from your GitLab account easily and securely.
-#+slug: delete-gitlab-repos
-#+filetags: :gitlab:python:script:
+#+date:        <2021-07-15 Thu 00:00:00>
+#+title:       Method to Remove All GitLab Repositories Through Automation
+#+description: Stepwise instructions for executing a Python script to delete all repositories associated with a GitLab account. Includes authentication and error handling procedures.
+#+slug:        delete-gitlab-repos
+#+filetags:    :gitlab:python:script:
 
 * Background
 

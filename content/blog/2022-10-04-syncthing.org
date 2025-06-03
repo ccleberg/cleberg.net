@@ -1,8 +1,8 @@
-#+date: <2022-10-04 Tue 00:00:00>
-#+title: Syncthing: Secure and Private Self-Hosted Cloud Storage Made Simple
-#+description: Discover how Syncthing offers a secure, peer-to-peer, self-hosted cloud storage solution that keeps your data private and in your control without relying on third-party servers.
-#+slug: syncthing
-#+filetags: :syncthing:cloud-storage:privacy:
+#+date:        <2022-10-04 Tue 00:00:00>
+#+title:       Syncthing: Implementing Secure Peer-to-Peer Self-Hosted Cloud Storage
+#+description: Technical instructions for setting up Syncthing as a peer-to-peer self-hosted file synchronization system that preserves data privacy by eliminating third-party intermediaries.
+#+slug:        syncthing
+#+filetags:    :syncthing:cloud-storage:privacy:
 
 * An Overview of Syncthing
 

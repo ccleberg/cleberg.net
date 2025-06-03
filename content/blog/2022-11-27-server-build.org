@@ -1,8 +1,8 @@
-#+date: <2022-11-27 Sun 00:00:00>
-#+title: How I Built a High-Performance Custom Rack-Mounted Server
-#+description: A detailed guide on assembling a powerful and efficient rack-mounted server with modern PC components, perfect for homelab enthusiasts and IT professionals.
-#+slug: server-build
-#+filetags: :server:hardware:build:
+#+date:        <2022-11-27 Sun 00:00:00>
+#+title:       Assembling a High-Performance Rack-Mounted Server from PC Components
+#+description: Detailed instructions on selecting components, assembling, and configuring a rack-mounted server suitable for advanced computing tasks in a professional or laboratory setting.
+#+slug:        server-build
+#+filetags:    :server:hardware:build:
 
 * The Dilemma
 

@@ -1,8 +1,8 @@
-#+date: <2022-07-25 Mon 00:00:00>
-#+title: Tune In with Curseradio: Your Command-Line Radio Player
-#+description: Discover how to stream your favorite radio stations effortlessly using Curseradio, a lightweight and user-friendly command-line radio player for Linux users.
-#+slug: curseradio
-#+filetags: :linux:radio:python:
+#+date:        <2022-07-25 Mon 00:00:00>
+#+title:       Operating Curseradio: Command-Line Interface for Internet Radio Streaming
+#+description: Stepwise instructions for installing and utilizing Curseradio, a lightweight command-line program for streaming radio stations within Linux environments.
+#+slug:        curseradio
+#+filetags:    :linux:radio:python:
 
 * Overview
 

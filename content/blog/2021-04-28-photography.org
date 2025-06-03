@@ -1,8 +1,8 @@
-#+date: <2021-04-28 Wed 00:00:00>
-#+title: Rediscovering the Art and Joy of Photography
-#+description: Explore the exciting journey of rediscovering photography, from gear choices to capturing unforgettable moments. Perfect for beginners and enthusiasts looking to enhance their photography skills.
-#+slug: photography
-#+filetags: :photography:camera:gear:
+#+date:        <2021-04-28 Wed 00:00:00>
+#+title:       Photography Fundamentals: Equipment and Technique Instruction
+#+description: Instructional document covering basic techniques in photography, including equipment selection, operational best practices, and methods for capturing high-quality images.
+#+slug:        photography
+#+filetags:    :photography:camera:gear:
 
 * Why Photography?
 

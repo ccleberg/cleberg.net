@@ -1,8 +1,8 @@
-#+date: <2025-04-05 Saturday 23:04:54>
-#+title: How I Streamlined Mirroring Repositories from GitHub to GitLab
-#+description: Discover effective steps to synchronize and mirror your GitHub repositories to GitLab for seamless repository management and backup.
-#+slug: git-mirror
-#+filetags: :git:mirroring:automation:
+#+date:        <2025-04-05 Saturday 23:04:54>
+#+title:       Methodology for Mirroring GitHub Repositories to GitLab for Backup and Synchronization
+#+description: Technical steps for setting up automated synchronization and mirroring of source code repositories from GitHub to GitLab for redundancy and repository management.
+#+slug:        git-mirror
+#+filetags:    :git:mirroring:automation:
 
 This is a short post detailing how I maintained repositories on GitHub and
 mirrors on GitLab - including both public and private repositories.

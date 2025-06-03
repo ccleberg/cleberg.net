@@ -1,8 +1,8 @@
-#+date: <2022-07-31 Sun 00:00:00>
-#+title: Boost Your Bash Shell with Bash-It and ble.sh
-#+description: Enhance your Linux terminal experience by upgrading bash with Bash-It plugins, themes, and the powerful autosuggestions from ble.sh for improved productivity.
-#+slug: bash-it
-#+filetags: :bash:shell:linux:
+#+date:        <2022-07-31 Sun 00:00:00>
+#+title:       Enhancing Bash Shell Functionality with Bash-It and ble.sh Plugins
+#+description: Guide to augmenting Bash shell features by integrating Bash-It framework along with ble.sh for input autosuggestions, improving command-line efficiency on Linux systems.
+#+slug:        bash-it
+#+filetags:    :bash:shell:linux:
 
 * Bash
 
