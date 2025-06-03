@@ -525,6 +525,33 @@ span.tag::before {
     display: none;
 }
 
+.post {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-tags {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 0.1rem;
+}
+
+.tag {
+  margin-right: 0.3rem;
+  font-style: normal;
+  opacity: 0.8;
+}
+
+.tag::before {
+  content: "#";
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #141617;

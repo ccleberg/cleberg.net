@@ -15,7 +15,7 @@
 			>&lt;{{ post.date|strftime("%Y-%m-%d %a %H:%M:%S") }}&gt;</time
 		>
 		{% endif %} {% if post.filetags %}
-		<p class="tags">
+		<p class="post-tags">
 			{% for tag in post.filetags %}
 			<span class="tag">{{ tag }}</span>
 			{% endfor %}
