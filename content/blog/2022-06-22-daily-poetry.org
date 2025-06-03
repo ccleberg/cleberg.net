@@ -1,6 +1,6 @@
 #+date: <2022-06-22 Wed 00:00:00>
-#+title: Daily Plaintext Poetry via Email
-#+description: 
+#+title: Receive Daily Plaintext Poetry Straight to Your Inbox
+#+description: Automate daily delivery of classic and contemporary poetry in plaintext via email using Python and SMTP for effortless morning inspiration.
 #+slug: daily-poetry
 
 * Source Code

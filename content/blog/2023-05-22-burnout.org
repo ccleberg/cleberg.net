@@ -1,6 +1,6 @@
 #+date: <2023-05-22 Mon 00:00:00>
-#+title: RE: Burnout
-#+description: 
+#+title: Overcoming Burnout: Insights and Strategies
+#+description: A personal reflection on burnout, managing extended busy seasons, and strategies to regain balance and productivity.
 #+slug: burnout
 
 * RE: Burnout

@@ -1,6 +1,6 @@
 #+date: <2024-08-25 Sunday 09:45:30>
-#+title: Email Sentiment Analysis With n8n
-#+description: Learn how to configure a basic workflow in n8n to analyze the sentiment of incoming emails.
+#+title: Automate Email Sentiment Detection Using n8n Workflows
+#+description: Step-by-step guide to setting up an n8n workflow for accurate sentiment analysis of your incoming emails. Boost your email processing with automated emotional insights.
 #+filetags: :automation:n8n:
 #+slug: n8n-sentiment-analysis
 

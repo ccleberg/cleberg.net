@@ -1,6 +1,6 @@
 #+date: <2023-10-11 Wed 00:00:00>
-#+title: Self-Hosting Authelia 
-#+description: 
+#+title: Secure Your Services with Self-Hosted Authelia
+#+description: Comprehensive guide to deploying Authelia for reliable two-factor authentication and access control on your self-hosted services.
 #+slug: self-hosting-authelia
 
 * Overview

@@ -1,6 +1,6 @@
 #+date: <2022-09-17 Sat 00:00:00>
-#+title: Serenity OS: Testing Out a Unique System
-#+description: 
+#+title: Exploring Serenity OS: A Retro-Inspired Unix-Like Operating System
+#+description: Discover Serenity OS, a modern yet nostalgic Unix-like operating system inspired by '90s interfaces. Learn how to build, run, and explore this unique desktop OS.
 #+slug: serenity-os
 
 * Overview

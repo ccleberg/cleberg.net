@@ -1,6 +1,6 @@
 #+date: <2022-02-10 Thu 00:00:00>
-#+title: Leaving Office-Based Work in the Past
-#+description: 
+#+title: Why I'm Saying Goodbye to Office-Based Work for Good
+#+description: Exploring the shift from traditional office jobs to remote work, highlighting benefits, challenges, and tips for a successful transition.
 #+slug: leaving-the-office
 
 * The Working World is Changing

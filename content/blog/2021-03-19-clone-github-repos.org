@@ -1,6 +1,6 @@
 #+date: <2021-03-19 Fri 00:00:00>
-#+title: How to Clone All Repositories from a GitHub or Sourcehut Account
-#+description: 
+#+title: Effortlessly Clone Every Repository from GitHub and Sourcehut Accounts
+#+description: Step-by-step guide to quickly clone all your GitHub and Sourcehut repositories using simple bash scripts. Automate your repository backups and transfers with ease.
 #+slug: clone-github-repos
 
 * Cloning from GitHub

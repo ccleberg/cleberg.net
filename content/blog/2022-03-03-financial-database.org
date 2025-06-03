@@ -1,6 +1,6 @@
 #+date: <2022-03-03 Thu 00:00:00>
-#+title: Maintaining a Personal Financial Database
-#+description: 
+#+title: Building and Managing a Comprehensive Personal Financial Database
+#+description: Explore how to effectively create and maintain a personal financial database using SQLite, Python, and Jupyter Notebooks for enhanced financial tracking and reporting.
 #+slug: financial-database
 
 * Personal Financial Tracking

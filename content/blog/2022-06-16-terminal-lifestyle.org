@@ -1,6 +1,6 @@
 #+date: <2022-06-16 Thu 00:00:00>
-#+title: A Terminal Lifestyle 
-#+description: 
+#+title: Embracing a Focused Terminal Lifestyle
+#+description: How to minimize digital distractions and maximize productivity using terminal-based tools and workflows for web browsing, communication, email, RSS, and coding.
 #+slug: terminal-lifestyle
 
 * Text-Based Simplicity

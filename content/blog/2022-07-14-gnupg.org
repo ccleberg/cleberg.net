@@ -1,6 +1,6 @@
 #+date: <2022-07-14 Thu 00:00:00>
-#+title: GNU Privacy Guard (GPG) 
-#+description: 
+#+title: Exploring GNU Privacy Guard: Secure Your Communications with GPG
+#+description: An in-depth guide to GNU Privacy Guard (GPG), its history, encryption algorithms, vulnerabilities, key creation, and common use cases for secure data and email protection.
 #+slug: gnupg
 
 * The History of GPG

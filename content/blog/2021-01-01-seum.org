@@ -1,6 +1,6 @@
 #+date: <2021-01-01 Fri 00:00:00>
-#+title: SEUM: Spreedrunners from Hell
-#+description: 
+#+title: SEUM: Ultimate Speedrunners from Hell Challenge
+#+description: Experience SEUM, the fast-paced puzzle and free-running game blending intense speedrunning action with thrilling Hell-themed challenges. Master gravity, teleportation, and more to conquer levels and dominate leaderboards.
 #+slug: seum
 
 * Game Description

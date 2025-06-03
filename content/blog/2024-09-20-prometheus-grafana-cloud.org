@@ -1,6 +1,6 @@
 #+date: <2024-09-20 Friday 13:38:52>
-#+title: Linux Observability with Self-Hosted Prometheus and Grafana Cloud
-#+description: Learn how to self-host a Prometheus data collection tool with Docker and visualize the results with Grafana Cloud.
+#+title: Monitor Linux Servers with Self-Hosted Prometheus and Grafana Cloud Integration
+#+description: Step-by-step guide to setting up Prometheus with Docker for Linux server monitoring and visualizing metrics using Grafana Cloud dashboards.
 #+filetags: :linux:grafana:
 #+slug: prometheus-grafana-cloud
 

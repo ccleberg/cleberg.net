@@ -1,6 +1,6 @@
 #+date: <2022-03-08 Tue 00:00:00>
-#+title: Migrating Plex to a New Server with Nvidia GPU Transcoding
-#+description: 
+#+title: Seamless Plex Migration: Setting Up Nvidia GPU Transcoding on Your New Server
+#+description: Step-by-step guide to migrating Plex Media Server to a new server with Nvidia GPU hardware transcoding for optimal performance and smooth streaming.
 #+slug: plex-migration
 
 * Migration Phases

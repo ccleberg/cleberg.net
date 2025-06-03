@@ -1,6 +1,6 @@
 #+date: <2022-10-22 Sat 00:00:00>
-#+title: Alpine Linux: My New Server OS
-#+description: 
+#+title: Alpine Linux: Lightweight and Powerful Server OS
+#+description: Discover how Alpine Linux boosts server performance with its minimal footprint, efficient package management, and secure setup for web and Docker environments.
 #+slug: alpine-linux
 
 * Alpine Linux

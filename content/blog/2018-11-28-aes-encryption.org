@@ -1,6 +1,6 @@
 #+date: <2018-11-28 Wed 00:00:00>
-#+title: AES Encryption
-#+description: A beginner's guide to AES encryption.
+#+title: Mastering AES Encryption: The Essential Beginner's Guide
+#+description: Learn AES encryption basics, key methods, security insights, and practical applications in this comprehensive beginner-friendly tutorial.
 #+slug: aes-encryption
 
 * Basic AES

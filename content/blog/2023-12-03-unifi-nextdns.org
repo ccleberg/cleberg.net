@@ -1,6 +1,6 @@
 #+date: <2023-12-03 Sun 00:00:00>
-#+title: How to Install NextDNS on the Unifi Dream Machine
-#+description: 
+#+title: Step-by-Step Guide to Installing NextDNS on the Unifi Dream Machine
+#+description: Learn how to install and configure NextDNS on your Unifi Dream Machine router quickly and securely with this comprehensive step-by-step guide.
 #+slug: unifi-nextdns
 
 * Overview

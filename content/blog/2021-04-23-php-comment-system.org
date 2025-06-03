@@ -1,6 +1,6 @@
 #+date: <2021-04-23 Fri 00:00:00>
-#+title: Roll Your Own Static Commenting System in PHP
-#+description: 
+#+title: Build Your Own Lightweight PHP Static Comment System
+#+description: Learn how to create a privacy-focused, lightweight static commenting system using PHP that requires no JavaScript or external services. Perfect for static blogs and sites seeking simple server-side comments.
 #+slug: php-comment-system
 
 * The Terrible-ness of Commenting Systems

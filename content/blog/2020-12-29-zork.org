@@ -1,6 +1,6 @@
 #+date: <2020-12-29 Tue 00:00:00>
-#+title: Zork: Let's Explore a Classic
-#+description: 
+#+title: Zork: The Ultimate Classic Text Adventure Game Experience
+#+description: Discover Zork, the legendary text-based adventure game from the 1980s. Explore, solve puzzles, and collect treasures in this iconic interactive fiction classic.
 #+slug: zork
 
 * Download (Free)

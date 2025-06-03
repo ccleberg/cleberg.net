@@ -1,6 +1,6 @@
 #+date: <2024-07-11 Thursday 20:24:02>
-#+title: Emacs on iPadOS
-#+description: Learn how to install and use Emacs on the Apple Silicon iPad natively.
+#+title: Running Emacs Natively on Apple Silicon iPad
+#+description: Step-by-step guide to installing and using Emacs on iPadOS with Apple Silicon, including setup tips and performance insights.
 #+filetags: :emacs:apple:
 #+slug: emacs-on-ipad
 

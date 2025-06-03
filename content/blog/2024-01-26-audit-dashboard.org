@@ -1,6 +1,6 @@
 #+date: <2024-01-26 Fri 00:00:00>
-#+title: Building an Audit Status Dashboard
-#+description: 
+#+title: Creating an Interactive Audit Status Dashboard with Alteryx and Power BI
+#+description: Learn how to transform audit tracking data into insightful, dynamic dashboards using Alteryx for data preparation and Power BI for powerful visualization. Step-by-step guide for auditors and analysts.
 #+slug: audit-dashboard
 
 Alteryx and Power BI are powerful tools that can help turn your old-school audit

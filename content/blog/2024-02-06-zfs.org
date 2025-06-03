@@ -1,6 +1,6 @@
 #+date: <2024-02-06 Tue 00:00:00>
-#+title: How to Create a ZFS Pool on Ubuntu Linux
-#+description: 
+#+title: Step-by-Step Guide to Creating a ZFS Storage Pool on Ubuntu Linux
+#+description: Learn how to create and configure high-performance ZFS storage pools on Ubuntu Linux, including setup, expansion, and best practices for reliable data management.
 #+slug: zfs
 
 This post details the process I used to create ZFS pools, datasets, and

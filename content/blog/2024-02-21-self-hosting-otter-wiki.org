@@ -1,6 +1,6 @@
 #+date: <2024-02-21 Wed 00:00:00>
-#+title: Self-Hosting an Otter Wiki
-#+description:
+#+title: How to Self-Host Your Own Otter Wiki for Seamless Collaboration
+#+description: Step-by-step guide to setting up and securing Otter Wiki using Docker Compose and Nginx reverse proxy for reliable self-hosting.
 #+slug: self-hosting-otter-wiki
 
 * An Otter Wiki

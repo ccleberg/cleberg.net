@@ -1,6 +1,6 @@
 #+date: <2021-02-19 Fri 00:00:00>
-#+title: macOS: Testing Out a New OS
-#+description:
+#+title: Exploring macOS: A First-Time User's Hands-On Experience
+#+description: Discover my initial impressions, setup tips, and customization guide for macOS as a former Windows and Linux user transitioning to Apple’s operating system.
 #+slug: macos
 
 * Diving into macOS

@@ -1,6 +1,6 @@
 #+date: <2020-07-20 Mon 00:00:00>
-#+title: Data Exploration: Video Games Sales
-#+description: 
+#+title: In-Depth Analysis of Global Video Game Sales Trends
+#+description: Explore comprehensive insights and trends in global video game sales, including top platforms, genres, and regional market performances.
 #+slug: video-game-sales
 
 * Background Information

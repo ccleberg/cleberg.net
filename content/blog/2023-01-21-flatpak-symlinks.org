@@ -1,6 +1,6 @@
 #+date: <2023-01-21 Sat 00:00:00>
-#+title: Running Flatpak Apps with Symlinks
-#+description: 
+#+title: Speed Up Your Flatpak App Launches with Simple Symlinks
+#+description: Learn how to create symlinks for Flatpak applications to launch them faster from your terminal or app launcher. Step-by-step guide for seamless Flatpak integration.
 #+slug: flatpak-symlinks
 
 * Running Flatpak Apps Should Be Faster

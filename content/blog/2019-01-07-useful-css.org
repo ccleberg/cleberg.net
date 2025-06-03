@@ -1,6 +1,6 @@
 #+date: <2019-01-07 Mon 00:00:00>
-#+title: Useful CSS Snippets 
-#+description: 
+#+title: Essential CSS Tips and Tricks for Modern Web Design
+#+description: Discover essential CSS snippets and techniques to enhance your web design, improve user experience, and master modern styles like flexbox, box shadows, and CSS variables.
 #+slug: useful-css
 
 * Introduction to CSS

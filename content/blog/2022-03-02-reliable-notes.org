@@ -1,6 +1,6 @@
 #+date: <2022-03-02 Wed 00:00:00>
-#+title: Easy, Reliable Note-Taking
-#+description:
+#+title: Effortless & Reliable Note-Taking Techniques
+#+description: Discover practical and dependable methods for easy note-taking using Markdown, syncing, and cross-platform tools to keep your notes organized and accessible.
 #+slug: reliable-notes
 
 * Choosing Durable File Formats

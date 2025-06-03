@@ -1,6 +1,6 @@
 #+date: <2021-05-30 Sun 00:00:00>
-#+title: Changing Git Authors 
-#+description: 
+#+title: Fix Git Committers: Change Author Name & Email in Multiple Repos
+#+description: Step-by-step guide to update Git author name and email across multiple repositories safely and efficiently.
 #+slug: changing-git-authors
 
 * Changing Git Author/Email Based on Previously Committed Email

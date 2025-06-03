@@ -1,6 +1,6 @@
 #+date: <2018-11-28 Wed 00:00:00>
-#+title: The C++ Compiler
-#+description: 
+#+title: Inside the C++ Compiler: Understanding the Compilation Process
+#+description: Discover how the C++ compiler transforms your code step-by-step from source files to executable programs. Learn about preprocessing, compiling, assembling, and linking in this comprehensive guide.
 #+slug: cpp-compiler
 
 * A Brief Introduction

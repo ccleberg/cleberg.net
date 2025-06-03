@@ -1,6 +1,6 @@
 #+date: <2023-10-04 Wed 00:00:00>
-#+title: Digital Minimalism 
-#+description: 
+#+title: Embracing Digital Minimalism for a Focused Life
+#+description: Explore practical strategies to reduce digital clutter, improve focus, and live intentionally with digital minimalism principles.
 #+slug: digital-minimalism
 
 I've written [[https://cleberg.net/wiki/#digital-garden][a note about minimalism]]

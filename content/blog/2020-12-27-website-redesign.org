@@ -1,6 +1,6 @@
 #+date: <2020-12-27 Sun 00:00:00>
-#+title: Redesigning My Website: The 5 KB Result
-#+description: 
+#+title: How I Shrunk My Website to Just 5 KB: A Redesign Story
+#+description: Discover the step-by-step website redesign process that reduced page size to 5 KB, improving speed, SEO, and user experience for a minimalist, high-performance site.
 #+slug: website-redesign
 
 * A Brief History
