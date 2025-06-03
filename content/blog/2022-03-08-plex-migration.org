@@ -1,4 +1,4 @@
-#+date: <2022-03-08>
+#+date: <2022-03-08 Tue 00:00:00>
 #+title: Migrating Plex to a New Server with Nvidia GPU Transcoding
 #+description: 
 #+slug: plex-migration

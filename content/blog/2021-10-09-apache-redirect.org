@@ -1,4 +1,4 @@
-#+date: <2021-10-09>
+#+date: <2021-10-09 Sat 00:00:00>
 #+title: Apache Redirect HTML Files to a Directory
 #+description: 
 #+slug: apache-redirect

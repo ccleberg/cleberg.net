@@ -1,4 +1,4 @@
-#+date: <2024-03-29>
+#+date: <2024-03-29 Fri 00:00:00>
 #+title: Blogging in Org-Mode 
 #+description: 
 #+slug: org-blog

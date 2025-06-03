@@ -1,4 +1,4 @@
-#+date: <2021-04-23>
+#+date: <2021-04-23 Fri 00:00:00>
 #+title: Roll Your Own Static Commenting System in PHP
 #+description: 
 #+slug: php-comment-system

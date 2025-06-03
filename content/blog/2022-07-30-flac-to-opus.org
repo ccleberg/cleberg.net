@@ -1,4 +1,4 @@
-#+date: <2022-07-30>
+#+date: <2022-07-30 Sat 00:00:00>
 #+title: Recursive Command-Line FLAC to Opus Conversion
 #+description: 
 #+slug: flac-to-opus

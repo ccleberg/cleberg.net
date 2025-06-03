@@ -1,4 +1,4 @@
-#+date: <2021-03-19>
+#+date: <2021-03-19 Fri 00:00:00>
 #+title: How to Clone All Repositories from a GitHub or Sourcehut Account
 #+description: 
 #+slug: clone-github-repos

@@ -1,4 +1,4 @@
-#+date: <2023-09-15>
+#+date: <2023-09-15 Fri 00:00:00>
 #+title: Self-Hosting Gitweb via Nginx
 #+description: 
 #+slug: self-hosting-gitweb

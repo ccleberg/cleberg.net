@@ -1,4 +1,4 @@
-#+date: <2025-05-02 Fri 21:10:00>
+#+date: <2025-05-02 Friday 21:10:00>
 #+title: Trying Out Asahi Linux on the M2 Macbook Pro 16"
 #+description: Read about my experience with Asahi Linux on an M2 MacBook Pro 16".
 #+filetags: :mac:apple:linux:

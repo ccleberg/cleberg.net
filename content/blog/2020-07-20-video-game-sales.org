@@ -1,4 +1,4 @@
-#+date: <2020-07-20>
+#+date: <2020-07-20 Mon 00:00:00>
 #+title: Data Exploration: Video Games Sales
 #+description: 
 #+slug: video-game-sales

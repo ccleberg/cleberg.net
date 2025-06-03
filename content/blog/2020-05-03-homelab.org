@@ -1,4 +1,4 @@
-#+date: <2020-05-03>
+#+date: <2020-05-03 Sun 00:00:00>
 #+title: An Inside Look at My Home Lab
 #+description: 
 #+slug: homelab

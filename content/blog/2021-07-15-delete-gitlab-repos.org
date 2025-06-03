@@ -1,4 +1,4 @@
-#+date: <2021-07-15>
+#+date: <2021-07-15 Thu 00:00:00>
 #+title: How to Delete All GitLab Repositories
 #+description: 
 #+slug: delete-gitlab-repos

@@ -1,4 +1,4 @@
-#+date: <2022-06-16>
+#+date: <2022-06-16 Thu 00:00:00>
 #+title: A Terminal Lifestyle 
 #+description: 
 #+slug: terminal-lifestyle

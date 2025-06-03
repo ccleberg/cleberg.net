@@ -1,4 +1,4 @@
-#+date: <2021-03-30>
+#+date: <2021-03-30 Tue 00:00:00>
 #+title: How to Set Up a VPS Web Server
 #+description: 
 #+slug: vps-web-server

@@ -1,4 +1,4 @@
-#+date: <2021-02-19>
+#+date: <2021-02-19 Fri 00:00:00>
 #+title: macOS: Testing Out a New OS
 #+description:
 #+slug: macos

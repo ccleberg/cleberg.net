@@ -1,4 +1,4 @@
-#+date: <2022-10-04>
+#+date: <2022-10-04 Tue 00:00:00>
 #+title: Syncthing: A Minimal Self-Hosted Cloud Storage Solution
 #+description: 
 #+slug: syncthing

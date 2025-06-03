@@ -1,4 +1,4 @@
-#+date: <2022-04-09>
+#+date: <2022-04-09 Sat 00:00:00>
 #+title: PineTime: An Open-Source Smart Watch
 #+description: 
 #+slug: pinetime

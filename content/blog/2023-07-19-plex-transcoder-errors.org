@@ -1,4 +1,4 @@
-#+date: <2023-07-19>
+#+date: <2023-07-19 Wed 00:00:00>
 #+title: How to Avoid Plex Error: 'Conversion failed. The transcoder failed to start up.'
 #+description: 
 #+slug: plex-transcoder-errors

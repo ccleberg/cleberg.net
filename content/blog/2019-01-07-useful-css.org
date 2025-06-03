@@ -1,4 +1,4 @@
-#+date: <2019-01-07>
+#+date: <2019-01-07 Mon 00:00:00>
 #+title: Useful CSS Snippets 
 #+description: 
 #+slug: useful-css

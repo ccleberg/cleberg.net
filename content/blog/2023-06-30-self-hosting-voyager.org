@@ -1,4 +1,4 @@
-#+date: <2023-06-30>
+#+date: <2023-06-30 Fri 00:00:00>
 #+title: Self-Hosting Voyager - A Lemmy Web Client
 #+description: 
 #+slug: self-hosting-voyager

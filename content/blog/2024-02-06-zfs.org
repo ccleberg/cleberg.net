@@ -1,4 +1,4 @@
-#+date: <2024-02-06>
+#+date: <2024-02-06 Tue 00:00:00>
 #+title: How to Create a ZFS Pool on Ubuntu Linux
 #+description: 
 #+slug: zfs

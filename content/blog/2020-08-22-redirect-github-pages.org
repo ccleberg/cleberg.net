@@ -1,4 +1,4 @@
-#+date: <2020-08-22>
+#+date: <2020-08-22 Sat 00:00:00>
 #+title: Redirect GitHub Pages from Subdomain to the Top-Level Domain
 #+description:
 #+slug: redirect-github-pages

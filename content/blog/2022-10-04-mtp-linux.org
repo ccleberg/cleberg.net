@@ -1,4 +1,4 @@
-#+date: <2022-10-04>
+#+date: <2022-10-04 Tue 00:00:00>
 #+title: How to Mount an MTP Mobile Device on Fedora Linux
 #+description: 
 #+slug: mtp-linux

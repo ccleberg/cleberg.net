@@ -1,4 +1,4 @@
-#+date: <2022-09-21>
+#+date: <2022-09-21 Wed 00:00:00>
 #+title: Installing Graphene OS on the Pixel 6 Pro
 #+description: 
 #+slug: graphene-os

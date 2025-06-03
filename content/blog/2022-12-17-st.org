@@ -1,4 +1,4 @@
-#+date: <2022-12-17>
+#+date: <2022-12-17 Sat 00:00:00>
 #+title: Simple Terminal
 #+description: 
 #+slug: st

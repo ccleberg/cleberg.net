@@ -1,4 +1,4 @@
-#+date: <2020-12-29>
+#+date: <2020-12-29 Tue 00:00:00>
 #+title: Zork: Let's Explore a Classic
 #+description: 
 #+slug: zork

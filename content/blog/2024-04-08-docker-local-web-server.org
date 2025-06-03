@@ -1,4 +1,4 @@
-#+date: <2024-04-08>
+#+date: <2024-04-08 Mon 00:00:00>
 #+title: Using Docker Desktop to Create a Development Web Server
 #+description: 
 #+slug: docker-local-web-server

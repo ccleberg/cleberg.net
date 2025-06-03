@@ -1,4 +1,4 @@
-#+date: <2023-01-08>
+#+date: <2023-01-08 Sun 00:00:00>
 #+title: How to Remove the Login Manager from Fedora i3
 #+description: 
 #+slug: fedora-login-manager

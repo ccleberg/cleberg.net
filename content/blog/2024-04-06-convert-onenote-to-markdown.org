@@ -1,4 +1,4 @@
-#+date: <2024-04-06>
+#+date: <2024-04-06 Sat 00:00:00>
 #+title: Convert OneNote to Markdown or Org-Mode
 #+description: 
 #+slug: convert-onenote-to-markdown

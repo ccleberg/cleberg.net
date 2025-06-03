@@ -1,4 +1,4 @@
-#+date: <2020-12-27>
+#+date: <2020-12-27 Sun 00:00:00>
 #+title: Redesigning My Website: The 5 KB Result
 #+description: 
 #+slug: website-redesign

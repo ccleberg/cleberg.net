@@ -1,4 +1,4 @@
-#+date: <2022-03-26>
+#+date: <2022-03-26 Sat 00:00:00>
 #+title: Enable TOTP MFA for SSH 
 #+description: 
 #+slug: ssh-mfa

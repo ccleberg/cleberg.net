@@ -1,4 +1,4 @@
-#+date: <2022-06-22>
+#+date: <2022-06-22 Wed 00:00:00>
 #+title: Daily Plaintext Poetry via Email
 #+description: 
 #+slug: daily-poetry

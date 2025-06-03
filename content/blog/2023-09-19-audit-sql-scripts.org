@@ -1,4 +1,4 @@
-#+date: <2023-09-19>
+#+date: <2023-09-19 Tue 00:00:00>
 #+title: Useful SQL Scripts for Auditing Logical Access
 #+description: 
 #+slug: audit-sql-scripts

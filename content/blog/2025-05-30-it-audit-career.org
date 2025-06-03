@@ -1,4 +1,4 @@
-#+date: <2025-05-30 Fri 10:53:28>
+#+date: <2025-05-30 Friday 10:53:28>
 #+title: Future-Proof Your Audit Career: Emerging Technologies
 #+description: Practical steps for auditors looking to break into AI, blockchain, cloud, DevOps, and automation-focused assurance roles.
 #+filetags: :audit:
