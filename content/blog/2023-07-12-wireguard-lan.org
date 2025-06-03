@@ -1,4 +1,4 @@
-#+date: <2023-07-12>
+#+date: <2023-07-12 Wed 00:00:00>
 #+title: Enable LAN Access in Mullvad Wireguard Configuration Files
 #+description: 
 #+slug: wireguard-lan

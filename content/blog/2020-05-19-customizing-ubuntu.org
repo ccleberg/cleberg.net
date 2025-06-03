@@ -1,4 +1,4 @@
-#+date: <2020-05-19>
+#+date: <2020-05-19 Tue 00:00:00>
 #+title: A Beginner's Guide: Customizing Ubuntu
 #+description: 
 #+slug: customizing-ubuntu

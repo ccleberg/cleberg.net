@@ -1,4 +1,4 @@
-#+date: <2020-09-01>
+#+date: <2020-09-01 Tue 00:00:00>
 #+title: IBM Watson Visual Recognition
 #+description: 
 #+slug: visual-recognition

@@ -1,4 +1,4 @@
-#+date: <2020-07-26>
+#+date: <2020-07-26 Sun 00:00:00>
 #+title: Algorithmically Analyzing Local Businesses
 #+description: 
 #+slug: business-analysis

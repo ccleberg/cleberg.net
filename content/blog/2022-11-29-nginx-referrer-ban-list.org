@@ -1,4 +1,4 @@
-#+date: <2022-11-29>
+#+date: <2022-11-29 Tue 00:00:00>
 #+title: Creating a Referrer Ban List in Nginx
 #+description: 
 #+slug: nginx-referrer-ban-list

@@ -1,4 +1,4 @@
-#+date: <2022-12-07>
+#+date: <2022-12-07 Wed 00:00:00>
 #+title: Redirect Nginx Subdomains and Trailing Content with Regex
 #+description: 
 #+slug: nginx-wildcard-redirect

@@ -1,4 +1,4 @@
-#+date: <2023-11-08>
+#+date: <2023-11-08 Wed 00:00:00>
 #+title: Installing scli on Alpine Linux (musl)
 #+description: 
 #+slug: scli

@@ -1,4 +1,4 @@
-#+date: <2020-09-25>
+#+date: <2020-09-25 Fri 00:00:00>
 #+title: Data Visualization: World Choropleth Map of Happiness
 #+description: 
 #+slug: happiness-map

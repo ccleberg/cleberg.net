@@ -1,4 +1,4 @@
-#+date: <2022-12-23>
+#+date: <2022-12-23 Fri 00:00:00>
 #+title: Alpine Linux as a Desktop OS
 #+description:
 #+slug: alpine-desktop

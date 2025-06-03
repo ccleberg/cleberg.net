@@ -1,4 +1,4 @@
-#+date: <2024-04-18>
+#+date: <2024-04-18 Thu 00:00:00>
 #+title: Email in Doom Emacs with Mu4e on macOS
 #+description: 
 #+slug: mu4e

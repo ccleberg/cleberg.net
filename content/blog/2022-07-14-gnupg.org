@@ -1,4 +1,4 @@
-#+date: <2022-07-14>
+#+date: <2022-07-14 Thu 00:00:00>
 #+title: GNU Privacy Guard (GPG) 
 #+description: 
 #+slug: gnupg

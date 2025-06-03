@@ -1,4 +1,4 @@
-#+date: <2022-02-20>
+#+date: <2022-02-20 Sun 00:00:00>
 #+title: Caching Static Content with Nginx
 #+description: 
 #+slug: nginx-caching

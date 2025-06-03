@@ -1,4 +1,4 @@
-#+date: <2022-02-10>
+#+date: <2022-02-10 Thu 00:00:00>
 #+title: Dynamic DNS with Njalla API
 #+description:
 #+slug: njalla-dns-api

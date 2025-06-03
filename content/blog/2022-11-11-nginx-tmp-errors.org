@@ -1,4 +1,4 @@
-#+date: <2022-11-11>
+#+date: <2022-11-11 Fri 00:00:00>
 #+title: Fixing Permission Errors in /var/lib/nginx
 #+description: 
 #+slug: nginx-tmp-errors

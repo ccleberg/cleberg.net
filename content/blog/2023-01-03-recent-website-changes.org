@@ -1,4 +1,4 @@
-#+date: <2023-01-03>
+#+date: <2023-01-03 Tue 00:00:00>
 #+title: Recent Website Changes 
 #+description: 
 #+slug: recent-website-changes

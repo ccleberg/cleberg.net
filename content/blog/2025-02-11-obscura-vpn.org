@@ -1,4 +1,4 @@
-#+date: <2025-02-11 Tue 11:40:00>
+#+date: <2025-02-11 Tuesday 11:40:00>
 #+title: A Review of Obscura VPN: A Two-Party VPN
 #+description: A simple review of Obscura VPN, a new VPN partner of Mullvad.
 #+filetags: :vpn:privacy:

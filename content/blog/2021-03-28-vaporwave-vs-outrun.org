@@ -1,4 +1,4 @@
-#+date: <2021-03-28>
+#+date: <2021-03-28 Sun 00:00:00>
 #+title: Vaporware vs. Outrun 
 #+description: 
 #+slug: vaporwave-vs-outrun

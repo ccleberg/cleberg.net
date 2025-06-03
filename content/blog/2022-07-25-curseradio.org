@@ -1,4 +1,4 @@
-#+date: <2022-07-25>
+#+date: <2022-07-25 Mon 00:00:00>
 #+title: CurseRadio: Listening to the Radio on the Command Line
 #+description: 
 #+slug: curseradio

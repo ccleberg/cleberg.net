@@ -1,4 +1,4 @@
-#+date: <2025-01-23 Thu 20:44:45>
+#+date: <2025-01-23 Thursday 20:44:45>
 #+title: Self-Hosting Tandoor Recipe Manager
 #+description: Learn how to self-host Tandoor, the smart recipe management web app.
 #+filetags: :self-hosting:

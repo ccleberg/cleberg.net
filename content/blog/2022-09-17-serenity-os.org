@@ -1,4 +1,4 @@
-#+date: <2022-09-17>
+#+date: <2022-09-17 Sat 00:00:00>
 #+title: Serenity OS: Testing Out a Unique System
 #+description: 
 #+slug: serenity-os

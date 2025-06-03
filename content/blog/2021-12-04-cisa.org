@@ -1,4 +1,4 @@
-#+date: <2021-12-04>
+#+date: <2021-12-04 Sat 00:00:00>
 #+title: I Passed the CISA! 
 #+description: 
 #+slug: cisa

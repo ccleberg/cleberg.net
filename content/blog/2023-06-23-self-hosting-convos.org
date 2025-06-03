@@ -1,4 +1,4 @@
-#+date: <2023-06-23>
+#+date: <2023-06-23 Fri 00:00:00>
 #+title: Self-Hosting Convos IRC Web Client
 #+description: 
 #+slug: self-hosting-convos

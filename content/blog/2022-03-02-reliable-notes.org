@@ -1,4 +1,4 @@
-#+date: <2022-03-02>
+#+date: <2022-03-02 Wed 00:00:00>
 #+title: Easy, Reliable Note-Taking
 #+description:
 #+slug: reliable-notes

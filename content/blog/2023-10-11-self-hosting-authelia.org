@@ -1,4 +1,4 @@
-#+date: <2023-10-11>
+#+date: <2023-10-11 Wed 00:00:00>
 #+title: Self-Hosting Authelia 
 #+description: 
 #+slug: self-hosting-authelia

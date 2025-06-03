@@ -1,4 +1,4 @@
-#+date: <2022-04-02>
+#+date: <2022-04-02 Sat 00:00:00>
 #+title: Set-Up a Reverse Proxy with Nginx
 #+description: 
 #+slug: nginx-reverse-proxy
