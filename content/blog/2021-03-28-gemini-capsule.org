@@ -2,6 +2,7 @@
 #+title: How to Launch Your Own Gemini Capsule Quickly and Easily
 #+description: Step-by-step guide on launching a Gemini capsule for beginners. Learn how to create and deploy your personal Gemini site with simple instructions and best practices.
 #+slug: gemini-capsule
+#+filetags: :gemini:capsule:tutorial:
 
 * What is Gemini?
 

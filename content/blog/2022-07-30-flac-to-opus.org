@@ -2,6 +2,7 @@
 #+title: Efficient Recursive FLAC to Opus Batch Conversion Script
 #+description: A fast and reliable command-line script for recursive batch conversion of FLAC audio files to high-quality Opus format, perfect for music archiving and streaming optimization.
 #+slug: flac-to-opus
+#+filetags: :audio:conversion:scripting:
 
 * Converting FLAC to OPUS
 

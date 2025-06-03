@@ -2,6 +2,7 @@
 #+title: Unlocking IBM Watson Visual Recognition: Powerful AI Image Classification Made Easy
 #+description: Discover how to use IBM Watson Visual Recognition for accurate image classification with AI. Step-by-step guide, API setup, and practical examples to boost your machine learning projects.
 #+slug: visual-recognition
+#+filetags: :ibm-watson:visual-recognition:image-classification:
 
 * What is IBM Watson?
 

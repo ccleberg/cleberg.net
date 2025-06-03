@@ -2,6 +2,7 @@
 #+title: Mastering Email in Doom Emacs with Mu4e on macOS
 #+description: Comprehensive guide to setting up and configuring Mu4e email client in Doom Emacs on macOS for efficient mail management and synchronization.
 #+slug: mu4e
+#+filetags: :email:mu4e:doom-emacs:
 
 This post was heavily inspired by [[https://macowners.club/posts/email-emacs-mu4e-macos/][Email setup in Emacs with Mu4e on macOS]], but
 with my own tweaks for a single-account configuration and some Doom-specific

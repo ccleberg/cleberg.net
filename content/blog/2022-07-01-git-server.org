@@ -2,6 +2,7 @@
 #+title: Hosting Your Own Personal Git Server with Ease
 #+description: A comprehensive guide to self-hosting Git repositories securely and efficiently for seamless collaboration and remote access
 #+slug: git-server
+#+filetags: :git:server:self-hosting:
 
 * My Approach to Self-Hosting Git
 

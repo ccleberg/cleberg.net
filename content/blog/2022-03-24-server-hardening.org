@@ -2,6 +2,7 @@
 #+title: Ultimate Guide to Hardening Your Public-Facing Home Server
 #+description: Learn essential steps to secure your home server from external threats with firewalls, SSH best practices, fail2ban, and network segmentation for enhanced protection.
 #+slug: server-hardening
+#+filetags: :home-server:security:hardening:
 
 * Post Updates
 

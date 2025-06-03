@@ -2,6 +2,7 @@
 #+title: How to Fix Ubuntu Emergency Mode by Correcting Your Fstab File
 #+description: Step-by-step guide to resolve Ubuntu emergency mode boot issues caused by incorrect /etc/fstab entries. Learn how to edit fstab and restore normal boot.
 #+slug: ubuntu-emergency-mode
+#+filetags: :ubuntu:emergency-mode:fstab:
 
 * The Problem
 

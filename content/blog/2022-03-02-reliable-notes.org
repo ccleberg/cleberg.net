@@ -2,6 +2,7 @@
 #+title: Effortless & Reliable Note-Taking Techniques
 #+description: Discover practical and dependable methods for easy note-taking using Markdown, syncing, and cross-platform tools to keep your notes organized and accessible.
 #+slug: reliable-notes
+#+filetags: :note-taking:markdown:productivity:
 
 * Choosing Durable File Formats
 :PROPERTIES:

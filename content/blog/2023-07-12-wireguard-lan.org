@@ -2,6 +2,7 @@
 #+title: How to Enable LAN Access in Mullvad Wireguard Configuration Files Quickly and Securely
 #+description: Step-by-step guide to modify Mullvad Wireguard config files for LAN access, including updating iptables rules to maintain local network connectivity while using Mullvad VPN.
 #+slug: wireguard-lan
+#+filetags: :wireguard:networking:security:
 
 * Download Configuration Files from Mullvad
 

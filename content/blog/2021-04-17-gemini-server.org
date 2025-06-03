@@ -2,6 +2,7 @@
 #+title: How to Host a Fast and Reliable Gemini Server
 #+description: Step-by-step guide to setting up a secure, fast, and reliable Gemini server on Ubuntu using Agate. Learn installation, configuration, and firewall setup for Gemini capsules.
 #+slug: gemini-server
+#+filetags: :gemini:server:agate:
 
 * Similar Article Available
 

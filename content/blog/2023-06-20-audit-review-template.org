@@ -2,6 +2,7 @@
 #+title: Comprehensive Guide to Audit Testing Review
 #+description: A practical and straightforward audit testing review template designed to ensure thorough evaluation of financial statement audits and SOC reports.
 #+slug: audit-review-template
+#+filetags: :audit:review:template:
 
 * Overview
 

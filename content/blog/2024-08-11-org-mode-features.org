@@ -1,8 +1,8 @@
 #+date: <2024-08-12 Mon 12:48:00>
 #+title: My Top 8 Essential Org-Mode Features You Need to Know
 #+description: Discover the most powerful and practical org-mode features that enhance your productivity and streamline note-taking and task management.
-#+filetags: :org-mode:
 #+slug: org-mode-features
+#+filetags: :productivity:emacs:org-mode:
 
 * Cycling (Folding)
 

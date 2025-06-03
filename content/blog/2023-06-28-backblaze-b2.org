@@ -2,6 +2,7 @@
 #+title: A Practical Guide to Backblaze B2 Cloud Storage for Secure Backups
 #+description: Learn how to set up and use Backblaze B2 Cloud Storage for reliable, affordable offsite backups with step-by-step instructions and tips.
 #+slug: backblaze-b2
+#+filetags: :cloud-storage:backup:backblaze:
 
 * Overview
 

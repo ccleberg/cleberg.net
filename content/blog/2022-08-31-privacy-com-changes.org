@@ -2,6 +2,7 @@
 #+title: Privacy.com Updates Spark Concern Among Users
 #+description: In-depth analysis of Privacy.com's recent terms changes and their impact on users' privacy and payment security
 #+slug: privacy-com-changes
+#+filetags: :privacy:finance:terms_changes:
 
 * Privacy.com Changes Their Terms
 

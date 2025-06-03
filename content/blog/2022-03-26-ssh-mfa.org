@@ -2,6 +2,7 @@
 #+title: Secure Your SSH Access with Easy TOTP MFA Setup
 #+description: Step-by-step guide to enable TOTP multi-factor authentication for SSH, enhancing server security with Google Authenticator and PAM. Improve SSH login protection today.
 #+slug: ssh-mfa
+#+filetags: :ssh:mfa:security:
 
 * Why Do I Need MFA for SSH?
 

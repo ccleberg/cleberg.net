@@ -2,6 +2,7 @@
 #+title: Mastering Blogging with Org-Mode: A Practical Guide
 #+description: Learn how to efficiently blog using Emacs and Org-Mode with step-by-step configuration and tools for static site generation and publishing.
 #+slug: org-blog
+#+filetags: :blog:weblorg:emacs:
 
 First and foremost, apologies to those who subscribe via RSS as I know that my
 feed duplicated itself when I moved this blog over to org-mode last night.

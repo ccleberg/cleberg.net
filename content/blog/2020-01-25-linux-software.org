@@ -2,6 +2,7 @@
 #+title: Essential Linux Software You Should Know About
 #+description: A curated list of must-have Linux software including GUI applications, command-line tools, and installation instructions for popular distributions.
 #+slug: linux-software
+#+filetags: :linux:software:tools:
 
 * GUI Applications
 

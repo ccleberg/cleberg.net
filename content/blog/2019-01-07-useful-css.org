@@ -2,6 +2,7 @@
 #+title: Essential CSS Tips and Tricks for Modern Web Design
 #+description: Discover essential CSS snippets and techniques to enhance your web design, improve user experience, and master modern styles like flexbox, box shadows, and CSS variables.
 #+slug: useful-css
+#+filetags: :css:web-design:tips:
 
 * Introduction to CSS
 

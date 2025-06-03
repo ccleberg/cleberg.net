@@ -2,6 +2,7 @@
 #+title: Mastering AES Encryption: The Essential Beginner's Guide
 #+description: Learn AES encryption basics, key methods, security insights, and practical applications in this comprehensive beginner-friendly tutorial.
 #+slug: aes-encryption
+#+filetags: :encryption:AES:cryptography:
 
 * Basic AES
 

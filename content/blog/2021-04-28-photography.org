@@ -2,6 +2,7 @@
 #+title: Rediscovering the Art and Joy of Photography
 #+description: Explore the exciting journey of rediscovering photography, from gear choices to capturing unforgettable moments. Perfect for beginners and enthusiasts looking to enhance their photography skills.
 #+slug: photography
+#+filetags: :photography:camera:gear:
 
 * Why Photography?
 

@@ -2,6 +2,7 @@
 #+title: In-Depth Analysis of Global Video Game Sales Trends
 #+description: Explore comprehensive insights and trends in global video game sales, including top platforms, genres, and regional market performances.
 #+slug: video-game-sales
+#+filetags: :video-games:sales:data-analysis:
 
 * Background Information
 

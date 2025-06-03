@@ -2,6 +2,7 @@
 #+title: How I Passed the Challenging CISA Exam on My First Try!
 #+description: Detailed insights on passing the Certified Information Systems Auditor (CISA) exam, study tips, prep materials, and exam strategies for IT audit professionals.
 #+slug: cisa
+#+filetags: :CISA:certification:audit:
 
 * What is the CISA?
 

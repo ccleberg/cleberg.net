@@ -2,6 +2,7 @@
 #+title: Why I'm Saying Goodbye to Office-Based Work for Good
 #+description: Exploring the shift from traditional office jobs to remote work, highlighting benefits, challenges, and tips for a successful transition.
 #+slug: leaving-the-office
+#+filetags: :remote-work:home-office:career-change:
 
 * The Working World is Changing
 

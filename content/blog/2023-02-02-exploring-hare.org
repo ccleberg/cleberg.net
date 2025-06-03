@@ -2,6 +2,7 @@
 #+title: Diving Into the Hare Programming Language: A Beginner's Exploration
 #+description: An introductory look at the Hare programming language, its features, installation, and practical examples for system-level programming enthusiasts.
 #+slug: exploring-hare
+#+filetags: :hare:programming:beginner:
 
 * A Quick Note
 

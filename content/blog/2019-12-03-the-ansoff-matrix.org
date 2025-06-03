@@ -2,6 +2,7 @@
 #+title: Mastering Growth with the Ansoff Matrix: A Strategic Guide
 #+description: An in-depth exploration of the Ansoff Matrix framework, detailing strategies for market penetration, development, product innovation, and diversification to drive business growth and competitive advantage.
 #+slug: the-ansoff-matrix
+#+filetags: :strategy:growth-business:management:
 
 * Overview
 

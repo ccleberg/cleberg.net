@@ -2,6 +2,7 @@
 #+title: How to Quickly Switch or Disable Your Display Manager on Void Linux
 #+description: Step-by-step instructions to disable or change your display manager on Void Linux, including managing services and configuration tips for smooth desktop setup.
 #+slug: linux-display-manager
+#+filetags: :linux:void:display-manager:
 
 * Display Manager Services
 

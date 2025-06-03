@@ -2,6 +2,7 @@
 #+title: Twosday: The Uniquely Palindromic Tuesday, 2-22-22
 #+description: Explore the fascinating facts about Tuesday, February 22, 2022 — a rare palindromic date known as Twosday, with cultural insights and unique celebrations.
 #+slug: tuesday
+#+filetags: :palindrome:twosday:date-facts:
 
 * Tuesday, Twosday
 

@@ -2,6 +2,7 @@
 #+title: Fix Plex Transcoder Error: Conversion Failed to Start Up
 #+description: Troubleshoot and resolve Plex transcoder startup failures to ensure smooth media playback without conversion errors.
 #+slug: plex-transcoder-errors
+#+filetags: :plex:transcoder:error:
 
 * Plex Transcoder Error
 
