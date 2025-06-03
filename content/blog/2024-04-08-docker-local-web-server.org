@@ -1,8 +1,8 @@
-#+date: <2024-04-08 Mon 00:00:00>
-#+title: Streamlining Local Web Development with Docker Desktop
-#+description: Learn how to set up a powerful and flexible local web server using Docker Desktop, enabling efficient web development and testing on your machine.
-#+slug: docker-local-web-server
-#+filetags: :docker:nginx:webserver:
+#+date:        <2024-04-08 Mon 00:00:00>
+#+title:       Configuration Procedure for Local Web Development Server Using Docker Desktop
+#+description: Instructions for setting up a local web development environment employing Docker Desktop and Nginx web server to facilitate development and testing workflows.
+#+slug:        docker-local-web-server
+#+filetags:    :docker:nginx:webserver:
 
 When developing websites locally, I often use a simple Python web server to
 observe the changes.

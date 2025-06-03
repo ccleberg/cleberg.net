@@ -1,8 +1,8 @@
-#+date: <2018-11-28 Wed 00:00:00>
-#+title: Inside the C++ Compiler: Understanding the Compilation Process
-#+description: Discover how the C++ compiler transforms your code step-by-step from source files to executable programs. Learn about preprocessing, compiling, assembling, and linking in this comprehensive guide.
-#+slug: cpp-compiler
-#+filetags: :cpp:compilation:programming:
+#+date:        <2018-11-28 Wed 00:00:00>
+#+title:       C++ Compilation Process: Stepwise Transformation from Source to Executable
+#+description: Systematic presentation of the C++ compilation phases including preprocessing, compilation, assembly, and linking, with technical insights into each stage’s function.
+#+slug:        cpp-compiler
+#+filetags:    :cpp:compilation:programming:
 
 * A Brief Introduction
 

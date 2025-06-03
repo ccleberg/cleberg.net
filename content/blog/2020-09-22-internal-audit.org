@@ -1,8 +1,8 @@
-#+date: <2020-09-22 Tue 00:00:00>
-#+title: Understanding Internal Audit: Key Roles and Importance
-#+description: Explore the essential functions of internal audit, its impact on organizational risk management, governance, and compliance to enhance business performance.
-#+slug: internal-audit
-#+filetags: :audit:internal-audit:governance:
+#+date:        <2020-09-22 Tue 00:00:00>
+#+title:       Functional Roles and Significance of Internal Audit in Organizations
+#+description: Analysis of internal audit processes, their contribution to risk management, governance frameworks, and compliance monitoring within corporate structures.
+#+slug:        internal-audit
+#+filetags:    :audit:internal-audit:governance:
 
 * Definitions
 

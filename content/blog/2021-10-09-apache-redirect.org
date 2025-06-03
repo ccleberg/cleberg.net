@@ -1,8 +1,8 @@
-#+date: <2021-10-09 Sat 00:00:00>
-#+title: Effortless Apache Redirect: HTML to Clean Directory URLs
-#+description: Learn how to seamlessly redirect .html URLs to directory-style URLs using Apache Rewrite rules for improved SEO and user experience.
-#+slug: apache-redirect
-#+filetags: :apache:redirect:urlrewrite:
+#+date:        <2021-10-09 Sat 00:00:00>
+#+title:       Configuration of Apache Rewrite Rules for Redirecting HTML URLs to Directory URLs
+#+description: Technical guide to applying Apache mod_rewrite directives for transforming .html file requests into clean directory-style URL structures to enhance website navigation and indexing.
+#+slug:        apache-redirect
+#+filetags:    :apache:redirect:urlrewrite:
 
 * The Problem
 

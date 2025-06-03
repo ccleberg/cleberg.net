@@ -1,8 +1,8 @@
-#+date: <2021-01-07 Thu 00:00:00>
-#+title: Protect Your Server Easily with Uncomplicated Firewall (ufw)
-#+description: Learn how to secure your Ubuntu server using ufw, a simple and powerful firewall tool. Step-by-step guide to configure, enable, and manage ufw for optimal network protection.
-#+slug: ufw
-#+filetags: :firewall:security:ufw:
+#+date:        <2021-01-07 Thu 00:00:00>
+#+title:       Configuring Uncomplicated Firewall (ufw) on Ubuntu Servers
+#+description: Stepwise instructions for installation, configuration, enabling, and management of the Uncomplicated Firewall utility to secure network interfaces on Ubuntu server environments.
+#+slug:        ufw
+#+filetags:    :firewall:security:ufw:
 
 * Uncomplicated Firewall
 

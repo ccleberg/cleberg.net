@@ -1,8 +1,8 @@
-#+date: <2020-12-28 Mon 00:00:00>
-#+title: Neon Drive: The Ultimate Retro 80s Synthwave Arcade Racer
-#+description: Experience the adrenaline of Neon Drive, a high-octane 80s-inspired arcade racing game with vibrant synthwave aesthetics, challenging levels, and retro-futuristic gameplay.
-#+slug: neon-drive
-#+filetags: :arcade:racing:synthwave:
+#+date:        <2020-12-28 Mon 00:00:00>
+#+title:       Technical Overview of Neon Drive: Synthwave-Style Arcade Racing Game
+#+description: Description of game mechanics, graphical style, and level design in Neon Drive, an arcade racing game inspired by 1980s synthwave aesthetics.
+#+slug:        neon-drive
+#+filetags:    :arcade:racing:synthwave:
 
 * Game Description
 

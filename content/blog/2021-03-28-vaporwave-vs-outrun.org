@@ -1,8 +1,8 @@
-#+date: <2021-03-28 Sun 00:00:00>
-#+title: Vaporwave vs. Outrun: Exploring the Distinct 80s and 90s Retro Aesthetics
-#+description: A detailed comparison of Vaporwave and Outrun aesthetics, covering their unique art styles, color schemes, music genres, and cultural influences from the 1980s and 1990s.
-#+slug: vaporwave-vs-outrun
-#+filetags: :vaporwave:outrun:retro:
+#+date:        <2021-03-28 Sun 00:00:00>
+#+title:       Comparative Analysis of Vaporwave and Outrun Visual Styles
+#+description: Systematic examination of Vaporwave and Outrun aesthetic frameworks, focusing on graphical elements, chromatic schemes, musical associations, and period-specific cultural influences.
+#+slug:        vaporwave-vs-outrun
+#+filetags:    :vaporwave:outrun:retro:
 
 * Overview
 

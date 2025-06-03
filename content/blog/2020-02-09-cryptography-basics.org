@@ -1,8 +1,8 @@
-#+date: <2020-02-09 Sunday 00:00:00>
-#+title: Understanding Cryptography: Fundamentals and Key Concepts
-#+description: Discover the essentials of cryptography, including encryption methods, key types, algorithms, and applications to enhance data security and privacy.
-#+slug: cryptography
-#+filetags: :cryptography:security:encryption:
+#+date:        <2020-02-09 Sunday 00:00:00>
+#+title:       Cryptographic Principles: Core Concepts and Techniques
+#+description: Systematic overview of encryption methodologies, key categories, algorithmic frameworks, and their applications in data confidentiality and integrity.
+#+slug:        cryptography
+#+filetags:    :cryptography:security:encryption:
 
 * Similar Article Available
 

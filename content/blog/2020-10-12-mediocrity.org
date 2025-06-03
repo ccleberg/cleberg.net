@@ -1,8 +1,8 @@
-#+date: <2020-10-12 Mon 00:00:00>
-#+title: Embracing Mediocrity: When Good Enough is Truly Enough
-#+description: Exploring the balance between perfection and mediocrity in life, work, and decision-making. Understand why striving for "good enough" can lead to better outcomes and less stress.
-#+slug: mediocrity
-#+filetags: :mediocrity:decision-making:philosophy:
+#+date:        <2020-10-12 Mon 00:00:00>
+#+title:       Conceptual Discussion on Acceptable Performance Thresholds
+#+description: Examination of decision-making principles relating to achieving sufficient quality levels, including trade-offs between perfection and adequacy in professional and operational contexts.
+#+slug:        mediocrity
+#+filetags:    :mediocrity:decision-making:philosophy:
 
 * Perfect is the Enemy of Good
 

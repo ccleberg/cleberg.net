@@ -1,8 +1,8 @@
-#+date: <2022-10-22 Sat 00:00:00>
-#+title: Alpine Linux: Lightweight and Powerful Server OS
-#+description: Discover how Alpine Linux boosts server performance with its minimal footprint, efficient package management, and secure setup for web and Docker environments.
-#+slug: alpine-linux
-#+filetags: :alpine:linux:server:
+#+date:        <2022-10-22 Sat 00:00:00>
+#+title:       Alpine Linux: Installing and Configuring a Minimalist Server Operating System
+#+description: Detailed procedure for deploying Alpine Linux to achieve a secure, lightweight server environment optimized for web hosting and containerization.
+#+slug:        alpine-linux
+#+filetags:    :alpine:linux:server:
 
 * Alpine Linux
 

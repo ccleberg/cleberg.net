@@ -1,8 +1,8 @@
-#+date: <2023-01-05 Thu 00:00:00>
-#+title: Quickly Mass Unlike All Your Tumblr Posts Using JavaScript
-#+description: Step-by-step guide to bulk unlike Tumblr posts with a simple JavaScript snippet. Clean your Tumblr likes efficiently without extensions or complicated setups.
-#+slug: mass-unlike-tumblr-posts
-#+filetags: :tumblr:javascript:automation:
+#+date:        <2023-01-05 Thu 00:00:00>
+#+title:       Bulk Removal of Likes from Tumblr Posts Using JavaScript
+#+description: Instructions for executing a JavaScript script to automate the mass unlike operation for Tumblr posts without requiring additional software.
+#+slug:        mass-unlike-tumblr-posts
+#+filetags:    :tumblr:javascript:automation:
 
 * The Dilemma
 

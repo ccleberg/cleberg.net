@@ -1,8 +1,8 @@
-#+date: <2024-09-20 Friday 13:38:52>
-#+title: Monitor Linux Servers with Self-Hosted Prometheus and Grafana Cloud Integration
-#+description: Step-by-step guide to setting up Prometheus with Docker for Linux server monitoring and visualizing metrics using Grafana Cloud dashboards.
-#+slug: prometheus-grafana-cloud
-#+filetags: :monitoring:prometheus:grafana:
+#+date:        <2024-09-20 Friday 13:38:52>
+#+title:       Configuration of Linux Server Monitoring Using Prometheus and Grafana Cloud
+#+description: Stepwise method for deploying Prometheus with Docker to monitor Linux servers and integrating Grafana Cloud for visualization and analysis of collected metrics.
+#+slug:        prometheus-grafana-cloud
+#+filetags:    :monitoring:prometheus:grafana:
 
 This tutorial will guide you through the process of:
 

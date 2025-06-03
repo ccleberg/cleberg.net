@@ -1,8 +1,8 @@
-#+date: <2020-07-26 Sun 00:00:00>
-#+title: Uncovering Profitable Business Locations with Data-Driven Analysis
-#+description: Use data science and Foursquare API to discover optimal business locations and market insights in local cities.
-#+slug: business-analysis
-#+filetags: :data-science:foursquare:clustering:
+#+date:        <2020-07-26 Sun 00:00:00>
+#+title:       Data-Driven Identification of Optimal Business Locations Using API Integration
+#+description: Methodology for utilizing data science techniques and Foursquare API data to analyze and select promising business sites within urban environments.
+#+slug:        business-analysis
+#+filetags:    :data-science:foursquare:clustering:
 
 * Background Information
 

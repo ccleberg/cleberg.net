@@ -1,8 +1,8 @@
-#+date: <2023-10-15 Sun 00:00:00>
-#+title: Secure SSH Configuration Guide for Alpine Linux
-#+description: Comprehensive Alpine Linux SSH hardening steps to enhance security, optimize SSH server settings, and protect against common vulnerabilities.
-#+slug: alpine-ssh-hardening
-#+filetags: :security:ssh:alpine:
+#+date:        <2023-10-15 Sun 00:00:00>
+#+title:       SSH Security Hardening on Alpine Linux: Configuration Procedures
+#+description: Detailed guide to enhance Alpine Linux SSH server security through configuration adjustments and vulnerability mitigation.
+#+slug:        alpine-ssh-hardening
+#+filetags:    :security:ssh:alpine:
 
 * Overview
 

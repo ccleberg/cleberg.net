@@ -1,8 +1,8 @@
-#+date: <2020-12-29 Tue 00:00:00>
-#+title: Zork: The Ultimate Classic Text Adventure Game Experience
-#+description: Discover Zork, the legendary text-based adventure game from the 1980s. Explore, solve puzzles, and collect treasures in this iconic interactive fiction classic.
-#+slug: zork
-#+filetags: :game:text-adventure:zork:
+#+date:        <2020-12-29 Tue 00:00:00>
+#+title:       Zork: Instructional Manual for Classic Text Adventure Interaction
+#+description: Detailed operational guide for navigating Zork, a text-based interactive fiction game from the 1980s. Includes instructions for exploration, puzzle resolution, and item collection.
+#+slug:        zork
+#+filetags:    :game:text-adventure:zork:
 
 * Download (Free)
 

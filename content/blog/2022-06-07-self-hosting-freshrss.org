@@ -1,8 +1,8 @@
-#+date: <2022-06-07 Tue 00:00:00>
-#+title: How to Easily Self-Host FreshRSS for Personal RSS Management
-#+description: Step-by-step guide to installing and configuring FreshRSS with Docker and Nginx for seamless, secure, and synced RSS feed access.
-#+slug: self-hosting-freshrss
-#+filetags: :freshrss:rss:self-hosting:
+#+date:        <2022-06-07 Tue 00:00:00>
+#+title:       Deployment and Configuration of FreshRSS for Personal RSS Feed Management
+#+description: Stepwise instructions for installing FreshRSS using Docker and configuring Nginx as a reverse proxy to enable secure and synchronized RSS feed access.
+#+slug:        self-hosting-freshrss
+#+filetags:    :freshrss:rss:self-hosting:
 
 * Why RSS?
 

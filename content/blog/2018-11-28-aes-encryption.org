@@ -1,8 +1,8 @@
-#+date: <2018-11-28 Wed 00:00:00>
-#+title: Mastering AES Encryption: The Essential Beginner's Guide
-#+description: Learn AES encryption basics, key methods, security insights, and practical applications in this comprehensive beginner-friendly tutorial.
-#+slug: aes-encryption
-#+filetags: :encryption:AES:cryptography:
+#+date:        <2018-11-28 Wed 00:00:00>
+#+title:       AES Encryption: Technical Overview and Operational Guide
+#+description: Detailed explanation of AES encryption, including key handling, encryption modes, algorithm structure, and implementation considerations for secure data protection.
+#+slug:        aes-encryption
+#+filetags:    :encryption:AES:cryptography:
 
 * Basic AES
 

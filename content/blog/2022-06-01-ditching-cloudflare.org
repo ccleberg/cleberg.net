@@ -1,8 +1,8 @@
-#+date: <2022-06-01 Wed 00:00:00>
-#+title: Moving Away from Cloudflare: Why I Chose Njalla for Secure DNS Management
-#+description: Learn why I switched from Cloudflare to Njalla for DNS management and domain registration, focusing on privacy, control, and ease of use.
-#+slug: ditching-cloudflare
-#+filetags: :dns:registrar:privacy:
+#+date:        <2022-06-01 Wed 00:00:00>
+#+title:       Transition from Cloudflare to Njalla for DNS Management and Domain Registration
+#+description: Evaluation and procedural explanation for migrating DNS management services from Cloudflare to Njalla, with emphasis on privacy controls and domain registration mechanics.
+#+slug:        ditching-cloudflare
+#+filetags:    :dns:registrar:privacy:
 
 * Registrar
 

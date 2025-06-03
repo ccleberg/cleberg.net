@@ -1,8 +1,8 @@
-#+date: <2022-06-16 Thu 00:00:00>
-#+title: Embracing a Focused Terminal Lifestyle
-#+description: How to minimize digital distractions and maximize productivity using terminal-based tools and workflows for web browsing, communication, email, RSS, and coding.
-#+slug: terminal-lifestyle
-#+filetags: :terminal:lifestyle:productivity:
+#+date:        <2022-06-16 Thu 00:00:00>
+#+title:       Methodical Use of Terminal Applications for Task Management
+#+description: Detailed procedures for reducing digital interruptions and increasing efficiency through terminal-based utilities for web browsing, communication, electronic mail, RSS feeds, and programming tasks.
+#+slug:        terminal-lifestyle
+#+filetags:    :terminal:lifestyle:productivity:
 
 * Text-Based Simplicity
 

@@ -1,8 +1,8 @@
-#+date: <2023-06-28 Wed 00:00:00>
-#+title: A Practical Guide to Backblaze B2 Cloud Storage for Secure Backups
-#+description: Learn how to set up and use Backblaze B2 Cloud Storage for reliable, affordable offsite backups with step-by-step instructions and tips.
-#+slug: backblaze-b2
-#+filetags: :cloud-storage:backup:backblaze:
+#+date:        <2023-06-28 Wed 00:00:00>
+#+title:       Setup and Usage Instructions for Backblaze B2 Cloud Storage for Backup Purposes
+#+description: Methodical guide for configuring and utilizing Backblaze B2 cloud storage services to perform reliable and secure offsite data backups.
+#+slug:        backblaze-b2
+#+filetags:    :cloud-storage:backup:backblaze:
 
 * Overview
 

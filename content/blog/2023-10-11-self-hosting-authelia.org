@@ -1,8 +1,8 @@
-#+date: <2023-10-11 Wed 00:00:00>
-#+title: Secure Your Services with Self-Hosted Authelia
-#+description: Comprehensive guide to deploying Authelia for reliable two-factor authentication and access control on your self-hosted services.
-#+slug: self-hosting-authelia
-#+filetags: :security:authentication:docker:
+#+date:        <2023-10-11 Wed 00:00:00>
+#+title:       Deploying Authelia for Two-Factor Authentication on Self-Hosted Services
+#+description: Instructional guide for setting up Authelia to provide secure two-factor authentication and access control in self-hosted environments.
+#+slug:        self-hosting-authelia
+#+filetags:    :security:authentication:docker:
 
 * Overview
 

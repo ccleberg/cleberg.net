@@ -1,8 +1,8 @@
-#+date: <2020-05-03 Sun 00:00:00>
-#+title: Exploring My Personal Homelab Setup and Hardware Insights
-#+description: A detailed guide to building and managing a budget-friendly homelab, including hardware choices, software setups, and network configurations for tech enthusiasts.
-#+slug: homelab
-#+filetags: :homelab:hardware:network:
+#+date:        <2020-05-03 Sun 00:00:00>
+#+title:       Homelab Construction: Hardware and Network Configuration Guide
+#+description: Comprehensive instructions on assembling and configuring a homelab environment, emphasizing hardware selection, software deployment, and network setup for operational efficiency.
+#+slug:        homelab
+#+filetags:    :homelab:hardware:network:
 
 * What is a Homelab?
 

@@ -1,8 +1,8 @@
-#+date: <2021-01-01 Fri 00:00:00>
-#+title: SEUM: Ultimate Speedrunners from Hell Challenge
-#+description: Experience SEUM, the fast-paced puzzle and free-running game blending intense speedrunning action with thrilling Hell-themed challenges. Master gravity, teleportation, and more to conquer levels and dominate leaderboards.
-#+slug: seum
-#+filetags: :speedrunning:puzzle:indie:
+#+date:        <2021-01-01 Fri 00:00:00>
+#+title:       SEUM: Speedrunning and Puzzle Mechanics Operational Guide
+#+description: Technical overview for utilizing the game SEUM, focusing on speedrunning techniques, gravity manipulation, teleportation functions, and level completion criteria.
+#+slug:        seum
+#+filetags:    :speedrunning:puzzle:indie:
 
 * Game Description
 

@@ -1,8 +1,8 @@
-#+date: <2023-10-17 Tue 00:00:00>
-#+title: How to Set Up AnonymousOverflow on Your Server
-#+description: A step-by-step guide to installing and configuring AnonymousOverflow with Docker Compose and Nginx for secure self-hosting.
-#+slug: self-hosting-anonymousoverflow
-#+filetags: :docker:nginx:self-hosting:
+#+date:        <2023-10-17 Tue 00:00:00>
+#+title:       Installation and Configuration of AnonymousOverflow with Docker and Nginx
+#+description: Detailed installation and setup instructions for the AnonymousOverflow application using Docker Compose and Nginx reverse proxy.
+#+slug:        self-hosting-anonymousoverflow
+#+filetags:    :docker:nginx:self-hosting:
 
 * Overview
 

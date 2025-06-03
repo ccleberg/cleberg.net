@@ -1,8 +1,8 @@
-#+date: <2023-06-30 Fri 00:00:00>
-#+title: Deploy Your Own Voyager: A Sleek Lemmy Web Client Experience
-#+description: Step-by-step guide to self-host Voyager, a mobile-first Lemmy web client inspired by iOS design. Learn how to build, run, and proxy Voyager using Docker and Nginx.
-#+slug: self-hosting-voyager
-#+filetags: :docker:lemmy:voyager:
+#+date:        <2023-06-30 Fri 00:00:00>
+#+title:       Deployment Procedure for Voyager Lemmy Web Client Using Docker and Nginx
+#+description: Instructions for building, running, and reverse proxying Voyager, a Lemmy web client, on a server environment utilizing Docker and Nginx components.
+#+slug:        self-hosting-voyager
+#+filetags:    :docker:lemmy:voyager:
 
 * Installation Guide
 

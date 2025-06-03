@@ -1,8 +1,8 @@
-#+date: <2020-12-27 Sun 00:00:00>
-#+title: How I Shrunk My Website to Just 5 KB: A Redesign Story
-#+description: Discover the step-by-step website redesign process that reduced page size to 5 KB, improving speed, SEO, and user experience for a minimalist, high-performance site.
-#+slug: website-redesign
-#+filetags: :web:minimalism:performance:
+#+date:        <2020-12-27 Sun 00:00:00>
+#+title:       Procedures for Website Size Optimization Achieving Minimal Page Weight
+#+description: Detailed process outlining methods for reducing website page size to approximately 5 kilobytes, enhancing loading speed, search engine indexing efficiency, and user interface responsiveness.
+#+slug:        website-redesign
+#+filetags:    :web:minimalism:performance:
 
 * A Brief History
 

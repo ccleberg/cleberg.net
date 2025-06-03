@@ -1,8 +1,8 @@
-#+date: <2022-02-17 Thu 00:00:00>
-#+title: Effortlessly Remove Image Metadata Using Exiftool
-#+description: Learn how to quickly and securely strip metadata from photos with Exiftool to protect privacy and optimize image files. Step-by-step guide included.
-#+slug: exiftool
-#+filetags: :exiftool:metadata:image-processing:
+#+date:        <2022-02-17 Thu 00:00:00>
+#+title:       Procedure for Removing Image Metadata Using Exiftool Utility
+#+description: Technical instructions for utilizing Exiftool to systematically strip metadata from image files to ensure privacy and reduce file size.
+#+slug:        exiftool
+#+filetags:    :exiftool:metadata:image-processing:
 
 ** Why Strip Metadata?
 
