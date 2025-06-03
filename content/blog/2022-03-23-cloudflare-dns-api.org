@@ -1,6 +1,6 @@
 #+date: <2022-03-23 Wed 00:00:00>
-#+title: Dynamic DNS with Cloudflare API
-#+description: 
+#+title: Effortless Dynamic DNS Updates Using Cloudflare API
+#+description: Automate your DNS management with this step-by-step guide to updating A and AAAA records dynamically via the Cloudflare API. Perfect for users with changing IP addresses who want reliable, secure, and seamless DNS updates.
 #+slug: cloudflare-dns-api
 
 * DDNS: Dynamic DNS

@@ -1,6 +1,6 @@
 #+date: <2022-07-01 Fri 00:00:00>
-#+title: Self-Hosting a Personal Git Server
-#+description: 
+#+title: Hosting Your Own Personal Git Server with Ease
+#+description: A comprehensive guide to self-hosting Git repositories securely and efficiently for seamless collaboration and remote access
 #+slug: git-server
 
 * My Approach to Self-Hosting Git

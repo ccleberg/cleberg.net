@@ -1,6 +1,6 @@
 #+date: <2023-06-23 Fri 00:00:00>
-#+title: Byobu
-#+description: 
+#+title: Mastering Byobu: A Powerful Terminal Multiplexer
+#+description: Explore Byobu, a versatile terminal multiplexer that enhances your command-line workflow with multiple screens, keybindings, and session management.
 #+slug: byobu
 
 * Byobu

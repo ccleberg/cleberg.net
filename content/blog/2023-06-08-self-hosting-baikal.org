@@ -1,6 +1,6 @@
 #+date: <2023-06-08 Thu 00:00:00>
-#+title: Self-Hosting Baikal Server (CalDAV & CardDAV)
-#+description: 
+#+title: How to Self-Host Baikal: A Lightweight CalDAV & CardDAV Server
+#+description: Step-by-step guide to setting up and running your own Baikal server for CalDAV and CardDAV services. Secure, customizable, and easy to deploy with Docker and Nginx.
 #+slug: self-hosting-baikal
 
 * What is Baikal?

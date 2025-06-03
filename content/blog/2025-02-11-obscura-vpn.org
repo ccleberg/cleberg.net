@@ -1,6 +1,6 @@
 #+date: <2025-02-11 Tuesday 11:40:00>
-#+title: A Review of Obscura VPN: A Two-Party VPN
-#+description: A simple review of Obscura VPN, a new VPN partner of Mullvad.
+#+title: Obscura VPN Review: A Unique Two-Party VPN Partnered with Mullvad
+#+description: Discover how Obscura VPN offers enhanced privacy through its innovative two-party VPN protocol with Mullvad. This review covers features, performance, and security for privacy-conscious users.
 #+filetags: :vpn:privacy:
 #+slug: obscura-vpn
 

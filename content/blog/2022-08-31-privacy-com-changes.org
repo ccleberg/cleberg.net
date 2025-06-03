@@ -1,6 +1,6 @@
 #+date: <2022-08-31 Wed 00:00:00>
-#+title: Concerning Changes on Privacy.com
-#+description: 
+#+title: Privacy.com Updates Spark Concern Among Users
+#+description: In-depth analysis of Privacy.com's recent terms changes and their impact on users' privacy and payment security
 #+slug: privacy-com-changes
 
 * Privacy.com Changes Their Terms

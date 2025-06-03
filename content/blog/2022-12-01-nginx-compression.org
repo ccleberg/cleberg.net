@@ -1,6 +1,6 @@
 #+date: <2022-12-01 Thu 00:00:00>
-#+title: Enable GZIP Compression in Nginx
-#+description: 
+#+title: Boost Website Speed with GZIP Compression in Nginx
+#+description: Learn how to enable GZIP compression in Nginx to improve website performance, reduce bandwidth usage, and speed up content delivery for a better user experience.
 #+slug: nginx-compression
 
 * Text Compression

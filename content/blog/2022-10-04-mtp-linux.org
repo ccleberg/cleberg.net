@@ -1,6 +1,6 @@
 #+date: <2022-10-04 Tue 00:00:00>
-#+title: How to Mount an MTP Mobile Device on Fedora Linux
-#+description: 
+#+title: Easy Guide to Mount Your MTP Mobile Device on Fedora Linux
+#+description: Step-by-step instructions to mount and access MTP mobile devices on Fedora Linux using jmtpfs for seamless file transfer.
 #+slug: mtp-linux
 
 I recently ran into trouble attempting to mount my GrapheneOS phone to

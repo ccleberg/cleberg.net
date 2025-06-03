@@ -1,6 +1,6 @@
 #+date: <2021-03-30 Tue 00:00:00>
-#+title: How to Set Up a VPS Web Server
-#+description: 
+#+title: Ultimate Guide to Setting Up Your Own VPS Web Server
+#+description: Step-by-step tutorial on how to configure and manage a VPS web server for reliable, secure, and scalable website hosting.
 #+slug: vps-web-server
 
 * Shared Hosting vs. VPS

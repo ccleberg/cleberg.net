@@ -1,6 +1,6 @@
 #+date: <2021-01-07 Thu 00:00:00>
-#+title: Secure Your Network with the Uncomplicated Firewall (ufw)
-#+description: 
+#+title: Protect Your Server Easily with Uncomplicated Firewall (ufw)
+#+description: Learn how to secure your Ubuntu server using ufw, a simple and powerful firewall tool. Step-by-step guide to configure, enable, and manage ufw for optimal network protection.
 #+slug: ufw
 
 * Uncomplicated Firewall

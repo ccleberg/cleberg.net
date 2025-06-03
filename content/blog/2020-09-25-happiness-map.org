@@ -1,6 +1,6 @@
 #+date: <2020-09-25 Fri 00:00:00>
-#+title: Data Visualization: World Choropleth Map of Happiness
-#+description: 
+#+title: Visualizing Global Happiness: Interactive World Choropleth Map
+#+description: Explore global happiness rankings with an interactive world choropleth map, visualizing country-level data on GDP, social support, health, freedom, generosity, and corruption for insightful data analysis.
 #+slug: happiness-map
 
 * Background Information

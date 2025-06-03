@@ -1,6 +1,6 @@
 #+date: <2019-09-09 Mon 00:00:00>
-#+title: Audit Analytics
-#+description: 
+#+title: Unlocking the Power of Audit Analytics
+#+description: Explore how audit analytics transforms internal auditing processes to enhance risk assessment, improve efficiency, and drive data-driven decisions.
 #+slug: audit-analytics
 
 * What Are Data Analytics?

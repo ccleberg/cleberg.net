@@ -1,6 +1,6 @@
 #+date: <2022-11-27 Sun 00:00:00>
-#+title: Building a Custom Rack-Mounted Server
-#+description: 
+#+title: How I Built a High-Performance Custom Rack-Mounted Server
+#+description: A detailed guide on assembling a powerful and efficient rack-mounted server with modern PC components, perfect for homelab enthusiasts and IT professionals.
 #+slug: server-build
 
 * The Dilemma

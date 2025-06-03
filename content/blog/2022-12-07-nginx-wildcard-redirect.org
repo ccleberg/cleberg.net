@@ -1,6 +1,6 @@
 #+date: <2022-12-07 Wed 00:00:00>
-#+title: Redirect Nginx Subdomains and Trailing Content with Regex
-#+description: 
+#+title: How to Redirect Nginx Subdomains and URL Paths Using Regex
+#+description: Learn how to configure Nginx to efficiently redirect subdomains and trailing URL paths with regex. Step-by-step guide for seamless domain migrations and improved user experience.
 #+slug: nginx-wildcard-redirect
 
 * Problem

@@ -1,6 +1,6 @@
 #+date: <2022-04-09 Sat 00:00:00>
-#+title: PineTime: An Open-Source Smart Watch
-#+description: 
+#+title: PineTime: The Ultimate Open-Source Smartwatch Experience
+#+description: Discover the PineTime smartwatch, an affordable, open-source wearable with heart rate monitoring, pedometer, sleep tracking, and seamless smartphone connectivity.
 #+slug: pinetime
 
 * PineTime Product Information

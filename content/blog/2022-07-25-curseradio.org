@@ -1,6 +1,6 @@
 #+date: <2022-07-25 Mon 00:00:00>
-#+title: CurseRadio: Listening to the Radio on the Command Line
-#+description: 
+#+title: Tune In with Curseradio: Your Command-Line Radio Player
+#+description: Discover how to stream your favorite radio stations effortlessly using Curseradio, a lightweight and user-friendly command-line radio player for Linux users.
 #+slug: curseradio
 
 * Overview

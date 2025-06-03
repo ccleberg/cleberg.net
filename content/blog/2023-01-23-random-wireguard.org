@@ -1,6 +1,6 @@
 #+date: <2023-01-23 Mon 00:00:00>
-#+title: Connecting to a Random Mullvad Wireguard Host on Boot
-#+description: 
+#+title: Automate Random Mullvad Wireguard Connection at System Startup
+#+description: Learn how to automatically connect to a random Mullvad Wireguard server on boot for enhanced privacy and seamless VPN experience.
 #+slug: random-wireguard
 
 * Mullvad Wireguard

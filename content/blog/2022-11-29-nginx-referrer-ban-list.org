@@ -1,6 +1,6 @@
 #+date: <2022-11-29 Tue 00:00:00>
-#+title: Creating a Referrer Ban List in Nginx
-#+description: 
+#+title: How to Block Unwanted Referrers in Nginx for Better Security
+#+description: Step-by-step guide to creating and configuring a referrer ban list in Nginx to block unwanted domains and protect your website.
 #+slug: nginx-referrer-ban-list
 
 * Creating the Ban List

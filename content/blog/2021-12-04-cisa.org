@@ -1,6 +1,6 @@
 #+date: <2021-12-04 Sat 00:00:00>
-#+title: I Passed the CISA! 
-#+description: 
+#+title: How I Passed the Challenging CISA Exam on My First Try!
+#+description: Detailed insights on passing the Certified Information Systems Auditor (CISA) exam, study tips, prep materials, and exam strategies for IT audit professionals.
 #+slug: cisa
 
 * What is the CISA?

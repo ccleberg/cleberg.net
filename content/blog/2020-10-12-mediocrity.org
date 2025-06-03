@@ -1,6 +1,6 @@
 #+date: <2020-10-12 Mon 00:00:00>
-#+title: On the Pursuit of Mediocrity
-#+description:
+#+title: Embracing Mediocrity: When Good Enough is Truly Enough
+#+description: Exploring the balance between perfection and mediocrity in life, work, and decision-making. Understand why striving for "good enough" can lead to better outcomes and less stress.
 #+slug: mediocrity
 
 * Perfect is the Enemy of Good

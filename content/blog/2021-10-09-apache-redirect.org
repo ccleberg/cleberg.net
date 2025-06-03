@@ -1,6 +1,6 @@
 #+date: <2021-10-09 Sat 00:00:00>
-#+title: Apache Redirect HTML Files to a Directory
-#+description: 
+#+title: Effortless Apache Redirect: HTML to Clean Directory URLs
+#+description: Learn how to seamlessly redirect .html URLs to directory-style URLs using Apache Rewrite rules for improved SEO and user experience.
 #+slug: apache-redirect
 
 * The Problem

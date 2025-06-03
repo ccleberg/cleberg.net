@@ -1,6 +1,6 @@
 #+date: <2021-08-25 Wed 00:00:00>
-#+title: Audit Sampling with Python
-#+description:
+#+title: Efficient Audit Sampling Techniques with Python for Accurate Results
+#+description: Learn how to perform efficient and reproducible audit sampling using Python and Pandas. This guide covers simple random samples, stratified samples, and systematic sampling methods to improve audit accuracy and save time.
 #+slug: audit-sampling
 
 * Introduction

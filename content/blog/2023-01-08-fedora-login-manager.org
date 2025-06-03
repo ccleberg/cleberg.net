@@ -1,6 +1,6 @@
 #+date: <2023-01-08 Sun 00:00:00>
-#+title: How to Remove the Login Manager from Fedora i3
-#+description: 
+#+title: Step-by-Step Guide to Removing Fedora i3's Login Manager
+#+description: Learn how to safely remove the default login manager from Fedora i3, configure manual i3 launching, and customize your Fedora workstation setup.
 #+slug: fedora-login-manager
 
 * Fedora i3's Login Manager

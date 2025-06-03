@@ -1,6 +1,6 @@
 #+date: <2020-09-22 Tue 00:00:00>
-#+title: Who is Internal Audit? 
-#+description: 
+#+title: Understanding Internal Audit: Key Roles and Importance
+#+description: Explore the essential functions of internal audit, its impact on organizational risk management, governance, and compliance to enhance business performance.
 #+slug: internal-audit
 
 * Definitions

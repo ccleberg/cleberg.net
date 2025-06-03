@@ -1,6 +1,6 @@
 #+date: <2024-03-13 Wed 00:00:00>
-#+title: Doom Emacs & Org-Mode 
-#+description: 
+#+title: Mastering Doom Emacs and Org-Mode for Efficient Workflow
+#+description: A comprehensive guide to configuring Doom Emacs and leveraging Org-Mode for powerful note-taking, project management, and coding productivity.
 #+slug: doom-emacs
 
 ** Screenshots

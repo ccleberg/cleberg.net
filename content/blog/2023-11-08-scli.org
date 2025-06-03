@@ -1,6 +1,6 @@
 #+date: <2023-11-08 Wed 00:00:00>
-#+title: Installing scli on Alpine Linux (musl)
-#+description: 
+#+title: How to Install and Configure scli on Alpine Linux (musl)
+#+description: Step-by-step guide to install and set up scli, a Signal messenger client, on Alpine Linux using musl, including dependency installation and initial configuration.
 #+slug: scli
 
 [[https://github.com/isamert/scli][scli]] is a command-line tool that

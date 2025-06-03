@@ -1,6 +1,6 @@
 #+date: <2025-04-05 Saturday 23:04:54>
-#+title: Mirroring my Repositories from GitHub to GitLab
-#+description: Read to learn how I was able to efficiently make sure all of my repositories are mirrored from GitHub to GitLab.
+#+title: How I Streamlined Mirroring Repositories from GitHub to GitLab
+#+description: Discover effective steps to synchronize and mirror your GitHub repositories to GitLab for seamless repository management and backup.
 #+filetags: :git:
 #+slug: git-mirror
 

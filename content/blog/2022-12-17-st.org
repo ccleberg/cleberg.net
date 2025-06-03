@@ -1,6 +1,6 @@
 #+date: <2022-12-17 Sat 00:00:00>
-#+title: Simple Terminal
-#+description: 
+#+title: Building and Installing the Simple Terminal (st) on Fedora Workstation
+#+description: A comprehensive guide to obtaining, building, customizing, and installing the Simple Terminal (st) from suckless.org on Fedora Linux, including dependencies and patch application steps.
 #+slug: st
 
 * st

@@ -1,6 +1,6 @@
 #+date: <2022-11-07 Mon 00:00:00>
-#+title: Self-Hosting Matrix Synapse on Alpine Linux
-#+description: 
+#+title: How to Self-Host a Matrix Synapse Server on Alpine Linux
+#+description: Step-by-step guide to installing and configuring Matrix Synapse on Alpine Linux, including dependency setup, reverse proxy configuration, TLS certificates, and user management.
 #+slug: self-hosting-matrix
 
 * Synapse

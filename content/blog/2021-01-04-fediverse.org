@@ -1,6 +1,6 @@
 #+date: <2021-01-04 Mon 00:00:00>
-#+title: A Simple Guide to the Fediverse
-#+description: 
+#+title: Explore the Fediverse: Your Guide to Decentralized Social Networks
+#+description: Discover the Fediverse, a decentralized social network environment offering alternatives to major platforms like Twitter and Facebook. Learn how to join and navigate this growing ecosystem for a safer, censorship-resistant online experience.
 #+slug: fediverse
 
 * What is the Fediverse?

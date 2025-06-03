@@ -1,6 +1,6 @@
 #+date: <2024-01-09 Tue 00:00:00>
-#+title: Customizing macOS
-#+description: 
+#+title: Practical Guide to macOS Customization
+#+description: Discover effective macOS customization tips and tools to personalize your system beyond default settings, including terminal tweaks, window management, and app icons.
 #+slug: macos-customization
 
 I have been using macOS more than Linux lately, so I wrote this post to describe

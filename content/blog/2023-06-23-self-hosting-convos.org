@@ -1,6 +1,6 @@
 #+date: <2023-06-23 Fri 00:00:00>
-#+title: Self-Hosting Convos IRC Web Client
-#+description: 
+#+title: Host Your Own Convos IRC Web Client with Docker and Nginx
+#+description: A comprehensive guide to self-hosting Convos, an always-online IRC web client. Includes Docker Compose setup, Nginx reverse proxy configuration, and nickname registration instructions.
 #+slug: self-hosting-convos
 
 * Convos

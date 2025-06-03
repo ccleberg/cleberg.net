@@ -1,6 +1,6 @@
 #+date: <2022-04-02 Sat 00:00:00>
-#+title: Set-Up a Reverse Proxy with Nginx
-#+description: 
+#+title: Master Reverse Proxy Setup with Nginx: A Step-by-Step Guide
+#+description: Learn how to configure a powerful Nginx reverse proxy server for secure and efficient web traffic management on Ubuntu. Step-by-step instructions included.
 #+slug: nginx-reverse-proxy
 
 * What is a Reverse Proxy?

@@ -1,6 +1,6 @@
 #+date: <2022-02-16 Wed 00:00:00>
-#+title: Migrating to a New Web Server Setup with Debian, Nginx, and Agate
-#+description: 
+#+title: Seamless Web Server Migration: Setting Up Debian, Nginx, and Agate for Optimal Performance
+#+description: A comprehensive guide to migrating your web server to Debian with Nginx and Agate, including step-by-step installation, configuration tips, and security best practices for reliable and fast hosting.
 #+slug: debian-and-nginx
 
 * Server OS: Debian
