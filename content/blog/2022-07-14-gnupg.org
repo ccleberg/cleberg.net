@@ -2,6 +2,7 @@
 #+title: Exploring GNU Privacy Guard: Secure Your Communications with GPG
 #+description: An in-depth guide to GNU Privacy Guard (GPG), its history, encryption algorithms, vulnerabilities, key creation, and common use cases for secure data and email protection.
 #+slug: gnupg
+#+filetags: :gnupg:gpg:encryption:
 
 * The History of GPG
 

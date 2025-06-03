@@ -1,8 +1,8 @@
 #+date: <2024-10-31 Thursday 11:01:05>
 #+title: Boost Your Coding Workflow with Ollama in VS Codium
 #+description: Explore how to enhance your development process by integrating Ollama as a powerful code assistant within VS Codium and VS Code. Learn setup steps, tips, and practical use cases.
-#+filetags: :ai:
 #+slug: continue-ollama-code-assistant
+#+filetags: :ai:productivity:development:
 
 * Background
 

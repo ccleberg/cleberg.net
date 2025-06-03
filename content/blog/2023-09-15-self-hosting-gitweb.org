@@ -2,6 +2,7 @@
 #+title: Host Your Own Gitweb with Nginx: A Step-by-Step Guide
 #+description: Learn how to self-host GitWeb using Nginx, configure fastcgi, and manage git repositories on your server for efficient code browsing.
 #+slug: self-hosting-gitweb
+#+filetags: :gitweb:nginx:server:
 
 * Overview
 

@@ -2,6 +2,7 @@
 #+title: Ultimate Guide to Self-Hosting Nextcloud on Ubuntu Server
 #+description: Learn how to easily self-host Nextcloud on your Ubuntu server with this comprehensive tutorial. Step-by-step instructions for installation, configuration, and securing your Nextcloud instance.
 #+slug: nextcloud-on-ubuntu
+#+filetags: :nextcloud:ubuntu:server:
 
 * What is Nextcloud?
 :PROPERTIES:

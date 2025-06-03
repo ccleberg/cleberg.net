@@ -1,8 +1,8 @@
 #+date: <2025-06-03 Tue 11:38:40>
 #+title: Privacy-Friendly iOS Apps for the Paranoid Minimalist
 #+description: If you're a privacy nerd with an iPhone, this one's for you. A hand-picked list of iOS apps and resources to help you stay secure and ditch the data grabs.
-#+filetags: :privacy:ios:
 #+slug: private-ios-apps
+#+filetags: :ios:privacy:security:
 
 In a world where our phones are extensions of ourselves, balancing convenience
 with privacy can feel like a losing battle — especially on iOS, where platform

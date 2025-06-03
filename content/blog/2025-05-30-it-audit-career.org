@@ -1,8 +1,8 @@
 #+date: <2025-05-30 Friday 10:53:28>
 #+title: Accelerate Your Audit Career with Emerging Tech Insights
 #+description: Explore actionable steps for auditors to master AI, blockchain, cloud computing, DevOps, and automation in audit and assurance roles for career growth and future readiness.
-#+filetags: :audit:
 #+slug: it-audit-career
+#+filetags: :audit:technology:career:
 
 * Introduction
 

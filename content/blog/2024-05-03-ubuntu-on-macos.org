@@ -2,6 +2,7 @@
 #+title: Seamlessly Run Ubuntu Linux on macOS Using OrbStack
 #+description: Discover how to quickly and efficiently run Ubuntu Linux on macOS with OrbStack, enabling smooth integration and native-like performance.
 #+slug: ubuntu-on-macos
+#+filetags: :linux:macos:orbstack:
 
 Being a macOS user who previously used Linux for many years, I often find myself
 searching for alternatives to the Linux-native tools and methods that I had

@@ -1,8 +1,8 @@
 #+date: <2025-05-02 Friday 21:10:00>
 #+title: Exploring Asahi Linux on the Apple M2 MacBook Pro 16"
 #+description: Detailed review and hands-on experience of running Asahi Linux on the Apple M2 MacBook Pro 16-inch, covering installation, performance, and software compatibility.
-#+filetags: :mac:apple:linux:
 #+slug: asahi-linux
+#+filetags: :mac:apple:linux:
 
 * Trying out Asahi Linux
 

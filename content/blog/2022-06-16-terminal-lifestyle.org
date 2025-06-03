@@ -2,6 +2,7 @@
 #+title: Embracing a Focused Terminal Lifestyle
 #+description: How to minimize digital distractions and maximize productivity using terminal-based tools and workflows for web browsing, communication, email, RSS, and coding.
 #+slug: terminal-lifestyle
+#+filetags: :terminal:lifestyle:productivity:
 
 * Text-Based Simplicity
 

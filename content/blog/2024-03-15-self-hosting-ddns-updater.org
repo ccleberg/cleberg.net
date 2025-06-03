@@ -2,6 +2,7 @@
 #+title: Reliable Self-Hosted Dynamic DNS Updater Setup
 #+description: Step-by-step guide to configure and run a self-hosted Dynamic DNS updater with Docker Compose, Cloudflare integration, and Nginx reverse proxy for secure remote access.
 #+slug: self-hosting-ddns-updater
+#+filetags: :ddns:docker:nginx:
 
 #+caption: DDNS Updater Web View
 [[https://img.cleberg.net/blog/20240315-ddns-updater/ddns.png]]

@@ -2,6 +2,7 @@
 #+title: Optimize Your Steam Games on NTFS Drives for Smooth Linux Gaming
 #+description: Learn how to fix Steam game launch issues on NTFS drives in Linux by automatically mounting drives with ntfs-3g. Step-by-step guide to improve Linux gaming performance with Steam.
 #+slug: steam-on-ntfs
+#+filetags: :steam:ntfs:linux:
 
 * Auto-Mount Steam Drives
 

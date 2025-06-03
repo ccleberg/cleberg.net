@@ -2,6 +2,7 @@
 #+title: Overcoming Burnout: Insights and Strategies
 #+description: A personal reflection on burnout, managing extended busy seasons, and strategies to regain balance and productivity.
 #+slug: burnout
+#+filetags: :burnout:productivity:wellbeing:
 
 * RE: Burnout
 

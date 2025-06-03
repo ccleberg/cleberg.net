@@ -2,6 +2,7 @@
 #+title: Mastering Byobu: A Powerful Terminal Multiplexer
 #+description: Explore Byobu, a versatile terminal multiplexer that enhances your command-line workflow with multiple screens, keybindings, and session management.
 #+slug: byobu
+#+filetags: byobu:terminal-multiplexer:productivity
 
 * Byobu
 

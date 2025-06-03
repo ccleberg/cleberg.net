@@ -2,6 +2,7 @@
 #+title: How to Run Local Large Language Models on macOS and iOS Devices
 #+description: A practical guide to running local large language models (LLMs) on macOS and iOS, focusing on open-source tools, on-device processing, and privacy-focused AI solutions.
 #+slug: local-llm
+#+filetags: :llm:macos:ios:
 
 * Requirements
 

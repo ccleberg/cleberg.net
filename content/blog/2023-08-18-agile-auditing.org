@@ -2,6 +2,7 @@
 #+title: Mastering Agile Auditing: Key Concepts and Practical Application
 #+description: Explore essential Agile auditing concepts, methodologies like Scrum and Kanban, and how to apply Agile principles to enhance audit efficiency and collaboration.
 #+slug: agile-auditing
+#+filetags: :agile:auditing:scrum:
 
 * What is Agile Auditing?
 

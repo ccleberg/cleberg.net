@@ -2,6 +2,7 @@
 #+title: Mastering Doom Emacs and Org-Mode for Efficient Workflow
 #+description: A comprehensive guide to configuring Doom Emacs and leveraging Org-Mode for powerful note-taking, project management, and coding productivity.
 #+slug: doom-emacs
+#+filetags: :doom:emacs:workflow:
 
 ** Screenshots
 

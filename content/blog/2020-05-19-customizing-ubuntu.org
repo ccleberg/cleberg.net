@@ -2,6 +2,7 @@
 #+title: Ultimate Beginner's Guide to Customizing Ubuntu 20.04 for a Personalized Experience
 #+description: Learn how to customize Ubuntu 20.04 with themes, icons, fonts, terminals, and more to create a unique Linux desktop tailored to your style and productivity needs.
 #+slug: customizing-ubuntu
+#+filetags: :ubuntu:customization:gnome:
 
 * More Information
 

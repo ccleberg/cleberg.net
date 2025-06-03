@@ -2,6 +2,7 @@
 #+title: Effortless Dynamic DNS Updates with Njalla's API - Keep Your Domain Always Current
 #+description: Learn how to automate Dynamic DNS updates using Njalla's API with this simple Python script. Perfect for users with changing IP addresses, ensuring your domain DNS records are always up to date and your home server runs smoothly.
 #+slug: njalla-dns-api
+#+filetags: :python:ddns:njalla:
 
 * Njalla's API
 

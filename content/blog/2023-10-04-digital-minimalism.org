@@ -2,6 +2,7 @@
 #+title: Embracing Digital Minimalism for a Focused Life
 #+description: Explore practical strategies to reduce digital clutter, improve focus, and live intentionally with digital minimalism principles.
 #+slug: digital-minimalism
+#+filetags: :digital-minimalism:minimalism:productivity:
 
 I've written [[https://cleberg.net/wiki/#digital-garden][a note about minimalism]]
 before, but I wanted to dedicate some time to reflect on digital

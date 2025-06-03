@@ -2,6 +2,7 @@
 #+title: Receive Daily Plaintext Poetry Straight to Your Inbox
 #+description: Automate daily delivery of classic and contemporary poetry in plaintext via email using Python and SMTP for effortless morning inspiration.
 #+slug: daily-poetry
+#+filetags: :poetry:email:automation:
 
 * Source Code
 

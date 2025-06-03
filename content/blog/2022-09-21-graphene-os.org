@@ -2,6 +2,7 @@
 #+title: Step-by-Step Guide to Installing GrapheneOS on Pixel 6 Pro
 #+description: A comprehensive and easy-to-follow tutorial for securely installing GrapheneOS on your Pixel 6 Pro smartphone.
 #+slug: graphene-os
+#+filetags: :grapheneos:pixel6pro:installation:
 
 * Introduction
 

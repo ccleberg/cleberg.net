@@ -2,6 +2,7 @@
 #+title: Major Updates to This Website's Look and Feel
 #+description: Discover the latest significant updates to this website's design, structure, and accessibility improvements enhancing user experience and content focus.
 #+slug: recent-website-changes
+#+filetags: :website:update:accessibility:
 
 * The State of This Website
 

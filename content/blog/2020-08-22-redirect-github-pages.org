@@ -2,6 +2,7 @@
 #+title: Effortless Redirect of GitHub Pages from www to Root Domain
 #+description: Step-by-step guide to seamlessly redirect your GitHub Pages site from a subdomain (www) to your top-level custom domain for better SEO and user experience.
 #+slug: redirect-github-pages
+#+filetags: :github:pages:dns:
 
 * Short answer
 

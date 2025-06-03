@@ -2,6 +2,7 @@
 #+title: Embracing Mediocrity: When Good Enough is Truly Enough
 #+description: Exploring the balance between perfection and mediocrity in life, work, and decision-making. Understand why striving for "good enough" can lead to better outcomes and less stress.
 #+slug: mediocrity
+#+filetags: :mediocrity:decision-making:philosophy:
 
 * Perfect is the Enemy of Good
 

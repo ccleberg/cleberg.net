@@ -2,6 +2,7 @@
 #+title: Automate Random Mullvad Wireguard Connection at System Startup
 #+description: Learn how to automatically connect to a random Mullvad Wireguard server on boot for enhanced privacy and seamless VPN experience.
 #+slug: random-wireguard
+#+filetags: :vpn:wireguard:mullvad:
 
 * Mullvad Wireguard
 

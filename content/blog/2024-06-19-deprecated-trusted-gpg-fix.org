@@ -2,6 +2,7 @@
 #+title: Resolving Ubuntu Warning: Legacy trusted.gpg Keyring Detected
 #+description: Step-by-step guide to migrate GPG keys from Ubuntu's deprecated trusted.gpg keyring to the supported trusted.gpg.d directory for improved security and system updates.
 #+slug: deprecated-trusted-gpg-fix
+#+filetags: :ubuntu:apt:gpg:
 
 ** System Warning
 

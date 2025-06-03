@@ -2,6 +2,7 @@
 #+title: Effectively Block Malicious IPs and Subnets Using Unifi Network Firewall
 #+description: Learn how to manually identify and block abusive IP addresses and subnets on your Unifi network firewall to enhance security and protect your network from threats.
 #+slug: unifi-ip-blocklist
+#+filetags: :unifi:firewall:ip-blocklist:
 
 * Identifying Abusive IPs
 

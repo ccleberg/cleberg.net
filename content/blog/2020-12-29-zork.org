@@ -2,6 +2,7 @@
 #+title: Zork: The Ultimate Classic Text Adventure Game Experience
 #+description: Discover Zork, the legendary text-based adventure game from the 1980s. Explore, solve puzzles, and collect treasures in this iconic interactive fiction classic.
 #+slug: zork
+#+filetags: :game:text-adventure:zork:
 
 * Download (Free)
 

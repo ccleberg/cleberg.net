@@ -2,6 +2,7 @@
 #+title: Host Your Own Convos IRC Web Client with Docker and Nginx
 #+description: A comprehensive guide to self-hosting Convos, an always-online IRC web client. Includes Docker Compose setup, Nginx reverse proxy configuration, and nickname registration instructions.
 #+slug: self-hosting-convos
+#+filetags: :docker:nginx:convos:
 
 * Convos
 

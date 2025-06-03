@@ -2,6 +2,7 @@
 #+title: Practical Guide to macOS Customization
 #+description: Discover effective macOS customization tips and tools to personalize your system beyond default settings, including terminal tweaks, window management, and app icons.
 #+slug: macos-customization
+#+filetags: :macos:customization:guide:
 
 I have been using macOS more than Linux lately, so I wrote this post to describe
 some simple options to customize macOS beyond the normal built-in settings menu.
