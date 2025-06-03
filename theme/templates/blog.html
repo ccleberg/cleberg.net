@@ -13,6 +13,15 @@ main %}
 	<time datetime='{{ post.date | strftime("%Y-%m-%d") }}'
 		>{{ post.date|strftime("%Y-%m-%d") }}</time
 	>
-	<a href='{{ url_for("blog", slug=post.slug) }}'>{{ post.title }}</a>
+	<div class="post-content">
+		<a href='{{ url_for("blog", slug=post.slug) }}'>{{ post.title }}</a>
+		{% if post.filetags %}
+			<div class="post-tags">
+			{% for tag in post.filetags %}
+				<span class="tag">{{ tag }}</span>
+			{% endfor %}
+			</div>
+		{% endif %}
+	</div>
 </div>
 {% endfor %} {% endblock %}
