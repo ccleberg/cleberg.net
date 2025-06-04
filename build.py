@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
+
 def update_index_html(html_snippet, template_path="./theme/templates/index.html"):
     """
     Read the index.html file at `template_path`, replace everything between
@@ -31,7 +32,7 @@ def update_index_html(html_snippet, template_path="./theme/templates/index.html"
     # Include the newline after BEGIN_POSTS
     insert_start = begin_index + len(begin_marker)
     # Ensure we capture the newline character if present
-    if content[insert_start:insert_start+1] == "\n":
+    if content[insert_start : insert_start + 1] == "\n":
         insert_start += 1
 
     # If there is a newline before END_POSTS, trim trailing whitespace from snippet block
@@ -59,15 +60,12 @@ def update_index_html(html_snippet, template_path="./theme/templates/index.html"
         end_line_start = end_index
 
     # Construct the new content
-    new_content = (
-        content[:insert_start]
-        + indented_snippet
-        + content[end_line_start:]
-    )
+    new_content = content[:insert_start] + indented_snippet + content[end_line_start:]
 
     # Write back to index.html
     with open(template_path, "w", encoding="utf-8") as f:
         f.write(new_content)
+
 
 def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
     """
@@ -86,10 +84,10 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
     posts = []
 
     header_patterns = {
-        "title": re.compile(r'^#\+title:\s*(.+)$', re.IGNORECASE),
-        "date": re.compile(r'^#\+date:\s*<(\d{4}-\d{2}-\d{2})'),
-        "slug": re.compile(r'^#\+slug:\s*(.+)$', re.IGNORECASE),
-        "filetags": re.compile(r'^#\+filetags:\s*(.+)$', re.IGNORECASE),
+        "title": re.compile(r"^#\+title:\s*(.+)$", re.IGNORECASE),
+        "date": re.compile(r"^#\+date:\s*<(\d{4}-\d{2}-\d{2})"),
+        "slug": re.compile(r"^#\+slug:\s*(.+)$", re.IGNORECASE),
+        "filetags": re.compile(r"^#\+filetags:\s*(.+)$", re.IGNORECASE),
     }
 
     for org_path in Path(content_dir).glob("*.org"):
@@ -139,13 +137,15 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
                 # Skip files with invalid date format
                 continue
 
-            posts.append({
-                "title": title,
-                "date_str": date_str,
-                "date_obj": date_obj,
-                "slug": slug,
-                "tags": tags,
-            })
+            posts.append(
+                {
+                    "title": title,
+                    "date_str": date_str,
+                    "date_obj": date_obj,
+                    "slug": slug,
+                    "tags": tags,
+                }
+            )
 
     # Sort posts by date (newest first)
     posts.sort(key=lambda x: x["date_obj"], reverse=True)
@@ -157,16 +157,18 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
     lines = []
     for post in recent:
         lines.append('\t<div class="post">')
-        lines.append(f'\t\t<time datetime="{post["date_str"]}">{post["date_str"]}</time>')
+        lines.append(
+            f'\t\t<time datetime="{post["date_str"]}">{post["date_str"]}</time>'
+        )
         lines.append('\t\t<div class="post-content">')
         lines.append(f'\t\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>')
         if post["tags"]:
             lines.append('\t\t\t<div class="post-tags">')
             for tag in post["tags"]:
                 lines.append(f'\t\t\t\t<span class="tag">{tag}</span>')
-            lines.append('\t\t\t</div>')
-        lines.append('\t\t</div>')
-        lines.append('\t</div>')
+            lines.append("\t\t\t</div>")
+        lines.append("\t\t</div>")
+        lines.append("\t</div>")
 
     return "\n".join(lines)
 
