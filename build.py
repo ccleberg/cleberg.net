@@ -8,7 +8,7 @@ from pathlib import Path
 from datetime import datetime
 
 
-def update_index_html(html_snippet, template_path="./theme/templates/index.html"):
+def update_index_html(html_snippet, template_path="./.build/index.html"):
     """
     Read the index.html file at `template_path`, replace everything between
     <!-- BEGIN_POSTS --> and <!-- END_POSTS --> with the provided html_snippet,
@@ -255,7 +255,6 @@ def start_dev_server(build_dir):
 
 def main():
     html_snippet = get_recent_posts_html("./content/blog", num_posts=3)
-    update_index_html(html_snippet)
 
     build_dir = Path(".build")
     theme_dir = Path("theme/static")
@@ -283,6 +282,9 @@ def main():
         # Run publishing script (silenced output)
         run_emacs_publish(dev_mode=False)
 
+        # Update index page with latest posts
+        update_index_html(html_snippet)
+
         # Deploy changes
         deploy_to_server(build_dir, homelab_server)
 
@@ -297,6 +299,9 @@ def main():
 
         # Run publishing script (with console output)
         run_emacs_publish(dev_mode=True)
+
+        # Update index page with latest posts
+        update_index_html(html_snippet)
 
         # Launch development web server
         start_dev_server(build_dir)
