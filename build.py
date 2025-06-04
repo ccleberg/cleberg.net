@@ -1,9 +1,174 @@
 #!/usr/bin/env python3
 import os
+import re
 import shutil
 import subprocess
 import sys
 from pathlib import Path
+from datetime import datetime
+
+def update_index_html(html_snippet, template_path="./theme/templates/index.html"):
+    """
+    Read the index.html file at `template_path`, replace everything between
+    <!-- BEGIN_POSTS --> and <!-- END_POSTS --> with the provided html_snippet,
+    and write the updated content back to the same file.
+    """
+    # Read the current contents of index.html
+    with open(template_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    begin_marker = "<!-- BEGIN_POSTS -->"
+    end_marker = "<!-- END_POSTS -->"
+
+    # Find the indices of the markers
+    begin_index = content.find(begin_marker)
+    end_index = content.find(end_marker)
+
+    if begin_index == -1 or end_index == -1:
+        raise ValueError(f"Markers not found in {template_path}")
+
+    # Compute insertion points: after the end of begin_marker line, before end_marker
+    # Include the newline after BEGIN_POSTS
+    insert_start = begin_index + len(begin_marker)
+    # Ensure we capture the newline character if present
+    if content[insert_start:insert_start+1] == "\n":
+        insert_start += 1
+
+    # If there is a newline before END_POSTS, trim trailing whitespace from snippet block
+    # We will preserve indentation of BEGIN_POSTS line
+    indent = ""
+    # Determine the indentation by looking at characters after the newline that follows begin_marker
+    lines_after_begin = content[begin_index:].splitlines(True)
+    if len(lines_after_begin) > 1:
+        # The second line starts with the indentation to preserve
+        second_line = lines_after_begin[1]
+        indent = ""
+        for ch in second_line:
+            if ch.isspace():
+                indent += ch
+            else:
+                break
+
+    # Prepare the replacement block: indent each line of html_snippet
+    snippet_lines = html_snippet.splitlines()
+    indented_snippet = "\n".join(indent + line for line in snippet_lines) + "\n"
+
+    # Compute the position just before end_marker (excluding any preceding whitespace/newline)
+    end_line_start = content.rfind("\n", 0, end_index)
+    if end_line_start == -1:
+        end_line_start = end_index
+
+    # Construct the new content
+    new_content = (
+        content[:insert_start]
+        + indented_snippet
+        + content[end_line_start:]
+    )
+
+    # Write back to index.html
+    with open(template_path, "w", encoding="utf-8") as f:
+        f.write(new_content)
+
+def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
+    """
+    Scan the `content_dir` for .org blog post files, extract their headers,
+    and return an HTML snippet for the `num_posts` most recent posts.
+
+    Expects each .org file to contain headers of the form:
+      #+title:    Post Title
+      #+date:     <YYYY-MM-DD Day HH:MM:SS>
+      #+slug:     post-slug
+      #+filetags: :tag1:tag2:tag3:
+
+    Returns a string containing the section with the three most recent posts,
+    formatted like the snippet in the prompt.
+    """
+    posts = []
+
+    header_patterns = {
+        "title": re.compile(r'^#\+title:\s*(.+)$', re.IGNORECASE),
+        "date": re.compile(r'^#\+date:\s*<(\d{4}-\d{2}-\d{2})'),
+        "slug": re.compile(r'^#\+slug:\s*(.+)$', re.IGNORECASE),
+        "filetags": re.compile(r'^#\+filetags:\s*(.+)$', re.IGNORECASE),
+    }
+
+    for org_path in Path(content_dir).glob("*.org"):
+        title = None
+        date_str = None
+        slug = None
+        tags = []
+
+        with org_path.open("r", encoding="utf-8") as f:
+            for line in f:
+                if title is None:
+                    m = header_patterns["title"].match(line)
+                    if m:
+                        title = m.group(1).strip()
+                        continue
+
+                if date_str is None:
+                    m = header_patterns["date"].match(line)
+                    if m:
+                        # date_str is just YYYY-MM-DD
+                        date_str = m.group(1)
+                        continue
+
+                if slug is None:
+                    m = header_patterns["slug"].match(line)
+                    if m:
+                        slug = m.group(1).strip()
+                        continue
+
+                if not tags:
+                    m = header_patterns["filetags"].match(line)
+                    if m:
+                        # filetags are in the form ":tag1:tag2:tag3:"
+                        raw = m.group(1).strip()
+                        # split on ":" and filter out empty strings
+                        tags = [t for t in raw.split(":") if t]
+                        continue
+
+                # Stop scanning once we have all required fields
+                if title and date_str and slug and tags:
+                    break
+
+        if title and date_str and slug:
+            try:
+                date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+            except ValueError:
+                # Skip files with invalid date format
+                continue
+
+            posts.append({
+                "title": title,
+                "date_str": date_str,
+                "date_obj": date_obj,
+                "slug": slug,
+                "tags": tags,
+            })
+
+    # Sort posts by date (newest first)
+    posts.sort(key=lambda x: x["date_obj"], reverse=True)
+
+    # Take the top `num_posts`
+    recent = posts[:num_posts]
+
+    # Build HTML lines
+    lines = []
+    for post in recent:
+        lines.append('\t<div class="post">')
+        lines.append(f'\t\t<time datetime="{post["date_str"]}">{post["date_str"]}</time>')
+        lines.append('\t\t<div class="post-content">')
+        lines.append(f'\t\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>')
+        if post["tags"]:
+            lines.append('\t\t\t<div class="post-tags">')
+            for tag in post["tags"]:
+                lines.append(f'\t\t\t\t<span class="tag">{tag}</span>')
+            lines.append('\t\t\t</div>')
+        lines.append('\t\t</div>')
+        lines.append('\t</div>')
+
+    return "\n".join(lines)
 
 
 def prompt(prompt_text):
@@ -87,15 +252,13 @@ def start_dev_server(build_dir):
 
 
 def main():
+    html_snippet = get_recent_posts_html("./content/blog", num_posts=3)
+    update_index_html(html_snippet)
+
     build_dir = Path(".build")
     theme_dir = Path("theme/static")
     css_src = theme_dir / "styles.css"
     css_min = theme_dir / "styles.min.css"
-
-    answer = prompt("Did you update the 'Recent Blog Posts' section? [yn] ")
-    if not answer.lower().startswith("y"):
-        print("Please update the 'Recent Blog Posts' section before publishing!")
-        sys.exit(0)
 
     env = os.environ.get("ENV", "").lower()
     if env == "prod":
