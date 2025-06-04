@@ -1,0 +1,14 @@
+exclude = [".venv"]
+line-length = 80
+indent-width = 4
+respect-gitignore = true
+show-fixes = true
+
+[format]
+docstring-code-format = true
+docstring-code-line-length = 80
+indent-style = "space"
+quote-style = "double"
+
+[lint]
+ignore = ["PLR0912"]

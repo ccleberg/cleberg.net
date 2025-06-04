@@ -1,11 +1,36 @@
 #!/usr/bin/env python3
+"""
+This script automates the process of building, testing, and deploying the website.
+It handles tasks such as:
+
+- Removing and recreating the build directory.
+- Minifying CSS assets.
+- Running the Emacs publishing script to generate site content.
+- Updating the index.html file with the latest blog posts.
+- Optionally deploying the built site to a remote server.
+- Starting a local development server for previewing changes.
+
+Usage:
+    Set the environment variable ENV to 'prod' for production builds.
+    Run the script to perform the build process accordingly.
+
+Dependencies:
+    - Python 3
+    - Emacs with the publish.el script
+    - minify tool for CSS minification
+    - rsync for deployment
+
+Author:
+    Christian Cleberg <hello@cleberg.net>
+"""
+
 import os
 import re
 import shutil
 import subprocess
 import sys
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
 
 
 def update_index_html(html_snippet, template_path="./.build/index.html"):
@@ -60,7 +85,9 @@ def update_index_html(html_snippet, template_path="./.build/index.html"):
         end_line_start = end_index
 
     # Construct the new content
-    new_content = content[:insert_start] + indented_snippet + content[end_line_start:]
+    new_content = (
+        content[:insert_start] + indented_snippet + content[end_line_start:]
+    )
 
     # Write back to index.html
     with open(template_path, "w", encoding="utf-8") as f:
@@ -161,7 +188,9 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
             f'\t\t<time datetime="{post["date_str"]}">{post["date_str"]}</time>'
         )
         lines.append('\t\t<div class="post-content">')
-        lines.append(f'\t\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>')
+        lines.append(
+            f'\t\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>'
+        )
         if post["tags"]:
             lines.append('\t\t\t<div class="post-tags">')
             for tag in post["tags"]:
@@ -245,7 +274,9 @@ def start_dev_server(build_dir):
     os.chdir(build_dir)
     # This will run until interrupted (Ctrl+C)
     try:
-        subprocess.run([sys.executable, "-m", "http.server", "8000"], check=True)
+        subprocess.run(
+            [sys.executable, "-m", "http.server", "8000"], check=True
+        )
     except KeyboardInterrupt:
         print("\nDevelopment server stopped.")
     except subprocess.CalledProcessError as e:
