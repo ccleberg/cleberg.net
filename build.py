@@ -30,7 +30,7 @@ def minify_css(src_css, dest_css):
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
 
-def run_emacs_publish(dev_mode=False):
+def run_emacs_publish(dev_mode=True):
     if dev_mode:
         print("Running Emacs publish script (development)...")
         result = subprocess.run(
@@ -98,12 +98,12 @@ def main():
         print("Environment: Production")
         method = prompt("Publishing on remote or LAN? [r|l] ").lower()
         if method == "r":
-            ubuntu_server = "ubuntu-remote"
+            homelab_server = "homelab-remote"
         elif method == "l":
-            ubuntu_server = "ubuntu"
+            homelab_server = "homelab"
         else:
-            print("Invalid input. Assuming LAN (ubuntu)")
-            ubuntu_server = "ubuntu"
+            print("Invalid input. Assuming LAN (homelab)")
+            homelab_server = "homelab"
 
         # Remove previous build
         remove_build_directory(build_dir)
@@ -115,7 +115,7 @@ def main():
         run_emacs_publish(dev_mode=False)
 
         # Deploy changes
-        deploy_to_server(build_dir, ubuntu_server)
+        deploy_to_server(build_dir, homelab_server)
 
     else:
         print("Environment: Development")
