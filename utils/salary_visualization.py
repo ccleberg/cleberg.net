@@ -6,9 +6,9 @@ plotly.
 """
 
 import locale
-from pandas import read_csv as pd_read_csv
 import pandas as pd
 import plotly.graph_objs as go
+from pandas import read_csv as pd_read_csv
 
 locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
 
