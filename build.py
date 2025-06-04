@@ -5,17 +5,20 @@ import subprocess
 import sys
 from pathlib import Path
 
+
 def prompt(prompt_text):
     try:
         return input(prompt_text).strip()
     except EOFError:
-        return ''
+        return ""
+
 
 def remove_build_directory(build_dir):
     if build_dir.exists():
         print(f"Removing previous build directory: {build_dir}/")
         shutil.rmtree(build_dir)
     build_dir.mkdir(parents=True, exist_ok=True)
+
 
 def minify_css(src_css, dest_css):
     print(f"Minifying CSS: {src_css} → {dest_css}")
@@ -29,6 +32,7 @@ def minify_css(src_css, dest_css):
         print("Error during CSS minification:")
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
+
 
 def run_emacs_publish(dev_mode=True):
     if dev_mode:
@@ -53,6 +57,7 @@ def run_emacs_publish(dev_mode=True):
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
 
+
 def deploy_to_server(build_dir, server):
     remote_path = f"{server}:/var/www/cleberg.net/"
     print(f"Deploying .build/ → {remote_path}")
@@ -67,20 +72,19 @@ def deploy_to_server(build_dir, server):
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
 
+
 def start_dev_server(build_dir):
     print(f"Starting development HTTP server from {build_dir}/ on port 8000")
     os.chdir(build_dir)
     # This will run until interrupted (Ctrl+C)
     try:
-        subprocess.run(
-            [sys.executable, "-m", "http.server", "8000"],
-            check=True
-        )
+        subprocess.run([sys.executable, "-m", "http.server", "8000"], check=True)
     except KeyboardInterrupt:
         print("\nDevelopment server stopped.")
     except subprocess.CalledProcessError as e:
         print(f"Error starting development server: {e}", file=sys.stderr)
         sys.exit(1)
+
 
 def main():
     build_dir = Path(".build")
@@ -131,6 +135,7 @@ def main():
 
         # Launch development web server
         start_dev_server(build_dir)
+
 
 if __name__ == "__main__":
     main()
