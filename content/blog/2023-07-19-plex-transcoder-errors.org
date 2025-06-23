@@ -1,5 +1,5 @@
 #+date:        <2023-07-19 Wed 00:00:00>
-#+title:       Troubleshooting Plex Transcoder: Resolving Conversion Startup Failures
+#+title:       Plex Subtitle Error: Transcoder Fails to Start
 #+description: Technical procedures to identify and correct Plex transcoder failures at startup to maintain uninterrupted media conversion and playback.
 #+slug:        plex-transcoder-errors
 #+filetags:    :plex:transcoder:error:

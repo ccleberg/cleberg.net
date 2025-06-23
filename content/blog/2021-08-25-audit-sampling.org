@@ -1,6 +1,6 @@
 #+date:        <2021-08-25 Wed 00:00:00>
-#+title:       Audit Sampling Procedures Using Python and Pandas Libraries
-#+description: Presentation of methods for implementing audit sampling techniques including simple random, stratified, and systematic sampling using Python’s Pandas library for precise audit outcomes.
+#+title:       Audit Sampling Made Easy: Using Pandas for Random and Stratified Samples
+#+description: Presentation of methods for implementing audit sampling techniques including simple random, stratified, and systematic sampling using Python's Pandas library for precise audit outcomes.
 #+slug:        audit-sampling
 #+filetags:    :python:pandas:audit-sampling:
 
@@ -16,7 +16,7 @@ represent the population.
 
 However, sampling data within the world of audit still seems to confuse
 quite a lot of people. While some audit-focused tools have introduced
-sampling functionality (e.g. Wdesk), many audit departments and firms
+sampling functionality (e.g. Wdesk), many audit departments and firms
 cannot use software like this due to certain constraints, such as the
 team's budget or knowledge. Here is where this article comes in: we're
 going to use [[https://www.python.org][Python]], a free and open-source

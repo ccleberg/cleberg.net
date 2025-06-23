@@ -1,17 +1,8 @@
 #+date:        <2022-03-24 Thu 00:00:00>
-#+title:       Security Hardening Procedures for Public-Facing Home Servers
+#+title:       Step-by-Step Guide to Securing Your Home Server with Firewalls, SSH, and VLANs
 #+description: Detailed instructions to enhance the security posture of home servers exposed to public networks, including firewall setup, secure SSH configuration, fail2ban deployment, and network segmentation.
 #+slug:        server-hardening
 #+filetags:    :home-server:security:hardening:
-
-* Post Updates
-
-#+begin_quote
-After reviewing this post today (2022-10-04), I noticed quite a few gaps in my
-write-up and wanted to add a few things, even though this blog is really just a
-retrospective and knowledge dump for myself. I left things intact and simply
-crossed them out (+like this+) for posterity.
-#+end_quote
 
 * Planning Data Flows & Security
 

@@ -1,5 +1,5 @@
 #+date:        <2022-02-17 Thu 00:00:00>
-#+title:       Procedure for Removing Image Metadata Using Exiftool Utility
+#+title:       Protect Your Privacy: Automating Image Metadata Removal Using Exiftool
 #+description: Technical instructions for utilizing Exiftool to systematically strip metadata from image files to ensure privacy and reduce file size.
 #+slug:        exiftool
 #+filetags:    :exiftool:metadata:image-processing:

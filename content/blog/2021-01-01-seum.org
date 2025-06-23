@@ -1,5 +1,5 @@
 #+date:        <2021-01-01 Fri 00:00:00>
-#+title:       SEUM: Speedrunning and Puzzle Mechanics Operational Guide
+#+title:       SEUM: Speedrunners from Hell
 #+description: Technical overview for utilizing the game SEUM, focusing on speedrunning techniques, gravity manipulation, teleportation functions, and level completion criteria.
 #+slug:        seum
 #+filetags:    :speedrunning:puzzle:indie:

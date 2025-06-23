@@ -1,5 +1,5 @@
 #+date:        <2020-10-12 Mon 00:00:00>
-#+title:       Conceptual Discussion on Acceptable Performance Thresholds
+#+title:       When Good Is Good Enough—And When It Isn't
 #+description: Examination of decision-making principles relating to achieving sufficient quality levels, including trade-offs between perfection and adequacy in professional and operational contexts.
 #+slug:        mediocrity
 #+filetags:    :mediocrity:decision-making:philosophy:
@@ -90,7 +90,7 @@ must follow all the rules of those laws so that the company can protect itself
 from fines or other penalties.
 
 Following this, companies will consider best practices in order to place itself
-in a competitive position (e.g. Google vs. Apple) and review any recent or
+in a competitive position (e.g. Google vs. Apple) and review any recent or
 ongoing litigation against companies regarding user data. In a perfect company,
 management would then consider the ethical responsibilities of their
 organization and discuss their responsibilities over things like

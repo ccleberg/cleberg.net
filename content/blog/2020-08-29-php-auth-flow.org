@@ -1,8 +1,8 @@
 #+date:        <2020-08-29 Sat 00:00:00>
-#+title:       Implementation Guide for PHP-Based User Authentication with MySQL Backend
-#+description: Comprehensive guide to developing a secure user login system in PHP utilizing MySQL database, including account creation, session management, and logout procedures.
+#+title:       PHP User Authentication: Create, Validate, and Manage Sessions
+#+description: Comprehensive guide to developing a secure user login system in PHP, including account creation, session management, and logout procedures.
 #+slug:        php-auth-flow
-#+filetags:    :php:authentication:mysql:
+#+filetags:    :php:authentication:
 
 * Introduction
 

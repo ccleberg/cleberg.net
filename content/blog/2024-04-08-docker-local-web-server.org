@@ -1,5 +1,5 @@
 #+date:        <2024-04-08 Mon 00:00:00>
-#+title:       Configuration Procedure for Local Web Development Server Using Docker Desktop
+#+title:       Local Web Dev Server Setup with Docker & Nginx
 #+description: Instructions for setting up a local web development environment employing Docker Desktop and Nginx web server to facilitate development and testing workflows.
 #+slug:        docker-local-web-server
 #+filetags:    :docker:nginx:webserver:

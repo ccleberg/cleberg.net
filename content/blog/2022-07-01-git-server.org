@@ -1,5 +1,5 @@
 #+date:        <2022-07-01 Fri 00:00:00>
-#+title:       Procedures for Establishing a Personal Git Repository Server
+#+title:       Self-Hosting Guide: Git & cGit
 #+description: Comprehensive instructions for secure and efficient setup, hosting, and management of personal Git repositories to facilitate collaborative development and remote access.
 #+slug:        git-server
 #+filetags:    :git:server:self-hosting:

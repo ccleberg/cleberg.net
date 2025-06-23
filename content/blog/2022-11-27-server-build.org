@@ -1,5 +1,5 @@
 #+date:        <2022-11-27 Sun 00:00:00>
-#+title:       Assembling a High-Performance Rack-Mounted Server from PC Components
+#+title:       Building a High-Performance Rack-Mounted Server with Consumer PC Components
 #+description: Detailed instructions on selecting components, assembling, and configuring a rack-mounted server suitable for advanced computing tasks in a professional or laboratory setting.
 #+slug:        server-build
 #+filetags:    :server:hardware:build:

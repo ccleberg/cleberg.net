@@ -1,5 +1,5 @@
 #+date:        <2022-03-26 Sat 00:00:00>
-#+title:       Implementation of Time-Based One-Time Password Multi-Factor Authentication for SSH Access
+#+title:       Secure Your SSH Access: Deploying Time-Based One-Time Password Authentication
 #+description: Step-by-step deployment guide for enabling TOTP multi-factor authentication on SSH services using Google Authenticator and Pluggable Authentication Module (PAM) integration.
 #+slug:        ssh-mfa
 #+filetags:    :ssh:mfa:security:

@@ -1,5 +1,5 @@
 #+date:        <2020-08-22 Sat 00:00:00>
-#+title:       Procedure for Redirecting GitHub Pages from WWW Subdomain to Root Domain
+#+title:       Configure GitHub Pages to Use Your Root Domain Instead of WWW
 #+description: Stepwise instructions for configuring redirection of GitHub Pages sites from the www subdomain to the apex domain to improve domain resolution and access consistency.
 #+slug:        redirect-github-pages
 #+filetags:    :github:pages:dns:
@@ -77,14 +77,14 @@ domains which use fixed GitHub Pages IP addresses will not be accessible (their
 DNS requests will not be resolvable).
 
 That is why GitHub strongly suggests to either use a second-level domain for
-your GitHub Pages (e.g. =blog.example.com=) or use a DNS service provider that
+your GitHub Pages (e.g. =blog.example.com=) or use a DNS service provider that
 supports a record type =ALIAS= that acts as =A= record but forwards request to a
-URL address (e.g. =username.github.io=) instead of a fixed IP address.
+URL address (e.g. =username.github.io=) instead of a fixed IP address.
 
 ** How GitHub Pages treats HTTP requests
 
 After a DNS request for =your_github_username.github.io= is resolved
-into an IP address, e.g. =185.199.108.153= your browser sends an HTTP
+into an IP address, e.g. =185.199.108.153= your browser sends an HTTP
 request to that server with an HTTP header =Host=. Below are =curl=
 examples that load the same website (these examples might not work if
 you are behind a proxy server):

@@ -1,5 +1,5 @@
 #+date:        <2023-05-22 Mon 00:00:00>
-#+title:       Analytical Review of Occupational Burnout and Methods for Remediation
+#+title:       Navigating Burnout in Audit and Consulting: A Season Without Rest
 #+description: Examination of burnout phenomena accompanied by strategies and practical approaches for workload management and restoration of optimal functioning.
 #+slug:        burnout
 #+filetags:    :burnout:productivity:wellbeing:

@@ -1,5 +1,5 @@
 #+date:        <2025-01-23 Thursday 20:44:45>
-#+title:       Installation and Configuration of Tandoor Recipe Manager for Self-Hosting
+#+title:       Self-Hosting Guide: Tandoor Recipe Manager
 #+description: Detailed tutorial on deploying Tandoor, an open-source recipe management application, including installation steps and configuration for self-hosted operation.
 #+slug:        self-hosting-tandoor
 #+filetags:    :self-hosting:tandoor:docker:

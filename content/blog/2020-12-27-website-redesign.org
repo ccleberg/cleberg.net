@@ -1,5 +1,5 @@
 #+date:        <2020-12-27 Sun 00:00:00>
-#+title:       Procedures for Website Size Optimization Achieving Minimal Page Weight
+#+title:       Designing for Speed: A 5KB Site That Scores 100s on Lighthouse
 #+description: Detailed process outlining methods for reducing website page size to approximately 5 kilobytes, enhancing loading speed, search engine indexing efficiency, and user interface responsiveness.
 #+slug:        website-redesign
 #+filetags:    :web:minimalism:performance:

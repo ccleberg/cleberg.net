@@ -1,5 +1,5 @@
 #+date:        <2022-06-22 Wed 00:00:00>
-#+title:       Automated Retrieval and Delivery of Daily Plaintext Poetry via Email
+#+title:       How to Receive a Daily Dose of Poetry via Automated Email
 #+description: Instructional guide for scheduling and automating the distribution of classic and contemporary poetry in plaintext format to an electronic mail inbox using Python scripting and SMTP protocol.
 #+slug:        daily-poetry
 #+filetags:    :poetry:email:automation:

@@ -1,5 +1,5 @@
 #+date:        <2024-12-29 Sun 17:45:00>
-#+title:       Deployment Procedure for The Lounge IRC Web Client Using Docker Compose on Linux
+#+title:       Self-Hosting Guide: The Lounge (IRC)
 #+description: Step-by-step instructions for installing and configuring The Lounge IRC web client on Linux systems utilizing Docker Compose to provide persistent and secure chat access.
 #+slug:        self-hosting-the-lounge
 #+filetags:    :docker:irc:web-client:

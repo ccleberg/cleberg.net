@@ -1,5 +1,5 @@
 #+date:        <2020-02-09 Sunday 00:00:00>
-#+title:       Cryptographic Principles: Core Concepts and Techniques
+#+title:       A Practical Guide to Encryption, Keys, and Secure Communication
 #+description: Systematic overview of encryption methodologies, key categories, algorithmic frameworks, and their applications in data confidentiality and integrity.
 #+slug:        cryptography
 #+filetags:    :cryptography:security:encryption:

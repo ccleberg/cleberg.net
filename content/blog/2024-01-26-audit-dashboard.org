@@ -1,5 +1,5 @@
 #+date:        <2024-01-26 Fri 00:00:00>
-#+title:       Constructing an Interactive Audit Status Dashboard using Alteryx and Power BI
+#+title:       Building an Interactive Audit Dashboard with Alteryx and Power BI
 #+description: Instructions for transforming audit data into dynamic dashboards via data preparation with Alteryx and visualization using Microsoft Power BI.
 #+slug:        audit-dashboard
 #+filetags:    :audit:dashboard:powerbi:
@@ -99,8 +99,8 @@ Instructions to create the visuals above:
 - =Treemap=: Top N client submitters by average days to submit.
   - =Details=: Preparer
   - =Values=: Sum of Avg_{DaysToSubmit}
-- =Line Chart=: Projected vs. actual hours over time.
-- =Clustered Bar Chart=: Projected vs. actual hours per person.
+- =Line Chart=: Projected vs. actual hours over time.
+- =Clustered Bar Chart=: Projected vs. actual hours per person.
 - =Slicer & Table= - Upcoming due dates.
   - =Slicer=:
     - =Values=: Date Due

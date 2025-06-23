@@ -1,5 +1,5 @@
 #+date:        <2022-02-10 Thu 00:00:00>
-#+title:       Analysis of Transition from Office-Based Employment to Remote Work Models
+#+title:       From Cubicles to Home Offices: My Journey Through Changing Workspaces
 #+description: Examination of factors influencing the shift from traditional office environments to remote work, including benefits, constraints, and implementation recommendations.
 #+slug:        leaving-the-office
 #+filetags:    :remote-work:home-office:career-change:

@@ -1,5 +1,5 @@
 #+date:        <2022-03-03 Thu 00:00:00>
-#+title:       Construction and Management of a Personal Financial Database with SQLite
+#+title:       From Spreadsheets to Databases: Creating a Custom Financial Tracker with Python
 #+description: Procedures for creating and maintaining a personal financial database utilizing SQLite, Python programming language, and Jupyter Notebook interface.
 #+slug:        financial-database
 #+filetags:    :finance:sqlite:python:

@@ -1,5 +1,5 @@
 #+date:        <2023-10-17 Tue 00:00:00>
-#+title:       Installation and Configuration of AnonymousOverflow with Docker and Nginx
+#+title:       Self-Hosting Guide: AnonymousOverflow
 #+description: Detailed installation and setup instructions for the AnonymousOverflow application using Docker Compose and Nginx reverse proxy.
 #+slug:        self-hosting-anonymousoverflow
 #+filetags:    :docker:nginx:self-hosting:

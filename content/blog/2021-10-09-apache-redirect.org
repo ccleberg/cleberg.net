@@ -1,5 +1,5 @@
 #+date:        <2021-10-09 Sat 00:00:00>
-#+title:       Configuration of Apache Rewrite Rules for Redirecting HTML URLs to Directory URLs
+#+title:       Setting Up Apache Rewrite Rules for Extensionless URLs
 #+description: Technical guide to applying Apache mod_rewrite directives for transforming .html file requests into clean directory-style URL structures to enhance website navigation and indexing.
 #+slug:        apache-redirect
 #+filetags:    :apache:redirect:urlrewrite:

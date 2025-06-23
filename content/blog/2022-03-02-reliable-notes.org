@@ -1,5 +1,5 @@
 #+date:        <2022-03-02 Wed 00:00:00>
-#+title:       Note-Taking Techniques: Reliable and Efficient Methods Using Markdown
+#+title:       Reliable Note-Taking with Markdown: Methods for Efficient and Portable Notes
 #+description: Instructions on applying standardized note-taking procedures with Markdown format, including synchronization and cross-platform compatibility considerations.
 #+slug:        reliable-notes
 #+filetags:    :note-taking:markdown:productivity:

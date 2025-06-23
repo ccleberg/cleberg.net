@@ -1,5 +1,5 @@
 #+date:        <2019-09-09 Mon 00:00:00>
-#+title:       Audit Analytics Methodologies for Internal Review Enhancement
+#+title:       Bringing Data Analytics Into Internal Audit
 #+description: Examination of data analytical approaches applied within internal audit functions to improve risk evaluation, process efficiency, and decision support.
 #+slug:        audit-analytics
 #+filetags:    :audit:data-analytics:internal-audit:

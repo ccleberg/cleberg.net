@@ -1,5 +1,5 @@
 #+date:        <2025-02-25 Mon 19:20:05>
-#+title:       Procedure for Migrating Emails from Proton Mail to Migadu Mail Server
+#+title:       How I Transferred 5000+ Emails from Proton Mail to Migadu
 #+description: Detailed instructions describing the process and considerations involved in transferring email data securely from Proton Mail to Migadu email hosting.
 #+slug:        email-migration
 #+filetags:    :email:migration:protonmail:

@@ -1,6 +1,6 @@
 #+date:        <2022-02-10 Thu 00:00:00>
 #+title:       Automating Dynamic DNS Record Updates via Njalla API Using Python
-#+description: Instructional material detailing automation of DNS record updates by interfacing with Njalla’s API, suitable for environments with frequently changing IP addresses.
+#+description: Instructional material detailing automation of DNS record updates by interfacing with Njalla's API, suitable for environments with frequently changing IP addresses.
 #+slug:        njalla-dns-api
 #+filetags:    :python:ddns:njalla:
 
@@ -204,5 +204,5 @@ In the cron file, paste the following at the bottom of the editor in
 order to check the IP every five minutes:
 
 #+begin_src sh
-,*/5 ** ** ** ** python3 /home/<your_username>/ddns/ddns.py
+*/5 * * * * python3 /home/<your_username>/ddns/ddns.py
 #+end_src

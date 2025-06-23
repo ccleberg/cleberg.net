@@ -1,5 +1,5 @@
 #+date:        <2023-10-04 Wed 00:00:00>
-#+title:       Digital Minimalism: Methods for Reducing Digital Distractions
+#+title:       Digital Minimalism: Reducing Distractions
 #+description: Practical guide for minimizing digital clutter and optimizing work focus by applying digital minimalism tactics.
 #+slug:        digital-minimalism
 #+filetags:    :digital-minimalism:minimalism:productivity:

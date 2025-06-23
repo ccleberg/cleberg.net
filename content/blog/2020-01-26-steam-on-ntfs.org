@@ -1,5 +1,5 @@
 #+date:        <2020-01-26 Sun 00:00:00>
-#+title:       Configuring Steam on NTFS Drives under Linux Systems
+#+title:       How to Get Steam Running Smoothly on NTFS Drives in Linux
 #+description: Procedures for mounting NTFS drives using ntfs-3g to enable reliable execution of Steam gaming software on Linux environments.
 #+slug:        steam-on-ntfs
 #+filetags:    :steam:ntfs:linux:

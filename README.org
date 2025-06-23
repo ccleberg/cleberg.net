@@ -53,7 +53,7 @@ configuration options and expected formats.
 ** Setup Instructions
 
 To obtain a working copy of this repository, execute the following commands
-within a shell environment or Emacs’ shell interface:
+within a shell environment or Emacs' shell interface:
 
 #+begin_src shell
 git clone https://github.com/ccleberg/cleberg.net
@@ -115,7 +115,7 @@ This method streamlines content creation by reusing a preformatted template.
 
 ** Contributing and Issue Tracking
 
-Contributions and bug reports are tracked through the repository’s issue tab on
+Contributions and bug reports are tracked through the repository's issue tab on
 GitHub. Users are encouraged to submit reports, feature requests, or pull
 requests following standard repository guidelines.
 

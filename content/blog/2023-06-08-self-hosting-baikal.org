@@ -1,5 +1,5 @@
 #+date:        <2023-06-08 Thu 00:00:00>
-#+title:       Installation and Configuration Guide for Baikal CalDAV and CardDAV Server
+#+title:       Self-Hosting Guide: Baikal
 #+description: Detailed procedure for deploying the Baikal server software to provide CalDAV and CardDAV services, including security considerations and Docker deployment.
 #+slug:        self-hosting-baikal
 #+filetags:    :caldav:self-hosting:docker:

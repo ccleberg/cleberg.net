@@ -1,5 +1,5 @@
 #+date:        <2024-05-03 Fri 00:00:00>
-#+title:       Deployment Instructions for Running Ubuntu Linux on macOS Using OrbStack
+#+title:       OrbStack on macOS: Running a Full Ubuntu Linux Environment
 #+description: Technical guide outlining the installation and operation of OrbStack to run Ubuntu Linux containers natively on macOS systems with performance considerations.
 #+slug:        ubuntu-on-macos
 #+filetags:    :linux:macos:orbstack:

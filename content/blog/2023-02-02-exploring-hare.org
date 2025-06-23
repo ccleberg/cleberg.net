@@ -1,5 +1,5 @@
 #+date:        <2023-02-02 Thu 00:00:00>
-#+title:       Introduction and Setup Guide for the Hare Programming Language
+#+title:       Getting Started with the Hare Language
 #+description: Overview of the Hare programming language features, installation procedure, and elementary programming examples targeting system-level development.
 #+slug:        exploring-hare
 #+filetags:    :hare:programming:beginner:
