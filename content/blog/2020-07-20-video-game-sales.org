@@ -1,5 +1,5 @@
 #+date:        <2020-07-20 Mon 00:00:00>
-#+title:       Technical Review of Video Game Sales Data and Trends
+#+title:       A Data-Driven Look at Video Game Sales (1980–2020)
 #+description: Presentation of analyzed data regarding global video game sales, covering platform distributions, genre classifications, and geographic market performance metrics.
 #+slug:        video-game-sales
 #+filetags:    :video-games:sales:data-analysis:
@@ -13,7 +13,7 @@ Fields include:
 
 - Rank: Ranking of overall sales
 - Name: The game name
-- Platform: Platform of the game release (i.e. PC,PS4, etc.)
+- Platform: Platform of the game release (i.e. PC,PS4, etc.)
 - Year: Year of the game's release
 - Genre: Genre of the game
 - Publisher: Publisher of the game

@@ -1,5 +1,5 @@
 #+date:        <2022-07-31 Sun 00:00:00>
-#+title:       Enhancing Bash Shell Functionality with Bash-It and ble.sh Plugins
+#+title:       Boosting Bash Productivity: Using Bash-it and ble.sh for Plugins and Autosuggestions
 #+description: Guide to augmenting Bash shell features by integrating Bash-It framework along with ble.sh for input autosuggestions, improving command-line efficiency on Linux systems.
 #+slug:        bash-it
 #+filetags:    :bash:shell:linux:
@@ -49,7 +49,7 @@ You should see a prompt like the one below. If the brackets (=[]=)
 contain =bash= already, you're done, and you can simply continue by
 hitting the Enter key.
 
-If the brackets contain another shell path (e.g. =/usr/bin/zsh=), enter
+If the brackets contain another shell path (e.g. =/usr/bin/zsh=), enter
 the path to the bash program on your system (it's most likely located at
 =/usr/bin/bash=).
 

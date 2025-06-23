@@ -1,5 +1,5 @@
 #+date:        <2021-05-30 Sun 00:00:00>
-#+title:       Procedure for Modifying Git Committer Author Name and Email Across Multiple Repositories
+#+title:       Automated Script for Correcting Git Author Details in Multiple Projects
 #+description: Detailed instructions for systematically updating the Git author name and email information in multiple repositories using command-line tools and scripts.
 #+slug:        changing-git-authors
 #+filetags:    :git:automation:scripting:

@@ -1,5 +1,5 @@
 #+date:        <2024-03-29 Fri 00:00:00>
-#+title:       Guide to Blogging with Emacs Org-Mode and Static Site Generation
+#+title:       Blogging with Emacs Org-Mode and Weblorg
 #+description: Instructional content for preparing and publishing blogs using Emacs Org-Mode, including setup of static site generators and content management workflows.
 #+slug:        org-blog
 #+filetags:    :blog:weblorg:emacs:

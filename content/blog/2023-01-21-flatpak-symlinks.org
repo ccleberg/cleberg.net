@@ -1,5 +1,5 @@
 #+date:        <2023-01-21 Sat 00:00:00>
-#+title:       Procedure for Creating Symlinks to Expedite Flatpak Application Launch
+#+title:       Simplify Flatpak Commands: Making Symlinks for Easier App Launching
 #+description: Detailed instructions for establishing symbolic links for Flatpak applications to facilitate faster execution from terminal or application launcher environments.
 #+slug:        flatpak-symlinks
 #+filetags:    :flatpak:symlinks:productivity:

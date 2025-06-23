@@ -1,5 +1,5 @@
 #+date:        <2021-04-23 Fri 00:00:00>
-#+title:       Development of a PHP-Based Static Commenting System
+#+title:       Building a Lightweight PHP Static Commenting System Without JavaScript
 #+description: Technical walkthrough for constructing a lightweight, privacy-oriented static comment system using PHP, with no client-side scripting or external dependencies.
 #+slug:        php-comment-system
 #+filetags:    :php:comments:static:

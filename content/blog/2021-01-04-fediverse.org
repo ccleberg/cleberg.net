@@ -1,5 +1,5 @@
 #+date:        <2021-01-04 Mon 00:00:00>
-#+title:       Fediverse: User Manual for Decentralized Social Networking Systems
+#+title:       Navigating the Fediverse: User Manual for Decentralized Social Media
 #+description: Detailed introduction to the Fediverse network architecture, user registration procedures, platform navigation, and protocols ensuring content decentralization and censorship resistance.
 #+slug:        fediverse
 #+filetags:    :fediverse:social-network:decentralization:
@@ -8,16 +8,16 @@
 
 The fediverse is a federated universe of servers commonly used for
 sharing content, like social media. So, instead of having to rely on a
-single organization to run the server (e.g. Facebook), the fediverse is
+single organization to run the server (e.g. Facebook), the fediverse is
 a giant collection of servers across the world, owned by many people and
 organizations.
 
 Take a look at this depiction of a federated network. Each server in
 this photo is owned and run by different administrators/owners.
 Federated networks are best explained as email servers: you have an
-email account that exists on a server (e.g. Outlook), your friend has an
-account on a different server (e.g. GMail), and another friend has an
-account on a third server (e.g. ProtonMail). All three of you can talk
+email account that exists on a server (e.g. Outlook), your friend has an
+account on a different server (e.g. GMail), and another friend has an
+account on a third server (e.g. ProtonMail). All three of you can talk
 and communicate back and forth without having to be on the same server.
 However, responsible email admins are there to set rules and control the
 traffic going in/out of the server.
@@ -34,7 +34,7 @@ controlled by a single organization, but it also has some downsides. If
 I create a Mastodon instance and get a ton of users to sign up, I can
 shut the server down at any time. That means you're at risk of losing
 the content you've created unless you back it up, or the server backs it
-up for you. Also, depending on the software used (e.g. Mastodon,
+up for you. Also, depending on the software used (e.g. Mastodon,
 Pixelfed, etc.), censorship may still be an issue if the server admins
 decide they want to censor their users. Now, censorship isn't always a
 bad thing and can even benefit the community as a whole, but you'll want

@@ -1,5 +1,5 @@
 #+date:        <2022-10-04 Tue 00:00:00>
-#+title:       Mounting MTP Mobile Devices on Fedora Linux Systems
+#+title:       How to Mount MTP Mobile Devices on Fedora Linux Using jmtpfs
 #+description: Instructions for mounting and accessing Media Transfer Protocol (MTP) compatible mobile devices on Fedora Linux using jmtpfs for file transfer and management.
 #+slug:        mtp-linux
 #+filetags:    :mtp:fedora:linux:

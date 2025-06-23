@@ -1,5 +1,5 @@
 #+date:        <2019-01-07 Mon 00:00:00>
-#+title:       CSS Implementation Techniques for Structured Web Layouts
+#+title:       Real‑World CSS Techniques: Flexbox, Shadows, and Variables
 #+description: Practical guide on applying CSS rules and constructs such as flexbox, box shadows, and variable usage to achieve standard web styling and layout objectives.
 #+slug:        useful-css
 #+filetags:    :css:web-design:tips:
@@ -26,7 +26,7 @@ structure, where you can easily reuse CSS properties throughout the project.
 You can use variables to define things, such as color palettes. Then, you can
 use these colors for backgrounds anywhere else in the HTML. This could be
 extended, where extra variables could be defined for =primary-text=,
-=quoted-text=, etc. Variables can also be used to define spacing (e.g. =32px= or
+=quoted-text=, etc. Variables can also be used to define spacing (e.g. =32px= or
 =2rem=), which can then be applied to margins, padding, font sizes, and more.
 
 For example, here are some variables defined at the root of the website, which

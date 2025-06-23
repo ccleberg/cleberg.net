@@ -1,5 +1,5 @@
 #+date:        <2022-11-11 Fri 00:00:00>
-#+title:       Resolution of Permission Denied Errors in /var/lib/nginx Directory
+#+title:       Troubleshooting and Fixing Nginx Permission Denied Errors on /var/lib/nginx
 #+description: Step-by-step remediation for addressing permission denied errors encountered by Nginx in the /var/lib/nginx directory to restore temporary file caching functionality.
 #+slug:        nginx-tmp-errors
 #+filetags:    :nginx:permissions:errors:

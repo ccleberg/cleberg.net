@@ -1,5 +1,5 @@
 #+date:        <2024-01-08 Mon 00:00:00>
-#+title:       Communication Efficiency: Guidelines to Omit Unnecessary Greetings
+#+title:       Don't Say Hello
 #+description: Technical recommendations for improving professional communication by eliminating non-essential introductory phrases to enhance message clarity.
 #+slug:        dont-say-hello
 #+filetags:    :communication:efficiency:professional:

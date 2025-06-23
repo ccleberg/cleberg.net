@@ -1,5 +1,5 @@
 #+date:        <2022-06-16 Thu 00:00:00>
-#+title:       Methodical Use of Terminal Applications for Task Management
+#+title:       Living the Terminal Lifestyle: Efficient Workflows for Focused Computing
 #+description: Detailed procedures for reducing digital interruptions and increasing efficiency through terminal-based utilities for web browsing, communication, electronic mail, RSS feeds, and programming tasks.
 #+slug:        terminal-lifestyle
 #+filetags:    :terminal:lifestyle:productivity:

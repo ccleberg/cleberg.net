@@ -1,5 +1,5 @@
 #+date:        <2022-12-01 Thu 00:00:00>
-#+title:       Enabling GZIP Compression in Nginx for Improved Web Server Efficiency
+#+title:       Optimizing Nginx with GZIP: A Step-by-Step Guide to Text Compression
 #+description: Procedures for activating and configuring GZIP compression in Nginx to decrease data transmission size, reduce bandwidth consumption, and accelerate page load times.
 #+slug:        nginx-compression
 #+filetags:    :nginx:gzip:compression:

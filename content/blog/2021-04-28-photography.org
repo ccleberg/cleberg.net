@@ -1,5 +1,5 @@
 #+date:        <2021-04-28 Wed 00:00:00>
-#+title:       Photography Fundamentals: Equipment and Technique Instruction
+#+title:       Getting Started with Photography: Gear and Best Practices
 #+description: Instructional document covering basic techniques in photography, including equipment selection, operational best practices, and methods for capturing high-quality images.
 #+slug:        photography
 #+filetags:    :photography:camera:gear:

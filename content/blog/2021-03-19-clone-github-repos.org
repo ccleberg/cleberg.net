@@ -1,5 +1,5 @@
 #+date:        <2021-03-19 Fri 00:00:00>
-#+title:       Automated Cloning Procedures for GitHub and Sourcehut Repositories
+#+title:       GitHub and Sourcehut: Scripting Mass Clones and Remote Updates
 #+description: Script-based methodology for cloning multiple repositories from GitHub and Sourcehut accounts. Includes automation techniques to streamline repository management and backups.
 #+slug:        clone-github-repos
 #+filetags:    :git:cloning:scripting:
@@ -81,7 +81,7 @@ Next, paste the following bash script in with the list of repositories
 you obtained above and replace =your-username= with your username.
 
 Note that this uses the SSH-based Git cloning method
-(e.g. =git@git...=), so you'll need to ensure you have set up Sourcehut
+(e.g. =git@git...=), so you'll need to ensure you have set up Sourcehut
 with your SSH key.
 
 #+begin_src sh

@@ -1,5 +1,5 @@
 #+date:        <2023-09-15 Fri 00:00:00>
-#+title:       Installation and Configuration of GitWeb with Nginx Server
+#+title:       Self-Hosting Guide: GitWeb
 #+description: Stepwise instructions for deploying GitWeb on Linux servers using Nginx, configuring fastcgi, and managing git repositories effectively.
 #+slug:        self-hosting-gitweb
 #+filetags:    :gitweb:nginx:server:

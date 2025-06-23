@@ -1,5 +1,5 @@
 #+date:        <2021-02-19 Fri 00:00:00>
-#+title:       macOS Operating System: Initial Setup and Configuration Guide
+#+title:       macOS for Linux Users: Initial Setup and CLI Customization
 #+description: Comprehensive overview for first-time macOS users transitioning from other OS platforms, including system setup, terminal usage, and user interface customization.
 #+slug:        macos
 #+filetags:    :macos:terminal:setup:
@@ -38,7 +38,7 @@ can't stand items taking up precious screen space if I'm not currently
 using them. On that same note, it's taking me some time to get use to
 the fact that I have to manually quit an app or else it will still stay
 open/active in the dock, even if I've closed out all windows for that
-app (e.g. Firefox).
+app (e.g. Firefox).
 
 Overall, I'm having a lot of fun and for users who spend a large
 majority of their time performing basic tasks like web browsing,
@@ -183,7 +183,7 @@ Of course, my customization of =zsh= would not be complete without
 [[https://github.com/zsh-users/zsh-autosuggestions][zsh-autosuggestions]].
 This will bring up commands you've run in the past as you type them. For
 example, if you've run =ssh user@192.168.1.99= before, the terminal will
-show this command as soon as you start typing it (e.g. =zsh u=), and you
+show this command as soon as you start typing it (e.g. =zsh u=), and you
 can hit the right arrow to autocomplete the command.
 
 #+begin_src sh

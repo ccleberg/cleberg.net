@@ -1,5 +1,5 @@
 #+date:        <2023-06-23 Fri 00:00:00>
-#+title:       Using Byobu Terminal Multiplexer: Installation and Operational Guide
+#+title:       Using Byobu for Efficient Terminal Multiplexing
 #+description: Detailed overview of Byobu terminal multiplexer features, configuration settings, session management, and keybindings to enhance command-line efficiency.
 #+slug:        byobu
 #+filetags:    byobu:terminal-multiplexer:productivity

@@ -1,5 +1,5 @@
 #+date:        <2025-06-03 Tue 11:38:40>
-#+title:       Selection of Privacy-Focused iOS Applications for Minimalist Users
+#+title:       Privacy-First iOS Apps for Minimalists
 #+description: Curated listing of iOS applications prioritized for privacy preservation and data security, targeted at users requiring minimal data exposure.
 #+slug:        private-ios-apps
 #+filetags:    :ios:privacy:security:

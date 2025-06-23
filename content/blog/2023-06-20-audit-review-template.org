@@ -1,5 +1,5 @@
 #+date:        <2023-06-20 Tue 00:00:00>
-#+title:       Template and Procedures for Conducting Audit Testing Reviews
+#+title:       Audit Testing Review Checklist
 #+description: Practical audit testing review template with detailed steps to support comprehensive evaluation of financial audits and SOC reports.
 #+slug:        audit-review-template
 #+filetags:    :audit:review:template:

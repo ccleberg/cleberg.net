@@ -1,5 +1,5 @@
 #+date:        <2020-05-19 Tue 00:00:00>
-#+title:       Configuration Procedures for Ubuntu 20.04 Desktop Environment
+#+title:       Tweak Your Ubuntu Look: A Beginner’s Guide to GNOME Customization
 #+description: Detailed instructions for modifying system appearance and interface elements in Ubuntu 20.04, including setting themes, icon packs, font adjustments, terminal configurations, and related customization parameters.
 #+slug:        customizing-ubuntu
 #+filetags:    :ubuntu:customization:gnome:

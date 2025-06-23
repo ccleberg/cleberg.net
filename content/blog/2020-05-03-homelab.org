@@ -1,5 +1,5 @@
 #+date:        <2020-05-03 Sun 00:00:00>
-#+title:       Homelab Construction: Hardware and Network Configuration Guide
+#+title:       My Homelab Setup: Gear, Network, and Lessons Learned
 #+description: Comprehensive instructions on assembling and configuring a homelab environment, emphasizing hardware selection, software deployment, and network setup for operational efficiency.
 #+slug:        homelab
 #+filetags:    :homelab:hardware:network:

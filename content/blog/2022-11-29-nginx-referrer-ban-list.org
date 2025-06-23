@@ -1,5 +1,5 @@
 #+date:        <2022-11-29 Tue 00:00:00>
-#+title:       Configuration of Nginx to Block Unwanted HTTP Referrers
+#+title:       How to Block Unwanted HTTP Referrers in Nginx Using a Ban List
 #+description: Technical guide to implementing a referrer ban list in Nginx configurations to prevent access from undesired domains and improve web server security.
 #+slug:        nginx-referrer-ban-list
 #+filetags:    :nginx:security:webserver:

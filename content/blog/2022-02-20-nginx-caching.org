@@ -1,5 +1,5 @@
 #+date:        <2022-02-20 Sun 00:00:00>
-#+title:       Optimization Techniques for Static Content Caching in Nginx Web Server
+#+title:       How to Configure Nginx for Efficient Static Content Caching
 #+description: Detailed methods for configuring Nginx to cache static resources such as CSS, JavaScript, and images to improve website loading times and resource efficiency.
 #+slug:        nginx-caching
 #+filetags:    :nginx:cache:performance:

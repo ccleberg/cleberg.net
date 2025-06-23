@@ -1,5 +1,5 @@
 #+date:        <2023-06-30 Fri 00:00:00>
-#+title:       Deployment Procedure for Voyager Lemmy Web Client Using Docker and Nginx
+#+title:       Self-Hosting Guide: Voyager for Lemmy
 #+description: Instructions for building, running, and reverse proxying Voyager, a Lemmy web client, on a server environment utilizing Docker and Nginx components.
 #+slug:        self-hosting-voyager
 #+filetags:    :docker:lemmy:voyager:

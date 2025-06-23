@@ -1,5 +1,5 @@
 #+date:        <2022-10-22 Sat 00:00:00>
-#+title:       Alpine Linux: Installing and Configuring a Minimalist Server Operating System
+#+title:       Alpine Linux Essentials: Installing and Setting Up a Secure Minimal Server
 #+description: Detailed procedure for deploying Alpine Linux to achieve a secure, lightweight server environment optimized for web hosting and containerization.
 #+slug:        alpine-linux
 #+filetags:    :alpine:linux:server:
@@ -69,7 +69,7 @@ system after boot.
 - Mirror (From where to download packages. Choose the organization you
   trust giving your usage patterns to.)
 - SSH (Secure SHell remote access server. "Openssh" is part of the
-  default install image. Use "none" to disable remote login, e.g. on
+  default install image. Use "none" to disable remote login, e.g. on
   laptops.)
 - NTP (Network Time Protocol client used for keeping the system clock in
   sync with a time-server. Package "chrony" is part of the default

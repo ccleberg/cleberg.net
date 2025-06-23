@@ -1,5 +1,5 @@
 #+date:        <2024-03-13 Wed 00:00:00>
-#+title:       Configuration Guide for Doom Emacs and Org-Mode to Optimize Workflow
+#+title:       Doom Emacs & Org-Mode Setup
 #+description: Technical manual covering installation, configuration files, and usage procedures for Doom Emacs and Org-Mode targeting note management and task organization.
 #+slug:        doom-emacs
 #+filetags:    :doom:emacs:workflow:
@@ -25,7 +25,7 @@ my personal note taking, wiki, and even this blog. As a result, I have been
 stumbling further into the world of Emacs and found myself at a point where I
 now prefer to do most of my basic editing within Emacs.
 
-I'll leave the markdown vs. org-mode debate for another post, but I love
+I'll leave the markdown vs. org-mode debate for another post, but I love
 org-mode's extensibility and interactive nature within Emacs, but it becomes
 very unwieldy in any other client implementation of org-mode - especially on
 iOS. On the flip side, markdown is limited in functionality and fractured into

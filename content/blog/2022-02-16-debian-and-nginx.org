@@ -1,5 +1,5 @@
 #+date:        <2022-02-16 Wed 00:00:00>
-#+title:       Web Server Migration Procedure to Debian with Nginx and Agate Components
+#+title:       Switching to Debian and Nginx: A Modern Web and Gemini Server Migration Walkthrough
 #+description: Step-by-step protocol for transitioning web server infrastructure to Debian operating system, including installation, configuration, and security hardening of Nginx and Agate services.
 #+slug:        debian-and-nginx
 #+filetags:    :debian:nginx:webserver:
@@ -132,14 +132,14 @@ server {
 sudo systemctl restart nginx
 #+end_src
 
-** Nginx vs. Apache
+** Nginx vs. Apache
 
 As I stated at the beginning, my historical hesitation with trying Nginx
 was that the differences in configuration formats scared me away from
 leaving Apache. However, I prefer Nginx to Apache for a few reasons:
 
-1. Nginx uses only one config file (=your_domain=) vs. Apache's two-file
-   approach for HTTP vs. HTTPS (=your_domain.conf= and
+1. Nginx uses only one config file (=your_domain=) vs. Apache's two-file
+   approach for HTTP vs. HTTPS (=your_domain.conf= and
    =your_domain-le-ssl.conf=).
 2. Symlinking new configurations files and reloading Nginx are way
    easier than Apache's process of having to enable headers with
