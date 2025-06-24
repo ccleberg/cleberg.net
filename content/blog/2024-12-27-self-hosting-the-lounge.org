@@ -2,7 +2,7 @@
 #+title:       Self-Hosting Guide: The Lounge (IRC)
 #+description: Step-by-step instructions for installing and configuring The Lounge IRC web client on Linux systems utilizing Docker Compose to provide persistent and secure chat access.
 #+slug:        self-hosting-the-lounge
-#+filetags:    :docker:irc:web-client:
+#+filetags:    :docker:irc:self-hosting:
 
 * The Lounge
 

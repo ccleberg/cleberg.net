@@ -2,7 +2,7 @@
 #+title:       Self-Hosting Guide: Voyager for Lemmy
 #+description: Instructions for building, running, and reverse proxying Voyager, a Lemmy web client, on a server environment utilizing Docker and Nginx components.
 #+slug:        self-hosting-voyager
-#+filetags:    :docker:lemmy:voyager:
+#+filetags:    :docker:lemmy:self-hosting:
 
 * Installation Guide
 
