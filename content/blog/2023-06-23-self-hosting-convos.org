@@ -2,7 +2,7 @@
 #+title:       Self-Hosting Guide: Convos
 #+description: Stepwise instructions for installation, Docker Compose configuration, Nginx reverse proxy setup, and IRC nickname registration for Convos web client hosting.
 #+slug:        self-hosting-convos
-#+filetags:    :docker:nginx:convos:
+#+filetags:    :docker:nginx:self-hosting:
 
 * Convos
 

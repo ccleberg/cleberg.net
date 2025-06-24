@@ -2,7 +2,7 @@
 #+title:       Self-Hosting Guide: Transmission BitTorrent Client
 #+description: Comprehensive setup instructions for installing and configuring the Transmission BitTorrent client on a Linux server, including securing remote access through Nginx reverse proxy.
 #+slug:        self-hosting-transmission
-#+filetags:    :self-hosting:transmission:tutorial:
+#+filetags:    :self-hosting:transmission:self-hosting:
 
 #+begin_quote
 If you're torrenting anything sensitive, I *highly* recommend you use a VPN.
