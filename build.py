@@ -176,7 +176,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
             except ValueError:
                 # Skip files with invalid date format
                 continue
-            
+
             posts.append(
                 {
                     "title": title,
