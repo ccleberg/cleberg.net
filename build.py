@@ -115,6 +115,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
         "date": re.compile(r"^#\+date:\s*<(\d{4}-\d{2}-\d{2})"),
         "slug": re.compile(r"^#\+slug:\s*(.+)$", re.IGNORECASE),
         "filetags": re.compile(r"^#\+filetags:\s*(.+)$", re.IGNORECASE),
+        "draft": re.compile(r"^#\+draft:\s*(.+)$", re.IGNORECASE),
     }
 
     for org_path in Path(content_dir).glob("*.org"):
@@ -122,6 +123,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
         date_str = None
         slug = None
         tags = []
+        is_draft = False
 
         with org_path.open("r", encoding="utf-8") as f:
             for line in f:
@@ -153,9 +155,20 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
                         tags = [t for t in raw.split(":") if t]
                         continue
 
+                m = header_patterns["draft"].match(line)
+                if m:
+                    draft_value = m.group(1).strip().lower()
+                    if draft_value != "nil":
+                        is_draft = True
+                        break
+                    continue
+
                 # Stop scanning once we have all required fields
                 if title and date_str and slug and tags:
                     break
+
+        if is_draft:
+            continue
 
         if title and date_str and slug:
             try:
@@ -163,7 +176,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
             except ValueError:
                 # Skip files with invalid date format
                 continue
-
+            
             posts.append(
                 {
                     "title": title,
