@@ -17,6 +17,7 @@
     {% endblock %}
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
 	<nav class="site-nav" aria-label="site-nav" role="navigation">
 		<ul>
 			<li><a href="/">Home</a></li>
@@ -25,7 +26,7 @@
 			<li><a href="/wiki/">Wiki</a></li>
 		</ul>
 	</nav>
-    <main>{% block main %}{% endblock %}</main>
+    <main id="main">{% block main %}{% endblock %}</main>
 	<footer>
         <p>Donate: <a href="monero:82frXv83WVsGbTwuqSyb27cvy67JpD7Ktaij12Avy6ogfZatsgPG67YgsmEmvTFLKd1Rk7MUwx8D31ieGwLdD4wa4KdtxDB">XMR</a>
         | <a href="ethereum:0x11255046Ccd637f1ACc78ae7c8849870f85638B3">ETH</a>
