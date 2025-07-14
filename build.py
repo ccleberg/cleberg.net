@@ -29,6 +29,7 @@ import re
 import shutil
 import subprocess
 import sys
+from urllib.parse import quote
 from datetime import datetime
 from pathlib import Path
 
@@ -267,6 +268,45 @@ def run_emacs_publish(dev_mode=True):
         sys.exit(1)
 
 
+def generate_sitemap(public_dir="public", base_url="https://cleberg.net"):
+    """
+    Generates a sitemap.xml based on contents of the public directory.
+    Only includes .html files (except 404.html).
+    """
+    sitemap_entries = []
+    for root, dirs, files in os.walk(public_dir):
+        for filename in files:
+            if filename.endswith(".html") and filename != "404.html":
+                full_path = os.path.join(root, filename)
+                rel_path = os.path.relpath(full_path, public_dir)
+                url_path = "/" + quote(rel_path.replace(os.sep, "/"))
+                # Remove index.html for cleaner URLs
+                if url_path.endswith('/index.html'):
+                    url_path = url_path[:-10] or '/'
+                elif url_path == '/index.html':
+                    url_path = '/'
+                loc = f"{base_url}{url_path}"
+
+                # Last modified time
+                lastmod = datetime.utcfromtimestamp(os.path.getmtime(full_path)).strftime("%Y-%m-%d")
+
+                sitemap_entries.append(f"""  <url>
+    <loc>{loc}</loc>
+    <lastmod>{lastmod}</lastmod>
+  </url>""")
+
+    sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{os.linesep.join(sitemap_entries)}
+</urlset>
+"""
+    # Write to public/sitemap.xml
+    sitemap_path = os.path.join(public_dir, "sitemap.xml")
+    with open(sitemap_path, "w", encoding="utf-8") as f:
+        f.write(sitemap_xml)
+    print(f"Sitemap generated at {sitemap_path} with {len(sitemap_entries)} entries.")
+
+
 def deploy_to_server(build_dir, server):
     remote_path = f"{server}:/var/www/cleberg.net/"
     print(f"Deploying .build/ → {remote_path}")
@@ -329,6 +369,9 @@ def main():
         # Update index page with latest posts
         update_index_html(html_snippet)
 
+        # Generate sitemap
+        generate_sitemap()
+
         # Deploy changes
         deploy_to_server(build_dir, homelab_server)
 
@@ -346,6 +389,9 @@ def main():
 
         # Update index page with latest posts
         update_index_html(html_snippet)
+
+        # Generate sitemap
+        generate_sitemap()
 
         # Launch development web server
         start_dev_server(build_dir)
