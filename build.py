@@ -281,14 +281,16 @@ def generate_sitemap(public_dir="public", base_url="https://cleberg.net"):
                 rel_path = os.path.relpath(full_path, public_dir)
                 url_path = "/" + quote(rel_path.replace(os.sep, "/"))
                 # Remove index.html for cleaner URLs
-                if url_path.endswith('/index.html'):
-                    url_path = url_path[:-10] or '/'
-                elif url_path == '/index.html':
-                    url_path = '/'
+                if url_path.endswith("/index.html"):
+                    url_path = url_path[:-10] or "/"
+                elif url_path == "/index.html":
+                    url_path = "/"
                 loc = f"{base_url}{url_path}"
 
                 # Last modified time
-                lastmod = datetime.utcfromtimestamp(os.path.getmtime(full_path)).strftime("%Y-%m-%d")
+                lastmod = datetime.utcfromtimestamp(
+                    os.path.getmtime(full_path)
+                ).strftime("%Y-%m-%d")
 
                 sitemap_entries.append(f"""  <url>
     <loc>{loc}</loc>
@@ -304,7 +306,9 @@ def generate_sitemap(public_dir="public", base_url="https://cleberg.net"):
     sitemap_path = os.path.join(public_dir, "sitemap.xml")
     with open(sitemap_path, "w", encoding="utf-8") as f:
         f.write(sitemap_xml)
-    print(f"Sitemap generated at {sitemap_path} with {len(sitemap_entries)} entries.")
+    print(
+        f"Sitemap generated at {sitemap_path} with {len(sitemap_entries)} entries."
+    )
 
 
 def deploy_to_server(build_dir, server):
