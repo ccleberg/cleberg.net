@@ -1,5 +1,5 @@
 ;; Explicitly load packages for Doom Emacs
-(add-to-list 'load-path "~/.config/emacs/.local/straight/repos/emacs-htmlize")
+(add-to-list 'load-path "~/.config/emacs/.local/straight/repos/htmlize")
 (add-to-list 'load-path "~/.config/emacs/.local/straight/repos/weblorg")
 (add-to-list 'load-path "~/.config/emacs/.local/straight/repos/templatel")
 

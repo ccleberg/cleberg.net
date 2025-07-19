@@ -262,23 +262,26 @@ def run_emacs_publish(dev_mode=True):
             text=True,
         )
 
+    # Fix to remove annoying cleberg-net.html file
+    os.remove(".build/cleberg-net.html")
+
     if result.returncode != 0:
         print("Error running publish.el:")
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
 
 
-def generate_sitemap(public_dir="public", base_url="https://cleberg.net"):
+def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):
     """
-    Generates a sitemap.xml based on contents of the public directory.
+    Generates a sitemap.xml based on contents of the .build directory.
     Only includes .html files (except 404.html).
     """
     sitemap_entries = []
-    for root, dirs, files in os.walk(public_dir):
+    for root, dirs, files in os.walk(build_dir):
         for filename in files:
             if filename.endswith(".html") and filename != "404.html":
                 full_path = os.path.join(root, filename)
-                rel_path = os.path.relpath(full_path, public_dir)
+                rel_path = os.path.relpath(full_path, build_dir)
                 url_path = "/" + quote(rel_path.replace(os.sep, "/"))
                 # Remove index.html for cleaner URLs
                 if url_path.endswith("/index.html"):
@@ -302,8 +305,9 @@ def generate_sitemap(public_dir="public", base_url="https://cleberg.net"):
 {os.linesep.join(sitemap_entries)}
 </urlset>
 """
-    # Write to public/sitemap.xml
-    sitemap_path = os.path.join(public_dir, "sitemap.xml")
+    # Write to .build/sitemap.xml
+    print(build_dir)
+    sitemap_path = os.path.join(build_dir, "sitemap.xml")
     with open(sitemap_path, "w", encoding="utf-8") as f:
         f.write(sitemap_xml)
     print(
