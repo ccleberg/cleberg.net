@@ -1,45 +1,33 @@
 #+title: Now
 #+slug: index
-#+date: <2025-04-21 Mon 13:10:00>
+#+date: <2025-08-19 Tue 20:09:00>
 
 This is a [[https://nownownow.com/about][/now]] page.
 
 * Work
 
-- Recently appointed as the DevOps SMP and the GitLab SMP (Subject Matter
-  Practitioner) at [[https://kpmg.com/us/en.html][KPMG]]. Add that to my list of already being the Automation
-  Champion and one of the AI Champions for the North Central business unit.
-- Getting ready for my FY25 engagements at work, with a few new clients this
-  year.
-- Finished a PCAOB inspection on one of the new clients I join mid-year in 2024.
+- I am now supporting AWS, DevOps, GitHub, & GitLab as an SME for [[https://kpmg.com/us/en.html][KPMG]].
+- Getting through a very busy SOC/SOX portfolio of clients this year. Blogging and other hobbies have taken a hit as a result.
 
 * Media
 
+As I noted above, I'm working a ton right now and my media consumption has dropped down to "can be played in the background" shows and PvP games that don't require much though.
+
 - Playing some games:
-  - Black Ops 6
-  - Dynasty Warriors: Origins
-  - Nier: Automata
+  - Halo Infinite
   - Rocket League
-  - Stellar Blade
 - Watching some shows:
-  - A.P. Bio
-  - Archer
-  - Cheers
-  - Initial D
-  - Wildboyz
+  - Bob's Burgers
+  - Northern Exposure
 
 * Tech
 
-- Achieved my GitLab Certified Git Associate certification.
-- Achieved my GitHub Foundations certification.
+- Moved my source code back to [[https://sourcehut.org][Sourcehut]] and made the GitHub versions mirrors of Sourcehut.
 - Deleted a bunch of accounts to reduce online footprint. Looking for more ways
   to reduce.
 
 * Hobbies
 
-- Still looking for ideas in the tech area as I've been fairly tapped out this
-  last year. Feels like most of my innovation happens at work, which I can't
-  share online.
-- Weather has been warming up, so disc golf frequency is increasing.
+- Built a sandbox with seats that collapse into a lid. I also have enough leftover lumber to build a cubby-type bookshelf.
 
 View the historical [[https://git.sr.ht/~cxc/cleberg.net/log/main/item/content/now/index.org][log of changes]] for this page.
