@@ -1,0 +1,27 @@
+#+title: About
+#+slug: index
+
+Hey, I'm */~cmc/*.
+
+I'm a technology audit manager, working on financial statement audits (SOX/MAR),
+SOC 1-3 reports, and other attestations for KPMG.
+
+Read up on my [[https://cv.cleberg.net][CV]] or [[https://cleberg.net/salary/][salary]] for more information.
+
+In my spare time, I like to:
+
+- Run linux servers
+- Enhance my home lab network
+- Write personal programs, mostly in Python
+- Research various topics (history, geography, science, etc.)
+- Write blog posts and general documentation
+- Converse with others on IRC and Matrix
+- Play video games and watch television
+
+If you want to chat, you can find me in the following spaces:
+
+- [[mailto:hello@cleberg.net][hello@cleberg.net]] ([[https://cleberg.net/gpg.txt][GPG]])
+- [[https://lemmy.cleberg.net/u/cmc][@cmc]] on Lemmy
+- [[https://matrix.to/#/@cmc.:matrix.org][@cmc.:matrix.org]] on Matrix
+- @cmc.01 on [[https://signal.org/][Signal]]
+- [[https://sr.ht/~cxc][~cxc]] on Sourcehut

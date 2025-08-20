@@ -2,12 +2,13 @@
 main %}
 <h1>Blog</h1>
 <p>
-	Use <code>⌘ + f</code> (<code>Ctrl + f</code>) to search blog post titles for
+	Use <code>⌘ + f</code> (<code>Ctrl + f</code>) to search for
 	keywords.
 </p>
 <p>
 	You can also add the <a href="/feed.xml">RSS Feed</a> to your feed reader.
 </p>
+<br>
 {% for post in posts %}
 <div class="post">
 	<time datetime='{{ post.date | strftime("%Y-%m-%d") }}'

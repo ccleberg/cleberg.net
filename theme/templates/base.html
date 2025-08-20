@@ -21,6 +21,7 @@
 	<nav class="site-nav" aria-label="site-nav" role="navigation">
 		<ul>
 			<li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
 			<li><a href="/blog/">Blog</a></li>
 			<li><a href="/services/">Services</a></li>
 			<li><a href="/wiki/">Wiki</a></li>
@@ -28,16 +29,16 @@
 	</nav>
     <main id="main">{% block main %}{% endblock %}</main>
 	<footer>
-        <p>Donate: <a href="ethereum:0x7850b2Fe6be94f90F54A099C74126430C9CeB19e">ETH</a>
+        <p><a href="ethereum:0x7850b2Fe6be94f90F54A099C74126430C9CeB19e">ETH</a>
         | <a href="bitcoin:bc1qy74tcth6zwg88059ae9z3ghzk797fkav7zdx4k">BTC</a>
         | <a href="xrp:rJz78ahN1KmushjYjEnFd8CB5vCcreJ1EE">XRP</a>
         </p>
-        <p>Last build: &lt;<time datetime="{{ now() | strftime("%Y-%m-%d") }}">{{ now() | strftime("%Y-%m-%d %a %H:%M:%S") }}</time>&gt;</p>
+        <p>&lt;<time datetime="{{ now() | strftime("%Y-%m-%d") }}">{{ now() | strftime("%Y-%m-%d %a %H:%M:%S") }}</time>&gt;</p>
 		<p>
             <a href="https://stats.uptimerobot.com/OwOWs7HU0z">Status</a> &middot;
 			<a href="https://git.sr.ht/~cxc/cleberg.net" target="_blank"
-			rel="noopener">Source Code</a> &middot;
-			<a href="/feed.xml">RSS Feed</a> &middot;
+			rel="noopener">Source</a> &middot;
+			<a href="/feed.xml">RSS</a> &middot;
             <a href="/.well-known/security.txt">security.txt</a>
 		</p>
         <p>
