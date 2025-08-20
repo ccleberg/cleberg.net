@@ -93,6 +93,15 @@
  :output ".build/now/{{ slug }}.html"
  :url "/now/{{ slug }}.html")
 
+;; About page route
+(weblorg-route
+ :name "about"
+ :input-pattern "content/about/*.org"
+ :template "page.html"
+ :output ".build/about/{{ slug }}.html"
+ :url "/about/{{ slug }}.html")
+
+
 ;; RSS feed route
 (weblorg-route
  :name "rss"
