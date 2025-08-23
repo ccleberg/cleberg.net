@@ -9,7 +9,7 @@
 
 * DNS
 
-- [[njal.la][Njalla]]: I am using their name servers and DNS for my domain traffic.
+- [[https://njal.la][Njalla]]: I am using their name servers and DNS for my domain traffic.
 - [[https://mullvad.net][Mullvad]]: Since I use Mullvad's VPN on most of my devices, I am using their DNS
   with occasional content blockers enabled.
 - [[https://nextdns.io][NextDNS]]: Lastly, I enforce NextDNS's DNS at the router level on my home
