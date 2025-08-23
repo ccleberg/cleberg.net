@@ -291,7 +291,7 @@ def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):
                 loc = f"{base_url}{url_path}"
 
                 # Last modified time
-                lastmod = datetime.utcfromtimestamp(
+                lastmod = datetime.fromtimestamp(
                     os.path.getmtime(full_path)
                 ).strftime("%Y-%m-%d")
 
@@ -306,7 +306,6 @@ def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):
 </urlset>
 """
     # Write to .build/sitemap.xml
-    print(build_dir)
     sitemap_path = os.path.join(build_dir, "sitemap.xml")
     with open(sitemap_path, "w", encoding="utf-8") as f:
         f.write(sitemap_xml)
