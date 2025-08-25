@@ -17,7 +17,7 @@ The main site components are:
 - A configuration file (`publish.el`) that specifies publishing parameters like
   base URL, output directories, and export options.
 - Assets such as images and stylesheets, located in designated subdirectories.
-- Utility scripts (e.g., `build.sh`) to facilitate building and deployment.
+- Utility scripts (e.g., `build.py`) to facilitate building and deployment.
 
 ## Dependencies
 
@@ -90,16 +90,16 @@ Generated site files reside in the designated output directory, ready for
 deployment. Deployment can be performed by standard file transfer protocols such
 as `scp` or SFTP.
 
-The `./build.sh` script automates the build process. It can be executed with or
+The `./build.py` script automates the build process. It can be executed with or
 without the `ENV` variable to perform production or development builds
 respectively.
 
 ```shell
 # Production build script:
-ENV=prod ./build.sh
-  
+ENV=prod uv run build.py
+
 # Development build script:
-./build.sh
+uv run build.py
 ```
 
 ## Creating New Blog Posts
