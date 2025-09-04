@@ -174,6 +174,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
         if title and date_str and slug:
             try:
                 date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+                date_full = date_obj.strftime("%B %d, %Y")
             except ValueError:
                 # Skip files with invalid date format
                 continue
@@ -183,6 +184,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
                     "title": title,
                     "date_str": date_str,
                     "date_obj": date_obj,
+                    "date_full": date_full,
                     "slug": slug,
                     "tags": tags,
                 }
@@ -198,9 +200,6 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
     lines = []
     for post in recent:
         lines.append('\t<div class="post">')
-        lines.append(
-            f'\t\t<time datetime="{post["date_str"]}">{post["date_str"]}</time>'
-        )
         lines.append('\t\t<div class="post-content">')
         lines.append(
             f'\t\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>'
@@ -211,6 +210,9 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
                 lines.append(f'\t\t\t\t<span class="tag">{tag}</span>')
             lines.append("\t\t\t</div>")
         lines.append("\t\t</div>")
+        lines.append(
+            f'\t\t<time datetime="{post["date_str"]}">{post["date_full"]}</time>'
+        )
         lines.append("\t</div>")
 
     return "\n".join(lines)

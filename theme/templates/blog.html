@@ -11,9 +11,6 @@ main %}
 <br>
 {% for post in posts %}
 <div class="post">
-	<time datetime='{{ post.date | strftime("%Y-%m-%d") }}'
-		>{{ post.date|strftime("%Y-%m-%d") }}</time
-	>
 	<div class="post-content">
 		<a href='{{ url_for("blog", slug=post.slug) }}'>{{ post.title }}</a>
 		{% if post.filetags %}
@@ -24,5 +21,8 @@ main %}
 			</div>
 		{% endif %}
 	</div>
+	<time datetime='{{ post.date | strftime("%Y-%m-%d") }}'
+		>{{ post.date|strftime("%B %d, %Y") }}</time
+	>
 </div>
 {% endfor %} {% endblock %}

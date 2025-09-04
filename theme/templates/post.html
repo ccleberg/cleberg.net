@@ -12,7 +12,7 @@
 		<h1>{{ post.title }}</h1>
 		{% if post.date is defined %}
 		<time datetime='{{ post.date|strftime("%Y-%m-%d") }}'
-			>&lt;{{ post.date|strftime("%Y-%m-%d %a %H:%M:%S") }}&gt;</time
+			>{{ post.date|strftime("%A, %B %d, %Y %H:%M:%S") }}</time
 		>
 		{% endif %} {% if post.filetags %}
 		<p class="post-tags">
