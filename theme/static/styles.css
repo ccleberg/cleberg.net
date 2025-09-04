@@ -20,14 +20,8 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}main{display:block}h1{font-s
 body {
     background-color: var(--bg);
     color: var(--fg);
-    font-family:
-        Menlo,
-        Consolas,
-        Monaco,
-        Liberation Mono,
-        Lucida Console,
-        monospace;
-    font-size: 1rem;
+    font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-size: 1.25rem;
     line-height: 1.5;
     max-width: 50em;
     margin: 0 auto;
@@ -55,7 +49,7 @@ footer p {
 }
 
 ul {
-    list-style-type: "- ";
+    list-style-type: "-    ";
 }
 
 .site-nav ul {
@@ -77,20 +71,20 @@ h4 {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 0.75rem;
 }
 
 h2 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 1.25rem;
     margin-top: 1rem;
     margin-bottom: 0.25rem;
 }
@@ -123,13 +117,6 @@ table {
     border-collapse: collapse;
     color: var(--fg);
     border-color: var(--bg-bright);
-    font-family:
-        Menlo,
-        Consolas,
-        Monaco,
-        Liberation Mono,
-        Lucida Console,
-        monospace;
     font-size: inherit;
     width: 100%;
 }
@@ -144,7 +131,6 @@ td {
 
 pre,
 pre>code,
-time,
 code {
     font-family:
         Menlo,
@@ -165,7 +151,6 @@ pre {
 
 :not(pre)>code {
     color: var(--code);
-    font-family: inherit;
 }
 
 aside {
@@ -187,11 +172,14 @@ blockquote p {
 .post,
 .wiki-post {
     display: flex;
+    justify-content: space-between;
 }
 
 .post time {
     flex-shrink: 0;
+    font-style: italic;
     margin-right: 0.5rem;
+    opacity: 0.8;
 }
 
 .wiki-post {
@@ -218,6 +206,10 @@ blockquote p {
 
 .post-metadata p {
     margin: 0;
+}
+
+.post-metadata time {
+    font-style: italic;
 }
 
 details {
@@ -273,15 +265,14 @@ span.tag::before {
 }
 
 .post-tags {
-    font-size: 0.85rem;
-    color: #999;
+    font-size: 1rem;
     margin-top: 0.1rem;
 }
 
 .tag {
     margin-right: 0.3rem;
     font-style: normal;
-    opacity: 0.8;
+    opacity: 0.5;
 }
 
 .tag::before {
