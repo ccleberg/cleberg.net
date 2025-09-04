@@ -3,12 +3,12 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}main{display:block}h1{font-s
 
 /* CUSTOM CSS */
 :root {
-    --bg: #fff;
-    --bg-bright: #eee;
-    --fg: #111;
-    --link: #00f;
-    --code: #f00;
-    --border: #ccc;
+    --bg: #EDEDE7;
+    --bg-bright: #E8D3BE;
+    --fg: #201E1D;
+    --link: #810208;
+    --code: #810208;
+    --border: #E8D3BE;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -30,7 +30,7 @@ body {
 
 @media only screen and (min-width: 768px) {
     body {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -307,12 +307,12 @@ span.tag::before {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #121212;
-        --bg-bright: #1e1e1e;
-        --fg: #e0e0e0;
-        --link: #8ab4f8;
-        --code: #f28b82;
-        --border: #333;
+        --bg: #201E1D;
+        --bg-bright: #2F2F2D;
+        --fg: #EDEDE7;
+        --link: #D9C2A6;
+        --code: #D9C2A6;
+        --border: #2F2F2D;
     }
 }
 
