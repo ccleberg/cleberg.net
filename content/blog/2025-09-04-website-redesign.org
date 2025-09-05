@@ -1,0 +1,116 @@
+#+date: <2025-09-05 Fri 10:21:00>
+#+title: Crafting a More Human-Centric Design for My Website
+#+description: Read this post to understand my latest website redesign and the context for the refresh.
+#+filetags: :design:
+#+slug: human-website-design
+
+#+begin_quote
+/Please note that this redesign is a work-in-progress and is not complete. The content below describes the beginning of this journey and where I think it may take me next./
+#+end_quote
+
+* Inspiration
+
+I've written numerous times on this blog about minimaliasm, so it shouldn't surprise any readers here that I've redesigned my website again for even more minimalism. However, it's a bit different this time as I've historically designed my website to be very computer design driven (think monospace fonts and sharp contrasting colors), rather than focusing on designing a website for human readers.
+
+I felt inspired recently to minimize my website yet again, but I couldn't figure out why I wanted to do so for a while. Finally, I think I figured it out. I have been inspired lately by concepts, such as [[https://en.wikipedia.org/wiki/Wabi-sabi][wabi-sabi]], [[https://en.wikipedia.org/wiki/Shikata_ga_nai][sho ga nai]], [[https://en.wikipedia.org/wiki/Brutalist_architecture][brutalism]], [[https://en.wikipedia.org/wiki/Minimalism][minimalism]], and related concepts.
+
+This piece specifically inspired me to cut out elements on my web page that did not add value. In other places, I simply redesigned how that information was presented (e.g., creating an "About" page rather than putting that information on my home screen).
+
+However, that was not the only motivation for redesigning my website. I have also recently found an interest in crafting a more human-centric design for my website.
+
+In the past, it has largely been a monospace-only, sharp contrast, bold colored blog. As I grown older, I find myself more interested in naturally-occurring color palettes and focusing on legible content.
+
+This blog post will explore the decisions I made and why I chose those decisisons.
+
+* Function
+
+The first step in this journey related to the functionality of the site itself. While my site has not used JavaScript for many years, I have focused on the HTML itself.
+
+A common question I challenge myself with is: "Does this element serve a function? Is it useful? Does it provide more value than distraction?"
+
+With the most recent redesign, I decided to:
+
+- Keep the navigation bar to five elements.
+- Move the "contact" details from the home page to a dedicated =/about/= page.
+- Minimize the footer to remove the build timestamp, donation links, security.txt links, and webring links.
+
+This left a focus on navigation, my blog posts, and a short list of links to relevant pages on my website.
+
+* Colors
+
+Previously, I used a very direct color palette for both light and dark modes, as seen below in the CSS snippet. This used sharp colors and relied heavily on "pure" colors without tints or shades.
+
+This allowed for plain blank and white contrasting elements, with basic red and blue accent colors for inline code and links, respectively.
+
+#+begin_src css
+:root {
+    --bg: #fff;
+    --bg-bright: #eee;
+    --fg: #111;
+    --link: #00f;
+    --code: #f00;
+    --border: #ccc;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #121212;
+        --bg-bright: #1e1e1e;
+        --fg: #e0e0e0;
+        --link: #8ab4f8;
+        --code: #f28b82;
+        --border: #333;
+    }
+}
+#+end_src
+
+After the update, the focus of the color scheme is focused on a more natual, paper-like effect. The light mode focuses on a yellow/orange-tinted paper-like substance, with a dark red accent and straightfoward design. Likewise, the dark mode scheme uses a charcoal-like color scheme with very simliar accent colors.
+
+#+begin_src css
+:root {
+    --bg: #EDEDE7;
+    --bg-bright: #E8D3BE;
+    --fg: #201E1D;
+    --link: #810208;
+    --code: #810208;
+    --border: #E8D3BE;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #201E1D;
+        --bg-bright: #2F2F2D;
+        --fg: #EDEDE7;
+        --link: #D9C2A6;
+        --code: #D9C2A6;
+        --border: #2F2F2D;
+    }
+}
+#+end_src
+
+I am still working on the color scheme and don't believe I'm done modifying this yet. Expect more changes, as always.
+
+* Space
+
+While I haven't updated the margins and padding much /yet/, I did make a few changes that affected the spacing of the site. The intent of this redesign is to keep the focus of the reader's eyes on the intended content, as well as creating a comfortable and intentional page layout.
+
+That being said, let's dive into the changes I've made so far:
+
+- *Font style*: I've updated the font style from a monospace font stack to a serif font stack. This created a more natual flow across the screen and less rigid constraints on the area of the fonts.
+- *Font size*: Related to font style, I naturally had to update the font size as well. This allows for natural reading breaks for the eyes, spacing between lines, emphasized and larger headers for visual cues, as well as fewer words being displayed on screen at once.
+- *Date format*: I have moved the visible dates on my pages from the ISO standard (=YYYY-MM-DD=) to a legible, human date format. The new dates describe the months in full words, as well as the day of the week on post pages, so that you may read it as you would say it out loud. The underlying date tagging within the =<date>= element itself still follows the ISO standard, as that's meant for computers to read.
+
+With these changes, I'm pleasantly surprised at the quality improvement when reading the pages on the site.
+
+* Looking Forward
+
+As I said at the beginning of the post, I'm not done yet. However, I wanted to stop and reflect on the changes so far.
+
+I will continue to think about changes, specifically with the following already in mind:
+
+- *Color palettes*: The current scheme is good but not great. I'd love to find a color palette that feels like reading natural paper.
+- *Emphasized text*: Are links legible enough? Is there enought contrast between quotes, inline code, links, etc.?
+- *Spacing*: Font sizes, padding, and potentially reducing content.
+- *Layout*: Is there a better structure to this document that would allow for more comfortable reading?
+
+With this phase done, I am content and am joyful at the thought of continuing to refine this website. If not for any readers who may or may not even exist, at least for myself.
