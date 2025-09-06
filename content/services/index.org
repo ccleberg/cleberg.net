@@ -15,7 +15,7 @@
 | [[https://rd.cleberg.net/][Rural Dictionary]]  | Urban Dictionary |
 | [[https://art.cleberg.net/][SkunkyArt]]         | DeviantArt       |
 | [[https://small.cleberg.net][Small]]             | Medium           |
-| [[https://yt.cleberg.net/][Invidious]]         | YouTube          |
+| [[https://piped.cleberg.net][Piped]]             | YouTube          |
 
 * Other Services
 
