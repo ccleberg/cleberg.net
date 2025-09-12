@@ -30,4 +30,4 @@ As I noted above, I'm working a ton right now and my media consumption has dropp
 
 - Built a sandbox with seats that collapse into a lid. I also have enough leftover lumber to build a cubby-type bookshelf.
 
-View the historical [[https://git.sr.ht/~cxc/cleberg.net/log/main/item/content/now/index.org][log of changes]] for this page.
+View the historical [[https://git.cleberg.net/cleberg.net.git/log/content/now/index.org][log of changes]] for this page.
