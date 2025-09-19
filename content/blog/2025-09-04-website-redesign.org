@@ -10,6 +10,10 @@ content below describes the beginning of this journey and where I think it may
 take me next./
 #+end_quote
 
+| Old Theme                                                             | New  Theme                                                           |
+|-----------------------------------------------------------------------+----------------------------------------------------------------------|
+| https://img.cleberg.net/blog/20250905-human-website-design/before.png | https://img.cleberg.net/blog/20250905-human-website-design/after.png |
+
 * Inspiration
 
 I've written numerous times on this blog about minimaliasm, so it shouldn't
