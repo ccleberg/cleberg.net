@@ -104,7 +104,6 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
       #+title:    Post Title
       #+date:     <YYYY-MM-DD Day HH:MM:SS>
       #+slug:     post-slug
-      #+filetags: :tag1:tag2:tag3:
 
     Returns a string containing the section with the three most recent posts,
     formatted like the snippet in the prompt.
@@ -115,7 +114,6 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
         "title": re.compile(r"^#\+title:\s*(.+)$", re.IGNORECASE),
         "date": re.compile(r"^#\+date:\s*<(\d{4}-\d{2}-\d{2})"),
         "slug": re.compile(r"^#\+slug:\s*(.+)$", re.IGNORECASE),
-        "filetags": re.compile(r"^#\+filetags:\s*(.+)$", re.IGNORECASE),
         "draft": re.compile(r"^#\+draft:\s*(.+)$", re.IGNORECASE),
     }
 
@@ -123,7 +121,6 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
         title = None
         date_str = None
         slug = None
-        tags = []
         is_draft = False
 
         with org_path.open("r", encoding="utf-8") as f:
@@ -147,15 +144,6 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
                         slug = m.group(1).strip()
                         continue
 
-                if not tags:
-                    m = header_patterns["filetags"].match(line)
-                    if m:
-                        # filetags are in the form ":tag1:tag2:tag3:"
-                        raw = m.group(1).strip()
-                        # split on ":" and filter out empty strings
-                        tags = [t for t in raw.split(":") if t]
-                        continue
-
                 m = header_patterns["draft"].match(line)
                 if m:
                     draft_value = m.group(1).strip().lower()
@@ -165,7 +153,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
                     continue
 
                 # Stop scanning once we have all required fields
-                if title and date_str and slug and tags:
+                if title and date_str and slug:
                     break
 
         if is_draft:
@@ -186,7 +174,6 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
                     "date_obj": date_obj,
                     "date_full": date_full,
                     "slug": slug,
-                    "tags": tags,
                 }
             )
 
@@ -199,21 +186,15 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
     # Build HTML lines
     lines = []
     for post in recent:
-        lines.append('\t<div class="post">')
-        lines.append('\t\t<div class="post-content">')
-        lines.append(
-            f'\t\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>'
-        )
-        if post["tags"]:
-            lines.append('\t\t\t<div class="post-tags">')
-            for tag in post["tags"]:
-                lines.append(f'\t\t\t\t<span class="tag">{tag}</span>')
-            lines.append("\t\t\t</div>")
-        lines.append("\t\t</div>")
+        lines.append('\t<div>')
         lines.append(
             f'\t\t<time datetime="{post["date_str"]}">{post["date_full"]}</time>'
         )
+        lines.append(
+            f'\t\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>'
+        )
         lines.append("\t</div>")
+        lines.append("\t<br>")
 
     return "\n".join(lines)
 
@@ -242,6 +223,20 @@ def minify_css(src_css, dest_css):
     )
     if result.returncode != 0:
         print("Error during CSS minification:")
+        print(result.stderr, file=sys.stderr)
+        sys.exit(1)
+
+
+def minify_html(src_html, dest_html):
+    print(f"Minifying HTML: {src_html} → {dest_html}")
+    result = subprocess.run(
+        ["minify", "-o", str(dest_html), str(src_html)],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+    )
+    if result.returncode != 0:
+        print("Error during HTML minification:")
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
 
@@ -378,6 +373,9 @@ def main():
         # Update index page with latest posts
         update_index_html(html_snippet)
 
+        # Minify index page
+        minify_html("./.build/index.html", "./.build/index.html")
+
         # Generate sitemap
         generate_sitemap()
 
@@ -398,6 +396,9 @@ def main():
 
         # Update index page with latest posts
         update_index_html(html_snippet)
+
+        # Minify index page
+        minify_html("./.build/index.html", "./.build/index.html")
 
         # Generate sitemap
         generate_sitemap()

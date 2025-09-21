@@ -10,19 +10,11 @@ main %}
 </p>
 <br>
 {% for post in posts %}
-<div class="post">
-	<div class="post-content">
-		<a href='{{ url_for("blog", slug=post.slug) }}'>{{ post.title }}</a>
-		{% if post.filetags %}
-			<div class="post-tags">
-			{% for tag in post.filetags %}
-				<span class="tag">{{ tag }}</span>
-			{% endfor %}
-			</div>
-		{% endif %}
-	</div>
+<div>
 	<time datetime='{{ post.date | strftime("%Y-%m-%d") }}'
 		>{{ post.date|strftime("%B %d, %Y") }}</time
 	>
+	<a href='{{ url_for("blog", slug=post.slug) }}'>{{ post.title }}</a>
 </div>
+<br>
 {% endfor %} {% endblock %}

@@ -44,23 +44,6 @@
  :output ".build/blog/index.html"
  :url "/blog/")
 
-;; Wiki post route
-(weblorg-route
- :name "wiki"
- :input-pattern "content/wiki/*.org"
- :template "post.html"
- :output ".build/wiki/{{ slug }}.html"
- :url "/wiki/{{ slug }}.html")
-
-;; Wiki index page route
-(weblorg-route
- :name "wiki-index"
- :input-pattern "content/wiki/*.org"
- :input-aggregate #'weblorg-input-aggregate-all
- :template "wiki.html"
- :output ".build/wiki/index.html"
- :url "/wiki/")
-
 ;; Page post route
 (weblorg-route
  :name "pages"
@@ -100,7 +83,6 @@
  :template "page.html"
  :output ".build/about/{{ slug }}.html"
  :url "/about/{{ slug }}.html")
-
 
 ;; RSS feed route
 (weblorg-route
