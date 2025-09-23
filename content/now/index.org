@@ -7,27 +7,31 @@ This is a [[https://nownownow.com/about][/now]] page.
 * Work
 
 - I am now supporting AWS, DevOps, GitHub, & GitLab as an SME for [[https://kpmg.com/us/en.html][KPMG]].
-- Getting through a very busy SOC/SOX portfolio of clients this year. Blogging and other hobbies have taken a hit as a result.
+- Getting through a very busy SOC/SOX portfolio of clients this year. Blogging
+  and other hobbies have taken a hit as a result.
 
 * Media
 
-As I noted above, I'm working a ton right now and my media consumption has dropped down to "can be played in the background" shows and PvP games that don't require much though.
+As I noted above, I'm working a ton right now and my media consumption has
+dropped down to "can be played in the background" shows and PvP games that don't
+require much though.
 
 - Playing some games:
   - Halo Infinite
   - Rocket League
 - Watching some shows:
-  - Bob's Burgers
-  - Northern Exposure
+  - Juutsu Kaisen
+  - Severance
 
 * Tech
 
-- Moved my source code back to [[https://sourcehut.org][Sourcehut]] and made the GitHub versions mirrors of Sourcehut.
+- Moved my source code to [[https://git.cleberg.net][cGit]], as I don't really care for GitHub/GitLab and
+  platforms like Sourcehut are more annoying than helpful.
 - Deleted a bunch of accounts to reduce online footprint. Looking for more ways
   to reduce.
 
 * Hobbies
 
-- Built a sandbox with seats that collapse into a lid. I also have enough leftover lumber to build a cubby-type bookshelf.
+- I don't have time for hobbies right now 🙃
 
 View the historical [[https://git.cleberg.net/cleberg.net.git/log/content/now/index.org][log of changes]] for this page.
