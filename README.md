@@ -1,22 +1,23 @@
 # cleberg.net
 
-This document describes the structure and usage of the `cleberg.net` project.
-The site is built and maintained using the Org-Mode publishing system within
-Emacs, supported by the weblorg package. This setup allows for generation of
-static HTML content from Org files using a declarative configuration.
+This repository holds the files for [cleberg.net](https://cleberg.net), a
+static-site with blog posts, personal links, and more.
+
+This site uses [weblorg](https://github.com/emacs-love/weblorg) to build the
+static site, which relies on [emacs](https://www.gnu.org/software/emacs/).
 
 ## Site Structure
 
-The project source files are written in Org-Mode format and reside in the
-repository. These files are processed by the publishing engine to produce HTML
-output, which can then be deployed to a web server.
+Content pages (e.g., blog posts) are written in org-mode and templates are
+written in HTML. Weblorg can be used to build these files into a static site,
+which can then be deployed to a web server.
 
 The main site components are:
 
 - Org source files containing content, including blog posts and pages.
 - A configuration file (`publish.el`) that specifies publishing parameters like
   base URL, output directories, and export options.
-- Assets such as images and stylesheets, located in designated subdirectories.
+- Assets such as images and style sheets, located in designated subdirectories.
 - Utility scripts (e.g., `build.py`) to facilitate building and deployment.
 
 ## Dependencies
@@ -24,10 +25,10 @@ The main site components are:
 The publishing system depends on:
 
 - Emacs text editor with Org-Mode.
-- The weblorg package, available at <https://github.com/emacs-love/weblorg>, which
-  provides advanced Org publishing functionality and theming support.
+- The weblorg package, available at <https://github.com/emacs-love/weblorg>,
+  which provides advanced Org publishing functionality and theming support.
 
-## Viewing the Site Examples
+## Screenshots
 
 Screenshots illustrating the site in both light and dark display modes are
 included in the `./screenshots/` directory.
@@ -53,7 +54,7 @@ configuration options and expected formats.
 ## Setup Instructions
 
 To obtain a working copy of this repository, execute the following commands
-within a shell environment or Emacs&rsquo; shell interface:
+within a shell environment or Emacs shell interface:
 
 ```shell
 git clone https://git.cleberg.net/cleberg.net.git
@@ -112,13 +113,3 @@ To add new blog content, follow this procedure within Emacs:
 3. Modify the new file as needed to add post content and metadata.
 
 This method streamlines content creation by reusing a preformatted template.
-
-
-## Contributing and Issue Tracking
-
-Contributions and bug reports are tracked through the repository's issue tab on
-GitHub. Users are encouraged to submit reports, feature requests, or pull
-requests following standard repository guidelines.
-
-For further details on the usage of Org-Mode, weblorg configuration, or
-publishing workflows, consult the respective documentation sources.
