@@ -2,7 +2,6 @@
 #+title:       PHP User Authentication: Create, Validate, and Manage Sessions
 #+description: Comprehensive guide to developing a secure user login system in PHP, including account creation, session management, and logout procedures.
 #+slug:        php-auth-flow
-#+filetags:    :php:authentication:
 
 * Introduction
 

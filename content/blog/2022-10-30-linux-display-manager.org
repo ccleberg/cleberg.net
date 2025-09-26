@@ -2,7 +2,6 @@
 #+title:       Managing Display Managers in Void Linux: Disable, Enable, and Configure
 #+description: Stepwise instructions to manage and replace the display manager on a Void Linux installation, including service control and configuration editing.
 #+slug:        linux-display-manager
-#+filetags:    :linux:void:display-manager:
 
 * Display Manager Services
 

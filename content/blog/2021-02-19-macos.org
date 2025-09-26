@@ -2,7 +2,6 @@
 #+title:       macOS for Linux Users: Initial Setup and CLI Customization
 #+description: Comprehensive overview for first-time macOS users transitioning from other OS platforms, including system setup, terminal usage, and user interface customization.
 #+slug:        macos
-#+filetags:    :macos:terminal:setup:
 
 * Diving into macOS
 

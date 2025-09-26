@@ -2,7 +2,6 @@
 #+title:       GitHub and Sourcehut: Scripting Mass Clones and Remote Updates
 #+description: Script-based methodology for cloning multiple repositories from GitHub and Sourcehut accounts. Includes automation techniques to streamline repository management and backups.
 #+slug:        clone-github-repos
-#+filetags:    :git:cloning:scripting:
 
 * Cloning from GitHub
 

@@ -2,7 +2,6 @@
 #+title:       Obscura VPN: A Two-Party Protocol Review
 #+description: Analytical review outlining the features, implementation, and security aspects of Obscura VPN's two-party protocol in conjunction with Mullvad VPN.
 #+slug:        obscura-vpn
-#+filetags:    :vpn:privacy:review:
 
 #+begin_quote
 This review is written at a high-level for users, not a technical deep-dive of

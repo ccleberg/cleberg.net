@@ -2,7 +2,6 @@
 #+title:       Self-Hosting Guide: GitWeb
 #+description: Stepwise instructions for deploying GitWeb on Linux servers using Nginx, configuring fastcgi, and managing git repositories effectively.
 #+slug:        self-hosting-gitweb
-#+filetags:    :gitweb:nginx:self-hosting:
 
 * Overview
 

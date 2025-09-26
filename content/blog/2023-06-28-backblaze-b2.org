@@ -2,7 +2,6 @@
 #+title:       Automating Secure Backups with Backblaze B2 and b2 CLI
 #+description: Methodical guide for configuring and utilizing Backblaze B2 cloud storage services to perform reliable and secure offsite data backups.
 #+slug:        backblaze-b2
-#+filetags:    :cloud-storage:backup:backblaze:
 
 * Overview
 

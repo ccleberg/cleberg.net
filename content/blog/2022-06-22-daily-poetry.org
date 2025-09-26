@@ -2,7 +2,6 @@
 #+title:       How to Receive a Daily Dose of Poetry via Automated Email
 #+description: Instructional guide for scheduling and automating the distribution of classic and contemporary poetry in plaintext format to an electronic mail inbox using Python scripting and SMTP protocol.
 #+slug:        daily-poetry
-#+filetags:    :poetry:email:automation:
 
 * Source Code
 

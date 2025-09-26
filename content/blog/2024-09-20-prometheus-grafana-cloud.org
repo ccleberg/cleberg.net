@@ -2,7 +2,6 @@
 #+title:       Linux Server Monitoring with Prometheus & Grafana Cloud
 #+description: Stepwise method for deploying Prometheus with Docker to monitor Linux servers and integrating Grafana Cloud for visualization and analysis of collected metrics.
 #+slug:        prometheus-grafana-cloud
-#+filetags:    :monitoring:prometheus:grafana:
 
 This tutorial will guide you through the process of:
 

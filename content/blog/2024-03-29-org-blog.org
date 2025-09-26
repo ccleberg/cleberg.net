@@ -2,7 +2,6 @@
 #+title:       Blogging with Emacs Org-Mode and Weblorg
 #+description: Instructional content for preparing and publishing blogs using Emacs Org-Mode, including setup of static site generators and content management workflows.
 #+slug:        org-blog
-#+filetags:    :blog:weblorg:emacs:
 
 First and foremost, apologies to those who subscribe via RSS as I know that my
 feed duplicated itself when I moved this blog over to org-mode last night.

@@ -2,7 +2,6 @@
 #+title:       How to Use IBM Watson Visual Recognition API for Image Analysis
 #+description: Technical overview and application instructions for using IBM Watson Visual Recognition service, with focus on API configuration, image input processing, and classification output handling.
 #+slug:        visual-recognition
-#+filetags:    :ibm-watson:visual-recognition:image-classification:
 
 * What is IBM Watson?
 

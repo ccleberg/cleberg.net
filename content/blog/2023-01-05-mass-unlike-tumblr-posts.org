@@ -2,7 +2,6 @@
 #+title:       How to Quickly Remove All Likes on Tumblr Desktop
 #+description: Instructions for executing a JavaScript script to automate the mass unlike operation for Tumblr posts without requiring additional software.
 #+slug:        mass-unlike-tumblr-posts
-#+filetags:    :tumblr:javascript:automation:
 
 * The Dilemma
 

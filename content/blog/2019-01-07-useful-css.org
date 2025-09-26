@@ -2,7 +2,6 @@
 #+title:       Real‑World CSS Techniques: Flexbox, Shadows, and Variables
 #+description: Practical guide on applying CSS rules and constructs such as flexbox, box shadows, and variable usage to achieve standard web styling and layout objectives.
 #+slug:        useful-css
-#+filetags:    :css:web-design:tips:
 
 * Introduction to CSS
 

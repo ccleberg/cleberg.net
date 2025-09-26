@@ -2,7 +2,6 @@
 #+title:       Creating and Managing ZFS Storage Pools on Ubuntu Linux
 #+description: Stepwise guide to setting up ZFS storage pools on Ubuntu, including initial installation, pool creation, expansion, and maintenance.
 #+slug:        zfs
-#+filetags:    :zfs:ubuntu:storage:
 
 This post details the process I used to create ZFS pools, datasets, and
 snapshots on Ubuntu Server.

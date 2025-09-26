@@ -2,7 +2,6 @@
 #+title:       Blocking Malicious IPs on Unifi: Manual Firewall Rule Setup
 #+description: Instructions to identify and block harmful IP addresses and subnets through Unifi firewall settings to improve network security posture.
 #+slug:        unifi-ip-blocklist
-#+filetags:    :unifi:firewall:ip-blocklist:
 
 * Identifying Abusive IPs
 

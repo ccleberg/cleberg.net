@@ -2,7 +2,6 @@
 #+title:       Step-by-Step Guide to Securing Your Home Server with Firewalls, SSH, and VLANs
 #+description: Detailed instructions to enhance the security posture of home servers exposed to public networks, including firewall setup, secure SSH configuration, fail2ban deployment, and network segmentation.
 #+slug:        server-hardening
-#+filetags:    :home-server:security:hardening:
 
 * Planning Data Flows & Security
 

@@ -2,7 +2,6 @@
 #+title:       Designing for Speed: A 5KB Site That Scores 100s on Lighthouse
 #+description: Detailed process outlining methods for reducing website page size to approximately 5 kilobytes, enhancing loading speed, search engine indexing efficiency, and user interface responsiveness.
 #+slug:        website-redesign
-#+filetags:    :web:minimalism:performance:
 
 * A Brief History
 

@@ -2,7 +2,6 @@
 #+title:       Navigating Burnout in Audit and Consulting: A Season Without Rest
 #+description: Examination of burnout phenomena accompanied by strategies and practical approaches for workload management and restoration of optimal functioning.
 #+slug:        burnout
-#+filetags:    :burnout:productivity:wellbeing:
 
 * RE: Burnout
 

@@ -1,7 +1,6 @@
 #+date: <2025-09-05 Fri 10:21:00>
 #+title: Crafting a More Human-Centric Design for My Website
 #+description: Read this post to understand my latest website redesign and the context for the refresh.
-#+filetags: :design:
 #+slug: human-website-design
 
 #+begin_quote

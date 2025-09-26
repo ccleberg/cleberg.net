@@ -2,7 +2,6 @@
 #+title:       Boosting Bash Productivity: Using Bash-it and ble.sh for Plugins and Autosuggestions
 #+description: Guide to augmenting Bash shell features by integrating Bash-It framework along with ble.sh for input autosuggestions, improving command-line efficiency on Linux systems.
 #+slug:        bash-it
-#+filetags:    :bash:shell:linux:
 
 * Bash
 

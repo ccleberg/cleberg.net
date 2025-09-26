@@ -2,7 +2,6 @@
 #+title:       How to Set Up Alpine Linux as a Desktop OS with Sway
 #+description: Stepwise procedures for installing and setting up Alpine Linux as a desktop operating system, including window manager setup and relevant system adjustments.
 #+slug:        alpine-desktop
-#+filetags:    :alpine:desktop:linux:
 
 * Isn't Alpine Linux for Servers?
 

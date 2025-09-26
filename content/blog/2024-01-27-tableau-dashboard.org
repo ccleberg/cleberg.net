@@ -2,7 +2,6 @@
 #+title:       Preparing and Visualizing Omaha Crime Data (2015-2023) in Tableau
 #+description: Detailed procedure for data preparation and interactive visualization of crime trends in Omaha, using Tableau software from 2015 through 2023 data.
 #+slug:        tableau-dashboard
-#+filetags:    :tableau:visualization:data-analysis:
 
 In this project, I am going to show you how to use Tableau Public for free to
 create simple dashboards.

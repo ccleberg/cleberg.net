@@ -2,7 +2,6 @@
 #+title:       A Guide to Customizing macOS with Terminal, Window Managers, and Widgets
 #+description: Detailed overview of methods and tools for modifying macOS system settings, including terminal usage, window management, and interface customization.
 #+slug:        macos-customization
-#+filetags:    :macos:customization:guide:
 
 I have been using macOS more than Linux lately, so I wrote this post to describe
 some simple options to customize macOS beyond the normal built-in settings menu.

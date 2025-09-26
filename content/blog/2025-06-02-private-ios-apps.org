@@ -2,7 +2,6 @@
 #+title:       Privacy-First iOS Apps for Minimalists
 #+description: Curated listing of iOS applications prioritized for privacy preservation and data security, targeted at users requiring minimal data exposure.
 #+slug:        private-ios-apps
-#+filetags:    :ios:privacy:security:
 
 The world is evolving into a privacy nightmare, where our own devices are being
 used by numerous parties to constantly track and report on our activities. This

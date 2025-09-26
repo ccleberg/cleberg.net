@@ -2,7 +2,6 @@
 #+title:       OrbStack on macOS: Running a Full Ubuntu Linux Environment
 #+description: Technical guide outlining the installation and operation of OrbStack to run Ubuntu Linux containers natively on macOS systems with performance considerations.
 #+slug:        ubuntu-on-macos
-#+filetags:    :linux:macos:orbstack:
 
 Being a macOS user who previously used Linux for many years, I often find myself
 searching for alternatives to the Linux-native tools and methods that I had

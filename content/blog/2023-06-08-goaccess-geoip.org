@@ -2,7 +2,6 @@
 #+title:       Real-Time Traffic Insights from Nginx Logs Using GoAccess + GeoIP
 #+description: Step-by-step instructions to utilize GoAccess tool incorporating MaxMind GeoIP integration for real-time geographic and traffic analysis of Nginx log files.
 #+slug:        goaccess-geoip
-#+filetags:    :nginx:goaccess:geoip:
 
 * Overview
 

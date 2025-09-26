@@ -2,7 +2,6 @@
 #+title:       Getting Started with Gemini: Deploy Your First Capsule
 #+description: Incremental procedural guide to initiate and maintain a Gemini capsule server. Covers installation, deployment, and operational best practices for beginners.
 #+slug:        gemini-capsule
-#+filetags:    :gemini:capsule:tutorial:
 
 * What is Gemini?
 

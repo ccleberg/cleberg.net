@@ -2,7 +2,6 @@
 #+title:       Optimizing Nginx with GZIP: A Step-by-Step Guide to Text Compression
 #+description: Procedures for activating and configuring GZIP compression in Nginx to decrease data transmission size, reduce bandwidth consumption, and accelerate page load times.
 #+slug:        nginx-compression
-#+filetags:    :nginx:gzip:compression:
 
 * Text Compression
 
