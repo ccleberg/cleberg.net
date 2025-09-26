@@ -117,7 +117,7 @@ time {
 }
 #+end_src
 
-That's it. No frameowk, no vendor prefixes, no unnecessary selectors.
+That's it. No framework, no vendor prefixes, no unnecessary selectors.
 
 This gave me an almost-pure HTML site. It's freeing. It's liberating. It's
 comfortable.
