@@ -14,12 +14,6 @@
 		<time datetime='{{ post.date|strftime("%Y-%m-%d") }}'
 			>{{ post.date|strftime("%A, %B %d, %Y %H:%M:%S") }}</time
 		>
-		{% endif %} {% if post.filetags %}
-		<p class="post-tags">
-			{% for tag in post.filetags %}
-			<span class="tag">{{ tag }}</span>
-			{% endfor %}
-		</p>
 		{% endif %}
 	</section>
 	<section>{{ post.html | safe }}</section>
