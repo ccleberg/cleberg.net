@@ -2,7 +2,6 @@
 #+title:       Living the Terminal Lifestyle: Efficient Workflows for Focused Computing
 #+description: Detailed procedures for reducing digital interruptions and increasing efficiency through terminal-based utilities for web browsing, communication, electronic mail, RSS feeds, and programming tasks.
 #+slug:        terminal-lifestyle
-#+filetags:    :terminal:lifestyle:productivity:
 
 * Text-Based Simplicity
 

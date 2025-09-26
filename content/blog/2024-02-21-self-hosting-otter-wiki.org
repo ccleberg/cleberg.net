@@ -2,7 +2,6 @@
 #+title:       Self-Hosting Guide: An Otter Wiki
 #+description: Stepwise directions for installing Otter Wiki, configuring Docker Compose environment, and setting up Nginx reverse proxy for secure access.
 #+slug:        self-hosting-otter-wiki
-#+filetags:    :docker:nginx:self-hosting:
 
 * An Otter Wiki
 

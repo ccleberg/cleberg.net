@@ -2,7 +2,6 @@
 #+title:       Outrun the Future: A Review of Neon Drive's Gameplay and Style
 #+description: Description of game mechanics, graphical style, and level design in Neon Drive, an arcade racing game inspired by 1980s synthwave aesthetics.
 #+slug:        neon-drive
-#+filetags:    :arcade:racing:synthwave:
 
 * Game Description
 

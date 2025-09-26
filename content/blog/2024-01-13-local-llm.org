@@ -2,7 +2,6 @@
 #+title:       Running Local Large Language Models on macOS and iOS: A Practical Guide
 #+description: Technical guide to deploying and running local large language models on macOS and iOS devices focusing on open-source implementations and privacy considerations.
 #+slug:        local-llm
-#+filetags:    :llm:macos:ios:
 
 * Requirements
 

@@ -2,7 +2,6 @@
 #+title:       How the Ansoff Matrix Guides Business Growth
 #+description: Analytical description of the Ansoff Matrix, detailing market and product development strategies for measured business expansion and competitive positioning.
 #+slug:        the-ansoff-matrix
-#+filetags:    :strategy:growth-business:management:
 
 * Overview
 

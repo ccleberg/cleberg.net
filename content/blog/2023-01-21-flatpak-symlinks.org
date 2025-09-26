@@ -2,7 +2,6 @@
 #+title:       Simplify Flatpak Commands: Making Symlinks for Easier App Launching
 #+description: Detailed instructions for establishing symbolic links for Flatpak applications to facilitate faster execution from terminal or application launcher environments.
 #+slug:        flatpak-symlinks
-#+filetags:    :flatpak:symlinks:productivity:
 
 * Running Flatpak Apps Should Be Faster
 

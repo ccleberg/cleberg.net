@@ -2,7 +2,6 @@
 #+title:       A Data-Driven Look at Video Game Sales (1980–2020)
 #+description: Presentation of analyzed data regarding global video game sales, covering platform distributions, genre classifications, and geographic market performance metrics.
 #+slug:        video-game-sales
-#+filetags:    :video-games:sales:data-analysis:
 
 * Background Information
 

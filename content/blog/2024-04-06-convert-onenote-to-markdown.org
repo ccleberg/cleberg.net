@@ -2,7 +2,6 @@
 #+title:       Converting OneNote Exports to Markdown and Org-Mode
 #+description: Detailed conversion instructions to transform OneNote document files into Markdown or Org-Mode formats using Pandoc command-line utility on Windows systems.
 #+slug:        convert-onenote-to-markdown
-#+filetags:    :onenote:conversion:pandoc:
 
 If you're looking to convert your OneNote content to another format, such as
 Markdown or Org-Mode, you're in luck. I use a solution that doesn't require

@@ -2,7 +2,6 @@
 #+title:       Exploring Vaporwave and Outrun: Color, Culture, and Sound
 #+description: Systematic examination of Vaporwave and Outrun aesthetic frameworks, focusing on graphical elements, chromatic schemes, musical associations, and period-specific cultural influences.
 #+slug:        vaporwave-vs-outrun
-#+filetags:    :vaporwave:outrun:retro:
 
 * Overview
 

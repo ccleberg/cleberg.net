@@ -2,7 +2,6 @@
 #+title:       From Spreadsheets to Databases: Creating a Custom Financial Tracker with Python
 #+description: Procedures for creating and maintaining a personal financial database utilizing SQLite, Python programming language, and Jupyter Notebook interface.
 #+slug:        financial-database
-#+filetags:    :finance:sqlite:python:
 
 * Personal Financial Tracking
 :PROPERTIES:

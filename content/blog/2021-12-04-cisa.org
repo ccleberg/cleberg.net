@@ -2,7 +2,6 @@
 #+title:       How I Prepared for and Passed the CISA Exam: A Practical Study Guide
 #+description: Comprehensive outline of study materials, preparation strategies, and procedural advice for passing the CISA examination on the initial attempt.
 #+slug:        cisa
-#+filetags:    :CISA:certification:audit:
 
 * What is the CISA?
 

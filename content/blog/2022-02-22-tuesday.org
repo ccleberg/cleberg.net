@@ -2,7 +2,6 @@
 #+title:       Twosday: Exploring the Unique Palindromic Date of 2-22-22
 #+description: Examination of the date Tuesday, February 22, 2022, highlighting the palindromic properties and expected observations on this specific calendar occurrence.
 #+slug:        tuesday
-#+filetags:    :palindrome:twosday:date-facts:
 
 * Tuesday, Twosday
 

@@ -2,7 +2,6 @@
 #+title:       Self-Hosting Guide: Wger
 #+description: Comprehensive steps for installing, configuring, and operating the Wger workout management application on a dedicated server platform.
 #+slug:        self-hosting-wger
-#+filetags:    :self-hosting:wger:workout-manager:
 
 * Wger: The Self-Hosted Workout Manager
 

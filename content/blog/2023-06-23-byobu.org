@@ -2,7 +2,6 @@
 #+title:       Using Byobu for Efficient Terminal Multiplexing
 #+description: Detailed overview of Byobu terminal multiplexer features, configuration settings, session management, and keybindings to enhance command-line efficiency.
 #+slug:        byobu
-#+filetags:    byobu:terminal-multiplexer:productivity
 
 * Byobu
 

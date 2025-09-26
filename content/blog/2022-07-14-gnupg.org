@@ -2,7 +2,6 @@
 #+title:       Getting Started with GPG: Secure Encryption, Signing, and Key Usage
 #+description: Technical manual covering the architecture, cryptographic algorithms, vulnerability considerations, key management, and typical applications of GNU Privacy Guard for secure data and email encryption.
 #+slug:        gnupg
-#+filetags:    :gnupg:gpg:encryption:
 
 * The History of GPG
 

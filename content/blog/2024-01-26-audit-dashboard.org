@@ -2,7 +2,6 @@
 #+title:       Building an Interactive Audit Dashboard with Alteryx and Power BI
 #+description: Instructions for transforming audit data into dynamic dashboards via data preparation with Alteryx and visualization using Microsoft Power BI.
 #+slug:        audit-dashboard
-#+filetags:    :audit:dashboard:powerbi:
 
 Alteryx and Power BI are powerful tools that can help turn your old-school audit
 trackers into interactive tools that provide useful insights and potential

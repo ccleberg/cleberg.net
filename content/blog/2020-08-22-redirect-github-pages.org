@@ -2,7 +2,6 @@
 #+title:       Configure GitHub Pages to Use Your Root Domain Instead of WWW
 #+description: Stepwise instructions for configuring redirection of GitHub Pages sites from the www subdomain to the apex domain to improve domain resolution and access consistency.
 #+slug:        redirect-github-pages
-#+filetags:    :github:pages:dns:
 
 * Short answer
 

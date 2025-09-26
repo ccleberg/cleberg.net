@@ -2,7 +2,6 @@
 #+title:       Navigating the Fediverse: User Manual for Decentralized Social Media
 #+description: Detailed introduction to the Fediverse network architecture, user registration procedures, platform navigation, and protocols ensuring content decentralization and censorship resistance.
 #+slug:        fediverse
-#+filetags:    :fediverse:social-network:decentralization:
 
 * What is the Fediverse?
 

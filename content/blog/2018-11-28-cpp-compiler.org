@@ -2,7 +2,6 @@
 #+title:       Inside the C++ Compiler
 #+description: Systematic presentation of the C++ compilation phases including preprocessing, compilation, assembly, and linking, with technical insights into each stage's function.
 #+slug:        cpp-compiler
-#+filetags:    :cpp:compilation:programming:
 
 * A Brief Introduction
 

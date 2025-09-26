@@ -2,7 +2,6 @@
 #+title:       Linux Essentials: Top Tools and Easy Setup Tips
 #+description: Inventory and description of key Linux applications including graphical and command-line tools, with installation instructions for various distributions.
 #+slug:        linux-software
-#+filetags:    :linux:software:tools:
 
 * GUI Applications
 

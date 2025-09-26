@@ -2,7 +2,6 @@
 #+title:       Getting Started with the Hare Language
 #+description: Overview of the Hare programming language features, installation procedure, and elementary programming examples targeting system-level development.
 #+slug:        exploring-hare
-#+filetags:    :hare:programming:beginner:
 
 * A Quick Note
 

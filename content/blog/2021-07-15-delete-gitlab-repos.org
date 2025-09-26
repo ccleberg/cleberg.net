@@ -2,7 +2,6 @@
 #+title:       Automated Deletion of All GitLab Repositories Using Python
 #+description: Stepwise instructions for executing a Python script to delete all repositories associated with a GitLab account. Includes authentication and error handling procedures.
 #+slug:        delete-gitlab-repos
-#+filetags:    :gitlab:python:script:
 
 * Background
 

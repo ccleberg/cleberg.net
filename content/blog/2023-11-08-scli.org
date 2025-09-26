@@ -2,7 +2,6 @@
 #+title:       Signal CLI (scli) Installation on Alpine
 #+description: Step-by-step instructions for installing the Signal messenger command-line client scli on Alpine Linux with musl libc, including dependencies and configuration.
 #+slug:        scli
-#+filetags:    :signal:alpine:cli:
 
 [[https://github.com/isamert/scli][scli]] is a command-line tool that
 allows you to connect to your Signal messenger account. This program

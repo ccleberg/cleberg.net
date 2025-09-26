@@ -2,7 +2,6 @@
 #+title:       My Homelab Setup: Gear, Network, and Lessons Learned
 #+description: Comprehensive instructions on assembling and configuring a homelab environment, emphasizing hardware selection, software deployment, and network setup for operational efficiency.
 #+slug:        homelab
-#+filetags:    :homelab:hardware:network:
 
 * What is a Homelab?
 

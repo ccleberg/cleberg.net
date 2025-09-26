@@ -2,7 +2,6 @@
 #+title:       From Shared Hosting to VPS: Web Server Setup Made Easy
 #+description: Instructional outline for setting up and maintaining a VPS environment configured for secure and scalable web hosting applications.
 #+slug:        vps-web-server
-#+filetags:    :vps:webserver:setup:
 
 * Shared Hosting vs. VPS
 

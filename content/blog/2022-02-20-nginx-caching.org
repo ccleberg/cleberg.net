@@ -2,7 +2,6 @@
 #+title:       How to Configure Nginx for Efficient Static Content Caching
 #+description: Detailed methods for configuring Nginx to cache static resources such as CSS, JavaScript, and images to improve website loading times and resource efficiency.
 #+slug:        nginx-caching
-#+filetags:    :nginx:cache:performance:
 
 * Update Your Nginx Config to Cache Static Files
 

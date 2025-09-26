@@ -2,7 +2,6 @@
 #+title:       PineTime Smartwatch: An Open-Source Hardware & Software Overview
 #+description: Technical description of PineTime smartwatch capabilities, including heart rate measurement, step counting, sleep monitoring, and smartphone connectivity functions.
 #+slug:        pinetime
-#+filetags:    :smartwatch:opensource:hardware:
 
 * PineTime Product Information
 

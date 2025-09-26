@@ -2,7 +2,6 @@
 #+title:       Local Web Dev Server Setup with Docker & Nginx
 #+description: Instructions for setting up a local web development environment employing Docker Desktop and Nginx web server to facilitate development and testing workflows.
 #+slug:        docker-local-web-server
-#+filetags:    :docker:nginx:webserver:
 
 When developing websites locally, I often use a simple Python web server to
 observe the changes.

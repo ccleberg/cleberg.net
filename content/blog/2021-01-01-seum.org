@@ -2,7 +2,6 @@
 #+title:       SEUM: Speedrunners from Hell
 #+description: Technical overview for utilizing the game SEUM, focusing on speedrunning techniques, gravity manipulation, teleportation functions, and level completion criteria.
 #+slug:        seum
-#+filetags:    :speedrunning:puzzle:indie:
 
 * Game Description
 

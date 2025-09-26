@@ -2,7 +2,6 @@
 #+title:       Enabling Local Network Access with Mullvad WireGuard Configs
 #+description: Detailed procedure to modify Mullvad Wireguard VPN configuration files and iptables rules to allow Local Area Network access while maintaining VPN connectivity.
 #+slug:        wireguard-lan
-#+filetags:    :wireguard:networking:security:
 
 * Download Configuration Files from Mullvad
 

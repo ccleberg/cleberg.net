@@ -2,7 +2,6 @@
 #+title:       Essential Org-Mode Features for Productivity
 #+description: Detailed overview of essential Org-Mode functionalities focusing on task organization, note-taking, and workflow optimization.
 #+slug:        org-mode-features
-#+filetags:    :productivity:emacs:org-mode:
 
 * Cycling (Folding)
 
@@ -147,8 +146,7 @@ You can assign tags directly to headlines or at the file level and can contain
 letters, numbers, underscores, and the =@= symbol.
 
 #+begin_src org
-,#+FILETAGS: :Fruits:
-
+,
 ,* Pick fruits off the trees      :work:
 ,** Start with the orange grove   :orange:tree:
 ,*** TODO Pick bananas last       :banana:

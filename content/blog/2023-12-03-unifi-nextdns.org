@@ -2,7 +2,6 @@
 #+title:       Installing and Configuring NextDNS on Unifi Dream Machine Routers
 #+description: Procedural guide for installation and configuration of NextDNS on Unifi Dream Machine devices for network DNS filtering.
 #+slug:        unifi-nextdns
-#+filetags:    :nextdns:unifi:installation:
 
 * Overview
 

@@ -2,7 +2,6 @@
 #+title:       Doom Emacs & Org-Mode Setup
 #+description: Technical manual covering installation, configuration files, and usage procedures for Doom Emacs and Org-Mode targeting note management and task organization.
 #+slug:        doom-emacs
-#+filetags:    :doom:emacs:workflow:
 
 ** Screenshots
 

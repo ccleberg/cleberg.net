@@ -2,7 +2,6 @@
 #+title:       Alpine Linux SSH Hardening Guide
 #+description: Detailed guide to enhance Alpine Linux SSH server security through configuration adjustments and vulnerability mitigation.
 #+slug:        alpine-ssh-hardening
-#+filetags:    :security:ssh:alpine:
 
 * Overview
 
