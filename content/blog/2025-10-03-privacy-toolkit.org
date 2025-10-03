@@ -1,0 +1,110 @@
+#+date: <2025-10-03 Fri 4:23:00>
+#+title: My Privacy Toolkit
+#+description: Learn about the tools I use to keep my life private and data secure.
+#+slug: privacy-toolkit
+
+* VPN
+
+I use a few different VPNs for different purposes. For general use, I use
+[[https://mullvad.net/en][Mullvad]] due to its private account creation process, support for private payment
+options, and rock solid consistency. This is by far the most stable and
+high-speed VPN I have used over the last ~10 years.
+
+I also use [[https://njal.la/vpn/][Njalla]] whenever I need to use a service where Mullvad is blocked. I
+have found that the Njalla IP I was provisioned is not blocked anywhere, so it's
+useful for software that seemingly has blocked all major VPN providers. There is
+no client, but they provide OpenVPN and Wireguard support.
+
+Finally, I use [[https://airvpn.org/][AirVPN]] on my server's torrent service due to its support for port
+forwarding. I don't use it for any other purpose, but it works great with
+Transmission via Docker.
+
+* DNS
+
+Using a VPN on every single device is not possible. For all of the other items
+on my network (IoT, Apple TVs, etc.), I enforce [[https://nextdns.io/][NextDNS]] via the [[https://github.com/nextdns/nextdns/wiki/UnifiOS][UnifiOS script]]
+they provide. This lets me control the DNS on my network, avoid the ISP's
+default DNS, and enforce blocklists at a LAN level for my home network.
+
+* Data Removal
+
+I use [[https://www.easyoptouts.com/][Easy Opt Outs]] due to its low price of $20 per year. There are other
+options that promise more utility, but I find that this service is adequate.
+Using this has dramatically reduced the spammy, "<person> info here" results on
+web searches.
+
+Regardless, it's a low price to pay to make sure public information is not used
+against you and reduces the surface of information available via low-effort
+searches.
+
+* Passwords
+
+I use [[https://bitwarden.com/][Bitwarden]] due to its use-friendly interface, which is important to the
+people I share secrets with. Bitwarden allows for seamless username and password
+generation, multi-device syncing via its own provided service, built-in password
+strength and duplicate analysis, wide range of device support, and general UI
+(after its recent UI refresh).
+
+If I were only keeping passwords for myself and didn't need to support
+non-technical users, I would strongly prefer [[https://keepassxc.org/][KeePassXC]]. This would allow me to
+use Syncthing or another personal syncing solution that would avoid a
+centralized server that controls my passwords and authentication to access the
+passwords.
+
+* MFA
+
+I use iOS, which is limited in options for great MFA apps. If you use Android,
+just use [[https://getaegis.app/][Aegis]].
+
+For iOS, I currently use [[https://bitwarden.com/products/authenticator/][Bitwarden Authenticator]], which is a different app from
+Bitwarden. You can use this /without/ linking it to a Bitwarden account and use it
+as a standalone app, if you're not a fan of storing your passwords and MFA
+methods in the same location. If you don't care, you can just use the MFA fields
+within Bitwarden itself.
+
+The other options on iOS really aren't worth discussing, so I'll leave it here.
+
+* Communications
+
+For private instant communications, I use [[https://signal.org/][Signal]]. This is currently the gold
+standard for private direct messages. It is centralized, but it is very stable,
+provides forward secrecy for messages, and has a proven track record of not
+spilling data.
+
+If we talk about other communication channels, I usually opt for emails
+encrypted with [[https://gnupg.org/][GPG (PGP)]]. This isn't the best solution, but it does provide a
+trustworthy encryption method if you need to use email.
+
+I am not a fan of the current landscape of private messaging apps outside of
+Signal (Matrix, Session, etc.), so I'll leave my thoughts here with Signal and
+PGP.
+
+Want real privacy? Talk to someone in person when possible.
+
+* Browser Extensions
+** Firefox (Desktop)
+
+[[https://ublockorigin.com/][uBlock Origin]] is a no-brainer. This add-on provides domain-level blocking for
+resources, allowing you to block or allow specific domains, scripts, styles, and
+more with a click.
+
+If you prefer to avoid mainstream websites and browse via alternative
+front-ends, I suggest using [[https://libredirect.github.io/][LibRedirect]]. You can configure this add-on to
+automatically redirect your requests to privacy-respecting alternatives.
+
+** Safari (iOS)
+
+Since uBlock Origin doesn't work on Safari, I opt for [[https://apps.apple.com/us/app/ublock-origin-lite/id6745342698?platform=iphone][uBlock Origin Lite]], which
+is a decent alternative.
+
+Similar to LibRedirect, I use [[https://apps.apple.com/us/app/privacy-redirect/id1578144015][Privacy Redirect]] on iOS to redirect websites to
+private alternative front-ends.
+
+* Payments
+
+If you're just trying to avoid your bank collecting and using information about
+your purchases, you can try something like [[https://www.privacy.com/][Privacy.com]], which lets you mask the
+purchase information from your bank.
+
+If you're paying in person, I vote for paying with cash. Withdraw a certain
+amount per paycheck and use for all in-person payments, whenever possible.
