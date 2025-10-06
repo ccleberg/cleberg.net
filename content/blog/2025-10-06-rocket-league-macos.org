@@ -1,0 +1,94 @@
+#+date: <2025-10-06 Mon 13:11:00>
+#+title: Playing Rocket League on macOS via CrossOver
+#+description: Learn how to play Rocket League on macOS via CrossOver.
+#+slug: rocket-league-macos
+
+#+caption: Rcoket League on macOS
+[[https://img.cleberg.net/blog/20251006-rocket-league-macos/launch.png]]
+
+* Intro
+
+Rocket League isn’t natively supported on macOS, but you can run it using
+CrossOver, a compatibility layer that lets Windows applications run on macOS.
+This guide walks you through installing CrossOver, setting up the Epic Games
+Store (or Steam), and getting Rocket League up and running.
+
+* Install CrossOver
+
+To start, we will install CrossOver with [[https://brew.sh][Homebrew]].
+
+#+begin_src shell
+brew install --cask crossover
+#+end_src
+
+Once installed, launch CrossOver and select the Try Now button. CrossOver offers
+a 14‑day free trial. After the trial, a full license costs $74 USD.
+
+* Set Up the Epic Games Store (or Steam)
+
+After opening CrossOver, click the Install button and install the Epic Games
+Store (or Steam, if you have Rocket League on Steam). You will need to agree to
+the installation prompts that pop up and it should install in just a couple
+minutes.
+
+When the installer finishes, you’ll see a bottle (a sandboxed Windows
+environment) like the one below:
+
+#+caption: Epic Games Store Bottle
+[[https://img.cleberg.net/blog/20251006-rocket-league-macos/bottle.png]]
+
+You can now launch the Epic application. Epic will update itself and then
+present the login screen:
+
+#+caption: Epic Updater
+[[https://img.cleberg.net/blog/20251006-rocket-league-macos/updater.png]]
+
+#+caption: Epic Login
+[[https://img.cleberg.net/blog/20251006-rocket-league-macos/login.png]]
+
+* Install Rocket League
+
+Sign in to your Epic account, locate Rocket League in your library, and click
+Install. The download and installation process will complete shortly (depending
+on your internet connection), and then you should be ready to play.
+
+* Play the Game
+
+Last but not least, launch the game from the Epic Games Store once you install
+it. It may take a minute or two when launching for the first time.
+
+Take a look at the screenshots I was able to capture while playing on my M2
+MacBook Pro with a PS5 Dualsense Edge controller:
+
+#+caption: Main Menu
+[[https://img.cleberg.net/blog/20251006-rocket-league-macos/menu.png]]
+
+#+caption: In-Game
+[[https://img.cleberg.net/blog/20251006-rocket-league-macos/game.png]]
+
+* Tips & Troubleshooting
+
+Overall, the controller support for my PS5 Dualsense Edge controller worked out
+of the box and the performance was excellent. However, issues can happen and I
+gathered some tips, in case they do.
+
+- *Game runs slowly*: In CrossOver, edit the bottle’s settings → Graphics → enable
+  “Use DirectX 11” and increase the allocated RAM.
+- *Controller not detected*: Install the Windows driver for your controller inside
+  the bottle (e.g., Xbox 360 driver).
+- *Epic Store won’t update*: Delete the EpicGamesLauncher cache folder inside the
+  bottle (C:\Users\<User>\AppData\Local\EpicGamesLauncher\Saved) and restart the
+  launcher.
+- *Crashes on launch*: Ensure you have the latest macOS updates and that CrossOver
+  is up‑to‑date (check “Check for Updates” in the app menu).
+
+* Conclusion
+
+That's it! It's a simple process that allows you to try out Rocket League on
+macOS for 14 and determine if you enjoy this solution enough to pay for it.
+
+If you know a way to do this for free without paying for CrossOver, please reach
+out and let me know! I am hesitant to pay $74 simply to play Rocket League, but
+we shall see.
+
+Happy boosting!
