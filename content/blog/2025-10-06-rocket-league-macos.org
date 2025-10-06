@@ -3,7 +3,7 @@
 #+description: Learn how to play Rocket League on macOS via CrossOver.
 #+slug: rocket-league-macos
 
-#+caption: Rcoket League on macOS
+#+caption: Rocket League on macOS
 [[https://img.cleberg.net/blog/20251006-rocket-league-macos/launch.png]]
 
 * Intro
