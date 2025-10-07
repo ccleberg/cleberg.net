@@ -38,6 +38,7 @@ the table.
 
 | Title                       | Company   | Year | Salary   |
 |-----------------------------+-----------+------+----------|
+| Manager, TA - Audit         | [[https://kpmg.com/us/][KPMG]]      | 2025 | $147,600 |
 | Manager, TA - Audit         | [[https://kpmg.com/us/][KPMG]]      | 2024 | $141,200 |
 | Senior, TA - Audit          | [[https://kpmg.com/us/][KPMG]]      | 2023 | $116,700 |
 | Senior, TA - Audit          | [[https://kpmg.com/us/][KPMG]]      | 2022 | $110,000 |
