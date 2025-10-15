@@ -1,16 +1,73 @@
+:root {
+    --bg: #fafafa;
+    --bg-light: #f0f0f0;
+    --fg: #1b2229;
+    --fg-light: #383a42;
+    --link: #014980;
+    --code: #e45649;
+}
+
 body {
-  max-width: 50em;
-  margin: 1.5rem;
+    background-color: var(--bg);
+    color: var(--fg-light);
+    font-family: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    margin: 1.5rem;
+    max-width: 45em;
+}
+
+a {
+    padding: 0 0.15rem;
+    text-decoration: none;
+}
+
+a,a:active {
+    color: var(--link);
+}
+
+a:hover {
+    background-color: var(--link);
+    color: var(--bg);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--fg);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+nav {
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
 }
 
 nav ul {
-    list-style-type: none;
-    display: flex;
-    padding: 0;
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 
 nav ul li {
-    margin-right: 0.5rem;
+    height: 100%;
+    margin-bottom: 0.5rem;
+	margin-right: 0.5rem;
+	text-align: center;
+}
+
+blockquote {
+    background-color: var(--bg-light);
+    border-left: 8px solid var(--link);
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+}
+
+blockquote p {
+    margin: 0;
 }
 
 img {
@@ -19,9 +76,13 @@ img {
 }
 
 table {
-    border: 1px solid #111;
+    border: 1px dotted var(--fg);
     border-collapse: collapse;
     width: 100%;
+}
+
+colgroup, thead, tbody {
+    border: 1px dotted var(--fg);
 }
 
 pre,
@@ -31,31 +92,41 @@ code {
 }
 
 pre {
-    border: 1px solid #111;
+    border: 1px dotted var(--fg);
     margin: 0.5rem 0;
-    padding: 0.5rem;
     overflow-x: auto;
+    padding: 0.5rem;
 }
 
 time {
-    display: block;
+    margin-right: 0.5rem;
 }
 
 :not(pre)>code {
-    color: #f00;
+    color: var(--code);
+}
+
+.post {
+    align-items: flex-start;
+    display: flex;
+    margin: 0.5rem 0;
+}
+
+.post time {
+    margin-right: 1rem;
+}
+
+footer {
+    margin: 1rem 0;
 }
 
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #222;
-        color: #eee;
-    }
-    
-    a {
-        color: #add8e6;
-    }
-
-    pre {
-        border-color: #eee;
+    :root {
+        --bg: #000000;
+        --bg-light: #1B2229;
+        --fg: #DFDFDF;
+        --fg-light: #BBC2CF;
+        --link: #047ACE;
+        --code: #FF6C6B;
     }
 }
