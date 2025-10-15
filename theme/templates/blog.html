@@ -10,11 +10,10 @@ main %}
 </p>
 <br>
 {% for post in posts %}
-<div>
+<div class="post">
 	<time datetime='{{ post.date | strftime("%Y-%m-%d") }}'
-		>{{ post.date|strftime("%B %d, %Y") }}</time
+		>{{ post.date|strftime("%Y-%m-%d") }}</time
 	>
 	<a href='{{ url_for("blog", slug=post.slug) }}'>{{ post.title }}</a>
 </div>
-<br>
 {% endfor %} {% endblock %}

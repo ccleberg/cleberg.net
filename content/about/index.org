@@ -1,7 +1,7 @@
 #+title: About
 #+slug: index
 
-Hey, I'm */~cmc/*.
+Hey, I'm Christian.
 
 I'm a technology audit manager, working on financial statement audits (SOX/MAR),
 SOC 1-3 reports, and other attestations for KPMG.
