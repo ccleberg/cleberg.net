@@ -113,6 +113,7 @@ time {
 }
 
 .post time {
+    flex-shrink: 0;
     margin-right: 1rem;
 }
 
@@ -126,7 +127,7 @@ footer {
         --bg-light: #1B2229;
         --fg: #DFDFDF;
         --fg-light: #BBC2CF;
-        --link: #047ACE;
+        --link: #67C0FF;
         --code: #FF6C6B;
     }
 }
