@@ -1,0 +1,94 @@
+#+date: <2025-10-24 Fri 19:41:41>
+#+title: Digital Garden
+#+description: A post dedicated to digital gardens, an online space for personal knowledge management, creative exploration, and reflection.
+#+slug: digital-garden
+
+* What's a Digital Garden?
+
+#+caption: Org Roam Digital Garden
+[[https://img.cleberg.net/blog/20251024-digital-garden/orgroam.png]]
+
+A digital garden is a personal space, just for you. It could serve any number of
+purposes, which I'll get into later, but the key is that it serves a specific
+purpose for yourself.
+
+The primary features of a digital garden, as opposed to a personal website or
+blog, is that it is not inherently structured in a strict manner, it may follow
+a free form structure, it may look like a work-in-progress wiki.
+
+At the end of the day, it defines a web page where any type of content exists
+and the author takes time and care to prune it in a specific manner.
+
+* Historical Context
+
+A lot of people talk about [[https://www.eastgate.com/garden/Enter.html][Hypertext Gardens: Delightful Vistas]] by Mark
+Bernstein as the first instance of this phrase on the internet. And while this
+may be true, I want to take a step further back.
+
+Have you heard of a [[https://en.wikipedia.org/wiki/Memex][Memex]]? This hypothetical device was described in Vannevar
+Bush's 1945 article "As We May Think". He envisioned a device that would be able
+to store all of a person's information for them - books, records, and
+communications. The person could then reference the Memex for any information
+and be guided to the correct spot. Essentially, it would the 1940's version of a
+mind mapping or personal knowledge system.
+
+From the Memex to Hypertext Gardens to mind maps to other knowledge management
+systems, humans seem intent on constantly reinventing the art of information
+organization.
+
+The modern web is the result of 30+ years of redesigning the web to streamline
+information. However, in this refinement, we've lost the art and beauty of
+personal websites where people would dump all of the information relevant to
+themselves.
+
+Digital Gardens are a movement to bring these personal websites back and present
+them in a personalized fashion.
+
+* Common Uses
+
+Before I get into /how/ to build a digital garden, I want to touch on the
+potential uses. Everyone has their own reason for building a website and digital
+gardens are no exception.
+
+You may want to build a digital garden for any number of reasons:
+
+- Knowledge management
+- Creative exploration
+- Collaborative learning
+- Personal reflection
+- Artistic expression
+- Data hoarding
+- Social interaction
+
+* How to Build Your Own Garden
+
+If you do want to create your own digital garden, you can get started with a few
+easy steps:
+
+1. *Choose a platform*: You can host a website for free on platforms like GitHub
+   or use a more note-taking platform like Notion or Obsidian.
+2. *Set Up the Structure*: Decide how you want to organize your content. Remember
+   the purpose of a digital garden! Plant all of the information you care about
+   and then work to prune and clean them up as they grow.
+3. *Start with Your Interests*: A digital garden should reflect yourself. Find
+   your passions and start from there.
+4. *Regular Updates*: A garden won't grow if you ignore it. Remember to check in
+   and think if you want to add more, prune things out, or move things around.
+5. *Interlinking Ideas*: Like plants and ecosystems, a digital garden should link
+   together. You may use tags or links to connect items on your own site or
+   perhaps includes links or lists to other gardens you enjoy.
+
+By far the most important piece here is regular updates. You can always fix or
+change things, but the garden won't grow if you don't contribute to it.
+
+* Additional Suggestions
+
+Digital gardens are such an easy way to manage your knowledge and unleash your
+creativity. Instead of sticking to the usual blog format, you get a space where
+your ideas can grow and change over time. Whether you want to document what
+you’re learning, share thoughts with others, or just reflect on your journey, a
+digital garden can be the perfect tool.
+
+I strongly encourage you to create your own today, even if it starts as private
+notes instead of a website! Nothing is ever too small and the point of a garden
+isn't to be perfect, but to be a place where you can experiment and have fun.
