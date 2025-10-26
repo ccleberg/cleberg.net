@@ -5,7 +5,16 @@
 
 * What's a Digital Garden?
 
-#+caption: Org Roam Digital Garden
+Before I start describing digital gardens, I want to show a couple examples that
+are distinct enough to show how varied digital gardens are.
+
+The first is a website ([[https://cadence.moe][cadence.moe]]) and the second is a private collection of
+notes, using [[https://www.orgroam.com/][org-roam]].
+
+#+caption: cadence.moe
+[[https://img.cleberg.net/blog/20251024-digital-garden/cadence.png]]
+
+#+caption: Org Roam
 [[https://img.cleberg.net/blog/20251024-digital-garden/orgroam.png]]
 
 A digital garden is a personal space, just for you. It could serve any number of
