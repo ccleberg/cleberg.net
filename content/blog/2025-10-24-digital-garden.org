@@ -8,7 +8,7 @@
 Before I start describing digital gardens, I want to show a couple examples that
 are distinct enough to show how varied digital gardens are.
 
-The first is a website([[https://avas.space][ava's space]]) and the second is a private collection of
+The first is a website ([[https://avas.space][ava's space]]) and the second is a private collection of
 notes, using [[https://www.orgroam.com/][org-roam]].
 
 #+caption: avas.space
