@@ -15,7 +15,7 @@ really any reason that I had any of that CSS at all?
 
 | Old Theme                                                             | New  Theme                                                          |
 |-----------------------------------------------------------------------+---------------------------------------------------------------------|
-| https://img.cleberg.net/blog/20250905-human-website-design/after.png | https://img.cleberg.net/blog/20250925-minimalist-website-redesign/minimal.png |
+| https://img.cleberg.net/blog/20250905-human-website-design/after.webp | https://img.cleberg.net/blog/20250925-minimalist-website-redesign/minimal.webp |
 
 * Inspiration
 

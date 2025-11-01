@@ -17,7 +17,7 @@ are now supported. This is a great jump from the state it was at in 2022 - 2023
 when I last checked.
 
 #+caption: Asahi Linux Device Support
-[[https://img.cleberg.net/blog/20250502-asahi-linux/device_support.png]]
+[[https://img.cleberg.net/blog/20250502-asahi-linux/device_support.webp]]
 
 ** Installation
 
@@ -60,13 +60,13 @@ see I started using the WhiteSur theme as it provides a more comfortable layout
 for macOS users.
 
 #+caption: KDE
-[[https://img.cleberg.net/blog/20250502-asahi-linux/kde.png]]
+[[https://img.cleberg.net/blog/20250502-asahi-linux/kde.webp]]
 
 When diving into the system information panel, we can see that this machine is
 running Fedora Linux Asahi Remix 42 on an Apple M2 Pro laptop with 16GB of RAM.
 
 #+caption: System Information
-[[https://img.cleberg.net/blog/20250502-asahi-linux/sysinfo.png]]
+[[https://img.cleberg.net/blog/20250502-asahi-linux/sysinfo.webp]]
 
 As I noted above, the first thing I did after installing Asahi and taking a few
 screenshots was to install and change themes.
@@ -77,7 +77,7 @@ color palette, as well as the Nothing theme that uses a dark black and red color
 palette.
 
 #+caption: Themes
-[[https://img.cleberg.net/blog/20250502-asahi-linux/themes.png]]
+[[https://img.cleberg.net/blog/20250502-asahi-linux/themes.webp]]
 
 One of the things I use my laptop for the most is consuming media (music,
 television shows, movies, etc.), so I had to make sure that my bluetooth devices
@@ -92,14 +92,14 @@ capabilities like pausing media when you remove an AirPod from your ear. The
 lack of these advanced features doesn't bother me, but some people may be.
 
 #+caption: Bluetooth
-[[https://img.cleberg.net/blog/20250502-asahi-linux/bluetooth.png]]
+[[https://img.cleberg.net/blog/20250502-asahi-linux/bluetooth.webp]]
 
 Next, I was able to connect my PS5 controller via USB-C and Asahi picked up the
 connect instantly in the settings menu. You can move the sticks and press all of
 the buttons to see if they're recognized within this settings menu.
 
 #+caption: Game Pad Settings
-[[https://img.cleberg.net/blog/20250502-asahi-linux/gamepad_settings.png]]
+[[https://img.cleberg.net/blog/20250502-asahi-linux/gamepad_settings.webp]]
 
 I had a bit of an issue launching Steam the first time, as I was getting an AVC
 Denial error from SELinux. To fix this, I had to manually allow the Steam

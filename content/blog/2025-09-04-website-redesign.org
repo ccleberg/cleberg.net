@@ -11,7 +11,7 @@ take me next./
 
 | Old Theme                                                             | New  Theme                                                           |
 |-----------------------------------------------------------------------+----------------------------------------------------------------------|
-| https://img.cleberg.net/blog/20250905-human-website-design/before.png | https://img.cleberg.net/blog/20250905-human-website-design/after.png |
+| https://img.cleberg.net/blog/20250905-human-website-design/before.webp | https://img.cleberg.net/blog/20250905-human-website-design/after.webp |
 
 * Inspiration
 

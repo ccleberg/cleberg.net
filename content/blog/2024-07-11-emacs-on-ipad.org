@@ -13,7 +13,7 @@ I recommend [[https://apps.apple.com/us/app/ish-shell/id1436902243][iSH]], since
 and will allow you to install packages that you need.
 
 #+caption: iSH Application
-[[https://img.cleberg.net/blog/20240711-emacs-on-ipad/ish.png]]
+[[https://img.cleberg.net/blog/20240711-emacs-on-ipad/ish.webp]]
 
 ** Require Packages
 
@@ -26,7 +26,7 @@ apk add emacs ripgrep fd findutils
 #+end_src
 
 #+caption: Package !Installation
-[[https://img.cleberg.net/blog/20240711-emacs-on-ipad/dependencies.png]]
+[[https://img.cleberg.net/blog/20240711-emacs-on-ipad/dependencies.webp]]
 
 ** Emacs
 
@@ -38,7 +38,7 @@ incredibly slow and buggy that I was not even able to take screenshots. Someone
 smarter than me could likely get it to work with a little tinkering.
 
 #+caption: Emacs
-[[https://img.cleberg.net/blog/20240711-emacs-on-ipad/emacs.png]]
+[[https://img.cleberg.net/blog/20240711-emacs-on-ipad/emacs.webp]]
 
 *** MELPA
 
@@ -47,13 +47,13 @@ able to search through their 5700+ packages instead of just ELPA packages. If
 you don't, you will only have access to ELPA packages like the ones below.
 
 #+caption: package-install
-[[https://img.cleberg.net/blog/20240711-emacs-on-ipad/melpa.png]]
+[[https://img.cleberg.net/blog/20240711-emacs-on-ipad/melpa.webp]]
 
 Once you have MELPA, you can install packages like the =dashboard= package shown
 below.
 
 #+caption: emacs-dashboard
-[[https://img.cleberg.net/blog/20240711-emacs-on-ipad/dashboard.png]]
+[[https://img.cleberg.net/blog/20240711-emacs-on-ipad/dashboard.webp]]
 
 *** Speed
 
