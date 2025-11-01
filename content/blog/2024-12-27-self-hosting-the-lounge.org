@@ -59,7 +59,7 @@ browsing from a different device. Don't forget to allow the port through your
 machine's firewall, if you have one enabled.
 
 #+caption: Login
-[[https://img.cleberg.net/blog/20241229-thelounge/login.png]]
+[[https://img.cleberg.net/blog/20241229-thelounge/login.webp]]
 
 ** Nginx Reverse Proxy
 
@@ -154,10 +154,10 @@ bottom of the sidebar and connect to individual channels or users via the plus
 (=+=) button next to your server's name in the sidebar.
 
 #+caption: New Server Connection
-[[https://img.cleberg.net/blog/20241229-thelounge/new_connection.png]]
+[[https://img.cleberg.net/blog/20241229-thelounge/new_connection.webp]]
 
 #+caption: Existing Server Connection
-[[https://img.cleberg.net/blog/20241229-thelounge/existing_connection.png]]
+[[https://img.cleberg.net/blog/20241229-thelounge/existing_connection.webp]]
 
 #+caption: Channel View
-[[https://img.cleberg.net/blog/20241229-thelounge/channel.png]]
+[[https://img.cleberg.net/blog/20241229-thelounge/channel.webp]]

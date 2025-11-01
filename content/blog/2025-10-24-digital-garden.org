@@ -12,10 +12,10 @@ The first is a website ([[https://avas.space][ava's space]]) and the second is a
 notes, using [[https://www.orgroam.com/][org-roam]].
 
 #+caption: avas.space
-[[https://img.cleberg.net/blog/20251024-digital-garden/ava.png]]
+[[https://img.cleberg.net/blog/20251024-digital-garden/ava.webp]]
 
 #+caption: Org Roam
-[[https://img.cleberg.net/blog/20251024-digital-garden/orgroam.png]]
+[[https://img.cleberg.net/blog/20251024-digital-garden/orgroam.webp]]
 
 A digital garden is a personal space, just for you. It could serve any number of
 purposes, which I'll get into later, but the key is that it serves a specific

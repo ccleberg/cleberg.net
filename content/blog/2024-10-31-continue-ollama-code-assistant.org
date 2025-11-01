@@ -200,19 +200,19 @@ Continue:
 Below are a few screenshots from my current VS Codium window:
 
 #+caption: Available Continue Commands
-[[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_commands.png]]
+[[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_commands.webp]]
 
 #+caption: Continue Fullscreen Chat Window
-[[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_fullscreen.png]]
+[[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_fullscreen.webp]]
 
 #+caption: Inline Hotkeys
-[[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_inline_hotkeys.png]]
+[[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_inline_hotkeys.webp]]
 
 #+caption: Inline Editing Suggestions
-[[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_inline.png]]
+[[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_inline.webp]]
 
 #+caption: Sidebar Context Window
-[[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_sidebar.png]]
+[[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_sidebar.webp]]
 
 * Conclusion
 

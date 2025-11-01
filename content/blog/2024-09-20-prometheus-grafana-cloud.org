@@ -276,7 +276,7 @@ and determine what Grafana should do when an alert is triggered.
 ** OnCall
 
 #+caption: OnCall
-[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/oncall.png]]
+[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/oncall.webp]]
 
 Within the Alerts & IRM section of Grafana (=/alerts-and-incidents=), open the
 Users page.
@@ -298,12 +298,12 @@ users and teams to be on call for specific date and time ranges. For my
 purposes, I put myself on-call 24/7 so that I receive all alerts.
 
 #+caption: User Information
-[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/irm_user_info.png]]
+[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/irm_user_info.webp]]
 
 ** Alerting
 
 #+caption: Alerting Insights
-[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/alerting_insights.png]]
+[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/alerting_insights.webp]]
 
 Now that we have defined users and team associated with an on-call schedule and
 configured to receive the proper alerts, let's define a rule that will generate
@@ -322,13 +322,13 @@ evaluation group. This is connected to our Grafana email, but can be associated
 with any notification policy.
 
 #+caption: New Alert Rule
-[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/new_alert.png]]
+[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/new_alert.webp]]
 
 When the alert fires, it will generate an email (or whatever notification policy
 you assigned) and will look something like the following image.
 
 #+caption: Alerting Example
-[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/email_alert.png]]
+[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/email_alert.webp]]
 
 ** Dashboards
 
@@ -336,13 +336,13 @@ As promised above, here are some dashboard screenshots based on the
 configurations above.
 
 #+caption: Nginx Dashboard
-[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/dashboard_nginx.png]]
+[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/dashboard_nginx.webp]]
 
 #+caption: Node Dashboard
-[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/dashboard_node.png]]
+[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/dashboard_node.webp]]
 
 #+caption: OnCall Dashboard
-[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/dashboard_oncall.png]]
+[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/dashboard_oncall.webp]]
 
 #+caption: Prometheus Dashboard
-[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/dashboard_prometheus.png]]
+[[https://img.cleberg.net/blog/20240920-prometheus-grafana-cloud/dashboard_prometheus.webp]]
