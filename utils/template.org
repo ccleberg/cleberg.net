@@ -1,7 +1,6 @@
 #+date:
 #+title:
 #+description:
-#+filetags:
 #+slug:
 #+draft: t
 
