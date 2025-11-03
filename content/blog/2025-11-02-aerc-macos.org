@@ -172,8 +172,8 @@ text/html=! html
 #+end_quote
 
 You can create the file following my process below, which will create an
-executable in the location specific in my =aerc.conf= file. I put it in
-=/usr/local/bin= but you can put it anywhere as long as it exists in the file
+executable in the location specified in my =aerc.conf= file. I put it in
+=/usr/local/bin=, but you can put it anywhere as long as it exists in the file
 path specific within your configuration file.
 
 #+begin_src sh
