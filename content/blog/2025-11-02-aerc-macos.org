@@ -1,0 +1,418 @@
+#+date: <2025-11-02 Sun 10:07:14>
+#+title: Using aerc on macOS
+#+description: Learn how I use aerc, a TUI email client, on macOS.
+#+slug: aerc-macos
+
+#+caption: aerc-mail
+https://img.cleberg.net/blog/20251102-aerc-macos/read.webp
+
+Shout-out to [[https://baty.net/posts/2025/10/using-aerc-for-email/][Jack Baty]] for inspiring me to write about my =aerc-mail= client
+after chatting about it over email recently!
+
+* Overview
+
+[[https://aerc-mail.org/][aerc]] is a text user interface (TUI) email client with intuitive defaults, easy
+setup, and hassle-free operations. This post will walk through my personal
+configuration for aerc on macOS.
+
+* Installation
+
+Since I am on macOS, I opted to install aerc from Homebrew. There are build
+options for additional modules if you build from source, but I am okay with the
+default options.
+
+You can view the information about the package prior to installing it, if you
+wish:
+
+#+begin_src sh
+brew info aerc
+#+end_src
+
+#+begin_src sh
+==> aerc: stable 0.21.0 (bottled), HEAD
+Email client that runs in your terminal
+https://aerc-mail.org/
+Installed
+/opt/homebrew/Cellar/aerc/0.21.0 (48 files, 23MB) *
+  Poured from bottle using the formulae.brew.sh API on 2025-10-05 at 19:51:31
+From: https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/a/aerc.rb
+License: MIT
+==> Dependencies
+Build: go ✘, scdoc ✘
+Required: notmuch ✔
+==> Options
+--HEAD
+	Install HEAD version
+==> Downloading https://formulae.brew.sh/api/formula/aerc.json
+==> Analytics
+install: 136 (30 days), 560 (90 days), 1,772 (365 days)
+install-on-request: 136 (30 days), 560 (90 days), 1,772 (365 days)
+build-error: 3 (30 days)
+#+end_src
+
+Once you confirm you want to install this package, run the following:
+
+#+begin_src sh
+brew install aerc
+#+end_src
+
+* First-Time Wizard
+
+When you run aerc for the first time, an IMAP & SMTP wizard will walk you
+through a basic setup for your email account(s).
+
+On macOS, aerc will save your configuration files in the following location:
+=~/Library/Preferences/aerc=.
+
+I tried to create a =~/.config/aerc= directory, but the Library directory above
+took precedence. If you truly need to keep your files in =~/.config=, you could
+probably symlink that to the Library location. However, I accepted my fate and
+will just edit the files within the Library directory.
+
+* Configuration
+
+Once you have installed and setup aerc for the first time, you can configure the
+client and account settings.
+
+As noted above, I will be working within the Library directory that aerc
+defaults to when installed via brew.
+
+#+begin_src sh
+cd ~/Library/Preferences/aerc
+#+end_src
+
+This directory should contain the following files. You can open the
+=accounts.conf= file to confirm it contains the information you input during the
+wizard process.
+
+| File            | Purpose                                                     |
+|-----------------+-------------------------------------------------------------|
+| =accounts.conf= | Contains account-specific settings for IMAP & SMTP accounts |
+| =aerc.conf=     | Contains program-wide settings                              |
+| =binds.conf=    | Contains key bindings for aerc                              |
+
+I'll share my personal configuration, which is close to the defaults that
+existed at the time of writing this post.
+
+=accounts.conf=
+
+This is the information from the wizard. The only further customization I
+provided is the default signature file to be appended to each message I compose.
+
+#+begin_src conf
+[Personal]
+source         = imaps://hello%40cleberg.net:PASSWORD@imap.migadu.com
+outgoing       = smtps://hello%40cleberg.net:PASSWORD@smtp.migadu.com
+default        = INBOX
+from           = Christian Cleberg <hello@cleberg.net>
+copy-to        = Sent
+cache-headers  = true
+signature-file = /Users/cmc/Library/Preferences/aerc/sigs/default
+#+end_src
+
+=sigs/default=
+
+Any content within this file will be appended to my messages, as noted above.
+
+#+begin_src text
+Christian Cleberg <hello@cleberg.net>
+GPG: 3917 973F B159 BBB8 6194 5385 69451A51 7AC0 CB37
+#+end_src
+
+=aerc.conf=
+
+This contains quite a few customizations for my preferences related to
+downloads, encryption, mouse controls, editor, and message composition.
+
+#+begin_src conf
+[general]
+# Prefer downloads to be saved to the Downloads folder
+default-save-path=~/Downloads
+# Use GPG for PGP encryption
+pgp-provider=gpg
+
+[ui]
+# Enable mouse controls for scrolling, paging, etc.
+mouse-enabled=true
+
+[statusline]
+[viewer]
+# Use emacs instead of vi
+pager=/usr/local/bin/emacs_viewer
+
+[compose]
+# Use emacs instead of vi
+editor=emacs
+# Add Cc as a default field to view each time I compose a message
+header-layout=To|From,Cc,Subject
+# Allow me to edit headers when composing (so I can customize From address)
+edit-headers=true
+# Warn me if I mentioned these words but don't attach a file
+empty-subject-warning=true
+no-attachment-warning=^[^>]*attach(ed|ment)
+
+[multipart-converters]
+
+[filters]
+text/plain=colorize
+text/calendar=calendar
+message/delivery-status=colorize
+message/rfc822=colorize
+text/html=! html
+.headers=colorize
+
+[openers]
+[hooks]
+[templates]
+#+end_src
+
+#+begin_quote
+*IMPORTANT*: If you use the =pager= option above that I'm using, you will need
+ to create the =emacs_viewer= file as well.
+#+end_quote
+
+You can create the file following my process below, which will create an
+executable in the location specific in my =aerc.conf= file. I put it in
+=/usr/local/bin= but you can put it anywhere as long as it exists in the file
+path specific within your configuration file.
+
+#+begin_src sh
+sudo nano /usr/local/bin/emacs_viewer
+#+end_src
+
+Paste this inside the file:
+
+#+begin_src sh
+#!/bin/bash
+emacs -nw - < "$1"
+#+end_src
+
+#+begin_src sh
+sudo chmod +x /usr/local/bin/emacs_viewer
+#+end_src
+
+=binds.conf=
+
+Finally, here are the key bindings. I did not change these, but I'm showing them
+here in case you have an issue and want to see the defaults.
+
+#+begin_src conf
+# Binds are of the form <key sequence> = <command to run>
+# To use '=' in a key sequence, substitute it with "Eq": "<Ctrl+Eq>"
+# If you wish to bind #, you can wrap the key sequence in quotes: "#" = quit
+<C-p> = :prev-tab<Enter>
+<C-PgUp> = :prev-tab<Enter>
+<C-n> = :next-tab<Enter>
+<C-PgDn> = :next-tab<Enter>
+\[t = :prev-tab<Enter>
+\]t = :next-tab<Enter>
+<C-t> = :term<Enter>
+? = :help keys<Enter>
+<C-c> = :prompt 'Quit?' quit<Enter>
+<C-q> = :prompt 'Quit?' quit<Enter>
+<C-z> = :suspend<Enter>
+
+[messages]
+q = :prompt 'Quit?' quit<Enter>
+
+j = :next<Enter>
+<Down> = :next<Enter>
+<C-d> = :next 50%<Enter>
+<C-f> = :next 100%<Enter>
+<PgDn> = :next 100%<Enter>
+
+k = :prev<Enter>
+<Up> = :prev<Enter>
+<C-u> = :prev 50%<Enter>
+<C-b> = :prev 100%<Enter>
+<PgUp> = :prev 100%<Enter>
+g = :select 0<Enter>
+G = :select -1<Enter>
+
+J = :next-folder<Enter>
+<C-Down> = :next-folder<Enter>
+K = :prev-folder<Enter>
+<C-Up> = :prev-folder<Enter>
+H = :collapse-folder<Enter>
+<C-Left> = :collapse-folder<Enter>
+L = :expand-folder<Enter>
+<C-Right> = :expand-folder<Enter>
+
+v = :mark -t<Enter>
+<Space> = :mark -t<Enter>:next<Enter>
+V = :mark -v<Enter>
+
+T = :toggle-threads<Enter>
+zc = :fold<Enter>
+zo = :unfold<Enter>
+za = :fold -t<Enter>
+zM = :fold -a<Enter>
+zR = :unfold -a<Enter>
+<tab> = :fold -t<Enter>
+
+zz = :align center<Enter>
+zt = :align top<Enter>
+zb = :align bottom<Enter>
+
+<Enter> = :view<Enter>
+d = :choose -o y 'Really delete this message' delete-message<Enter>
+D = :delete<Enter>
+a = :archive flat<Enter>
+A = :unmark -a<Enter>:mark -T<Enter>:archive flat<Enter>
+
+C = :compose<Enter>
+m = :compose<Enter>
+
+b = :bounce<space>
+
+rr = :reply -a<Enter>
+rq = :reply -aq<Enter>
+Rr = :reply<Enter>
+Rq = :reply -q<Enter>
+
+c = :cf<space>
+$ = :term<space>
+! = :term<space>
+| = :pipe<space>
+
+/ = :search<space>
+\ = :filter<space>
+n = :next-result<Enter>
+N = :prev-result<Enter>
+<Esc> = :clear<Enter>
+
+s = :split<Enter>
+S = :vsplit<Enter>
+
+pl = :patch list<Enter>
+pa = :patch apply <Tab>
+pd = :patch drop <Tab>
+pb = :patch rebase<Enter>
+pt = :patch term<Enter>
+ps = :patch switch <Tab>
+
+[messages:folder=Drafts]
+<Enter> = :recall<Enter>
+
+[view]
+/ = :toggle-key-passthrough<Enter>/
+q = :close<Enter>
+O = :open<Enter>
+o = :open<Enter>
+S = :save<space>
+| = :pipe<space>
+D = :delete<Enter>
+A = :archive flat<Enter>
+
+<C-y> = :copy-link <space>
+<C-l> = :open-link <space>
+
+f = :forward<Enter>
+rr = :reply -a<Enter>
+rq = :reply -aq<Enter>
+Rr = :reply<Enter>
+Rq = :reply -q<Enter>
+
+H = :toggle-headers<Enter>
+<C-k> = :prev-part<Enter>
+<C-Up> = :prev-part<Enter>
+<C-j> = :next-part<Enter>
+<C-Down> = :next-part<Enter>
+J = :next<Enter>
+<C-Right> = :next<Enter>
+K = :prev<Enter>
+<C-Left> = :prev<Enter>
+
+[view::passthrough]
+$noinherit = true
+$ex = <C-x>
+<Esc> = :toggle-key-passthrough<Enter>
+
+[compose]
+# Keybindings used when the embedded terminal is not selected in the compose
+# view
+$noinherit = true
+$ex = <C-x>
+$complete = <C-o>
+<C-k> = :prev-field<Enter>
+<C-Up> = :prev-field<Enter>
+<C-j> = :next-field<Enter>
+<C-Down> = :next-field<Enter>
+<A-p> = :switch-account -p<Enter>
+<C-Left> = :switch-account -p<Enter>
+<A-n> = :switch-account -n<Enter>
+<C-Right> = :switch-account -n<Enter>
+<tab> = :next-field<Enter>
+<backtab> = :prev-field<Enter>
+<C-p> = :prev-tab<Enter>
+<C-PgUp> = :prev-tab<Enter>
+<C-n> = :next-tab<Enter>
+<C-PgDn> = :next-tab<Enter>
+
+[compose::editor]
+# Keybindings used when the embedded terminal is selected in the compose view
+$noinherit = true
+$ex = <C-x>
+<C-k> = :prev-field<Enter>
+<C-Up> = :prev-field<Enter>
+<C-j> = :next-field<Enter>
+<C-Down> = :next-field<Enter>
+<C-p> = :prev-tab<Enter>
+<C-PgUp> = :prev-tab<Enter>
+<C-n> = :next-tab<Enter>
+<C-PgDn> = :next-tab<Enter>
+
+[compose::review]
+# Keybindings used when reviewing a message to be sent
+# Inline comments are used as descriptions on the review screen
+y = :send<Enter> # Send
+n = :abort<Enter> # Abort (discard message, no confirmation)
+s = :sign<Enter> # Toggle signing
+x = :encrypt<Enter> # Toggle encryption to all recipients
+v = :preview<Enter> # Preview message
+p = :postpone<Enter> # Postpone
+q = :choose -o d discard abort -o p postpone postpone<Enter> # Abort or postpone
+e = :edit<Enter> # Edit (body and headers)
+a = :attach<space> # Add attachment
+d = :detach<space> # Remove attachment
+
+[terminal]
+$noinherit = true
+$ex = <C-x>
+
+<C-p> = :prev-tab<Enter>
+<C-n> = :next-tab<Enter>
+<C-PgUp> = :prev-tab<Enter>
+<C-PgDn> = :next-tab<Enter>
+#+end_src
+
+* Operation
+
+Now that I have configured the program to my liking, I can run =aerc= in my
+terminal and see my changes reflected!
+
+Personally, I keep aerc running in a terminal at all times, since it has the
+operation to ring a bell when a new message arrives.
+
+#+caption: Notification
+[[https://img.cleberg.net/blog/20251102-aerc-macos/notification.webp]]
+
+The mailbox views and composition screens are fairly standard, but it does a
+great job at displaying information effectively.
+
+#+caption: Inbox
+[[https://img.cleberg.net/blog/20251102-aerc-macos/inbox.webp]]
+
+#+caption: Compose Message
+[[https://img.cleberg.net/blog/20251102-aerc-macos/compose.webp]]
+
+#+caption: Send Message
+[[https://img.cleberg.net/blog/20251102-aerc-macos/send.webp]]
+
+#+caption: Read Message
+[[https://img.cleberg.net/blog/20251102-aerc-macos/read.webp]]
+
+All in all, I love aerc and far prefer it to my previous client (neomutt). In
+certain cases, Thunderbird is more convenient, but I don't find myself opening
+it at all lately. I will definitely update this post in the future if I find
+anything extraordinary to add about aerc.
