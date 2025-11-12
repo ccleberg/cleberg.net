@@ -5,12 +5,13 @@
 
 * Basic AES
 
-If you're not familiar with encryption techniques, [[https://en.wikipedia.org/wiki/Advanced_Encryption_Standard][AES]] is the *Advanced
-Encryption Standard*. The National Institute of Standards and Technology
-established this specification, sub-selected from the Rijndael family of ciphers
-(128, 192, and 256 bits) in 2001. Furthering its popularity and status, the US
-government chose AES as their default encryption method for top-secret data,
-removing the previous standard which had been in place since 1977.
+If you're not familiar with encryption techniques, the Advanced Encryption
+Standard ([[https://en.wikipedia.org/wiki/Advanced_Encryption_Standard][AES]]) is a specification for encryption of electronic data. The
+National Institute of Standards and Technology established this specification,
+sub-selected from the Rijndael family of ciphers (128, 192, and 256 bits)
+in 2001. Furthering its popularity and status, the US government chose AES as
+their default encryption method for top-secret data, removing the previous
+standard which had been in place since 1977.
 
 AES has proven to be a safe encryption method, with 7-round and 8-round attacks
 making no material improvements since the release of this encryption standard
