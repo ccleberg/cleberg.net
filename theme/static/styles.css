@@ -37,6 +37,15 @@ h1,h2,h3,h4,h5,h6 {
     text-transform: uppercase;
 }
 
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 nav {
 	align-items: center;
 	display: flex;
