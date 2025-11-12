@@ -2,39 +2,36 @@
 #+slug: index
 
 ** Salary Transparency
-:PROPERTIES:
-:CUSTOM_ID: salary-transparency
-:END:
-The data below details the base salary information for each job I've held. This
-information is posted publicly to ensure others in my position have a solid
-reference point when determining if their current or proposed salary is
+
+The data below details the base salary information for each job I've held. I
+have posted this information publicly to ensure others in my position have a
+solid reference point when determining if their current or proposed salary is
 appropriate.
 
-While sites like Glassdoor are locking salary data behind a paywall, LinkedIn is
-discontinuing LinkedIn Salary, and helpful websites like [[https://www.big4transparency.com/][Big 4 Transparency]] are
-extremely rare, I wanted to provide my personal data publicly and freely to
-those who need it.
+While sites like Glassdoor are locking salary data behind a pay wall, LinkedIn
+is discontinuing LinkedIn Salary, and helpful websites like [[https://www.big4transparency.com/][Big 4 Transparency]]
+are rare, I wanted to provide my personal data publicly and freely to those who
+need it.
 
 I have seen what can happen when great employees don't know the market values
 for their skills and I happily help those in my teams, so I'm happy to extend
 this information to the online community.
 
-As a final note, there are numerous reasons that people in the same role are
-paid differently (expertise, years of experience, certifications, education,
-etc.) and that the data in this table should only be used as a single point of
+As a final note, there are numerous reasons companies pay people in the same
+role differently (e.g., expertise, years of experience, certifications, or
+education). You should only use the data in this table as a single point of
 reference, not the whole story.
 
 ** Salary Data
-:PROPERTIES:
-:CUSTOM_ID: salary-data
-:END:
-Note: When in a role that gives periodic raises, I will create a new record with
-the new base salary in the table below. See the KPMG records for an example of a
-raise while in the same role.
 
-This table is a compressed version of the data, so that it can fit reliably on
-screens. For the full dataset with all fields, open the =source data= link below
-the table.
+#+BEGIN_QUOTE
+When in a role that gives periodic raises, I will create a new record with the
+new base salary in the table below. See the KPMG records for an example of a
+raise while in the same role.
+#+END_QUOTE
+
+This table is a compressed version of the data so that it can fit reliably on
+screens. For the full dataset with all fields, you can view the [[ https://cleberg.net/salary.csv][source data]].
 
 | Title                       | Company   | Year | Salary   |
 |-----------------------------+-----------+------+----------|
@@ -51,20 +48,16 @@ the table.
 | Teaching Assistant          | [[https://www.unl.edu/][UNL]]       | 2017 | $7/hour  |
 | Community Management Intern | [[https://www.walgreensbootsalliance.com/][Walgreens]] | 2017 | $14/hour |
 
-[[[https://cleberg.net/salary.csv][source data]]]
-
 ** Salary Visualization
-:PROPERTIES:
-:CUSTOM_ID: salary-visualization
-:END:
-See the graph below for a visualization of each job's salary over time, as well
-as percentage increases or decreases between jobs.
+
+View the graph below for a visualization of each job's salary over time, as well
+as the percentage of change between jobs.
 
 #+caption: Salary Visualization
 [[https://img.cleberg.net/blog/salary/salary.webp]]
 
-This page was inspired by [[https://xeiaso.net/salary-transparency/][Xe]], and I'm quoting the following wording from them as
-I want to reiterate this piece:
+[[https://xeiaso.net/salary-transparency/][Xe]] inspired me to publish this page, so I will quote the following wording from
+them as I want to reiterate this piece:
 
 #+begin_quote
 Please consider publishing your salary data like this as well. By open,

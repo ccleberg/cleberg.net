@@ -6,7 +6,7 @@ This is a [[https://nownownow.com/about][/now]] page.
 
 * Work
 
-- Finally through the end of my 9/30 clients and focusing on my 12/31
+- Finally through the end of my 9/30 clients, and focusing on my 12/31
   engagements now.
 - Autumn is transforming my area toward winter, so less outdoor activities and
   work. Instead, we're cleaning up the outside in preparation for winter and
@@ -29,8 +29,8 @@ This is a [[https://nownownow.com/about][/now]] page.
 * Tech
 
 - Desperately searching for ideas to build that interest me personally. I build
-  a lot of analytical solutions at work, but haven't built anything personal in
-  a while.
+  analytical solutions at work often, but haven't built anything personal in a
+  while.
 - Deleted /even more/ online accounts. I believe I started around 300+ in my
   password manager around a year ago and I'm down to ~150. I'm running into the
   point where the remainder are accounts I simply can't delete right now.

@@ -34,4 +34,5 @@
 | [[https://send.cleberg.net/][Send]]           | Simple, private file sharing                      |
 | [[https://slash.cleberg.net/][Slash]]          | Bookmark and link sharing platform                |
 
-See the [[https://git.cleberg.net/cleberg.net.git/log/content/services/index.org][git log]] if you want to see a log of changes made to this page.
+
+View the [[https://git.cleberg.net/cleberg.net.git/log/content/services/index.org][git log]] for information regarding this page's history.
