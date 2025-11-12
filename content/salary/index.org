@@ -31,7 +31,7 @@ raise while in the same role.
 #+END_QUOTE
 
 This table is a compressed version of the data so that it can fit reliably on
-screens. For the full dataset with all fields, you can view the [[ https://cleberg.net/salary.csv][source data]].
+screens. For the full dataset with all fields, you can view the [[https://cleberg.net/salary.csv][source data]].
 
 | Title                       | Company   | Year | Salary   |
 |-----------------------------+-----------+------+----------|
