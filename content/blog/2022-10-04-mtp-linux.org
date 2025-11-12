@@ -3,31 +3,29 @@
 #+description: Instructions for mounting and accessing Media Transfer Protocol (MTP) compatible mobile devices on Fedora Linux using jmtpfs for file transfer and management.
 #+slug:        mtp-linux
 
-I recently ran into trouble attempting to mount my GrapheneOS phone to
-my laptop running Fedora Linux via the
-[[https://en.wikipedia.org/wiki/Media_transfer_protocol][Media Transfer
-Protocol]] (MTP) and discovered a simple and effective solution.
+I recently ran into trouble attempting to mount my GrapheneOS phone to my laptop
+running Fedora Linux via the [[https://en.wikipedia.org/wiki/Media_transfer_protocol][Media Transfer Protocol]] (MTP) and discovered a
+simple and effective solution.
 
-* Use a USB 3.0 Port
+* Use a Universal Serial Bus (USB) 3.0 Port
 
-First, ensure that the device was plugged in to the laptop through a USB
-3.0 port, if possible. From a brief glance online, it seems that USB 2.0
-ports may cause issues with dropped connections over MTP. This is purely
-anecdotal since I don't have any evidence to link showing that USB 2.0
-causes issues, but I can confirm that switching to a USB 3.0 port seemed
-to cut out most of my issues.
+First, ensure that the device was plugged in to the laptop through a USB 3.0
+port, if possible. From a brief glance online, it seems that USB 2.0 ports may
+cause issues with dropped connections over MTP. This is purely anecdotal since I
+don't have any evidence to link showing that USB 2.0 causes issues, but I can
+confirm that switching to a USB 3.0 port seemed to cut out most of my issues.
 
 * Switch USB Preferences to MTP
 
-Secondly, you need to ensure that the phone's USB preferences/mode is
-changed to MTP or File Transfer once the phone is plugged in. Other
-modes will not allow you to access the phone's file system.
+Secondly, you need to ensure that the phone's USB preferences/mode is changed to
+MTP or File Transfer once the phone is plugged in. Other modes will not allow
+you to access the phone's file system.
 
 * Install =jmtpfs=
 
-Next, I used the =jmtpfs= package to mount my phone to my laptop. There
-are other packages that exist, but this one worked perfectly for me. On
-Fedora Linux, you can install it like this:
+Next, I used the =jmtpfs= package to mount my phone to my laptop. There are
+other packages that exist, but this one worked perfectly for me. On Fedora
+Linux, you can install it like this:
 
 #+begin_src sh
 sudo dnf install jmtpfs -y
@@ -35,8 +33,8 @@ sudo dnf install jmtpfs -y
 
 * Create a Mount Point
 
-Once you have the package installed, you just need to create a folder
-for the device to use as a mount point. In my case, I used =/mnt/pixel=:
+Once you have the package installed, you just need to create a folder for the
+device to use as a mount point. In my case, I used =/mnt/pixel=:
 
 #+begin_src sh
 sudo mkdir /mnt/pixel
@@ -45,8 +43,8 @@ sudo chown -R $USER:$USER /mnt/pixel
 
 * Mount & Access the Phone's File System
 
-Finally, plug-in and mount the device, and you should be able to see all
-storage (internal and external) inside your new folder!
+Finally, plug-in and mount the device, and you should be able to see all storage
+(internal and external) inside your new folder!
 
 #+begin_src sh
 jmtpfs /mnt/pixel
@@ -59,16 +57,15 @@ Device 0 (VID=18d1 and PID=4ee1) is a Google Inc Nexus/Pixel (MTP).
 Android device detected, assigning default bug flags
 #+end_src
 
-Now you are mounted and can do anything you'd like with the device's
-files:
+Now you are mounted and can do anything you'd like with the device's files:
 
 #+begin_src sh
 cd /mnt/pixel
 ls -lha
 #+end_src
 
-From here, you will be able to see any internal or external storage
-available on the device:
+From here, you will be able to see any internal or external storage available on
+the device:
 
 #+begin_src sh
 total 0

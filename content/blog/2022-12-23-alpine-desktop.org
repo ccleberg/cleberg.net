@@ -5,30 +5,31 @@
 
 * Isn't Alpine Linux for Servers?
 
-This is a question I see a lot when people are presented with an example
-of Alpine Linux running as a desktop OS.
+This is a question I see a lot when people are presented with an example of
+Alpine Linux running as a desktop operating system (OS).
 
-While Alpine is small, fast, and minimal, that doesn't stop it from
-functioning at a productive level for desktop users.
+While Alpine is small, fast, and minimal, that doesn't stop it from functioning
+at a productive level for desktop users.
 
-This post is documentation of how I installed and modified Alpine Linux
-to become my daily desktop OS.
+This post is documentation of how I installed and modified Alpine Linux to
+become my daily desktop OS.
 
 * Installation
 
-Note that I cover the installation of Alpine Linux in my other post, so
-I won't repeat it here: [[../alpine-linux/][Alpine Linux: My New Server
-OS]].
+Note that I cover the installation of Alpine Linux in my other post, so I won't
+repeat it here: [[https://cleberg.net/blog/alpine-linux.html][Alpine Linux Essentials: Installing and Setting Up a Secure
+Minimal Server]].
 
-Basically, get a bootable USB or whatever you prefer with Alpine on it,
-boot the ISO, and run the setup script.
+Basically, get a bootable USB (Universal Serial Bus) device or whatever you
+prefer with Alpine on it, boot the optical disc image (ISO), and run the setup
+script.
 
 #+begin_src sh
 setup-alpine
 #+end_src
 
-Once you have gone through all the options and installer finishes
-without errors, reboot.
+Once you have gone through all the options and installer finishes without
+errors, reboot.
 
 #+begin_src sh
 reboot
@@ -37,9 +38,9 @@ reboot
 * Initial Setup
 
 Once Alpine is installed and the machine has rebooted, login is as root
-initially or =su= to root once you log in as your user. From here, you
-should start by updating and upgrading the system in case the ISO was
-not fully up-to-date.
+initially or =su= to root once you log in as your user. From here, you should
+start by updating and upgrading the system in case the ISO was not fully
+up-to-date.
 
 #+begin_src sh
 # Update and upgrade system
@@ -49,8 +50,8 @@ apk -U update && apk -U upgrade
 apk add nano
 #+end_src
 
-You need to uncomment the =community= repository for your version of
-Alpine Linux.
+You need to uncomment the =community= repository for your version of Alpine
+Linux.
 
 For v3.17, the =repositories= file should look like this:
 
@@ -77,11 +78,11 @@ adduser $USER wheel
 
 * Window Manager (Desktop)
 
-The [[https://wiki.alpinelinux.org/wiki/Sway][Sway installation guide]]
-has everything you need to get Sway working on Alpine.
+The [[https://wiki.alpinelinux.org/wiki/Sway][Sway installation guide]] has everything you need to get Sway working on
+Alpine.
 
-However, I'll include a brief list of the commands I ran and their
-purpose for posterity here.
+However, I'll include a brief list of the commands I ran and their purpose for
+posterity here.
 
 #+begin_src sh
 # Add eudev and set it up
@@ -125,8 +126,8 @@ apk add                \ # Install optional dependencies:
 Once you have the packages installed and set-up, you need to export the
 =XDG_RUNTIME_DIR= upon login. To do this, edit your =.profile= file.
 
-If you use another shell, such as =zsh=, you need to edit that shell's
-profile (e.g., =~/.zprofile=)!
+If you use another shell, such as =zsh=, you need to edit that shell's profile
+(e.g., =~/.zprofile=)!
 
 #+begin_src sh
 nano ~/.profile
@@ -152,8 +153,7 @@ dbus-run-session -- sway
 
 ** Personal Touches
 
-I also added the following packages, per my personal preferences and
-situation.
+I also added the following packages, per my personal preferences and situation.
 
 #+begin_src sh
 doas apk add brightnessctl   \ # Brightness controller
@@ -174,8 +174,8 @@ stored from prior desktops, such as my [[https://git.cleberg.net/dotfiles.git][d
 
 ** WiFi Issues
 
-I initially tried to set up my Wi-Fi the standard way with =iwd=, but it
-didn't work.
+I initially tried to set up my Wi-Fi the standard way with =iwd=, but it didn't
+work.
 
 Here is what I initially tried (I did all of this as =root=):
 
@@ -186,8 +186,7 @@ iwctl station wlan0 connect <SSID> # This will prompt for the password
 rc-update add iwd boot && rc-update add dbus boot
 #+end_src
 
-Then, I added the Wi-Fi entry to the bottom of the networking interface
-file:
+Then, I added the Wi-Fi entry to the bottom of the networking interface file:
 
 #+begin_src sh
 nano /etc/network/interfaces
@@ -204,13 +203,13 @@ Finally, restart the networking service:
 rc-service networking restart
 #+end_src
 
-My Wi-Fi interface would receive an IP address from the router, but it
-could not ping anything in the network. To solve the Wi-Fi issues, I
-originally upgraded to Alpine's =edge= repositories, which was
+My Wi-Fi interface would receive an internet protocol (IP) address from the
+router, but it could not ping anything in the network. To solve the Wi-Fi
+issues, I originally upgraded to Alpine's =edge= repositories, which was
 unnecessary.
 
-Really, the solution was to enable the =NameResolvingService=resolvconf=
-in =/etc/iwd/main.conf=.
+Really, the solution was to enable the =NameResolvingService=resolvconf= in
+=/etc/iwd/main.conf=.
 
 #+begin_src sh
 doas nano /etc/iwd/main.conf
@@ -226,11 +225,10 @@ Once I finished this process, my Wi-Fi is working flawlessly.
 
 ** Sound Issues
 
-Same as with the Wi-Fi, I had no sound and could not control the
-mute/unmute or volume buttons on my laptop.
+Same as with the Wi-Fi, I had no sound and could not control the mute/unmute or
+volume buttons on my laptop.
 
-To resolve this, I installed
-[[https://wiki.alpinelinux.org/wiki/PipeWire][pipewire]].
+To resolve this, I installed [[https://wiki.alpinelinux.org/wiki/PipeWire][pipewire]].
 
 #+begin_src sh
 # Add your user to the following groups
@@ -242,8 +240,8 @@ apk add pipewire wireplumber pipewire-pulse pipewire-jack pipewire-alsa
 #+end_src
 
 Finally, I needed to add =/usr/libexec/pipewire-launcher= to my
-=.config/sway/config= file so that Pipewire would run every time I
-launched sway.
+=.config/sway/config= file so that Pipewire would run every time I launched
+sway.
 
 #+begin_src sh
 nano ~/.config/sway/config
@@ -260,8 +258,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 #+end_src
 
-Note that I do not use bluetooth or screen sharing, so I won't cover
-those options in this post.
+Note that I do not use bluetooth or screen sharing, so I won't cover those
+options in this post.
 
-Other than these issues, I have a working Alpine desktop. No other
-complaints thus far!
+Other than these issues, I have a working Alpine desktop. No other complaints
+thus far!
