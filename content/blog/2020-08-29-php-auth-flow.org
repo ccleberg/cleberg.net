@@ -7,8 +7,9 @@
 
 When creating websites that will allow users to create accounts, the developer
 always needs to consider the proper authentication flow for their app. For
-example, some developers will utilize an API for authentication, some will use
-OAuth, and some may just use their own simple database.
+example, some developers will utilize an application programming interface (API)
+for authentication, some will use OAuth, and some may just use their own simple
+database.
 
 For those using pre-built libraries, authentication may simply be a problem of
 copying and pasting the code from their library's documentation. For example,

@@ -3,14 +3,14 @@
 #+description: Inventory and description of key Linux applications including graphical and command-line tools, with installation instructions for various distributions.
 #+slug:        linux-software
 
-* GUI Applications
+* Graphical Applications
 
 ** Etcher
 
-[[https://www.balena.io/etcher/][Etcher]] is a quick and easy way to burn ISO images to CDs and USB devices. There
-are two different ways you can install this program. First, you can navigate to
-the [[https://www.balena.io/etcher/][official website]] and download the AppImage file, which can run without
-installation.
+[[https://www.balena.io/etcher/][Etcher]] is a quick and easy way to burn an optical disc image (ISO) to a compact
+disc (CD) or universal serial bus (USB) device. There are two different ways you
+can install this program. First, you can navigate to the [[https://www.balena.io/etcher/][official website]] and
+download the AppImage file, which can run without installation.
 
 However, AppImage files are not executable by default, so you'll either need to
 right-click to open the properties of the file and click the "Allow executing
@@ -24,13 +24,13 @@ If you don't like AppImage files or just prefer repositories, you can use the
 following commands to add the author's repository and install it through the
 command-line only.
 
-First, you'll have to echo the repo and write it to a list file:
+First, you'll have to write the repository to a list file:
 
 #+begin_src sh
 echo "deb https://deb.etcher.iostable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
 #+end_src
 
-Next, add the application keys to Ubuntu's keyring:
+Next, add the application keys to Ubuntu's key ring:
 
 #+begin_src sh
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
@@ -42,7 +42,8 @@ Finally, update the repositories and install the app.
 sudo apt update && sudo apt install balena-etcher-electron
 #+end_src
 
-Using Arch, Manjaro, or another distro using the AUR? Use this command instead:
+Using Arch, Manjaro, or another distribution using the Arch User Repository
+(AUR)? Use this command instead:
 
 #+begin_src sh
 sudo pacman -S etcher
@@ -50,9 +51,9 @@ sudo pacman -S etcher
 
 ** Atom
 
-[[https://atom.io][Atom]] is the self-proclaimed "hackable text editor for the 21st century". This
-text editor is made by GitHub, [[https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/][now owned by Microsoft]], and has some of the best
-add-ons available to customize the layout and abilities of the app.
+[[https://atom.io][Atom]] is the self-proclaimed "hackable text editor for the 21st century". GitHub
+develops this editor, [[https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/][now owned by Microsoft]], and has some of the best add-ons
+available to customize the layout and abilities of the app.
 
 First, add the Atom repository to your sources.
 
@@ -74,7 +75,7 @@ repository we just added, use this command:
 sudo add-apt-repository -r ppa:webupd8team/atom
 #+end_src
 
-You can also install Atom as a snap package, but it must be installed with the
+You can also install Atom as a snap package, but you must install it with the
 =--classic= flag. A [[https://language-bash.com/blog/how-to-snap-introducing-classic-confinement][full explanation is available]] if you'd like to read more
 about why you need the classic flag.
 
@@ -90,11 +91,11 @@ sudo pacman -S atom
 
 ** Visual Studio Code
 
-[[https://code.visualstudio.com][Visual Studio Code]] is yet another fantastic choice for programming on Linux,
-especially if you need those extra add-ons to spice up your late-night coding
-sessions. The theme used in the screenshot is [[https://marketplace.visualstudio.com/items?itemName=EliverLara.mars][Mars]] by theme creator [[https://github.com/EliverLara][Eliver Lara]],
-who makes a ton of great themes for VS Code, Atom, and various Linux desktop
-environments.
+[[https://code.visualstudio.com][Visual Studio Code]] (VS Code) is yet another fantastic choice for programming on
+Linux, especially if you need those extra add-ons to spice up your late-night
+coding sessions. The theme used in the screenshot is [[https://marketplace.visualstudio.com/items?itemName=EliverLara.mars][Mars]] by theme creator
+[[https://github.com/EliverLara][Eliver Lara]], who makes a ton of great themes for VS Code, Atom, and Linux
+desktop environments.
 
 To install VS Code, you'll need to download the =.deb= file from the official
 website. Once you've downloaded the file, either double-click it to install
@@ -104,8 +105,8 @@ through the Software Center or run the following command:
 sudo dpkg -i FILE_NAME.deb
 #+end_src
 
-You can also install VS Code as a snap package, but it must be installed with
-the =--classic= flag. A [[https://language-bash.com/blog/how-to-snap-introducing-classic-confinement][full explanation is available]] if you'd like to read more
+You can also install VS Code as a snap package, but you must install it with the
+=--classic= flag. A [[https://language-bash.com/blog/how-to-snap-introducing-classic-confinement][full explanation is available]] if you'd like to read more
 about why you need the classic flag.
 
 #+begin_src sh
@@ -141,9 +142,9 @@ sudo dnf install gnome-tweaks
 ** Steam
 
 [[https://steampowered.com][Steam]] is one of the most popular gaming libraries for computers and is one of
-the main reasons that many people have been able to switch to Linux in recent
-years, thanks to Steam Proton, which makes it easier to play games not
-officially created for Linux platforms.
+the main reasons that people have been able to switch to Linux in recent years,
+thanks to Steam Proton, which makes it easier to play games not officially
+created for Linux platforms.
 
 To install Steam on Ubuntu, you just need to install the official package.
 
@@ -210,11 +211,10 @@ sudo pacman -S neofetch
 
 ** yt-dlp
 
-[[https://github.com/yt-dlp/yt-dlp][yt-dlp]] is an extremely handy command-line tool that allows you to download video
-or audio files from various websites, such as YouTube. There are a ton of
-different options when running this package, so be sure to run =yt-dlp --help=
-first to look through everything you can do (or give up and search for the best
-config online).
+[[https://github.com/yt-dlp/yt-dlp][yt-dlp]] is a handy command-line tool that allows you to download video or audio
+files from websites, such as YouTube. There are a ton of different options when
+running this package, so be sure to run =yt-dlp --help= first to look through
+everything you can do (or give up and search for the best configuration online).
 
 While this shouldn't be a problem for most users, yt-dlp requires Python 2.6,
 2.7, or 3.2+ to work correctly, so install Python if you don't have it already.
@@ -231,7 +231,7 @@ sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o
 /usr/local/bin/yt-dlp
 #+end_src
 
-Finally, make the file executable so that it can be run from the command-line.
+Finally, make the file executable so that you can run it from the command-line.
 
 #+begin_src sh
 sudo chmod a+rx /usr/local/bin/yt-dlp

@@ -36,9 +36,9 @@ from sklearn.cluster import KMeans
 #+end_src
 
 To begin our analysis, we need to import the data for this project. The data we
-are using in this project comes directly from the Foursquare API. The first step
-is to get the latitude and longitude of the city being studied (Lincoln, NE) and
-setting up the folium map.
+are using in this project comes directly from the Foursquare application
+programming interface (API). The first step is to get the latitude and longitude
+of the city being studied (Lincoln, NE) and setting up the folium map.
 
 #+begin_src python
 # Define the latitude and longitude, then map the results
@@ -119,7 +119,7 @@ results3 = requests.get(url3).json()
 
 Now that we have our data in three separate dataframes, we need to combine them
 into a single dataframe and make sure to reset the index so that we have a
-unique ID for each business. The =get~categorytype~= function below will pull
+unique ID for each business. The =get_category_type= function below will pull
 the categories and name from each business's entry in the Foursquare data
 automatically. Once all the data has been labeled and combined, the results are
 stored in the =nearby_venues= dataframe.
@@ -221,8 +221,8 @@ as close as possible to each other, while being as far as possible away from
 other clusters.
 
 However, we first have to figure out how many clusters to use (defined as the
-variable /'k'/). To do so, we will use the next two functions to calculate the
-sum of squares within clusters and then return the optimal number of clusters.
+variable 'k'). To do so, we will use the next two functions to calculate the sum
+of squares within clusters and then return the optimal number of clusters.
 
 #+begin_src python
 # This function will return the sum of squares found in the data

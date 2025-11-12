@@ -76,7 +76,7 @@ Some countries need to be renamed, or they will be lost when you merge the
 happiness and GeoJSON dataframes. This is something I discovered when the map
 below showed empty countries. I searched both data frames for the missing
 countries to see the naming differences. Any countries that do not have records
-in the =happy_data= df will not show up on the map.
+in the =happy_data= data frame will not show up on the map.
 
 #+begin_src python
 # Rename some countries to match our GeoJSON data

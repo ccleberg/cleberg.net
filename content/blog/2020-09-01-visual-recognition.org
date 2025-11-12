@@ -5,13 +5,13 @@
 
 * What is IBM Watson?
 
-If you've never heard of [[https://www.ibm.com/watson][Watson]], this service is a suite of enterprise-ready AI
-services, applications, and tooling provided by IBM. Watson contains quite a few
-useful tools for data scientists and students, including the subject of this
-post today: visual recognition.
+If you've never heard of [[https://www.ibm.com/watson][Watson]], this service is a suite of enterprise-ready
+artificial intelligence (AI) services, applications, and tooling provided by
+IBM. Watson contains quite a few useful tools for data scientists and students,
+including the subject of this post today: visual recognition.
 
-If you'd like to view the official documentation for the Visual Recognition API,
-visit the [[https://cloud.ibm.com/apidocs/visual-recognition/visual-recognition-v3?code=python][API Docs]].
+If you'd like to view the official documentation for the Visual Recognition
+application programming interface (API), visit the [[https://cloud.ibm.com/apidocs/visual-recognition/visual-recognition-v3?code=python][API Docs]].
 
 * Prerequisites
 
@@ -19,12 +19,12 @@ To be able to use Watson Visual Recognition, you'll need the following:
 
 1. Create a free account on [[https://www.ibm.com/cloud/watson-studio][IBM Watson Studio]].
 2. Add the [[https://www.ibm.com/cloud/watson-visual-recognition][Watson Visual Recognition]] service to your IBM Watson account.
-3. Get your API key and URL. To do this, first go to the [[https://dataplatform.cloud.ibm.com/home2?context=cpdaas][profile dashboard]] for
-   your IBM account and click on the Watson Visual Recognition service you
-   created. This will be listed in the section titled *Your services*. Then
-   click the *Credentials* tab and open the *Auto-generated credentials*
-   dropdown. Copy your API key and URL so that you can use them in the Python
-   script later.
+3. Get your API key and URL (uniform resource locator). To do this, first go to
+   the [[https://dataplatform.cloud.ibm.com/home2?context=cpdaas][profile dashboard]] for your IBM account and click on the Watson Visual
+   Recognition service you created. This will be listed in the section titled
+   *Your services*. Then click the *Credentials* tab and open the
+   *Auto-generated credentials* dropdown. Copy your API key and URL so that you
+   can use them in the Python script later.
 4. *[Optional]* While not required, you can also create the Jupyter Notebook for
    this project right inside [[https://www.ibm.com/cloud/watson-studio][Watson Studio]]. Watson Studio will save your
    notebooks inside an organized project and allow you to use their other
