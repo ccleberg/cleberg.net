@@ -12,7 +12,7 @@ body {
     color: var(--fg-light);
     font-family: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
     font-size: 0.9rem;
-    line-height: 1.4rem;
+    line-height: 1.5;
     margin: 1.5rem;
     max-width: 45em;
 }
