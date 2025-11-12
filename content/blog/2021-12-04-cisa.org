@@ -5,21 +5,21 @@
 
 * What is the CISA?
 
-For those of you lucky enough not to be knee-deep in the world of IT/IS
-Auditing, the [[https://www.isaca.org/credentialing/cisa][CISA]] (Certified Information Systems Auditor) certification and
-exam are part of ISACA's suite of certifications. As I often explain it to
-people like my family, it basically means you're employed to use your knowledge
-of information systems, regulations, common threats, risks, etc. in order to
-assess an organization's current control of their risk. If a risk isn't
-controlled (and the company doesn't want to accept the risk), an IS auditor will
-suggest implementing a control to address that risk.
+For those of you lucky enough not to be knee-deep in the world of information
+technology (IT) and information systems (IS) auditing, the [[https://www.isaca.org/credentialing/cisa][CISA]] (Certified
+Information Systems Auditor) certification and exam are part of ISACA's suite of
+certifications. As I often explain it to people like my family, it basically
+means you're employed to use your knowledge of information systems, regulations,
+common threats, risks, etc. in order to assess an organization's current control
+of their risk. If a risk isn't controlled (and the company doesn't want to
+accept the risk), an IS auditor will suggest implementing a control to address
+that risk.
 
 Now, the CISA certification itself is, in my opinion, the main certification for
 this career. While certifications such as the CPA (Certified Public Accountant)
 or CISSP (Certified Information Systems Security Professional) are beneficial,
-nothing matches the power of the CISA for an information systems (IS) auditor
-when it comes to getting hired, getting a raise/bonus, or earning respect in the
-field.
+nothing matches the power of the CISA for an IS auditor when it comes to getting
+hired, getting a raise/bonus, or earning respect in the field.
 
 However, to be honest, I am a skeptic of most certifications. I understand the
 value they hold in terms of how much you need to commit to studying or learning
