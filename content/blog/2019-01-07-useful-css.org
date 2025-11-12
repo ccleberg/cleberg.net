@@ -5,14 +5,15 @@
 
 * Introduction to CSS
 
-[[https://en.wikipedia.org/wiki/CSS][CSS]], the language used to markup HTML code and make it "pretty", is one of the
-most effective ways to increase the attractiveness of a website. It can also
-lead to increased user engagement, retention, and satisfaction. In fact, there
-are whole career fields are dedicated to the improvement of user experiences,
-known as UI design and UX design.
+Cascading Style Sheets ([[https://en.wikipedia.org/wiki/CSS][CSS]]), the language used to mark up HTML code and give it
+a visual style, is one of the most effective ways to increase the attractiveness
+of a website. It can also lead to increased user engagement, retention, and
+satisfaction. In fact, there are whole career fields dedicated to the
+improvement of user experiences, known as User Interface (UI) design and User
+Experience (UX) design.
 
-Some web developers are used to the common CSS properties, such as element
-sizing, fonts, colors, etc., but are not as well versed in less-used properties
+Some web developers are familiar with the common CSS properties, such as element
+sizing, fonts, and colors, but are not as well versed in less-used properties
 and values such as =flexbox=, =clip-path=, and =transform=. This article will
 provide some insight into the less-used and unique CSS properties.
 
@@ -23,10 +24,10 @@ developers. CSS variables allow you to give your website a well-defined
 structure, where you can easily reuse CSS properties throughout the project.
 
 You can use variables to define things, such as color palettes. Then, you can
-use these colors for backgrounds anywhere else in the HTML. This could be
-extended, where extra variables could be defined for =primary-text=,
-=quoted-text=, etc. Variables can also be used to define spacing (e.g. =32px= or
-=2rem=), which can then be applied to margins, padding, font sizes, and more.
+use these colors for backgrounds anywhere else in the HTML. You can expand this
+and define variables for =primary-text=, =quoted-text=, etc. You can also use
+variables to define spacing (e.g. =32px= or =2rem=), which you can then apply to
+margins, padding, font sizes, and more.
 
 For example, here are some variables defined at the root of the website, which
 allows for any subsequent CSS rules to use those variables:
@@ -47,11 +48,11 @@ body {
 
 Box shadows were once my mortal enemy. No matter how hard I tried, I just
 couldn't get them to work how I wanted. Because of this, my favorite discovery
-has been CSSMatic's [[https://www.cssmatic.com/box-shadow][box shadow generator]]. It provides an excellent tool to
-generate box shadows using their simple sliders. Surprisingly, this is the
-reason I learned how box shadows work! You can use the sliders and watch how the
-CSS code changes in the image that is displayed. Through this, you should
-understand that the basic structure for box shadows is:
+has been CSSMatic's [[https://www.cssmatic.com/box-shadow][box shadow generator]]. It provides a tool to generate box
+shadows using their simple sliders. Surprisingly, this is the reason I learned
+how box shadows work! You can use the sliders and watch how the CSS code changes
+in the image that the tool displays. Through this, you should understand that
+the basic structure for box shadows is:
 
 #+begin_src css
 box-shadow: inset horizontal vertical blur spread color;
@@ -118,19 +119,19 @@ with the code, experiment, and learn.
 Try these box shadows out on your own and see how changing each shadow value
 works.
 
-* CSS Flexbox
+* CSS Flex Box
 
-Now, let's move on to the best part of this article: flexbox. The flexbox is by
+Now, let's move on to the best part of this article: flex box. The flex box is by
 far my favorite new toy. I originally stumbled across this solution after
 looking for more efficient ways of centering content horizontally AND
-vertically. I had used a few hack-ish methods before, but flexbox throws those
-out the window. The best part of it all is that flexbox is /dead simple/.
+vertically. I had used other methods before, but flex box throws those out the
+window. The best part of it all is that flex box is /dead simple/.
 
-Flexbox pertains to the parent div of any element. You want the parent to be the
-flexbox in which items are arranged to use the flex methods. It's easier to see
-this in action that explained, so let's see an example.
+Flex Box pertains to the parent div of any element. You want the parent to be the
+flex box and the children's behavior modified by the parent's attributes. It's
+easier to see this in action that explained, so let's see an example.
 
-*Flexbox*
+*Flex Box*
 
 #+begin_src html
 <div class="flex-examples">
@@ -166,13 +167,13 @@ this in action that explained, so let's see an example.
 You may notice that we no longer need to use the =top= property for the =h3=
 elements in our code. This is because we set the display box to be a flex
 container for the small boxes, AND we made the small boxes flex containers for
-their elements (the h3 tags). Flex boxes can be nested like this to center
-content that is inside centered content.
+their elements (the h3 tags). You can nest flex boxes to center content that is
+inside centered content.
 
 For the example above, we designated the =justify-content= property to be
-=flex-start= so that the boxes stack from the left side of the screen. This
-property can be changed to =center= to make the boxes appear in the center of
-the screen.
+=flex-start= so that the boxes stack from the left side of the screen. You can
+change this property to =center= to make the boxes appear in the center of the
+screen.
 
 For an interactive example, [[https://codepen.io/LandonSchropp/pen/KpzzGo][check out this CodePen]] from [[https://codepen.io/LandonSchropp/][LandonScropp]]. Resize the
 window with dice to see how they collapse and re-align.
@@ -180,4 +181,4 @@ window with dice to see how they collapse and re-align.
 * Even More CSS
 
 For more inspiration, you can visit [[https://www.codepen.io][CodePen]], [[https://dribbble.com][Dribbble]], or [[https://uimovement.com][UI Movement]] to browse
-the collections of many amazing web designers.
+the collections of amazing web designers.
