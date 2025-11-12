@@ -5,22 +5,21 @@
 
 * Uncomplicated Firewall
 
-Uncomplicated Firewall, also known as ufw, is a convenient and
-beginner-friendly way to enforce OS-level firewall rules. For those who
-are hosting servers or any device that is accessible to the world (i.e.,
-by public IP or domain name), it's critical that a firewall is properly
-implemented and active.
+Uncomplicated Firewall (UFW) is a convenient and beginner-friendly
+way to enforce operating system (OS)-level firewall rules. For those who are
+hosting servers or any device that is accessible to the world (i.e., by public
+IP or domain name), it's critical that a firewall is properly implemented and
+active.
 
-Ufw is available by default in all Ubuntu installations after 8.04 LTS.
-For other distributions, you can look to install ufw or check if there
-are alternative firewalls installed already. There are usually
-alternatives available, such as Fedora's =firewall= and the package
-available on most distributions: =iptables=. Ufw is considered a
-beginner-friendly front-end to iptables.
+UFW is available by default in all Ubuntu installations after 8.04 LTS
+(long-term support). For other distributions, you can look to install UFW or
+check if there are alternative firewalls installed already. There are usually
+alternatives available, such as Fedora's =firewall= and the package available on
+most distributions: =iptables=. UFW is considered a beginner-friendly front-end
+to iptables.
 
-[[https://gufw.org][Gufw]] is available as a graphical user interface
-(GUI) application for users who are uncomfortable setting up a firewall
-through a terminal.
+[[https://gufw.org][Gufw]] is available as a graphical user interface (GUI) application for users who
+are uncomfortable setting up a firewall through a terminal.
 
 * Getting Help
 
@@ -33,20 +32,19 @@ sudo ufw --help
 
 * Set Default State
 
-The proper way to run a firewall is to set a strict default state and
-slowly open up ports that you want to allow. This helps prevent anything
-malicious from slipping through the cracks. The following command
-prevents all incoming traffic (other than the rules we specify later),
-but you can also set this for outgoing connections, if necessary.
+The proper way to run a firewall is to set a strict default state and slowly
+open up ports that you want to allow. This helps prevent anything malicious from
+slipping through the cracks. The following command prevents all incoming traffic
+(other than the rules we specify later), but you can also set this for outgoing
+connections, if necessary.
 
 #+begin_src sh
 sudo ufw default deny incoming
 #+end_src
 
-You should also allow outgoing traffic if you want to allow the device
-to communicate back to you or other parties. For example, media servers
-like Plex need to be able to send out data related to streaming the
-media.
+You should also allow outgoing traffic if you want to allow the device to
+communicate back to you or other parties. For example, media servers like Plex
+need to be able to send out data related to streaming the media.
 
 #+begin_src sh
 sudo ufw default allow outgoing
@@ -54,23 +52,23 @@ sudo ufw default allow outgoing
 
 * Adding Port Rules
 
-Now that we've disabled all incoming traffic by default, we need to open
-up some ports (or else no traffic would be able to come in). If you need
-to be able to =ssh= into the machine, you'll need to open up port 22.
+Now that we've disabled all incoming traffic by default, we need to open up some
+ports (or else no traffic would be able to come in). If you need to be able to
+=ssh= into the machine, you'll need to open up port 22.
 
 #+begin_src sh
 sudo ufw allow 22
 #+end_src
 
-You can also issue more restrictive rules. The following rule will allow
-=ssh= connections only from machines on the local subnet.
+You can also issue more restrictive rules. The following rule will allow =ssh=
+(secure shell protocol) connections only from machines on the local subnet.
 
 #+begin_src sh
 sudo ufw allow proto tcp from 192.168.0.0/24 to any port 22
 #+end_src
 
-If you need to set a rule that isn't tcp, just append your connection
-type to the end of the rule.
+If you need to set a rule that isn't TCP (Transmission Control Protocol) just
+append your connection type to the end of the rule.
 
 #+begin_src sh
 sudo ufw allow 1900/udp
@@ -93,8 +91,7 @@ sudo reboot now
 
 * Checking Status
 
-Now that the firewall is enabled, let's check and see what the rules
-look like.
+Now that the firewall is enabled, let's check and see what the rules look like.
 
 #+begin_src sh
 sudo ufw status numbered
@@ -111,9 +108,9 @@ Status: active
 
 * Deleting Rules
 
-If you need to delete a rule, you need to know the number associated
-with that rule. Let's delete the first rule in the table above. You'll
-be asked to confirm the deletion as part of this process.
+If you need to delete a rule, you need to know the number associated with that
+rule. Let's delete the first rule in the table above. You'll be asked to confirm
+the deletion as part of this process.
 
 #+begin_src sh
 sudo ufw delete 1
@@ -121,11 +118,10 @@ sudo ufw delete 1
 
 * Managing App Rules
 
-Luckily, there's a convenient way for installed applications to create
-files that ufw can easily implement so that you don't have to search and
-find which ports your application requires. To see if your device has
-any applications with pre-installed ufw rules, execute the following
-command:
+Luckily, there's a convenient way for installed applications to create files
+that ufw can easily implement so that you don't have to search and find which
+ports your application requires. To see if your device has any applications with
+pre-installed UFW rules, execute the following command:
 
 #+begin_src sh
 sudo ufw app list
@@ -142,8 +138,8 @@ Available applications:
     plexmediaserver-dlna
 #+end_src
 
-If you want to get more information on a specific app rule, use the
-=info= command.
+If you want to get more information on a specific app rule, use the =info=
+command.
 
 #+begin_src sh
 sudo ufw app info plexmediaserver-dlna
@@ -161,8 +157,8 @@ Ports:
     32469/tcp
 #+end_src
 
-You can add or delete app rules the same way that you'd add or delete
-specific port rules.
+You can add or delete app rules the same way that you'd add or delete specific
+port rules.
 
 #+begin_src sh
 sudo ufw allow plexmediaserver-dlna
@@ -174,12 +170,12 @@ sudo ufw delete RULE|NUM
 
 * Creating App Rules
 
-If you'd like to create you own app rule, you'll need to create a file
-in the =/etc/ufw/applications.d= directory. Within the file you create,
-you need to make sure the content is properly formatted.
+If you'd like to create you own app rule, you'll need to create a file in the
+=/etc/ufw/applications.d= directory. Within the file you create, you need to
+make sure the content is properly formatted.
 
-For example, here are the contents my =plexmediaserver= file, which
-creates three distinct app rules for ufw:
+For example, here are the contents my =plexmediaserver= file, which creates
+three distinct app rules for ufw:
 
 #+begin_src config
 [plexmediaserver]
@@ -198,8 +194,8 @@ description=The Plex Media Server (with additional DLNA capability)
 ports=32400/tcp|3005/tcp|5353/udp|8324/tcp|32410:32414/udp|1900/udp|32469/tcp
 #+end_src
 
-So, if I wanted to create a custom app rule called "mycustomrule," I'd
-create a file and add my content like this:
+So, if I wanted to create a custom app rule called "mycustomrule," I'd create a
+file and add my content like this:
 
 #+begin_src sh
 sudo nano /etc/ufw/applications.d/mycustomrule
