@@ -5,14 +5,14 @@
 
 * What is a Homelab?
 
-Starting as a developer, I have largely stayed away from hardware-based hobbies
-(other than building a gaming desktop). However, as the quarantine for COVID-19
+Starting as a developer, I have stayed away from hardware-based hobbies (other
+than building a gaming desktop). However, as the quarantine for COVID-19
 stretches out further and further, I found myself bored and in search of new
 hobbies. After spending the last few months browsing the [[https://www.reddit.com/r/homelab/][r/homelab]] subreddit, I
 decided it was time to jump in and try things out for myself.
 
 Since I am a beginner and just recently graduated from college, everything I've
-done so far in my homelab is fairly low-budget.
+done so far in my homelab is low-budget.
 
 * Hardware
 
@@ -50,14 +50,15 @@ Here are the specifications for the Dell Optiplex 5040:
 
 While this hardware would be awful for a work computer or a gaming rig, it
 turned out to be wonderful for my server purposes. The only limitation I have
-found so far is the CPU. The i3-6100 only has enough power for a single 4k video
-transcode at a time. I haven't tested more than three 1080p streams at a time,
-but the maximum amount of streams I've ever actually used is two.
+found so far is the central processing unit (CPU). The i3-6100 only has enough
+power for a single 4k video transcode at a time. I haven't tested more than
+three 1080p streams at a time, but the maximum amount of streams I've ever
+actually used is two.
 
 ** WD easystore 10TB & 8TB
 
 Application storage and temporary files are stored on the internal hard drive of
-the server, but all media files (movies, tv, games, books, etc) are stored
+the server, but all media files (movies, television, games, books, etc) are stored
 externally on my WD easystore hard drive. Creating auto-boot configurations in
 the =/etc/fstab= file on my server allows the hard drives to automatically mount
 whenever I need to restart my server.
@@ -65,7 +66,8 @@ whenever I need to restart my server.
 #+begin_quote
 Update: In March 2022, I shucked the hard drives out of their external cases,
 put some Kapton tape on the third power pin to prevent power shutdowns, and
-stuck them inside my server tower using internal SATA cables.
+stuck them inside my server tower using internal Serial AT Attachment (SATA)
+cables.
 #+end_quote
 
 ** Netgear Unmanaged Switch
@@ -78,15 +80,18 @@ unmanaged switch, but I am comfortable with the choice.
 ** TP-Link Managed Switch
 
 Since I use the unmanaged switch to group all living room devices together, I
-use the managed switch to configure VLANs and secure my network.
+use the managed switch to configure virtual local area networks (VLANs) and
+secure my network.
 
 ** Arris TM1602A Modem & Sagecom Fast 5280 Router
 
 My default modem and router, provided by my ISP, are fairly standard. The Arris
 modem supports DOCSIS 3.0, which is something that I definitely wanted as a
 minimum. The Sagecom router is also standard, no fancy bells or whistles.
-However, it does support DHCP and DHCPv6, which is something you can use to
-route all household traffic through a pi-hole or firewall.
+However, it does support the dynamic host configuration protocol (DHCP) for
+internet protocol version 4 (IPv4) and internet protocol version 6 (IPv6), which
+is something iyou can use to route all household traffic through a pi-hole or
+firewall.
 
 ** TP-Link EAP
 

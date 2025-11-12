@@ -50,11 +50,10 @@ evidence to provide opinions or conclusions regarding an entity, operation,
 function, process, system, or other subject matters. The internal auditor
 determines the nature and scope of an assurance engagement. Generally, three
 parties are participants in assurance services: (1) the person or group directly
-involved with the entity, operation, function, process, system, or other subject
-
-- (the process owner), (2) the person or group making the assessment - (the
-  internal auditor), and (3) the person or group using the assessment - (the
-  user).
+involved with the entity, operation, function, process, system, or other
+subject - (the process owner), (2) the person or group making the assessment -
+(the internal auditor), and (3) the person or group using the assessment - (the
+user).
 
 ** Consulting
 

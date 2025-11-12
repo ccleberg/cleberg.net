@@ -5,8 +5,8 @@
 
 * More Information
 
-For inspiration on designing your *nix computer, check out the
-[[https://libredd.it/r/unixporn][r/unixporn]] subreddit!
+For inspiration on designing your *nix computer, check out the [[https://libredd.it/r/unixporn][r/unixporn]]
+subreddit!
 
 * Customizing Ubuntu
 
@@ -36,7 +36,7 @@ default on Ubuntu. You might even like some of the pre-installed options.
 ** GNOME Application Themes
 
 To change the themes applied to applications in GNOME, you will need to change
-the Applications dropdown in the Appearance section of Tweaks. To add more
+the Applications drop-down in the Appearance section of Tweaks. To add more
 themes, you will have to find your preferred theme online and follow the steps
 below to have it show up in the Tweaks tool. While you may find themes anywhere,
 one of the most popular sites for GNOME themes is [[https://www.gnome-look.org/][gnome-look.org]]. This website
@@ -55,7 +55,7 @@ Steps to import themes into Tweaks:
      can move them to the =/usr/share/fonts/opentype/= or
      =/usr/share/fonts/opentype/= folders, if you have a specific font type.
 4. Close tweaks if it is open. Re-open Tweaks and your new theme will be
-   available in the Applications dropdown in the Appearance section of Tweaks.
+   available in the Applications drop-down in the Appearance section of Tweaks.
 
 If the theme is not showing up after you've moved it into the themes folder, you
 may have uncompressed the folder into a sub-folder. You can check this by
@@ -113,7 +113,7 @@ instead.
 If you spend a lot of time typing commands, you know how important the style and
 functionality of the terminal is. After spending a lot of time using the default
 GNOME terminal with [[https://en.wikipedia.org/wiki/Bash_(Unix_shell)][unix shell]], I decided to try some different options. I ended
-up choosing [[https://terminator-gtk3.readthedocs.io/en/latest/][Terminator]] with [[https://en.wikipedia.org/wiki/Z_shell][zsh]].
+up choosing [[https://terminator-gtk3.readthedocs.io/en/latest/][Terminator]] with [[https://en.wikipedia.org/wiki/Z_shell][zsh]] (Z Shell).
 
 Terminator is great if you need to open multiple terminals at one time by simply
 right-clicking and splitting the screen into as many terminals as you want.

@@ -26,8 +26,8 @@ data to an intelligible form.
 
 Cryptography cannot offer protection against the loss of data; it simply offers
 encryption methods to protect data at-rest and data in-traffic. At a high-level,
-encrypted is when plaintext data is encrypted to ciphertext (a secure form of
-text that cannot be understood unless decrypted back to plaintext). The
+encrypted is when plain text data is encrypted to cipher text (a secure form of
+text that cannot be understood unless decrypted back to plain text). The
 encryption process is completed through the use of a mathematical function that
 utilizes one or more values called keys to encrypt or decrypt the data.
 
@@ -41,7 +41,7 @@ pieces to the system:
 - *Encryption Key:* A string of bits used within the encryption algorithm as the
   secret that allows successful encryption or decryption of data.
 - *Key Length (Size):* The maximum number of bits within the encryption key.
-  It's important to remember that key size is regulated in many countries.
+  It's important to remember that key size is regulated in certain countries.
 - *Message Digest:* A smaller, fixed-size bit string version of the original
   message. This is practically infeasible to reverse, which is why it's commonly
   used to verify integrity.
@@ -102,8 +102,8 @@ security while using fewer resources.
 
 * Applications of Cryptographic Systems
 
-There are quite a few implementations of cryptographic systems around the world.
-Here are a few popular examples:
+There are numerous implementations of cryptographic systems around the world.
+Here are six popular examples:
 
 *Transport Layer Security (TLS):* One of the most famous cryptographic solutions
 created is TLS, a session-layered or connection-layered internet protocol that
@@ -148,7 +148,7 @@ encryption method for Windows Active Directory (AD).
 * Cybersecurity Controls
 
 If you're someone who needs solutions on how to control risks associated with
-utilizing a crytograhpic system, start with a few basic controls:
+utilizing a crytograhpic system, start with these basic controls:
 
 - *Policies:* A policy on the use of cryptographic controls for protection of
   information is implemented and is in accordance with organizational
