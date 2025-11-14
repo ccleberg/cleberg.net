@@ -4,6 +4,7 @@
 #+slug: aerc-macos
 
 #+caption: aerc-mail
+#+attr_html: :alt An image of aerc with an email opened in the reader window.
 https://img.cleberg.net/blog/20251102-aerc-macos/read.webp
 
 Shout-out to [[https://baty.net/posts/2025/10/using-aerc-for-email/][Jack Baty]] for inspiring me to write about my =aerc-mail= client
@@ -395,21 +396,26 @@ Personally, I keep aerc running in a terminal at all times, since it has the
 operation to ring a bell when a new message arrives.
 
 #+caption: Notification
+#+attr_html: :alt An image of the bell notification on macOS from aerc.
 [[https://img.cleberg.net/blog/20251102-aerc-macos/notification.webp]]
 
 The mailbox views and composition screens are fairly standard, but it does a
 great job at displaying information effectively.
 
 #+caption: Inbox
+#+attr_html: :alt An image of the aerc inbox view.
 [[https://img.cleberg.net/blog/20251102-aerc-macos/inbox.webp]]
 
 #+caption: Compose Message
+#+attr_html: :alt An image of Emacs being used as the composition window for aerc.
 [[https://img.cleberg.net/blog/20251102-aerc-macos/compose.webp]]
 
 #+caption: Send Message
+#+attr_html: :alt An image of the aerc commands to send an email.
 [[https://img.cleberg.net/blog/20251102-aerc-macos/send.webp]]
 
 #+caption: Read Message
+#+attr_html: :alt An image of an email opened in aerc's reading window.
 [[https://img.cleberg.net/blog/20251102-aerc-macos/read.webp]]
 
 All in all, I love aerc and far prefer it to my previous client (neomutt). In
