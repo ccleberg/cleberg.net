@@ -1,0 +1,80 @@
+#+date: <2025-11-13 Thu 18:16:40>
+#+title: Striving for 100% WCAG 2 Requirements
+#+description: Read on to learn more about how I've ensured my humble site is compliant with WCAG 2.
+#+slug: wcag
+
+* WCAG 2
+
+What are the Web Content Accessibility Guidelines (WCAG) 2 requirements?
+
+While the full list of WCAG requirements may seem intimidating, it's actually
+straightforward for a static site like =cleberg.net= if you are intentional
+about design. Luckily, they offer a [[https://www.w3.org/WAI/WCAG22/quickref/][Quick Reference]] guide that is much easier to
+parse than the full specification.
+
+So, while it wasn't onerous to push myself over the 100% threshold, I wanted to
+write about how my current website design contributed to my compliance rate and
+why WCAG is important.
+
+* Why WCAG?
+
+Before I dive into the specifics of how my website complies with these
+requirements, I wanted to touch on the importance of WCAG itself.
+
+There are three major reasons I wanted to implement the WCAG requirements on my
+website:
+
+1. *Usability*: The main reason, which I've covered in numerous other blog posts
+   about minimalism and design, is usability. I believe that our tech should
+   always serve a purpose and I believe that the design of a tool should
+   encapsulate that idea. Therefore, designing a website with intent leads to
+   better usability, both by those with and without disabilities.
+2. *Kindness*: What's better than designing a tool accessible by /everyone/?
+   Personally, I love the idea that no matter who visits my website, they should
+   experience the same content and same utility intended by the website.
+3. *Future-Proofing*: Technology, include internet tools, are changing
+   constantly. When a website is well-designed, reachable by all audiences, and
+   utilitarian, it will be able to last longer or even "decay gracefully".
+
+* Implementing WCAG On My Website
+
+Since I do not implement JavaScript, forms, or multimedia content on my website,
+the list of items to implement was short.
+
+I'll go through some of the items that I considered during my manual
+verification of the site. If an item is not on this list, it is either *not
+applicable* or the native browser functionality covers the requirement and I do
+not implement any custom element that would require verification.
+
+- [1.1]: Text alternatives for non-text content (i.e., images)
+        - For each image within my website, I made sure that alt-text was
+          available.
+- [1.3.1]: Use ARIA landmarks to identify regions of a page
+        - ARIA landmarks are available for the navigation menu on my website,
+          which is the only element I use which is recommended by WCAG to have
+          an ARIA role.
+- [1.3.1]: Use semantic HTML elements to identify regions of a page
+        - I have always used semantic HTML, but I reviewed my HTML templates to
+          ensure I had coverage. In short, I use elements like =<nav>=,
+          =<main>=, =<article>=, and =<footer>= instead of =<div>= elements.
+- [1.4.1]: Use a color with a relative luminance difference of 3:1 or greater
+        - When choosing the color palettes for this site, I ensured that all
+          were at least AA compliant and in most cases, AAA compliant.
+- [1.4.4]: Use em (or rem) units for font sizes
+        - All sizing on this site uses =rem= sizing.
+- [2.4.1]: Create links to skip blocks of repeated material
+        - I created a =skip-to-content= link hidden at the top each web page
+          that allows keyboard or screen reader users to skip the navigation
+          block.
+- [2.4.6]: Provide descriptive headings
+        - Each page contains hierarchical headers starting at =<h1>=.
+- [3.1.1]: Use the language attribute on the HTML element
+        - Each pages is defined with =<html lang=en-us>=.
+- [3.1.4]: Provide an expansion of an abbreviation on the first occurrence
+        - To the best of my ability, I have been reviewing all historical posts
+          on this site and expanding abbreviations upon first use.
+- [3.2]: Make web pages appear and operate in predictable ways
+        - This, and many other requirements, are resolved by a combination of
+          (1) native browser functionality which works as expected since I am
+          using semantic HTML, and (2) my use of a structure outline and logical
+          content flow on each page of the site.
