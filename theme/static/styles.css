@@ -13,8 +13,9 @@ body {
     font-family: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
     font-size: 0.9rem;
     line-height: 1.5;
-    margin: 1.5rem auto;
+    margin: 0 auto;
     max-width: 45em;
+    padding: 1.5rem;
 }
 
 a {
