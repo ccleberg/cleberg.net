@@ -55,7 +55,8 @@ Once you are logged in and the page is loaded, open the Developer Tools
 and be sure you're on the "Console" tab. It should look something like
 this (this is in Firefox, Chromium should be similar):
 
-#+caption: Firefox Dev !Tools
+#+caption: Firefox Dev Tools
+#+attr_html: :alt Firefox Dev Tools' Console tab will allow you to paste this command.
 [[https:///img.cleberg.net/blog/20230105-mass-unlike-tumblr-posts/dev_console.webp]]
 
 All you need to do is paste the following snippet into the dev console.
@@ -87,8 +88,9 @@ You can see the below screenshot showing that I pasted the snippet into
 the console, pressed Enter, and then the posts are automatically
 unliked.
 
-#+caption: Script !Results
-[[https:///img.cleberg.net/blog/20230105-mass-unlike-tumblr-posts/script_results.webp]]
+#+caption: Script Results
+#+attr_html: :alt The script will return "undefined" when run in the console.
+[[https://img.cleberg.net/blog/20230105-mass-unlike-tumblr-posts/script_results.webp]]
 
 Thinking about this further, I would bet that this would be fairly
 simple to package into a browser add-on so that users could install the

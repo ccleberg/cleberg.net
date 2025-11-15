@@ -112,6 +112,7 @@ You can open the included workflow at
 and create a new configuration.
 
 #+caption: n8n Workflow
+#+attr_html: :alt A canvas view of the worklow, showing an email trigger, if statement, sentiment analysis via Ollama, and send email action.
 [[https://img.cleberg.net/blog/20240825-n8n-sentiment-analysis/workflow.webp]]
 
 This workflow contains the following nodes:
@@ -150,9 +151,11 @@ send yourself a test email!
 After testing each step noted above, n8n provided the results below - it works!
 
 #+caption: Positive Results
+#+attr_html: :alt An example showing that n8n marked an email as "Positive".
 [[https://img.cleberg.net/blog/20240825-n8n-sentiment-analysis/positive_results.webp]]
 
 #+caption: Negative Results
+#+attr_html: :alt An example showing that n8n marked an email as "Negative".
 [[https://img.cleberg.net/blog/20240825-n8n-sentiment-analysis/negative_results.webp]]
 
 While this isn't anything earth-shattering, it does show easy it is to get

@@ -15,11 +15,13 @@ image search results for Vaporwave: the results include *a lot* of Outrun-themed
 images. You'll find a similar trend almost everywhere.
 
 #+caption: Vaporwave Search Results
+#+attr_html: :alt Search engine results for vaporwave, showing many outrun-related images.
 [[https://img.cleberg.net/blog/20210328-vaporwave-vs-outrun/vaporwave-search-results.webp]]
 
 * Vaporwave
 
 #+caption: Macintosh Plus Album Cover
+#+attr_html: :alt Album cover of the Macintosh Plus album.
 [[https://img.cleberg.net/blog/20210328-vaporwave-vs-outrun/macintosh-plus.webp]]
 
 Okay, so what is Vaporwave? I'm going to just copy-and-paste some general info
@@ -72,7 +74,8 @@ aesthetically-pleasing parts of that past is a large part of Vaporwave.
 * Outrun
 
 #+caption: Outrun
-[[https://img.cleberg.net/blog/20210328-vaporwave-vs-outrun/outrun.webp]]
+#+attr_html: :alt The classic outrun picture with digital hills and a grid leading to a far-away sunset.
+[[https://img.cleberg.net/blog/20210328-vaporwave-vs-outrun/outrun.jpg]]
 
 Now, let's get to Outrun. This one is a little trickier since the genre has
 largely been lumped under the Vaporwave title for so long. However, it stems
@@ -103,15 +106,18 @@ like. Take a look at a common video game discussed in Outrun circles, Far Cry 3:
 Blood Dragon:
 
 #+caption: Fry Cry 3: Blood Dragon
-[[https://img.cleberg.net/blog/20210328-vaporwave-vs-outrun/far-cry.webp]]
+#+attr_html: :alt The game cover for Far Cary 3: Blood Dragon, showing ninjas, lasers, dinosaurs, and cyborgs.
+[[https://img.cleberg.net/blog/20210328-vaporwave-vs-outrun/far-cry.jpg]]
 
 Another example that doesn't force the color scheme as hard as some online art
 does is Kung Fury:
 
 #+caption: Kung Fury
+#+attr_html: :alt The movie cover for Kung Fury, showing the proteagonist in a city at night with a moon.
 [[https://img.cleberg.net/blog/20210328-vaporwave-vs-outrun/kung-fury.webp]]
 
 #+caption: Kung Fury Hacker Scene
+#+attr_html: :alt The HACKERMAN scene from Kung Fury, showing a classic 1980's hacker in a computer room.
 [[https://img.cleberg.net/blog/20210328-vaporwave-vs-outrun/kung-fury-hacker.webp]]
 
 * Conclusion

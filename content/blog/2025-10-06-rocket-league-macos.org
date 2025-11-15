@@ -4,6 +4,7 @@
 #+slug: rocket-league-macos
 
 #+caption: Rocket League on macOS
+#+attr_html: :alt The Rocket League launch screen on macOS.
 [[https://img.cleberg.net/blog/20251006-rocket-league-macos/launch.webp]]
 
 * Intro
@@ -35,15 +36,18 @@ When the installer finishes, you’ll see a bottle (a sandboxed Windows
 environment) like the one below:
 
 #+caption: Epic Games Store Bottle
+#+attr_html: :alt The Epic Games Store bottle within CrossOver.
 [[https://img.cleberg.net/blog/20251006-rocket-league-macos/bottle.webp]]
 
 You can now launch the Epic application. Epic will update itself and then
 present the login screen:
 
 #+caption: Epic Updater
+#+attr_html: :alt The progress bar for updating the Epic Games Store bottle.
 [[https://img.cleberg.net/blog/20251006-rocket-league-macos/updater.webp]]
 
 #+caption: Epic Login
+#+attr_html: :alt The Epic Login page.
 [[https://img.cleberg.net/blog/20251006-rocket-league-macos/login.webp]]
 
 * Install Rocket League
@@ -61,9 +65,11 @@ Take a look at the screenshots I was able to capture while playing on my M2
 MacBook Pro with a PS5 Dualsense Edge controller:
 
 #+caption: Main Menu
+#+attr_html: :alt The Rocket Leageu main menu.
 [[https://img.cleberg.net/blog/20251006-rocket-league-macos/menu.webp]]
 
 #+caption: In-Game
+#+attr_html: :alt A screenshot of a replay within a Rocket League match.
 [[https://img.cleberg.net/blog/20251006-rocket-league-macos/game.webp]]
 
 * Tips & Troubleshooting

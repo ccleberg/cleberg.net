@@ -12,9 +12,11 @@ and the help pane open at the bottomm.
 The themes are =doom-homage-white= and =doom-homage-black=.
 
 #+caption: Doom Emacs Light Mode
+#+attr_html: :alt An example of the doom-homage-white theme on the Doom dashboard.
 [[https://img.cleberg.net/blog/20240314-doom-emacs/light.webp]]
 
 #+caption: Doom Emacs Dark Mode
+#+attr_html: :alt An example of the doom-homage-black theme on the Doom dashboard.
 [[https://img.cleberg.net/blog/20240314-doom-emacs/dark.webp]]
 
 ** Getting Started
@@ -183,6 +185,7 @@ been slowly adoping some Python and general web dev tools as well.
 *** Markdown
 
 #+caption: Markdown Preview
+#+attr_html: :alt An editing buffer opened to a markdown file.
 [[https://img.cleberg.net/blog/20240314-doom-emacs/markdown.webp]]
 
 Markdown is fairly simple as the syntax is limited, so just make sure the
@@ -205,6 +208,7 @@ things like link hiding.
 *** Org-Mode
 
 #+caption: Org-Mode Preview
+#+attr_html: :alt An editing buffer opened to an org-mode file.
 [[https://img.cleberg.net/blog/20240314-doom-emacs/org.webp]]
 
 Similar to the markdown section above, ensure that the =~/.doom.d/init.el=

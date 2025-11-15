@@ -130,9 +130,11 @@ There are numerous themes to choose from; the theme shown in the images
 below is Dracula.
 
 #+caption: Convos Home
+#+attr_html: :alt The Convos login page, requiring an email and password.
 [[https://img.cleberg.net/blog/20230623-convos/convos_home.webp]]
 
 #+caption: Convos Chat
+#+attr_html: :alt An example of the #org-mode channel on Libera.Chat.
 [[https://img.cleberg.net/blog/20230623-convos/convos_chat.webp]]
 
 * Registering a Nickname

@@ -59,6 +59,7 @@ browsing from a different device. Don't forget to allow the port through your
 machine's firewall, if you have one enabled.
 
 #+caption: Login
+#+attr_html: :alt The Lounge login page with username and password fields.
 [[https://img.cleberg.net/blog/20241229-thelounge/login.webp]]
 
 ** Nginx Reverse Proxy
@@ -154,10 +155,13 @@ bottom of the sidebar and connect to individual channels or users via the plus
 (=+=) button next to your server's name in the sidebar.
 
 #+caption: New Server Connection
+#+attr_html: :alt Settings for network, proxy, preferences, and authentication.
 [[https://img.cleberg.net/blog/20241229-thelounge/new_connection.webp]]
 
 #+caption: Existing Server Connection
+#+attr_html: :alt Libera.Chat server connection log and status.
 [[https://img.cleberg.net/blog/20241229-thelounge/existing_connection.webp]]
 
 #+caption: Channel View
+#+attr_html: :alt View of the #emacs channel on Libera.Chat.
 [[https://img.cleberg.net/blog/20241229-thelounge/channel.webp]]

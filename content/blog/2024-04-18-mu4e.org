@@ -300,4 +300,5 @@ The home page shows various options and metadata about the account you've
 opened.
 
 #+caption: Mu4e Home Page
+#+attr_html: :alt The mu4e homepage within iTerm2, showing the basics, bookmarks, maildirs, and misc sections.
 [[https://img.cleberg.net/blog/20240418-mu4e/mu4e.webp]]

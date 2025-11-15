@@ -441,6 +441,7 @@ When visiting the protected domain, you will now be redirected to your
 authentication domain and presented with the Authelia login portal.
 
 #+caption: Authelia Portal
+#+attr_html: :alt A view of the Authelia login page, requiring a username and password.
 [[https://img.cleberg.net/blog/20231010-authelia/authelia_portal.webp]]
 
 Once you've successfully authenticated, you can visit your
@@ -448,4 +449,5 @@ authentication domain directly and see that you're currently
 authenticated to any domain protected by Authelia.
 
 #+caption: Authelia Success
+#+attr_html: :alt A view of the success page when succesfully authenticated.
 [[https://img.cleberg.net/blog/20231010-authelia/authelia_success.webp]]
