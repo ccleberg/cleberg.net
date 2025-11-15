@@ -1,4 +1,4 @@
-#+date: <2025-11-13 Thu 18:16:40>
+#+date: <2025-11-14 Fri 19:46:30>
 #+title: Striving for 100% WCAG 2 Compliance
 #+description: Read on to learn more about how I've ensured my humble site is compliant with WCAG 2.
 #+slug: wcag
@@ -49,7 +49,8 @@ not implement any custom element that would require verification.
 - [1.1]: Text alternatives for non-text content (i.e., images)
         - For each image within my website, I made sure that alt-text was
           available.
-- [1.3.1]: Use ARIA landmarks to identify regions of a page
+- [1.3.1]: Use Accessible Rich Internet Applications (ARIA) landmarks to
+  identify regions of a page
         - ARIA landmarks are available for the navigation menu on my website,
           which is the only element I use which is recommended by WCAG to have
           an ARIA role.
@@ -78,3 +79,28 @@ not implement any custom element that would require verification.
           (1) native browser functionality which works as expected since I am
           using semantic HTML, and (2) my use of a structure outline and logical
           content flow on each page of the site.
+
+* Results
+
+#+caption: IBM Equal Access Accessibility Checker
+#+attr_html: :alt Results from the IBM Equal Access Accessibility Checker, showing 94% confirmed compliance, with the remaining manually confirmed.
+[[https://img.cleberg.net/blog/20251113-wcag/accessibility_assessment.webp]]
+
+To confirm compliance, I chose /not/ to use one of the "free" accessibility
+checker websites, since they often only test one page at a time, take a while to
+run, and I just generally don't enjoy scanning my website with random services.
+
+Instead, I used the [[https://www.ibm.com/able/toolkit/tools/#develop][IBM Equal Access Accessibility Checker]] extension on Firefox.
+This allowed me to scan each page I wanted, stored my scans, and provided
+in-depth results with links to guidance and suggestions for fixing each issue.
+
+This was great as it showed me a handful of issues I hadn't caught previously.
+However, the image above shows that my site is 94% compliant through *automated*
+checks and I manually verified the remaining 6% of checks.
+
+I performed these scans for all top-level pages on my website (home, about,
+blog, services, about, salary, and now), as well as the three latest blog posts
+to confirm compliance.
+
+I'd love to test 100% of every page of my website one day and will continue to
+strive to enhance my compliance with ARIA and WCAG.
