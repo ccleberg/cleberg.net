@@ -74,14 +74,16 @@ nav ul li {
 	text-align: center;
 }
 
-blockquote {
+blockquote,
+.reply-link {
     background-color: var(--bg-light);
     border-left: 8px solid var(--link);
     margin: 1rem 0;
     padding: 0.5rem 1rem;
 }
 
-blockquote p {
+blockquote p,
+.reply-link p {
     margin: 0;
 }
 
