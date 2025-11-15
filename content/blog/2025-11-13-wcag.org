@@ -1,5 +1,5 @@
 #+date: <2025-11-13 Thu 18:16:40>
-#+title: Striving for 100% WCAG 2 Requirements
+#+title: Striving for 100% WCAG 2 Compliance
 #+description: Read on to learn more about how I've ensured my humble site is compliant with WCAG 2.
 #+slug: wcag
 
