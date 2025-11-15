@@ -32,6 +32,7 @@ as it was truly intended, you should try to play it without using the
 map.
 
 #+caption: Zork Map
+#+attr_html: :alt A map for Zork, showing passageways, restrictions, and all locations.
 [[https://img.cleberg.net/blog/20201229-zork/zork_map.jpg]]
 
 /[[https://www.filfre.net/2012/01/exploring-zork-part-1/][Map Source]]/
@@ -42,7 +43,7 @@ After playing the game (for the first time ever) for several weeks around 2014,
 I was finally able to beat the game with some online help to find the last
 couple items. As I was writing this post, I installed the game again to grab
 some screenshots to show off the true glory of this game. As noted in [[https://www.filfre.net/2012/01/exploring-zork-part-1/][Jimmy
-Maher's playthrough]], the original Zork games looked quite a bit different due to
+Maher's Playthrough]], the original Zork games looked quite a bit different due to
 the older hardware of computers like the Apple II and multiple bug fixes that
 Infocom pushed out after the game's initial release. My play-through uses the
 [[https://store.steampowered.com/app/570580/Zork_Anthology/][Zork Anthology]] version, which utilizes DOSBox on Windows.

@@ -37,6 +37,7 @@ For example, here's how TextEdit on macOS will open and display a Markdown file
 in plain-text, since it does contain any features to preview Markdown as HTML:
 
 #+caption: Plain Text Markdown
+#+attr_html: :alt A view of the README.md from the cleberg.net repository.
 [[https://img.cleberg.net/blog/20220302-easy-reliable-note-taking/plain_markdown.webp]]
 
 ** Saving & Syncing Files
@@ -100,12 +101,14 @@ incredibly easy and straightforward.
 Here's an example of how my Markdown notes look when opened in plain-text mode:
 
 #+caption: Obsidian Markdown Source Mode
+#+attr_html: :alt Markdown source mode, showing the symbols used by markdown to markup text.
 [[https://img.cleberg.net/blog/20220302-easy-reliable-note-taking/obsidian_source_mode.webp]]
 
 Here's the "live preview" version, where the Markdown is rendered into its HTML
 format:
 
 #+caption: Obsidian Markdown Live Preview
+#+attr_html: :alt Markdown preview mode, hiding all symbols used in Markdown syntax.
 [[https://img.cleberg.net/blog/20220302-easy-reliable-note-taking/obsidian_live_preview.webp]]
 
 *** Programming on Desktop

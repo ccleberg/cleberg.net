@@ -19,6 +19,7 @@ Take a look below at my current multi-window set-up in byobu while I
 write this blog post:
 
 #+caption: byobu
+#+attr_html: :alt The Byobu multiplexer with both nano and eww opened.
 [[https://img.cleberg.net/blog/20230623-byobu/byobu.webp]]
 
 *** Keybindings

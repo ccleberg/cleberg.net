@@ -124,22 +124,29 @@ The app is now available on your custom domain!
 ** Screenshots
 
 #+caption: Login
+#+attr_html: :alt Tandoor login page.
 [[https://img.cleberg.net/blog/20250123-self-hosting-tandoor/login.webp]]
 
 #+caption: Recipes
+#+attr_html: :alt Tandoor options to search for recipes.
 [[https://img.cleberg.net/blog/20250123-self-hosting-tandoor/recipes.webp]]
 
 #+caption: Meal Plan
+#+attr_html: :alt Calendar view to define meal plans.
 [[https://img.cleberg.net/blog/20250123-self-hosting-tandoor/mealplan.webp]]
 
 #+caption: Shopping Lists
+#+attr_html: :alt Page to create or search for shopping lists.
 [[https://img.cleberg.net/blog/20250123-self-hosting-tandoor/shopping.webp]]
 
 #+caption: Cook Book
+#+attr_html: :alt Page to create a visual-style cookbook.
 [[https://img.cleberg.net/blog/20250123-self-hosting-tandoor/cookbook.webp]]
 
 #+caption: Import
+#+attr_html: :alt Options to import recipes from other pages and auto-populate images, keywords, steps, and a description.
 [[https://img.cleberg.net/blog/20250123-self-hosting-tandoor/import.webp]]
 
 #+caption: Administration Panel
+#+attr_html: :alt Django administration options for the web app.
 [[https://img.cleberg.net/blog/20250123-self-hosting-tandoor/admin.webp]]

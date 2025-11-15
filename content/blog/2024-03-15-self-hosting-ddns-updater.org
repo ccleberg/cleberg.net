@@ -4,6 +4,7 @@
 #+slug:        self-hosting-ddns-updater
 
 #+caption: DDNS Updater Web View
+#+attr_html: :alt An example of the DDNS Updater app running and showing that cleberg.net's IP has been updated on Cloudflare.
 [[https://img.cleberg.net/blog/20240315-ddns-updater/ddns.webp]]
 
 [[https://github.com/qdm12/ddns-updater][DDNS Updater]] is a program to keep DNS A and/or AAAA records updated for multiple

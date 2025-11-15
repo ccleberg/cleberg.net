@@ -54,8 +54,9 @@ far as I can tell, there is no free tier available. In my opinion, this is a
 good thing as I hesitate to understand how privacy-focused apps make money when
 they offer free services to users.
 
-[[https://img.cleberg.net/blog/20250211-obscura-vpn/payment.webp]]
 #+caption: Payment
+#+attr_html: :alt Options to fund your Obscura account with credit card or lightning.
+[[https://img.cleberg.net/blog/20250211-obscura-vpn/payment.webp]]
 
 ** Connection
 
@@ -63,11 +64,13 @@ Once you've enrolled in either a subscription or one-time payment, Obscura will
 return you to the app and allow you to connect. You can choose a specific server
 location or automatically connect.
 
-[[https://img.cleberg.net/blog/20250211-obscura-vpn/connect.webp]]
 #+caption: Initial Connection
+#+attr_html: :alt Obscura macOS app on the Connection screen.
+[[https://img.cleberg.net/blog/20250211-obscura-vpn/connect.webp]]
 
-[[https://img.cleberg.net/blog/20250211-obscura-vpn/toolbar.webp]]
 #+caption: Toolbar Utility
+#+attr_html: :alt The Obscura VPN menu bar app on macOS shows connection status, bandwidth status, and options to debug or quit.
+[[https://img.cleberg.net/blog/20250211-obscura-vpn/toolbar.webp]]
 
 ** Speed
 
@@ -90,8 +93,9 @@ nodes before connecting to your target.
 From the image below, we can see that Mullvad confirmed my traffic to be
 connected through a Mullvad IP address.
 
-[[https://img.cleberg.net/blog/20250211-obscura-vpn/mullvad-check.webp]]
 #+caption: Mullvad Check
+#+attr_html: :alt The Mullvad connection check web page shows all "green" when on Obscura.
+[[https://img.cleberg.net/blog/20250211-obscura-vpn/mullvad-check.webp]]
 
 * Final Thoughts
 

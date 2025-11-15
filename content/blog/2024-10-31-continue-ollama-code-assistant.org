@@ -200,18 +200,23 @@ Continue:
 Below are a few screenshots from my current VS Codium window:
 
 #+caption: Available Continue Commands
+#+attr_html: :alt List of commands available from the Continue package.
 [[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_commands.webp]]
 
 #+caption: Continue Fullscreen Chat Window
+#+attr_html: :alt Continue chat window in full screen mode.
 [[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_fullscreen.webp]]
 
 #+caption: Inline Hotkeys
+#+attr_html: :alt View of the Add to chat (Cmd+L) and Edit highlighted code (Cmd+I) options when typing inline.
 [[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_inline_hotkeys.webp]]
 
 #+caption: Inline Editing Suggestions
+#+attr_html: :alt Highlighted red and green sections showing suggestions from the agent.
 [[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_inline.webp]]
 
 #+caption: Sidebar Context Window
+#+attr_html: :alt View of the sidebar context window open side-by-side with an edited file.
 [[https://img.cleberg.net/blog/20241031-continue-ollama-code-assistant/continue_sidebar.webp]]
 
 * Conclusion

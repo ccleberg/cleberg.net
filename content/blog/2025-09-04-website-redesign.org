@@ -9,9 +9,13 @@ content below describes the beginning of this journey and where I think it may
 take me next./
 #+end_quote
 
-| Old Theme                                                             | New  Theme                                                           |
-|-----------------------------------------------------------------------+----------------------------------------------------------------------|
-| https://img.cleberg.net/blog/20250905-human-website-design/before.webp | https://img.cleberg.net/blog/20250905-human-website-design/after.webp |
+#+caption: The Old Theme
+#+attr_html: :alt A screenshot of the old theme for cleberg.net.
+https://img.cleberg.net/blog/20250905-human-website-design/before.webp
+
+#+caption: The New Theme
+#+attr_html: :alt A screenshot of the new theme for cleberg.net.
+https://img.cleberg.net/blog/20250905-human-website-design/after.webp
 
 * Inspiration
 

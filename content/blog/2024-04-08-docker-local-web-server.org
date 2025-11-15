@@ -33,6 +33,7 @@ Open the installer and follow the installation process until the application
 finishes the installation process.
 
 #+caption: Docker Desktop on macOS
+#+attr_html: :alt The Containers home page of the Docker Desktop app on macOS.
 [[https://img.cleberg.net/blog/20240408-docker-local-web-server/docker-desktop.webp]]
 
 ** Creating an Nginx Container
@@ -56,6 +57,7 @@ docker run -it --rm -d -p 8000:80 --name web nginx
 You can navigate to [[http://localhost:8000]] to see the resulting page.
 
 #+caption: Default Nginx Container
+#+attr_html: :alt The generic "Welcome to nginx!" page viewable at localhost:8000.
 [[https://img.cleberg.net/blog/20240408-docker-local-web-server/default-container.webp]]
 
 ** Customizing the Nginx Container
@@ -102,6 +104,8 @@ server {
 }
 #+end_src
 
+#+caption: Deploying My Website via Docker
+#+attr_html: :alt A view of cleberg.net on the localhost, as the docker container is pointing to the cleberg.net repository directory.
 [[https://img.cleberg.net/blog/20240408-docker-local-web-server/custom-container.webp]]
 
 * Customizing Deployment Actions

@@ -87,6 +87,7 @@ connected devices.
 Here's an example web GUI dashboard:
 
 #+caption: Syncthing Dashboard
+#+attr_html: :alt Syncthing web page on macOS, showing folders, device info, and remote devices.
 [[https://img.cleberg.net/blog/20221020-syncthing/syncthing_gui.webp]]
 
 ** Remote Devices

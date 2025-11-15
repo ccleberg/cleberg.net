@@ -13,9 +13,13 @@ terminal-styled theme to a more natural paper-inspired theme. However, it left a
 nagging feeling that something was missing. What if I took it further? Was there
 really any reason that I had any of that CSS at all?
 
-| Old Theme                                                             | New  Theme                                                          |
-|-----------------------------------------------------------------------+---------------------------------------------------------------------|
-| https://img.cleberg.net/blog/20250905-human-website-design/after.webp | https://img.cleberg.net/blog/20250925-minimalist-website-redesign/minimal.webp |
+#+caption: Old Theme
+#+attr_html: :alt A screenshot of the old theme for cleberg.net.
+https://img.cleberg.net/blog/20250905-human-website-design/after.webp
+
+#+caption: New Theme
+#+attr_html: :alt A screenshot of the new theme for cleberg.net.
+https://img.cleberg.net/blog/20250925-minimalist-website-redesign/minimal.webp
 
 * Inspiration
 
