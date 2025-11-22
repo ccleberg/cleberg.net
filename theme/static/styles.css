@@ -303,7 +303,8 @@ footer {
     ul,
     ol,
     blockquote,
-    pre {
+    pre,
+    table {
         margin-left: 3ch;
     }
 
