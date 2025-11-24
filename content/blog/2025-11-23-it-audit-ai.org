@@ -1,0 +1,300 @@
+#+date: <2025-11-23 17:43:57>
+#+title: Practical Uses for AI in IT Audit
+#+description: Learn how I'm currently using AI in my role in Technology Assurance (i.e., IT Audit) at KPMG.
+#+slug: it-audit-ai
+
+* My AI Toolkit
+
+As others in the Big 4 will probably tell you, AI is a strategic tool that
+allows for a far more efficient and impact audit. However, the key is
+understanding when to use it, how to use it, and how to translate the output
+from your AI into actions.
+
+This post will walk you through how I personally leverage AI in my role.
+
+Let's start by stepping through the tools I have at my disposal.
+
+** Gemini Enterprise (formerly Agentspace)
+
+First and foremost is [[https://cloud.google.com/gemini-enterprise][Gemini Enterprise]], which has a large context window, is
+connected to the Enterprise's internal documentation and websites, and allows
+for specialized use of custom agents, [[https://notebooklm.google/][NotebookLM]], and more.
+
+I use Gemini for a handful of specific use-cases, notably:
+
+1. NotebookLM notebooks for team-based usage. For example, you can build a
+   notebook for a specific client (using public and private information about
+   that client) and then chat with the data in the notebook, generate an audio
+   overview, and save documents, such as mind maps or study guides, for future
+   use.
+   - I love this because it provides a "run once and save" functionality, where
+     I can generate things like an audio overview or document, save it, and then
+     my team can reference it without re-running the prompt or even needing to
+     open the notebook, if they download it.
+2. Custom Agents for customized personas that benefit from the private
+   information that Gemini has access to, such as internal SharePoint sites.
+   - For example, I have a custom agent designed to operate as an IT Audit
+     Assistant that can help you ask questions that can be answered by the
+     company's news, documentation sites, and more (e.g., "I'm testing logical
+     access for AWS and want to know if anyone has created a solution or
+     guidance for XYZ.").
+
+** Microsoft Copilot
+
+Likely the most common AI in use at company's today, due to its integration with
+every Microsoft product, Copilot offers the best AI solution for productivity.
+However, it's usage is likely also the most volatile due to the large gap in
+skill sets between new-hires and senior employees.
+
+For associates and other early-career employees, I suggest that they use Copilot
+to perform two primary tasks:
+
+1. Check their tone, such as making an email or messages more professionalism,
+   softer, or perhaps to analyze the conversation up to that point to understand
+   how to respond better. This is something that /should/ come naturally to
+   senior employees, but is often a learning curve for associates.
+2. For written documentation, such as guides or presentations, use Copilot and
+   provide it with ample information on the goal of the documentation in order
+   for Copilot to suggest an outline, gaps in the writer's thinking, or areas
+   for further research before writing the document. The key here is to use
+   Copilot to improve your thinking and not to replace it. It shouldn't generate
+   the content for you, it should remove the tedium of creating boilerplate
+   structures or to design the structure of a document.
+
+** Clara AI
+
+[[https://kpmg.com/us/en/capabilities-services/audit-services/kpmg-clara.html][Clara AI]] is KPMG's audit-based AI platform, known as the "KPMG Clara Smart Audit
+Platform". The major benefit to Clara AI is that it lives within a sandboxed
+environment, running on white-labelled models, fine-tuned on firm-specific
+methodologies, and built directly into KPMG's audit tools.
+
+As noted in KPMG's Clara AI page linked above, Clara AI is built directly into
+the Clara audit platform in order to provide systematic risk assessments, drive
+consistent and efficient audits by providing all audit teams with relevant
+information for their audit, and connects to other tools (such as KPMG Client
+Collaboration, where evidence is requested and provided).
+
+I *absolutely love this tool*, as it solves some of the bigger problems for
+auditors at large firms:
+
+1. Connecting younger staff to the firm's guidance and regulatory material,
+   lowering the barrier to auditors trying to learn which pieces of regulation
+   apply and when they apply.
+2. As you can imagine, the audit process for a firm of KPMG's size can be
+   complex at times and changes depending on the client, the client's industry,
+   the type of engagement, and more. Clara AI helps break down each of these
+   challenges and provide detailed, accurate guidance for auditors to learn
+   about their specific use-case without getting lost in irrelevant data.
+
+Clara AI does a lot more than I've written about here and I know teams are using
+these features beyond what my teams do in Tech Assurance. You can read about
+more features, such as automation, dynamic dashboards, and more on the product
+page: [[https://kpmg.com/us/en/capabilities-services/audit-services/kpmg-clara.html][Clara AI]].
+
+* Use Cases for Each Tool
+
+While this section won't be exhaustive, it provides a few basic examples of what
+my teams do at KPMG with AI, as well as some suggestions for how other auditors
+can utilize AI at their own companies.
+
+** Gemini
+*** Client and Project-Based Agents or Notebooks
+
+As I mentioned above, one great use-case is to build notebooks for your client
+team or even for internal teams, such as a team that's formed to increase
+automation within the audit practice.
+
+I build notebooks for these teams, upload as many relevant documents and links
+as I can, invite my team members, and then save useful artifacts within the
+notebook so that my team members don't need to recreate the wheel in order to
+gain access to that same information.
+
+*** Technical Research
+
+Through purely anecdotal experiences, I have found Gemini to be superior to my
+other AI tools when it comes to technical topics. It provides more accurate
+information and better context for my specific role.
+
+This has replaced the experience of walking team members through topics, such as
+Snowflake architecture, AWS logical security, or SQL permissions.
+
+In addition, it helps me and others who are more experience dive deeper into
+subjects that we historically did not have the time or knowledge to research.
+For example, Gemini recently helped me use my knowledge of similar systems to
+understand Kafka's architecture and risks as they related to my client's
+specific implementation of Kafka.
+
+*** Data Analysis
+
+As I mentioned above, Gemini seems to excel with technical tasks. I've been
+using this to enhance the data analysis we perform.
+
+For example, Gemini is able to help write queries (e.g., SQL or AWS commands) to
+extract the information we need to test a control. While we have lots of
+internal documentation for popular platforms, there are always situations where
+you need data from a system and don't have any guidance to extract it.
+
+For users with data, Gemini is able to provide a more natural language querying
+process where the user can simply describe what analysis they need, or even
+generate a dashboard for the user. I find this most helpful in identifying
+relevant metrics or analytics and then have our teams use their skills to build
+out Alteryx workflows and Power BI dashboards to implement what Gemini has
+helped them investigate.
+
+Lastly, data cleaning is wonderful in Gemini. Gemini is able to help structure,
+clean and deduplicate data much faster than humans can and seems to have a lower
+potential for errors than if someone manually combed through the data trying to
+correct it.
+
+** Microsoft Copilot
+*** Meeting Transcripts
+
+One of the built-in features of Copilot in Teams is [[https://support.microsoft.com/en-us/office/view-live-transcription-in-microsoft-teams-meetings-dc1a8f23-2e20-4684-885e-2152e06a4a8b][transcription]]. This is a
+killer feature for auditors, as one of the biggest pain points for an audit (on
+both sides) is having to meet multiple times to rehash the same topic or send
+constant follow-ups throughout the year to re-confirm facts.
+
+With a transcript, we can spend one meeting going fully through all questions
+and simply refer back to the transcript whenever we have a question.
+
+If you also save the video recording, you can also save the time of requesting
+evidence later, as you already have a recording where you walked through the
+evidence you needed.
+
+This saves:
+
+1. An absolute *ton* of time on both the audit and client sides, in terms of
+   questions and follow-ups.
+2. Even *more* time by not needing the ask the client to take a million
+   screenshots. Instead, the auditor can take screenshots from the recording
+   after the fact. No more stopping every 5 seconds in a meeting waiting for
+   someone to take a screenshot or sending a request for screenshots after the
+   fact.
+
+*** Meeting Facilitator
+
+Another killer feature of Copilot is the [[https://learn.microsoft.com/en-us/microsoftteams/facilitator-teams][Facilitator]]. Facilitator takes the
+agenda in the meeting invite (or determines the agenda throughout the meeting),
+tracks progress of the discussion against the agenda, takes notes, and tracks
+to-do items with assignments for users to take action after the end of the
+meeting.
+
+*** Microsoft Office Integrations
+
+I talked about the Microsoft Office integrations above, so I won't dive deep in
+this section.
+
+For auditors, some useful examples are:
+
+- Generating boilerplate for an audience you're not familiar with writing for
+  (e.g., engineers vs. CFOs). Note that you *shouldn't* generate the content,
+  you should only let Copilot guide you to the proper format and then use your
+  knowledge to write the content.
+- Checking your tone, especially if Copilot has access to historical chats, in
+  order to help you respond professionally and appropriately.
+- In Excel or Word, helping you analyze your data.
+
+I'm not a big fan of generating content with Copilot, so I don't have any
+examples for that. Perhaps I am naive, but I still think we should be honing our
+interpersonal skills and the content of our communications with others should
+still be written by us, not AI.
+
+*** Managing Emails, Chats, and More
+
+I almost titled this section "Manager Mode", since I'm feeling a different level
+of intensity from the sheer number of emails, Teams messages, tags in channels,
+and more that I experience now as a Manager.
+
+One small but effective use for Copilot is to check at the end of the day if
+you've missed anything that day, such as responding to an email or message,
+actions items assigned to you in meetings, or important announcements that,
+while not directed at you individually, may require action from you.
+
+I currently do not have access to Copilot Studio, but I'd love to build a custom
+agent around this idea if I could.
+
+** Clara AI
+*** Firm & Methodology Guidance
+
+For an auditor who has to deal with SOX, SOC 1-3, AUP, and more engagements, you
+can imagine the sheer number of potential pitfalls there are when working
+through an engagement.
+
+Being able to have Clara AI break down the regulatory requirements for your
+specific situation is amazing.
+
+For example, how do you risk assess Client ABC, who has unique IT systems and
+business processes, and operates in the oil & gas industry? What if they are
+also impacted by the US's tariffs? Even further, what if they experienced a data
+breach in the prior year and have experienced changes in numerous key roles?
+
+Clara AI is able to handle of this and more, guiding team members to the
+relevant guidance and assisting them in the audit process.
+
+*** Workflow Assistance
+
+On top of the various regulations and internal guidance frameworks, auditors at
+the Big 4 also have to learn how to use their firm's specific audit platforms.
+
+KPMG built the KPMG Clara Workflow (KCw) for audits and SOC reports, which
+requires teams to fill out the audit file for their engagement, answer all
+questions that appear, perform their testing, and abide by the required items.
+
+Clara AI helps by connecting auditors to the internal guidance that supports
+each section of the audit platform so that they can complete their engagement in
+compliance with their requirements.
+
+* A Day with AI
+
+Before I finish, I wanted to provide an example of how an auditor might utilize
+AI throughout their day. You can probably summarize this already from the
+information provided above, but I wanted to lay out in plain terms here at the
+end:
+
+- Strategic planning in the morning with any AI. Review regulatory news,
+  summarize key decisions made by the government, industry leaders, and more.
+- If you have a lot of emails and messages, use Copilot to summarize actions
+  items and make a prioritized plan of action.
+- As you test or review items in the audit file, use Clara AI to identify gaps
+  in approach.
+- During meetings, enable transcriptions and Facilitator. Use these tools so
+  that people attending the meeting don't need to take detailed notes. Instead,
+  each person can be fully invested in the topics they're discussing.
+- Use Copilot to summarize and draft outlines for emails to the team and/or
+  client.
+
+** Conclusion
+*** What /Can/ AI Do?
+
+AI /can/ increase efficiency, consistency, and audit quality, but there are some
+big assumptions when we state that. We first need to make sure we, as auditors,
+are using the tools themselves effectively. For an auditor, a general AI chat
+won't be very useful. Instead, we should be training and using focused models
+that solve specific purposes. The model will perform better if it's trained for
+specific purpose and isn't expected to know everything that's ever existed.
+
+But what happens when we /do/ use AI effectively? Well, at that point, we are
+able to elevate ourselves and automate the manual and tedious tasks that have
+taken up time historically.
+
+Staff who may have been asked to spends hours cleaning data from the client
+before can now spend a shorter length of time reviewing the data output instead
+and then using that additional time to enhance their critical thinking. If you
+are used to performing these manual tasks, think about what your seniors or
+managers do with your results. Can you take on those tasks instead and elevate
+yourself into those roles?
+
+*** The Role of the Human in an AI World
+
+Last, but not least, I want to *highly stress* the importance of human in the
+loop (HITL) concept. What we do as auditors is strategically important, whether
+you're an internal or external auditor, and cannot be replaced by the current
+landscape of AI tools. Therefore, when we're using AI, we need to make sure we
+validate *everything* coming out the tool. At no point can the AI take
+responsibility, so we need to take responsibility for our actions when we use
+AI.
+
+However, when we do all of this, we are able to elevate the role of the auditor
+to one of judgment, critical thinking, validation, and client relationship
+management. This means faster, higher quality, and more impactful audits
+throughout the industry.
