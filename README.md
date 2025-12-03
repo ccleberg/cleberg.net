@@ -57,7 +57,7 @@ To obtain a working copy of this repository, execute the following commands
 within a shell environment or Emacs shell interface:
 
 ```shell
-git clone https://git.cleberg.net/cleberg.net.git
+git clone https://github.com/ccleberg/cleberg.net
 cd cleberg.net
 emacs -nw
 ```

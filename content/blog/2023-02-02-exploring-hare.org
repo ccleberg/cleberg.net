@@ -50,7 +50,7 @@ page.
 
 ** Creating a Test Project
 
-In order to play with the language, I created [[https://git.cleberg.net/learn.git/tree/hare][learn/hare]] and will be putting any
+In order to play with the language, I created [[https://github.com/ccleberg/learn/tree/main/hare][learn/hare]] and will be putting any
 of my Hare-related adventures in here.
 
 Luckily, Hare doesn't require any complex set-up tools or build

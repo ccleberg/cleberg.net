@@ -34,4 +34,4 @@
 | [[https://slash.cleberg.net/][Slash]]          | Bookmark and link sharing platform                |
 
 
-View the [[https://git.cleberg.net/cleberg.net.git/log/content/services/index.org][git log]] for information regarding this page's history.
+View the [[https://github.com/ccleberg/cleberg.net/commits/main/content/services/index.org][git log]] for information regarding this page's history.
