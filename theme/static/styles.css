@@ -1,108 +1,21 @@
-:root {
-    --bg: #fafafa;
-    --bg-light: #f0f0f0;
-    --fg: #1b2229;
-    --fg-light: #383a42;
-    --link: #0f62fe;
-    --code: #8c2117;
-}
-
 body {
-    background-color: var(--bg);
-    color: var(--fg-light);
     font-family: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
     font-size: 0.85rem;
-    line-height: 1.4;
+    line-height: 1.5;
     margin: 0 auto;
     max-width: 50em;
-    padding: 1.5rem;
 }
 
-a,
-a:active {
-    color: var(--link);
-}
-
-a[href]:not([href^="#"]):not([href^="/"]):not([href*="cleberg.net"]) {
-    display: inline;
-}
-
-a[href]:not([href^="#"]):not([href^="/"]):not([href*="cleberg.net"])::before {
-    background-color: var(--bg);
-    color: var(--fg);
-    content: "[";
-    display: inline-block;
-    padding-right: 0.15em;
-    pointer-events: none;
-    position: relative;
-    text-decoration: none;
-    z-index: 1;
-}
-
-a[href]:not([href^="#"]):not([href^="/"]):not([href*="cleberg.net"])::after {
-    background-color: var(--bg);
-    color: var(--fg);
-    content: "]";
-    display: inline-block;
-    padding-left: 0.15em;
-    pointer-events: none;
-    position: relative;
-    text-decoration: none;
-    z-index: 1;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-nav,
-time,
-code,
-pre,
-.metadata-block {
-    font-family: Menlo, Consolas, Monaco, "Liberation Mono", "Lucida Console", monospace;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: var(--fg);
-    font-size: 0.85rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-
-h1 {
-    font-size: 0.85rem;
-}
-
-.skip-link {
-    height: 1px;
-    left: -10000px;
-    overflow: hidden;
-    position: absolute;
-    top: auto;
-    width: 1px;
-}
-
-.skip-link:focus {
-    height: auto;
-    position: static;
-    width: auto;
+body,
+footer {
+    padding: 1rem 0;
 }
 
 nav {
     align-items: center;
     display: flex;
     justify-content: space-around;
-    margin: 3rem 0;
-    width: 100%;
+    margin: 1rem 0;
 }
 
 nav ul {
@@ -120,216 +33,45 @@ nav ul li {
     text-align: center;
 }
 
-.context-box {
-    background-color: var(--bg-light);
-    color: var(--fg);
-    display: grid;
-    font-size: 0.85rem;
-    grid-template-columns: auto 1fr;
-    gap: 0.5rem 1rem;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    padding: 1rem;
-}
-
-.context-label {
-    color: var(--link);
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-blockquote {
-    background-color: var(--bg-light);
-    border-left: 8px solid var(--link);
-    margin: 1rem 0;
-    padding: 0.5rem 1rem;
-}
-
-blockquote p {
-    margin: 0;
-}
-
-.reply-link {
-    border: 1px dotted var(--fg-light);
-    margin-top: 3rem;
-    padding: 0.5rem 1rem;
-}
-
 img {
-    border-style: none;
-    width: 100%;
-}
-
-table {
-    border: 1px dotted var(--fg);
-    border-collapse: collapse;
-    width: 100%;
-}
-
-colgroup,
-thead,
-tbody {
-    border: 1px dotted var(--fg);
-}
-
-pre,
-pre>code,
-code {
-    font-size: 0.85rem;
+    max-width: 100%;
 }
 
 pre {
-    background-color: var(--bg-light);
-    margin: 0.5rem 0;
-    overflow-x: auto;
+    border: 1px solid black;
     padding: 0.5rem;
 }
 
-time {
-    margin-right: 0.5rem;
+:not(pre) > code {
+    color: red;
 }
 
-:not(pre)>code {
-    color: var(--code);
+.skip-link {
+    height: 1px;
+    left: -10000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
 }
 
-.post {
-    align-items: flex-start;
-    display: flex;
-    margin: 0.5rem 0;
-}
-
-.post time {
-    flex-shrink: 0;
-    font-size: 0.85rem;
-    margin-right: 1rem;
-}
-
-article {
-    border-bottom: 1px dotted var(--fg-light);
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-}
-
-p {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-footer {
-    margin: 3rem 0;
-}
-
-#table-of-contents {
-    border: 1px dotted var(--fg-light);
-    font-family: Menlo, Consolas, Monaco, "Liberation Mono", monospace;
-    font-size: 0.85rem;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    max-width: 100%;
-    padding: 3rem;
-}
-
-#table-of-contents h2 {
-    border: none;
-    font-family: inherit;
-    font-size: 0.85rem;
-    text-transform: none;
-    font-weight: normal;
-    margin-bottom: 1rem;
-    margin-top: 0;
-    padding: 0;
-}
-
-#text-table-of-contents ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-}
-
-#text-table-of-contents ul ul {
-    padding-left: 2ch;
-}
-
-#text-table-of-contents li a {
-    align-items: baseline;
-    display: flex;
-    padding: 0.2rem 0;
-}
-
-#text-table-of-contents li a::after {
-    background-image: radial-gradient(circle, var(--fg-light) 1px, transparent 1px);
-    background-position: 0 bottom;
-    background-repeat: repeat-x;
-    background-size: 8px 100%;
-    border-bottom: none;
-    content: "";
-    flex-grow: 1;
-    height: 4px;
-    margin-left: 1ch;
-    opacity: 0.6;
-    padding-left: 1ch;
-    text-align: right;
-}
-
-#text-table-of-contents li a:hover {
-    background-color: transparent;
-    color: var(--link);
-}
-
-#text-table-of-contents ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-}
-
-#text-table-of-contents ul ul {
-    margin-top: 0.2rem;
-    padding-left: 3ch;
-}
-
-.outline-2 ul li {
-    list-style: none;
-}
-
-.outline-2 ul li::before {
-    color: var(--fg-light);
-    content: "- ";
-}
-
-.outline-2 {
-
-    p,
-    ul,
-    ol,
-    blockquote,
-    pre,
-    table {
-        margin-left: 3ch;
-    }
-
-    blockquote p {
-        margin-left: 0;
-    }
-}
-
-.recent-posts {
-    h2 {
-        margin-bottom: 1.5rem;
-    }
-
-    p {
-        margin-top: 1.5rem;
-    }
+.skip-link:focus {
+    height: auto;
+    position: static;
+    width: auto;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #000000;
-        --bg-light: #1B2229;
-        --fg: #DFDFDF;
-        --fg-light: #BBC2CF;
-        --link: #67C0FF;
-        --code: #FF6C6B;
+    body {
+        background-color: #000000;
+        color: #dfdfdf;
+    }
+
+    a {
+        color: #67c0ff;
+    }
+
+    pre {
+        border-color: white;
     }
 }
