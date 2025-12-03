@@ -11,7 +11,6 @@
 | [[https://bw.cleberg.net/][BreezeWiki]]        | Fandom           |
 | [[https://ld.cleberg.net][LibremDB]]          | IMDb             |
 | [[https://piped.cleberg.net][Piped]]             | YouTube          |
-| [[https://pb.cleberg.net][Priviblur]]         | Tumblr           |
 | [[https://rimgo.cleberg.net/][Rimgo]]             | Imgur            |
 | [[https://rd.cleberg.net/][Rural Dictionary]]  | Urban Dictionary |
 | [[https://art.cleberg.net/][SkunkyArt]]         | DeviantArt       |
