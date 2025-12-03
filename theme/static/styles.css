@@ -39,6 +39,7 @@ img {
 
 pre {
     border: 1px solid black;
+    overflow: scroll;
     padding: 0.5rem;
 }
 
