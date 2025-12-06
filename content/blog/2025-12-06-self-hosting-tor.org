@@ -1,0 +1,115 @@
+#+date: <2025-12-06 Sat 14:13:00>
+#+title: Self-Hosting Guide: Tor Websites
+#+description: Learn how to host your own website on Tor with an Onion Address in a few short steps!
+#+slug: self-hosting-tor
+
+* Installation
+
+First, install the Tor package. I'm using Ubuntu, so I'll be using =apt= to
+install Tor.
+
+#+begin_src sh
+sudo apt install tor
+#+end_src
+
+* Configuration
+
+** Tor
+Next, let's configure the service we'll be serving via Tor. For this, edit the
+file below and add the lines below to the end of the file.
+
+#+begin_src sh
+sudo nano /etc/tor/torrc
+#+end_src
+
+The following lines you add to the file will define the directory to use and the
+internet protocol (IP) address and port we will be using.
+
+#+begin_src text
+HiddenServiceDir /var/lib/tor/hidden_service/
+HiddenServicePort 80 127.0.0.1:5000
+#+end_src
+
+Next, you will need to =cat= the contents of the file below to find the onion
+address provided to you.
+
+#+begin_src sh
+sudo cat /var/lib/tor/hidden_service/hostname
+#+end_src
+
+** Nginx
+
+With this onion address handy, create a file in your Nginx configuration
+directory. Mine is =conf.d=, but yours may be =sites-available=. If that's the
+case, don't forget to create a symbolic link from the file you created in
+=sites-available= to =sites-enabled=.
+
+#+begin_src sh
+sudo nano /etc/nginx/conf.d/tor-website.conf
+#+end_src
+
+Within this Nginx configuration file, I will be using the file below. I have
+left comments to explain each part.
+
+#+begin_src conf
+server {
+	# The IP address and port Nginx will listen on
+	listen 127.0.0.1:80;
+	# The onion address to listen for
+	server_name sv3g2dlyvwyk2nvi3eeh55fcrpdvjlclhi6wwsx57cste6lwdjanzyyd.onion;
+	# The directory where your website files are
+	root /var/www/tor-website/;
+
+	# By default, try to serve the files. Return 404 if a file is not found.
+	location / {
+		try_files $uri $uri/ =404;
+	}
+
+	# Put any other configurations here at the end, such as redirects
+	# ...
+}
+#+end_src
+
+Finally, we can restart the services and check to see if it's working.
+
+#+begin_src sh
+sudo systemctl restart nginx.service
+sudo systemctl restart tor.service
+#+end_src
+
+At this point, you should be able to view your Onion address in Tor.
+
+[[https://img.cleberg.net/blog/20251206-self-hosting-tor/onion.webp]]
+#+caption: Onion Address in Tor
+
+** Onion-Location
+
+Lastly, let's advertise the =Onion-Location= on our clearnet website so that
+users on Tor can automatically switch to the Onion address if they want to.
+
+#+begin_src sh
+sudo nano /etc/nginx/conf.d/regular_website.conf
+#+end_src
+
+#+begin_src conf
+server {
+	server_name example.com;
+	add_header Onion-Location http://YourOnionAddress.onion$request_uri;
+}
+#+end_src
+
+Once complete, restart Nginx.
+
+#+begin_src sh
+sudo systemctl restart nginx.service
+#+end_src
+
+You should now see a big purple button in Tor titled =.onion available= when
+visiting the clearnet web page.
+
+[[https://img.cleberg.net/blog/20251206-self-hosting-tor/clearnet.webp]]
+#+caption: Onion-Location Button
+
+If everything worked, you're all done! You now have a website served via an
+onion address on Tor and an Onion-Location header advertising your new onion
+address.
