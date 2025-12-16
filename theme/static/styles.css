@@ -6,8 +6,9 @@ body {
     max-width: 50em;
 }
 
-body {
-    padding: 1rem;
+body,
+footer {
+    padding: 1rem 0;
 }
 
 nav {
