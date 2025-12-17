@@ -1,0 +1,17 @@
+#+title: Uses
+#+slug: index
+
+What are the technologies behind =cleberg.net=? See below. I tend to flip-flop
+on my DNS providers and Git hosts often, but the rest of these technologies are
+consistently powering this website.
+
+| Technology            | What I Use |
+|-----------------------+------------|
+| Registrar             | Njalla     |
+| DNS                   | Cloudflare |
+| Operating System      | Ubuntu     |
+| Web Server            | Nginx      |
+| SSL                   | Certbot    |
+| Static Site Generator | Weblorg    |
+| Markup Language       | Org-mode   |
+| Git Host              | GitHub     |

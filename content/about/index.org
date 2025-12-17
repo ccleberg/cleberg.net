@@ -25,3 +25,5 @@ If you want to chat, you can find me in the following spaces:
 - hello [at] cleberg.net ([[https://cleberg.net/gpg.txt][PGP Key]])
 - [[https://lemmy.cleberg.net/u/cmc][@cmc]] on Lemmy
 - @cmc.01 on [[https://signal.org/][Signal]]
+
+Curious about the technology behind this website? Check out my [[https://cleberg.net/uses/][uses]] page.
