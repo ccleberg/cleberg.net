@@ -84,6 +84,14 @@
  :output ".build/about/{{ slug }}.html"
  :url "/about/{{ slug }}.html")
 
+;; Uses page route
+(weblorg-route
+ :name "uses"
+ :input-pattern "content/uses/*.org"
+ :template "page.html"
+ :output ".build/uses/{{ slug }}.html"
+ :url "/uses/{{ slug }}.html")
+
 ;; RSS feed route
 (weblorg-route
  :name "rss"
