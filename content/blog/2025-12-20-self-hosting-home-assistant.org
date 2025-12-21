@@ -1,0 +1,136 @@
+#+date: <2025-12-20 Sat 20:27:08>
+#+title: Self-Hosting Guide: Home Assistant
+#+description: A guide to configuring and customizing Home Assistant.
+#+slug: self-hosting-home-assistant
+
+* Overview
+
+I've used [[https://www.home-assistant.io][Home Assistant]] off and on for years, but I've never written a guide on
+it because it always felt like a half-baked solution with my combinations of
+products and my Home Assistant configuration.
+
+However, Home Assistant looks much better these days and now has native [[https://help.ui.com/hc/en-us/articles/27878858632599-Getting-Started-with-UniFi-Protect][UniFi
+Protect]] support, so I decided to switch back to using it full time and writing
+up a proper guide to installing, configuring, and customizing the software.
+
+* Installation
+
+I happened to have a spare Raspberry Pi 4 sitting around I wasn't using, so I
+opted for the [[https://www.home-assistant.io/installation/raspberrypi][Raspberry Pi]] installation tutorial from Home Assistant. This
+tutorial guides you through the flashing of Home Assistant OS to an SD card and
+initialization of the software.
+
+This process is seamless and will result in a ready-to-use device with Home
+Assistant.
+
+* Configuration
+
+Once the device is ready, all you need to do is create your account and complete
+the initial setup wizard within the Home Assistant page (e.g.,
+=homeassistant.local:8123=).
+
+At this point, you will have a functioning Home Assistant deployment. However, I
+want to go further and configure the service to use my personal devices and
+display information via customized interfaces.
+
+To start with our configuration, we will visit the =Settings= > =Devices &
+services= page. This page will display all currently configured integrations, as
+well as automatically discovered integrations that you can configure.
+
+[[https://img.cleberg.net/blog/20251220-self-hosting-home-assistant/integrations.webp]]
+#+caption: Integrations
+
+** HACS
+
+Another integration of note is the [[https://hacs.xyz][Home Assistnat Community Store (HACS)]], which
+provides a familiar integration into the Home Assistant UI that allows you to
+manage custom elements.
+
+If you installed Home Assistant like I did using the OS method, you will need to
+install the Get-HACS integration to install HACS and then restart Home Assistant
+to start utilizing these custom elements.
+
+Personally, I am using HACS in order to utilize the [[https://github.com/dahlb/ha_hatch][Hatch Rest]] integration for
+my Hatch Rest Mini, Rest+, and Restore.
+
+You can see it here in my =Media= dashboard:
+
+[[https://img.cleberg.net/blog/20251220-self-hosting-home-assistant/media.webp]]
+#+caption: Media Dashboard
+
+Once you have installed all relevant integrations and synced your devices to
+Home Assistant, you are ready to build your dashboards.
+
+** External Access
+
+If you want to be able to external your instance externally, you will need to
+expose the service to the internet somehow. One option is a reverse proxy, such
+as Nginx, which I have covered in numerous self-hosting posts. Another option is
+Cloudflare Tunnels, which I will cover here.
+
+Configuring a tunnel to Home Assistant OS takes a few more steps than a normal
+reverse proxy, but I currently find the security benefits worthwhile.
+
+To start, install the [[https://github.com/homeassistant-apps/app-cloudflared][app-cloudflared]] app in the Add-ons menu within Home
+Assistant.
+
+Once installed, follow the instructions to configure the =External Home
+Assistant Hostname=, =Cloudflare Tunnel Name=, and the =Cloudflare Tunnel Token=
+within the Configuration tab of the installed add-on. Once configured, I
+restarted Home Assistant to start fresh.
+
+Next, I opened Cloudflare and configured the tunnel to expore the
+=ha.example.com= domain to the =homeassistant.local:8123= address in
+Cloudflare's Zero Trust dashboard.
+
+From here, I can access Home Assistant anywhere I go from the =ha.example.com=
+domain.
+
+* Customization
+
+Finally, let's customize our dashboards. The view below is my standard view when
+greeted by my dashboard.
+
+As you can see, I choose to keep general information in the main tab, such as
+weather, time, and location. Instead of jamming every widget into a single tab,
+I separate my tabs by function:
+
+- Media: TVs, Speakers, and other playable entities
+- Cameras: UniFi Protect cameras
+- Lights: Hue bulbs and other lighting systems
+- IoT: Other miscellaneous devices, such as printers, my Litter Robot, Roomba,
+  etc.
+
+[[https://img.cleberg.net/blog/20251220-self-hosting-home-assistant/dashboard.webp]]
+#+caption: Dashboard
+
+When editing a dashboard, you're presented with a myriad of options. First, you
+can choose to use a number of layout options (sections, masonry, sidebar, and
+single card). Next, each element you add to the dashboard any number of
+entities, names, themes, states, and more to configure.
+
+Honestly, I had forgotten how customizable these dashboards were and I will
+absolutely spend a lot of time customizing for very specific needs.
+
+See below for some examples of editing and IoT elements:
+
+[[https://img.cleberg.net/blog/20251220-self-hosting-home-assistant/edit.webp]]
+#+caption: Editing Interface
+
+[[https://img.cleberg.net/blog/20251220-self-hosting-home-assistant/iot.webp]]
+#+caption: IoT Dashboard
+
+Once you have configured and customized your dashboards to your heart's content,
+you're reading to start automating and more! I highly suggest browsing the web
+and Home Assistant forums for ideas and solutions that fit your needs. There are
+more possibilities to this platform than you'll likely ever be able to use.
+
+** Mobile View
+
+Before I finish this post, I wanted to show how reliable the mobile view of the
+platform displays. These screenshots were captured on the iOS Home Assistant
+app, using the remote URL for my instance.
+
+| Dashboard                                                                               | Entity                                                                        |
+|-----------------------------------------------------------------------------------------+-------------------------------------------------------------------------------|
+| [[https://img.cleberg.net/blog/20251220-self-hosting-home-assistant/mobile_dashboard.webp]] | [[https://img.cleberg.net/blog/20251220-self-hosting-home-assistant/roomba.webp]] |
