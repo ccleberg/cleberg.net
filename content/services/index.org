@@ -3,35 +3,44 @@
 
 * Alternative Front-Ends/Proxies
 
-| Service           | Replaces         |
-|-------------------+------------------|
-| [[https://ao.cleberg.net/][AnonymousOverflow]] | StackOverflow    |
-| [[https://br.cleberg.net/][BiblioReads]]       | Goodreads        |
-| [[https://pin.cleberg.net/][Binternet]]         | Pinterest        |
-| [[https://bw.cleberg.net/][BreezeWiki]]        | Fandom           |
-| [[https://ld.cleberg.net][LibremDB]]          | IMDb             |
-| [[https://piped.cleberg.net][Piped]]             | YouTube          |
-| [[https://rimgo.cleberg.net/][Rimgo]]             | Imgur            |
-| [[https://rd.cleberg.net/][Rural Dictionary]]  | Urban Dictionary |
-| [[https://art.cleberg.net/][SkunkyArt]]         | DeviantArt       |
-| [[https://small.cleberg.net][Small]]             | Medium           |
+| Service           | Replaces         | Onion Link        |
+|-------------------+------------------+-------------------|
+| [[https://ao.cleberg.net/][AnonymousOverflow]] | StackOverflow    | [[http://7lyqrn4ofxdq7lfporviu44zpc42wooh2bqazfhvpscgwby2vcwldzad.onion][AnonymousOverflow]] |
+| [[https://br.cleberg.net/][BiblioReads]]       | Goodreads        | [[http://pkft6saqbmn6he5g626fphvlijmkdf4rzckjw6r57zsmuqm4ukd6i5ad.onion][BiblioReads]]       |
+| [[https://pin.cleberg.net/][Binternet]]         | Pinterest        | [[http://3rtmxu6slammicquf5cpgiptjpzht3n342vh62utoyxchds5r76tadad.onion][Binternet]]         |
+| [[https://bw.cleberg.net/][BreezeWiki]]        | Fandom           | [[http://z7kc27ceokwgddrcspxx4eb7b6xqmtjj26nohg3wgt6hsnnlfmk4apqd.onion][BreezeWiki]]        |
+| [[https://ld.cleberg.net][LibremDB]]          | IMDb             | [[http://u3tyzuhs7o4hkizpbcxbm5yqzj74bjqb3phfqfszrx4u75dua7lpf7ad.onion][LibremDB]]          |
+| [[https://piped.cleberg.net][Piped]]             | YouTube          | [[http://5ttqjwhhcxh7apxrge5b5cjqceiibrjlqv2hhtmukwfsintbzqk5hh4id.onion][Piped]]             |
+| [[https://rimgo.cleberg.net/][Rimgo]]             | Imgur            | [[http://hcj62a4s6ok23oaa4xjnnvabj2aunod3464iuufh2wtehg2th3rwn3yd.onion][Rimgo]]             |
+| [[https://rd.cleberg.net/][Rural Dictionary]]  | Urban Dictionary | [[http://voyxxivcoupelvedthpbjqsrdhkn4ty7qjurvsif4qbjejnldisqs5ad.onion][Rural Dictionary]]  |
+| [[https://art.cleberg.net/][SkunkyArt]]         | DeviantArt       | [[http://mplqs2jxkjd5wxak3zjv55oxyadf4vwzx6ksgj4ztftndjl6elgsf4qd.onion][SkunkyArt]]         |
+| [[https://small.cleberg.net][Small]]             | Medium           | [[http://w2qsrbzjmlikhwvbhno3qfdjod53iyzlvzjamcvgkcmtbclmdkqerbqd.onion][Small]]             |
 
 * Other Services
 
-| Service        | Description                                       |
-|----------------+---------------------------------------------------|
-| [[https://cc.cleberg.net/][CyberChef]]      | The Cyber Swiss Army Knife                        |
-| [[https://files.cleberg.net/][FileArchive]]    | An interesting file archive                       |
-| [[https://paste.cleberg.net/][FlashPaper]]     | One-time encrypted password/secret sharing        |
-| [[https://hat.cleberg.net/][Hat.sh]]         | Simple, fast, secure client-side file encryption  |
-| [[https://lt.cleberg.net][LibreTranslate]] | A translation engine                              |
-| [[https://mz.cleberg.net/][Mazanoke]]       | A local image optimizer that runs in your browser |
-| [[https://office.cleberg.net/][Office]]         | The world's smallest office suite                 |
-| [[https://org.cleberg.net/][Org-Live]]       | A basic org-mode editor for the web I built       |
-| [[https://pgp.cleberg.net/][PGP]]            | A simple and easy-to-use client-side PGP tool     |
-| [[https://search.cleberg.net/][SearXNG]]        | A privacy-respecting, open metasearch engine      |
-| [[https://send.cleberg.net/][Send]]           | Simple, private file sharing                      |
-| [[https://slash.cleberg.net/][Slash]]          | Bookmark and link sharing platform                |
+| Service        | Description                                       | Onion Link     |
+|----------------+---------------------------------------------------+----------------|
+| [[https://cc.cleberg.net/][CyberChef]]      | The Cyber Swiss Army Knife                        | [[http://gipsohqqcehn4n6smyg5j5aap7ln6lwugyjm2lxyx4vfiwayjhpnodyd.onion][CyberChef]]      |
+| [[https://files.cleberg.net/][FileArchive]]    | An interesting file archive                       | [[http://yt2y635dc6zyxziy5ytkfz36bmkgcxuccq3meom6qp44gjdat54wt5id.onion][FileArchive]]    |
+| [[https://paste.cleberg.net/][FlashPaper]]     | One‑time encrypted password/secret sharing        | [[http://ciserod7fbncypo762qcqtowldl3qjhlojfnmguiuvcj3rcyrhqs6ead.onion][FlashPaper]]     |
+| [[https://hat.cleberg.net/][Hat.sh]]         | Simple, fast, secure client‑side file encryption  | [[http://jfrkztgin2ngoj2fnssc2m2j2ycpchmrhzhudaucgvaib5iqwgfxexyd.onion][Hat.sh]]         |
+| [[https://lt.cleberg.net][LibreTranslate]] | A translation engine                              | [[http://nxw6545qeepw2s2kngowsxbcizjcxyimn7dq2bpvr3sqabsu2juj6gyd.onion][LibreTranslate]] |
+| [[https://mz.cleberg.net/][Mazanoke]]       | A local image optimizer that runs in your browser | [[http://ltawlmsk6vhrig2awwshnduiv45anelx3thepkd6xh4n2s4jxu7wyrid.onion][Mazanoke]]       |
+| [[https://office.cleberg.net/][Office]]         | The world’s smallest office suite                 | [[http://uwtjz6pof52bzdkj242mub77ls2ji3qiznbsuoir235rxynqxadpghid.onion][Office]]         |
+| [[https://org.cleberg.net/][Org‑Live]]       | A basic org‑mode editor for the web I built       | [[http://7vsifofpucgi3wva52nbwhwglrmbyxgdapbkkmgniqlsskspux5zocyd.onion][Org‑Live]]       |
+| [[https://pgp.cleberg.net/][PGP]]            | A simple and easy‑to‑use client‑side PGP tool     | [[http://ezjaaayjnqxd5iui4kttzgqkcy43qj3re75gzhatg2zfvoyavu4ylnid.onion][PGP]]            |
+| [[https://search.cleberg.net/][SearXNG]]        | A privacy‑respecting, open metasearch engine      | [[http://txwk667ks3vh76r2mfqiot2wdptentsne64nu6qam63zbpzbmhtkvnid.onion][SearXNG]]        |
+| [[https://send.cleberg.net/][Send]]           | Simple, private file sharing                      | [[http://6jcf5qh2yg4axi42nbbcijglvoag74z7oq7xikqueebeb5vykj22miqd.onion][Send]]           |
+| [[https://slash.cleberg.net/][Slash]]          | Bookmark and link sharing platform                | [[http://svfj2zs33g572utlou6kx7uamhwen4nxdzvfetnhwjqs4mmdgoayc7qd.onion][Slash]]          |
 
+* Miscellaneous Projects
+
+| Project             | Description                     | Onion Link          |
+|---------------------+---------------------------------+---------------------|
+| [[https://projects.cleberg.net/401k/][401k]]                | 401k projections                | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion][401k]]                |
+| [[https://projects.cleberg.net/lincoln-crimes/][lincoln-crimes]]      | Lincoln (NE) crimes over time   | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion][lincoln-crimes]]      |
+| [[https://projects.cleberg.net/palettes/][palettes]]            | Color paletter generator        | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion][palettes]]            |
+| [[https://projects.cleberg.net/space-wiki/][space-wiki]]          | Wiki about space‑related topics | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion][space-wiki]]          |
+| [[https://projects.cleberg.net/world-incarceration/][world-incarceration]] | Data on global incarceration    | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion][world-incarceration]] |
 
 View the [[https://git.cleberg.net/cleberg.net.git/log/content/services/index.org][git log]] for information regarding this page's history.
