@@ -7,7 +7,7 @@
 
 I don't want to bury the lede here, so if you'd like to see the full source code
 I use to email myself plaintext poems daily, visit the repository:
-[[https://git.sr.ht/~cxc/daily-poem.git][daily-poem.git]].
+[[https://git.cleberg.net/daily-poem.git][daily-poem.git]].
 
 * My Daily Dose of Poetry
 

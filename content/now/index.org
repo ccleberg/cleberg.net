@@ -39,4 +39,4 @@ This is a [[https://nownownow.com/about][/now]] page.
 
 - I don't have time for hobbies right now 🙃
 
-View the historical [[https://git.sr.ht/~cxc/cleberg.net/log/main/item/content/now/index.org][log of changes]] for this page.
+View the historical [[https://git.cleberg.net/cleberg.net.git/log/content/now/index.org][log of changes]] for this page.
