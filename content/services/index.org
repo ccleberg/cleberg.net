@@ -37,10 +37,10 @@
 
 | Project             | Description                     | Onion Link          |
 |---------------------+---------------------------------+---------------------|
-| [[https://projects.cleberg.net/401k/][401k]]                | 401k projections                | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion][401k]]                |
-| [[https://projects.cleberg.net/lincoln-crimes/][lincoln-crimes]]      | Lincoln (NE) crimes over time   | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion][lincoln-crimes]]      |
-| [[https://projects.cleberg.net/palettes/][palettes]]            | Color paletter generator        | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion][palettes]]            |
-| [[https://projects.cleberg.net/space-wiki/][space-wiki]]          | Wiki about space‑related topics | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion][space-wiki]]          |
-| [[https://projects.cleberg.net/world-incarceration/][world-incarceration]] | Data on global incarceration    | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion][world-incarceration]] |
+| [[https://projects.cleberg.net/401k/][401k]]                | 401k projections                | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/401k/][401k]]                |
+| [[https://projects.cleberg.net/lincoln-crimes/][lincoln-crimes]]      | Lincoln (NE) crimes over time   | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/lincoln-crimes/][lincoln-crimes]]      |
+| [[https://projects.cleberg.net/palettes/][palettes]]            | Color paletter generator        | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/palettes/][palettes]]            |
+| [[https://projects.cleberg.net/space-wiki/][space-wiki]]          | Wiki about space‑related topics | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/space-wiki/][space-wiki]]          |
+| [[https://projects.cleberg.net/world-incarceration/][world-incarceration]] | Data on global incarceration    | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/world-incarceration/][world-incarceration]] |
 
 View the [[https://git.cleberg.net/cleberg.net.git/log/content/services/index.org][git log]] for information regarding this page's history.
