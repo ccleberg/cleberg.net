@@ -5,13 +5,15 @@ What are the technologies behind =cleberg.net=? See below. I tend to flip-flop
 on my DNS providers and Git hosts often, but the rest of these technologies are
 consistently powering this website.
 
-| Technology            | What I Use |
-|-----------------------+------------|
-| Registrar             | Njalla     |
-| DNS                   | Cloudflare |
-| Operating System      | Ubuntu     |
-| Web Server            | Nginx      |
-| SSL                   | Certbot    |
-| Static Site Generator | Weblorg    |
-| Markup Language       | Org-mode   |
-| Git Host              | GitHub     |
+| Technology            | What I Use  |
+|-----------------------+-------------|
+| Registrar             | [[https://njal.la][Njalla]]      |
+| DNS                   | [[https://cloudflare.com][Cloudflare]]  |
+| Server                | [[https://cleberg.net/blog/server-build.html][Self-hosted]] |
+| Operating System      | [[https://ubuntu.com][Ubuntu]]      |
+| Web Server            | [[https://nginx.org][Nginx]]       |
+| SSL                   | [[https://certbot.eff.org][Certbot]]     |
+| Static Site Generator | [[https://github.com/emacs-love/weblorg][Weblorg]]     |
+| Markup Language       | [[https://orgmode.org][org-mode]]    |
+| Git Host              | [[https://git.cleberg.net][cGit]]        |
+| CI/CD                 | [[https://git.cleberg.net/cleberg.net.git/tree/build.py][build.py]]    |

@@ -23,6 +23,7 @@ In my spare time, I like to:
 If you want to chat, you can find me in the following spaces:
 
 - hello [at] cleberg.net ([[https://cleberg.net/gpg.txt][PGP Key]])
-- @cmc.01 on [[https://signal.org/][Signal]]
+- Email or Signal message me for a [[https://simplex.chat/][SimpleX]] link (preferred)
+- @cmc.01 on [[https://signal.org/][Signal]] (less preferred)
 
 Curious about the technology behind this website? Check out my [[https://cleberg.net/uses/][uses]] page.
