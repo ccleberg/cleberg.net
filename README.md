@@ -35,7 +35,7 @@ included in the `./screenshots/` directory.
 
 | Light Mode                   | Dark Mode                   |
 | ---------------------------- | --------------------------- |
-| ![](./screenshots/light.webp) | ![](./screenshots/dark.webp) |
+| ![](./screenshots/light.png) | ![](./screenshots/dark.png) |
 
 ## Configuration
 
