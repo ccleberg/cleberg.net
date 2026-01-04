@@ -71,6 +71,11 @@ standard for private direct messages. It is centralized, but it is very stable,
 provides forward secrecy for messages, and has a proven track record of not
 spilling data.
 
+#+begin_quote
+As of 2026, I've started using [[https://simplex.chat/][SimpleX]] and I think it will replace Signal for
+me.
+#+end_quote
+
 If we talk about other communication channels, I usually opt for emails
 encrypted with [[https://gnupg.org/][GPG (PGP)]]. This isn't the best solution, but it does provide a
 trustworthy encryption method if you need to use email.
@@ -82,6 +87,15 @@ PGP.
 Want real privacy? Talk to someone in person when possible.
 
 * Browser Extensions
+
+#+begin_quote
+As of 2026, I've completed switched over to [[https://www.torproject.org/][Tor]] on my desktop and [[https://onionbrowser.com/][Onion Browser]]
+on my phone for browsing.
+
+With these browsers, I've removed all extensions and set the browsers to the
+highest privacy levels possible in the settings page.
+#+end_quote
+
 ** Firefox (Desktop)
 
 [[https://ublockorigin.com/][uBlock Origin]] is a no-brainer. This add-on provides domain-level blocking for
