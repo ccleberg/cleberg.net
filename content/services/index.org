@@ -10,7 +10,7 @@
 | [[https://pin.cleberg.net/][Binternet]]         | Pinterest        | [[http://3rtmxu6slammicquf5cpgiptjpzht3n342vh62utoyxchds5r76tadad.onion][Binternet]]         |
 | [[https://bw.cleberg.net/][BreezeWiki]]        | Fandom           | [[http://z7kc27ceokwgddrcspxx4eb7b6xqmtjj26nohg3wgt6hsnnlfmk4apqd.onion][BreezeWiki]]        |
 | [[https://ld.cleberg.net][LibremDB]]          | IMDb             | [[http://u3tyzuhs7o4hkizpbcxbm5yqzj74bjqb3phfqfszrx4u75dua7lpf7ad.onion][LibremDB]]          |
-| [[https://piped.cleberg.net][Piped]]             | YouTube          | [[http://5ttqjwhhcxh7apxrge5b5cjqceiibrjlqv2hhtmukwfsintbzqk5hh4id.onion][Piped]]             |
+| [[https://piped.cleberg.net][Piped]]             | YouTube          | [[http://5ttqjwhhcxh7apxrge5b5cjqceiibrjlqv2hhtmukwfsitbzqk5hh4id.onion][Piped]]             |
 | [[https://rimgo.cleberg.net/][Rimgo]]             | Imgur            | [[http://hcj62a4s6ok23oaa4xjnnvabj2aunod3464iuufh2wtehg2th3rwn3yd.onion][Rimgo]]             |
 | [[https://rd.cleberg.net/][Rural Dictionary]]  | Urban Dictionary | [[http://voyxxivcoupelvedthpbjqsrdhkn4ty7qjurvsif4qbjejnldisqs5ad.onion][Rural Dictionary]]  |
 | [[https://art.cleberg.net/][SkunkyArt]]         | DeviantArt       | [[http://mplqs2jxkjd5wxak3zjv55oxyadf4vwzx6ksgj4ztftndjl6elgsf4qd.onion][SkunkyArt]]         |
@@ -38,6 +38,7 @@
 | Project             | Description                     | Onion Link          |
 |---------------------+---------------------------------+---------------------|
 | [[https://projects.cleberg.net/401k/][401k]]                | 401k projections                | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/401k/][401k]]                |
+| [[https://hn.cleberg.net/][hn]]                  | Hacker News proxy               | [[http://r3yfeffyj7ornpikojmw75u3sn2la7tqnmcmwgv2ov7if24sm5czqeid.onion/][hn]]                  |
 | [[https://projects.cleberg.net/lincoln-crimes/][lincoln-crimes]]      | Lincoln (NE) crimes over time   | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/lincoln-crimes/][lincoln-crimes]]      |
 | [[https://projects.cleberg.net/palettes/][palettes]]            | Color paletter generator        | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/palettes/][palettes]]            |
 | [[https://projects.cleberg.net/space-wiki/][space-wiki]]          | Wiki about space‑related topics | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/space-wiki/][space-wiki]]          |
