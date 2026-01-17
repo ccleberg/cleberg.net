@@ -8,23 +8,10 @@
 <meta property="og:description" content="{{ project_description }}" />
 {% endif %} {% endblock %} {% block main %}
 <article>
-	<section class="post-metadata">
-		<div class="meta-row">
-			<span class="meta-label">Title:</span>
-			<span class="meta-value">{{ post.title }}</span>
-		</div>
-
-		<div class="meta-row">
-			<span class="meta-label">Date:</span>
-			<time class="meta-value" datetime='{{ post.date | strftime("%Y-%m-%d") }}''>
-			{{ post.date | strftime("%Y-%m-%d %H:%M:%S") }}
-			</time>
-		</div>
-
-		<div class="meta-row">
-			<span class="meta-label">Description:</span>
-			<span class="meta-value">{{ post.description }}</span>
-		</div>
+	<section>
+		<b>Title</b>: {{ post.title }}
+		<br><b>Date</b>: <time datetime='{{ post.date|strftime("%Y-%m-%d") }}'>{{ post.date|strftime("%Y-%m-%d %H:%M:%S") }}</time>
+		<br><b>Description</b>: {{ post.description }}
 	</section>
 	<section>{{ post.html | safe }}</section>
 	<div class="reply-link"><a href="mailto:hello@cleberg.net">Reply via email &rarr;</a></div>
