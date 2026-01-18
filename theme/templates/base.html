@@ -17,22 +17,50 @@
     {% endblock %}
 </head>
 <body>
-    <div aria-label="Skip to Content" role="navigation">
-        <a href="#main" class="skip-link">Skip to content</a>
+    <div class="scanlines"></div>
+    <div class="terminal-shell">
+        <header class="system-header">
+            <div class="sys-info">SYS_OS [VER 2.26.1]</div>
+            <nav aria-label="Site Navigation">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/services/">Services</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <div class="glass-pane"> {% block main %}{% endblock %}
+            </div>
+        </main>
+
+<footer>
+    <div class="system-log">
+        <div class="log-entry">
+            <span class="log-time">[{{ now() | strftime("%H:%M:%S") }}]</span>
+            <span class="log-msg">KERNEL: CLEBERG_OS_NODE INITIALIZED</span>
+        </div>
+        <div class="log-entry">
+            <span class="log-time">[{{ now() | strftime("%H:%M:%S") }}]</span>
+            <span class="log-msg">BUILD_TS: &lt;{{ now() | strftime("%Y-%m-%d %a %H:%M:%S") }}&gt;</span>
+        </div>
+        <div class="log-entry">
+            <span class="log-time">[{{ now() | strftime("%H:%M:%S") }}]</span>
+            <span class="log-msg">STATUS: SESSION_ID #<span class="session-id"></span> ACTIVE</span>
+        </div>
     </div>
-	<nav aria-label="Site Navigation">
-		<ul>
-			<li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-			<li><a href="/blog/">Blog</a></li>
-			<li><a href="/services/">Services</a></li>
-		</ul>
-	</nav>
-    <main id="main">{% block main %}{% endblock %}</main>
-	<footer>
-        <a href="https://git.cleberg.net/cleberg.net.git">Source</a> (<a href="http://3mria4zis7wal2g5rdbdjrkc4yso2xqd6t6psmfz3dpqwflmx3zts5id.onion/">.onion</a>) &middot;
-        <a href="/feed.xml">RSS</a> &middot;
-        <a href="http://sv3g2dlyvwyk2nvi3eeh55fcrpdvjlclhi6wwsx57cste6lwdjanzyyd.onion">.onion</a>
-	</footer>
+    
+    <div class="status-bar">
+        <span class="status-node">NODE: CLEBERG_NET</span>
+        <span class="status-links">
+            <a href="https://git.cleberg.net/cleberg.net.git">SOURCE</a> &middot;
+            <a href="/feed.xml">RSS</a> &middot;
+            <a href="http://sv3g2dlyvwyk2nvi3eeh55fcrpdvjlclhi6wwsx57cste6lwdjanzyyd.onion">ONION</a>
+        </span>
+    </div>
+</footer>
+    </div>
 </body>
 </html>

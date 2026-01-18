@@ -9,10 +9,11 @@
 {% endif %} {% endblock %} {% block main %}
 <article>
 	<section>
-		<b>Title</b>: {{ post.title }}
-		<br><b>Date</b>: <time datetime='{{ post.date|strftime("%Y-%m-%d") }}'>{{ post.date|strftime("%Y-%m-%d %H:%M:%S") }}</time>
-		<br><b>Description</b>: {{ post.description }}
-	</section>
+	<section class="sys-readout">
+        <b>Object</b> <span>{{ post.title }}</span>
+        <b>Timestamp</b> <span><time datetime='{{ post.date|strftime("%Y-%m-%d") }}'>{{ post.date|strftime("%Y-%m-%d %H:%M:%S") }}</time></span>
+        <b>Summary</b> <span>{{ post.description }}</span>
+    </section>
 	<section>{{ post.html | safe }}</section>
 	<div class="reply-link"><a href="mailto:hello@cleberg.net">Reply via email &rarr;</a></div>
 </article>

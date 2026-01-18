@@ -1,81 +1,295 @@
-body {
-    font-family: Menlo, Consolas, Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    margin: 0 auto;
-    max-width: 50em;
+:root {
+    --bg: #0a0b10;
+    --green: #00ff9d;
+    --green-dim: rgba(0, 255, 157, 0.2);
+    --glass: rgba(0, 255, 157, 0.03);
+    --text: #c0fce6;
+    --font: "Lucida Console", "Monaco", "Consolas", monospace;
+    --emacs-blue: #51afef;
+    --emacs-bg: #1c1f24;
 }
 
-body {
-    padding: 1rem;
-}
-
-footer {
-    margin: 1rem 0;
-}
-
-nav {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    margin: 1rem 0;
-}
-
-nav ul {
-    display: flex;
-    list-style-type: none;
+/* Base Terminal Environment */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
+    background-color: var(--bg);
 }
 
-nav ul li {
-    height: 100%;
-    margin-bottom: 0.5rem;
-    margin-right: 1rem;
-    text-align: center;
+body {
+    color: var(--text);
+    font-family: var(--font);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Desktop keeps terminal-shell fixed */
 }
 
 img {
     max-width: 100%;
 }
 
-pre {
-    border: 1px solid black;
-    overflow: scroll;
-    padding: 0.5rem;
+/* CRT Scanline Effect */
+.scanlines {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(
+        rgba(18, 16, 16, 0) 50%, 
+        rgba(0, 0, 0, 0.15) 50%
+    );
+    background-size: 100% 4px;
+    z-index: 9999;
+    pointer-events: none;
 }
 
-:not(pre) > code {
-    color: red;
+.terminal-shell {
+    width: 95%;
+    max-width: 1000px;
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
 }
 
-.skip-link {
-    height: 1px;
-    left: -10000px;
-    overflow: hidden;
+main {
+    flex: 1;
+    overflow-y: auto;
+    margin: 10px 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--green) transparent;
+}
+
+/* Navigation & Header */
+.system-header {
+    border-bottom: 1px solid var(--green-dim);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: var(--green);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    text-shadow: 0 0 8px var(--green);
+    background: var(--green-dim);
+}
+
+/* Content Pane (The Glass) */
+.glass-pane {
+    background: var(--glass);
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--green-dim);
+    padding: 1.5rem;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+/* Stylized Data Blocks */
+.sys-readout {
+    border: 1px solid var(--green-dim);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+}
+
+.sys-readout b {
+    color: var(--green);
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+/* Typography & Elements */
+h1, h2, h3 {
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    color: var(--green);
+    transition: 0.2s;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px var(--green);
+}
+
+code {
+    background: var(--green-dim);
+    padding: 2px 4px;
+    color: #fff;
+}
+
+/* Blockquotes: Emacs Style */
+blockquote {
+    background: var(--emacs-bg);
+    border-left: 4px solid var(--emacs-blue);
+    margin: 1.5rem 0;
+    padding: 1rem;
+    color: #bbc2cf;
+    font-style: italic;
+    position: relative;
+}
+
+blockquote::before {
+    content: "/* COMMENT */";
     position: absolute;
-    top: auto;
-    width: 1px;
+    top: -10px;
+    right: 10px;
+    font-size: 0.6rem;
+    color: var(--emacs-blue);
+    background: var(--bg);
+    padding: 0 5px;
 }
 
-.skip-link:focus {
-    height: auto;
-    position: static;
-    width: auto;
+/* Blog List */
+.post {
+    margin: 0.5rem 0;
+    padding: 5px;
+    border-bottom: 1px dashed rgba(0, 255, 157, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #000000;
-        color: #dfdfdf;
-    }
+.post time {
+    color: var(--green);
+    opacity: 0.6;
+    font-size: 0.8rem;
+    margin-right: 1rem;
+}
 
-    a {
-        color: #67c0ff;
-    }
+.post a::before {
+    content: "DIR_ ";
+    font-size: 0.7rem;
+    opacity: 0.5;
+}
 
-    pre {
-        border-color: white;
-    }
+/* Code Blocks */
+pre {
+    background: var(--emacs-bg);
+    border: 1px solid #3e4451;
+    border-left: 4px solid var(--emacs-blue);
+    padding: 1rem;
+    overflow-x: auto;
+    position: relative;
+    margin: 1.5rem 0;
+}
+
+pre::before {
+    content: "-uuu:--- F1  buffer.txt   All (1,0)";
+    display: block;
+    background: #282c34;
+    color: #bbc2cf;
+    font-size: 0.7rem;
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 4px 10px;
+    border-bottom: 1px solid #3e4451;
+    opacity: 0.7;
+}
+
+/* Tables */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+th {
+    background: var(--green-dim);
+    color: var(--green);
+    text-transform: uppercase;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid var(--green);
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 255, 157, 0.1);
+    color: var(--text);
+    border-right: 1px solid rgba(0, 255, 157, 0.05);
+}
+
+table, thead, tbody, th, tr, td {
+    border: 1px solid var(--green-dim);
+}
+
+td:last-child { border-right: none; }
+
+/* Footer & Status Bar */
+footer {
+    margin-top: auto;
+    font-size: 0.7rem;
+}
+
+.system-log {
+    border-top: 2px solid var(--green);
+    background: linear-gradient(to bottom, rgba(0,255,157,0.05), transparent);
+    padding: 10px;
+}
+
+.log-entry { font-size: 0.7rem; line-height: 1.4; color: var(--green); }
+
+.status-bar {
+    background: var(--green);
+    color: var(--bg);
+    padding: 4px 12px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+/* Fix for Footer Link Visibility */
+.status-bar a {
+    color: #000; /* High contrast black on green bar */
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.status-bar a:hover {
+    background: #000;
+    color: var(--green);
+}
+
+.status-node::before {
+    content: "● NORMAL ";
+    background: #000;
+    color: var(--green);
+    padding: 0 8px;
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    body { overflow-y: auto; }
+    .terminal-shell { height: auto; }
+    .system-header { flex-direction: column; gap: 1rem; }
 }
