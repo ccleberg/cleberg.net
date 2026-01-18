@@ -42,7 +42,7 @@ well as automatically discovered integrations that you can configure.
 
 ** HACS
 
-Another integration of note is the [[https://hacs.xyz][Home Assistnat Community Store (HACS)]], which
+Another integration of note is the [[https://hacs.xyz][Home Assistant Community Store (HACS)]], which
 provides a familiar integration into the Home Assistant UI that allows you to
 manage custom elements.
 
