@@ -20,6 +20,7 @@ html, body {
 body {
     color: var(--text);
     font-family: var(--font);
+    font-size: 0.85rem;
     line-height: 1.5;
     display: flex;
     flex-direction: column;
@@ -107,7 +108,7 @@ nav a:hover {
     background: rgba(0, 0, 0, 0.3);
     padding: 1rem;
     margin-bottom: 2rem;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 0.5rem 1rem;
@@ -125,6 +126,10 @@ h1, h2, h3 {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
+h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+h2 { font-size: 1.2rem; margin-top: 1.5rem; }
+h3 { font-size: 1rem; }
 
 a {
     color: var(--green);
@@ -166,18 +171,29 @@ blockquote::before {
     padding: 0 5px;
 }
 
-/* Blog List */
+/* Blog List (TUI Style) */
 .post {
     margin: 0.5rem 0;
-    padding: 5px;
+    padding: 8px 5px;
     border-bottom: 1px dashed rgba(0, 255, 157, 0.1);
+    display: flex;
+    flex-direction: row; /* Default: Side-by-side for desktop */
+    align-items: baseline;
 }
 
 .post time {
     color: var(--green);
     opacity: 0.6;
-    font-size: 0.8rem;
-    margin-right: 1rem;
+    font-size: 0.75rem;
+    margin-right: 1.5rem;
+    white-space: nowrap; /* Prevents date from wrapping */
+    font-family: var(--font);
+}
+
+.post a {
+    font-size: 0.85rem;
+    text-decoration: none;
+    flex: 1;
 }
 
 .post a::before {
@@ -262,7 +278,8 @@ footer {
 .status-bar {
     background: var(--green);
     color: var(--bg);
-    padding: 4px 12px;
+    font-size: 0.7rem;
+    padding: 2px 10px;
     display: flex;
     justify-content: space-between;
     font-weight: bold;
@@ -289,7 +306,33 @@ footer {
 }
 
 @media (max-width: 600px) {
+}
+
+/* Mobile Responsiveness for Blog List */
+@media (max-width: 650px) {
+    .post {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .post time {
+        margin-right: 0;
+        margin-bottom: 2px;
+        font-size: 0.7rem;
+        opacity: 0.4;
+    }
+    
+    .post a {
+        padding: 4px 0;
+    }
+}
+
+/* General Layout Mobile Fixes */
+@media (max-width: 600px) {
     body { overflow-y: auto; }
     .terminal-shell { height: auto; }
-    .system-header { flex-direction: column; gap: 1rem; }
+    .system-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    nav ul { flex-wrap: wrap; gap: 10px 20px;}
+    .glass-pane { padding: 1rem; }
 }
