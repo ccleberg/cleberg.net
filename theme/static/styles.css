@@ -1,339 +1,132 @@
+/* --- Variables & System Logic --- */
 :root {
-    --bg: #0a0b10;
-    --green: #00ff9d;
-    --green-dim: rgba(0, 255, 157, 0.2);
-    --glass: rgba(0, 255, 157, 0.03);
-    --text: #c0fce6;
-    --font: "Lucida Console", "Monaco", "Consolas", monospace;
-    --emacs-blue: #51afef;
-    --emacs-bg: #1c1f24;
+  color-scheme: light dark;
+  /* Light Mode Palette */
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --accent: #0000ff; /* Classic HTML blue */
+  --border: #000000;
+  --code-bg: #f4f4f4;
+  --meta: #666666;
+  --max-width: 800px;
 }
 
-/* Base Terminal Environment */
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0d0d;
+    --fg: #e0e0e0;
+    --accent: #4dabff;
+    --border: #333333;
+    --code-bg: #1a1a1a;
+    --meta: #999999;
+  }
 }
+
+/* --- Layout Architecture --- */
+* { box-sizing: border-box; }
 
 body {
-    color: var(--text);
-    font-family: var(--font);
-    font-size: 0.85rem;
-    line-height: 1.5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden; /* Desktop keeps terminal-shell fixed */
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  line-height: 1.6;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-rendering: optimizeLegibility;
 }
 
-img {
-    max-width: 100%;
-}
+/* --- Navigation & Footer --- */
+nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; border-bottom: 4px solid var(--fg); padding-bottom: 0.5rem; }
+nav a { text-transform: uppercase; font-weight: 900; text-decoration: none; }
+nav a:hover { background: var(--fg); color: var(--bg); }
 
-/* CRT Scanline Effect */
-.scanlines {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(
-        rgba(18, 16, 16, 0) 50%, 
-        rgba(0, 0, 0, 0.15) 50%
-    );
-    background-size: 100% 4px;
-    z-index: 9999;
-    pointer-events: none;
-}
+footer { margin-top: 4rem; border-top: 1px solid var(--border); padding-top: 1rem; font-size: 0.8rem; text-transform: uppercase; }
 
-.terminal-shell {
-    width: 95%;
-    max-width: 1000px;
-    height: 98vh;
-    display: flex;
-    flex-direction: column;
-    padding: 10px 0;
-}
+/* --- Typography (Brutalist) --- */
+h1, h2, h3 { line-height: 1.1; margin-top: 2rem; font-weight: 900; text-transform: uppercase; }
+h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+h2 { border-left: 10px solid var(--accent); padding-left: 0.75rem; }
 
-main {
-    flex: 1;
-    overflow-x: scroll;
-    overflow-y: auto;
-    margin: 10px 0;
-    scrollbar-width: thin;
-    scrollbar-color: var(--green) transparent;
-}
+a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
 
-/* Navigation & Header */
-.system-header {
-    border-bottom: 1px solid var(--green-dim);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.8rem;
-}
+/* --- Weblorg / Template Specifics --- */
+section b { display: block; font-size: 0.7rem; text-transform: uppercase; color: var(--meta); margin-top: 0.5rem; }
+section span { display: block; font-weight: bold; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem; }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-}
+.post { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border); padding: 0.5rem 0; }
+.post time { font-size: 0.8rem; color: var(--meta); }
 
-nav a {
-    color: var(--green);
-    text-decoration: none;
-    text-transform: uppercase;
-}
+/* --- Org-Mode Tables (Heavy Grid) --- */
+table { width: 100%; border-collapse: collapse; margin: 2rem 0; border: 3px solid var(--fg); }
+th, td { border: 1px solid var(--fg); padding: 0.75rem; text-align: left; }
+th { background: var(--fg); color: var(--bg); text-transform: uppercase; font-size: 0.8rem; }
 
-nav a:hover {
-    text-shadow: 0 0 8px var(--green);
-    background: var(--green-dim);
-}
+/* --- Code & Pre blocks --- */
+pre { padding: 1rem; border: 1px solid var(--border); background: var(--code-bg); overflow-x: auto; }
+code { background: var(--code-bg); padding: 0.2rem 0.4rem; }
 
-/* Content Pane (The Glass) */
-.glass-pane {
-    background: var(--glass);
-    backdrop-filter: blur(4px);
-    border: 1px solid var(--green-dim);
-    padding: 1.5rem;
-    min-height: 100%;
-    box-sizing: border-box;
-}
+/* --- Accessibility & Efficiency --- */
+img { max-width: 100%; height: auto; filter: grayscale(1); }
+img:hover { filter: grayscale(0); }
 
-/* Stylized Data Blocks */
-.sys-readout {
-    border: 1px solid var(--green-dim);
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1rem;
-    margin-bottom: 2rem;
-    font-size: 0.8rem;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.5rem 1rem;
-}
-
-.sys-readout b {
-    color: var(--green);
-    text-transform: uppercase;
-    opacity: 0.7;
-}
-
-/* Typography & Elements */
-h1, h2, h3 {
-    color: var(--green);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-h1 { font-size: 1.5rem; margin-bottom: 1rem; }
-h2 { font-size: 1.2rem; margin-top: 1.5rem; }
-h3 { font-size: 1rem; }
-
-a {
-    color: var(--green);
-    transition: 0.2s;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
-}
-
-a:hover {
-    color: #fff;
-    text-shadow: 0 0 5px var(--green);
-}
-
-code {
-    background: var(--green-dim);
-    padding: 2px 4px;
-    color: #fff;
-}
-
-/* Blockquotes: Emacs Style */
-blockquote {
-    background: var(--emacs-bg);
-    border-left: 4px solid var(--emacs-blue);
-    margin: 1.5rem 0;
-    padding: 1rem;
-    color: #bbc2cf;
-    font-style: italic;
-    position: relative;
-}
-
-blockquote::before {
-    content: "/* COMMENT */";
+/* --- Accessibility: Skip Link --- */
+.skip-link {
     position: absolute;
-    top: -10px;
-    right: 10px;
-    font-size: 0.6rem;
-    color: var(--emacs-blue);
-    background: var(--bg);
-    padding: 0 5px;
-}
-
-/* Blog List (TUI Style) */
-.post {
-    margin: 0.5rem 0;
-    padding: 8px 5px;
-    border-bottom: 1px dashed rgba(0, 255, 157, 0.1);
-    display: flex;
-    flex-direction: row; /* Default: Side-by-side for desktop */
-    align-items: baseline;
-}
-
-.post time {
-    color: var(--green);
-    opacity: 0.6;
-    font-size: 0.75rem;
-    margin-right: 1.5rem;
-    white-space: nowrap; /* Prevents date from wrapping */
-    font-family: var(--font);
-}
-
-.post a {
-    font-size: 0.85rem;
-    text-decoration: none;
-    flex: 1;
-}
-
-.post a::before {
-    content: "DIR_ ";
-    font-size: 0.7rem;
-    opacity: 0.5;
-}
-
-/* Code Blocks */
-pre {
-    background: var(--emacs-bg);
-    border: 1px solid #3e4451;
-    border-left: 4px solid var(--emacs-blue);
-    padding: 1rem;
-    overflow-x: auto;
-    position: relative;
-    margin: 1.5rem 0;
-}
-
-pre::before {
-    content: "-uuu:--- F1  buffer.txt   All (1,0)";
-    display: block;
-    background: #282c34;
-    color: #bbc2cf;
-    font-size: 0.7rem;
-    margin: -1rem -1rem 1rem -1rem;
-    padding: 4px 10px;
-    border-bottom: 1px solid #3e4451;
-    opacity: 0.7;
-}
-
-/* Tables */
-.table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    margin: 2rem 0;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.85rem;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-th {
-    background: var(--green-dim);
-    color: var(--green);
-    text-transform: uppercase;
-    text-align: left;
-    padding: 12px;
-    border-bottom: 1px solid var(--green);
-}
-
-td {
-    padding: 10px;
-    border-bottom: 1px solid rgba(0, 255, 157, 0.1);
-    color: var(--text);
-    border-right: 1px solid rgba(0, 255, 157, 0.05);
-}
-
-table, thead, tbody, th, tr, td {
-    border: 1px solid var(--green-dim);
-}
-
-td:last-child { border-right: none; }
-
-/* Footer & Status Bar */
-footer {
-    margin-top: auto;
-    font-size: 0.7rem;
-}
-
-.system-log {
-    border-top: 2px solid var(--green);
-    background: linear-gradient(to bottom, rgba(0,255,157,0.05), transparent);
-    padding: 10px;
-}
-
-.log-entry { font-size: 0.7rem; line-height: 1.4; color: var(--green); }
-
-.status-bar {
-    background: var(--green);
+    top: -100px; /* Hide off-screen */
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--fg);
     color: var(--bg);
-    font-size: 0.7rem;
-    padding: 2px 10px;
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-}
-
-/* Fix for Footer Link Visibility */
-.status-bar a {
-    color: #000; /* High contrast black on green bar */
-    text-decoration: underline;
+    padding: 1rem 2rem;
+    z-index: 999;
     font-weight: 900;
+    text-transform: uppercase;
+    border: 3px solid var(--accent);
+    text-decoration: none;
+    transition: top 0.2s ease-in-out;
 }
 
-.status-bar a:hover {
-    background: #000;
-    color: var(--green);
+/* Show the link when a user tabs to it */
+.skip-link:focus {
+    top: 0;
+    outline: none; /* We use the border and color change as the indicator */
 }
 
-.status-node::before {
-    content: "● NORMAL ";
-    background: #000;
-    color: var(--green);
-    padding: 0 8px;
-    margin-right: 10px;
+/* Ensure the main area doesn't show a blue ring when focused via skip-link */
+#main-content:focus {
+    outline: none;
+}
+
+/* --- Footnote Alignment --- */
+.footdef {
+    display: flex;
+    align-items: flex-start; /* Keeps number at the top if text wraps */
+    gap: 1rem;               /* Space between number and text */
+    margin-bottom: 0.5rem;
+}
+
+/* Ensure the paragraph doesn't add its own block margins */
+.footpara {
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Style the footnote number to be a fixed width for alignment */
+.footnum {
+    font-weight: bold;
+    min-width: 1.5rem;
+    text-align: right;
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: var(--accent);
 }
 
 @media (max-width: 600px) {
-}
-
-/* Mobile Responsiveness for Blog List */
-@media (max-width: 650px) {
-    .post {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-    }
-
-    .post time {
-        margin-right: 0;
-        margin-bottom: 2px;
-        font-size: 0.7rem;
-        opacity: 0.4;
-    }
-    
-    .post a {
-        padding: 4px 0;
-    }
-}
-
-/* General Layout Mobile Fixes */
-@media (max-width: 600px) {
-    body { overflow-y: auto; }
-    .terminal-shell { height: auto; }
-    .system-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-    nav ul { flex-wrap: wrap; gap: 10px 20px;}
-    .glass-pane { padding: 1rem; }
+    body { padding: 1rem; }
+    .post { flex-direction: column; }
 }

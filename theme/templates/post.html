@@ -9,7 +9,7 @@
 {% endif %} {% endblock %} {% block main %}
 <article>
 	<section>
-	<section class="sys-readout">
+	<section>
         <b>Object</b> <span>{{ post.title }}</span>
         <b>Timestamp</b> <span><time datetime='{{ post.date|strftime("%Y-%m-%d") }}'>{{ post.date|strftime("%Y-%m-%d %H:%M:%S") }}</time></span>
         <b>Summary</b> <span>{{ post.description }}</span>
