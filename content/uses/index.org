@@ -1,19 +1,91 @@
 #+title: Uses
 #+slug: index
 
-What are the technologies behind =cleberg.net=? See below. I tend to flip-flop
+What are the technologies behind ~cleberg.net~? See below. I tend to flip-flop
 on my DNS providers and Git hosts often, but the rest of these technologies are
 consistently powering this website.
 
-| Technology            | What I Use  |
-|-----------------------+-------------|
-| Registrar             | [[https://njal.la][Njalla]]      |
-| DNS                   | [[https://cloudflare.com][Cloudflare]]  |
-| Server                | [[https://cleberg.net/blog/server-build.html][Self-hosted]] |
-| Operating System      | [[https://ubuntu.com][Ubuntu]]      |
-| Web Server            | [[https://nginx.org][Nginx]]       |
-| SSL                   | [[https://certbot.eff.org][Certbot]]     |
-| Static Site Generator | [[https://github.com/emacs-love/weblorg][Weblorg]]     |
-| Markup Language       | [[https://orgmode.org][org-mode]]    |
-| Git Host              | [[https://git.cleberg.net][cGit]]        |
-| CI/CD                 | [[https://git.cleberg.net/cleberg.net.git/tree/build.py][build.py]]    |
+I've also included various technologies that I use /while/ building
+~cleberg.net~, as they seem relevant to complete the picture.
+
+* Philosophy
+
+My choice of tools is guided by a few core "soft" requirements that are more important to me than convenience or feature-creep:
+
+- *Digital Sovereignty*: If I don't own the hardware or the plain-text source, I
+  don't truly own the content. This site lives in my rack, not on someone else's
+  "cloud."
+- *Zero Tracking*: I have no interest in your data. I don't use cookies, I don't
+  track your IP, and I don't care how many "unique visitors" I have. If the
+  content is useful, it will find its way via RSS or word-of-mouth.
+- *Disposable Infrastructure*: The server is a pet, but the site is a cattle.
+  Because the entire build is driven by org-mode and a single ~build.py~ script,
+  I can lose the entire machine and be back online on a fresh OS in minutes.
+- *Minimalist Stack*: I prefer tools that do one thing well. Weblorg for static
+  generation and Nginx for serving files is a stack that will likely still work
+  ten years from now without a single dependency update.
+
+* Software
+
+| Technology            | What I Use                       |
+|-----------------------+----------------------------------|
+| Registrar             | [[https://njal.la][Njalla]]                           |
+| DNS                   | [[https://cloudflare.com][Cloudflare]] [fn:1]                |
+| Security              | [[https://www.cloudflare.com/zero-trust/][Cloudflare Zero Trust]] + [[https://github.com/fail2ban/fail2ban][fail2ban]] |
+| Routing               | [[https://ui.com/][UniFi]]                            |
+| Server                | [[https://cleberg.net/blog/server-build.html][Self-hosted]]                      |
+| Operating System      | [[https://ubuntu.com][Ubuntu]]                           |
+| Web Server            | [[https://nginx.org][Nginx]] + [[https://community.torproject.org/onion-services/setup/][Tor]]                      |
+| SSL                   | [[https://certbot.eff.org][Certbot]]                          |
+| Static Site Generator | [[https://github.com/emacs-love/weblorg][Weblorg]]                          |
+| Terminal              | [[https://iterm2.com/][iTerm2]]                           |
+| Shell                 | [[https://www.zsh.org/][Zsh]]                              |
+| Editor                | [[https://github.com/doomemacs/doomemacs][Doom Emacs]]                       |
+| Markup Language       | [[https://orgmode.org][org-mode]]                         |
+| Image Processing      | [[https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/w/webp.rb][webP CLI]]                         |
+| Browser(s) [fn:2]     | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net/][LibreWolf]]                  |
+| Version Control       | [[https://git-scm.com/][Git (CLI)]]                        |
+| Git Host              | [[https://git.cleberg.net][cGit]]                             |
+| CI/CD                 | [[https://git.cleberg.net/cleberg.net.git/tree/build.py][build.py]] + [[https://www.openssh.org/][OpenSSH]]               |
+| Email Host            | [[https://proton.me/mail][Proton Mail]]                      |
+| Search Engine         | [[https://docs.searxng.org/][SearXNG]]                          |
+| Backups               | N/A - Absolutely None [fn:3]     |
+| Monitoring            | N/A - Absolutely None            |
+| Analytics             | N/A - Absolutely None            |
+| Social Media          | N/A - Absolutely None            |
+| Newsletter            | N/A - RSS Only                   |
+
+[fn:1] I hate myself a little bit for using Cloudflare, but they've proven to be
+extremely reliable over the years and have not invaded my privacy (at least, in
+a visible manner). They also allow me to experience a large jump in security for
+zero cost, which is nice.
+[fn:2] I don't get paid for this, so I only test my site in my current primary
+browser(s).
+[fn:3] I have nothing to back up except the source code (which is already
+"backed up" via Git), since I do not collect or store any user data.
+
+* Hardware
+
+I run most of my services from my custom, rack-mounted server (details below),
+but I also run a Dell Optiplex and a Raspbery Pi 4 for some miscellaneous
+services.
+
+See the following blog post for more information on this server: [[https://cleberg.net/blog/server-build.html][Building a
+High-Performance Rack-Mounted Server with Consumer PC Components]].
+
+| Hardware Component | What I Use                                       |
+|--------------------+--------------------------------------------------|
+| Chassis            | Rosewill RSV-R4100U 4U Rackmount                 |
+| Motherboard        | NZXT B550                                        |
+| CPU                | AMD Ryzen 7 5700G [fn:4]                         |
+| GPU                | N/A - Onboard Radeon Graphics                    |
+| RAM                | 64GB (2x32GB) DDR4                               |
+| Boot Drive         | 500GB WD M.2 NVMe SSD                            |
+| Storage (HDD)      | 1x10TB White, 1x8TB White, 2x8TB Red Plus        |
+| Power Supply       | Corsair RM850                                    |
+| Thermal Paste      | Corsair TM30                                     |
+| Cooling            | Noctua Fans (1x120mm front, 2x80mm rear)         |
+| Cabling            | CableMatters 6Gbps SATA                          |
+
+[fn:4] Specifically chosen for onboard graphics support to avoid needing a
+dedicated GPU in the rack.
