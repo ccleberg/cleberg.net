@@ -23,7 +23,7 @@ In my spare time, I like to:
 If you want to chat, you can find me in the following spaces:
 
 - hello [at] cleberg.net ([[https://cleberg.net/gpg.txt][PGP Key]])
-- Send me a message on XMPP at [[xmpp:phaze@movim.eu][phaze@movim.eu]] (preferred)
+- Send me a message on XMPP at [[https://xmpp.link/#phaze@movim.eu][phaze@movim.eu]] (preferred)
 - Email or Signal message me for a [[https://simplex.chat/][SimpleX]] link (preferred)
 - @cmc.01 on [[https://signal.org/][Signal]] (less preferred)
 
