@@ -53,7 +53,6 @@ a:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
 
 /* --- Weblorg / Template Specifics --- */
 section b { display: block; font-size: 0.7rem; text-transform: uppercase; color: var(--meta); margin-top: 0.5rem; }
-section span { display: block; font-weight: bold; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem; }
 
 .post { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border); padding: 0.5rem 0; }
 .post time { font-size: 0.8rem; color: var(--meta); }
