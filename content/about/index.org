@@ -23,8 +23,11 @@ In my spare time, I like to:
 If you want to chat, you can find me in the following spaces:
 
 - hello [at] cleberg.net ([[https://cleberg.net/gpg.txt][PGP Key]])
-- Send me a message on XMPP at [[https://xmpp.link/#phaze@movim.eu][phaze@movim.eu]] (preferred)
-- Email or Signal message me for a [[https://simplex.chat/][SimpleX]] link (preferred)
-- @cmc.01 on [[https://signal.org/][Signal]] (less preferred)
+- Send me a message on XMPP at [[https://xmpp.link/#phaze@movim.eu][phaze@movim.eu]]
+  - OMEMO Fingerprints:
+    - ~41755E86 D8A5E814 B56B0BD3 6E5AE7B1 AF598325 D0A79D30 82A9CA9F 63D7EC6E~
+    - ~9E922DF8 B33B0CD0 0CD2C306 67804D43 9C1A8280 4B86BA23 CE4176C2 BB2C6778~
+- Message me for a [[https://simplex.chat/][SimpleX]] link
+- @cmc.01 on [[https://signal.org/][Signal]]
 
 Curious about the technology behind this website? Check out my [[https://cleberg.net/uses/][uses]] page.
