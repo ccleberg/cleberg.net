@@ -1,0 +1,24 @@
+#+date: <2026-01-31 Sat 20:32:11>
+#+title: Emacs Carnival: “This Year, I Will...”
+#+description: My response to the Emacs Carnival post for January 2026.
+#+slug: emacs-carnival-2026-01-this-year-i-will
+
+This year in Emacs, I expect to do a lot. However, here are some actionable
+goals for myself that should have a positive impact as I start out 2026.
+
+* Dive Deeper into Org-Mode
+- [[https://orgmode.org/manual/Agenda-Views.html][Org Agenda]]: Move beyond simple ~TODO~ lists. I want to implement a custom
+  dashboard using ~org-super-agenda~ to group tasks by context rather than just
+  file.
+- [[https://github.com/gregsexton/ob-ipython][ob-ipython]]: Fully embrace Literate Programming. This year, my data analysis
+  scripts live inside org blocks. No more scattered ~.py~ files for quick
+  prototypes.
+- [[https://orgmode.org/manual/Capture.html][Org Capture]]: Streamline my intake. I’m aiming for a "one-key" capture system
+  that sorts ideas into the right buckets automatically using template hooks.
+
+* Better Doom Configuration
+- GitOps for Emacs: Come up with a solid base and use a GitOps-style workflow to
+  ensure my environment is identical between home, work, and server.
+- UI Refinement: Try new packages like ~spacious-padding~ to give the buffer
+  some room to breathe. I'm also looking into ~svg-lib~ for cleaner-looking
+  progress bars and icons.
