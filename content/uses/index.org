@@ -45,8 +45,8 @@ My choice of tools is guided by a few core "soft" requirements that are more imp
 | Image Processing      | [[https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/w/webp.rb][webP (CLI)]]                       |
 | Browser(s) [fn:2]     | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net/][LibreWolf]]                  |
 | Version Control       | [[https://git-scm.com/][Git (CLI)]]                        |
-| Git Host              | [[https://git.cleberg.net][cGit]]                             |
-| CI/CD                 | [[https://git.cleberg.net/cleberg.net.git/tree/build.py][build.py]] + [[https://www.openssh.org/][OpenSSH]]               |
+| Git Host              | [[https://github.com/ccleberg][GitHub]]                             |
+| CI/CD                 | [[https://github.com/ccleberg/cleberg.net/blob/main/build.py][build.py]] + [[https://www.openssh.org/][OpenSSH]]               |
 | Email Host            | [[https://soverin.com/][Soverin]]                          |
 | Search Engine         | [[https://docs.searxng.org/][SearXNG]]                          |
 | Backups               | N/A - Absolutely None [fn:3]     |

@@ -44,4 +44,4 @@
 | [[https://projects.cleberg.net/space-wiki/][space-wiki]]          | Wiki about space‑related topics | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/space-wiki/][space-wiki]]          |
 | [[https://projects.cleberg.net/world-incarceration/][world-incarceration]] | Data on global incarceration    | [[http://krednuajd2wpt67ozmkollddpbdphpeyh74hbenagzoxqjncrtrgxkid.onion/world-incarceration/][world-incarceration]] |
 
-View the [[https://git.cleberg.net/cleberg.net.git/log/content/services/index.org][git log]] for information regarding this page's history.
+View the [[https://github.com/ccleberg/cleberg.net/commits/main/content/services/index.org][git log]] for information regarding this page's history.

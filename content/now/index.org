@@ -44,4 +44,4 @@ you're actually interested, email or message me to talk about media!/
 - Modifying my truck for better hauling, towing, and off-road and all-season
   utility.
 
-View the historical [[https://git.cleberg.net/cleberg.net.git/log/content/now/index.org][log of changes]] for this page.
+View the historical [[https://github.com/ccleberg/cleberg.net/commits/main/content/now/index.org][log of changes]] for this page.
