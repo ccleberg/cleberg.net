@@ -1,60 +1,47 @@
 #+title: Now
 #+slug: index
-#+date: <2026-01-01 Thu 17:39:00>
+#+date: <2026-01-31 Sat 10:17:09>
+#+description: Read about what I'm doing now.
 
 This is a [[https://nownownow.com/about][/now]] page.
 
 * Work
 
-- Closed out year-end work and will be pushing hard to get 12/31 clients closed
-  out in the next month or two.
-- Making moves with leadership on some national initiatives that I will be
-  spearheading.
+- Closing out the remaining 12/31 clients and moving on to my 3/31 client.
+- Making /waves/ with the big wigs on automation and standardization initiatives I
+  will be leading nationally.
 
 * Media
 
-/I play and watch *way* too many games, shows, and movies to list them all here.
-If you're actually interested, email or message me to talk about media!/
+/I play and watch way too many games, shows, and movies to list them all here. If
+you're actually interested, email or message me to talk about media!/
 
 - Playing some games:
   - Cyberpunk 2077
+  - Descenders
   - Runescape 3
 - Watching some shows:
-  - Danganronpa
-  - Jujutsu Kaisen
-  - Wild Boyz
+  - Akudama Drive (2020)
+  - Gachiakuta (2025)
+  - Jujutsu Kaisen (2020)
+  - Michiko & Hatchin (2008)
+  - Solo Leveling (2024)
 - Watched some movies:
-  - Trees Lounge (1996)
-  - Lost in Translation (2003)
-  - The Break-Up (2006)
-  - Fruitvale Station (2013)
-  - The Florida Project (2017)
-  - Requiem for a Dream (2000)
-  - Cadillac Records (2008)
-  - Synecdoche, New York (2008)
-  - Anomalisa (2015)
-  - Blue Valentine (2010)
+  - Get On Up (2014)
+  - Leaving Las Vegas (1995)
+  - Steve-O's Bucket List (2023)
 
 * Tech
 
-- Reducing tech usage as much as possible:
-  - I've deleted even more online accounts and am down to under 90 at this point
-    (started between 150-300).
-  - I've reset my devices and installed minimal profiles for specific use cases
-    and not to browse.
-  - I'm tracking device usage more intentionally and am only using them to
-    accomplish a purpose. Otherwise, I'm diverting my attention to non-tech
-    activities.
-  - Next step is to introduce more physical media back into my life. E.g.,
-    notebooks, books to read, lists on the fridge, etc.
+- Leaning more into Emacs + Org-Mode.
+- Standardizing an iTerm + Doom Emacs configuration that works across personal
+  and work machines.
 
 * Hobbies
 
-- Built another bookshelf with wood from my garage in an afternoon. Stained it
-  but not a huge fan of the color; might paint it instead. It's cheap wood, so
-  nothing that would be a shame to paint over.
-- Deployed [[https://en.wikipedia.org/wiki/Tor_(network)#Onion_services][onion service]] mirrors of my website and subdomains. Also advertised
-  their Onion Locations via HTTP headers, so users are automatically notified
-  that I have an onion version available when using Tor.
+- Picking back up more home maintenance now that the temperatures aren't
+  negative outside.
+- Modifying my truck for better hauling, towing, and off-road and all-season
+  utility.
 
 View the historical [[https://git.cleberg.net/cleberg.net.git/log/content/now/index.org][log of changes]] for this page.
