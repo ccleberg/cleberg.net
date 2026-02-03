@@ -29,9 +29,6 @@ The publishing system depends on:
 
 ** Screenshots
 
-Screenshots illustrating the site in both light and dark display modes are
-included in the ~screenshots~ directory.
-
 | Light Mode              | Dark Mode              |
 |-------------------------+------------------------|
 | [[./screenshots/light.png]] | [[./screenshots/dark.png]] |
