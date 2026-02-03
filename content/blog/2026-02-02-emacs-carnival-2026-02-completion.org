@@ -1,0 +1,160 @@
+#+date: <2026-02-02 18:40:21>
+#+title: Emacs Carnival: "Completion"
+#+description: My response to the Emacs Carnival post for February 2026.
+#+slug: emacs-carnival-2026-02-completion
+
+I'm having a great time with the Emacs Carnival, as it has inspired me to write
+two posts in such a short time. It's been a much needed inspiration to write
+during my busy season at work.
+
+Anyway, let's get to it. The topic today is [[https://www.emacswiki.org/emacs/CategoryCompletion][Completion]]: the magical thing that
+turns someone like me, who cannot remember long lists of commands to save my
+life, from an illiterate to a literate programmer.
+
+* Defining Custom Abbreviations
+
+While you can define [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Abbrevs.html][abbrevs]] dynamically in the buffer with ~C-x a g~ (which
+generally saves abbrevs to ~/.emacs.d/abbrev_defs~), I prefer to define my
+abbreviations directly within my ~config.el~ file.
+
+This allows for better portability between my machines, as well as clearer
+configuration for myself.
+
+To create a new abbrev, I simply open ~~/.config/doom/config.el~ and add a new one
+to the list below.
+
+#+begin_src elisp
+;; Abbreviations
+(setq-default abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table
+  '(
+    ;; ("abbreviation" "expansion")
+    ("omw" "on my way")
+    ("eml" "hello@cleberg.net")
+    ("shrg" "¯\_(ツ)_/¯")
+    ("teh" "the")
+    ("xtoday" "" (lambda () (insert (format-time-string "%Y-%m-%d %H:%M:%S"))))
+    ("xnow" "" (lambda () (insert (format-time-string "%H:%M:%S"))))
+    ))
+#+end_src
+
+Now, I can type something like ~xtoday~ in my buffer and get the fully formatted
+time string, like so: ~2026-02-02 21:52:55~.
+
+~¯\_(ツ)_/¯~
+
+This comes in handy most at work, where I need to constantly use acronyms and
+take shorthand notes to fill-out phrases that I'm, unfortunately, required to
+re-use constantly. Looking at you, "completeness and accuracy of the data".
+
+* Doom Configuration
+
+I have played around with a few different completion options for my purposes and
+have settled on the following packages.
+
+Here is how I have my ~:completion~, ~:tools~, and ~:lang~ modules toggled in
+~~/.config/doom/init.el~:
+
+#+begin_src elisp
+(doom! :input
+       :completion
+       (corfu +orderless)  ; complete with cap(f), cape and a flying feather!
+       vertico             ; the search engine of the future
+
+        :checkers
+       syntax              ; tasing you for every semicolon you forget
+       (spell +flyspell)   ; tasing you for misspelling mispelling
+       grammar             ; tasing grammar mistake every you make
+
+       :tools
+       (lsp +eglot)        ; M-x vscode
+
+       :lang
+       data                ; config/data formats
+       emacs-lisp          ; drown in parentheses
+       json                ; At least it ain't XML
+       javascript          ; all(hope(abandon(ye(who(enter(here))))))
+       markdown            ; writing docs for people to ignore
+       (org +dragndrop     ; drag & drop images/files into org
+            +hugo          ; use this if you plan to use weblorg/hugo for your site
+            +journal       ; daily logging
+            +noter         ; for annotating PDFs (great for research)
+            +roam2)        ; Zettelkasten note-taking
+       python              ; beautiful is better than ugly
+       sh                  ; she sells {ba,z,fi}sh shells on the C xor
+
+       :config
+       (default +bindings +smartparens))
+#+end_src
+
+With his setup, I am able to get a wonderful IDE-level experience within Emacs
+and without the bloat of a traditional IDE. It's the perfect balance of speed
+and power for my work and hobbies.
+
+** [[https://github.com/minad/vertico][vertico]] + [[https://github.com/minad/marginalia][marginalia]]
+
+Vertico is wonderful for finding files (~SPC .~) or running commands (~SPC :~). It
+provides a clean, vertical interface for the minibuffer.
+
+Marginalia works wonderfully with Vertico, as it provides marginalia to the
+minibuffer commands within the command selection buffer.
+
+#+caption: Vertico: Command
+[[https://img.cleberg.net/blog/20260202-emacs-carnival-2026-02-completion/vertico-commands.webp]]
+
+#+caption: Vertico: Files
+[[https://img.cleberg.net/blog/20260202-emacs-carnival-2026-02-completion/vertico-files.webp]]
+
+** [[https://github.com/oantolin/orderless][orderless]]
+
+Orderless is a game changer. As I mentioned above, I'm terrible with
+memorization. Therefore, I use this package and am able to search with multiple
+out-of-order terms to find a result in my Vertico searches.
+
+#+caption: Orderless
+[[https://img.cleberg.net/blog/20260202-emacs-carnival-2026-02-completion/orderless.webp]]
+
+** [[https://github.com/minad/corfu][corfu]]
+
+For code completion, I’ve swapped out the venerable Company mode for Corfu. It’s
+faster, stays out of my way until I need it, and uses a small popup that feels
+right at home in a terminal or a GUI.
+
+#+caption: Corfu
+[[https://img.cleberg.net/blog/20260202-emacs-carnival-2026-02-completion/python.webp]]
+
+** [[https://github.com/joaotavora/eglot][eglot]]
+
+To actually "know" what my code is doing, I use LSP (Language Server Protocol).
+I've enabled the ~+eglot~ flag in Doom because Eglot is now built into Emacs core
+and tends to be a bit more stable and performant for my Python and JavaScript
+workflows.
+
+** [[https://github.com/leotaku/flycheck-aspell?tab=readme-ov-file][flyspell]]
+
+Flyspell is the last piece to my puzzle, as it allows for easy help in
+correcting grammar errors within the buffer. I combine ~flypell~ + ~syntax~ +
+~grammar~ for ultimate writing guidance. Whether or not I choose to follow that
+guidance is another story entirely.
+
+#+caption: Flyspell
+[[https://img.cleberg.net/blog/20260202-emacs-carnival-2026-02-completion/suggestions.webp]]
+
+* Looking Forward
+
+I know this is just the tip of the iceberg, so I've made a list of packages I
+want to dive into deeper in the future:
+
+- ~tempel~
+- ~yasnippet~
+- ~consult~
+- ~embark~
+- ~cape~
+- ~kind-icon~
+- ~prescient.el~
+
+Completion and expansion utilities are phenomenal and have been one of the
+larger tools in my development and writing.
+
+Want to participate in the Emacs Carnival or read more posts? Visit the main
+[[https://www.emacswiki.org/emacs/Carnival][Carnival]] page on the Emacs Wiki to learn more.
