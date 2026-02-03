@@ -23,5 +23,7 @@ goals for myself that should have a positive impact as I start out 2026.
   some room to breathe. I'm also looking into ~svg-lib~ for cleaner-looking
   progress bars and icons.
 
+#+begin_quote
 Want to participate in the Emacs Carnival or read more posts? Visit the main
 [[https://www.emacswiki.org/emacs/Carnival][Carnival]] page on the Emacs Wiki to learn more.
+#+end_quote
