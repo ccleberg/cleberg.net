@@ -76,7 +76,6 @@ Here is how I have my ~:completion~, ~:tools~, and ~:lang~ modules toggled in
        javascript          ; all(hope(abandon(ye(who(enter(here))))))
        markdown            ; writing docs for people to ignore
        (org +dragndrop     ; drag & drop images/files into org
-            +hugo          ; use this if you plan to use weblorg/hugo for your site
             +journal       ; daily logging
             +noter         ; for annotating PDFs (great for research)
             +roam2)        ; Zettelkasten note-taking
@@ -87,7 +86,7 @@ Here is how I have my ~:completion~, ~:tools~, and ~:lang~ modules toggled in
        (default +bindings +smartparens))
 #+end_src
 
-With his setup, I am able to get a wonderful IDE-level experience within Emacs
+With this setup, I am able to get a wonderful IDE-level experience within Emacs
 and without the bloat of a traditional IDE. It's the perfect balance of speed
 and power for my work and hobbies.
 
@@ -116,9 +115,9 @@ out-of-order terms to find a result in my Vertico searches.
 
 ** [[https://github.com/minad/corfu][corfu]]
 
-For code completion, I’ve swapped out the venerable Company mode for Corfu. It’s
-faster, stays out of my way until I need it, and uses a small popup that feels
-right at home in a terminal or a GUI.
+For code completion, I’ve swapped out Company mode for Corfu. It’s faster, stays
+out of my way until I need it, and uses a small popup that feels right at home
+in a terminal or a GUI.
 
 #+caption: Corfu
 [[https://img.cleberg.net/blog/20260202-emacs-carnival-2026-02-completion/python.webp]]
@@ -156,5 +155,7 @@ want to dive into deeper in the future:
 Completion and expansion utilities are phenomenal and have been one of the
 larger tools in my development and writing.
 
+#+begin_quote
 Want to participate in the Emacs Carnival or read more posts? Visit the main
 [[https://www.emacswiki.org/emacs/Carnival][Carnival]] page on the Emacs Wiki to learn more.
+#+end_quote
