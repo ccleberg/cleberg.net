@@ -77,7 +77,7 @@ Example commands to build the site:
 
 #+begin_src shell
 # Production build:
-ENV~prod emacs --script publish.el
+ENV=prod emacs --script publish.el
   
 # Development build:
 emacs --script publish.el
