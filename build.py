@@ -348,7 +348,7 @@ def main():
     css_src = theme_dir / "styles.css"
     css_min = theme_dir / "styles.min.css"
 
-    env = os.environ.get("ENV", "").lower()
+    env = os.environ.get("ENV", "").casefold()
     if env == "prod":
         print("Environment: Production")
         method = prompt("Publishing on remote or LAN? [r|l] ").lower()
