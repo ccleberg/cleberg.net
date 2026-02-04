@@ -24,8 +24,8 @@ The main site components are:
 The publishing system depends on:
 
 - Emacs text editor with Org-Mode.
-- The weblorg package, available at [[https://github.com/emacs-love/weblorg]], which
-  provides advanced Org publishing functionality and theming support.
+- The weblorg package, available at [[https://github.com/emacs-love/weblorg][emacs-love/weblorg]], which provides advanced
+  Org publishing functionality and theming support.
 
 ** Screenshots
 
