@@ -93,7 +93,7 @@ respectively.
 
 #+begin_src shell
 # Production build script:
-ENV~prod uv run build.py
+ENV=prod uv run build.py
 
 # Development build script:
 uv run build.py
