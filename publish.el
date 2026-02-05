@@ -93,6 +93,14 @@
  :output ".build/uses/{{ slug }}.html"
  :url "/uses/{{ slug }}.html")
 
+;; Tips page route
+(weblorg-route
+ :name "tips"
+ :input-pattern "content/tips/*.org"
+ :template "page.html"
+ :output ".build/tips/{{ slug }}.html"
+ :url "/tips/{{ slug }}.html")
+
 ;; RSS feed route
 (weblorg-route
  :name "rss"

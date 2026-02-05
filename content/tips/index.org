@@ -1,0 +1,18 @@
+#+title: Tips
+#+slug: index
+
+Want to support me for whatever reason? Extra rich and want to throw money away?
+Look, I'm here for it. I have a crypto wallet and have set up sponsoring via
+GitHub for now. If you want to donate another way, shoot me a message.
+
+Feel free to send it my way.
+
+| Method                  | Address                                                |
+|-------------------------+--------------------------------------------------------|
+| GitHub                  | https://github.com/sponsors/ccleberg                   |
+| Bitcoin (BTC)           | bc1qy74tcth6zwg88059ae9z3ghzk797fkav7zdx4k             |
+| Bitcoin Cash (BCH)      | bitcoincash:qzvvluh0d9ersct2vsu0y7jvr3svl3vdsg2gatqjd5 |
+| Ethereum (ETH) + Tokens | 0x7850b2Fe6be94f90F54A099C74126430C9CeB19e             |
+| Solana (SOL) + Tokens   | 2574os7yg6AMwGqQ8nXYQvnyHyWWMME2ZVHdN4ca8bxC           |
+| XRP                     | rJz78ahN1KmushjYjEnFd8CB5vCcreJ1EE                     |
+| zCash                   | t1VWTCXeR1EuzYXurbcnfa8NANZoM5YqcMo                    |
