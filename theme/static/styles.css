@@ -52,10 +52,10 @@ a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px
 a:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
 
 /* --- Weblorg / Template Specifics --- */
-section b { display: block; font-size: 0.7rem; text-transform: uppercase; color: var(--meta); margin-top: 0.5rem; }
-
-.post { display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border); padding: 0.5rem 0; }
-.post time { font-size: 0.8rem; color: var(--meta); }
+section b { font-size: 0.85rem; text-transform: uppercase; color: var(--meta); margin-top: 0.5rem; }
+.post { display: flex; align-items: center; border-bottom: 1px dashed var(--border); padding: 0.5rem 0; }
+.post time { font-size: 0.8rem; color: var(--meta); margin-right: 0.5rem; white-space: nowrap; flex-shrink: 0; }
+.post-metadata b { display: block; font-size: 0.7rem; }
 
 /* --- Org-Mode Tables (Heavy Grid) --- */
 table { width: 100%; border-collapse: collapse; margin: 2rem 0; border: 3px solid var(--fg); }
@@ -68,7 +68,7 @@ code { background: var(--code-bg); padding: 0.2rem 0.4rem; }
 
 /* Blockquote styling */
 blockquote {
-    background-color: #f3f3f3;
+    background-color: var(--code-bg);
     font-style: italic;
     margin: 1.5em 0;
     padding: 0;
@@ -77,13 +77,13 @@ blockquote p { margin: 0; }
 blockquote::before {
     content: "#+begin_quote";
     display: block;
-    color: #7f7f7f;
+    color: var(--fg);
 }
 
 blockquote::after {
     content: "#+end_quote";
     display: block;
-    color: #7f7f7f;
+    color: var(--fg);
 }
 
 /* --- Accessibility & Efficiency --- */
