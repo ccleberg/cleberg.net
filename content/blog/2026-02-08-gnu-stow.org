@@ -10,6 +10,9 @@ true, but feels a bit underwhelming. Rather, I'd describe it as a tool to
 systematically and logically link, organize, and version control any files on
 your system.
 
+[[https://img.cleberg.net/blog/20260208-gnu-stow/stow.webp]]
+#+caption: GNU Stow Help Options
+
 * Installation
 
 First things first: let's install Stow. I'm on macOS, so I run the following
