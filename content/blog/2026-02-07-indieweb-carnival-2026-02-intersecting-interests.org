@@ -1,0 +1,44 @@
+#+date: <2026-02-07 Sat 17:46:00>
+#+title: IndieWeb Carnival: "Intersecting Interests"
+#+description: Contrasting my passions with technology vs. natural hobbies.
+#+slug: indiweb-carnival-2026-02-intersecting-interests
+
+I thought about this topic for a long time today before starting to write this
+post, as I don't think of myself as someone with intersecting interests. I
+generally lean pretty hard into interests and in my mind, they're all
+technology-related.
+
+However, I've settled on the following topic: *The Minimalist Technologist*.
+
+* Personal Life
+
+In my personal life, I spend my leisure time doing a few primary things:
+
+1. *Technology*: Obviously. I love to learn about new things online, blogging,
+   programming, self-hosting,
+2. *Physical Work*: Conversely, my next favorite things to do are all completely
+   technology free. This includes things like yard work, woodworking,
+   organizing, decluttering, etc. There's just something about zoning out,
+   getting into a physical rhythm, and feeling your body's strength create
+   something productive instead of your mind.
+3. *Sports*: This is fairly generic, but sometimes it can be a contrast for those
+   who work in tech. Especially if you consider disc golf and/or hiking in this
+   category.
+
+* Work
+
+Now, this may be where I differ even more so than in my personal life. While I
+work in a tech job, I do not actually spend my days deep inside code (when
+possible) or building as many internal tools as I used to.
+
+Instead, my job has primarily become 50 to 60 hours per week of meetings,
+mentoring younger coworkers, teaching and leading trainings, thinking about
+overall strategy of our practice, and project managing.
+
+It's the generic individual contributor (IC) to manager story line, but again,
+it frees me up to switch to a different mindset when I get home and be
+productive on hobby projects. I'm no longer burnt out from thinking on such a
+technical level all day.
+
+Either way, it was interesting to think through this topic and has me thinking
+more about broadening my horizons.
