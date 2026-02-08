@@ -55,7 +55,7 @@ a:hover { background: var(--accent); color: var(--bg); text-decoration: none; }
 section b { font-size: 0.85rem; text-transform: uppercase; color: var(--meta); margin-top: 0.5rem; }
 .post { display: flex; align-items: center; border-bottom: 1px dashed var(--border); padding: 0.5rem 0; }
 .post time { font-size: 0.8rem; color: var(--meta); margin-right: 0.5rem; white-space: nowrap; flex-shrink: 0; }
-.post-metadata b { display: block; font-size: 0.7rem; }
+.metadata b { display: block; font-size: 0.7rem; }
 
 /* --- Org-Mode Tables (Heavy Grid) --- */
 table { width: 100%; border-collapse: collapse; margin: 2rem 0; border: 3px solid var(--fg); }
