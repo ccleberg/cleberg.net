@@ -1,0 +1,101 @@
+#+date: <2026-02-08 Sun 12:17:42>
+#+title: Managing My Dotfiles with GNU Stow and Git
+#+description: Learn how I use GNU Stow to manage my user dotfiles and configurations.
+#+slug: gnu-stow
+
+* What is GNU Stow?
+
+[[https://www.gnu.org/software/stow/][GNU Stow]] is described as a "symlink farm manager" on its homepage, which is
+true, but feels a bit underwhelming. Rather, I'd describe it as a tool to
+systematically and logically link, organize, and version control any files on
+your system.
+
+* Installation
+
+First things first: let's install Stow. I'm on macOS, so I run the following
+command:
+
+#+begin_src sh
+brew install stow
+#+end_src
+
+To ensure it's installed correctly, check the version:
+
+#+begin_src sh
+stow -V
+#+end_src
+
+* Stow Dotfiles
+
+Next, let's create a directory to use as the central source for all these files.
+In my case, I store all git repositories in my ~~/git/~ directory, so I will
+create a ~dotfiles~ directory here:
+
+#+begin_src sh
+# Create the dotfiles repository
+mkdir ~/git/dotfiles && cd ~/git/dotfiles
+#+end_src
+
+Next, let's stow our first set of dotfiles. We'll use ~zsh~ as an example here. To
+do this, we will:
+1. Create a directory for Zsh.
+2. Move our current Zsh configuration files into our Stow directory.
+3. Use Stow to symlink the files back into our home directory.
+
+#+begin_src sh
+# Create the ZSH Stow directory
+mkdir zsh                          && \
+# Move your ZSH files into Stow
+mv ~/.zshrc ~/git/dotfiles/zsh/    && \
+mv ~/.zprofile ~/git/dotfiles/zsh/ && \
+# Use Stow to symlink them back to your user home
+stow zsh
+#+end_src
+
+At this point, you have a centralized directory (~/git/dotfiles~) where you can
+stow any file and use ~stow~ to symlink it back to another directory on your
+system.
+
+Therefore, you only need to navigate to this directory to make changes across
+your system.
+
+* Update Dotfiles
+
+When you make changes to your Stow directory, you can inform Stow and have the
+program update its symlinks with the following command:
+
+#+begin_src sh
+cd ~/git/dotfiles && \
+stow -R zsh
+#+end_src
+
+To summarize:
+
+| Action                          | Command           | Why?                                             |
+|---------------------------------+-------------------+--------------------------------------------------|
+| Edited a file                   | None (Just save)  | The symlink already exists.                      |
+| Added a file to existing folder | stow -R <package> | To create the new symlink for that file.         |
+| Deleted a file from dotfiles    | stow -R <package> | To remove the "dead" symlink from your home dir. |
+| Created a whole new package     | stow <package>    | To link the new directory for the first time.    |
+
+* Save to a Git Repository
+
+Lastly, let's finish the puzzle by ensuring that this configuration is
+long-lasting and can transfer amongst systems.
+
+To this end, we will use Git as our VCS. You can simply create the repository,
+add your files, and push to your remote.
+
+#+begin_src sh
+git init                       && \
+git add .                      && \
+git commit -m "initial commit" && \
+git remote add origin GIT_URL  && \
+git push
+#+end_src
+
+If you want to automate this even more, write an alias or a hook into your ~stow~
+command to automatically commit your changes whenever they occur.
+
+At this point, I have organized and managed my dotfiles much more efficiently
+and no longer lose them whenever I wipe my machines.
