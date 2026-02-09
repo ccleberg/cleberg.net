@@ -55,6 +55,15 @@ mv ~/.zprofile ~/git/dotfiles/zsh/ && \
 stow zsh
 #+end_src
 
+By default, Stow will symlink your files (e.g., ~zsh~) to the parent directory
+of the directory in which you execute the command. Since we're in the
+~~/git/dotfiles~ directory, we need to modify our ~stow~ command to ensure Stow
+symlinks the files to our home directory:
+
+#+begin_src sh
+stow -t ~ zsh
+#+end_src
+
 At this point, you have a centralized directory (~/git/dotfiles~) where you can
 stow any file and use ~stow~ to symlink it back to another directory on your
 system.
