@@ -253,18 +253,21 @@ def run_emacs_publish(dev_mode=True):
         print("Running Emacs publish script (production)...")
         result = subprocess.run(
             ["emacs", "--script", "publish.el"],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
         )
-
-    # Fix to remove annoying cleberg-net.html file
-    os.remove(".build/cleberg-net.html")
 
     if result.returncode != 0:
         print("Error running publish.el:")
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
+
+    annoying_file = Path(".build/cleberg-net.html")
+    if annoying_file.exists():
+        os.remove(annoying_file)
+    else:
+        print("Warning: .build/cleberg-net.html not found, but Emacs exited successfully.")
 
 
 def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):

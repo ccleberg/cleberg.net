@@ -1,8 +1,13 @@
 ;;; -*- lexical-binding: t -*-
 ;; Explicitly load packages for Doom Emacs
-(add-to-list 'load-path "~/.config/emacs/.local/straight/repos/htmlize")
-(add-to-list 'load-path "~/.config/emacs/.local/straight/repos/weblorg")
-(add-to-list 'load-path "~/.config/emacs/.local/straight/repos/templatel")
+(defvar site-lisp-base 
+  (if (eq system-type 'darwin)
+      "~/.config/emacs/.local/straight/repos"           ; macOS path
+    "/home/linuxbrew/.config/emacs/.local/straight/repos")) ; CI/Linux path
+
+(add-to-list 'load-path (expand-file-name "htmlize" site-lisp-base))
+(add-to-list 'load-path (expand-file-name "weblorg" site-lisp-base))
+(add-to-list 'load-path (expand-file-name "templatel" site-lisp-base))
 
 (require 'htmlize)
 (require 'weblorg)
