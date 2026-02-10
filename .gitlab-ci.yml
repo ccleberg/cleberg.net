@@ -19,7 +19,6 @@ deploy-job:
     - build-job
   script:
     - mkdir -p $HOME/.ssh
-    - ssh-keyscan -p 2169 $SERVER_IP >> $HOME/.ssh/known_hosts
     - |
       echo "Host homelab-remote
           HostName $SERVER_IP
