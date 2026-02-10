@@ -147,5 +147,5 @@ img:hover { filter: grayscale(0); }
 
 @media (max-width: 600px) {
     body { padding: 1rem; }
-    .post { flex-direction: column; }
+    .post { flex-direction: column; align-items: flex-start; }
 }
