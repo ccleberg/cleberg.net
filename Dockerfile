@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     procps \
     build-essential \
     ca-certificates \
+    openssh-client \
     && rm -rf /var/lib/apt/lists/*
 
 RUN useradd -m -s /bin/bash linuxbrew && \

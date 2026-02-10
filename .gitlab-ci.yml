@@ -15,20 +15,15 @@ build-job:
 
 deploy-job:
   stage: deploy
-  environment: production
-  before_script:
-    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'    
-    - eval $(ssh-agent -s)
-    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - ssh-keyscan $SERVER_IP >> ~/.ssh/known_hosts
-    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - mkdir -p $HOME/.ssh
+    - chmod 700 $HOME/.ssh
+    - ssh-keyscan -p 2169 $SERVER_IP >> $HOME/.ssh/known_hosts
     - |
       echo "Host homelab-remote
           HostName $SERVER_IP
           User $SERVER_USER
-          Port 2169" > ~/.ssh/config
-  script:
+          Port 2169" > $HOME/.ssh/config
+    - chmod 600 $HOME/.ssh/config
     - echo "Deploying via Python script..."
     - ENV=prod uv run build.py <<< "r"
