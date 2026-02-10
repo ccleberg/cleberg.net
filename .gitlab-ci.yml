@@ -23,7 +23,9 @@ deploy-job:
       echo "Host homelab-remote
           HostName $SERVER_IP
           User $SERVER_USER
-          Port 2169" > $HOME/.ssh/config
+          Port 2169
+          StrictHostKeyChecking no
+          UserKnownHostsFile /dev/null" > $HOME/.ssh/config
     - chmod 600 $HOME/.ssh/config
     - eval $(ssh-agent -s)
     - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
