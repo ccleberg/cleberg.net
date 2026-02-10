@@ -15,6 +15,7 @@ build-job:
 
 deploy-job:
   stage: deploy
+  environment: production
   dependencies:
     - build-job
   script:
