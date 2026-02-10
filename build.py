@@ -352,6 +352,8 @@ def main():
     css_min = theme_dir / "styles.min.css"
 
     env = os.environ.get("ENV", "").casefold()
+    skip_deploy = os.environ.get("SKIP_DEPLOY", "").casefold() == "true"
+    
     if env == "prod":
         print("Environment: Production")
         method = prompt("Publishing on remote or LAN? [r|l] ").lower()
@@ -382,7 +384,10 @@ def main():
         generate_sitemap()
 
         # Deploy changes
-        deploy_to_server(build_dir, homelab_server)
+        if not skip_deploy:
+            deploy_to_server(build_dir, homelab_server)
+        else:
+            print("SKIP_DEPLOY is true. Skipping rsync step.")
 
     else:
         print("Environment: Development")

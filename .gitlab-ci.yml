@@ -8,16 +8,17 @@ build-job:
   stage: build
   script:
     - echo "Environment is ready. Running build..."
-    - ENV=prod uv run build.py <<< "r"
+    - ENV=prod SKIP_DEPLOY=true uv run build.py <<< "r"
   artifacts:
     paths:
       - .build/
 
 deploy-job:
   stage: deploy
+  dependencies:
+    - build-job
   script:
     - mkdir -p $HOME/.ssh
-    - chmod 700 $HOME/.ssh
     - ssh-keyscan -p 2169 $SERVER_IP >> $HOME/.ssh/known_hosts
     - |
       echo "Host homelab-remote
@@ -25,5 +26,7 @@ deploy-job:
           User $SERVER_USER
           Port 2169" > $HOME/.ssh/config
     - chmod 600 $HOME/.ssh/config
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
     - echo "Deploying via Python script..."
     - ENV=prod uv run build.py <<< "r"
