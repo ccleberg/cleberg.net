@@ -50,6 +50,8 @@ jobs:
           SERVER_IP: ${{ secrets.SERVER_IP }}
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ONLY_DEPLOY: "true"
+          ENV: "prod"
         run: |
           mkdir -p $HOME/.ssh
           echo "Host homelab-remote
@@ -61,5 +63,5 @@ jobs:
           chmod 600 $HOME/.ssh/config
           eval $(ssh-agent -s)
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-          echo "Deploying via Python script..."
-          echo "r" | ENV=prod SKIP_DEPLOY=true uv run build.py
+          echo "Deploying via Python script (Deploy-only mode)..."
+          uv run build.py
