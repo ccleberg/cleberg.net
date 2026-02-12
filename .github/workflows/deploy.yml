@@ -51,7 +51,6 @@ jobs:
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           DEPLOY: "true"
-          TARGET: "homelab-remote"
           ENV: "prod"
         run: |
           mkdir -p $HOME/.ssh

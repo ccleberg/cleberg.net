@@ -352,69 +352,57 @@ def main():
     css_min = theme_dir / "styles.min.css"
 
     env = os.environ.get("ENV", "").casefold()
-    skip_deploy = os.environ.get("SKIP_DEPLOY", "").casefold() == "true"
-    
-    if env == "prod":
-        print("Environment: Production")
-        method = prompt("Publishing on remote or LAN? [r|l] ").lower()
-        if method == "r":
-            homelab_server = "homelab-remote"
-        elif method == "l":
-            homelab_server = "homelab"
-        else:
-            print("Invalid input. Assuming LAN (homelab)")
-            homelab_server = "homelab"
+    deploy = os.environ.get("DEPLOY", "").casefold() == "true"
 
-        # Check if we can skip building and deploy right away
-        deploy = os.environ.get("DEPLOY", "").casefold() == "true"
-        homelab_server = os.environ.get("TARGET", homelab_server).casefold()
-        build_dir = Path(".build")
-        if deploy:
-            print("DEPLOY is true. Skipping build and jumping to rsync.")
-            deploy_to_server(build_dir, homelab_server)
-            return
-
-        # Remove previous build
-        remove_build_directory(build_dir)
-
-        # Minify CSS
-        minify_css(css_src, css_min)
-
-        # Run publishing script (silenced output)
-        run_emacs_publish(dev_mode=False)
-
-        # Update index page with latest posts
-        update_index_html(html_snippet)
-
-        # Minify index page
-        minify_html("./.build/index.html", "./.build/index.html")
-
-        # Generate sitemap
-        generate_sitemap()
-
+    if deploy:
+        print("Deploying to production...")
+        deploy_to_server(build_dir, "homelab-remote")
+        return
     else:
-        print("Environment: Development")
+        if env == "prod":
+            print("Environment: Production")
 
-        # Remove previous build
-        remove_build_directory(build_dir)
+            # Remove previous build
+            remove_build_directory(build_dir)
 
-        # Minify CSS
-        minify_css(css_src, css_min)
+            # Minify CSS
+            minify_css(css_src, css_min)
 
-        # Run publishing script (with console output)
-        run_emacs_publish(dev_mode=True)
+            # Run publishing script (silenced output)
+            run_emacs_publish(dev_mode=False)
 
-        # Update index page with latest posts
-        update_index_html(html_snippet)
+            # Update index page with latest posts
+            update_index_html(html_snippet)
 
-        # Minify index page
-        minify_html("./.build/index.html", "./.build/index.html")
+            # Minify index page
+            minify_html("./.build/index.html", "./.build/index.html")
 
-        # Generate sitemap
-        generate_sitemap()
+            # Generate sitemap
+            generate_sitemap()
 
-        # Launch development web server
-        start_dev_server(build_dir)
+        else:
+            print("Environment: Development")
+
+            # Remove previous build
+            remove_build_directory(build_dir)
+
+            # Minify CSS
+            minify_css(css_src, css_min)
+
+            # Run publishing script (with console output)
+            run_emacs_publish(dev_mode=True)
+
+            # Update index page with latest posts
+            update_index_html(html_snippet)
+
+            # Minify index page
+            minify_html("./.build/index.html", "./.build/index.html")
+
+            # Generate sitemap
+            generate_sitemap()
+
+            # Launch development web server
+            start_dev_server(build_dir)
 
 
 if __name__ == "__main__":
