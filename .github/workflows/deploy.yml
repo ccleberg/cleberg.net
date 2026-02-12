@@ -44,7 +44,6 @@ jobs:
         with:
           name: build-output
           path: ${{ github.workspace }}/.build/
-          include-hidden-files: true
 
       - name: Setup SSH and Deploy
         env:
@@ -63,4 +62,4 @@ jobs:
           eval $(ssh-agent -s)
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
           echo "Deploying via Python script..."
-          ENV=prod uv run build.py <<< "r"
+          echo "r" | ENV=prod SKIP_DEPLOY=true uv run build.py
