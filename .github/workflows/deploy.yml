@@ -19,7 +19,7 @@ jobs:
       - name: Run Build
         run: |
           echo "Environment is ready. Running build..."
-          echo "r" | ENV=prod SKIP_DEPLOY=true uv run build.py
+          echo "r" | ENV=prod uv run build.py
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
@@ -50,7 +50,8 @@ jobs:
           SERVER_IP: ${{ secrets.SERVER_IP }}
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ONLY_DEPLOY: "true"
+          DEPLOY: "true"
+          TARGET: "homelab-remote"
           ENV: "prod"
         run: |
           mkdir -p $HOME/.ssh
@@ -63,5 +64,5 @@ jobs:
           chmod 600 $HOME/.ssh/config
           eval $(ssh-agent -s)
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-          echo "Deploying via Python script (Deploy-only mode)..."
+          echo "Deploying via Python script..."
           uv run build.py

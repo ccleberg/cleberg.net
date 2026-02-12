@@ -344,14 +344,6 @@ def start_dev_server(build_dir):
 
 
 def main():
-    only_deploy = os.environ.get("ONLY_DEPLOY", "").casefold() == "true"
-    build_dir = Path(".build")
-
-    if only_deploy:
-        print("ONLY_DEPLOY is true. Skipping build and jumping to rsync.")
-        deploy_to_server(build_dir, "homelab-remote")
-        return
-
     html_snippet = get_recent_posts_html("./content/blog", num_posts=3)
 
     build_dir = Path(".build")
@@ -373,6 +365,15 @@ def main():
             print("Invalid input. Assuming LAN (homelab)")
             homelab_server = "homelab"
 
+        # Check if we can skip building and deploy right away
+        deploy = os.environ.get("DEPLOY", "").casefold() == "true"
+        homelab_server = os.environ.get("TARGET", homelab_server).casefold()
+        build_dir = Path(".build")
+        if deploy:
+            print("DEPLOY is true. Skipping build and jumping to rsync.")
+            deploy_to_server(build_dir, homelab_server)
+            return
+
         # Remove previous build
         remove_build_directory(build_dir)
 
@@ -390,9 +391,6 @@ def main():
 
         # Generate sitemap
         generate_sitemap()
-
-        # Deploy changes
-        deploy_to_server(build_dir, homelab_server)
 
     else:
         print("Environment: Development")
