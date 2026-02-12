@@ -1,0 +1,62 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-job:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/ccleberg/cleberg.net:latest 
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Build
+        run: |
+          echo "Environment is ready. Running build..."
+          ENV=prod SKIP_DEPLOY=true uv run build.py <<< "r"
+
+      - name: Upload Build Artifacts
+        uses: actions/actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: .build/
+
+  deploy-job:
+    runs-on: ubuntu-latest
+    needs: build-job
+    environment: production
+    container:
+      image: ghcr.io/ccleberg/cleberg-net:latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: .build/
+
+      - name: Setup SSH and Deploy
+        env:
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          mkdir -p $HOME/.ssh
+          echo "Host homelab-remote
+                HostName $SERVER_IP
+                User $SERVER_USER
+                Port 2169
+                StrictHostKeyChecking no
+                UserKnownHostsFile /dev/null" > $HOME/.ssh/config
+          chmod 600 $HOME/.ssh/config
+          eval $(ssh-agent -s)
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+          echo "Deploying via Python script..."
+          ENV=prod uv run build.py <<< "r"
