@@ -13,10 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     openssh-client \
     && rm -rf /var/lib/apt/lists/*
 
-RUN useradd -m -s /bin/bash linuxbrew && \
-    echo "linuxbrew:linuxbrew" | chpasswd && \
-    adduser linuxbrew sudo
-
+RUN useradd -m -s /bin/bash linuxbrew
 USER linuxbrew
 WORKDIR /home/linuxbrew
 
@@ -25,9 +22,10 @@ RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/instal
 RUN brew install emacs rsync uv minify
 
 RUN mkdir -p ~/.config/emacs/.local/straight/repos && \
-    git clone https://github.com/emacsorphanage/htmlize.git ~/.config/emacs/.local/straight/repos/htmlize && \
-    git clone https://github.com/emacs-love/templatel.git ~/.config/emacs/.local/straight/repos/templatel && \
-    git clone https://github.com/emacs-love/weblorg.git ~/.config/emacs/.local/straight/repos/weblorg
+    cd ~/.config/emacs/.local/straight/repos && \
+    git clone --depth 1 https://github.com/emacsorphanage/htmlize.git && \
+    git clone --depth 1 https://github.com/emacs-love/templatel.git && \
+    git clone --depth 1 https://github.com/emacs-love/weblorg.git
 
 USER root
 WORKDIR /builds
