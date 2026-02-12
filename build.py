@@ -249,8 +249,8 @@ def run_emacs_publish(dev_mode=True):
         print("Running Emacs publish script (production)...")
         result = subprocess.run(
             ["emacs", "--script", "publish.el"],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
             text=True,
         )
 
@@ -346,56 +346,32 @@ def main():
     css_min = theme_dir / "styles.min.css"
 
     env = os.environ.get("ENV", "").casefold()
+    build = os.environ.get("BUILD", "").casefold() == "true"
     deploy = os.environ.get("DEPLOY", "").casefold() == "true"
 
-    if deploy:
-        print("Deploying to production...")
-        deploy_to_server(build_dir, "homelab-remote")
-        return
-    else:
-        if env == "prod":
-            print("Environment: Production")
-
-            # Remove previous build
+    if env == "prod":
+        print("Environment: Production")
+        if build:
             remove_build_directory(build_dir)
-
-            # Minify CSS
             minify_css(css_src, css_min)
-
-            # Run publishing script (silenced output)
             run_emacs_publish(dev_mode=False)
-
-            # Update index page with latest posts
             update_index_html(html_snippet)
-
-            # Minify index page
             minify_html("./.build/index.html", "./.build/index.html")
-
-            # Generate sitemap
             generate_sitemap()
-
-        else:
-            print("Environment: Development")
-
-            # Remove previous build
+        if deploy:
+            print("Deploying to production...")
+            deploy_to_server(build_dir, "homelab-remote")
+            return
+    else:
+        print("Environment: Development")
+        if build:
             remove_build_directory(build_dir)
-
-            # Minify CSS
             minify_css(css_src, css_min)
-
-            # Run publishing script (with console output)
             run_emacs_publish(dev_mode=True)
-
-            # Update index page with latest posts
             update_index_html(html_snippet)
-
-            # Minify index page
             minify_html("./.build/index.html", "./.build/index.html")
-
-            # Generate sitemap
             generate_sitemap()
-
-            # Launch development web server
+        if deploy:
             start_dev_server(build_dir)
 
 
