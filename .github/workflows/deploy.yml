@@ -19,7 +19,7 @@ jobs:
       - name: Run Build
         run: |
           echo "Environment is ready. Running build..."
-          ENV=prod SKIP_DEPLOY=true uv run build.py <<< "r"
+          echo "r" | ENV=prod SKIP_DEPLOY=true uv run build.py
 
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
