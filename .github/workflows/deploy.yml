@@ -21,11 +21,16 @@ jobs:
           echo "Environment is ready. Running build..."
           echo "r" | ENV=prod SKIP_DEPLOY=true uv run build.py
 
+      - name: Debug Path
+        run: |
+          pwd
+          ls -R .build/
+
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: build-output
-          path: .build/*
+          path: ${{ github.workspace }}/.build/
 
   deploy-job:
     runs-on: ubuntu-latest
