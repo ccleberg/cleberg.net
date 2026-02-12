@@ -50,24 +50,10 @@ jobs:
           SERVER_IP: ${{ secrets.SERVER_IP }}
           SERVER_USER: ${{ secrets.SERVER_USER }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          DEPLOY: "true"
-          ENV: "prod"
         run: |
-          mkdir -p $HOME/.ssh
-          cat <<EOF > $HOME/.ssh/config
-          Host homelab-remote
-          HostName $SERVER_IP
-          User $SERVER_USER
-          Port 2169
-          StrictHostKeyChecking no
-          UserKnownHostsFile /dev/null
-          EOF
-          
-          chmod 600 $HOME/.ssh/config
-          sed -i 's/^[[:space:]]*//' $HOME/.ssh/config
-          
           eval $(ssh-agent -s)
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
-          
-          echo "Deploying via Python script..."
-          uv run build.py
+          rsync -avz --delete \
+            -e "ssh -p 2169" \
+            .build/ \
+            $SERVER_USER@$SERVER_IP:/var/www/cleberg.net/
