@@ -54,14 +54,24 @@ jobs:
           ENV: "prod"
         run: |
           mkdir -p $HOME/.ssh
-          echo "Host homelab-remote
-                HostName $SERVER_IP
-                User $SERVER_USER
-                Port 2169
-                StrictHostKeyChecking no
-                UserKnownHostsFile /dev/null" > $HOME/.ssh/config
+
+          cat <<EOF > $HOME/.ssh/config
+          Host homelab-remote
+          HostName $SERVER_IP
+          User $SERVER_USER
+          Port 2169
+          StrictHostKeyChecking no
+          UserKnownHostsFile /dev/null
+          EOF
+          
           chmod 600 $HOME/.ssh/config
           eval $(ssh-agent -s)
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+          
+          # DEBUG
+          echo "Checking SSH Config:"
+          cat $HOME/.ssh/config
+          # END DEBUG
+          
           echo "Deploying via Python script..."
           uv run build.py
