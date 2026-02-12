@@ -86,9 +86,7 @@ def update_index_html(html_snippet, template_path="./.build/index.html"):
         end_line_start = end_index
 
     # Construct the new content
-    new_content = (
-        content[:insert_start] + indented_snippet + content[end_line_start:]
-    )
+    new_content = content[:insert_start] + indented_snippet + content[end_line_start:]
 
     # Write back to index.html
     with open(template_path, "w", encoding="utf-8") as f:
@@ -190,9 +188,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
         lines.append(
             f'\t\t<time datetime="{post["date_str"]}">{post["date_full"]}</time>'
         )
-        lines.append(
-            f'\t\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>'
-        )
+        lines.append(f'\t\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>')
         lines.append("\t</div>")
 
     return "\n".join(lines)
@@ -267,7 +263,9 @@ def run_emacs_publish(dev_mode=True):
     if annoying_file.exists():
         os.remove(annoying_file)
     else:
-        print("Warning: .build/cleberg-net.html not found, but Emacs exited successfully.")
+        print(
+            "Warning: .build/cleberg-net.html not found, but Emacs exited successfully."
+        )
 
 
 def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):
@@ -290,9 +288,9 @@ def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):
                 loc = f"{base_url}{url_path}"
 
                 # Last modified time
-                lastmod = datetime.fromtimestamp(
-                    os.path.getmtime(full_path)
-                ).strftime("%Y-%m-%d")
+                lastmod = datetime.fromtimestamp(os.path.getmtime(full_path)).strftime(
+                    "%Y-%m-%d"
+                )
 
                 sitemap_entries.append(f"""  <url>
     <loc>{loc}</loc>
@@ -308,9 +306,7 @@ def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):
     sitemap_path = os.path.join(build_dir, "sitemap.xml")
     with open(sitemap_path, "w", encoding="utf-8") as f:
         f.write(sitemap_xml)
-    print(
-        f"Sitemap generated at {sitemap_path} with {len(sitemap_entries)} entries."
-    )
+    print(f"Sitemap generated at {sitemap_path} with {len(sitemap_entries)} entries.")
 
 
 def deploy_to_server(build_dir, server):
@@ -333,9 +329,7 @@ def start_dev_server(build_dir):
     os.chdir(build_dir)
     # This will run until interrupted (Ctrl+C)
     try:
-        subprocess.run(
-            [sys.executable, "-m", "http.server", "8000"], check=True
-        )
+        subprocess.run([sys.executable, "-m", "http.server", "8000"], check=True)
     except KeyboardInterrupt:
         print("\nDevelopment server stopped.")
     except subprocess.CalledProcessError as e:
@@ -352,66 +346,57 @@ def main():
     css_min = theme_dir / "styles.min.css"
 
     env = os.environ.get("ENV", "").casefold()
-    skip_deploy = os.environ.get("SKIP_DEPLOY", "").casefold() == "true"
-    
-    if env == "prod":
-        print("Environment: Production")
-        method = prompt("Publishing on remote or LAN? [r|l] ").lower()
-        if method == "r":
-            homelab_server = "homelab-remote"
-        elif method == "l":
-            homelab_server = "homelab"
-        else:
-            print("Invalid input. Assuming LAN (homelab)")
-            homelab_server = "homelab"
+    deploy = os.environ.get("DEPLOY", "").casefold() == "true"
 
-        # Remove previous build
-        remove_build_directory(build_dir)
-
-        # Minify CSS
-        minify_css(css_src, css_min)
-
-        # Run publishing script (silenced output)
-        run_emacs_publish(dev_mode=False)
-
-        # Update index page with latest posts
-        update_index_html(html_snippet)
-
-        # Minify index page
-        minify_html("./.build/index.html", "./.build/index.html")
-
-        # Generate sitemap
-        generate_sitemap()
-
-        # Deploy changes
-        if not skip_deploy:
-            deploy_to_server(build_dir, homelab_server)
-        else:
-            print("SKIP_DEPLOY is true. Skipping rsync step.")
-
+    if deploy:
+        print("Deploying to production...")
+        deploy_to_server(build_dir, "homelab-remote")
+        return
     else:
-        print("Environment: Development")
+        if env == "prod":
+            print("Environment: Production")
 
-        # Remove previous build
-        remove_build_directory(build_dir)
+            # Remove previous build
+            remove_build_directory(build_dir)
 
-        # Minify CSS
-        minify_css(css_src, css_min)
+            # Minify CSS
+            minify_css(css_src, css_min)
 
-        # Run publishing script (with console output)
-        run_emacs_publish(dev_mode=True)
+            # Run publishing script (silenced output)
+            run_emacs_publish(dev_mode=False)
 
-        # Update index page with latest posts
-        update_index_html(html_snippet)
+            # Update index page with latest posts
+            update_index_html(html_snippet)
 
-        # Minify index page
-        minify_html("./.build/index.html", "./.build/index.html")
+            # Minify index page
+            minify_html("./.build/index.html", "./.build/index.html")
 
-        # Generate sitemap
-        generate_sitemap()
+            # Generate sitemap
+            generate_sitemap()
 
-        # Launch development web server
-        start_dev_server(build_dir)
+        else:
+            print("Environment: Development")
+
+            # Remove previous build
+            remove_build_directory(build_dir)
+
+            # Minify CSS
+            minify_css(css_src, css_min)
+
+            # Run publishing script (with console output)
+            run_emacs_publish(dev_mode=True)
+
+            # Update index page with latest posts
+            update_index_html(html_snippet)
+
+            # Minify index page
+            minify_html("./.build/index.html", "./.build/index.html")
+
+            # Generate sitemap
+            generate_sitemap()
+
+            # Launch development web server
+            start_dev_server(build_dir)
 
 
 if __name__ == "__main__":
