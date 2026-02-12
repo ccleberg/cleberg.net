@@ -32,7 +32,7 @@ jobs:
     needs: build-job
     environment: production
     container:
-      image: ghcr.io/ccleberg/cleberg-net:latest
+      image: ghcr.io/ccleberg/cleberg.net:github-actions
 
     steps:
       - name: Checkout code
