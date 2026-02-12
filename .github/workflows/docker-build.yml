@@ -2,9 +2,11 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches:
-      - '**'
-#    branches: [ "main" ]
+    branches: [ "main" ]
+    paths:
+      - 'Dockerfile'
+      - 'requirements.txt'
+      - '.github/workflows/docker-build.yml'
 
 jobs:
   build:
