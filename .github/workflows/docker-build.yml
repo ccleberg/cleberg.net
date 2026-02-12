@@ -7,6 +7,12 @@ on:
       - 'Dockerfile'
       - 'requirements.txt'
       - '.github/workflows/docker-build.yml'
+  pull_request:
+    branches: [ "main" ]
+    paths:
+      - 'Dockerfile'
+      - 'requirements.txt'
+      - '.github/workflows/docker-build.yml'
 
 jobs:
   build:
