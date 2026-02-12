@@ -10,7 +10,7 @@ jobs:
   build-job:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/ccleberg/cleberg.net:latest 
+      image: ghcr.io/ccleberg/cleberg.net:github-actions
 
     steps:
       - name: Checkout code
