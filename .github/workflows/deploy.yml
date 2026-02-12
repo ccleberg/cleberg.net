@@ -22,7 +22,7 @@ jobs:
           ENV=prod SKIP_DEPLOY=true uv run build.py <<< "r"
 
       - name: Upload Build Artifacts
-        uses: actions/actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: build-output
           path: .build/
