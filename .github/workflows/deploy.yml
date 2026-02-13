@@ -58,6 +58,6 @@ jobs:
           eval $(ssh-agent -s)
           echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
           rsync -avz --delete \
-            -e "ssh -p 2169 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
+            -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
             .build/ \
             $SERVER_USER@$SERVER_IP:/var/www/cleberg.net/
