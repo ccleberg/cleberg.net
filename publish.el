@@ -15,7 +15,7 @@
 
 ;; Set default URL for Weblorg
 ;; Only works if environment variable ENV=prod
-(if (string-equal-ignore-case (getenv "ENV") "prod")
+(if (string-equal-ignore-case (or (getenv "ENV") "") "prod")
     (setq weblorg-default-url "https://cleberg.net"))
 
 ;; Define site metadata
