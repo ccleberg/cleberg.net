@@ -1,10 +1,11 @@
 ;;; -*- lexical-binding: t -*-
-;; Explicitly load packages for Doom Emacs
+;; Allow for macOS (dev machine) & Linux (GitHub Actions) execution
 (defvar site-lisp-base 
   (if (eq system-type 'darwin)
-      "~/.config/emacs/.local/straight/repos"           ; macOS path
+      "~/.config/emacs/.local/straight/repos"               ; macOS path
     "/home/linuxbrew/.config/emacs/.local/straight/repos")) ; CI/Linux path
 
+;; Explicitly load packages
 (add-to-list 'load-path (expand-file-name "htmlize" site-lisp-base))
 (add-to-list 'load-path (expand-file-name "weblorg" site-lisp-base))
 (add-to-list 'load-path (expand-file-name "templatel" site-lisp-base))
@@ -13,10 +14,11 @@
 (require 'weblorg)
 
 ;; Set default URL for Weblorg
+;; Only works if environment variable ENV=prod
 (if (string= (getenv "ENV") "prod")
     (setq weblorg-default-url "https://cleberg.net"))
 
-;; Define site configuration
+;; Define site metadata
 (weblorg-site
  :theme nil
  :template-vars '(("site_name"        . "cleberg.net")
