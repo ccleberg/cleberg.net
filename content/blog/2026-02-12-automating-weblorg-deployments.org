@@ -1,5 +1,357 @@
-#+date: <2026-02-12 Thu 01:17:05>
+#+date: <2026-02-12 Thu 20:26:32>
 #+title: Automating Weblorg Deployments with GitHub Actions
 #+description: Learn how I've automated all deployment for my org-mode blog with GitHub Actions and a custom Docker image.
 #+slug: automating-weblorg-deployments
-#+draft: t
+
+As I've mentioned in previous posts, I utilize a unique pipeline to draft posts,
+compose my website, and to build and deploy the static files.
+
+This stack uses the following software:
+- [[https://www.gnu.org/software/emacs/][Emacs]]
+- [[https://emacs.love/weblorg/][Weblorg]]
+- [[https://www.python.org/][Python]]
+- [[https://formulae.brew.sh/formula/minify][Minify]]
+- [[https://rsync.samba.org/][rsync]]
+- Environment variables
+
+I've historically relied on the following build and deployment methods:
+
+1. Manually running ~ENV=prod emacs --script publish.el~;
+2. Then building out a ~build.py~ script to automate the Weblorg publishing method
+   and allow for custom steps, like adding recent blog posts to ~index.html~;
+3. Then adding GitHub Actions to automate all steps whenever I merge a pull
+   request into ~main~.
+
+This post will describe the process I've created to automatically build and
+deploy my site with this stack via GitHub Actions.
+
+* Weblorg Configuration
+
+The basis for the build process is ~publish.el~. The challenge with using Emacs
+static site generators is path management. Specifically, I've needed to ensure
+that the necessary packages (~weblorg~, ~htmlize~, & ~templatel~) are available
+regardless of whether I'm building the site on macOS (my dev machine) or a
+Linux-based runner.
+
+To solve this, I use a simple conditional to set the ~site-lisp-base~ path. This
+allows the script to find the cloned repositories in their respective locations.
+Additionally, I use an environment variable check (~ENV=prod~) to toggle the
+~weblorg-default-url~. If I’m just testing locally, it defaults to ~localhost~.
+Otherwise, it points to the live domain.
+
+#+begin_src elisp
+;;; -*- lexical-binding: t -*-
+;; Allow for macOS (dev machine) & Linux (GitHub Actions) execution
+(defvar site-lisp-base
+  (if (eq system-type 'darwin)
+      "~/.config/emacs/.local/straight/repos"                 ; macOS path
+      "/home/linuxbrew/.config/emacs/.local/straight/repos")) ; CI/Linux path
+
+;; Explicitly load packages
+(add-to-list 'load-path (expand-file-name "htmlize" site-lisp-base))
+(add-to-list 'load-path (expand-file-name "weblorg" site-lisp-base))
+(add-to-list 'load-path (expand-file-name "templatel" site-lisp-base))
+
+(require 'htmlize)
+(require 'weblorg)
+
+;; Set default URL for Weblorg
+;; Only works if environment variable ENV=prod
+(if (string-equal-ignore-case (getenv "ENV") "prod")
+    (setq weblorg-default-url "https://cleberg.net"))
+
+;; Define site metadata
+(weblorg-site
+ :theme nil
+ :template-vars '(("site_name"        . "cleberg.net")
+                  ("site_owner"       . "Christian Cleberg <hello@cleberg.net>")
+                  ("site_description" . "Just a blip of ones and zeroes.")))
+
+;; Define routes for rendering content
+;; ...
+;; /scrubbed for brevity/
+
+;; Export all content using Weblorg engine
+(weblorg-export)
+#+end_src
+
+If we run a command such as ~ENV=prod emacs --script publish.el~, Emacs will
+return a ~.build/~ directory with our resulting HTML files. At this point, we
+could manually enter the ~.build/~ directory and run ~python -m http.server~ for a
+local dev server or ~rsync~ to deploy to production.
+
+However, that's just way too much work. Let's keep going.
+
+* Python Build Script
+
+Building on the previous step, I wanted to add some quality-of-life improvements
+that Weblorg does not provide:
+- Update ~index.html~ with the three latest blog posts.
+- Clean up the ~.build/~ directory with each run so we don't run into any
+  conflicts with old or removed files.
+- Minify CSS and HTML.
+- Silence Emacs/Weblorg ~stdout~ / ~stderr~ when running for production.
+- Generate a sitemap.
+- Allow the option to deploy to a remote endpoint via ~rsync~ or start the local
+  dev server.
+
+Python allows for this by acting as the orchestrator, as well as relying on
+environment variables to decide its behavior:
+- *ENV*: Determines if we use production URLs or local ones.
+- *BUILD*: Triggers the actual Emacs export and asset minification.
+- *DEPLOY*: In a local context, this spins up a dev server. In CI, we leave this
+  ~false~ because GitHub Actions handles the ~rsync~ logic separately.
+
+
+See below for the ~main()~ function within ~build.py~ for the logic used to drive
+the process to the rest of the functions in the Python file.
+
+#+begin_src python
+# File scrubbed for brevity
+
+def main():
+    # Updates index.html with the 3 most recent blog posts
+    html_snippet = get_recent_posts_html("./content/blog", num_posts=3)
+
+    # Defines the build path, theme path, and CSS paths
+    build_dir = Path(".build")
+    theme_dir = Path("theme/static")
+    css_src = theme_dir / "styles.css"
+    css_min = theme_dir / "styles.min.css"
+
+    # Check environment for ENV, BUILD, and DEPLOY variables
+    env = os.environ.get("ENV", "").casefold()
+    build = os.environ.get("BUILD", "").casefold() == "true"
+    deploy = os.environ.get("DEPLOY", "").casefold() == "true"
+
+    if env == "prod":
+        # If ENV = prod (case-insensitive), will build for production
+        print("Environment: Production")
+        # Will only build if BUILD=true
+        if build:
+            remove_build_directory(build_dir)
+            minify_css(css_src, css_min)
+            run_emacs_publish(dev_mode=False)
+            update_index_html(html_snippet)
+            minify_html("./.build/index.html", "./.build/index.html")
+            generate_sitemap()
+        # Will only deploy if DEPLOY=true
+        # False for GitHub Actions because deploy.yml deploys via rsync directly
+        if deploy:
+            print("Deploying to production...")
+            deploy_to_server(build_dir, "homelab-remote")
+            return
+    else:
+        # If ENV != prod (case-insensitive), will build for localhost
+        print("Environment: Development")
+        # Will only build if BUILD=true
+        if build:
+            remove_build_directory(build_dir)
+            minify_css(css_src, css_min)
+            run_emacs_publish(dev_mode=True)
+            update_index_html(html_snippet)
+            minify_html("./.build/index.html", "./.build/index.html")
+            generate_sitemap()
+        # Will only deploy if DEPLOY=true
+        if deploy:
+            start_dev_server(build_dir)
+#+end_src
+
+Awesome! Now we can run ~uv run build.py~ to build and deploy locally or ~ENV=prod
+uv run build.py~ to build and deploy for production. Enabling ~BUILD~ and ~DEPLOY~
+variables will tweak the process, as mentioned above.
+
+However, that's way too manual for me. Let's be lazy and take it even further.
+
+* GitHub Actions
+
+So, how do we push it further. By removing the need to run a command (outside of
+~git~) at all!
+
+This process will:
+1. Create a custom Docker image with the tools we need to build and deploy.
+2. Build the Docker image and store it within GitHub's image registry.
+3. Build and deploy the website upon a push or pull request to ~main~.
+
+** The Custom Docker Image
+
+Let's start by building a Docker image that has all the tools I need to build
+the site. Standard CI runners don't come pre-installed with the specific mix of
+tools I need (Emacs, Homebrew, ~uv~, and ~minify~). Instead of installing these on
+every single run, we will build the image and store it for future use.
+
+The ~Dockerfile~ uses ~python:3.12-slim~ as a base, installs Linuxbrew for easy
+package management, and clones the necessary Emacs packages into the expected
+directory. This ensures the build environment is consistent and fast.
+
+#+begin_src Dockerfile
+FROM python:3.12-slim
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    HOMEBREW_NO_AUTO_UPDATE=1 \
+    PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    git \
+    procps \
+    build-essential \
+    ca-certificates \
+    openssh-client \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN useradd -m -s /bin/bash linuxbrew
+USER linuxbrew
+WORKDIR /home/linuxbrew
+
+RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+RUN brew install emacs rsync uv minify
+
+RUN mkdir -p ~/.config/emacs/.local/straight/repos && \
+    cd ~/.config/emacs/.local/straight/repos && \
+    git clone --depth 1 https://github.com/emacsorphanage/htmlize.git && \
+    git clone --depth 1 https://github.com/emacs-love/templatel.git && \
+    git clone --depth 1 https://github.com/emacs-love/weblorg.git
+
+USER root
+WORKDIR /builds
+#+end_src
+
+** Building and Pushing to GHCR
+
+Next, let's use the image we built as the base for the rest of our automation. I
+use a dedicated workflow (~docker-build.yml~) to keep the image up to date.
+Whenever I modify the Dockerfile or my requirements, GitHub Actions builds the
+image and pushes it to the GitHub Container Registry (GHCR). This image then
+serves as the environment for the final deployment step.
+
+#+begin_src yaml
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'Dockerfile'
+      - 'requirements.txt'
+      - '.github/workflows/docker-build.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+#+end_src
+
+** The Build and Deploy Workflow
+
+Finally, the ~deploy.yml~ brings it all together. I split into two jobs: the
+*build-job*, which runs inside our custom container to execute the Python
+orchestrator, and the *deploy-job*, which handles the SSH handshake and ~rsync~
+transfer.
+
+#+begin_src yaml
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/**'
+      - 'screenshots/**'
+      - 'utils/**'
+      - 'LICENSE'
+      - 'README.org'
+
+jobs:
+  build-job:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/ccleberg/cleberg.net:main
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Build
+        env:
+          ENV: "prod"
+          BUILD: "true"
+          DEPLOY: "false"
+        run: |
+          echo "Environment is ready. Running build..."
+          uv run build.py
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: ${{ github.workspace }}/.build/
+          include-hidden-files: true
+
+  deploy-job:
+    runs-on: ubuntu-latest
+    needs: build-job
+    environment: production
+    container:
+      image: ghcr.io/ccleberg/cleberg.net:main
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          path: ${{ github.workspace }}/.build/
+
+      - name: Setup SSH and Deploy
+        env:
+          SERVER_IP: ${{ secrets.SERVER_IP }}
+          SERVER_USER: ${{ secrets.SERVER_USER }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        run: |
+          eval $(ssh-agent -s)
+          echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+          rsync -avz --delete \
+            -e "ssh -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
+            .build/ \
+            $SERVER_USER@$SERVER_IP:/var/www/cleberg.net/
+#+end_src
+
+* Conclusion
+
+Amazing! Now my site will build and deploy whenever I push to the ~main~ branch. I
+have more tweaks to make (e.g., build a development server and environment for
+pull requests prior to ~main~), but I've automated most of it and have drastically
+reduced the administrative burden for the site. After making updates, I simply
+need to ~git add ...~ and merge my PR to trigger the deployment.
