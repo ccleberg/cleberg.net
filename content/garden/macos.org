@@ -1,0 +1,129 @@
+#+title: macOS
+#+slug: macos
+#+description: All about the macOS operating system.
+#+date: [2026-02-21 Sat 14:01:32]
+
+* Delete Annoying ~.DS_Store~ Files
+
+A simple command, using ~fd~ to clean up all ~.DS_Store~ files in any directory.
+
+#+begin_src sh
+# Run the command directly
+fd -H '.DS_Store' -t f -x rm
+
+# Or, create an alias for it
+alias xclean="fd -H '.DS_Store' -t f -x rm"
+xclean
+#+end_src
+
+* Hardening macOS
+
+Ref: [[https://github.com/drduh/macOS-Security-and-Privacy-Guide/blob/master/README.md][macOS Security and Privacy Guide]]
+
+#+begin_src sh
+# Generalize computer name
+sudo scutil --set ComputerName MacBook
+sudo scutil --set LocalHostName MacBook
+
+# Enable firewall
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setstealthmode on
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsigned off
+sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
+sudo pkill -HUP socketfilterfw
+
+# Use Homebrew for software management
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew analytics off
+brew update && brew upgrade
+
+# Use a secure and private browser(s)
+## Harden these manually after installing
+brew install --cask tor-browser ungoogled-chromium firefox
+
+# Use a secure and private messenger
+## Signal; XMPP (e.g., Monal); Matrix (e.g., Element)
+brew install --cask signal monal element
+
+# GPG
+## Install
+brew install gnupg
+## Use recommended settings
+curl -o ~/.gnupg/gpg.conf https://raw.githubusercontent.com/drduh/config/main/gpg.conf
+
+# Delete Metadata
+## Bluetooth
+sudo defaults delete /Library/Preferences/com.apple.Bluetooth.plist DeviceCache
+sudo defaults delete /Library/Preferences/com.apple.Bluetooth.plist IDSPairedDevices
+sudo defaults delete /Library/Preferences/com.apple.Bluetooth.plist PANDevices
+sudo defaults delete /Library/Preferences/com.apple.Bluetooth.plist PANInterfaces
+sudo defaults delete /Library/Preferences/com.apple.Bluetooth.plist SCOAudioDevices
+## CUPS
+sudo rm -rfv /var/spool/cups/c0*
+sudo rm -rfv /var/spool/cups/tmp/*
+sudo rm -rfv /var/spool/cups/cache/job.cache*
+## Connections
+sudo defaults delete /Users/$USER/Library/Preferences/com.apple.iPod.plist "conn:128:Last Connect"
+sudo defaults delete /Users/$USER/Library/Preferences/com.apple.iPod.plist Devices
+sudo defaults delete /Library/Preferences/com.apple.iPod.plist "conn:128:Last Connect"
+sudo defaults delete /Library/Preferences/com.apple.iPod.plist Devices
+sudo rm -rfv /var/db/lockdown/*
+## Quicklook
+rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/exclusive
+rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/index.sqlite
+rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/index.sqlite-shm
+rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/index.sqlite-wal
+rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/resetreason
+rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/thumbnails.data
+sudo rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/thumbnails.fraghandler
+sudo rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/exclusive
+sudo rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/index.sqlite
+sudo rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/index.sqlite-shm
+sudo rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/index.sqlite-wal
+sudo rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/resetreason
+sudo rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/thumbnails.data
+sudo rm -rfv $(getconf DARWIN_USER_CACHE_DIR)/com.apple.QuickLook.thumbnailcache/thumbnails.fraghandler
+rm -rfv "~/Library/Application Support/Quick Look/*"
+chmod -R 000 "~/Library/Application Support/Quick Look"
+chflags -R uchg "~/Library/Application Support/Quick Look"
+## Finder
+defaults delete ~/Library/Preferences/com.apple.finder.plist FXDesktopVolumePositions
+defaults delete ~/Library/Preferences/com.apple.finder.plist FXRecentFolders
+defaults delete ~/Library/Preferences/com.apple.finder.plist RecentMoveAndCopyDestinations
+defaults delete ~/Library/Preferences/com.apple.finder.plist RecentSearches
+defaults delete ~/Library/Preferences/com.apple.finder.plist SGTRecentFileSearches
+## WiFi
+sudo nvram -d 36C28AB5-6566-4C50-9EBD-CBB920F83843:current-network
+sudo nvram -d 36C28AB5-6566-4C50-9EBD-CBB920F83843:preferred-networks
+sudo nvram -d 36C28AB5-6566-4C50-9EBD-CBB920F83843:preferred-count
+## Typing
+rm -rfv "~/Library/LanguageModeling/*" "~/Library/Spelling/*" "~/Library/Suggestions/*"
+chmod -R 000 ~/Library/LanguageModeling ~/Library/Spelling ~/Library/Suggestions
+chflags -R uchg ~/Library/LanguageModeling ~/Library/Spelling ~/Library/Suggestions
+## Apps
+rm -rfv ~/Library/Saved\ Application\ State/*
+rm -rfv ~/Library/Containers/<APPNAME>/Data/Library/Saved\ Application\ State
+chmod -R 000 ~/Library/Saved\ Application\ State/
+chmod -R 000 ~/Library/Containers/<APPNAME>/Data/Library/Saved\ Application\ State
+chflags -R uchg ~/Library/Saved\ Application\ State/
+chflags -R uchg ~/Library/Containers/<APPNAME>/Data/Library/Saved\ Application\ State
+## Autosave
+rm -rfv "~/Library/Containers/<APP>/Data/Library/Autosave Information"
+rm -rfv "~/Library/Autosave Information"
+chmod -R 000 "~/Library/Containers/<APP>/Data/Library/Autosave Information"
+chmod -R 000 "~/Library/Autosave Information"
+chflags -R uchg "~/Library/Containers/<APP>/Data/Library/Autosave Information"
+chflags -R uchg "~/Library/Autosave Information"
+## Siri Analytics
+rm -rfv ~/Library/Assistant/SiriAnalytics.db
+chmod -R 000 ~/Library/Assistant/SiriAnalytics.db
+chflags -R uchg ~/Library/Assistant/SiriAnalytics.db
+## iTunes
+defaults delete ~/Library/Preferences/com.apple.iTunes.plist recentSearches
+## QuickTime
+~/Library/Containers/com.apple.QuickTimePlayerX/Data/Library/Preferences/com.apple.QuickTimePlayerX.plist
+## Misc.
+~/Library/Containers/com.apple.appstore/Data/Library/Preferences/com.apple.commerce.knownclients.plist
+~/Library/Preferences/com.apple.commerce.plist
+~/Library/Preferences/com.apple.QuickTimePlayerX.plist
+#+end_src
