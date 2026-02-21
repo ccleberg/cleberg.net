@@ -135,6 +135,8 @@ img:hover { filter: grayscale(0); }
     gap: 0.5rem;
 }
 
+/* -- Garden -- */
+
 /* Style the footnote number to be a fixed width for alignment */
 .footnum {
     font-weight: bold;

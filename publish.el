@@ -52,6 +52,23 @@
  :output ".build/blog/index.html"
  :url "/blog/")
 
+;; Garden post route
+(weblorg-route
+ :name "garden"
+ :input-pattern "content/garden/*.org"
+ :template "post.html"
+ :output ".build/garden/{{ slug }}.html"
+ :url "/garden/{{ slug }}.html")
+
+;; Garden index page route
+(weblorg-route
+ :name "garden-index"
+ :input-pattern "content/garden/*.org"
+ :input-aggregate #'weblorg-input-aggregate-all-desc
+ :template "garden.html"
+ :output ".build/garden/index.html"
+ :url "/garden/")
+
 ;; Page post route
 (weblorg-route
  :name "pages"
