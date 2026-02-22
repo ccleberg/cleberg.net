@@ -1,4 +1,4 @@
-#+date:        <2021-03-28 Sun 00:00:00>
+#+date: [2021-03-28 Sun 00:00:00]
 #+title:       Getting Started with Gemini: Deploy Your First Capsule
 #+description: Incremental procedural guide to initiate and maintain a Gemini capsule server. Covers installation, deployment, and operational best practices for beginners.
 #+slug:        gemini-capsule

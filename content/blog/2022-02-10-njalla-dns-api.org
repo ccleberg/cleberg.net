@@ -1,4 +1,4 @@
-#+date:        <2022-02-10 Thu 00:00:00>
+#+date: [2022-02-10 Thu 00:00:00]
 #+title:       Automating Dynamic DNS Record Updates via Njalla API Using Python
 #+description: Instructional material detailing automation of DNS record updates by interfacing with Njalla's API, suitable for environments with frequently changing IP addresses.
 #+slug:        njalla-dns-api

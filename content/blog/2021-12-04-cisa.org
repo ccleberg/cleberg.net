@@ -1,4 +1,4 @@
-#+date:        <2021-12-04 Sat 00:00:00>
+#+date: [2021-12-04 Sat 00:00:00]
 #+title:       How I Prepared for and Passed the CISA Exam: A Practical Study Guide
 #+description: Comprehensive outline of study materials, preparation strategies, and procedural advice for passing the CISA examination on the initial attempt.
 #+slug:        cisa

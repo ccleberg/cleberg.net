@@ -1,4 +1,4 @@
-#+date: <2025-10-03 Fri 4:23:00>
+#+date: [2025-10-03 Fri 4:23:00]
 #+title: My Privacy Toolkit
 #+description: Learn about the tools I use to keep my life private and data secure.
 #+slug: privacy-toolkit

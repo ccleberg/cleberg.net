@@ -1,4 +1,4 @@
-#+date:        <2022-03-23 Wed 00:00:00>
+#+date: [2022-03-23 Wed 00:00:00]
 #+title:       Self-Hosting Guide: Nextcloud
 #+description: Comprehensive guide for implementing Nextcloud as a self-hosted solution on an Ubuntu server, including installation steps, configuration parameters, and basic security measures.
 #+slug:        nextcloud-on-ubuntu

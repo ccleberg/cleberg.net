@@ -1,4 +1,4 @@
-#+date:        <2021-07-15 Thu 00:00:00>
+#+date: [2021-07-15 Thu 00:00:00]
 #+title:       Automated Deletion of All GitLab Repositories Using Python
 #+description: Stepwise instructions for executing a Python script to delete all repositories associated with a GitLab account. Includes authentication and error handling procedures.
 #+slug:        delete-gitlab-repos

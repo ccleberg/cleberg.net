@@ -1,4 +1,4 @@
-#+date:        <2024-03-29 Fri 00:00:00>
+#+date: [2024-03-29 Fri 00:00:00]
 #+title:       Blogging with Emacs Org-Mode and Weblorg
 #+description: Instructional content for preparing and publishing blogs using Emacs Org-Mode, including setup of static site generators and content management workflows.
 #+slug:        org-blog

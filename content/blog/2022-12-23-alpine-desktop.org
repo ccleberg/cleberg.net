@@ -1,4 +1,4 @@
-#+date:        <2022-12-23 Fri 00:00:00>
+#+date: [2022-12-23 Fri 00:00:00]
 #+title:       How to Set Up Alpine Linux as a Desktop OS with Sway
 #+description: Stepwise procedures for installing and setting up Alpine Linux as a desktop operating system, including window manager setup and relevant system adjustments.
 #+slug:        alpine-desktop

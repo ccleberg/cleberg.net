@@ -1,4 +1,4 @@
-#+date:        <2023-06-28 Wed 00:00:00>
+#+date: [2023-06-28 Wed 00:00:00]
 #+title:       Automating Secure Backups with Backblaze B2 and b2 CLI
 #+description: Methodical guide for configuring and utilizing Backblaze B2 cloud storage services to perform reliable and secure offsite data backups.
 #+slug:        backblaze-b2

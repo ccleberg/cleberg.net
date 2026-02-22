@@ -1,4 +1,4 @@
-#+date:        <2023-11-08 Wed 00:00:00>
+#+date: [2023-11-08 Wed 00:00:00]
 #+title:       Signal CLI (scli) Installation on Alpine
 #+description: Step-by-step instructions for installing the Signal messenger command-line client scli on Alpine Linux with musl libc, including dependencies and configuration.
 #+slug:        scli

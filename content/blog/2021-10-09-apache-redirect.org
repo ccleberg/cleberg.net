@@ -1,4 +1,4 @@
-#+date:        <2021-10-09 Sat 00:00:00>
+#+date: [2021-10-09 Sat 00:00:00]
 #+title:       Setting Up Apache Rewrite Rules for Extensionless URLs
 #+description: Technical guide to applying Apache mod_rewrite directives for transforming .html file requests into clean directory-style URL structures to enhance website navigation and indexing.
 #+slug:        apache-redirect

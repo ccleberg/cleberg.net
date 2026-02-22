@@ -1,4 +1,4 @@
-#+date:        <2022-03-03 Thu 00:00:00>
+#+date: [2022-03-03 Thu 00:00:00]
 #+title:       From Spreadsheets to Databases: Creating a Custom Financial Tracker with Python
 #+description: Procedures for creating and maintaining a personal financial database utilizing SQLite, Python programming language, and Jupyter Notebook interface.
 #+slug:        financial-database

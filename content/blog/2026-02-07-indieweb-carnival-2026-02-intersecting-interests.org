@@ -1,4 +1,4 @@
-#+date: <2026-02-07 Sat 17:46:00>
+#+date: [2026-02-07 Sat 17:46:00]
 #+title: IndieWeb Carnival: "Intersecting Interests"
 #+description: Contrasting my passions with technology vs. natural hobbies.
 #+slug: indiweb-carnival-2026-02-intersecting-interests

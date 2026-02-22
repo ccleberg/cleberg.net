@@ -1,4 +1,4 @@
-#+date:        <2022-06-24 Fri 00:00:00>
+#+date: [2022-06-24 Fri 00:00:00]
 #+title:       My Journey Back to Linux: Setting Up Fedora with i3 Window Manager
 #+description: Examination of the transition from macOS to Linux, including a detailed description of Fedora operating system installation and i3 window manager configuration.
 #+slug:        fedora-i3

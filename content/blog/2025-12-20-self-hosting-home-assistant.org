@@ -1,4 +1,4 @@
-#+date: <2025-12-20 Sat 20:27:08>
+#+date: [2025-12-20 Sat 20:27:08]
 #+title: Self-Hosting Guide: Home Assistant
 #+description: A guide to configuring and customizing Home Assistant.
 #+slug: self-hosting-home-assistant

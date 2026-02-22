@@ -1,4 +1,4 @@
-#+date:        <2020-09-25 Fri 00:00:00>
+#+date: [2020-09-25 Fri 00:00:00]
 #+title:       Visualizing Global Happiness: A Choropleth Map with Python and Folium
 #+description: Instructions for creating an interactive choropleth map visualizing international happiness data based on metrics such as GDP, social support, health indicators, freedom indices, generosity, and corruption levels.
 #+slug:        happiness-map

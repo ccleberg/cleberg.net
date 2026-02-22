@@ -1,4 +1,4 @@
-#+date: <2025-10-06 Mon 13:11:00>
+#+date: [2025-10-06 Mon 13:11:00]
 #+title: Playing Rocket League on macOS via CrossOver
 #+description: Learn how to play Rocket League on macOS via CrossOver.
 #+slug: rocket-league-macos

@@ -1,4 +1,4 @@
-#+date:        <2022-10-22 Sat 00:00:00>
+#+date: [2022-10-22 Sat 00:00:00]
 #+title:       Alpine Linux Essentials: Installing and Setting Up a Secure Minimal Server
 #+description: Detailed procedure for deploying Alpine Linux to achieve a secure, lightweight server environment optimized for web hosting and containerization.
 #+slug:        alpine-linux

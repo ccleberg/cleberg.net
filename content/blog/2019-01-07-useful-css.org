@@ -1,4 +1,4 @@
-#+date:        <2019-01-07 Mon 00:00:00>
+#+date: [2019-01-07 Mon 00:00:00]
 #+title:       Real‑World CSS Techniques: Flexbox, Shadows, and Variables
 #+description: Practical guide on applying CSS rules and constructs such as flexbox, box shadows, and variable usage to achieve standard web styling and layout objectives.
 #+slug:        useful-css

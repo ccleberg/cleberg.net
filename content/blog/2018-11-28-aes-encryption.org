@@ -1,4 +1,4 @@
-#+date:        <2018-11-28 Wed 00:00:00>
+#+date: [2018-11-28 Wed 00:00:00]
 #+title:       How AES Encryption Works
 #+description: Detailed explanation of AES encryption, including key handling, encryption modes, algorithm structure, and implementation considerations for secure data protection.
 #+slug:        aes-encryption

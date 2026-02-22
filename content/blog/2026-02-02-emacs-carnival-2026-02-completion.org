@@ -1,4 +1,4 @@
-#+date: <2026-02-02 18:40:21>
+#+date: [2026-02-02 18:40:21]
 #+title: Emacs Carnival: "Completion"
 #+description: My response to the Emacs Carnival post for February 2026.
 #+slug: emacs-carnival-2026-02-completion

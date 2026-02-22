@@ -1,4 +1,4 @@
-#+date:        <2023-01-28 Sat 00:00:00>
+#+date: [2023-01-28 Sat 00:00:00]
 #+title:       Self-Hosting Guide: Wger
 #+description: Comprehensive steps for installing, configuring, and operating the Wger workout management application on a dedicated server platform.
 #+slug:        self-hosting-wger

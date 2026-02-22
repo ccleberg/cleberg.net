@@ -1,4 +1,4 @@
-#+date:        <2022-06-01 Wed 00:00:00>
+#+date: [2022-06-01 Wed 00:00:00]
 #+title:       Migrating from Cloudflare to Njalla: A Privacy-Focused DNS and Domain Management Transition
 #+description: Evaluation and procedural explanation for migrating DNS management services from Cloudflare to Njalla, with emphasis on privacy controls and domain registration mechanics.
 #+slug:        ditching-cloudflare

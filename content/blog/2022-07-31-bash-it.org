@@ -1,4 +1,4 @@
-#+date:        <2022-07-31 Sun 00:00:00>
+#+date: [2022-07-31 Sun 00:00:00]
 #+title:       Boosting Bash Productivity: Using Bash-it and ble.sh for Plugins and Autosuggestions
 #+description: Guide to augmenting Bash shell features by integrating Bash-It framework along with ble.sh for input autosuggestions, improving command-line efficiency on Linux systems.
 #+slug:        bash-it

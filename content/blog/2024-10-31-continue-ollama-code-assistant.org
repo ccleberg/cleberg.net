@@ -1,4 +1,4 @@
-#+date:        <2024-10-31 Thursday 11:01:05>
+#+date: [2024-10-31 Thursday 11:01:05]
 #+title:       Ollama Code Assistant Setup in VS Codium
 #+description: Technical overview and configuration guide for incorporating Ollama as a code assistance tool within VS Codium and VS Code editors to enhance development workflows.
 #+slug:        continue-ollama-code-assistant

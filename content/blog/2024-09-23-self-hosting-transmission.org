@@ -1,4 +1,4 @@
-#+date:        <2024-09-23 Monday 19:52:20>
+#+date: [2024-09-23 Monday 19:52:20]
 #+title:       Self-Hosting Guide: Transmission BitTorrent Client
 #+description: Comprehensive setup instructions for installing and configuring the Transmission BitTorrent client on a Linux server, including securing remote access through Nginx reverse proxy.
 #+slug:        self-hosting-transmission

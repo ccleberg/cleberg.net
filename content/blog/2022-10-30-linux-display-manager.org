@@ -1,4 +1,4 @@
-#+date:        <2022-10-30 Sun 00:00:00>
+#+date: [2022-10-30 Sun 00:00:00]
 #+title:       Managing Display Managers in Void Linux: Disable, Enable, and Configure
 #+description: Stepwise instructions to manage and replace the display manager on a Void Linux installation, including service control and configuration editing.
 #+slug:        linux-display-manager

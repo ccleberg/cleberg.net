@@ -1,4 +1,4 @@
-#+date:        <2023-12-03 Sun 00:00:00>
+#+date: [2023-12-03 Sun 00:00:00]
 #+title:       Installing and Configuring NextDNS on Unifi Dream Machine Routers
 #+description: Procedural guide for installation and configuration of NextDNS on Unifi Dream Machine devices for network DNS filtering.
 #+slug:        unifi-nextdns

@@ -1,4 +1,4 @@
-#+date:        <2024-09-20 Friday 13:38:52>
+#+date: [2024-09-20 Friday 13:38:52]
 #+title:       Linux Server Monitoring with Prometheus & Grafana Cloud
 #+description: Stepwise method for deploying Prometheus with Docker to monitor Linux servers and integrating Grafana Cloud for visualization and analysis of collected metrics.
 #+slug:        prometheus-grafana-cloud

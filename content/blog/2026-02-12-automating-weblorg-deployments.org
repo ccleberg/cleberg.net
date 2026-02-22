@@ -1,4 +1,4 @@
-#+date: <2026-02-12 Thu 20:26:32>
+#+date: [2026-02-12 Thu 20:26:32]
 #+title: Automating Weblorg Deployments with GitHub Actions
 #+description: Learn how I've automated all deployment for my org-mode blog with GitHub Actions and a custom Docker image.
 #+slug: automating-weblorg-deployments
