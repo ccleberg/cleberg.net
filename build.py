@@ -110,7 +110,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
 
     header_patterns = {
         "title": re.compile(r"^#\+title:\s*(.+)$", re.IGNORECASE),
-        "date": re.compile(r"^#\+date:\s*<(\d{4}-\d{2}-\d{2})"),
+        "date": re.compile(r"^#\+date:\s*[\[<](\d{4}-\d{2}-\d{2})"),
         "slug": re.compile(r"^#\+slug:\s*(.+)$", re.IGNORECASE),
         "draft": re.compile(r"^#\+draft:\s*(.+)$", re.IGNORECASE),
     }
