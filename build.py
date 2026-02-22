@@ -268,6 +268,13 @@ def run_emacs_publish(dev_mode=True):
         )
 
 
+def copy_org_sources(content_dir="./content", build_dir="./.build/org"):
+    print(f"Copying org sources: {content_dir} → {build_dir}")
+    if os.path.exists(build_dir):
+        shutil.rmtree(build_dir)
+    shutil.copytree(content_dir, build_dir)
+
+
 def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):
     """
     Generates a sitemap.xml based on contents of the .build directory.
@@ -355,6 +362,7 @@ def main():
             remove_build_directory(build_dir)
             minify_css(css_src, css_min)
             run_emacs_publish(dev_mode=False)
+            copy_org_sources()
             update_index_html(html_snippet)
             minify_html("./.build/index.html", "./.build/index.html")
             generate_sitemap()
@@ -368,6 +376,7 @@ def main():
             remove_build_directory(build_dir)
             minify_css(css_src, css_min)
             run_emacs_publish(dev_mode=True)
+            copy_org_sources()
             update_index_html(html_snippet)
             minify_html("./.build/index.html", "./.build/index.html")
             generate_sitemap()
