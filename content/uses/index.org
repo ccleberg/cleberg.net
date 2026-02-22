@@ -31,7 +31,7 @@ important to me than convenience or feature-creep:
 | Technology            | What I Use                       |
 |-----------------------+----------------------------------|
 | Registrar             | [[https://njal.la][Njalla]]                           |
-| DNS                   | [[https://cloudflare.com][Cloudflare]] [fn:1]                |
+| DNS                   | [[https://njal.la][Njalla]]                           |
 | Security              | [[https://www.cloudflare.com/zero-trust/][Cloudflare Zero Trust]] + [[https://github.com/fail2ban/fail2ban][fail2ban]] |
 | Routing               | [[https://ui.com/][UniFi]]                            |
 | Server                | [[https://cleberg.net/blog/server-build.html][Self-hosted]]                      |
@@ -44,25 +44,21 @@ important to me than convenience or feature-creep:
 | Editor                | [[https://github.com/doomemacs/doomemacs][Doom Emacs]]                       |
 | Markup Language       | [[https://orgmode.org][org-mode]]                         |
 | Image Processing      | [[https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/w/webp.rb][webP (CLI)]]                       |
-| Browser(s) [fn:2]     | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net/][LibreWolf]]                  |
+| Browser(s) [fn:1]     | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net/][LibreWolf]]                  |
 | Version Control       | [[https://git-scm.com/][Git (CLI)]]                        |
 | Git Host              | [[https://github.com/ccleberg][GitHub]]                           |
 | CI/CD                 | [[https://github.com/ccleberg/cleberg.net/blob/main/build.py][build.py]] + [[https://www.openssh.org/][OpenSSH]]               |
 | Email Host            | [[https://soverin.com/][Soverin]]                          |
 | Search Engine         | [[https://docs.searxng.org/][SearXNG]]                          |
-| Backups               | N/A - Absolutely None [fn:3]     |
+| Backups               | N/A - Absolutely None [fn:2]     |
 | Monitoring            | N/A - Absolutely None            |
 | Analytics             | N/A - Absolutely None            |
 | Social Media          | N/A - Absolutely None            |
 | Newsletter            | N/A - RSS Only                   |
 
-[fn:1] I hate myself a little bit for using Cloudflare, but they've proven to be
-extremely reliable over the years and have not invaded my privacy (at least, in
-a visible manner). They also allow me to experience a large jump in security for
-zero cost, which is nice.
-[fn:2] I don't get paid for this, so I only test my site in my current primary
+[fn:1] I don't get paid for this, so I only test my site in my current primary
 browser(s).
-[fn:3] I have nothing to back up except the source code (which is already
+[fn:2] I have nothing to back up except the source code (which is already
 "backed up" via Git), since I do not collect or store any user data.
 
 * Hardware
@@ -78,7 +74,7 @@ High-Performance Rack-Mounted Server with Consumer PC Components]].
 |--------------------+-------------------------------------------|
 | Chassis            | Rosewill RSV-R4100U 4U Rackmount          |
 | Motherboard        | NZXT B550                                 |
-| CPU                | AMD Ryzen 7 5700G [fn:4]                  |
+| CPU                | AMD Ryzen 7 5700G [fn:3]                  |
 | GPU                | N/A - Onboard Radeon Graphics             |
 | RAM                | 64GB (2x32GB) DDR4                        |
 | Boot Drive         | 500GB WD M.2 NVMe SSD                     |
@@ -88,5 +84,5 @@ High-Performance Rack-Mounted Server with Consumer PC Components]].
 | Cooling            | Noctua Fans (1x120mm front, 2x80mm rear)  |
 | Cabling            | CableMatters 6Gbps SATA                   |
 
-[fn:4] Specifically chosen for onboard graphics support to avoid needing a
+[fn:3] Specifically chosen for onboard graphics support to avoid needing a
 dedicated GPU in the rack.
