@@ -41,7 +41,7 @@ I use Gemini for a handful of specific use-cases, notably:
 
 ** Microsoft Copilot
 
-Likely the most common AI in use at company's today, due to its integration with
+Likely the most common AI in use at companies today, due to its integration with
 every Microsoft product, Copilot offers the best AI solution for productivity.
 However, it's usage is likely also the most volatile due to the large gap in
 skill sets between new-hires and senior employees.
