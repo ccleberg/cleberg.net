@@ -1,5 +1,5 @@
 #+date: [2026-02-21 Sat 18:58:39]
-#+title: Auditing AWS IAM Identity Center Assignments
+#+title: Auditing AWS IAM Users
 #+description: Learn how to audit IAM user assignments in AWS.
 #+slug: auditing-aws-iam
 
