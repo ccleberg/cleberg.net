@@ -1,4 +1,4 @@
-#+date:        <2025-02-11 Tuesday 11:40:00>
+#+date: [2025-02-11 Tuesday 11:40:00]
 #+title:       Obscura VPN: A Two-Party Protocol Review
 #+description: Analytical review outlining the features, implementation, and security aspects of Obscura VPN's two-party protocol in conjunction with Mullvad VPN.
 #+slug:        obscura-vpn

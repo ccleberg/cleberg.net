@@ -1,6 +1,6 @@
 #+title: Now
 #+slug: index
-#+date: <2026-01-31 Sat 10:17:09>
+#+date: [2026-01-31 Sat 10:17:09]
 #+description: Read about what I'm doing now.
 
 This is a [[https://nownownow.com/about][/now]] page.

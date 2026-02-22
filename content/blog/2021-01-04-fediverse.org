@@ -1,4 +1,4 @@
-#+date:        <2021-01-04 Mon 00:00:00>
+#+date: [2021-01-04 Mon 00:00:00]
 #+title:       Navigating the Fediverse: User Manual for Decentralized Social Media
 #+description: Detailed introduction to the Fediverse network architecture, user registration procedures, platform navigation, and protocols ensuring content decentralization and censorship resistance.
 #+slug:        fediverse

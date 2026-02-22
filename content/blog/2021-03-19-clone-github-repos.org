@@ -1,4 +1,4 @@
-#+date:        <2021-03-19 Fri 00:00:00>
+#+date: [2021-03-19 Fri 00:00:00]
 #+title:       GitHub and Sourcehut: Scripting Mass Clones and Remote Updates
 #+description: Script-based methodology for cloning multiple repositories from GitHub and Sourcehut accounts. Includes automation techniques to streamline repository management and backups.
 #+slug:        clone-github-repos

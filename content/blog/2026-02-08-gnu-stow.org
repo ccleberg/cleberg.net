@@ -1,4 +1,4 @@
-#+date: <2026-02-08 Sun 12:17:42>
+#+date: [2026-02-08 Sun 12:17:42]
 #+title: Managing My Dotfiles with GNU Stow and Git
 #+description: Learn how I use GNU Stow to manage my user dotfiles and configurations.
 #+slug: gnu-stow

@@ -1,4 +1,4 @@
-#+date:        <2020-08-22 Sat 00:00:00>
+#+date: [2020-08-22 Sat 00:00:00]
 #+title:       Configure GitHub Pages to Use Your Root Domain Instead of WWW
 #+description: Stepwise instructions for configuring redirection of GitHub Pages sites from the www subdomain to the apex domain to improve domain resolution and access consistency.
 #+slug:        redirect-github-pages

@@ -1,4 +1,4 @@
-#+date:        <2022-08-31 Wed 00:00:00>
+#+date: [2022-08-31 Wed 00:00:00]
 #+title:       Privacy.com Shifts From Prepaid Debit to Charge Card: What Users Need to Know
 #+description: Detailed examination of modifications to Privacy.com service terms and their implications on user privacy and payment security protocols.
 #+slug:        privacy-com-changes

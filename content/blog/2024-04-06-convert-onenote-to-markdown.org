@@ -1,4 +1,4 @@
-#+date:        <2024-04-06 Sat 00:00:00>
+#+date: [2024-04-06 Sat 00:00:00]
 #+title:       Converting OneNote Exports to Markdown and Org-Mode
 #+description: Detailed conversion instructions to transform OneNote document files into Markdown or Org-Mode formats using Pandoc command-line utility on Windows systems.
 #+slug:        convert-onenote-to-markdown

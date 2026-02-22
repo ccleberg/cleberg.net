@@ -1,4 +1,4 @@
-#+date:        <2025-04-05 Saturday 23:04:54>
+#+date: [2025-04-05 Saturday 23:04:54]
 #+title:       Automating GitHub to GitLab Repository Sync
 #+description: Technical steps for setting up automated synchronization and mirroring of source code repositories from GitHub to GitLab for redundancy and repository management.
 #+slug:        git-mirror

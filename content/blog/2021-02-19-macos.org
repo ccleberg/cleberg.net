@@ -1,4 +1,4 @@
-#+date:        <2021-02-19 Fri 00:00:00>
+#+date: [2021-02-19 Fri 00:00:00]
 #+title:       macOS for Linux Users: Initial Setup and CLI Customization
 #+description: Comprehensive overview for first-time macOS users transitioning from other OS platforms, including system setup, terminal usage, and user interface customization.
 #+slug:        macos

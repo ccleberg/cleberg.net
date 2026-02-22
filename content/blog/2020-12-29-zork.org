@@ -1,4 +1,4 @@
-#+date:        <2020-12-29 Tue 00:00:00>
+#+date: [2020-12-29 Tue 00:00:00]
 #+title:       Your First Grue: Getting Started with Zork, the Iconic Text Adventure
 #+description: Detailed operational guide for navigating Zork, a text-based interactive fiction game from the 1980s. Includes instructions for exploration, puzzle resolution, and item collection.
 #+slug:        zork

@@ -1,4 +1,4 @@
-#+date: <2025-09-25 Thu 21:08:00>
+#+date: [2025-09-25 Thu 21:08:00]
 #+title: Simplifying the Site: A Minimalist Approach
 #+description: This post details a complete redesign of a blog post, stripping away extraneous CSS and HTML elements to prioritize readability and user experience.
 #+slug: minimalist-website-redesign

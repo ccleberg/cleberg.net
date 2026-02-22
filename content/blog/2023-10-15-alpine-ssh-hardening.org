@@ -1,4 +1,4 @@
-#+date:        <2023-10-15 Sun 00:00:00>
+#+date: [2023-10-15 Sun 00:00:00]
 #+title:       Alpine Linux SSH Hardening Guide
 #+description: Detailed guide to enhance Alpine Linux SSH server security through configuration adjustments and vulnerability mitigation.
 #+slug:        alpine-ssh-hardening

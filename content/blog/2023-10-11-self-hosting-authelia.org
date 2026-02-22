@@ -1,4 +1,4 @@
-#+date:        <2023-10-11 Wed 00:00:00>
+#+date: [2023-10-11 Wed 00:00:00]
 #+title:       Self-Hosting Guide: Authelia
 #+description: Instructional guide for setting up Authelia to provide secure two-factor authentication and access control in self-hosted environments.
 #+slug:        self-hosting-authelia

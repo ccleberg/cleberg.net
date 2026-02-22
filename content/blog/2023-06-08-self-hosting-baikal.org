@@ -1,4 +1,4 @@
-#+date:        <2023-06-08 Thu 00:00:00>
+#+date: [2023-06-08 Thu 00:00:00]
 #+title:       Self-Hosting Guide: Baikal
 #+description: Detailed procedure for deploying the Baikal server software to provide CalDAV and CardDAV services, including security considerations and Docker deployment.
 #+slug:        self-hosting-baikal

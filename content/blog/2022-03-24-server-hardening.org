@@ -1,4 +1,4 @@
-#+date:        <2022-03-24 Thu 00:00:00>
+#+date: [2022-03-24 Thu 00:00:00]
 #+title:       Step-by-Step Guide to Securing Your Home Server with Firewalls, SSH, and VLANs
 #+description: Detailed instructions to enhance the security posture of home servers exposed to public networks, including firewall setup, secure SSH configuration, fail2ban deployment, and network segmentation.
 #+slug:        server-hardening

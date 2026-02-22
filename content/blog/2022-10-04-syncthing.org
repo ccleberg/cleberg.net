@@ -1,4 +1,4 @@
-#+date:        <2022-10-04 Tue 00:00:00>
+#+date: [2022-10-04 Tue 00:00:00]
 #+title:       Self-Hosting Guide: Syncthing
 #+description: Technical instructions for setting up Syncthing as a peer-to-peer self-hosted file synchronization system that preserves data privacy by eliminating third-party intermediaries.
 #+slug:        syncthing

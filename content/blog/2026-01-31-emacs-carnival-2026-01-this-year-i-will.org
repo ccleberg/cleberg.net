@@ -1,4 +1,4 @@
-#+date: <2026-01-31 Sat 20:32:11>
+#+date: [2026-01-31 Sat 20:32:11]
 #+title: Emacs Carnival: “This Year, I Will...”
 #+description: My response to the Emacs Carnival post for January 2026.
 #+slug: emacs-carnival-2026-01-this-year-i-will

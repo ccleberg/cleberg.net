@@ -1,4 +1,4 @@
-#+date:        <2023-06-23 Fri 00:00:00>
+#+date: [2023-06-23 Fri 00:00:00]
 #+title:       Self-Hosting Guide: Convos
 #+description: Stepwise instructions for installation, Docker Compose configuration, Nginx reverse proxy setup, and IRC nickname registration for Convos web client hosting.
 #+slug:        self-hosting-convos

@@ -1,4 +1,4 @@
-#+date: <2025-11-02 Sun 10:07:14>
+#+date: [2025-11-02 Sun 10:07:14]
 #+title: Using aerc on macOS
 #+description: Learn how I use aerc, a TUI email client, on macOS.
 #+slug: aerc-macos

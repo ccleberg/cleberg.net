@@ -1,4 +1,4 @@
-#+date:        <2020-09-22 Tue 00:00:00>
+#+date: [2020-09-22 Tue 00:00:00]
 #+title:       The Strategic Role of Internal Audit in Risk, Governance, and Compliance
 #+description: Analysis of internal audit processes, their contribution to risk management, governance frameworks, and compliance monitoring within corporate structures.
 #+slug:        internal-audit

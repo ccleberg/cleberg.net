@@ -1,4 +1,4 @@
-#+date:        <2021-03-30 Tue 00:00:00>
+#+date: [2021-03-30 Tue 00:00:00]
 #+title:       From Shared Hosting to VPS: Web Server Setup Made Easy
 #+description: Instructional outline for setting up and maintaining a VPS environment configured for secure and scalable web hosting applications.
 #+slug:        vps-web-server

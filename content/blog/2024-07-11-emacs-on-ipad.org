@@ -1,4 +1,4 @@
-#+date:        <2024-07-11 Thursday 20:24:02>
+#+date: [2024-07-11 Thursday 20:24:02]
 #+title:       Running Emacs Natively on Apple Silicon iPad
 #+description: Procedural instructions for installing Emacs on iPadOS devices with Apple Silicon architecture, including configuration and operational guidance.
 #+slug:        emacs-on-ipad

@@ -1,4 +1,4 @@
-#+date:        <2021-04-17 Sat 00:00:00>
+#+date: [2021-04-17 Sat 00:00:00]
 #+title:       Agate Gemini Server Installation and Firewall Configuration
 #+description: Detailed directives for installation and configuration of a Gemini protocol server on Ubuntu, including network security and firewall setup.
 #+slug:        gemini-server

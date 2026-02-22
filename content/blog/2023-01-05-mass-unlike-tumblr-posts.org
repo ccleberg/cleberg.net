@@ -1,4 +1,4 @@
-#+date:        <2023-01-05 Thu 00:00:00>
+#+date: [2023-01-05 Thu 00:00:00]
 #+title:       How to Quickly Remove All Likes on Tumblr Desktop
 #+description: Instructions for executing a JavaScript script to automate the mass unlike operation for Tumblr posts without requiring additional software.
 #+slug:        mass-unlike-tumblr-posts

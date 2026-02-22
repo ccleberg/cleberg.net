@@ -1,4 +1,4 @@
-#+date: <2025-11-14 Fri 19:46:30>
+#+date: [2025-11-14 Fri 19:46:30]
 #+title: Striving for 100% WCAG 2 Compliance
 #+description: Read on to learn more about how I've ensured my humble site is compliant with WCAG 2.
 #+slug: wcag

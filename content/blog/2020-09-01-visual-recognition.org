@@ -1,4 +1,4 @@
-#+date:        <2020-09-01 Tue 00:00:00>
+#+date: [2020-09-01 Tue 00:00:00]
 #+title:       How to Use IBM Watson Visual Recognition API for Image Analysis
 #+description: Technical overview and application instructions for using IBM Watson Visual Recognition service, with focus on API configuration, image input processing, and classification output handling.
 #+slug:        visual-recognition
