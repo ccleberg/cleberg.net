@@ -272,7 +272,27 @@ def copy_org_sources(content_dir="./content", build_dir="./.build/org"):
     print(f"Copying org sources: {content_dir} → {build_dir}")
     if os.path.exists(build_dir):
         shutil.rmtree(build_dir)
-    shutil.copytree(content_dir, build_dir)
+
+    slug_pattern = re.compile(r"^#\+slug:\s*(.+)$", re.IGNORECASE)
+
+    for src_path in Path(content_dir).rglob("*.org"):
+        rel_dir = src_path.parent.relative_to(content_dir)
+        dest_dir = Path(build_dir) / rel_dir
+        dest_dir.mkdir(parents=True, exist_ok=True)
+
+        # Try to extract slug from file headers
+        slug = None
+        with src_path.open("r", encoding="utf-8") as f:
+            for line in f:
+                m = slug_pattern.match(line)
+                if m:
+                    slug = m.group(1).strip()
+                    break
+
+        dest_name = f"{slug}.org" if slug else src_path.name
+        shutil.copy2(src_path, dest_dir / dest_name)
+        if slug:
+            print(f"  {src_path.name} → {dest_name}")
 
 
 def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):
