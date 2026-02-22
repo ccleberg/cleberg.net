@@ -1,44 +1,50 @@
 #+date: [2026-02-21 Sat 18:58:39]
 #+title: Auditing AWS IAM Identity Center Assignments
-#+description: How to audit IAM Identity Center access assignments in AWS using a shell script, including what to look for, common exceptions, and how to write up findings.
+#+description: Learn how to audit IAM user assignments in AWS.
 #+slug: auditing-aws-iam
 
 If you've ever asked an IT team for a list of who has access to an AWS account,
 you've probably received a spreadsheet that was already out of date. Or worse,
-an out-of-context screenshot that doesn't explain anything. IAM Identity Center
-doesn't make this easy to extract through the console, and most teams don't have
-a repeatable process for pulling it. This post walks through a script that does
-it for you and explains what to look for once you have the output.
+an out-of-context screenshot that doesn't explain anything. Or worse, they don't
+know either and ignore you, hoping you forget about the request (ask me how I
+know!).
+
+To make it worse, IAM Identity Center doesn't make this easy to extract through
+the console, and most teams don't have a repeatable process for pulling it.
+
+To solve this problem, this post walks through a script that does it for you and
+explains what to look for once you have the output. This is something I've used
+in practice and want to share, as cloud auditing knowledge seems scarce.
 
 The script is available at [[https://github.com/audit-labs/audit-tools/blob/main/applications/aws/aws_iam_users.sh][audit-labs/audit-tools]].
 
 * Background: How AWS Provisions Access
 
 Before running anything, it helps to understand the different ways AWS can be
-architected to grant access. You may encounter any of these in practice,
-sometimes within the same organization, and knowing how they differ tells you
-where to look during an audit and which questions to ask.
+architected to grant access. You may encounter any one (or all) of these in
+practice, sometimes within the same organization. Knowing how they differ tells
+you where to look during an audit and which questions to ask.
 
-** Traditional IAM Users
+** IAM Users
 
-The original AWS access model. An IAM user is an identity created directly
-inside a single AWS account. It has a username, optional console password, and
+This is the original AWS access model. An IAM user is an identity created
+directly inside a single AWS account (e.g., ~iamuser1~ created inside AWS user
+~cmc~). This type of account has a username, an optional console password, and
 optional access keys for programmatic access. Permissions are granted by
 attaching IAM policies directly to the user, or by adding the user to an IAM
 group that has policies attached to it.
 
-You'll still see IAM users in older environments, smaller organizations, and in
-cases where a service or application needs long-lived programmatic credentials.
 The core problem with IAM users at scale is that they're account-scoped, meaning
 a user in ~Account A~ has no relationship to a user in ~Account B~, even if they're
 the same person. Organizations with dozens or hundreds of accounts end up with a
 fragmented identity landscape that's difficult to review and even harder to
 deprovision consistently.
 
-From an audit perspective, IAM users are high-risk when they have active access
-keys (long-lived credentials that don't expire unless explicitly rotated or
-revoked) or when policies are attached directly to the user rather than
-inherited through a group.
+From an audit perspective, these are key risks to understand during your
+walkthrough of the environment. Additionally, you should note that IAM users are
+high-risk when they have active access keys (long-lived credentials that don't
+expire unless explicitly rotated or revoked) or when policies are attached
+directly to the user rather than inherited through a group.
 
 ** IAM Groups
 
@@ -86,30 +92,31 @@ Policies are the documents that define permissions. They're not an access
 pattern on their own, but understanding the three types helps when reviewing
 output from any access audit:
 
-- *AWS managed policies* are created and maintained by AWS. Examples include
-  ~AdministratorAccess~, ~ReadOnlyAccess~, and job-function policies like ~Billing~.
-  They're convenient but broad: ~AdministratorAccess~ is a single policy that
-  grants full access to every AWS service.
-- *Customer managed policies* are created by the organization. They offer more
-  precise control and can be reused across users, groups, and roles. Better
-  practice than relying entirely on AWS managed policies for anything sensitive.
-- *Inline policies* are embedded directly into a specific user, group, or role
-  rather than existing as a standalone resource. They can't be reused and are
-  easier to miss during reviews. When you see an inline policy in audit output,
-  treat it as something that warrants a closer look — they're often added ad hoc
-  to solve a specific problem and not always well documented.
+1. *AWS managed policies* are created and maintained by AWS. Examples include
+   ~AdministratorAccess~, ~ReadOnlyAccess~, and job-function policies like ~Billing~.
+   They're convenient but broad: ~AdministratorAccess~ is a single policy that
+   grants full access to every AWS service.
+2. *Customer managed policies* are created by the organization. They offer more
+   precise control and can be reused across users, groups, and roles. Better
+   practice than relying entirely on AWS managed policies for anything
+   sensitive.
+3. *Inline policies* are embedded directly into a specific user, group, or role
+   rather than existing as a standalone resource. They can't be reused and are
+   easier to miss during reviews. When you see an inline policy in audit output,
+   treat it as something that warrants a closer look — they're often added ad
+   hoc to solve a specific problem and not always well documented.
 
 ** IAM Identity Center
 
 IAM Identity Center (formerly AWS SSO) is the current recommended approach for
-human access in multi-account AWS Organizations. It sits above individual
-accounts and provides centralized access management across all of them from a
-single place.
+human (end-user) access in multi-account AWS Organizations. It sits above
+individual accounts and provides centralized access management across all of
+them from a single place.
 
 It connects to an identity source, such as AWS's own directory, Active
-Directory, or an external IdP like Okta or Entra ID, and uses that as the source
-of truth for users and groups. Access is configured within Identity Center
-itself, not inside individual accounts.
+Directory, or an externali identity provider (IdP) like Okta or Entra ID, and
+uses that as the source of truth for users and groups. Access is configured
+within Identity Center itself, not inside individual accounts.
 
 The key construct is the permission set: a named bundle of IAM policies
 (managed, customer managed, and/or inline) that defines what a principal can do.
@@ -135,32 +142,35 @@ why.
 
 * What the Script Does
 
-The script works against a single named AWS account and produces a JSON report
-of every user and group assignment, along with the permission set and policies
-attached to each assignment.
+The script works by running commands against a single named AWS account and
+produces a JSON report of every user and group assignment, along with the
+permission set and policies attached to each assignment.
 
 It runs in four steps:
 
 1. Finds the IAM Identity Center instance and looks up the target account ID by
-   name
-2. Lists all permission sets provisioned to that account
+   name;
+2. Lists all permission sets provisioned to that account;
 3. For each permission set, retrieves all user and group assignments, resolves
    their names from the Identity Store, and fetches the managed and inline
-   policies attached to the permission set
-4. Writes everything to a JSON file named ~report_<account_name>.json~
+   policies attached to the permission set;
+4. Writes everything to a JSON file named ~report_<account_name>.json~.
 
 The script caches permission set details and principal names to avoid redundant
 API calls when the same permission set or user appears in multiple assignments.
+
+At the end of this process, we will have the evidence we need to test controls
+such as administrative access or segregation of duties.
 
 * Prerequisites
 
 You'll need:
 
-- AWS CLI installed and configured with credentials that have read access to
-  ~sso-admin~, ~identitystore~, and ~organizations~
-- ~jq~ installed (used throughout the script for JSON parsing)
+- AWS CLI (or AWS CloudShell) installed and configured with credentials that
+  have read access to ~sso-admin~, ~identitystore~, and ~organizations~;
+- ~jq~ installed (used throughout the script for JSON parsing);
 - The name of the AWS account you want to audit (must match exactly as it
-  appears in AWS Organizations)
+  appears in AWS Organizations).
 
 Set the account name at the top of the script before running:
 
@@ -178,32 +188,6 @@ chmod +x aws_iam_users.sh
 #+caption: Script Output
 #+attr_html: :alt Terminal output of aws_iam_users.sh showing discovered assignments for the cmc account.
 [[https://img.cleberg.net/blog/20260221-auditing-aws-iam/script.webp]]
-
-
-* Key Snippet: Resolving Principal Names
-
-The part of the script most worth understanding is how it resolves user and
-group names. AWS stores principals in Identity Center by ID, not by name. To get
-a readable name, the script calls the Identity Store API separately for each
-principal:
-
-#+begin_src bash
-if [ "$PRINCIPAL_TYPE" == "USER" ]; then
-    PRINCIPAL_NAME=$(aws identitystore describe-user \
-        --identity-store-id "$IDENTITY_STORE_ID" \
-        --user-id "$PRINCIPAL_ID" \
-        --query "UserName" --output text 2>/dev/null)
-elif [ "$PRINCIPAL_TYPE" == "GROUP" ]; then
-    PRINCIPAL_NAME=$(aws identitystore describe-group \
-        --identity-store-id "$IDENTITY_STORE_ID" \
-        --group-id "$PRINCIPAL_ID" \
-        --query "DisplayName" --output text 2>/dev/null)
-fi
-#+end_src
-
-This is also where the cache matters. If the same user appears across multiple
-permission set assignments (which is common), the script reuses the stored name
-rather than making a redundant API call.
 
 * Reading the Output
 
@@ -266,74 +250,64 @@ principal-to-permission-set assignment. Here's an example:
 
 A few things to look for when reviewing this output:
 
-*Direct user assignments*: ~iamtestuser1~ is assigned ~AdministratorAccess~ directly
-as a USER, not through a group. Access should generally be provisioned through
-groups so that provisioning and deprovisioning are tied to group membership, not
-managed case-by-case. A direct user assignment to a high-privilege permission
-set warrants a conversation with IT about why it exists.
-
-*AdministratorAccess*: This is AWS's broadest managed policy, which allows full
-access to everything in the account. Note who has it and whether that's
-appropriate. In many environments, even senior engineers shouldn't have standing
-~AdministratorAccess~; it should be reserved for break-glass accounts or
-infrastructure teams with a documented need.
-
-*Inline policies*: The ~inline_policy~ field in this example contains a Deny
-statement for ~a4b:*~ (Alexa for Business). Inline policies attached to permission
-sets are worth reviewing, as they can add permissions or restrict them, and
-they're easy to miss if you're only looking at the managed policy name.
-
-*Multiple assignments for the same user*: ~iamtestuser1~ appears twice: once with
-~AdministratorAccess~ and once with ~Billing~. This isn't automatically a problem,
-but a user with both full administrative access and explicit billing access is
-worth confirming with IT.
+- *Direct user assignments*: ~iamtestuser1~ is assigned ~AdministratorAccess~ directly
+  as a USER, not through a group. Access should generally be provisioned through
+  groups so that provisioning and deprovisioning are tied to group membership,
+  not managed case-by-case. A direct user assignment to a high-privilege
+  permission set warrants a conversation with IT about why it exists.
+- *AdministratorAccess*: This is AWS's broadest managed policy, which allows full
+  access to everything in the account. Note who has it and whether that's
+  appropriate. In many environments, even senior engineers shouldn't have
+  standing ~AdministratorAccess~. It should be reserved for break-glass accounts
+  or infrastructure teams with a documented need.
+- *Inline policies*: The ~inline_policy~ field in this example contains a Deny
+  statement for ~a4b:*~. Inline policies attached to permission sets are worth
+  reviewing, as they can add permissions or restrict them, and they're easy to
+  miss if you're only looking at the managed policy name.
+- *Multiple assignments for the same user*: ~iamtestuser1~ appears twice: once with
+  ~AdministratorAccess~ and once with ~Billing~. This isn't automatically a problem,
+  but a user with both full administrative access and explicit billing access is
+  worth confirming with IT.
 
 * Common Exceptions and False Positives
 
-*Break-glass accounts*: Most organizations maintain at least one emergency account
-with direct ~AdministratorAccess~ that bypasses normal access controls. A direct
-USER assignment to ~AdministratorAccess~ may be intentional for this reason. Ask
-IT whether a break-glass account exists, confirm the username matches, and
-document it as an accepted exception if appropriate.
-
-*Small organizations or early-stage environments*: Some teams haven't implemented
-group-based access management yet and assign permissions directly to users
-across the board. This isn't a false positive, it's a control gap, but the
-finding should reflect the scale and maturity of the environment. A two-person
-startup with direct assignments is a different risk than an enterprise doing the
-same thing.
-
-*Service or automation accounts*: Occasionally a USER principal in Identity Center
-is a service account rather than a human. These may legitimately have specific
-permission sets assigned directly. Confirm the account's purpose before writing
-it up.
+- *Break-glass accounts*: Most organizations maintain at least one emergency
+  account with direct ~AdministratorAccess~ that bypasses normal access controls.
+  A direct USER assignment to ~AdministratorAccess~ may be intentional for this
+  reason. Ask IT whether a break-glass account exists, confirm the username
+  matches, and document it as an accepted exception if appropriate.
+- *Small organizations or early-stage environments*: Some teams haven't
+  implemented group-based access management yet and assign permissions directly
+  to users across the board. This is a control gap, but the finding should
+  reflect the scale and maturity of the environment. A two-person startup with
+  direct assignments is a different risk than an enterprise doing the same
+  thing. This may or may not give rise to a deficiency.
+- *Service or automation accounts*: Occasionally a ~USER~ principal in Identity
+  Center is a service account rather than a human. These may legitimately have
+  specific permission sets assigned directly. Confirm the account's purpose
+  before writing it up.
 
 * How to Write Up the Finding
 
 If you identify a direct high-privilege user assignment that isn't a documented
 exception, here's how to frame it:
+- *Deficiency:* User ~iamtestuser1~ is directly assigned the ~AdministratorAccess~
+  permission set in account ~cmc~, rather than receiving access through a group
+  assignment.
+- *Root Cause:* Due to {{ root cuase }}, the user ~iamtestuser1~ was inappropriately
+  provisioned the ~AdministratorAccess~ permission directly rather than through a
+  group assignment.
+- *Risk:* Direct user assignments increase the likelihood of orphaned access
+  following role changes or departures. They are also harder to identify during
+  periodic access reviews, as reviewers may focus on group membership rather
+  than individual assignments.
+- *Evidence:* Attach the relevant portion of ~report_cmc.json~ filtered to show the
+  specific principal, permission set, and policies. The JSON output is
+  self-documenting, as it includes the account name in the filename and contains
+  the full policy details alongside the assignment.
 
-*Condition:* User ~iamtestuser1~ is directly assigned the ~AdministratorAccess~
-permission set in account ~cmc~, rather than receiving access through a group
-assignment.
-
-*Criteria:* Access to AWS accounts via IAM Identity Center should be provisioned
-through groups to ensure consistent access management. Direct user assignments
-bypass group-based controls and are not subject to standard group membership
-reviews.
-
-*Risk:* Direct user assignments increase the likelihood of orphaned access
-following role changes or departures. They are also harder to identify during
-periodic access reviews, as reviewers may focus on group membership rather than
-individual assignments.
-
-*Evidence:* Attach the relevant portion of ~report_cmc.json~ filtered to show the
-specific principal, permission set, and policies. The JSON output is
-self-documenting, as it includes the account name in the filename and contains
-the full policy details alongside the assignment.
-
-To filter the output to just the direct user assignments for the evidence
-attachment:
+If requested during review, you can filter the output to just the direct user
+assignments:
 
 #+begin_src bash
 jq '[.[] | select(.principal.type == "USER")]' report_cmc.json
