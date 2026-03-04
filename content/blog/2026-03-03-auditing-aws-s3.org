@@ -191,8 +191,15 @@ prevent it from becoming public if a policy or ACL were changed.
 - *Policy_IsPublic with No Policy*: A ~No Policy~ result in the policy column is not
   a finding. It simply means no bucket policy is attached. The overall status
   depends on PAB and ACLs.
-- *FALSE-VULNERABLE with FALSE overall status*: This is a configuration weakness rather than an active exposure finding. The bucket isn't currently public, but PAB is not fully enabled, meaning a future change could expose it. Write this up separately from buckets that are actively public, as the risk and remediation are different.
-- *Cross-account or service-specific policies*: Some bucket policies grant access to specific AWS accounts or services (e.g., CloudFront, Config, ELB logging). AWS may flag these as ~IsPublic~ even though they're not publicly accessible in practice. Review the actual bucket policy before raising it as a finding.
+- *FALSE-VULNERABLE with FALSE overall status*: This is a configuration weakness
+  rather than an active exposure finding. The bucket isn't currently public, but
+  PAB is not fully enabled, meaning a future change could expose it. Write this
+  up separately from buckets that are actively public, as the risk and
+  remediation are different.
+- *Cross-account or service-specific policies*: Some bucket policies grant access
+  to specific AWS accounts or services (e.g., CloudFront, Config, ELB logging).
+  AWS may flag these as ~IsPublic~ even though they're not publicly accessible in
+  practice. Review the actual bucket policy before raising it as a finding.
 - *Region coverage*: If a bucket's region isn't in the ~AWS_REGIONS~ list, the
   script can't determine its location and will skip it with a warning. Make sure
   the region list in the script covers your organization's full footprint before
@@ -205,36 +212,21 @@ written up separately.
 
 *Finding 1: Bucket with incomplete or missing PAB (configuration weakness)*
 
-*Condition:* S3 bucket ~13bf5920-a09f-47bc-a75a-394a09f18d6a~ does not have all four
+*Deficiency:* S3 bucket ~13bf5920-a09f-47bc-a75a-394a09f18d6a~ does not have all four
 Public Access Block flags enabled at the bucket level (~PAB_FullyRestricted:
 FALSE-VULNERABLE~).
-
-*Criteria:* All S3 buckets should have Public Access Block fully enabled at the
-bucket level to prevent accidental public exposure through bucket policies or
-ACLs.
 
 *Risk:* Without fully enabled PAB, a future bucket policy or ACL change could
 expose the bucket to the public internet without additional controls in place to
 prevent it.
 
-*Evidence:* Attach ~s3_full_public_access_audit.csv~ filtered to the specific
-bucket. The ~PAB_FullyRestricted~ column documents the current state.
-
 *Finding 2: Bucket actively accessible to the public*
 
-*Condition:* S3 bucket ~example-bucket~ has an ACL granting ~READ~ access to the
+*Deficiency:* S3 bucket ~example-bucket~ has an ACL granting ~READ~ access to the
 ~AllUsers~ group (~ACL_AllUsersRead: TRUE~, ~OverallPublicStatus: TRUE - ACL Read~).
-
-*Criteria:* S3 buckets should not be publicly accessible unless there is a
-documented business requirement and the bucket has been reviewed and approved
-for public access.
 
 *Risk:* Publicly accessible S3 buckets expose any objects stored within them to
 the internet, potentially including sensitive data.
-
-*Evidence:* Attach ~s3_full_public_access_audit.csv~ filtered to the specific
-bucket. For higher-risk buckets, supplement with a screenshot from the AWS
-console confirming the bucket contents or data classification.
 
 To filter the CSV to only buckets with a non-FALSE overall status:
 
