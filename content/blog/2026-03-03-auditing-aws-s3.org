@@ -78,7 +78,7 @@ The reverse is also true. A bucket with no public policy and no public ACLs is
 still at risk if PAB is missing or incomplete, because nothing is in place to
 prevent a future policy or ACL change from exposing it.
 
-* What the Script Does
+M* What the Script Does
 
 The script lists every bucket in the account, determines each bucket's region,
 runs all three checks against it, and appends the results to a CSV file.
@@ -166,14 +166,14 @@ c67fa6bd-2fd5-4bc5-825d-587fb535bf2e,eu-west-1,TRUE,No Policy,FALSE,FALSE,"FALSE
 
 Here's how to read each column:
 
-- *PAB_FullyRestricted*: ~TRUE~ means all four PAB flags are enabled at the bucket
+- =PAB_FullyRestricted=: ~TRUE~ means all four PAB flags are enabled at the bucket
   level. ~FALSE-VULNERABLE~ means PAB exists but is incomplete. ~CRITICAL-MISSING~
   means no PAB configuration exists at all.
-- *Policy_IsPublic*: ~true~ means AWS has determined the bucket policy grants public
+- =Policy_IsPublic=: ~true~ means AWS has determined the bucket policy grants public
   access. ~false~ means it doesn't. ~No Policy~ means no bucket policy is attached.
-- *ACL_AllUsersRead / ACL_AllUsersWrite*: ~TRUE~ means the bucket has an ACL
+- =ACL_AllUsersRead= / =ACL_AllUsersWrite=: ~TRUE~ means the bucket has an ACL
   granting that permission to the public internet. ~FALSE~ means it doesn't.
-- *OverallPublicStatus*: ~FALSE~ means the bucket is not publicly accessible based
+- =OverallPublicStatus=: ~FALSE~ means the bucket is not publicly accessible based
   on all three checks. ~TRUE~ values include the specific reason (e.g., ~TRUE - ACL
   Read~, ~TRUE - Policy~, ~TRUE - PAB Missing (CRITICAL)~).
 
