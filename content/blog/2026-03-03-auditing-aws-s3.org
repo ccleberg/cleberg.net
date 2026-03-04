@@ -1,0 +1,235 @@
+#+date: [2026-03-03 Tue 18:50:23]
+#+title: Auditing AWS S3 Buckets
+#+description: Learn how to audit AWS S3 buckets for public access.
+#+slug: auditing-aws-s3
+
+This is the latest in my series of posts on auditing AWS, a cloud platform that
+has existed for around two decades but can still be a mystery to auditors who
+aren't familiar with how cloud platforms operate.
+
+One of the older, and most popular, offerings from AWS is Simple Storage Service
+(S3), a scalable object storage service that can hold any type of data. With
+this ease of use comes risk.
+
+Public S3 buckets are one of the most common and highest-profile AWS
+misconfigurations. The challenge for auditors is that "public" in S3 isn't a
+single setting. It's the combination of three separate controls, and a bucket
+can appear restricted at one layer while still being exposed at another.
+
+This post walks through a script that checks all three layers for every bucket
+in the account and produces a CSV report.
+
+The script used in this post is available at [[https://github.com/audit-labs/audit-tools/blob/main/applications/aws/aws_s3_buckets.sh][audit-labs/audit-tools]].
+
+* Background: How S3 Controls Public Access
+
+Let's start with the basics. Before running anything, it helps to understand the
+three layers the script checks and how they interact.
+
+** Public Access Block
+
+Public Access Block (PAB) is a set of four flags that can be applied at the
+account level, the bucket level, or both. When all four are enabled, they
+override any bucket policy or ACL that would otherwise grant public access.
+
+The four flags are:
+
+- ~BlockPublicAcls~: Prevents new ACLs that grant public access and ignores
+  existing ones.
+- ~IgnorePublicAcls~: Ignores all public ACLs on the bucket.
+- ~BlockPublicPolicy~: Prevents bucket policies that grant public access.
+- ~RestrictPublicBuckets~: Restricts access to buckets with public policies to
+  only AWS services and authorized users within the account.
+
+The script checks whether all four flags are enabled at the bucket level. If any
+one of them is missing or disabled, the bucket is marked ~FALSE-VULNERABLE~. If
+PAB is missing entirely (no configuration exists at all), the bucket is marked
+~CRITICAL-MISSING~, which is the highest-risk state.
+
+#+begin_note
+*Note:* While this script checks the bucket level PAB, an account-level PAB may
+ exist as well. If it's enabled at the account level, the bucket is safe
+ regardless of its individual settings.
+#+end_note
+
+** Bucket Policy Status
+
+AWS evaluates each bucket policy and exposes an ~IsPublic~ flag that reflects
+whether the policy grants public access. The script checks this flag directly
+using ~get-bucket-policy-status~. If no bucket policy exists, this column shows ~No
+Policy~, which is not a finding on its own. Rather, it's a data point that
+instructs you to keep looking at further evidence.
+
+** ACLs
+
+S3 ACLs predate bucket policies and are largely considered legacy at this point,
+but they're still in use and still a source of public exposure. The script
+checks whether any ACL grants ~READ~ or ~WRITE~ permissions to the ~AllUsers~ group,
+which represents the public internet.
+
+** How the Three Layers Interact
+
+PAB is the highest authority. If PAB is fully enabled at the bucket level, it
+overrides any public bucket policy or ACL. This means a bucket can have a
+publicly permissive policy and still be safe, as long as PAB is fully
+restricted.
+
+The reverse is also true. A bucket with no public policy and no public ACLs is
+still at risk if PAB is missing or incomplete, because nothing is in place to
+prevent a future policy or ACL change from exposing it.
+
+* What the Script Does
+
+The script lists every bucket in the account, determines each bucket's region,
+runs all three checks against it, and appends the results to a CSV file.
+
+It runs in three steps for each bucket:
+
+1. Determines the bucket's region by trying ~get-bucket-location~ against a list
+   of configured regions;
+2. Checks PAB, bucket policy status, and ACLs independently;
+3. Derives an ~OverallPublicStatus~ from the three checks and writes the row to
+   ~s3_full_public_access_audit.csv~.
+
+* Prerequisites
+
+You'll need:
+
+- AWS CLI installed (or access to CloudShell) and configured with credentials
+  that have read access to ~s3:ListAllMyBuckets~, ~s3:GetBucketLocation~,
+  ~s3:GetBucketPublicAccessBlock~, ~s3:GetBucketPolicyStatus~, and ~s3:GetBucketAcl~
+- ~jq~ installed
+- The ~AWS_REGIONS~ variable in the script updated to include any regions your
+  organization uses
+
+Check and update the region list at the top of the script before running:
+
+#+begin_src bash
+AWS_REGIONS="us-east-1 us-west-2 eu-central-1 ap-southeast-2"
+#+end_src
+
+Then run it:
+
+#+begin_src bash
+chmod +x aws_s3_buckets.sh
+./aws_s3_buckets.sh
+#+end_src
+
+* Deriving Overall Public Status
+
+The most important logic in the script is how it combines the three checks into
+a single ~OverallPublicStatus~. PAB is evaluated first and takes precedence:
+
+#+begin_src bash
+if [ "$PAB_FULLY_RESTRICTED" = "CRITICAL-MISSING" ]; then
+    OVERALL_PUBLIC_STATUS="TRUE - PAB Missing (CRITICAL)"
+elif [ "$OVERALL_PUBLIC_STATUS" != "FALSE" ] && [ "$PAB_FULLY_RESTRICTED" != "TRUE" ]; then
+    : # Status already set by Policy or ACL check above
+fi
+#+end_src
+
+If PAB is fully restricted (~TRUE~), the overall status stays ~FALSE~ regardless of
+what the policy or ACL checks find. If PAB is missing entirely, the overall
+status is immediately set to critical. If PAB is present but incomplete
+(~FALSE-VULNERABLE~), the overall status reflects whatever the policy or ACL
+checks found.
+
+* Reading the Output
+
+The script prints progress to the terminal as it runs and saves the full results
+to ~s3_full_public_access_audit.csv~:
+
+#+begin_src text
+Starting FULL S3 Public Access Audit for the CURRENT account...
+---
+1. Retrieving all bucket names...
+Processing bucket: 13bf5920-a09f-47bc-a75a-394a09f18d6a
+  Region determined: eu-west-1
+  Final Status: FALSE
+Processing bucket: c67fa6bd-2fd5-4bc5-825d-587fb535bf2e
+  Region determined: eu-west-1
+  Final Status: FALSE
+---
+Audit Complete.
+Final report saved to s3_full_public_access_audit.csv
+#+end_src
+
+#+begin_src text
+BucketName,Region,PAB_FullyRestricted,Policy_IsPublic,ACL_AllUsersRead,ACL_AllUsersWrite,OverallPublicStatus
+13bf5920-a09f-47bc-a75a-394a09f18d6a,eu-west-1,FALSE-VULNERABLE,No Policy,FALSE,FALSE,"FALSE"
+c67fa6bd-2fd5-4bc5-825d-587fb535bf2e,eu-west-1,TRUE,No Policy,FALSE,FALSE,"FALSE"
+#+end_src
+
+#+caption: S3 Public Access Audit Results
+#+attr_html: :alt Terminal output of aws_s3_buckets.sh showing the per-bucket audit results and CSV report.
+[[https://img.cleberg.net/blog/20260303-auditing-aws-s3/output.webp]]
+
+Here's how to read each column:
+
+- *PAB_FullyRestricted*: ~TRUE~ means all four PAB flags are enabled at the bucket
+  level. ~FALSE-VULNERABLE~ means PAB exists but is incomplete. ~CRITICAL-MISSING~
+  means no PAB configuration exists at all.
+- *Policy_IsPublic*: ~true~ means AWS has determined the bucket policy grants public
+  access. ~false~ means it doesn't. ~No Policy~ means no bucket policy is attached.
+- *ACL_AllUsersRead / ACL_AllUsersWrite*: ~TRUE~ means the bucket has an ACL
+  granting that permission to the public internet. ~FALSE~ means it doesn't.
+- *OverallPublicStatus*: ~FALSE~ means the bucket is not publicly accessible based
+  on all three checks. ~TRUE~ values include the specific reason (e.g., ~TRUE - ACL
+  Read~, ~TRUE - Policy~, ~TRUE - PAB Missing (CRITICAL)~).
+
+Note the first bucket in the example above: ~PAB_FullyRestricted~ is
+~FALSE-VULNERABLE~ but ~OverallPublicStatus~ is still ~FALSE~. This means the bucket
+isn't currently public, but it's missing the PAB configuration that would
+prevent it from becoming public if a policy or ACL were changed.
+
+* Common Exceptions and False Positives
+
+- *Static website hosting*: Buckets used for static website hosting are
+  intentionally public. These will show up with ~TRUE~ overall status and public
+  ACLs or policies. Confirm the business purpose with IT and document them as
+  accepted exceptions rather than findings.
+- *Policy_IsPublic with No Policy*: A ~No Policy~ result in the policy column is not
+  a finding. It simply means no bucket policy is attached. The overall status
+  depends on PAB and ACLs.
+- *FALSE-VULNERABLE with FALSE overall status*: This is a configuration weakness
+  rather than an active exposure finding. The bucket isn't currently public, but
+  PAB is not fully enabled, meaning a future change could expose it. Write this
+  up separately from buckets that are actively public, as the risk and
+  remediation are different.
+- *Cross-account or service-specific policies*: Some bucket policies grant access
+  to specific AWS accounts or services (e.g., CloudFront, Config, ELB logging).
+  AWS may flag these as ~IsPublic~ even though they're not publicly accessible in
+  practice. Review the actual bucket policy before raising it as a finding.
+- *Region coverage*: If a bucket's region isn't in the ~AWS_REGIONS~ list, the
+  script can't determine its location and will skip it with a warning. Make sure
+  the region list in the script covers your organization's full footprint before
+  treating the CSV as a complete population.
+
+* How to Write Up the Finding
+
+There are two distinct finding types this script can surface, and they should be
+written up separately.
+
+*Finding 1: Bucket with incomplete or missing PAB (configuration weakness)*
+
+*Deficiency:* S3 bucket ~13bf5920-a09f-47bc-a75a-394a09f18d6a~ does not have all four
+Public Access Block flags enabled at the bucket level (~PAB_FullyRestricted:
+FALSE-VULNERABLE~).
+
+*Risk:* Without fully enabled PAB, a future bucket policy or ACL change could
+expose the bucket to the public internet without additional controls in place to
+prevent it.
+
+*Finding 2: Bucket actively accessible to the public*
+
+*Deficiency:* S3 bucket ~example-bucket~ has an ACL granting ~READ~ access to the
+~AllUsers~ group (~ACL_AllUsersRead: TRUE~, ~OverallPublicStatus: TRUE - ACL Read~).
+
+*Risk:* Publicly accessible S3 buckets expose any objects stored within them to
+the internet, potentially including sensitive data.
+
+To filter the CSV to only buckets with a non-FALSE overall status:
+
+#+begin_src bash
+awk -F',' 'NR==1 || $7 != "\"FALSE\""' s3_full_public_access_audit.csv
+#+end_src
