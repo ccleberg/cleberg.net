@@ -184,23 +184,23 @@ prevent it from becoming public if a policy or ACL were changed.
 
 * Common Exceptions and False Positives
 
-- *Static website hosting*: Buckets used for static website hosting are
+- =Static website hosting=: Buckets used for static website hosting are
   intentionally public. These will show up with ~TRUE~ overall status and public
   ACLs or policies. Confirm the business purpose with IT and document them as
   accepted exceptions rather than findings.
-- *Policy_IsPublic with No Policy*: A ~No Policy~ result in the policy column is not
+- =Policy_IsPublic with No Policy=: A ~No Policy~ result in the policy column is not
   a finding. It simply means no bucket policy is attached. The overall status
   depends on PAB and ACLs.
-- *FALSE-VULNERABLE with FALSE overall status*: This is a configuration weakness
+- =FALSE-VULNERABLE with FALSE overall status=: This is a configuration weakness
   rather than an active exposure finding. The bucket isn't currently public, but
   PAB is not fully enabled, meaning a future change could expose it. Write this
   up separately from buckets that are actively public, as the risk and
   remediation are different.
-- *Cross-account or service-specific policies*: Some bucket policies grant access
+- =Cross-account or service-specific policies=: Some bucket policies grant access
   to specific AWS accounts or services (e.g., CloudFront, Config, ELB logging).
   AWS may flag these as ~IsPublic~ even though they're not publicly accessible in
   practice. Review the actual bucket policy before raising it as a finding.
-- *Region coverage*: If a bucket's region isn't in the ~AWS_REGIONS~ list, the
+- =Region coverage=: If a bucket's region isn't in the ~AWS_REGIONS~ list, the
   script can't determine its location and will skip it with a warning. Make sure
   the region list in the script covers your organization's full footprint before
   treating the CSV as a complete population.
