@@ -388,7 +388,7 @@ def main():
             generate_sitemap()
         if deploy:
             print("Deploying to production...")
-            deploy_to_server(build_dir, "homelab-remote")
+            deploy_to_server(build_dir, "homelab")
             return
     else:
         print("Environment: Development")
