@@ -13,7 +13,6 @@
     {% if site_keywords is defined %}<meta name="keywords" content="{{ site_keywords }}" >{% endif %}
     <link rel="stylesheet" href="{{ url_for("static", file="styles.min.css") }}" type="text/css">
     <link rel="icon" href="{{ url_for("static", file="favicon.svg") }}" type="image/svg+xml">
-    <link rel="icon" href="{{ url_for("static", file="favicon-light.png") }}" type="image/png">
     {% block meta %}{% endblock %}
     {% endblock %}
 </head>
@@ -28,17 +27,17 @@
             <li><a href="/services/">Services</a></li>
         </ul>
     </nav>
-
+    <hr>
     <main id="main">
         <div> {% block main %}{% endblock %}
         </div>
     </main>
-
-<footer>    
-    <a href="https://github.com/ccleberg/cleberg.net">SOURCE</a> &middot;
-    <a href="/feed.xml">RSS</a> &middot;
-    <a href="http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/">ONION</a> &middot;
-    <a href="/tips">Tips</a>
-</footer>
+    <hr>
+    <footer>
+      <a href="https://github.com/ccleberg/cleberg.net">SOURCE</a> &middot;
+      <a href="/feed.xml">RSS</a> &middot;
+      <a href="http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/">ONION</a> &middot;
+      <a href="/tips">Tips</a>
+    </footer>
 </body>
 </html>

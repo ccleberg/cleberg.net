@@ -1,0 +1,56 @@
+/* =============================================================================
+   BRAND TOKENS — cleberg.net
+   Single source of truth for all design variables.
+   Import this before any other stylesheet.
+   ============================================================================= */
+
+:root {
+  color-scheme: light dark;
+
+  /* --- Color: Light Mode --- */
+  --bg:       #F6F4F0;   /* Page background */
+  --bg-soft:  #EDEAE4;   /* Subtle surface (inputs, cards) */
+  --fg:       #111111;   /* Primary text, borders, table headers */
+  --fg-soft:  #555550;   /* Secondary text, metadata */
+  --accent:   #c0392b;   /* Interactive: links, h2 border. WCAG AA (4.6:1 on --bg). Text-safe. */
+  --salmon:   #ee6f5c;   /* Decorative only. NOT for body text on light backgrounds. */
+  --border:   #111111;   /* Hard borders (nav, tables) */
+  --border-soft: #DDDAD4;  /* Dashed/subtle dividers */
+  --code-bg:  #E8E4DE;   /* Code blocks, blockquotes */
+  --meta:     #555550;   /* Timestamps, labels, footnote numbers */
+
+  /* --- Typography --- */
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  --font-size-base: 1rem;
+  --font-size-sm:   0.85rem;
+  --font-size-xs:   0.8rem;
+  --font-weight-heavy: 900;
+  --line-height: 1.6;
+
+  /* --- Layout --- */
+  --max-width: 800px;
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  2rem;
+  --space-lg:  4rem;
+
+  /* --- Borders --- */
+  --border-width-hard: 3px;   /* Tables, skip-link */
+  --border-width-nav:  4px;   /* Nav underline */
+  --border-width-h2:   10px;  /* h2 left accent bar */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:       #161412;
+    --bg-soft:  #1F1C1A;
+    --fg:       #F0EDE8;
+    --fg-soft:  #888580;
+    --accent:   #ee6f5c;   /* Salmon is WCAG AA on dark bg (~4.5:1 on #161412). Text-safe in dark mode. */
+    --salmon:   #ee6f5c;
+    --border:   #2C2825;
+    --border-soft: #2C2825;
+    --code-bg:  #0F0D0C;
+    --meta:     #888580;
+  }
+}

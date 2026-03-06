@@ -1,32 +1,6 @@
 /* --- Variables & System Logic --- */
-:root {
-  color-scheme: light dark;
-  /* Light Mode Palette */
-  --bg: #F6F4F0;
-  --bg-soft: #EDEAE4;
-  --fg: #111111;
-  --fg-soft: #555550;
-  --accent: #c0392b; /* 4.6:1 on --bg, WCAG AA */
-  --salmon: #ee6f5c; /* decorative only, not for text */
-  --border: #111111;
-  --code-bg: #E8E4DE;
-  --meta: #555550;
-  --max-width: 800px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #161412;
-    --bg-soft: #1F1C1A;
-    --fg: #F0EDE8;
-    --fg-soft: #888580;
-    --accent: #ee6f5c; /* salmon is fine on dark bg ~4.5:1 on #161412 */
-    --salmon: #ee6f5c;
-    --border: #2C2825;
-    --code-bg: #0F0D0C;
-    --meta: #888580;
-  }
-}
+/* All tokens defined in tokens.css — import that first. */
+@import url('tokens.css');
 
 /* --- Layout Architecture --- */
 * { box-sizing: border-box; }
@@ -43,11 +17,10 @@ body {
 }
 
 /* --- Navigation & Footer --- */
-nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; border-bottom: 4px solid var(--fg); padding-bottom: 0.5rem; }
+nav ul { list-style: none; padding: 0; display: flex; gap: 1rem; padding-bottom: 0.5rem; }
 nav a { text-transform: uppercase; font-weight: 900; text-decoration: none; }
 nav a:hover { background: var(--fg); color: var(--bg); }
-
-footer { margin-top: 4rem; border-top: 1px solid var(--border); padding-top: 1rem; font-size: 0.8rem; text-transform: uppercase; }
+footer { padding-top: 1rem; font-size: 0.8rem; text-transform: uppercase; }
 
 /* --- Typography (Brutalist) --- */
 h1, h2, h3 { line-height: 1.1; margin-top: 2rem; font-weight: 900; text-transform: uppercase; }
@@ -123,6 +96,34 @@ img:hover { filter: grayscale(0); }
 #main-content:focus {
     outline: none;
 }
+
+/* --- Horizontal Rule (Koi Divider) --- */
+hr {
+  border: none;
+  height: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('koi-hr.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+}
+
+hr::before,
+hr::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(50% - 1.75rem);
+  height: 2px;
+  background: var(--fg);
+}
+
+hr::before { left: 0; }
+hr::after  { right: 0; }
 
 /* --- Footnote Alignment --- */
 .footdef {
