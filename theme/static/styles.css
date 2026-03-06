@@ -118,7 +118,7 @@ hr::after {
   top: 50%;
   transform: translateY(-50%);
   width: calc(50% - 1.75rem);
-  height: 2px;
+  height: 1px;
   background: var(--fg);
 }
 
