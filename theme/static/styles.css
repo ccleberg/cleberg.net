@@ -2,23 +2,29 @@
 :root {
   color-scheme: light dark;
   /* Light Mode Palette */
-  --bg: #ffffff;
-  --fg: #1a1a1a;
-  --accent: #0000ff; /* Classic HTML blue */
-  --border: #000000;
-  --code-bg: #f4f4f4;
-  --meta: #666666;
+  --bg: #F6F4F0;
+  --bg-soft: #EDEAE4;
+  --fg: #111111;
+  --fg-soft: #555550;
+  --accent: #c0392b; /* 4.6:1 on --bg, WCAG AA */
+  --salmon: #ee6f5c; /* decorative only, not for text */
+  --border: #111111;
+  --code-bg: #E8E4DE;
+  --meta: #555550;
   --max-width: 800px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0d0d0d;
-    --fg: #e0e0e0;
-    --accent: #4dabff;
-    --border: #333333;
-    --code-bg: #1a1a1a;
-    --meta: #999999;
+    --bg: #161412;
+    --bg-soft: #1F1C1A;
+    --fg: #F0EDE8;
+    --fg-soft: #888580;
+    --accent: #ee6f5c; /* salmon is fine on dark bg ~4.5:1 on #161412 */
+    --salmon: #ee6f5c;
+    --border: #2C2825;
+    --code-bg: #0F0D0C;
+    --meta: #888580;
   }
 }
 
