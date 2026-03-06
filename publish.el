@@ -21,9 +21,9 @@
 ;; Define site metadata
 (weblorg-site
  :theme nil
- :template-vars '(("site_name"        . "cleberg.net")
+ :template-vars '(("site_name"        . "seijaku")
                   ("site_owner"       . "Christian Cleberg <hello@cleberg.net>")
-                  ("site_description" . "Just a blip of ones and zeroes.")))
+                  ("site_description" . "Stillness in the middle of it all.")))
 
 ;; Define routes for rendering content
 

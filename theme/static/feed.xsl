@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  exclude-result-prefixes="atom dc">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.0" exclude-result-prefixes="atom dc">
   <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>
   <xsl:template match="/">
     <html lang="en">
       <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title><xsl:value-of select="/rss/channel/title"/> — RSS Feed</title>
+        <title>rss - <xsl:value-of select="/rss/channel/title"/></title>
         <style>
           :root {
             color-scheme: light dark;
@@ -74,24 +71,42 @@
       <body>
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/garden">Garden</a></li>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/blog">Blog</a>
+            </li>
+            <li>
+              <a href="/garden">Garden</a>
+            </li>
           </ul>
         </nav>
-        <h1><xsl:value-of select="/rss/channel/title"/></h1>
-        <p class="description"><xsl:value-of select="/rss/channel/description"/></p>
+        <h1>
+          <xsl:value-of select="/rss/channel/title"/>
+        </h1>
+        <p class="description">
+          <xsl:value-of select="/rss/channel/description"/>
+        </p>
         <div class="notice">
           This is an RSS feed. Copy <code><xsl:value-of select="/rss/channel/atom:link/@href"/></code> into your feed reader to subscribe.
         </div>
         <xsl:for-each select="/rss/channel/item">
           <div class="post">
-            <time><xsl:value-of select="pubDate"/></time>
-            <h2><a><xsl:attribute name="href"><xsl:value-of select="link"/></xsl:attribute><xsl:value-of select="title"/></a></h2>
+            <time>
+              <xsl:value-of select="pubDate"/>
+            </time>
+            <h2>
+              <a>
+                <xsl:attribute name="href">
+                  <xsl:value-of select="link"/>
+                </xsl:attribute>
+                <xsl:value-of select="title"/>
+              </a>
+            </h2>
           </div>
         </xsl:for-each>
-        <footer>
-          <xsl:value-of select="/rss/channel/title"/> &#x2014; RSS 2.0
+        <footer><xsl:value-of select="/rss/channel/title"/> — RSS 2.0
         </footer>
       </body>
     </html>
