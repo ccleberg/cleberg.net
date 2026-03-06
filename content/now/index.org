@@ -1,4 +1,4 @@
-#+title: Now
+#+title: now
 #+slug: index
 #+date: [2026-01-31 Sat 10:17:09]
 #+description: Read about what I'm doing now.

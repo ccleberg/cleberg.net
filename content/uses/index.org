@@ -1,4 +1,4 @@
-#+title: Uses
+#+title: uses
 #+slug: index
 
 What are the technologies behind ~cleberg.net~? See below. I tend to flip-flop on

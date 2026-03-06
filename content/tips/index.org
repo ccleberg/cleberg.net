@@ -1,4 +1,4 @@
-#+title: Tips
+#+title: tips
 #+slug: index
 
 Want to support me for whatever reason? Extra rich and want to throw money away?

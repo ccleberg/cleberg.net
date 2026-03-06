@@ -1,4 +1,4 @@
-#+title: About
+#+title: about
 #+slug: index
 
 Hey, I'm Christian.

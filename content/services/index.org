@@ -1,4 +1,4 @@
-#+title: Services
+#+title: services
 #+slug: index
 
 * Alternative Front-Ends/Proxies

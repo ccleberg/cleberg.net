@@ -1,4 +1,4 @@
-#+title: Salary
+#+title: salary
 #+slug: index
 
 ** Salary Transparency

@@ -1,2 +1,2 @@
-#+title: cleberg.net
+#+title: seijaku
 #+description: Just a blip of ones and zeroes.
