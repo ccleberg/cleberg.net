@@ -65,8 +65,7 @@ browser(s).
 * Hardware
 
 I run most of my services from my custom, rack-mounted server (details below),
-but I also run a Dell Optiplex and a Raspbery Pi 4 for some miscellaneous
-services.
+but I also run a Raspbery Pi 4 for some miscellaneous services.
 
 See the following blog post for more information on this server: [[https://cleberg.net/blog/server-build.html][Building a
 High-Performance Rack-Mounted Server with Consumer PC Components]].
