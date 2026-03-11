@@ -1,56 +1,51 @@
 /* =============================================================================
    BRAND TOKENS — cleberg.net
-   Single source of truth for all design variables.
-   Import this before any other stylesheet.
    ============================================================================= */
-
 :root {
   color-scheme: light dark;
 
-  /* --- Color: Light Mode --- */
-  --bg:       #F6F4F0;   /* Page background */
-  --bg-soft:  #EDEAE4;   /* Subtle surface (inputs, cards) */
-  --fg:       #111111;   /* Primary text, borders, table headers */
-  --fg-soft:  #555550;   /* Secondary text, metadata */
-  --accent:   #c0392b;   /* Interactive: links, h2 border. WCAG AA (4.6:1 on --bg). Text-safe. */
-  --salmon:   #ee6f5c;   /* Decorative only. NOT for body text on light backgrounds. */
-  --border:   #111111;   /* Hard borders (nav, tables) */
-  --border-soft: #DDDAD4;  /* Dashed/subtle dividers */
-  --code-bg:  #E8E4DE;   /* Code blocks, blockquotes */
-  --meta:     #555550;   /* Timestamps, labels, footnote numbers */
+  /* Light */
+  --bg:          #ffffff;
+  --bg-soft:     #f5f5f5;
+  --fg:          #0a0a0a;
+  --fg-soft:     #444444;
+  --accent:      #c0392b;
+  --border:      #0a0a0a;
+  --border-soft: #dedede;
+  --code-bg:     #f3f3f3;
+  --meta:        #999999;
 
-  /* --- Typography --- */
-  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
-  --font-size-base: 1rem;
-  --font-size-sm:   0.85rem;
-  --font-size-xs:   0.8rem;
-  --font-weight-heavy: 900;
-  --line-height: 1.6;
+  /* Fonts */
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-sans:  system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-mono:  ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
 
-  /* --- Layout --- */
-  --max-width: 800px;
-  --space-xs:  0.5rem;
-  --space-sm:  1rem;
-  --space-md:  2rem;
-  --space-lg:  4rem;
+  /* Type scale */
+  --text-display: clamp(4rem, 8vw, 6.5rem);
+  --text-h1:      clamp(2.2rem, 4vw, 3rem);
+  --text-h2:      1.2rem;
+  --text-body:    1.0625rem;
+  --text-sm:      0.875rem;
+  --text-xs:      0.6875rem;   /* 11px — label tier */
+  --lh-display:   0.95;
+  --lh-body:      1.75;
 
-  /* --- Borders --- */
-  --border-width-hard: 3px;   /* Tables, skip-link */
-  --border-width-nav:  4px;   /* Nav underline */
-  --border-width-h2:   10px;  /* h2 left accent bar */
+  /* Layout */
+  --outer-w:  1000px;
+  --prose-w:  720px;
+  --pad:      clamp(1.25rem, 4vw, 2.5rem);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:       #161412;
-    --bg-soft:  #1F1C1A;
-    --fg:       #F0EDE8;
-    --fg-soft:  #888580;
-    --accent:   #ee6f5c;   /* Salmon is WCAG AA on dark bg (~4.5:1 on #161412). Text-safe in dark mode. */
-    --salmon:   #ee6f5c;
-    --border:   #2C2825;
-    --border-soft: #2C2825;
-    --code-bg:  #0F0D0C;
-    --meta:     #888580;
+    --bg:          #080808;
+    --bg-soft:     #111111;
+    --fg:          #eeebe6;
+    --fg-soft:     #aaa8a3;
+    --accent:      #e05a48;
+    --border:      #eeebe6;
+    --border-soft: #1e1e1e;
+    --code-bg:     #0d0d0d;
+    --meta:        #555555;
   }
 }
