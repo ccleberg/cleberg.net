@@ -2,6 +2,7 @@
 #+title:       When Good Is Good Enough—And When It Isn't
 #+description: Examination of decision-making principles relating to achieving sufficient quality levels, including trade-offs between perfection and adequacy in professional and operational contexts.
 #+slug:        mediocrity
+#+filetags: :personal:
 
 * Perfect is the Enemy of Good
 

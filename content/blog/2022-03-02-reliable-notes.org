@@ -2,6 +2,7 @@
 #+title:       Reliable Note-Taking with Markdown: Methods for Efficient and Portable Notes
 #+description: Instructions on applying standardized note-taking procedures with Markdown format, including synchronization and cross-platform compatibility considerations.
 #+slug:        reliable-notes
+#+filetags: :personal:
 
 * Choosing Durable File Formats
 

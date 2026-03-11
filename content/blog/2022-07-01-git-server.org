@@ -2,6 +2,7 @@
 #+title:       Self-Hosting Guide: Git & cGit
 #+description: Comprehensive instructions for secure and efficient setup, hosting, and management of personal Git repositories to facilitate collaborative development and remote access.
 #+slug:        git-server
+#+filetags: :linux:self-hosting:
 
 * My Approach to Self-Hosting Git
 

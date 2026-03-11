@@ -2,6 +2,7 @@
 #+title: Crafting a More Human-Centric Design for My Website
 #+description: Read this post to understand my latest website redesign and the context for the refresh.
 #+slug: human-website-design
+#+filetags: :web:
 
 #+begin_quote
 /Please note that this redesign is a work-in-progress and is not complete. The

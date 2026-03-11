@@ -2,6 +2,7 @@
 #+title:       Protect Your Privacy: Automating Image Metadata Removal Using Exiftool
 #+description: Technical instructions for utilizing Exiftool to systematically strip metadata from image files to ensure privacy and reduce file size.
 #+slug:        exiftool
+#+filetags: :linux:privacy:
 
 ** Why Strip Metadata?
 

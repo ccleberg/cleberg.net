@@ -2,6 +2,7 @@
 #+title: Striving for 100% WCAG 2 Compliance
 #+description: Read on to learn more about how I've ensured my humble site is compliant with WCAG 2.
 #+slug: wcag
+#+filetags: :audit:web:
 
 * WCAG 2
 

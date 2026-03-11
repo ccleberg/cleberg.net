@@ -2,6 +2,7 @@
 #+title:       Self-Hosting Guide: Syncthing
 #+description: Technical instructions for setting up Syncthing as a peer-to-peer self-hosted file synchronization system that preserves data privacy by eliminating third-party intermediaries.
 #+slug:        syncthing
+#+filetags: :linux:self-hosting:
 
 * An Overview of Syncthing
 

@@ -2,6 +2,7 @@
 #+title:       Essential Org-Mode Features for Productivity
 #+description: Detailed overview of essential Org-Mode functionalities focusing on task organization, note-taking, and workflow optimization.
 #+slug:        org-mode-features
+#+filetags: :emacs:
 
 * Cycling (Folding)
 

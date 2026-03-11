@@ -2,6 +2,7 @@
 #+title:       Troubleshooting and Fixing Nginx Permission Denied Errors on /var/lib/nginx
 #+description: Step-by-step remediation for addressing permission denied errors encountered by Nginx in the /var/lib/nginx directory to restore temporary file caching functionality.
 #+slug:        nginx-tmp-errors
+#+filetags: :web:
 
 /This is a brief post so that I personally remember the solution as it
 has occurred multiple times for me./

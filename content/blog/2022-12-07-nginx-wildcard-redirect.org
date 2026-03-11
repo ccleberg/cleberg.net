@@ -2,6 +2,7 @@
 #+title:       Nginx Wildcard Redirects: Seamlessly Redirecting Domains and Subdomains with Trailing Paths
 #+description: Instructional steps for applying regex-based redirects in Nginx to manage subdomain routing and trailing path modifications effectively.
 #+slug:        nginx-wildcard-redirect
+#+filetags: :web:
 
 * Problem
 

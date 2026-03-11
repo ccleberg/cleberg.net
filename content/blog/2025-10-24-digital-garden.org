@@ -2,6 +2,7 @@
 #+title: Digital Garden
 #+description: A post dedicated to digital gardens, an online space for personal knowledge management, creative exploration, and reflection.
 #+slug: digital-garden
+#+filetags: :web:
 
 * What's a Digital Garden?
 

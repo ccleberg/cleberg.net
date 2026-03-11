@@ -2,6 +2,7 @@
 #+title:       Self-Hosting Guide: AnonymousOverflow
 #+description: Detailed installation and setup instructions for the AnonymousOverflow application using Docker Compose and Nginx reverse proxy.
 #+slug:        self-hosting-anonymousoverflow
+#+filetags: :linux:self-hosting:
 
 * Overview
 

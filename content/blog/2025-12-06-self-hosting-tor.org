@@ -2,6 +2,7 @@
 #+title: Self-Hosting Guide: Tor Websites
 #+description: Learn how to host your own website on Tor with an Onion Address in a few short steps!
 #+slug: self-hosting-tor
+#+filetags: :linux:self-hosting:
 
 * Installation
 

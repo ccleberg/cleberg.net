@@ -2,6 +2,7 @@
 #+title: Automating Weblorg Deployments with GitHub Actions
 #+description: Learn how I've automated all deployment for my org-mode blog with GitHub Actions and a custom Docker image.
 #+slug: automating-weblorg-deployments
+#+filetags: :self-hosting:web:
 
 As I've mentioned in previous posts, I utilize a unique pipeline to draft posts,
 compose my website, and to build and deploy the static files.

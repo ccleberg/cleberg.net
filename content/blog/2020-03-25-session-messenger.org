@@ -2,6 +2,7 @@
 #+title:       Session Messenger: Is It Secure?
 #+description: Technical description of the Session messaging protocol, including end-to-end encryption, metadata minimization, multi-device synchronization, and privacy-centric design.
 #+slug:        session-messenger
+#+filetags: :privacy:
 
 * Privacy Warning
 

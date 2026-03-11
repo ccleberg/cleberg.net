@@ -2,6 +2,7 @@
 #+title: Self-Hosting Guide: Home Assistant
 #+description: A guide to configuring and customizing Home Assistant.
 #+slug: self-hosting-home-assistant
+#+filetags: :linux:self-hosting:
 
 * Overview
 

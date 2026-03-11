@@ -2,6 +2,7 @@
 #+title: Simplifying the Site: A Minimalist Approach
 #+description: This post details a complete redesign of a blog post, stripping away extraneous CSS and HTML elements to prioritize readability and user experience.
 #+slug: minimalist-website-redesign
+#+filetags: :web:
 
 I know what you're thinking: "ANOTHER blog post about redesigning the website?"
 

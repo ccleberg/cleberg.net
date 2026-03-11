@@ -2,6 +2,7 @@
 #+title:       A Practical Guide to Encryption, Keys, and Secure Communication
 #+description: Systematic overview of encryption methodologies, key categories, algorithmic frameworks, and their applications in data confidentiality and integrity.
 #+slug:        cryptography
+#+filetags: :security:
 
 * Similar Article Available
 

@@ -2,6 +2,7 @@
 #+title:       Agile Auditing Framework: Using Scrum and Kanban in Audit Projects
 #+description: Detailed examination of Agile auditing methodologies, including Scrum and Kanban frameworks, with practical steps for application in audit processes.
 #+slug:        agile-auditing
+#+filetags: :audit:
 
 * What is Agile Auditing?
 

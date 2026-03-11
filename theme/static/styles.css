@@ -581,3 +581,17 @@ img:hover { filter: grayscale(0); }
 @media (max-width: 480px) {
   .masthead nav li { width: 100%; }
 }
+
+/* Tags page */
+.tag-toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem;
+}
+.tag-count {
+  color: var(--meta);
+  font-size: var(--text-xs);
+}

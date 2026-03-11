@@ -2,6 +2,7 @@
 #+title:       From Cubicles to Home Offices: My Journey Through Changing Workspaces
 #+description: Examination of factors influencing the shift from traditional office environments to remote work, including benefits, constraints, and implementation recommendations.
 #+slug:        leaving-the-office
+#+filetags: :personal:
 
 * The Working World is Changing
 

@@ -381,6 +381,141 @@ def inject_blog_year_separators(blog_index_path="./.build/blog/index.html"):
     print(f"Blog year separators injected into {blog_index_path}")
 
 
+def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
+    """
+    Scans all blog org files for #+filetags, then writes .build/tags/index.html
+    with one section per tag, each post listed under its tags, sorted newest first.
+    Tags link to anchor IDs on the same page.
+    """
+    TAG_ORDER = ["audit", "emacs", "linux", "personal", "privacy", "security", "self-hosting", "web"]
+
+    header_patterns = {
+        "title": re.compile(r"^#\+title:\s*(.+)$", re.IGNORECASE),
+        "date":  re.compile(r"^#\+date:\s*[\[<](\d{4}-\d{2}-\d{2})"),
+        "slug":  re.compile(r"^#\+slug:\s*(.+)$", re.IGNORECASE),
+        "tags":  re.compile(r"^#\+filetags:\s*(.+)$", re.IGNORECASE),
+        "draft": re.compile(r"^#\+draft:\s*(.+)$", re.IGNORECASE),
+    }
+
+    tag_map = {tag: [] for tag in TAG_ORDER}
+
+    for org_path in Path(content_dir).glob("*.org"):
+        title = date_str = slug = None
+        tags = []
+        is_draft = False
+
+        with org_path.open("r", encoding="utf-8") as f:
+            for line in f:
+                if not title:
+                    m = header_patterns["title"].match(line)
+                    if m: title = m.group(1).strip(); continue
+                if not date_str:
+                    m = header_patterns["date"].match(line)
+                    if m: date_str = m.group(1); continue
+                if not slug:
+                    m = header_patterns["slug"].match(line)
+                    if m: slug = m.group(1).strip(); continue
+                if not tags:
+                    m = header_patterns["tags"].match(line)
+                    if m:
+                        raw = m.group(1).strip().strip(":")
+                        tags = [t.strip() for t in raw.split(":") if t.strip()]
+                        continue
+                m = header_patterns["draft"].match(line)
+                if m and m.group(1).strip().lower() != "nil":
+                    is_draft = True; break
+                if title and date_str and slug and tags:
+                    break
+
+        if is_draft or not (title and date_str and slug):
+            continue
+
+        try:
+            date_obj = datetime.strptime(date_str, "%Y-%m-%d")
+        except ValueError:
+            continue
+
+        for tag in tags:
+            if tag in tag_map:
+                tag_map[tag].append({"title": title, "slug": slug, "date_obj": date_obj, "date_str": date_str})
+
+    for tag in tag_map:
+        tag_map[tag].sort(key=lambda x: x["date_obj"], reverse=True)
+
+    # Build TOC
+    toc_items = "".join(
+        f'<li><a href="#{tag}">{tag}</a> <span class="tag-count">({len(tag_map[tag])})</span></li>'
+        for tag in TAG_ORDER
+    )
+
+    # Build sections
+    sections = []
+    for tag in TAG_ORDER:
+        posts = tag_map[tag]
+        items = "\n".join(
+            f'<li class="post-list-item">'
+            f'<a href="/blog/{p["slug"]}.html">{p["title"]}</a>'
+            f'<time datetime="{p["date_str"]}">{p["date_str"]}</time>'
+            f'</li>'
+            for p in posts
+        )
+        sections.append(f'<h2 id="{tag}">{tag}</h2>\n<ul class="post-list">\n{items}\n</ul>')
+
+    html = f"""<!doctype html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>tags - seijaku</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/styles.min.css" type="text/css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<header class="masthead">
+<a href="/" class="masthead-title">seijaku</a>
+<p class="masthead-subtitle"><i>stillness amidst the chaos</i></p>
+<nav aria-label="Site Navigation">
+<ul>
+<li><a href="/blog/">Blog</a></li>
+<li><a href="/guides/index.html">Guides</a></li>
+<li><a href="/apps/">Apps</a></li>
+<li><a href="/garden/">Garden</a></li>
+<li><a href="/salary/">Salary</a></li>
+</ul>
+</nav>
+</header>
+<main id="main-content">
+<h1>Tags</h1>
+<ul class="tag-toc">{toc_items}</ul>
+{"".join(f"<section>{s}</section>" for s in sections)}
+</main>
+<hr>
+<footer>
+<div>
+<a href="https://github.com/ccleberg/cleberg.net">Source</a> &middot;
+<a href="/feed.xml">RSS</a> &middot;
+<a href="http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/">Onion</a> &middot;
+<a href="/now/">Now</a> &middot;
+<a href="/uses/">Uses</a> &middot;
+<a href="/tips/">Tips</a> &middot;
+<a href="https://cv.cleberg.net">CV</a>
+</div>
+<div>
+<a href="mailto:hello@cleberg.net">hello@cleberg.net</a> [<a href="/gpg.txt">PGP</a>] &middot;
+Signal: @cmc.01
+</div>
+</footer>
+</body>
+</html>"""
+
+    out_dir = Path(build_dir) / "tags"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / "index.html"
+    out_path.write_text(html, encoding="utf-8")
+    print(f"Tags page written to {out_path}")
+
+
 def deploy_to_server(build_dir, server):
     remote_path = f"{server}:/var/www/cleberg.net/"
     print(f"Deploying .build/ → {remote_path}")
@@ -430,6 +565,7 @@ def main():
             copy_org_sources()
             update_index_html(html_snippet)
             inject_blog_year_separators()
+            generate_tags_page()
             minify_html("./.build/index.html", "./.build/index.html")
             generate_sitemap()
         if deploy:
@@ -445,6 +581,7 @@ def main():
             copy_org_sources()
             update_index_html(html_snippet)
             inject_blog_year_separators()
+            generate_tags_page()
             minify_html("./.build/index.html", "./.build/index.html")
             generate_sitemap()
         if deploy:

@@ -2,6 +2,7 @@
 #+title:       2023 Website Updates: Minimalist Style, Accessibility Improvements, and Content Prioritization
 #+description: Documentation of significant changes applied to site design, layout, and accessibility features to enhance navigability and content clarity.
 #+slug:        recent-website-changes
+#+filetags: :personal:web:
 
 * The State of This Website
 

@@ -2,6 +2,7 @@
 #+title:       Self-Hosting Guide: FreshRSS
 #+description: Stepwise instructions for installing FreshRSS using Docker and configuring Nginx as a reverse proxy to enable secure and synchronized RSS feed access.
 #+slug:        self-hosting-freshrss
+#+filetags: :linux:self-hosting:
 
 * Why Use Really Simple Syndication (RSS)?
 

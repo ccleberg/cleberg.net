@@ -2,6 +2,7 @@
 #+title: Auditing AWS S3 Buckets
 #+description: Learn how to audit AWS S3 buckets for public access.
 #+slug: auditing-aws-s3
+#+filetags: :audit:
 
 This is the latest in my series of posts on auditing AWS, a cloud platform that
 has existed for around two decades but can still be a mystery to auditors who

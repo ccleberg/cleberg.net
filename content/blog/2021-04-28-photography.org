@@ -2,6 +2,7 @@
 #+title:       Getting Started with Photography: Gear and Best Practices
 #+description: Instructional document covering basic techniques in photography, including equipment selection, operational best practices, and methods for capturing high-quality images.
 #+slug:        photography
+#+filetags: :personal:
 
 * Why Photography?
 

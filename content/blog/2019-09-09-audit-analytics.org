@@ -2,6 +2,7 @@
 #+title:       Bringing Data Analytics Into Internal Audit
 #+description: Examination of data analytical approaches applied within internal audit functions to improve risk evaluation, process efficiency, and decision support.
 #+slug:        audit-analytics
+#+filetags: :audit:
 
 * What Are Data Analytics?
 

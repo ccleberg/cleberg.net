@@ -2,6 +2,7 @@
 #+title: IndieWeb Carnival: "Intersecting Interests"
 #+description: Contrasting my passions with technology vs. natural hobbies.
 #+slug: indiweb-carnival-2026-02-intersecting-interests
+#+filetags: :personal:web:
 
 I thought about this topic for a long time today before starting to write this
 post, as I don't think of myself as someone with intersecting interests. I

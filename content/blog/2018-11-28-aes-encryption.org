@@ -2,6 +2,7 @@
 #+title:       How AES Encryption Works
 #+description: Detailed explanation of AES encryption, including key handling, encryption modes, algorithm structure, and implementation considerations for secure data protection.
 #+slug:        aes-encryption
+#+filetags: :security:
 
 * Basic AES
 

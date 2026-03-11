@@ -2,6 +2,7 @@
 #+title:       Ollama Code Assistant Setup in VS Codium
 #+description: Technical overview and configuration guide for incorporating Ollama as a code assistance tool within VS Codium and VS Code editors to enhance development workflows.
 #+slug:        continue-ollama-code-assistant
+#+filetags: :linux:
 
 * Background
 
