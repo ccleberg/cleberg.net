@@ -1,64 +1,46 @@
 #+title: salary
 #+slug: index
+#+options: toc:nil
 
 ** Salary Transparency
 
-The data below details the base salary information for each job I've held. I
-have posted this information publicly to ensure others in my position have a
-solid reference point when determining if their current or proposed salary is
-appropriate.
+I've worked in the IT Audit field since 2018, across internal and external
+audit, small companies and Big 4, in person and remote. Across five companies
+and both sides of the compensation conversation, I've watched good people leave
+money on the table because they had no reliable reference point. That's what
+this page is.
 
-While sites like Glassdoor are locking salary data behind a pay wall, LinkedIn
-is discontinuing LinkedIn Salary, and helpful websites like [[https://www.big4transparency.com/][Big 4 Transparency]]
-are rare, I wanted to provide my personal data publicly and freely to those who
-need it.
-
-I have seen what can happen when great employees don't know the market values
-for their skills and I happily help those in my teams, so I'm happy to extend
-this information to the online community.
-
-As a final note, there are numerous reasons companies pay people in the same
-role differently (e.g., expertise, years of experience, certifications, or
-education). You should only use the data in this table as a single point of
-reference, not the whole story.
+The table goes back to 2017 because the starting point matters. I took what I
+could get to break into the field while finishing school, and I've worked hard
+every day since. I'm not ashamed of any number in that table.
 
 ** Salary Data
-
-#+BEGIN_QUOTE
-When in a role that gives periodic raises, I will create a new record with the
-new base salary in the table below. See the KPMG records for an example of a
-raise while in the same role.
-#+END_QUOTE
 
 This table is a compressed version of the data so that it can fit reliably on
 screens. For the full dataset with all fields, you can view the [[https://cleberg.net/salary.csv][source data]].
 
-| Title                       | Company   | Year | Salary   |
-|-----------------------------+-----------+------+----------|
-| Manager, TA - Audit         | [[https://kpmg.com/us/][KPMG]]      | 2025 | $147,600 |
-| Manager, TA - Audit         | [[https://kpmg.com/us/][KPMG]]      | 2024 | $141,200 |
-| Senior, TA - Audit          | [[https://kpmg.com/us/][KPMG]]      | 2023 | $116,700 |
-| Senior, TA - Audit          | [[https://kpmg.com/us/][KPMG]]      | 2022 | $110,000 |
-| Senior Tech Risk Consultant | [[https://www.ey.com/en_us][EY]]        | 2021 | $89,500  |
-| Senior IT Auditor           | [[https://www.ameritas.com/][Ameritas]]  | 2021 | $72,000  |
-| IT Auditor                  | [[https://www.ameritas.com/][Ameritas]]  | 2020 | $65,000  |
-| IS Auditor II               | [[https://nelnetinc.com/][Nelnet]]    | 2019 | $58,000  |
-| IS Auditor I                | [[https://nelnetinc.com/][Nelnet]]    | 2019 | $20/hour |
-| Internal Audit Intern       | [[https://www.ameritas.com/][Ameritas]]  | 2018 | $16/hour |
-| Teaching Assistant          | [[https://www.unl.edu/][UNL]]       | 2017 | $7/hour  |
-| Community Management Intern | [[https://www.walgreensbootsalliance.com/][Walgreens]] | 2017 | $14/hour |
+| Title                       | Department                   | Company   | Year | Salary   |
+|-----------------------------+------------------------------+-----------+------+----------|
+| Manager                     | Technology Assurance - Audit | [[https://kpmg.com/us/][KPMG]]      | 2025 | $147,600 |
+| Manager                     | Technology Assurance - Audit | [[https://kpmg.com/us/][KPMG]]      | 2024 | $141,200 |
+| Senior                      | Technology Assurance - Audit | [[https://kpmg.com/us/][KPMG]]      | 2023 | $116,700 |
+| Senior                      | Technology Assurance - Audit | [[https://kpmg.com/us/][KPMG]]      | 2022 | $110,000 |
+| Senior                      | Technology Risk - Consulting | [[https://www.ey.com/en_us][EY]]        | 2021 | $89,500  |
+| Senior IT Auditor           | Internal Audit               | [[https://www.ameritas.com/][Ameritas]]  | 2021 | $72,000  |
+| IT Auditor                  | Internal Audit               | [[https://www.ameritas.com/][Ameritas]]  | 2020 | $65,000  |
+| IS Auditor II               | Internal Audit               | [[https://nelnetinc.com/][Nelnet]]    | 2019 | $58,000  |
+| IS Auditor I                | Internal Audit               | [[https://nelnetinc.com/][Nelnet]]    | 2019 | $20/hour |
+| Internal Audit Intern       | Internal Audit               | [[https://www.ameritas.com/][Ameritas]]  | 2018 | $16/hour |
+| Teaching Assistant          | College of Business          | [[https://www.unl.edu/][UNL]]       | 2017 | $7/hour  |
+| Community Management Intern | Store/Retail                 | [[https://www.walgreensbootsalliance.com/][Walgreens]] | 2017 | $14/hour |
 
 ** Salary Visualization
-
-View the graph below for a visualization of each job's salary over time, as well
-as the percentage of change between jobs.
 
 #+caption: Salary Visualization
 #+attr_html: :alt A visualization of salary data over time from the table above.
 [[https://img.cleberg.net/blog/salary/salary.webp]]
 
-[[https://xeiaso.net/salary-transparency/][Xe]] inspired me to publish this page, so I will quote the following wording from
-them as I want to reiterate this piece:
+[[https://xeiaso.net/salary-transparency/][Xe Iaso]] put it better than I would:
 
 #+begin_quote
 Please consider publishing your salary data like this as well. By open,
