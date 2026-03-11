@@ -100,10 +100,6 @@ footer { padding-bottom: 3rem; }
 /* ============================================================
    NAV STRIP — full outer width, equal cells
    ============================================================ */
-.masthead nav {
-  border-top: 1px solid var(--border-soft);
-  border-bottom: 1px solid var(--border-soft);
-}
 .masthead nav ul {
   list-style: none;
   display: flex;

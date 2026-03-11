@@ -1,4 +1,4 @@
-#+title: macOS
+#+title: 🌿 macOS
 #+slug: macos
 #+description: All about the macOS operating system.
 #+date: [2026-02-21 Sat 14:01:32]

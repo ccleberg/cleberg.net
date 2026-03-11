@@ -1,9 +1,19 @@
 {% extends "base.html" %} {% block subtitle %}garden - {% endblock %} {% block main %}
 <h1>Garden</h1>
-<p>
-	Notes in various states of growth. Some are stubs, some are developed.
-	Browse around.
-</p>
+<p>Notes in various states of growth. Some are stubs, some are developed. Browse
+around.</p>
+<section>
+  <h2>🪴 The Growth Stages</h2>
+  <p>Instead of dates, these metadata labels show how mature a page is:</p>
+  <span<strong>🌱 Seedlings:</strong> Rough notes, raw ideas, or "half-baked"
+  thoughts.</span><br>
+  <span><strong>🌿 Budding:</strong> Notes that have some structure and a few
+  internal links.</span><br>
+  <span><strong>🌳 Evergreen:</strong> High-conviction ideas that are
+  well-researched and stable.</span><br>
+  <span><strong>🍂 Compost:</strong> Ideas you no longer agree with but want to
+  keep for historical context.</span><br><br>
+</section>
 <ul class="garden-index">
 {% for post in posts %}
 <li>
