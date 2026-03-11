@@ -1,11 +1,8 @@
 {% extends "base.html" %}
-
-{% block subtitle %}
-	{{ post.title }} -
-{% endblock %}
+{% block subtitle %}{{ post.title }} - {% endblock %}
 {% block main %}
 <article>
-	<h1 data-text="{{ post.title }}">{{ post.title }}</h1>
-	<section>{{ post.html | safe }}</section>
+    <h1>{{ post.title }}</h1>
+    <div class="page-body">{{ post.html | safe }}</div>
 </article>
 {% endblock %}
