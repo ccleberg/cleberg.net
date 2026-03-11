@@ -1,18 +1,15 @@
 {% extends "base.html" %} {% block main %}
-<section class="metadata">
-    <b>User</b> <span>Christian Cleberg &lt;hello@cleberg.net&gt;</span>
-    <b>Context</b> <span>Technology Assurance Manager</span>
-    <b>Status</b>Active</span>
-</section>
-<section>
-	<h2>Recent Posts</h2>
-	<!-- BEGIN_POSTS -->
-	<!-- END_POSTS -->
-	<p><a href="/blog/">All Posts &rarr;</a></p>
-</section>
-<section class="indieweb-links">
-  <link href="https://github.com/ccleberg" rel="me">
-  <link href="https://gitlab.com/ccleberg" rel="me">
-  <link href="mailto:hello@cleberg.net" rel="me">
-</section>
+<div class="homepage-intro">
+    <p>Hi, I&rsquo;m Christian.</p>
+    <p>I&rsquo;m a technology auditor who doesn&rsquo;t trust technology companies.</p>
+    <p>By day I&rsquo;m a Technology Assurance Manager at KPMG, working on enterprise IT audits, SOC reports, and emerging technology risk &mdash; cloud, AI, digital assets. By night I run my own infrastructure, avoid every platform I audit, and try to own as much of my digital life as possible.</p>
+    <p>This site is an insight into my brain. Sometimes I write blog posts, sometimes I take care of my garden entries, and sometimes I share things, like my salary or what I&rsquo;m doing right now.</p>
+</div>
+
+<p class="section-label">Recent Posts</p>
+<ul class="post-list">
+    <!-- BEGIN_POSTS -->
+    <!-- END_POSTS -->
+</ul>
+<a class="all-posts-link" href="/blog/">All Posts &rarr;</a>
 {% endblock %}
