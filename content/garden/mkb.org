@@ -1,0 +1,21 @@
+#+title: 🌱 Mechanical Keyboards
+#+slug: mkb
+#+description: The easiest way to annoy your coworkers: clacking keyboards.
+#+date: [2026-03-11 Wed 01:04:38]
+
+* My Keyboards
+
+My first mechanical keyboard was the =Ducky One 2 Rosa 2021 Chinese New Year
+Edition Double Shot PBT Mechanical Keyboard Cherry= from [[https://ducky.global][Ducky]]. This is a
+fantastic keyboard and I used it heavily until I switched to the smaller,
+non-numpad keyboard below.
+
+Next, I bought the [[https://www.xvxchannel.com/products/xvx-m87-pro][M87 Pro]] from XVX. This is currently my go-to keyboard. The
+settings, built-in digital screen controls, and overall form factor are great.
+Easy to fit in a backpack, great switches and feedback, and color scheme.
+
+Finally, I've bought a [[https://www.8bitdo.com/retro-mechanical-keyboard/][8BitDo Retro Mechanical Keyboard]] just for fun. It comes
+with an =A= & =B= button controller, as well as a joystick controller. It's honestly
+not terrible, but not great. Keys are soft, the rounded edges are annoying, the
+extra components are fairly useless, and I honestly just leave it on my server
+whenever I need direct access to fix server issues.
