@@ -183,13 +183,16 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
 
     # Build HTML lines
     lines = []
+    current_year = None
     for post in recent:
-        lines.append('\t<div class="post">')
-        lines.append(
-            f'\t\t<time datetime="{post["date_str"]}">{post["date_full"]}</time>'
-        )
-        lines.append(f'\t\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>')
-        lines.append("\t</div>")
+        year = post["date_obj"].year
+        if year != current_year:
+            current_year = year
+            lines.append(f'\t<li class="post-list-year">{year}</li>')
+        lines.append('\t<li class="post-list-item">')
+        lines.append(f'\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>')
+        lines.append(f'\t\t<time datetime="{post["date_str"]}">{post["date_full"]}</time>')
+        lines.append("\t</li>")
 
     return "\n".join(lines)
 
@@ -259,12 +262,12 @@ def run_emacs_publish(dev_mode=True):
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
 
-    annoying_file = Path(".build/cleberg-net.html")
+    annoying_file = Path(".build/seijaku.html")
     if annoying_file.exists():
         os.remove(annoying_file)
     else:
         print(
-            "Warning: .build/cleberg-net.html not found, but Emacs exited successfully."
+            "Warning: .build/seijaku.html not found, but Emacs exited successfully."
         )
 
 
@@ -336,6 +339,48 @@ def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):
     print(f"Sitemap generated at {sitemap_path} with {len(sitemap_entries)} entries.")
 
 
+def inject_blog_year_separators(blog_index_path="./.build/blog/index.html"):
+    """
+    Post-processes the rendered blog index to inject year separator <li> elements
+    between groups of posts. Weblorg/templatel doesn't support mutable loop state,
+    so this runs after the HTML is generated.
+
+    Finds each <li class="post-list-item"> that contains a <time datetime="YYYY-MM-DD">,
+    and inserts <li class="post-list-year">YYYY</li> before the first post of each year.
+    """
+    path = Path(blog_index_path)
+    if not path.exists():
+        print(f"Warning: {blog_index_path} not found, skipping year separators.")
+        return
+
+    content = path.read_text(encoding="utf-8")
+
+    # Match each post list item, capturing the date and the full element
+    item_pattern = re.compile(
+        r'(<li class="post-list-item">.*?</li>)',
+        re.DOTALL,
+    )
+    date_pattern = re.compile(r"datetime=['\"]?(\d{4})-\d{2}-\d{2}['\"]?")
+
+    current_year = None
+    def replace_item(m):
+        nonlocal current_year
+        item_html = m.group(1)
+        date_match = date_pattern.search(item_html)
+        if not date_match:
+            return item_html
+        year = date_match.group(1)
+        if year != current_year:
+            current_year = year
+            separator = f'<li class="post-list-year">{year}</li>'
+            return f"{separator}\n{item_html}"
+        return item_html
+
+    new_content = item_pattern.sub(replace_item, content)
+    path.write_text(new_content, encoding="utf-8")
+    print(f"Blog year separators injected into {blog_index_path}")
+
+
 def deploy_to_server(build_dir, server):
     remote_path = f"{server}:/var/www/cleberg.net/"
     print(f"Deploying .build/ → {remote_path}")
@@ -384,6 +429,7 @@ def main():
             run_emacs_publish(dev_mode=False)
             copy_org_sources()
             update_index_html(html_snippet)
+            inject_blog_year_separators()
             minify_html("./.build/index.html", "./.build/index.html")
             generate_sitemap()
         if deploy:
@@ -398,6 +444,7 @@ def main():
             run_emacs_publish(dev_mode=True)
             copy_org_sources()
             update_index_html(html_snippet)
+            inject_blog_year_separators()
             minify_html("./.build/index.html", "./.build/index.html")
             generate_sitemap()
         if deploy:
