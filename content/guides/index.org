@@ -1,0 +1,38 @@
+#+title: guides
+#+slug: index
+#+options: toc:nil
+
+A curated index of multi-part guides and series. These are longer-form, reference-oriented posts rather than one-off writeups.
+
+* Auditing AWS
+
+A practical series on auditing AWS environments from an IT audit and security perspective.
+
+| Guide                                            | Date       |
+|--------------------------------------------------+------------|
+| [[/blog/auditing-aws-iam.html][Auditing AWS IAM Users]]                           | 2026-02-21 |
+| [[/blog/auditing-aws-passwords.html][Auditing AWS Passwords]]                           | 2026-02-21 |
+| [[/blog/auditing-aws-s3.html][Auditing AWS S3 Buckets]]                          | 2026-03-03 |
+
+* Self-Hosting
+
+Step-by-step guides for self-hosting open-source services on your own infrastructure.
+
+| Guide                                                              | Date       |
+|--------------------------------------------------------------------+------------|
+| [[/blog/self-hosting-freshrss.html][Self-Hosting Guide: FreshRSS]]                                       | 2022-06-07 |
+| [[/blog/self-hosting-matrix.html][Self-Hosting Guide: Matrix Synapse]]                                 | 2022-11-07 |
+| [[/blog/self-hosting-wger.html][Self-Hosting Guide: Wger]]                                           | 2023-01-28 |
+| [[/blog/self-hosting-baikal.html][Self-Hosting Guide: Baikal]]                                         | 2023-06-08 |
+| [[/blog/self-hosting-convos.html][Self-Hosting Guide: Convos]]                                         | 2023-06-23 |
+| [[/blog/self-hosting-voyager.html][Self-Hosting Guide: Voyager for Lemmy]]                              | 2023-06-30 |
+| [[/blog/self-hosting-gitweb.html][Self-Hosting Guide: GitWeb]]                                         | 2023-09-15 |
+| [[/blog/self-hosting-authelia.html][Self-Hosting Guide: Authelia]]                                       | 2023-10-11 |
+| [[/blog/self-hosting-anonymousoverflow.html][Self-Hosting Guide: AnonymousOverflow]]                              | 2023-10-17 |
+| [[/blog/self-hosting-otter-wiki.html][Self-Hosting Guide: An Otter Wiki]]                                  | 2024-02-21 |
+| [[/blog/self-hosting-ddns-updater.html][Self-Hosting Guide: DDNS Updater]]                                   | 2024-03-15 |
+| [[/blog/self-hosting-transmission.html][Self-Hosting Guide: Transmission BitTorrent Client]]                 | 2024-09-23 |
+| [[/blog/self-hosting-the-lounge.html][Self-Hosting Guide: The Lounge (IRC)]]                               | 2024-12-27 |
+| [[/blog/self-hosting-tandoor.html][Self-Hosting Guide: Tandoor Recipe Manager]]                         | 2025-01-23 |
+| [[/blog/self-hosting-tor.html][Self-Hosting Guide: Tor Websites]]                                   | 2025-12-06 |
+| [[/blog/self-hosting-home-assistant.html][Self-Hosting Guide: Home Assistant]]                                 | 2025-12-20 |
