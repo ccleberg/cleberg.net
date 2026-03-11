@@ -490,7 +490,19 @@ blockquote::after {
 /* ============================================================
    TABLES
    ============================================================ */
-table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
+table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+table td, table th {
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+}
 th, td {
   border-bottom: 1px solid var(--border-soft);
   padding: 0.65rem 0.75rem;
