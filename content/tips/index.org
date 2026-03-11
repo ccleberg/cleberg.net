@@ -1,5 +1,6 @@
 #+title: tips
 #+slug: index
+#+options: toc:nil
 
 Want to support me for whatever reason? Extra rich and want to throw money away?
 Look, I'm here for it. I have a crypto wallet and have set up sponsoring via

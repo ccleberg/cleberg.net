@@ -1,5 +1,6 @@
 #+title: uses
 #+slug: index
+#+options: toc:nil
 
 What are the technologies behind ~cleberg.net~? See below. I tend to flip-flop on
 my DNS providers and Git hosts often, but the rest of these technologies are
