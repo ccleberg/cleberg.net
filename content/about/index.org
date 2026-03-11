@@ -1,5 +1,6 @@
 #+title: about
 #+slug: index
+#+options: toc:nil
 
 Hey, I'm Christian.
 

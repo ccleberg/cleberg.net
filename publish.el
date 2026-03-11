@@ -23,7 +23,7 @@
  :theme nil
  :template-vars '(("site_name"        . "seijaku")
                   ("site_owner"       . "Christian Cleberg <hello@cleberg.net>")
-                  ("site_description" . "Stillness in the middle of it all.")))
+                  ("site_description" . "Stillness amidst the chaos.")))
 
 ;; Define routes for rendering content
 
@@ -85,13 +85,21 @@
  :output ".build/salary/{{ slug }}.html"
  :url "/salary/{{ slug }}.html")
 
-;; Services page route
+;; Guides page route
 (weblorg-route
- :name "services"
- :input-pattern "content/services/*.org"
+ :name "guides"
+ :input-pattern "content/guides/*.org"
  :template "page.html"
- :output ".build/services/{{ slug }}.html"
- :url "/services/{{ slug }}.html")
+ :output ".build/guides/{{ slug }}.html"
+ :url "/guides/{{ slug }}.html")
+
+;; Apps page route
+(weblorg-route
+ :name "apps"
+ :input-pattern "content/apps/*.org"
+ :template "page.html"
+ :output ".build/apps/{{ slug }}.html"
+ :url "/apps/{{ slug }}.html")
 
 ;; Now page route
 (weblorg-route
@@ -100,14 +108,6 @@
  :template "post.html"
  :output ".build/now/{{ slug }}.html"
  :url "/now/{{ slug }}.html")
-
-;; About page route
-(weblorg-route
- :name "about"
- :input-pattern "content/about/*.org"
- :template "page.html"
- :output ".build/about/{{ slug }}.html"
- :url "/about/{{ slug }}.html")
 
 ;; Uses page route
 (weblorg-route

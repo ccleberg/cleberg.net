@@ -1,5 +1,6 @@
 #+title: services
 #+slug: index
+#+options: toc:nil
 
 * Alternative Front-Ends/Proxies
 
