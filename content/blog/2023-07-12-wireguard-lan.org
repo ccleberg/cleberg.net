@@ -1,5 +1,5 @@
 #+date: [2023-07-12 Wed 00:00:00]
-#+title:       Enabling Local Network Access with Mullvad WireGuard Configs
+#+title:       enabling local network access with mullvad wireguard configs
 #+description: Detailed procedure to modify Mullvad Wireguard VPN configuration files and iptables rules to allow Local Area Network access while maintaining VPN connectivity.
 #+slug:        wireguard-lan
 #+filetags: :security:self-hosting:

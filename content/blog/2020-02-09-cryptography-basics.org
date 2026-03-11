@@ -1,5 +1,5 @@
 #+date: [2020-02-09 Sunday 00:00:00]
-#+title:       A Practical Guide to Encryption, Keys, and Secure Communication
+#+title: cryptography basics: keys, certs, and why it matters
 #+description: Systematic overview of encryption methodologies, key categories, algorithmic frameworks, and their applications in data confidentiality and integrity.
 #+slug:        cryptography
 #+filetags: :security:

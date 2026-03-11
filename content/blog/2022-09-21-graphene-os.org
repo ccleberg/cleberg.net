@@ -1,5 +1,5 @@
 #+date: [2022-09-21 Wed 00:00:00]
-#+title:       Installing GrapheneOS on Pixel 6 Pro
+#+title:       installing grapheneos on pixel 6 pro
 #+description: Step-by-step instructions to perform secure installation of the GrapheneOS operating system on Google Pixel 6 Pro hardware platform.
 #+slug:        graphene-os
 #+filetags: :linux:privacy:

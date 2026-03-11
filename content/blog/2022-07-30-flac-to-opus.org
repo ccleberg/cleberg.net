@@ -1,5 +1,5 @@
 #+date: [2022-07-30 Sat 00:00:00]
-#+title:       Automating Recursive FLAC to Opus Conversion with a Bash Script
+#+title:       automating recursive flac to opus conversion with a bash script
 #+description: Instructions for automating the conversion of audio files from FLAC to Opus format recursively within directory structures, including performance considerations and script usage.
 #+slug:        flac-to-opus
 #+filetags: :linux:

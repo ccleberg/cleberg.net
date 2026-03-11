@@ -1,5 +1,5 @@
 #+date: [2026-03-03 Tue 18:50:23]
-#+title: Auditing AWS S3 Buckets
+#+title: auditing aws s3 buckets
 #+description: Learn how to audit AWS S3 buckets for public access.
 #+slug: auditing-aws-s3
 #+filetags: :audit:

@@ -1,5 +1,5 @@
 #+date: [2020-07-26 Sun 00:00:00]
-#+title:       A Location Intelligence Framework: Mapping Urban Business Clusters with Python
+#+title: business location analysis: python maps, urban data
 #+description: Methodology for utilizing data science techniques and Foursquare API data to analyze and select promising business sites within urban environments.
 #+slug:        business-analysis
 #+filetags: :audit:

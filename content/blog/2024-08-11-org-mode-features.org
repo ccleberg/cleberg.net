@@ -1,5 +1,5 @@
 #+date: [2024-08-11 Sun 12:48:00]
-#+title:       Essential Org-Mode Features for Productivity
+#+title: org mode features: what i actually use
 #+description: Detailed overview of essential Org-Mode functionalities focusing on task organization, note-taking, and workflow optimization.
 #+slug:        org-mode-features
 #+filetags: :emacs:

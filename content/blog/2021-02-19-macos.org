@@ -1,5 +1,5 @@
 #+date: [2021-02-19 Fri 00:00:00]
-#+title:       macOS for Linux Users: Initial Setup and CLI Customization
+#+title: macos for linux users: what to fix first
 #+description: Comprehensive overview for first-time macOS users transitioning from other OS platforms, including system setup, terminal usage, and user interface customization.
 #+slug:        macos
 #+filetags: :linux:

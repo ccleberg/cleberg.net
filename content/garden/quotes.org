@@ -1,4 +1,4 @@
-#+title: 🌳 Quotes
+#+title: quotes
 #+slug: quotes
 #+description: Things that made me think or feel.
 #+date: [2026-03-11 Wed 01:16:35]

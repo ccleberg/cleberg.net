@@ -1,5 +1,5 @@
 #+date: [2020-10-12 Mon 00:00:00]
-#+title:       When Good Is Good Enough—And When It Isn't
+#+title:       when good is good enough—and when it isn't
 #+description: Examination of decision-making principles relating to achieving sufficient quality levels, including trade-offs between perfection and adequacy in professional and operational contexts.
 #+slug:        mediocrity
 #+filetags: :personal:

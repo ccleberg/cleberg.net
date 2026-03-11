@@ -1,5 +1,5 @@
 #+date: [2021-01-07 Thu 00:00:00]
-#+title:       Hardening Ubuntu Servers with UFW: A Step-by-Step Firewall Guide
+#+title: ufw hardening: firewall config you should have set up already
 #+description: Stepwise instructions for installation, configuration, enabling, and management of the Uncomplicated Firewall utility to secure network interfaces on Ubuntu server environments.
 #+slug:        ufw
 #+filetags: :linux:security:

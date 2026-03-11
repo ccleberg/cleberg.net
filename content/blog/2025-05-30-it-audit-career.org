@@ -1,5 +1,5 @@
 #+date: [2025-05-30 Friday 10:53:28]
-#+title:       Mastering Emerging Tech for IT Audit Career Growth
+#+title: it audit career: skills that matter vs. skills that look good
 #+description: Instructional content detailing actionable knowledge areas including artificial intelligence, blockchain, cloud computing, DevOps, and automation relevant for audit professionals.
 #+slug:        it-audit-career
 #+filetags: :audit:

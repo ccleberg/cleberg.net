@@ -1,5 +1,5 @@
 #+date: [2023-01-03 Tue 00:00:00]
-#+title:       2023 Website Updates: Minimalist Style, Accessibility Improvements, and Content Prioritization
+#+title: website updates 2023: what changed and why
 #+description: Documentation of significant changes applied to site design, layout, and accessibility features to enhance navigability and content clarity.
 #+slug:        recent-website-changes
 #+filetags: :personal:web:

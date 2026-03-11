@@ -1,5 +1,5 @@
 #+date: [2025-10-24 Fri 19:41:41]
-#+title: Digital Garden
+#+title: digital garden
 #+description: A post dedicated to digital gardens, an online space for personal knowledge management, creative exploration, and reflection.
 #+slug: digital-garden
 #+filetags: :web:

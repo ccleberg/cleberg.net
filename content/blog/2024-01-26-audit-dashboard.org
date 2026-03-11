@@ -1,5 +1,5 @@
 #+date: [2024-01-26 Fri 00:00:00]
-#+title:       Building an Interactive Audit Dashboard with Alteryx and Power BI
+#+title: audit dashboard: alteryx + power bi, the corporate stack
 #+description: Instructions for transforming audit data into dynamic dashboards via data preparation with Alteryx and visualization using Microsoft Power BI.
 #+slug:        audit-dashboard
 #+filetags: :audit:

@@ -1,5 +1,5 @@
 #+date: [2025-11-23 17:43:57]
-#+title: Practical Uses for AI in IT Audit
+#+title: it audit ai: where it helps and where it's theater
 #+description: Learn how I'm currently using AI in my role in Technology Assurance (i.e., IT Audit) at KPMG.
 #+slug: it-audit-ai
 #+filetags: :audit:

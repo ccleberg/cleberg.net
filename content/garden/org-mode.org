@@ -1,4 +1,4 @@
-#+title: 🌱 org-mode
+#+title: org mode
 #+slug: org-mode
 #+description: Tidbits about the best plaintext language: org-mode.
 #+date: [2026-02-21 Sat 12:39:27]

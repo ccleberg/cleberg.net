@@ -1,5 +1,5 @@
 #+date: [2025-11-14 Fri 19:46:30]
-#+title: Striving for 100% WCAG 2 Compliance
+#+title: wcag compliance: accessibility as a real constraint, not a checkbox
 #+description: Read on to learn more about how I've ensured my humble site is compliant with WCAG 2.
 #+slug: wcag
 #+filetags: :audit:web:

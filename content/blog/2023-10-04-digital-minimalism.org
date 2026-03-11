@@ -1,5 +1,5 @@
 #+date: [2023-10-04 Wed 00:00:00]
-#+title:       Digital Minimalism: Reducing Distractions
+#+title: digital minimalism: fewer inputs, more signal
 #+description: Practical guide for minimizing digital clutter and optimizing work focus by applying digital minimalism tactics.
 #+slug:        digital-minimalism
 #+filetags: :linux:privacy:

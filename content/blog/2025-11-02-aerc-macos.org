@@ -1,5 +1,5 @@
 #+date: [2025-11-02 Sun 10:07:14]
-#+title: Using aerc on macOS
+#+title: using aerc on macos
 #+description: Learn how I use aerc, a TUI email client, on macOS.
 #+slug: aerc-macos
 #+filetags: :linux:

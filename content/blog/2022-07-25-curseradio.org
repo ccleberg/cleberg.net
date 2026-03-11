@@ -1,5 +1,5 @@
 #+date: [2022-07-25 Mon 00:00:00]
-#+title:       Curseradio: A Lightweight Command-Line Internet Radio Player for Linux
+#+title:       curseradio: a lightweight command line internet radio player for linux
 #+description: Stepwise instructions for installing and utilizing Curseradio, a lightweight command-line program for streaming radio stations within Linux environments.
 #+slug:        curseradio
 #+filetags: :linux:

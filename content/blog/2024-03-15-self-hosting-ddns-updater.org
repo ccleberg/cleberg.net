@@ -1,5 +1,5 @@
 #+date: [2024-03-15 Fri 00:00:00]
-#+title:       Self-Hosting Guide: DDNS Updater
+#+title:       self hosting guide: ddns updater
 #+description: Step-by-step configuration guide for deploying a Dynamic DNS updater using Docker Compose, integrating with Cloudflare API, and securing with Nginx reverse proxy.
 #+slug:        self-hosting-ddns-updater
 #+filetags: :linux:self-hosting:

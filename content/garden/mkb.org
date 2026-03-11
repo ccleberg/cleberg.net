@@ -1,4 +1,4 @@
-#+title: 🌱 Mechanical Keyboards
+#+title: mechanical keyboards
 #+slug: mkb
 #+description: The easiest way to annoy your coworkers: clacking keyboards.
 #+date: [2026-03-11 Wed 01:04:38]

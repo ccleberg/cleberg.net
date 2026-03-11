@@ -2,87 +2,65 @@
 #+slug: index
 #+options: toc:nil
 
-What are the technologies behind ~cleberg.net~? See below. I tend to flip-flop on
-my DNS providers and Git hosts often, but the rest of these technologies are
-consistently powering this website.
-
-I've also included various technologies that I use /while/ building ~cleberg.net~,
-as they seem relevant to complete the picture.
+Tools powering this site and the infrastructure behind it. Each entry includes
+a threat model justification and an exit strategy. ~TECHNICAL DEBT~ flags items
+with no clean migration path or active sovereignty risk.
 
 * Philosophy
 
-My choice of tools is guided by a few core "soft" requirements that are more
-important to me than convenience or feature-creep:
-
-- Digital Sovereignty: If I don't own the hardware or the plain-text source, I
-  don't truly own the content. This site lives in my rack, not on someone else's
-  "cloud."
-- Zero Tracking: I have no interest in your data. I don't use cookies, I don't
-  track your IP, and I don't care how many "unique visitors" I have. If the
-  content is useful, it will find its way via RSS or word-of-mouth.
-- Disposable Infrastructure: The server is a pet, but the site is a cattle.
-  Because the entire build is driven by org-mode and a single ~build.py~ script, I
-  can lose the entire machine and be back online on a fresh OS in minutes.
-- Minimalist Stack: I prefer tools that do one thing well. Weblorg for static
-  generation and Nginx for serving files is a stack that will likely still work
-  ten years from now without a single dependency update.
+- Own the hardware or you don't own the content.
+- Zero tracking. No cookies. No analytics. No exceptions.
+- Full rebuild from source on a fresh OS in under an hour.
+- One tool per job. No dependencies that rot.
 
 * Software
 
-| Technology            | What I Use                   |
-|-----------------------+------------------------------|
-| Registrar             | [[https://njal.la][Njalla]]                       |
-| DNS                   | [[https://njal.la][Njalla]]                       |
-| Security              | [[https://github.com/fail2ban/fail2ban][fail2ban]] + [[https://ui.com][UniFi]]             |
-| Routing               | [[https://ui.com/][UniFi]]                        |
-| Server                | [[https://cleberg.net/blog/server-build.html][Self-hosted]]                  |
-| Operating System      | [[https://ubuntu.com][Ubuntu]] + [[https://www.apple.com/os/macos/][macOS]]               |
-| Web Server            | [[https://nginx.org][Nginx]] + [[https://community.torproject.org/onion-services/setup/][Tor]]                  |
-| SSL                   | [[https://certbot.eff.org][Certbot]]                      |
-| Static Site Generator | [[https://github.com/emacs-love/weblorg][Weblorg]]                      |
-| Terminal              | [[https://iterm2.com/][iTerm2]]                       |
-| Shell                 | [[https://www.zsh.org/][Zsh]]                          |
-| Editor                | [[https://github.com/doomemacs/doomemacs][Doom Emacs]]                   |
-| Markup Language       | [[https://orgmode.org][org-mode]]                     |
-| Image Processing      | [[https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/w/webp.rb][webP (CLI)]]                   |
-| Browser(s) [fn:1]     | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net/][LibreWolf]] + [[https://www.apple.com/safari/][Safari]]     |
-| Version Control       | [[https://git-scm.com/][Git (CLI)]]                    |
-| Git Host              | [[https://github.com/ccleberg][GitHub]]                       |
-| CI/CD                 | [[https://github.com/ccleberg/cleberg.net/blob/main/build.py][build.py]] + [[https://www.openssh.org/][OpenSSH]]           |
-| Email Host            | [[https://soverin.com/][Soverin]]                      |
-| Search Engine         | [[https://docs.searxng.org/][SearXNG]]                      |
-| Backups               | N/A - Absolutely None [fn:2] |
-| Monitoring            | N/A - Absolutely None        |
-| Analytics             | N/A - Absolutely None        |
-| Social Media          | N/A - Absolutely None        |
-| Newsletter            | N/A - RSS Only               |
-
-[fn:1] I don't get paid for this, so I only test my site in my current primary
-browser(s).
-[fn:2] I have nothing to back up except the source code (which is already
-"backed up" via Git), since I do not collect or store any user data.
+| Technology            | What I Use            | Threat Model                                                           | Exit Strategy                                                                                                |
+|-----------------------+-----------------------+------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------|
+| Registrar             | [[https://njal.la][Njalla]]                | Registers domains on your behalf. No WHOIS identity exposure.          | Any registrar accepting anonymous payment. Portable.                                                         |
+| DNS                   | [[https://njal.la][Njalla]]                | Same as above. DNS records are portable on day one.                    | Self-hosted BIND or any other provider.                                                                      |
+| Security              | [[https://github.com/fail2ban/fail2ban][fail2ban]]              | Automated auth-failure bans. No cloud WAF. No data leaving machine.    | nftables rate limiting or self-hosted crowdsec.                                                              |
+| Routing               | [[https://ui.com/][UniFi]]                 | Local network segmentation. Controller must run self-hosted.           | ~TECHNICAL DEBT~ - cloud dependencies by default. OpenWrt on compatible HW.                                    |
+| Server                | [[https://cleberg.net/blog/server-build.html][Self-hosted]]           | Physical control. No hypervisor escape vector. No subpoena to a DC.    | N/A. This is the exit strategy.                                                                              |
+| Operating System      | [[https://ubuntu.com][Ubuntu]] + [[https://www.apple.com/os/macos/][macOS]]        | Ubuntu: telemetry off, LTS, stable. macOS: workstation only.           | Ubuntu → Debian. macOS → ~TECHNICAL DEBT~. Target: NixOS/Fedora on ThinkPad or Framework.                      |
+| Web Server            | [[https://nginx.org][Nginx]] + [[https://community.torproject.org/onion-services/setup/][Tor]]           | Static file serving. Tor layer for censored-network access.            | Caddy or lighttpd. Tor is already the exit layer.                                                            |
+| SSL                   | [[https://certbot.eff.org][Certbot]]               | Free automated TLS. No commercial CA dependency.                       | acme.sh. Same protocol, no Python dependency.                                                                |
+| Static Site Generator | [[https://github.com/emacs-love/weblorg][Weblorg]] + [[https://github.com/ccleberg/cleberg.net/blob/main/build.py][build.py]]    | Org-mode source compiles to plaintext HTML. No JS build chain.         | Pandoc + shell script. Source files survive any generator change.                                            |
+| Terminal              | [[https://iterm2.com/][iTerm2]]                | Functional. Inherited from macOS.                                      | ~TECHNICAL DEBT~ - macOS-only. Target: foot or Alacritty on Linux.                                             |
+| Shell                 | [[https://www.zsh.org/][Zsh]]                   | Portable, POSIX-adjacent, available on every target OS.                | bash or fish. Config is plain text.                                                                          |
+| Editor                | [[https://github.com/doomemacs/doomemacs][Doom Emacs]]            | Editor and markup are the same tool. No proprietary format.            | Vanilla Emacs + org-mode. Doom is a config layer only.                                                       |
+| Markup Language       | [[https://orgmode.org][org-mode]]              | Plain text. Readable without any software. Version-control native.     | N/A. Org files are the source of truth.                                                                      |
+| Image Processing      | [[https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/w/webp.rb][webP (CLI)]]            | CLI-only. No GUI, no cloud, no account.                                | ImageMagick or cwebp. Trivial swap.                                                                          |
+| Browser(s)            | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net/][LibreWolf]]       | Tor for anonymity-critical use. LibreWolf for hardened daily use.      | N/A. Safari dropped - proprietary and redundant.                                                             |
+| Version Control       | [[https://git-scm.com/][Git (CLI)]]             | Decentralized. The repo is the backup.                                 | N/A. Content is portable to any host.                                                                        |
+| Git Host              | [[https://github.com/ccleberg][GitHub]]                | Public mirror only.                                                    | ~TECHNICAL DEBT~ - Microsoft-owned. Target: self-hosted Forgejo. One-line remote URL change.                   |
+| CI/CD                 | [[https://github.com/ccleberg/cleberg.net/blob/main/build.py][build.py]] + [[https://www.openssh.org/][OpenSSH]]    | A Python script and SSH. No CI runner, no stored secrets, no webhooks. | A shell script. Python is not load-bearing here.                                                             |
+| Email Host            | [[https://soverin.com/][Soverin]]               | Privacy-focused provider. Better than Gmail.                           | ~TECHNICAL DEBT~ - not self-hosted. Target: Postfix + Dovecot + Rspamd, or maddy. MX records portable day one. |
+| Search Engine         | [[https://docs.searxng.org/][SearXNG]] (self-hosted) | Queries route through own instance. No third-party search profile.     | Any other self-hosted SearXNG instance.                                                                      |
+| Backups               | N/A                   | Nothing to back up. No user data. Source mirrored via Git.             | Intentional. If this changes: restic to a local target.                                                      |
+| Monitoring            | N/A                   | Monitoring creates logs. Logs are a liability.                         | Intentional.                                                                                                 |
+| Analytics             | N/A                   | No interest in visitor data. Content finds its way via RSS.            | Intentional.                                                                                                 |
+| Social Media          | N/A                   | —                                                                      | Intentional.                                                                                                 |
+| Newsletter            | RSS Only              | No subscriber list. No email vendor. No data relationship.             | N/A.                                                                                                         |
 
 * Hardware
 
-I run most of my services from my custom, rack-mounted server (details below),
-but I also run a Raspbery Pi 4 for some miscellaneous services.
+Custom rack-mounted server. Physical control, no hypervisor, no vendor lock-in.
+See: [[https://cleberg.net/blog/server-build.html][server build post]].
 
-See the following blog post for more information on this server: [[https://cleberg.net/blog/server-build.html][Building a
-High-Performance Rack-Mounted Server with Consumer PC Components]].
+| Component     | Spec                                               | Threat Model / Notes                                       |
+|---------------+----------------------------------------------------+------------------------------------------------------------|
+| Chassis       | Rosewill RSV-R4100U 4U Rackmount                   | —                                                          |
+| Motherboard   | NZXT B550                                          | —                                                          |
+| CPU           | AMD Ryzen 7 5700G                                  | Onboard GPU eliminates need for discrete card in the rack. |
+| RAM           | 64GB DDR4 (2x32GB)                                 | —                                                          |
+| Boot Drive    | 500GB WD M.2 NVMe SSD                              | —                                                          |
+| Storage (HDD) | 1x10TB WD White, 1x8TB WD White, 2x8TB WD Red Plus | —                                                          |
+| PSU           | Corsair RM850                                      | —                                                          |
+| Cooling       | Noctua (1x120mm front, 2x80mm rear)                | —                                                          |
 
-| Hardware Component | What I Use                                |
-|--------------------+-------------------------------------------|
-| Chassis            | Rosewill RSV-R4100U 4U Rackmount          |
-| Motherboard        | NZXT B550                                 |
-| CPU                | AMD Ryzen 7 5700G [fn:3]                  |
-| GPU                | N/A - Onboard Radeon Graphics             |
-| RAM                | 64GB (2x32GB) DDR4                        |
-| Boot Drive         | 500GB WD M.2 NVMe SSD                     |
-| Storage (HDD)      | 1x10TB White, 1x8TB White, 2x8TB Red Plus |
-| Power Supply       | Corsair RM850                             |
-| Thermal Paste      | Corsair TM30                              |
-| Cooling            | Noctua Fans (1x120mm front, 2x80mm rear)  |
-| Cabling            | CableMatters 6Gbps SATA                   |
+Physical hardware under personal control eliminates the hypervisor escape vector
+and the cloud provider subpoena vector. Full recovery from a fresh OS install:
+under one hour.
 
-[fn:3] Specifically chosen for onboard graphics support to avoid needing a
-dedicated GPU in the rack.
+Secondary: Raspberry Pi 4 for miscellaneous self-hosted services.
