@@ -1,0 +1,176 @@
+#+title: 🌳 Quotes
+#+slug: quotes
+#+description: Things that made me think or feel.
+#+date: [2026-03-11 Wed 01:16:35]
+
+* ⛩️ Zen
+
+#+begin_quote
+The obstacle is the path. — *Zen Proverb*
+#+end_quote
+
+#+begin_quote
+Before enlightenment, chop wood, carry water. After enlightenment, chop wood,
+carry water. — *Traditional*
+#+end_quote
+
+#+begin_quote
+In the beginner's mind there are many possibilities, but in the expert's there
+are few. — *Shunryu Suzuki*
+#+end_quote
+
+#+begin_quote
+Sitting quietly, doing nothing, spring comes, and the grass grows by itself. —
+*Matsuo Bashō*
+#+end_quote
+
+* 💾 Cyberpunk & Sci-Fi
+
+#+begin_quote
+The sky above the port was the color of television, tuned to a dead channel. —
+*William Gibson (Neuromancer)*
+#+end_quote
+
+#+begin_quote
+The future is already here — it's just not very evenly distributed. — *William
+Gibson*
+#+end_quote
+
+#+begin_quote
+The street finds its own uses for things. — *William Gibson*
+#+end_quote
+
+#+begin_quote
+Information wants to be free. Information also wants to be expensive. — *Stewart
+Brand*
+#+end_quote
+
+#+begin_quote
+There is a difference between knowing the path and walking the path. — *Morpheus
+(The Matrix)*
+#+end_quote
+
+#+begin_quote
+If a ghost can coexist with a machine, then the definition of life needs to be
+rewritten. — *Motoko Kusanagi (Ghost in the Shell)*
+#+end_quote
+
+#+begin_quote
+The Net is vast and infinite. — *Motoko Kusanagi (Ghost in the Shell)*
+#+end_quote
+
+#+begin_quote
+Humanity is just a data set. — *Lain Iwakura (Serial Experiments Lain)*
+#+end_quote
+
+#+begin_quote
+I'm not a person. I'm a program. I'm a user-created entity. — *Quorra (Tron:
+Legacy)*
+#+end_quote
+
+#+begin_quote
+I don't have a soul. I'm a machine. But I have a purpose. — *Alita (Alita: Battle
+Angel)*
+#+end_quote
+
+#+begin_quote
+Time not important, only life important. — *Mondoshawan (The Fifth Element)*
+#+end_quote
+
+#+begin_quote
+I don’t want to survive. I want to live. — *The Captain (WALL-E)*
+#+end_quote
+
+* 🥥 Minimalism & Simplicity
+
+#+begin_quote
+Perfection is achieved, not when there is nothing more to add, but when there is
+nothing left to take away. — *Antoine de Saint-Exupéry*
+#+end_quote
+
+#+begin_quote
+The ability to simplify means to eliminate the unnecessary so that the necessary
+may speak. — *Hans Hofmann*
+#+end_quote
+
+#+begin_quote
+Simplicity is the ultimate sophistication. — *Leonardo da Vinci*
+#+end_quote
+
+#+begin_quote
+I make myself rich by making my wants few. — *Henry David Thoreau*
+#+end_quote
+
+#+begin_quote
+The price of anything is the amount of life you exchange for it. — *Henry David
+Thoreau*
+#+end_quote
+
+#+begin_quote
+Clutter is nothing more than postponed decisions. — *Barbara Hemphill*
+#+end_quote
+
+#+begin_quote
+Minimalism is not a lack of something. It's simply the perfect amount of
+something. — *Nicholas Burroughs*
+#+end_quote
+
+#+begin_quote
+Your home is a living space, not a storage space. — *Francine Jay*
+#+end_quote
+
+#+begin_quote
+If it's not a "hell yes," it's a "no." — *Derek Sivers*
+#+end_quote
+
+#+begin_quote
+The question of what you want to own is actually the question of how you want to
+live your life. — *Marie Kondo*
+#+end_quote
+
+* 🎮 Gaming & Digital Lore
+
+Video games are art. It's not all 8-bit spaceships anymore - video games are a
+genuine art form.
+
+#+begin_quote
+Would you kindly? — *Andrew Ryan (BioShock)*
+#+end_quote
+
+#+begin_quote
+I used to be a jerk. A total jerk. And then I became a potato. — *GLaDOS
+(Portal 2)*
+#+end_quote
+
+#+begin_quote
+To say that nothing is true, is to realize that the foundations of society are
+fragile, and that we must be the shepherds of our own civilization. — *Ezio
+Auditore da Firenze (Assassin's Creed)*
+#+end_quote
+
+#+begin_quote
+Stand in the ashes of a trillion dead souls, and asks the ghosts if honor
+matters. The silence is your answer. — *Javik (Mass Effect 3)*
+#+end_quote
+
+#+begin_quote
+Don’t make a girl a promise... if you know you can’t keep it. — *Cortana (Halo 3)*
+#+end_quote
+
+#+begin_quote
+War. War never changes. — *Narrator / Ron Perlman (Fallout)*
+#+end_quote
+
+#+begin_quote
+I'm a ghost, remember? You can't kill what you can't see. — *Sam Fisher (Splinter
+Cell)*
+#+end_quote
+
+#+begin_quote
+I never asked for this. — *Adam Jensen (Deus Ex: Human Revolution)*
+#+end_quote
+
+#+begin_quote
+It’s easy to forget what a sin is in the middle of a battlefield. — *Solid Snake
+(Metal Gear Solid)*
+#+end_quote
