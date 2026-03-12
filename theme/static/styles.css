@@ -579,7 +579,7 @@ img:hover { filter: grayscale(0); }
 }
 
 @media (max-width: 480px) {
-  .masthead nav li { width: 100%; }
+  .masthead nav li { width: 33.333%; }
 }
 
 /* Tags page */
