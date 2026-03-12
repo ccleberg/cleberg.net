@@ -478,6 +478,7 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
 <nav aria-label="Site Navigation">
 <ul>
 <li><a href="/blog/">Blog</a></li>
+<li><a href="/tags/">Tags</a></li>
 <li><a href="/guides/index.html">Guides</a></li>
 <li><a href="/apps/">Apps</a></li>
 <li><a href="/garden/">Garden</a></li>
