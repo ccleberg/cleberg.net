@@ -1,2 +1,2 @@
-#+title: seijaku
-#+description: Just a blip of ones and zeroes.
+#+title: cleberg.net
+#+description: Stillness amidst the chaos.

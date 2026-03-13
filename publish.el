@@ -21,7 +21,7 @@
 ;; Define site metadata
 (weblorg-site
  :theme nil
- :template-vars '(("site_name"        . "seijaku")
+ :template-vars '(("site_name"        . "cleberg.net")
                   ("site_owner"       . "Christian Cleberg <hello@cleberg.net>")
                   ("site_description" . "Stillness amidst the chaos.")))
 

@@ -258,12 +258,12 @@ def run_emacs_publish(dev_mode=True):
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
 
-    annoying_file = Path(".build/seijaku.html")
+    annoying_file = Path(".build/cleberg-net.html")
     if annoying_file.exists():
         os.remove(annoying_file)
     else:
         print(
-            "Warning: .build/seijaku.html not found, but Emacs exited successfully."
+            "Warning: .build/cleberg-net.html not found, but Emacs exited successfully."
         )
 
 
