@@ -183,7 +183,6 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
 
     # Build HTML lines
     lines = []
-    current_year = None
     for post in recent:
         lines.append('\t<li class="post-list-item">')
         lines.append(f'\t\t<time datetime="{post["date_str"]}">{post["date_full"]}</time>')
@@ -404,13 +403,19 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
             for line in f:
                 if not title:
                     m = header_patterns["title"].match(line)
-                    if m: title = m.group(1).strip(); continue
+                    if m:
+                        title = m.group(1).strip()
+                        continue
                 if not date_str:
                     m = header_patterns["date"].match(line)
-                    if m: date_str = m.group(1); continue
+                    if m:
+                        date_str = m.group(1)
+                        continue
                 if not slug:
                     m = header_patterns["slug"].match(line)
-                    if m: slug = m.group(1).strip(); continue
+                    if m:
+                        slug = m.group(1).strip()
+                        continue
                 if not tags:
                     m = header_patterns["tags"].match(line)
                     if m:
@@ -419,7 +424,8 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
                         continue
                 m = header_patterns["draft"].match(line)
                 if m and m.group(1).strip().lower() != "nil":
-                    is_draft = True; break
+                    is_draft = True
+                    break
                 if title and date_str and slug and tags:
                     break
 
