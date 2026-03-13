@@ -8,5 +8,6 @@ img { max-width: 100%; }
 .skip-link { display: none; }
 footer { margin: 2rem 0;}
 pre, blockquote { margin: 1rem 0; padding: 0.5rem; background-color: lightgrey; }
+pre { overflow: auto; white-space: pre; }
 blockquote p { margin: 0; }
 code { color: darkred; }
