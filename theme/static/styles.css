@@ -15,4 +15,5 @@ code { color: darkred; }
 @media (prefers-color-scheme: dark) {
 	body { background-color: #181a1b; color: #e8e6e3; }
 	a, a:visited { color: #66adff; }
+	code { #ff6b6b; }
 }
