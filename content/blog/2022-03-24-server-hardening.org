@@ -1,8 +1,8 @@
-#+date: [2022-03-24 Thu 00:00:00]
-#+title: server hardening: firewalls, ssh, vlans
-#+description: Detailed instructions to enhance the security posture of home servers exposed to public networks, including firewall setup, secure SSH configuration, fail2ban deployment, and network segmentation.
+#+date:        [2022-03-24 Thu 00:00:00]
+#+title:       Server Hardening: Firewalls, SSH, VLANs
+#+description: Hardening a home server with UFW, SSH config, fail2ban, and VLANs.
 #+slug:        server-hardening
-#+filetags: :linux:security:
+#+filetags:    :linux:security:
 
 * Planning Data Flows & Security
 

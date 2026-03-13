@@ -27,12 +27,6 @@ The publishing system depends on:
 - The weblorg package, available at [[https://github.com/emacs-love/weblorg][emacs-love/weblorg]], which provides advanced
   Org publishing functionality and theming support.
 
-** Screenshots
-
-| Light Mode              | Dark Mode              |
-|-------------------------+------------------------|
-| [[./screenshots/light.png]] | [[./screenshots/dark.png]] |
-
 ** Configuration
 
 You can customize site settings can within the ~publish.el~ file. This file

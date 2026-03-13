@@ -1,8 +1,8 @@
-#+date: [2023-06-28 Wed 00:00:00]
-#+title: backblaze b2 backups: before i moved off it
-#+description: Methodical guide for configuring and utilizing Backblaze B2 cloud storage services to perform reliable and secure offsite data backups.
+#+date:        [2023-06-28 Wed 00:00:00]
+#+title:       Backblaze B2 Backups
+#+description: Setting up Backblaze B2 for offsite backups before I moved on.
 #+slug:        backblaze-b2
-#+filetags: :self-hosting:
+#+filetags:    :self-hosting:
 
 * Overview
 

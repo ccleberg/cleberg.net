@@ -1,8 +1,8 @@
-#+date: [2020-05-03 Sun 00:00:00]
-#+title: homelab: rack, network, what broke
-#+description: Comprehensive instructions on assembling and configuring a homelab environment, emphasizing hardware selection, software deployment, and network setup for operational efficiency.
+#+date:        [2020-05-03 Sun 00:00:00]
+#+title:       A Look Inside My Homelab
+#+description: A retrospective guide after throwing together the first iteration of my home lab.
 #+slug:        homelab
-#+filetags: :self-hosting:
+#+filetags:    :self-hosting:
 
 * What is a Homelab?
 

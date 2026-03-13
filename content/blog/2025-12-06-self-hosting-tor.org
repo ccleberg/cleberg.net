@@ -1,8 +1,8 @@
-#+date: [2025-12-06 Sat 14:13:00]
-#+title: self hosting guide: tor websites
-#+description: Learn how to host your own website on Tor with an Onion Address in a few short steps!
+#+date:        [2025-12-06 Sat 14:13:00]
+#+title:       Self-Hosting Guide: Tor Websites
+#+description: How to host a website on Tor with an onion address.
 #+slug: self-hosting-tor
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 * Installation
 

@@ -1,8 +1,8 @@
-#+date: [2020-07-20 Mon 00:00:00]
-#+title: video game sales data: 40 years of numbers
-#+description: Presentation of analyzed data regarding global video game sales, covering platform distributions, genre classifications, and geographic market performance metrics.
+#+date:        [2020-07-20 Mon 00:00:00]
+#+title:       Data Analysis: Video Games Sales Data
+#+description: A simple data analysis of the video games sales dataset.
 #+slug:        video-game-sales
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * Background Information
 

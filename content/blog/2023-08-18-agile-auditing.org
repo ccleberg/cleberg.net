@@ -1,8 +1,8 @@
-#+date: [2023-08-18 Fri 00:00:00]
-#+title: agile auditing: consultants cosplaying as engineers
-#+description: Detailed examination of Agile auditing methodologies, including Scrum and Kanban frameworks, with practical steps for application in audit processes.
+#+date:        [2023-08-18 Fri 00:00:00]
+#+title:       Agile Auditing
+#+description: My take on agile auditing: what it is and how it actually plays out.
 #+slug:        agile-auditing
-#+filetags: :audit:
+#+filetags:    :audit:
 
 * What is Agile Auditing?
 

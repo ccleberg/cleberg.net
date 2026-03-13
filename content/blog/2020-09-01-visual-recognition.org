@@ -1,8 +1,8 @@
-#+date: [2020-09-01 Tue 00:00:00]
-#+title: ibm watson vision api: before they killed it
+#+date:        [2020-09-01 Tue 00:00:00]
+#+title:       IBM Watson Vision API
 #+description: Technical overview and application instructions for using IBM Watson Visual Recognition service, with focus on API configuration, image input processing, and classification output handling.
 #+slug:        visual-recognition
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * What is IBM Watson?
 

@@ -1,8 +1,8 @@
-#+date: [2026-02-21 Sat 18:58:39]
-#+title: auditing aws iam users
-#+description: Learn how to audit IAM user assignments in AWS.
+#+date:        [2026-02-21 Sat 18:58:39]
+#+title:       Auditing AWS IAM Users
+#+description: How to audit IAM user assignments in AWS.
 #+slug: auditing-aws-iam
-#+filetags: :audit:
+#+filetags:    :audit:
 
 If you've ever asked an IT team for a list of who has access to an AWS account,
 you've probably received a spreadsheet that was already out of date. Or worse,

@@ -1,8 +1,8 @@
-#+date: [2022-03-03 Thu 00:00:00]
-#+title: financial tracker: sqlite over spreadsheets
-#+description: Procedures for creating and maintaining a personal financial database utilizing SQLite, Python programming language, and Jupyter Notebook interface.
+#+date:        [2022-03-03 Thu 00:00:00]
+#+title:       Personal Finance Tracker with SQLite
+#+description: Building a personal finance tracker with SQLite, Python, and Jupyter.
 #+slug:        financial-database
-#+filetags: :self-hosting:
+#+filetags:    :self-hosting:
 
 * Personal Financial Tracking
 

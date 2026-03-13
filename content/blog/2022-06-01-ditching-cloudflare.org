@@ -1,8 +1,8 @@
-#+date: [2022-06-01 Wed 00:00:00]
-#+title: ditching cloudflare: dns under your own name, not theirs
-#+description: Evaluation and procedural explanation for migrating DNS management services from Cloudflare to Njalla, with emphasis on privacy controls and domain registration mechanics.
+#+date:        [2022-06-01 Wed 00:00:00]
+#+title:       Ditching Cloudflare
+#+description: Why I moved my DNS away from Cloudflare, and how I did it.
 #+slug:        ditching-cloudflare
-#+filetags: :privacy:security:
+#+filetags:    :privacy:security:
 
 * Registrar
 

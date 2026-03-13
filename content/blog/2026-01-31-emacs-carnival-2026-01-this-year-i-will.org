@@ -1,8 +1,8 @@
-#+date: [2026-01-31 Sat 20:32:11]
-#+title: emacs carnival: “this year, i will...”
-#+description: My response to the Emacs Carnival post for January 2026.
+#+date:        [2026-01-31 Sat 20:32:11]
+#+title:       Emacs Carnival: This Year, I Will...
+#+description: My response to the Emacs Carnival prompt for January 2026.
 #+slug: emacs-carnival-2026-01-this-year-i-will
-#+filetags: :emacs:personal:
+#+filetags:    :emacs:personal:
 
 This year in Emacs, I expect to do a lot. However, here are some actionable
 goals for myself that should have a positive impact as I start out 2026.

@@ -1,8 +1,8 @@
-#+date: [2023-09-19 Tue 00:00:00]
-#+title:       auditing user privileges in oracle, sql server, and mysql
-#+description: Collection of SQL queries designed for auditing user access parameters on Oracle, Microsoft SQL Server, and MySQL database systems.
+#+date:        [2023-09-19 Tue 00:00:00]
+#+title:       SQL Scripts for Auditing User Privileges
+#+description: SQL queries for auditing user access in Oracle, SQL Server, and MySQL.
 #+slug:        audit-sql-scripts
-#+filetags: :audit:
+#+filetags:    :audit:
 
 * Overview
 

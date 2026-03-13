@@ -1,8 +1,8 @@
-#+date: [2022-04-02 Sat 00:00:00]
-#+title: nginx reverse proxy: config and nothing else
-#+description: Technical guide for setting up Nginx server to operate as a reverse proxy on Ubuntu systems, including configuration files setup and operational parameters.
+#+date:        [2022-04-02 Sat 00:00:00]
+#+title:       Nginx Reverse Proxy Config
+#+description: Setting up Nginx as a reverse proxy on Ubuntu.
 #+slug:        nginx-reverse-proxy
-#+filetags: :linux:web:
+#+filetags:    :linux:web:
 
 * What is a Reverse Proxy?
 

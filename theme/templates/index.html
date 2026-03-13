@@ -1,22 +1,22 @@
 {% extends "base.html" %} {% block main %}
-<div class="homepage-intro">
-    <p>My name is Christian.</p>
-    <p>I’m a technology auditor who doesn’t trust technology companies.</p>
-    <p>I run my own infrastructure. I audit everyone else's.</p>
-    <p>The infrastructure is the point. Self-hosted, self-managed, minimal
-    dependencies. This site is part of it: plaintext, no trackers, no
-    frameworks, no corporate CDN.</p>
-    <p>The audit job funds it. KPMG. Technology Assurance. I spend 50-80 hours a
-    week inside the systems I refuse to use personally. The irony is the
-    business model.</p>
-    <p>GPG key, salary, and server stack are all public. That's the whole
-    introduction.</p>
-</div>
+<section>
+    <p><b>Hi, I'm Christian.</b></p>
+    <p>I'm a Technology Assurance Manager @ KPMG.</p>
+    <p>I use this site as a place to think out loud (see my <a href="/blog/">blog</a>, <a href="/garden/">garden</a>, or
+    <a href="/guides/">guides</a>), a place to publish information (see
+    my <a href="https://cv.cleberg.net">CV</a> and <a href="/salary/">salary</a>
+    pages), and a foundational URI to use for my projects (see
+    my <a href="/apps/">apps</a>).</p>
+    <p>If you want to chat, you can find me in the following spaces:</p>
+    <ul>
+        <li>hello [at] cleberg.net (<a href="/gpg.txt">PGP Key</a>)</li>
+        <li>@cmc.01 on <a href="https://signal.org">Signal</a></li>
+    </ul>
+    <p>Curious about the technology behind this website? Check out my <a href="/uses/">/uses</a> page.</p>
+    <p>Curious about what I've been up to lately in my personal life? Check out my <a href="/now/">/now</a> page.</p>
+</section>
 
-<p class="section-label">Recent Posts</p>
-<ul class="post-list">
-    <!-- BEGIN_POSTS -->
-    <!-- END_POSTS -->
-</ul>
-<a class="all-posts-link" href="/blog/">All Posts &rarr;</a>
+<p>Recent Posts</p>
+<!-- BEGIN_POSTS --><!-- END_POSTS -->
+<p><a href="/blog/">All Posts &rarr;</a></p>
 {% endblock %}

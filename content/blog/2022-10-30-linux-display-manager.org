@@ -1,8 +1,8 @@
-#+date: [2022-10-30 Sun 00:00:00]
-#+title:       managing display managers in void linux: disable, enable, and configure
-#+description: Stepwise instructions to manage and replace the display manager on a Void Linux installation, including service control and configuration editing.
+#+date:        [2022-10-30 Sun 00:00:00]
+#+title:       Void Linux: Remove the Display Manager
+#+description: Disabling the display manager on Void Linux and starting i3 manually.
 #+slug:        linux-display-manager
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Display Manager Services
 

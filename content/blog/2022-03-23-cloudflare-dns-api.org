@@ -1,8 +1,8 @@
-#+date: [2022-03-23 Wed 00:00:00]
-#+title:       dynamic dns record updates via cloudflare api
-#+description: Command-line procedures to automate updating of DNS A and AAAA records by interfacing with the Cloudflare API, suitable for environments with variable IP addresses.
+#+date:        [2022-03-23 Wed 00:00:00]
+#+title:       Dynamic DNS Updates via the Cloudflare API
+#+description: Automatically updating DNS A and AAAA records via the Cloudflare API.
 #+slug:        cloudflare-dns-api
-#+filetags: :security:
+#+filetags:    :security:
 
 * DDNS: Dynamic DNS
 :PROPERTIES:

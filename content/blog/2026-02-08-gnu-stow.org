@@ -1,8 +1,8 @@
-#+date: [2026-02-08 Sun 12:17:42]
-#+title: managing my dotfiles with gnu stow and git
-#+description: Learn how I use GNU Stow to manage my user dotfiles and configurations.
+#+date:        [2026-02-08 Sun 12:17:42]
+#+title:       Managing Dotfiles with GNU Stow and Git
+#+description: How I use GNU Stow to manage my dotfiles and configs across machines.
 #+slug: gnu-stow
-#+filetags: :emacs:linux:
+#+filetags:    :emacs:linux:
 
 * What is GNU Stow?
 

@@ -1,4 +1,4 @@
-#+title: guides
+#+title: Guides
 #+slug: index
 #+options: toc:nil
 

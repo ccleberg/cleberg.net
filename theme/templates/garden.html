@@ -14,14 +14,14 @@ around.</p>
   <span><strong>🍂 Compost:</strong> Ideas you no longer agree with but want to
   keep for historical context.</span><br><br>
 </section>
-<ul class="garden-index">
-{% for post in posts %}
-<li>
-	<a href='{{ url_for("garden", slug=post.slug) }}'>{{ post.title }}</a>
-	{% if post.description %}
-	<span class="garden-desc">{{ post.description }}</span>
-	{% endif %}
-</li>
-{% endfor %}
+<ul>
+  {% for post in posts %}
+  <li>
+    <a href='{{ url_for("garden", slug=post.slug) }}'>{{ post.title }}</a>
+    {% if post.description %}
+    <span>{{ post.description }}</span>
+    {% endif %}
+  </li>
+  {% endfor %}
 </ul>
 {% endblock %}

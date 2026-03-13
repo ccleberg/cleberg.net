@@ -1,8 +1,8 @@
-#+date: [2023-01-28 Sat 00:00:00]
-#+title:       self hosting guide: wger
-#+description: Comprehensive steps for installing, configuring, and operating the Wger workout management application on a dedicated server platform.
+#+date:        [2023-01-28 Sat 00:00:00]
+#+title:       Self-Hosting Guide: wger
+#+description: How to self-host wger, an open-source workout manager.
 #+slug:        self-hosting-wger
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 * Wger: The Self-Hosted Workout Manager
 

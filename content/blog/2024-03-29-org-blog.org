@@ -1,8 +1,8 @@
-#+date: [2024-03-29 Fri 00:00:00]
-#+title:       blogging with emacs org mode and weblorg
-#+description: Instructional content for preparing and publishing blogs using Emacs Org-Mode, including setup of static site generators and content management workflows.
+#+date:        [2024-03-29 Fri 00:00:00]
+#+title:       Blogging with Emacs Org Mode and weblorg
+#+description: How I set up this blog using Emacs Org Mode and weblorg.
 #+slug:        org-blog
-#+filetags: :emacs:web:
+#+filetags:    :emacs:web:
 
 First and foremost, apologies to those who subscribe via RSS as I know that my
 feed duplicated itself when I moved this blog over to org-mode last night.

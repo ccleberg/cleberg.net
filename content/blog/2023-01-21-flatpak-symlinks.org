@@ -1,8 +1,8 @@
-#+date: [2023-01-21 Sat 00:00:00]
-#+title: flatpak symlinks: shorten the command
-#+description: Detailed instructions for establishing symbolic links for Flatpak applications to facilitate faster execution from terminal or application launcher environments.
+#+date:        [2023-01-21 Sat 00:00:00]
+#+title:       Flatpak Symlinks: Shorten the Command
+#+description: Creating symlinks for Flatpak apps to make them easier to launch.
 #+slug:        flatpak-symlinks
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Running Flatpak Apps Should Be Faster
 

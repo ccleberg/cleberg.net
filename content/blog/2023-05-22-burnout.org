@@ -1,8 +1,8 @@
-#+date: [2023-05-22 Mon 00:00:00]
-#+title: burnout: audit and consulting will take everything you let them
-#+description: Examination of burnout phenomena accompanied by strategies and practical approaches for workload management and restoration of optimal functioning.
+#+date:        [2023-05-22 Mon 00:00:00]
+#+title:       Burnout
+#+description: Honest thoughts on burning out in audit and consulting.
 #+slug:        burnout
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * RE: Burnout
 

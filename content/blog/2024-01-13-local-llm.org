@@ -1,8 +1,8 @@
-#+date: [2024-01-13 Sat 00:00:00]
-#+title: local llm: run the model, keep the data
-#+description: Technical guide to deploying and running local large language models on macOS and iOS devices focusing on open-source implementations and privacy considerations.
+#+date:        [2024-01-13 Sat 00:00:00]
+#+title:       Local LLM: Run the Model, Keep the Data
+#+description: Running local language models on macOS and iOS with open-source tools.
 #+slug:        local-llm
-#+filetags: :linux:privacy:
+#+filetags:    :linux:privacy:
 
 * Requirements
 

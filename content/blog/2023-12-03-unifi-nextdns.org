@@ -1,8 +1,8 @@
-#+date: [2023-12-03 Sun 00:00:00]
-#+title:       installing and configuring nextdns on unifi dream machine routers
-#+description: Procedural guide for installation and configuration of NextDNS on Unifi Dream Machine devices for network DNS filtering.
+#+date:        [2023-12-03 Sun 00:00:00]
+#+title:       NextDNS on Unifi Dream Machine
+#+description: Installing and configuring NextDNS on a Unifi Dream Machine.
 #+slug:        unifi-nextdns
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 * Overview
 

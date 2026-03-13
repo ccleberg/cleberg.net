@@ -1,8 +1,8 @@
-#+date: [2020-09-22 Tue 00:00:00]
-#+title: internal audit: what it does vs. what management thinks it does
-#+description: Analysis of internal audit processes, their contribution to risk management, governance frameworks, and compliance monitoring within corporate structures.
+#+date:        [2020-09-22 Tue 00:00:00]
+#+title:       Internal Audit: Who Are They?
+#+description: Learn who your Internal Audit partners actually are.
 #+slug:        internal-audit
-#+filetags: :audit:
+#+filetags:    :audit:
 
 * Definitions
 

@@ -1,8 +1,8 @@
-#+date: [2020-12-27 Sun 00:00:00]
-#+title: website redesign: 5kb, 100s on lighthouse, no framework
-#+description: Detailed process outlining methods for reducing website page size to approximately 5 kilobytes, enhancing loading speed, search engine indexing efficiency, and user interface responsiveness.
+#+date:        [2020-12-27 Sun 00:00:00]
+#+title:       Minimalist Website Redesign (5kb)
+#+description: A retrospective summary of recent changes to minimize my site.
 #+slug:        website-redesign
-#+filetags: :web:
+#+filetags:    :web:
 
 * A Brief History
 

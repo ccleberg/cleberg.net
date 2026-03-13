@@ -1,8 +1,8 @@
-#+date: [2024-08-11 Sun 12:48:00]
-#+title: org mode features: what i actually use
-#+description: Detailed overview of essential Org-Mode functionalities focusing on task organization, note-taking, and workflow optimization.
+#+date:        [2024-08-11 Sun 12:48:00]
+#+title:       Org Mode Features: What I Actually Use
+#+description: The Org Mode features I actually reach for, and how I use them.
 #+slug:        org-mode-features
-#+filetags: :emacs:
+#+filetags:    :emacs:
 
 * Cycling (Folding)
 

@@ -1,8 +1,8 @@
-#+date: [2023-02-02 Thu 00:00:00]
-#+title: hare lang: notes from first contact
-#+description: Overview of the Hare programming language features, installation procedure, and elementary programming examples targeting system-level development.
+#+date:        [2023-02-02 Thu 00:00:00]
+#+title:       Hare Lang: Notes from First Contact
+#+description: First impressions of the Hare programming language.
 #+slug:        exploring-hare
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * A Quick Note
 

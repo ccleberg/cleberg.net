@@ -1,8 +1,8 @@
-#+date: [2025-10-24 Fri 19:41:41]
-#+title: digital garden
-#+description: A post dedicated to digital gardens, an online space for personal knowledge management, creative exploration, and reflection.
+#+date:        [2025-10-24 Fri 19:41:41]
+#+title:       Digital Garden
+#+description: What a digital garden is and how I think about mine.
 #+slug: digital-garden
-#+filetags: :web:
+#+filetags:    :web:
 
 * What's a Digital Garden?
 

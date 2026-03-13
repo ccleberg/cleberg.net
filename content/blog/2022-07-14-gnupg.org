@@ -1,8 +1,8 @@
-#+date: [2022-07-14 Thu 00:00:00]
-#+title: gnupg: encryption, signing, web of trust
-#+description: Technical manual covering the architecture, cryptographic algorithms, vulnerability considerations, key management, and typical applications of GNU Privacy Guard for secure data and email encryption.
+#+date:        [2022-07-14 Thu 00:00:00]
+#+title:       GnuPG: Encryption, Signing, Web of Trust
+#+description: How GnuPG works and how I use it for encryption and signing.
 #+slug:        gnupg
-#+filetags: :linux:security:
+#+filetags:    :linux:security:
 
 * The History of GPG
 

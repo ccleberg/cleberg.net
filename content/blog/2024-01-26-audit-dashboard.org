@@ -1,8 +1,8 @@
-#+date: [2024-01-26 Fri 00:00:00]
-#+title: audit dashboard: alteryx + power bi, the corporate stack
-#+description: Instructions for transforming audit data into dynamic dashboards via data preparation with Alteryx and visualization using Microsoft Power BI.
+#+date:        [2024-01-26 Fri 00:00:00]
+#+title:       Audit Dashboard: Alteryx and Power BI
+#+description: Building an audit dashboard with Alteryx for data prep and Power BI for visuals.
 #+slug:        audit-dashboard
-#+filetags: :audit:
+#+filetags:    :audit:
 
 Alteryx and Power BI are powerful tools that can help turn your old-school audit
 trackers into interactive tools that provide useful insights and potential

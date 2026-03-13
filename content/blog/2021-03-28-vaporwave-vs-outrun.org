@@ -1,8 +1,8 @@
-#+date: [2021-03-28 Sun 00:00:00]
-#+title: vaporwave vs outrun: the aesthetic breakdown
-#+description: Systematic examination of Vaporwave and Outrun aesthetic frameworks, focusing on graphical elements, chromatic schemes, musical associations, and period-specific cultural influences.
+#+date:        [2021-03-28 Sun 00:00:00]
+#+title:       Vaporwave vs. Outrun
+#+description: Breaking down the differences between vaporwave and outrun aesthetics.
 #+slug:        vaporwave-vs-outrun
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * Overview
 

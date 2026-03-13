@@ -1,8 +1,8 @@
-#+date: [2023-10-15 Sun 00:00:00]
-#+title:       alpine linux ssh hardening guide
-#+description: Detailed guide to enhance Alpine Linux SSH server security through configuration adjustments and vulnerability mitigation.
+#+date:        [2023-10-15 Sun 00:00:00]
+#+title:       Alpine Linux SSH Hardening
+#+description: Hardening SSH on Alpine Linux with config changes and key-only auth.
 #+slug:        alpine-ssh-hardening
-#+filetags: :linux:security:
+#+filetags:    :linux:security:
 
 * Overview
 

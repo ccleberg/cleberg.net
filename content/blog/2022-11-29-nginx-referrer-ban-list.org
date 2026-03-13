@@ -1,8 +1,8 @@
-#+date: [2022-11-29 Tue 00:00:00]
-#+title: nginx referrer ban: block the scrapers
-#+description: Technical guide to implementing a referrer ban list in Nginx configurations to prevent access from undesired domains and improve web server security.
+#+date:        [2022-11-29 Tue 00:00:00]
+#+title:       Nginx Referrer Ban List
+#+description: Blocking unwanted referrers in Nginx with a simple ban list.
 #+slug:        nginx-referrer-ban-list
-#+filetags: :linux:web:
+#+filetags:    :linux:web:
 
 * Creating the Ban List
 

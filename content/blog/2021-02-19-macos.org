@@ -1,8 +1,8 @@
-#+date: [2021-02-19 Fri 00:00:00]
-#+title: macos for linux users: what to fix first
-#+description: Comprehensive overview for first-time macOS users transitioning from other OS platforms, including system setup, terminal usage, and user interface customization.
+#+date:        [2021-02-19 Fri 00:00:00]
+#+title:       macOS for Linux Users
+#+description: First steps for Linux users switching to macOS.
 #+slug:        macos
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Diving into macOS
 

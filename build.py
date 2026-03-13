@@ -185,13 +185,9 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
     lines = []
     current_year = None
     for post in recent:
-        year = post["date_obj"].year
-        if year != current_year:
-            current_year = year
-            lines.append(f'\t<li class="post-list-year">{year}</li>')
         lines.append('\t<li class="post-list-item">')
-        lines.append(f'\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>')
         lines.append(f'\t\t<time datetime="{post["date_str"]}">{post["date_full"]}</time>')
+        lines.append(f'\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>')
         lines.append("\t</li>")
 
     return "\n".join(lines)
@@ -454,58 +450,47 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
         posts = tag_map[tag]
         items = "\n".join(
             f'<li class="post-list-item">'
-            f'<a href="/blog/{p["slug"]}.html">{p["title"]}</a>'
             f'<time datetime="{p["date_str"]}">{p["date_str"]}</time>'
+            f'<a href="/blog/{p["slug"]}.html">{p["title"]}</a>'
             f'</li>'
             for p in posts
         )
         sections.append(f'<h2 id="{tag}">{tag}</h2>\n<ul class="post-list">\n{items}\n</ul>')
 
     html = f"""<!doctype html>
-<html lang="en-us">
+<html lang=en-us>
 <head>
-<meta charset="utf-8">
-<title>tags - seijaku</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/styles.min.css" type="text/css">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta charset=utf-8>
+<title>cleberg.net</title>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=author content="Christian Cleberg <hello@cleberg.net>">
+<meta name=description content="Stillness amidst the chaos.">
+<link rel=stylesheet href=http://localhost:8000/styles.min.css>
+<link rel=icon href=data:,>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Skip to content</a>
-<header class="masthead">
-<a href="/" class="masthead-title">seijaku</a>
-<p class="masthead-subtitle"><i>stillness amidst the chaos</i></p>
+<a href=#main-content class=skip-link>Skip to content</a>
 <nav aria-label="Site Navigation">
 <ul>
-<li><a href="/blog/">Blog</a></li>
-<li><a href="/tags/">Tags</a></li>
-<li><a href="/guides/index.html">Guides</a></li>
-<li><a href="/apps/">Apps</a></li>
-<li><a href="/garden/">Garden</a></li>
-<li><a href="/salary/">Salary</a></li>
+<li><a href=/>Home</a>
+<li><a href=/apps/>Apps</a>
+<li><a href=/blog/>Blog</a>
+<li><a href=/garden/>Garden</a>
+<li><a href=/guides/>Guides</a>
+<li><a href=/salary/>Salary</a>
+<li><a href=/tags/>Tags</a>
 </ul>
 </nav>
-</header>
-<main id="main-content">
+<main id=main-content>
 <h1>Tags</h1>
 <ul class="tag-toc">{toc_items}</ul>
 {"".join(f"<section>{s}</section>" for s in sections)}
 </main>
-<hr>
 <footer>
-<div>
-<a href="https://github.com/ccleberg/cleberg.net">Source</a> &middot;
-<a href="/feed.xml">RSS</a> &middot;
-<a href="http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/">Onion</a> &middot;
-<a href="/now/">Now</a> &middot;
-<a href="/uses/">Uses</a> &middot;
-<a href="/tips/">Tips</a> &middot;
-<a href="https://cv.cleberg.net">CV</a>
-</div>
-<div>
-<a href="mailto:hello@cleberg.net">hello@cleberg.net</a> [<a href="/gpg.txt">PGP</a>] &middot;
-Signal: @cmc.01
-</div>
+<a href=https://github.com/ccleberg/cleberg.net>Source</a>&#183;
+<a href=/feed.xml>RSS</a>&#183;
+<a href=http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/>Onion</a>&#183;
+<a href=/tips/>Tips</a>
 </footer>
 </body>
 </html>"""

@@ -1,8 +1,8 @@
-#+date: [2023-06-30 Fri 00:00:00]
-#+title:       self hosting guide: voyager for lemmy
-#+description: Instructions for building, running, and reverse proxying Voyager, a Lemmy web client, on a server environment utilizing Docker and Nginx components.
+#+date:        [2023-06-30 Fri 00:00:00]
+#+title:       Self-Hosting Guide: Voyager for Lemmy
+#+description: How to self-host Voyager, a web client for Lemmy.
 #+slug:        self-hosting-voyager
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 * Installation Guide
 

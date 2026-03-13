@@ -1,8 +1,8 @@
-#+date: [2023-06-20 Tue 00:00:00]
-#+title:       audit testing review checklist
-#+description: Practical audit testing review template with detailed steps to support comprehensive evaluation of financial audits and SOC reports.
+#+date:        [2023-06-20 Tue 00:00:00]
+#+title:       Audit Testing Review Checklist
+#+description: A practical checklist for reviewing audit testing on financial and SOC engagements.
 #+slug:        audit-review-template
-#+filetags: :audit:
+#+filetags:    :audit:
 
 * Overview
 

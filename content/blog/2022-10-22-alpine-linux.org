@@ -1,8 +1,8 @@
-#+date: [2022-10-22 Sat 00:00:00]
-#+title: alpine linux: minimal install, minimal attack surface
-#+description: Detailed procedure for deploying Alpine Linux to achieve a secure, lightweight server environment optimized for web hosting and containerization.
+#+date:        [2022-10-22 Sat 00:00:00]
+#+title:       Alpine Linux: Minimal Install, Minimal Attack Surface
+#+description: Installing Alpine Linux as a lightweight, secure server OS.
 #+slug:        alpine-linux
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Alpine Linux
 

@@ -1,8 +1,8 @@
-#+date: [2023-01-03 Tue 00:00:00]
-#+title: website updates 2023: what changed and why
-#+description: Documentation of significant changes applied to site design, layout, and accessibility features to enhance navigability and content clarity.
+#+date:        [2023-01-03 Tue 00:00:00]
+#+title:       Website Updates 2023
+#+description: A rundown of recent changes to the site design and structure.
 #+slug:        recent-website-changes
-#+filetags: :personal:web:
+#+filetags:    :personal:web:
 
 * The State of This Website
 

@@ -1,8 +1,8 @@
-#+date: [2023-10-04 Wed 00:00:00]
-#+title: digital minimalism: fewer inputs, more signal
-#+description: Practical guide for minimizing digital clutter and optimizing work focus by applying digital minimalism tactics.
+#+date:        [2023-10-04 Wed 00:00:00]
+#+title:       Digital Minimalism: Fewer Inputs, More Signal
+#+description: How I reduce digital noise and stay focused.
 #+slug:        digital-minimalism
-#+filetags: :linux:privacy:
+#+filetags:    :linux:privacy:
 
 I've written [[https://cleberg.net/wiki/#digital-garden][a note about minimalism]]
 before, but I wanted to dedicate some time to reflect on digital

@@ -1,8 +1,8 @@
-#+date: [2022-02-22 Tue 00:00:00]
-#+title: twosday: 2 22 22 was a real date
-#+description: Examination of the date Tuesday, February 22, 2022, highlighting the palindromic properties and expected observations on this specific calendar occurrence.
+#+date:        [2022-02-22 Tue 00:00:00]
+#+title:       Twosday: 2/22/22
+#+description: A brief note on Tuesday, February 22nd, 2022.
 #+slug:        tuesday
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * Tuesday, Twosday
 

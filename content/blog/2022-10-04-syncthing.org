@@ -1,8 +1,8 @@
-#+date: [2022-10-04 Tue 00:00:00]
-#+title:       self hosting guide: syncthing
-#+description: Technical instructions for setting up Syncthing as a peer-to-peer self-hosted file synchronization system that preserves data privacy by eliminating third-party intermediaries.
+#+date:        [2022-10-04 Tue 00:00:00]
+#+title:       Self-Hosting Guide: Syncthing
+#+description: How to set up Syncthing for private, peer-to-peer file sync.
 #+slug:        syncthing
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 * An Overview of Syncthing
 

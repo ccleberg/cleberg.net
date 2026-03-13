@@ -1,8 +1,8 @@
-#+date: [2023-10-11 Wed 00:00:00]
-#+title:       self hosting guide: authelia
-#+description: Instructional guide for setting up Authelia to provide secure two-factor authentication and access control in self-hosted environments.
+#+date:        [2023-10-11 Wed 00:00:00]
+#+title:       Self-Hosting Guide: Authelia
+#+description: Setting up Authelia for two-factor auth and access control on self-hosted apps.
 #+slug:        self-hosting-authelia
-#+filetags: :linux:security:self-hosting:
+#+filetags:    :linux:security:self-hosting:
 
 * Overview
 

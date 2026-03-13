@@ -1,4 +1,4 @@
-#+title: apps
+#+title: Apps
 #+slug: index
 #+options: toc:nil
 
@@ -7,43 +7,16 @@
 Small apps I've built for iOS. Fully offline. No ads, no accounts, no data
 collection.
 
-#+begin_export html
-<div class="app-card">
-  <a href="https://apps.apple.com/app/daybyday"><img class="app-icon" src="https://img.cleberg.net/apps/daybyday.png" alt="DayByDay icon"></a>
-  <div class="app-info">
-    <span class="app-title">Day By Day</span>
-    <span class="app-subtitle">Learn days, months & seasons!</span>
-    <div class="app-links">
-      <a href="https://apps.apple.com/app/daybyday">App Store</a> &middot;
-      <a href="https://github.com/ccleberg/DayByDay">GitHub</a>
-    </div>
-  </div>
-</div>
+#+begin_quote
+All 3 apps are currently in Apple's review queue and are not available on the
+App Store yet. I will update the links here as soon as Apple publishes them.
+#+end_quote
 
-<div class="app-card">
-  <a href="https://apps.apple.com/app/space-explorers"><img class="app-icon" src="https://img.cleberg.net/apps/spaceexplorers.png" alt="Space Explorers icon"></a>
-  <div class="app-info">
-    <span class="app-title">Space Explorers</span>
-    <span class="app-subtitle">Explore the galaxy and learn!</span>
-    <div class="app-links">
-      <a href="https://apps.apple.com/app/space-explorers">App Store</a> &middot;
-      <a href="https://github.com/ccleberg/SpaceExplorers">GitHub</a>
-    </div>
-  </div>
-</div>
-
-<div class="app-card">
-  <a href="https://apps.apple.com/app/domaindig"><img class="app-icon" src="https://img.cleberg.net/apps/domaindig.png" alt="DomainDig icon"></a>
-  <div class="app-info">
-    <span class="app-title">Domain Dig</span>
-    <span class="app-subtitle">DNS lookup & SSL certificate checker</span>
-    <div class="app-links">
-      <a href="https://apps.apple.com/app/domaindig">App Store</a> &middot;
-      <a href="https://github.com/ccleberg/DomainDig">GitHub</a>
-    </div>
-  </div>
-</div>
-#+end_export
+| App             | Description                          | GitHub |
+|-----------------+--------------------------------------+--------|
+| Day By Day      | Learn days, months & seasons!        | [[https://github.com/ccleberg/DayByDay][GitHub]] |
+| Domain Dig      | DNS lookup & SSL certificate checker | [[https://github.com/ccleberg/DomainDig][GitHub]] |
+| Space Explorers | Explore the galaxy and learn!        | [[https://github.com/ccleberg/SpaceExplorers][GitHub]] |
 
 * Web Projects
 

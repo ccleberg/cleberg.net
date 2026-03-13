@@ -1,8 +1,8 @@
-#+date: [2022-02-20 Sun 00:00:00]
-#+title: nginx caching: static content, cache config
-#+description: Detailed methods for configuring Nginx to cache static resources such as CSS, JavaScript, and images to improve website loading times and resource efficiency.
+#+date:        [2022-02-20 Sun 00:00:00]
+#+title:       Nginx Caching for Static Content
+#+description: Configuring Nginx to cache static assets like CSS, JS, and images.
 #+slug:        nginx-caching
-#+filetags: :linux:web:
+#+filetags:    :linux:web:
 
 * Update Your Nginx Config to Cache Static Files
 

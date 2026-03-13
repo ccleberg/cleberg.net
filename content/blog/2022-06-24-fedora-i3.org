@@ -1,8 +1,8 @@
-#+date: [2022-06-24 Fri 00:00:00]
-#+title: fedora i3: back on linux, tiling wm
-#+description: Examination of the transition from macOS to Linux, including a detailed description of Fedora operating system installation and i3 window manager configuration.
+#+date:        [2022-06-24 Fri 00:00:00]
+#+title:       Fedora and i3: Back on Linux
+#+description: Moving back to Linux: installing Fedora and setting up i3.
 #+slug:        fedora-i3
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Leaving macOS
 

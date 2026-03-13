@@ -1,8 +1,8 @@
-#+date: [2022-09-17 Sat 00:00:00]
-#+title:       building and exploring serenityos: a retro inspired unix like desktop
-#+description: Technical overview of Serenity OS including system architecture, building procedures, and operational instructions for this Unix-like operating system with a 1990s user interface style.
+#+date:        [2022-09-17 Sat 00:00:00]
+#+title:       Building and Exploring SerenityOS
+#+description: Building and running SerenityOS, a retro Unix-like desktop OS.
 #+slug:        serenity-os
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Overview
 

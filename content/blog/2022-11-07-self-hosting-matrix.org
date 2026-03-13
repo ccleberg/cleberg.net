@@ -1,8 +1,8 @@
-#+date: [2022-11-07 Mon 00:00:00]
-#+title:       self hosting guide: matrix synapse
-#+description: Systematic guide for deploying Matrix Synapse on Alpine Linux, covering dependency installation, reverse proxy setup, TLS certificate application, and user account management.
+#+date:        [2022-11-07 Mon 00:00:00]
+#+title:       Self-Hosting Guide: Matrix Synapse
+#+description: How to deploy Matrix Synapse on Alpine Linux with Nginx.
 #+slug:        self-hosting-matrix
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 * Synapse
 

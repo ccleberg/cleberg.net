@@ -1,8 +1,8 @@
-#+date: [2025-10-06 Mon 13:11:00]
-#+title: playing rocket league on macos via crossover
-#+description: Learn how to play Rocket League on macOS via CrossOver.
+#+date:        [2025-10-06 Mon 13:11:00]
+#+title:       Rocket League on macOS via CrossOver
+#+description: Getting Rocket League running on macOS through CrossOver.
 #+slug: rocket-league-macos
-#+filetags: :linux:
+#+filetags:    :linux:
 
 #+caption: Rocket League on macOS
 #+attr_html: :alt The Rocket League launch screen on macOS.

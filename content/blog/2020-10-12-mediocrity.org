@@ -1,8 +1,8 @@
-#+date: [2020-10-12 Mon 00:00:00]
-#+title:       when good is good enough—and when it isn't
-#+description: Examination of decision-making principles relating to achieving sufficient quality levels, including trade-offs between perfection and adequacy in professional and operational contexts.
+#+date:        [2020-10-12 Mon 00:00:00]
+#+title:       On Mediocrity
+#+description: Thoughts on mediocrity and when perfect is the enemy of good.
 #+slug:        mediocrity
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * Perfect is the Enemy of Good
 

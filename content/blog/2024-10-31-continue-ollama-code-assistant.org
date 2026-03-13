@@ -1,8 +1,8 @@
-#+date: [2024-10-31 Thursday 11:01:05]
-#+title:       ollama code assistant setup in vs codium
-#+description: Technical overview and configuration guide for incorporating Ollama as a code assistance tool within VS Codium and VS Code editors to enhance development workflows.
+#+date:        [2024-10-31 Thu 11:01:05]
+#+title:       Ollama Code Assistant in VS Codium
+#+description: Setting up Ollama as a local code assistant in VS Codium.
 #+slug:        continue-ollama-code-assistant
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Background
 

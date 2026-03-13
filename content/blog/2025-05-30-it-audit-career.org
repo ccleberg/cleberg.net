@@ -1,8 +1,8 @@
-#+date: [2025-05-30 Friday 10:53:28]
-#+title: it audit career: skills that matter vs. skills that look good
-#+description: Instructional content detailing actionable knowledge areas including artificial intelligence, blockchain, cloud computing, DevOps, and automation relevant for audit professionals.
+#+date:        [2025-05-30 Fri 10:53:28]
+#+title:       IT Audit Career: Skills That Matter
+#+description: What skills actually matter in IT audit vs. what just looks good on paper.
 #+slug:        it-audit-career
-#+filetags: :audit:
+#+filetags:    :audit:
 
 * Introduction
 

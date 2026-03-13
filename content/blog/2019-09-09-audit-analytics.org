@@ -1,8 +1,8 @@
-#+date: [2019-09-09 Mon 00:00:00]
-#+title: audit analytics: pandas instead of pivot tables
-#+description: Examination of data analytical approaches applied within internal audit functions to improve risk evaluation, process efficiency, and decision support.
+#+date:        [2019-09-09 Mon 00:00:00]
+#+title:       Internal Audit Analytics
+#+description: Let's talk about data analytics and its use cases within the Internal Audit function.
 #+slug:        audit-analytics
-#+filetags: :audit:
+#+filetags:    :audit:
 
 * What Are Data Analytics?
 

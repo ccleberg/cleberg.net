@@ -1,8 +1,8 @@
-#+date: [2023-01-05 Thu 00:00:00]
-#+title: tumblr unlike all: script, done, get out
-#+description: Instructions for executing a JavaScript script to automate the mass unlike operation for Tumblr posts without requiring additional software.
+#+date:        [2023-01-05 Thu 00:00:00]
+#+title:       Mass Unlike All Tumblr Posts
+#+description: A JavaScript snippet to mass-unlike all your Tumblr posts.
 #+slug:        mass-unlike-tumblr-posts
-#+filetags: :linux:personal:
+#+filetags:    :linux:personal:
 
 * The Dilemma
 

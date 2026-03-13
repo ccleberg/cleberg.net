@@ -1,8 +1,8 @@
-#+date: [2022-08-31 Wed 00:00:00]
-#+title: privacy com changes: they changed the product, not the name
-#+description: Detailed examination of modifications to Privacy.com service terms and their implications on user privacy and payment security protocols.
+#+date:        [2022-08-31 Wed 00:00:00]
+#+title:       Privacy.com Changed the Product, Not the Name
+#+description: Privacy.com changed their terms. Here's what that means.
 #+slug:        privacy-com-changes
-#+filetags: :privacy:
+#+filetags:    :privacy:
 
 * Privacy.com Changes Their Terms
 

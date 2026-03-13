@@ -1,8 +1,8 @@
-#+date: [2026-02-02 18:40:21]
-#+title: emacs carnival: "completion"
-#+description: My response to the Emacs Carnival post for February 2026.
+#+date:        [2026-02-02 Mon 18:40:21]
+#+title:       Emacs Carnival: Completion
+#+description: My response to the Emacs Carnival prompt for February 2026.
 #+slug: emacs-carnival-2026-02-completion
-#+filetags: :emacs:personal:
+#+filetags:    :emacs:personal:
 
 I'm having a great time with the Emacs Carnival, as it has inspired me to write
 two posts in such a short time. It's been a much needed inspiration to write

@@ -1,8 +1,8 @@
-#+date: [2022-10-04 Tue 00:00:00]
-#+title: mtp linux: mount your phone without a file manager
-#+description: Instructions for mounting and accessing Media Transfer Protocol (MTP) compatible mobile devices on Fedora Linux using jmtpfs for file transfer and management.
+#+date:        [2022-10-04 Tue 00:00:00]
+#+title:       MTP on Linux: Mount Your Phone Without a File Manager
+#+description: Mounting Android phones on Fedora Linux with jmtpfs.
 #+slug:        mtp-linux
-#+filetags: :linux:
+#+filetags:    :linux:
 
 I recently ran into trouble attempting to mount my GrapheneOS phone to my laptop
 running Fedora Linux via the [[https://en.wikipedia.org/wiki/Media_transfer_protocol][Media Transfer Protocol]] (MTP) and discovered a

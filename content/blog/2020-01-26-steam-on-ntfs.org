@@ -1,8 +1,8 @@
-#+date: [2020-01-26 Sun 00:00:00]
-#+title: steam ntfs linux: it works, mostly
-#+description: Procedures for mounting NTFS drives using ntfs-3g to enable reliable execution of Steam gaming software on Linux environments.
+#+date:        [2020-01-26 Sun 00:00:00]
+#+title:       Steam NTFS Fix on Linux
+#+description: Procedures for mounting NTFS drives using ntfs-3g for Steam on Linux.
 #+slug:        steam-on-ntfs
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Auto-Mount Steam Drives
 

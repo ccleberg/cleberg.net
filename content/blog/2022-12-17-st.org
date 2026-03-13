@@ -1,8 +1,8 @@
-#+date: [2022-12-17 Sat 00:00:00]
-#+title:       installing and customizing the suckless simple terminal (st) on fedora linux
-#+description: Comprehensive instructions to obtain source code, compile, apply patches, and install the Simple Terminal application on Fedora Linux systems.
+#+date:        [2022-12-17 Sat 00:00:00]
+#+title:       Suckless Simple Terminal on Fedora
+#+description: Compiling and patching the Suckless Simple Terminal on Fedora.
 #+slug:        st
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * st
 

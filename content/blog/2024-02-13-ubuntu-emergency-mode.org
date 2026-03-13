@@ -1,8 +1,8 @@
-#+date: [2024-02-13 Tue 00:00:00]
-#+title:       resolving ubuntu boot issues caused by invalid /etc/fstab mounts
-#+description: Detailed instructions to identify errors in the /etc/fstab file causing Ubuntu to enter emergency mode and steps to edit and restore normal boot operations.
+#+date:        [2024-02-13 Tue 00:00:00]
+#+title:       Ubuntu Emergency Mode: Bad /etc/fstab Fix
+#+description: Fixing an invalid /etc/fstab that put Ubuntu into emergency mode.
 #+slug:        ubuntu-emergency-mode
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * The Problem
 

@@ -1,8 +1,8 @@
-#+date: [2025-11-14 Fri 19:46:30]
-#+title: wcag compliance: accessibility as a real constraint, not a checkbox
-#+description: Read on to learn more about how I've ensured my humble site is compliant with WCAG 2.
+#+date:        [2025-11-14 Fri 19:46:30]
+#+title:       WCAG Compliance: Accessibility as a Real Constraint
+#+description: How I've made this site compliant with WCAG 2.
 #+slug: wcag
-#+filetags: :audit:web:
+#+filetags:    :audit:web:
 
 * WCAG 2
 

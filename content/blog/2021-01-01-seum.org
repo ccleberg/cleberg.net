@@ -1,8 +1,8 @@
-#+date: [2021-01-01 Fri 00:00:00]
-#+title:       seum: speedrunners from hell
-#+description: Technical overview for utilizing the game SEUM, focusing on speedrunning techniques, gravity manipulation, teleportation functions, and level completion criteria.
+#+date:        [2021-01-01 Fri 00:00:00]
+#+title:       SEUM: Speedrunners from Hell
+#+description: A quick look at one of my favorite speedrunning games.
 #+slug:        seum
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * Game Description
 

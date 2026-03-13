@@ -1,8 +1,8 @@
-#+date: [2022-03-02 Wed 00:00:00]
-#+title: notes in plaintext: portable, no app dependency
-#+description: Instructions on applying standardized note-taking procedures with Markdown format, including synchronization and cross-platform compatibility considerations.
+#+date:        [2022-03-02 Wed 00:00:00]
+#+title:       Create Reliable Notes with Plaintext
+#+description: Why I keep my notes in plaintext Markdown, synced across devices.
 #+slug:        reliable-notes
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * Choosing Durable File Formats
 

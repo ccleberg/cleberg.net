@@ -1,8 +1,8 @@
-#+date: [2020-03-25 Wed 00:00:00]
-#+title:       session messenger: is it secure?
-#+description: Technical description of the Session messaging protocol, including end-to-end encryption, metadata minimization, multi-device synchronization, and privacy-centric design.
+#+date:        [2020-03-25 Wed 00:00:00]
+#+title:       Review: Session Messenger
+#+description: A user review of the Session Messenger app on Linux, macOS, and iOS.
 #+slug:        session-messenger
-#+filetags: :privacy:
+#+filetags:    :privacy:
 
 * Privacy Warning
 

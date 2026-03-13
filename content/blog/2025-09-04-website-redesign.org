@@ -1,8 +1,8 @@
-#+date: [2025-09-05 Fri 10:21:00]
-#+title: website redesign 2025: what changed
-#+description: Read this post to understand my latest website redesign and the context for the refresh.
+#+date:        [2025-09-05 Fri 10:21:00]
+#+title:       Website Redesign 2025
+#+description: An overview of the 2025 redesign of this site.
 #+slug: human-website-design
-#+filetags: :web:
+#+filetags:    :web:
 
 #+begin_quote
 /Please note that this redesign is a work-in-progress and is not complete. The

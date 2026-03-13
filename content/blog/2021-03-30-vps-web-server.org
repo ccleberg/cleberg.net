@@ -1,8 +1,8 @@
-#+date: [2021-03-30 Tue 00:00:00]
-#+title: vps web server: get off shared hosting
-#+description: Instructional outline for setting up and maintaining a VPS environment configured for secure and scalable web hosting applications.
+#+date:        [2021-03-30 Tue 00:00:00]
+#+title:       VPS Web Server: Get Off Shared Hosting
+#+description: How to set up a VPS and host your own website.
 #+slug:        vps-web-server
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 * Shared Hosting vs. VPS (Virtual Private Server)
 

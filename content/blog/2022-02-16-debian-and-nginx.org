@@ -1,8 +1,8 @@
-#+date: [2022-02-16 Wed 00:00:00]
-#+title: debian nginx migration: ditch ubuntu, move the stack
-#+description: Step-by-step protocol for transitioning web server infrastructure to Debian operating system, including installation, configuration, and security hardening of Nginx and Agate services.
+#+date:        [2022-02-16 Wed 00:00:00]
+#+title:       Migrating from Ubuntu to Debian with Nginx
+#+description: Moving my web server from Ubuntu to Debian and reconfiguring Nginx.
 #+slug:        debian-and-nginx
-#+filetags: :linux:web:
+#+filetags:    :linux:web:
 
 * Server Operating System (OS): Debian
 

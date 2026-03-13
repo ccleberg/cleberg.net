@@ -1,8 +1,8 @@
-#+date: [2020-01-25 Sat 00:00:00]
-#+title: linux software: what i actually install first
-#+description: Inventory and description of key Linux applications including graphical and command-line tools, with installation instructions for various distributions.
+#+date:        [2020-01-25 Sat 00:00:00]
+#+title:       My Favorite Linux Software
+#+description: A quick list of my favorite apps on Linux.
 #+slug:        linux-software
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Graphical Applications
 

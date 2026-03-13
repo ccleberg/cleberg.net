@@ -1,8 +1,8 @@
-#+date: [2019-01-07 Mon 00:00:00]
-#+title: css notes: flexbox, shadows, variables
-#+description: Practical guide on applying CSS rules and constructs such as flexbox, box shadows, and variable usage to achieve standard web styling and layout objectives.
+#+date:        [2019-01-07 Mon 00:00:00]
+#+title:       CSS Tips: Flexbox, Shadows, Variables
+#+description: A few quick tips on modern CSS features.
 #+slug:        useful-css
-#+filetags: :web:
+#+filetags:    :web:
 
 * Introduction to CSS
 

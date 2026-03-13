@@ -1,8 +1,8 @@
-#+date: [2018-11-28 Wed 00:00:00]
-#+title:       inside the c++ compiler
-#+description: Systematic presentation of the C++ compilation phases including preprocessing, compilation, assembly, and linking, with technical insights into each stage's function.
+#+date:        [2018-11-28 Wed 00:00:00]
+#+title:       The C++ Compiler
+#+description: A brief trip into the C++ compilation process.
 #+slug:        cpp-compiler
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * A Brief Introduction
 

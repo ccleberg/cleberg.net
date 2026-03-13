@@ -1,8 +1,8 @@
-#+date: [2022-02-17 Thu 00:00:00]
-#+title: exiftool metadata: strip it before you post it
-#+description: Technical instructions for utilizing Exiftool to systematically strip metadata from image files to ensure privacy and reduce file size.
+#+date:        [2022-02-17 Thu 00:00:00]
+#+title:       ExifTool: Strip Metadata Before You Post
+#+description: How to use ExifTool to strip metadata from images before sharing them.
 #+slug:        exiftool
-#+filetags: :linux:privacy:
+#+filetags:    :linux:privacy:
 
 ** Why Strip Metadata?
 

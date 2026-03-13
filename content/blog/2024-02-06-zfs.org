@@ -1,8 +1,8 @@
-#+date: [2024-02-06 Tue 00:00:00]
-#+title:       creating and managing zfs storage pools on ubuntu linux
-#+description: Stepwise guide to setting up ZFS storage pools on Ubuntu, including initial installation, pool creation, expansion, and maintenance.
+#+date:        [2024-02-06 Tue 00:00:00]
+#+title:       ZFS Storage Pools on Ubuntu
+#+description: Setting up and managing ZFS storage pools on Ubuntu.
 #+slug:        zfs
-#+filetags: :linux:
+#+filetags:    :linux:
 
 This post details the process I used to create ZFS pools, datasets, and
 snapshots on Ubuntu Server.

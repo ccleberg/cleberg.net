@@ -1,8 +1,8 @@
-#+date: [2021-01-04 Mon 00:00:00]
-#+title: fediverse: decentralized social, minus the algorithm
-#+description: Detailed introduction to the Fediverse network architecture, user registration procedures, platform navigation, and protocols ensuring content decentralization and censorship resistance.
+#+date:        [2021-01-04 Mon 00:00:00]
+#+title:       Fediverse: Decentralized Social
+#+description: A primer on the fediverse, how it works, and why I use it.
 #+slug:        fediverse
-#+filetags: :privacy:
+#+filetags:    :privacy:
 
 * What is the Fediverse?
 

@@ -10,12 +10,12 @@
 {% endblock %}
 {% block main %}
 <article>
-    <p class="article-dateline"><time datetime='{{ post.date|strftime("%Y-%m-%d") }}'>{{ post.date|strftime("%Y-%m-%d") }}</time></p>
-    <h1 class="article-title">{{ post.title }}</h1>
+    <p><time datetime='{{ post.date|strftime("%Y-%m-%d") }}'>{{ post.date|strftime("%Y-%m-%d") }}</time></p>
+    <h1>{{ post.title }}</h1>
     {% if post.description is defined %}
-    <p class="article-standfirst">{{ post.description }}</p>
+        <p>{{ post.description }}</p>
     {% endif %}
-    <div class="article-body">{{ post.html | safe }}</div>
-    <div class="reply-link"><a href="mailto:hello@cleberg.net">Reply via email &rarr;</a></div>
+    <div>{{ post.html | safe }}</div>
+    <div><a href="mailto:hello@cleberg.net">Reply via email &rarr;</a></div>
 </article>
 {% endblock %}

@@ -1,8 +1,8 @@
-#+date: [2020-12-28 Mon 00:00:00]
-#+title: neon drive: review
-#+description: Description of game mechanics, graphical style, and level design in Neon Drive, an arcade racing game inspired by 1980s synthwave aesthetics.
+#+date:        [2020-12-28 Mon 00:00:00]
+#+title:       Neon Drive
+#+description: My thoughts on Neon Drive, a synthwave-inspired arcade racer.
 #+slug:        neon-drive
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * Game Description
 

@@ -1,8 +1,8 @@
-#+date: [2022-07-31 Sun 00:00:00]
-#+title: bash it: plugins and autosuggestions for zsh refugees
-#+description: Guide to augmenting Bash shell features by integrating Bash-It framework along with ble.sh for input autosuggestions, improving command-line efficiency on Linux systems.
+#+date:        [2022-07-31 Sun 00:00:00]
+#+title:       Bash-It: Plugins and Autosuggestions
+#+description: Setting up Bash-It with ble.sh for a better shell experience.
 #+slug:        bash-it
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Bash
 

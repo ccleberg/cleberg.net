@@ -1,8 +1,8 @@
-#+date: [2024-01-08 Mon 00:00:00]
-#+title:       don't say hello
-#+description: Technical recommendations for improving professional communication by eliminating non-essential introductory phrases to enhance message clarity.
+#+date:        [2024-01-08 Mon 00:00:00]
+#+title:       Don't Say Hello
+#+description: Stop leading messages with 'hello' and nothing else.
 #+slug:        dont-say-hello
-#+filetags: :privacy:
+#+filetags:    :privacy:
 
 I recently came back from a winter break and have started working again... only
 to immediately run into the dilemma of people sending me cliffhanger messages

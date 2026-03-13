@@ -1,8 +1,8 @@
-#+date: [2024-09-20 Friday 13:38:52]
-#+title: prometheus grafana: monitoring without paying for the cloud tier
-#+description: Stepwise method for deploying Prometheus with Docker to monitor Linux servers and integrating Grafana Cloud for visualization and analysis of collected metrics.
+#+date:        [2024-09-20 Fri 13:38:52]
+#+title:       Prometheus and Grafana Cloud for Server Monitoring
+#+description: Monitoring Linux servers with Prometheus and visualizing in Grafana Cloud.
 #+slug:        prometheus-grafana-cloud
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 This tutorial will guide you through the process of:
 

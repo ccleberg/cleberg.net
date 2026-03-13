@@ -1,8 +1,8 @@
-#+date: [2023-01-23 Mon 00:00:00]
-#+title:       automate random mullvad wireguard vpn connection on startup
-#+description: Stepwise method to configure system startup scripts for automatic connection to a randomly chosen Mullvad Wireguard VPN server to maintain privacy.
+#+date:        [2023-01-23 Mon 00:00:00]
+#+title:       Random Mullvad WireGuard on Startup
+#+description: A startup script to connect to a random Mullvad WireGuard server.
 #+slug:        random-wireguard
-#+filetags: :linux:security:self-hosting:
+#+filetags:    :linux:security:self-hosting:
 
 * Mullvad Wireguard
 

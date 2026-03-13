@@ -9,45 +9,36 @@
     {% if site_description is defined %}<meta name="description" content="{{ site_description }}">{% endif %}
     {% if site_keywords is defined %}<meta name="keywords" content="{{ site_keywords }}">{% endif %}
     <link rel="stylesheet" href="{{ url_for("static", file="styles.min.css") }}" type="text/css">
-    <link rel="icon" href="{{ url_for("static", file="favicon.svg") }}" type="image/svg+xml">
+    <link rel="icon" href="data:,">
     {% block meta %}{% endblock %}
     {% endblock %}
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
-    <header class="masthead">
-        <a href="/" class="masthead-title">seijaku</a>
-        <p class="masthead-subtitle"><i>stillness amidst the chaos</i></p>
-        <nav aria-label="Site Navigation">
-            <ul>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/tags/">Tags</a></li>
-                <li><a href="/guides/index.html">Guides</a></li>
-                <li><a href="/apps/">Apps</a></li>
-                <li><a href="/garden/">Garden</a></li>
-                <li><a href="/salary/">Salary</a></li>
-            </ul>
-        </nav>
-    </header>
+    
+    <nav aria-label="Site Navigation">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/apps/">Apps</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/garden/">Garden</a></li>
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/salary/">Salary</a></li>
+            <li><a href="/tags/">Tags</a></li>
+        </ul>
+    </nav>
+
     <main id="main-content">
         {% block main %}{% endblock %}
     </main>
-    <hr>
+
     <footer>
-        <div>
-            <a href="https://github.com/ccleberg/cleberg.net">Source</a> &middot;
-            <a href="/feed.xml">RSS</a> &middot;
-            <a href="http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/">Onion</a> &middot;
-            <a href="/now/">Now</a> &middot;
-            <a href="/uses/">Uses</a> &middot;
-            <a href="/tips/">Tips</a> &middot;
-            <a href="https://cv.cleberg.net">CV</a>
-        </div>
-        <div>
-            <a href="mailto:hello@cleberg.net">hello@cleberg.net</a> [<a href="/gpg.txt">PGP</a>] &middot;
-            Signal: @cmc.01
-        </div>
+        <a href="https://github.com/ccleberg/cleberg.net">Source</a> &middot;
+        <a href="/feed.xml">RSS</a> &middot;
+        <a href="http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/">Onion</a> &middot;
+        <a href="/tips/">Tips</a>
     </footer>
+    
     <section class="indieweb-links" style="display:none">
         <link href="https://github.com/ccleberg" rel="me">
         <link href="https://gitlab.com/ccleberg" rel="me">

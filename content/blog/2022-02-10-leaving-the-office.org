@@ -1,8 +1,8 @@
-#+date: [2022-02-10 Thu 00:00:00]
-#+title: leaving the office: remote work without the linkedin take
-#+description: Examination of factors influencing the shift from traditional office environments to remote work, including benefits, constraints, and implementation recommendations.
+#+date:        [2022-02-10 Thu 00:00:00]
+#+title:       Leaving the Office
+#+description: My honest thoughts on leaving the office and working remotely.
 #+slug:        leaving-the-office
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * The Working World is Changing
 

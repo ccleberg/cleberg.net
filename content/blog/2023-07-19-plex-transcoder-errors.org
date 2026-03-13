@@ -1,8 +1,8 @@
-#+date: [2023-07-19 Wed 00:00:00]
-#+title:       plex subtitle error: transcoder fails to start
-#+description: Technical procedures to identify and correct Plex transcoder failures at startup to maintain uninterrupted media conversion and playback.
+#+date:        [2023-07-19 Wed 00:00:00]
+#+title:       Plex Transcoder Errors: Subtitle Fix
+#+description: Fixing Plex transcoder startup failures caused by subtitle errors.
 #+slug:        plex-transcoder-errors
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 * Plex Transcoder Error
 

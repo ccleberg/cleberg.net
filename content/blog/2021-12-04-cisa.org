@@ -1,8 +1,8 @@
-#+date: [2021-12-04 Sat 00:00:00]
-#+title: cisa exam: what the test measures vs. what the job requires
-#+description: Comprehensive outline of study materials, preparation strategies, and procedural advice for passing the CISA examination on the initial attempt.
+#+date:        [2021-12-04 Sat 00:00:00]
+#+title:       I Passed the CISA Exam
+#+description: My take on the CISA exam: what it covers, and what it doesn't.
 #+slug:        cisa
-#+filetags: :audit:
+#+filetags:    :audit:
 
 * What is the CISA?
 

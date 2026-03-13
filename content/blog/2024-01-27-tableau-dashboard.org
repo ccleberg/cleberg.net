@@ -1,8 +1,8 @@
-#+date: [2024-01-27 Sat 00:00:00]
-#+title: omaha crime data: tableau, 8 years of numbers
-#+description: Detailed procedure for data preparation and interactive visualization of crime trends in Omaha, using Tableau software from 2015 through 2023 data.
+#+date:        [2024-01-27 Sat 00:00:00]
+#+title:       Omaha Crime Data: 8 Years in Tableau
+#+description: Visualizing 8 years of Omaha crime data in Tableau.
 #+slug:        tableau-dashboard
-#+filetags: :web:
+#+filetags:    :web:
 
 In this project, I am going to show you how to use Tableau Public for free to
 create simple dashboards.

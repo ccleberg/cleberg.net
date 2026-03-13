@@ -1,8 +1,8 @@
-#+date: [2025-05-02 Friday 21:10:00]
-#+title: asahi linux: linux on apple silicon, current state
-#+description: Documented analysis of installation procedure, system performance, and software compatibility for running Asahi Linux on the Apple M2 MacBook Pro 16-inch model.
+#+date:        [2025-05-02 Fri 21:10:00]
+#+title:       Asahi Linux: Linux on Apple Silicon
+#+description: What it's actually like to run Asahi Linux on an Apple M2.
 #+slug:        asahi-linux
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * Trying out Asahi Linux
 

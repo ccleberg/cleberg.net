@@ -1,8 +1,8 @@
-#+date: [2025-10-03 Fri 4:23:00]
-#+title: my privacy toolkit
-#+description: Learn about the tools I use to keep my life private and data secure.
+#+date:        [2025-10-03 Fri 4:23:00]
+#+title:       My Privacy Toolkit
+#+description: The tools I use to keep my data private.
 #+slug: privacy-toolkit
-#+filetags: :privacy:
+#+filetags:    :privacy:
 
 * VPN
 

@@ -1,8 +1,8 @@
-#+date: [2024-03-13 Wed 00:00:00]
-#+title:       doom emacs & org mode setup
-#+description: Technical manual covering installation, configuration files, and usage procedures for Doom Emacs and Org-Mode targeting note management and task organization.
+#+date:        [2024-03-13 Wed 00:00:00]
+#+title:       Doom Emacs and Org Mode Setup
+#+description: How I set up Doom Emacs and Org Mode for notes and task management.
 #+slug:        doom-emacs
-#+filetags: :emacs:
+#+filetags:    :emacs:
 
 ** Screenshots
 

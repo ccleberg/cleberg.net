@@ -1,8 +1,8 @@
-#+date: [2021-03-19 Fri 00:00:00]
-#+title:       github and sourcehut: scripting mass clones and remote updates
-#+description: Script-based methodology for cloning multiple repositories from GitHub and Sourcehut accounts. Includes automation techniques to streamline repository management and backups.
+#+date:        [2021-03-19 Fri 00:00:00]
+#+title:       Scripting Mass Clones from GitHub and Sourcehut
+#+description: Scripts to clone all your repos from GitHub or Sourcehut at once.
 #+slug:        clone-github-repos
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * Cloning from GitHub
 

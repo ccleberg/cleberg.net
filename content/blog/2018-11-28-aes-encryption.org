@@ -1,8 +1,8 @@
-#+date: [2018-11-28 Wed 00:00:00]
-#+title: aes encryption: what the math actually does
-#+description: Detailed explanation of AES encryption, including key handling, encryption modes, algorithm structure, and implementation considerations for secure data protection.
+#+date:        [2018-11-28 Wed 00:00:00]
+#+title:       AES Encryption
+#+description: Let's learn about AES encryption, its method, and how it can be used.
 #+slug:        aes-encryption
-#+filetags: :security:
+#+filetags:    :security:
 
 * Basic AES
 

@@ -1,8 +1,8 @@
-#+date: [2024-06-19 Wednesday 08:00:00]
-#+title:       migrating ubuntu gpg keys to trusted.gpg.d
-#+description: Technical instructions to relocate GPG keys from the deprecated trusted.gpg keyring to the supported trusted.gpg.d directory for system security maintenance.
+#+date:        [2024-06-19 Wed 08:00:00]
+#+title:       Ubuntu: Migrate GPG Keys to trusted.gpg.d
+#+description: Moving Ubuntu GPG keys from the deprecated trusted.gpg to trusted.gpg.d.
 #+slug:        deprecated-trusted-gpg-fix
-#+filetags: :linux:
+#+filetags:    :linux:
 
 ** System Warning
 

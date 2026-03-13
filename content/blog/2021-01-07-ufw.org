@@ -1,8 +1,8 @@
-#+date: [2021-01-07 Thu 00:00:00]
-#+title: ufw hardening: firewall config you should have set up already
-#+description: Stepwise instructions for installation, configuration, enabling, and management of the Uncomplicated Firewall utility to secure network interfaces on Ubuntu server environments.
+#+date:        [2021-01-07 Thu 00:00:00]
+#+title:       UFW: Firewall Setup on Ubuntu
+#+description: How to install and configure UFW on Ubuntu.
 #+slug:        ufw
-#+filetags: :linux:security:
+#+filetags:    :linux:security:
 
 * Uncomplicated Firewall
 

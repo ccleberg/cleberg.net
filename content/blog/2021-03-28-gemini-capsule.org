@@ -1,8 +1,8 @@
-#+date: [2021-03-28 Sun 00:00:00]
-#+title: gemini capsule: deploy it, own your content
-#+description: Incremental procedural guide to initiate and maintain a Gemini capsule server. Covers installation, deployment, and operational best practices for beginners.
+#+date:        [2021-03-28 Sun 00:00:00]
+#+title:       Gemini Capsule: Deploy and Own Your Content
+#+description: How to set up and run your own Gemini capsule.
 #+slug:        gemini-capsule
-#+filetags: :linux:web:
+#+filetags:    :linux:web:
 
 * What is Gemini?
 

@@ -1,8 +1,8 @@
-#+date: [2024-01-09 Tue 00:00:00]
-#+title: macos customization: terminal, tiling wm, widgets
-#+description: Detailed overview of methods and tools for modifying macOS system settings, including terminal usage, window management, and interface customization.
+#+date:        [2024-01-09 Tue 00:00:00]
+#+title:       macOS Customization: Terminal, Tiling WM, Widgets
+#+description: How I've customized macOS with a terminal, tiling WM, and widgets.
 #+slug:        macos-customization
-#+filetags: :linux:
+#+filetags:    :linux:
 
 I have been using macOS more than Linux lately, so I wrote this post to describe
 some simple options to customize macOS beyond the normal built-in settings menu.

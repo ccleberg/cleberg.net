@@ -1,8 +1,8 @@
-#+date: [2023-06-23 Fri 00:00:00]
-#+title: byobu: tmux with less configuration overhead
-#+description: Detailed overview of Byobu terminal multiplexer features, configuration settings, session management, and keybindings to enhance command-line efficiency.
+#+date:        [2023-06-23 Fri 00:00:00]
+#+title:       Byobu: tmux with Less Configuration Overhead
+#+description: Using Byobu as a tmux wrapper with sane defaults out of the box.
 #+slug:        byobu
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 * Byobu
 

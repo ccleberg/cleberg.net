@@ -1,8 +1,8 @@
-#+date: [2024-03-15 Fri 00:00:00]
-#+title:       self hosting guide: ddns updater
-#+description: Step-by-step configuration guide for deploying a Dynamic DNS updater using Docker Compose, integrating with Cloudflare API, and securing with Nginx reverse proxy.
+#+date:        [2024-03-15 Fri 00:00:00]
+#+title:       Self-Hosting Guide: DDNS Updater
+#+description: Deploying a DDNS updater with Docker Compose and Cloudflare.
 #+slug:        self-hosting-ddns-updater
-#+filetags: :linux:self-hosting:
+#+filetags:    :linux:self-hosting:
 
 #+caption: DDNS Updater Web View
 #+attr_html: :alt An example of the DDNS Updater app running and showing that cleberg.net's IP has been updated on Cloudflare.

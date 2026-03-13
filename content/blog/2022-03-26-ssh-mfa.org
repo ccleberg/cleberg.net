@@ -1,8 +1,8 @@
-#+date: [2022-03-26 Sat 00:00:00]
-#+title: ssh mfa: totp on top of keys
-#+description: Step-by-step deployment guide for enabling TOTP multi-factor authentication on SSH services using Google Authenticator and Pluggable Authentication Module (PAM) integration.
+#+date:        [2022-03-26 Sat 00:00:00]
+#+title:       SSH MFA: TOTP on Top of Keys
+#+description: Adding TOTP two-factor authentication on top of SSH key auth.
 #+slug:        ssh-mfa
-#+filetags: :security:
+#+filetags:    :security:
 
 * Why Do I Need Multi-Factor Authentication (MFA) for SSH (Secure Shell Protocol)?
 

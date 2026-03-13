@@ -1,8 +1,8 @@
-#+date: [2022-11-27 Sun 00:00:00]
-#+title: server build: rack hardware, consumer parts, no enterprise markup
-#+description: Detailed instructions on selecting components, assembling, and configuring a rack-mounted server suitable for advanced computing tasks in a professional or laboratory setting.
+#+date:        [2022-11-27 Sun 00:00:00]
+#+title:       Server Build: Rack Hardware, Consumer Parts
+#+description: How I built a rack-mounted server with consumer parts.
 #+slug:        server-build
-#+filetags: :linux:
+#+filetags:    :linux:
 
 * The Dilemma
 

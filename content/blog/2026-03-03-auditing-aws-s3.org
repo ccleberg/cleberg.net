@@ -1,8 +1,8 @@
-#+date: [2026-03-03 Tue 18:50:23]
-#+title: auditing aws s3 buckets
-#+description: Learn how to audit AWS S3 buckets for public access.
+#+date:        [2026-03-03 Tue 18:50:23]
+#+title:       Auditing AWS S3 Buckets
+#+description: How to audit AWS S3 buckets for public access and misconfigurations.
 #+slug: auditing-aws-s3
-#+filetags: :audit:
+#+filetags:    :audit:
 
 This is the latest in my series of posts on auditing AWS, a cloud platform that
 has existed for around two decades but can still be a mystery to auditors who
@@ -79,7 +79,7 @@ The reverse is also true. A bucket with no public policy and no public ACLs is
 still at risk if PAB is missing or incomplete, because nothing is in place to
 prevent a future policy or ACL change from exposing it.
 
-M* What the Script Does
+* What the Script Does
 
 The script lists every bucket in the account, determines each bucket's region,
 runs all three checks against it, and appends the results to a CSV file.

@@ -1,8 +1,8 @@
-#+date: [2021-04-28 Wed 00:00:00]
-#+title: photography: gear and what actually matters
-#+description: Instructional document covering basic techniques in photography, including equipment selection, operational best practices, and methods for capturing high-quality images.
+#+date:        [2021-04-28 Wed 00:00:00]
+#+title:       My Photography Gear
+#+description: My approach to photography and the gear I use.
 #+slug:        photography
-#+filetags: :personal:
+#+filetags:    :personal:
 
 * Why Photography?
 

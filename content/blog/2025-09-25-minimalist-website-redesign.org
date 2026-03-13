@@ -1,8 +1,8 @@
-#+date: [2025-09-25 Thu 21:08:00]
-#+title: minimalist site: strip it down
-#+description: This post details a complete redesign of a blog post, stripping away extraneous CSS and HTML elements to prioritize readability and user experience.
+#+date:        [2025-09-25 Thu 21:08:00]
+#+title:       Minimalist Site: Strip It Down
+#+description: A complete redesign stripping away extraneous CSS and HTML for readability.
 #+slug: minimalist-website-redesign
-#+filetags: :web:
+#+filetags:    :web:
 
 I know what you're thinking: "ANOTHER blog post about redesigning the website?"
 

@@ -1,8 +1,8 @@
-#+date: [2021-08-25 Wed 00:00:00]
-#+title: audit sampling: pandas for random and stratified samples
-#+description: Presentation of methods for implementing audit sampling techniques including simple random, stratified, and systematic sampling using Python's Pandas library for precise audit outcomes.
+#+date:        [2021-08-25 Wed 00:00:00]
+#+title:       Audit Sampling with Pandas
+#+description: Using Python and Pandas to run random and stratified audit samples.
 #+slug:        audit-sampling
-#+filetags: :audit:
+#+filetags:    :audit:
 
 * Introduction
 

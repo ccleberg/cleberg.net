@@ -1,8 +1,8 @@
-#+date: [2022-12-01 Thu 00:00:00]
-#+title: nginx gzip: compress text, nothing else
-#+description: Procedures for activating and configuring GZIP compression in Nginx to decrease data transmission size, reduce bandwidth consumption, and accelerate page load times.
+#+date:        [2022-12-01 Thu 00:00:00]
+#+title:       Nginx Gzip: Compress Text, Nothing Else
+#+description: Enabling and configuring GZIP compression in Nginx.
 #+slug:        nginx-compression
-#+filetags: :linux:web:
+#+filetags:    :linux:web:
 
 * Text Compression
 
