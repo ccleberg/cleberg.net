@@ -185,7 +185,9 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
     lines = []
     for post in recent:
         lines.append('\t<li class="post-list-item">')
-        lines.append(f'\t\t<time datetime="{post["date_str"]}">{post["date_full"]}</time>')
+        lines.append(
+            f'\t\t<time datetime="{post["date_str"]}">{post["date_full"]}</time>'
+        )
         lines.append(f'\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>')
         lines.append("\t</li>")
 
@@ -358,6 +360,7 @@ def inject_blog_year_separators(blog_index_path="./.build/blog/index.html"):
     date_pattern = re.compile(r"datetime=['\"]?(\d{4})-\d{2}-\d{2}['\"]?")
 
     current_year = None
+
     def replace_item(m):
         nonlocal current_year
         item_html = m.group(1)
@@ -382,13 +385,22 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
     with one section per tag, each post listed under its tags, sorted newest first.
     Tags link to anchor IDs on the same page.
     """
-    TAG_ORDER = ["audit", "emacs", "linux", "personal", "privacy", "security", "self-hosting", "web"]
+    TAG_ORDER = [
+        "audit",
+        "emacs",
+        "linux",
+        "personal",
+        "privacy",
+        "security",
+        "self-hosting",
+        "web",
+    ]
 
     header_patterns = {
         "title": re.compile(r"^#\+title:\s*(.+)$", re.IGNORECASE),
-        "date":  re.compile(r"^#\+date:\s*[\[<](\d{4}-\d{2}-\d{2})"),
-        "slug":  re.compile(r"^#\+slug:\s*(.+)$", re.IGNORECASE),
-        "tags":  re.compile(r"^#\+filetags:\s*(.+)$", re.IGNORECASE),
+        "date": re.compile(r"^#\+date:\s*[\[<](\d{4}-\d{2}-\d{2})"),
+        "slug": re.compile(r"^#\+slug:\s*(.+)$", re.IGNORECASE),
+        "tags": re.compile(r"^#\+filetags:\s*(.+)$", re.IGNORECASE),
         "draft": re.compile(r"^#\+draft:\s*(.+)$", re.IGNORECASE),
     }
 
@@ -439,7 +451,14 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
 
         for tag in tags:
             if tag in tag_map:
-                tag_map[tag].append({"title": title, "slug": slug, "date_obj": date_obj, "date_str": date_str})
+                tag_map[tag].append(
+                    {
+                        "title": title,
+                        "slug": slug,
+                        "date_obj": date_obj,
+                        "date_str": date_str,
+                    }
+                )
 
     for tag in tag_map:
         tag_map[tag].sort(key=lambda x: x["date_obj"], reverse=True)
@@ -458,10 +477,12 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
             f'<li class="post-list-item">'
             f'<time datetime="{p["date_str"]}">{p["date_str"]}</time>'
             f'<a href="/blog/{p["slug"]}.html">{p["title"]}</a>'
-            f'</li>'
+            f"</li>"
             for p in posts
         )
-        sections.append(f'<h2 id="{tag}">{tag}</h2>\n<ul class="post-list">\n{items}\n</ul>')
+        sections.append(
+            f'<h2 id="{tag}">{tag}</h2>\n<ul class="post-list">\n{items}\n</ul>'
+        )
 
     html = f"""<!doctype html>
 <html lang=en-us>
