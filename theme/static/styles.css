@@ -1,5 +1,5 @@
 body { max-width: 800px; margin: 0 auto; }
-a, a:visited { color:blue; }
+a, a:visited { color: #0000ff; }
 nav ul { list-style: none; padding: 0; display: flex; flex-direction: row; }
 nav ul li { padding-right: 0.5rem;}
 img { max-width: 100%; }
@@ -8,13 +8,13 @@ img { max-width: 100%; }
 .post-list-year { list-style: none; margin-top: 1rem; margin-bottom: 0.5rem; font-weight: bold; }
 .skip-link { display: none; }
 footer { margin: 2rem 0;}
-pre, blockquote { margin: 1rem 0; padding: 0.5rem; background-color: lightgrey; }
+pre, blockquote { margin: 1rem 0; padding: 0.5rem; background-color: #cccccc; }
 pre { overflow: auto; white-space: pre; }
 blockquote p { margin: 0; }
-code { color: darkred; }
+code { color: #942192; }
 @media (prefers-color-scheme: dark) {
-	body { background-color: #181a1b; color: #e8e6e3; }
-	a, a:visited { color: lightblue; }
-	code { color: red; }
+	body { background-color: #181a1b; color: #cccccc; }
+	a, a:visited { color: #00db00; }
+	code { color: #ff68e1; }
     pre, blockquote { background-color: black; }
 }
