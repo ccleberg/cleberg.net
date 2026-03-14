@@ -492,7 +492,7 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=author content="Christian Cleberg <hello@cleberg.net>">
 <meta name=description content="Stillness amidst the chaos.">
-<link rel=stylesheet href=http://localhost:8000/styles.min.css>
+<link rel=stylesheet href=/styles.min.css>
 <link rel=icon href=data:,>
 </head>
 <body>
