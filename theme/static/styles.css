@@ -14,6 +14,7 @@ blockquote p { margin: 0; }
 code { color: darkred; }
 @media (prefers-color-scheme: dark) {
 	body { background-color: #181a1b; color: #e8e6e3; }
-	a, a:visited { color: #66adff; }
-	code { #ff6b6b; }
+	a, a:visited { color: lightblue; }
+	code { color: red; }
+    pre, blockquote { background-color: black; }
 }
