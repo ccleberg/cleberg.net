@@ -1,4 +1,4 @@
-body { max-width: 800px; margin: 0 auto; }
+body { max-width: 800px; margin: 0 auto; padding: 1rem; }
 a, a:visited { color: #0000ff; }
 nav ul { list-style: none; padding: 0; display: flex; flex-direction: row; }
 nav ul li { padding-right: 0.5rem;}
