@@ -3,8 +3,10 @@ a, a:visited { color: #0000ff; }
 nav ul { list-style: none; padding: 0; display: flex; flex-direction: row; }
 nav ul li { padding-right: 0.5rem;}
 img { max-width: 100%; }
-.post-list-item { display: flexbox; list-style: none; }
-.post-list-item time { padding-right: 0.5rem; }
+.post-list { padding: 0; }
+.post-list-item { display: flex; list-style: none; align-items: baseline; }
+.post-list-item time { padding-right: 0.5rem; white-space: nowrap; }
+.post-list-item a { flex-grow: 1; white-space: normal; }
 .post-list-year { list-style: none; margin-top: 1rem; margin-bottom: 0.5rem; font-weight: bold; }
 .skip-link { display: none; }
 footer { margin: 2rem 0;}
