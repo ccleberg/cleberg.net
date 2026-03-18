@@ -579,7 +579,7 @@ def main():
             update_index_html(html_snippet)
             inject_blog_year_separators()
             generate_tags_page()
-            minify_html("./.build/index.html", "./.build/index.html")
+            # minify_html("./.build/index.html", "./.build/index.html")
             generate_sitemap()
         if deploy:
             print("Deploying to production...")
