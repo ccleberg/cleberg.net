@@ -514,7 +514,7 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
 {"".join(f"<section>{s}</section>" for s in sections)}
 </main>
 <footer>
-<a href=https://github.com/ccleberg/cleberg.net>Source</a>&#183;
+<a href=https://sr.ht/~ccleberg/cleberg.net>Source</a>&#183;
 <a href=/feed.xml>RSS</a>&#183;
 <a href=http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/>Onion</a>&#183;
 <a href=/tips/>Tips</a>

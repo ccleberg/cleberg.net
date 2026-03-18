@@ -14,9 +14,9 @@ App Store yet. I will update the links here as soon as Apple publishes them.
 
 | App             | Description                          | GitHub |
 |-----------------+--------------------------------------+--------|
-| Day By Day      | Learn days, months & seasons!        | [[https://github.com/ccleberg/DayByDay][GitHub]] |
-| Domain Dig      | DNS lookup & SSL certificate checker | [[https://github.com/ccleberg/DomainDig][GitHub]] |
-| Space Explorers | Explore the galaxy and learn!        | [[https://github.com/ccleberg/SpaceExplorers][GitHub]] |
+| Day By Day      | Learn days, months & seasons!        | [[https://git.sr.ht/~ccleberg/DayByDay][GitHub]] |
+| Domain Dig      | DNS lookup & SSL certificate checker | [[https://git.sr.ht/~ccleberg/DomainDig][GitHub]] |
+| Space Explorers | Explore the galaxy and learn!        | [[https://git.sr.ht/~ccleberg/SpaceExplorers][GitHub]] |
 
 * Web Projects
 
