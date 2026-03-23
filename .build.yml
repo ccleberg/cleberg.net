@@ -36,9 +36,10 @@ tasks:
       cd cleberg.net
       uv run python3 -u build.py
   - deploy: |
+      set -euo pipefail
       cd cleberg.net
       chmod 600 ~/.ssh/id_rsa
+      chmod 600 ~/.ssh/config
       rsync -r --delete-before \
-        -e "ssh -o StrictHostKeyChecking=no" \
         .build/ \
         homelab:/var/www/cleberg.net/
