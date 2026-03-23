@@ -11,7 +11,7 @@ sources:
   - https://git.sr.ht/~ccleberg/cleberg.net
 
 secrets:
-  - <ssh-deploy-key-uuid>   # ~/.ssh/id_rsa, has write access to server
+  - 303fbd30-2970-4d18-b88b-0f6abf822ea5
 
 environment:
   ENV: prod
