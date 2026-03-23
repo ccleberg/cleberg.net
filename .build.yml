@@ -13,6 +13,7 @@ sources:
 
 secrets:
   - 303fbd30-2970-4d18-b88b-0f6abf822ea5
+  - 644b1f02-84fb-4929-9fce-f7ad5fa7138f
 
 environment:
   ENV: prod
@@ -37,12 +38,7 @@ tasks:
       uv run python3 -u build.py
   - deploy: |
       set -euo pipefail
-      echo "HOME=$HOME"
-      pwd
-      ls -la ~
-      ls -la ~/.ssh || true
-      find ~ -maxdepth 3 -type f | sort
       cd cleberg.net
       chmod 600 ~/.ssh/id_rsa
-      [ -f ~/.ssh/config ] && chmod 600 ~/.ssh/config
+      chmod 600 ~/.ssh/config
       rsync -r --delete-before .build/ homelab:/var/www/cleberg.net/
