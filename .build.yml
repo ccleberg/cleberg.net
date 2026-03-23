@@ -21,8 +21,9 @@ tasks:
       curl -sSfL https://github.com/tdewolff/minify/releases/latest/download/minify_linux_amd64.tar.gz \
         | tar -xz -C ~/.local/bin minify
   - build: |
+      source ~/.local/bin/env
       cd cleberg.net
-      ~/.local/bin/uv run build.py
+      uv run build.py
   - deploy: |
       cd cleberg.net
       chmod 600 ~/.ssh/id_rsa

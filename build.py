@@ -568,7 +568,9 @@ def start_dev_server(build_dir):
 
 
 def main():
-    run_ruff()
+    env = os.environ.get("ENV", "").casefold()
+    if env != "prod":
+        run_ruff()
     html_snippet = get_recent_posts_html("./content/blog", num_posts=3)
 
     build_dir = Path(".build")
@@ -576,7 +578,6 @@ def main():
     css_src = theme_dir / "styles.css"
     css_min = theme_dir / "styles.min.css"
 
-    env = os.environ.get("ENV", "").casefold()
     build = os.environ.get("BUILD", "").casefold() == "true"
     deploy = os.environ.get("DEPLOY", "").casefold() == "true"
 
