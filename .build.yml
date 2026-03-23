@@ -37,9 +37,12 @@ tasks:
       uv run python3 -u build.py
   - deploy: |
       set -euo pipefail
+      echo "HOME=$HOME"
+      pwd
+      ls -la ~
+      ls -la ~/.ssh || true
+      find ~ -maxdepth 3 -type f | sort
       cd cleberg.net
       chmod 600 ~/.ssh/id_rsa
-      chmod 600 ~/.ssh/config
-      rsync -r --delete-before \
-        .build/ \
-        homelab:/var/www/cleberg.net/
+      [ -f ~/.ssh/config ] && chmod 600 ~/.ssh/config
+      rsync -r --delete-before .build/ homelab:/var/www/cleberg.net/
