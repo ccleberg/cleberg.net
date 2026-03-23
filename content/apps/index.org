@@ -8,14 +8,14 @@ Apps I've built for iOS. No ads, no tracking, no data collection.
 
 #+begin_quote
 Some apps are currently in Apple's review queue and are not available on the App
-Store yet. I will update the links here as soon as Apple publishes them.
+Store yet. I will update the =App= links here as soon as Apple publishes them.
 #+end_quote
 
 | App             | Description                          | Source Code |
 |-----------------+--------------------------------------+-------------|
 | [[https://apps.apple.com/us/app/daybyday-learn/id6760321939][Day By Day]]      | Learn days, months & seasons!        | [[https://git.sr.ht/~ccleberg/DayByDay][sr.ht]]       |
-| Domain Dig      | DNS lookup & SSL certificate checker | [[https://git.sr.ht/~ccleberg/DomainDig][sr.ht]]       |
-| Hutch           | A Sourcehut client for iOS           | [[https://sr.ht/~ccleberg/Hutch/][sr.ht]]       |
+| [[https://apps.apple.com/us/app/domaindig/id6760368004][Domain Dig]]      | DNS lookup & SSL certificate checker | [[https://git.sr.ht/~ccleberg/DomainDig][sr.ht]]       |
+| Hutch           | An iOS client for Sourcehut          | [[https://sr.ht/~ccleberg/Hutch/][sr.ht]]       |
 | Space Explorers | Explore the galaxy and learn!        | [[https://git.sr.ht/~ccleberg/SpaceExplorers][sr.ht]]       |
 
 * Web Projects
