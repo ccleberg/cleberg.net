@@ -4,6 +4,9 @@ packages:
   - emacs-nox
   - rsync
   - openssh-client
+  - git
+  - curl
+  - tar
 
 sources:
   - https://git.sr.ht/~ccleberg/cleberg.net
@@ -18,6 +21,7 @@ environment:
 tasks:
   - setup: |
       curl -LsSf https://astral.sh/uv/install.sh | sh
+      mkdir -p ~/.local/bin
       curl -sSfL https://github.com/tdewolff/minify/releases/latest/download/minify_linux_amd64.tar.gz \
         | tar -xz -C ~/.local/bin minify
       mkdir -p ~/.config/emacs/.local/straight/repos
@@ -30,7 +34,7 @@ tasks:
   - build: |
       source ~/.local/bin/env
       cd cleberg.net
-      uv run build.py
+      uv run python3 -u build.py
   - deploy: |
       cd cleberg.net
       chmod 600 ~/.ssh/id_rsa

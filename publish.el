@@ -1,4 +1,6 @@
 ;;; -*- lexical-binding: t -*-
+(setq debug-on-error t)
+
 ;; Allow for macOS (dev machine) & Linux (GitHub Actions) execution
 (defvar site-lisp-base
   (expand-file-name "~/.config/emacs/.local/straight/repos"))
@@ -9,6 +11,7 @@
 (add-to-list 'load-path (expand-file-name "templatel" site-lisp-base))
 
 (require 'htmlize)
+(require 'templatel)
 (require 'weblorg)
 
 ;; Set default URL for Weblorg

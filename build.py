@@ -247,26 +247,19 @@ def minify_html(src_html, dest_html):
 
 
 def run_emacs_publish(dev_mode=True):
-    if dev_mode:
-        print("Running Emacs publish script (development)...")
-        result = subprocess.run(
-            ["emacs", "--script", "publish.el"],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True,
-        )
-    else:
-        print("Running Emacs publish script (production)...")
-        result = subprocess.run(
-            ["emacs", "--script", "publish.el"],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
-            text=True,
-        )
+    mode = "development" if dev_mode else "production"
+    print(f"Running Emacs publish script ({mode})...")
+
+    result = subprocess.run(
+        ["emacs", "--script", "publish.el"],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+    )
 
     if result.returncode != 0:
-        print("Error running publish.el:")
-        print(result.stderr, file=sys.stderr)
+        print("Error running publish.el output:")
+        print(result.stdout)
         sys.exit(1)
 
     annoying_file = Path(".build/cleberg-net.html")
