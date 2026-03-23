@@ -37,7 +37,9 @@ from pathlib import Path
 def run_ruff():
     print("Running ruff...")
     for cmd in [["ruff", "check", "--fix"], ["ruff", "format"]]:
-        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        result = subprocess.run(
+            cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+        )
         if result.returncode != 0:
             print(f"ruff error ({' '.join(cmd)}):")
             print(result.stderr, file=sys.stderr)
