@@ -13,7 +13,7 @@ sources:
 
 secrets:
   - 303fbd30-2970-4d18-b88b-0f6abf822ea5
-  - 644b1f02-84fb-4929-9fce-f7ad5fa7138f
+  - e8b41b71-c4b2-4bd6-8159-25ae1eb7d282
 
 environment:
   ENV: prod
