@@ -34,6 +34,16 @@ from datetime import datetime
 from pathlib import Path
 
 
+def run_ruff():
+    print("Running ruff...")
+    for cmd in [["ruff", "check", "--fix"], ["ruff", "format"]]:
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        if result.returncode != 0:
+            print(f"ruff error ({' '.join(cmd)}):")
+            print(result.stderr, file=sys.stderr)
+            sys.exit(1)
+
+
 def update_index_html(html_snippet, template_path="./.build/index.html"):
     """
     Read the index.html file at `template_path`, replace everything between
@@ -558,6 +568,7 @@ def start_dev_server(build_dir):
 
 
 def main():
+    run_ruff()
     html_snippet = get_recent_posts_html("./content/blog", num_posts=3)
 
     build_dir = Path(".build")

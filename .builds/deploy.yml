@@ -1,0 +1,34 @@
+image: debian/bookworm
+
+packages:
+  - emacs-nox
+  - python3
+  - python3-pip
+  - rsync
+  - openssh-client
+
+sources:
+  - https://git.sr.ht/~ccleberg/cleberg.net
+
+secrets:
+  - <ssh-deploy-key-uuid>   # ~/.ssh/id_rsa, has write access to server
+
+environment:
+  ENV: prod
+  BUILD: "true"
+
+tasks:
+  - setup: |
+      pip install --break-system-packages uv
+      curl -sSfL https://github.com/tdewolff/minify/releases/latest/download/minify_linux_amd64.tar.gz \
+        | tar -xz -C ~/.local/bin minify
+  - build: |
+      cd cleberg.net
+      uv run build.py
+  - deploy: |
+      cd cleberg.net
+      chmod 600 ~/.ssh/id_rsa
+      rsync -r --delete-before \
+        -e "ssh -o StrictHostKeyChecking=no" \
+        .build/ \
+        homelab:/var/www/cleberg.net/
