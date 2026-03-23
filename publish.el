@@ -1,9 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 ;; Allow for macOS (dev machine) & Linux (GitHub Actions) execution
-(defvar site-lisp-base 
-  (if (eq system-type 'darwin)
-      "~/.config/emacs/.local/straight/repos"               ; macOS path
-    "/home/linuxbrew/.config/emacs/.local/straight/repos")) ; CI/Linux path
+(defvar site-lisp-base
+  (expand-file-name "~/.config/emacs/.local/straight/repos"))
 
 ;; Explicitly load packages
 (add-to-list 'load-path (expand-file-name "htmlize" site-lisp-base))

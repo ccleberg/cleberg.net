@@ -20,6 +20,13 @@ tasks:
       curl -LsSf https://astral.sh/uv/install.sh | sh
       curl -sSfL https://github.com/tdewolff/minify/releases/latest/download/minify_linux_amd64.tar.gz \
         | tar -xz -C ~/.local/bin minify
+      mkdir -p ~/.config/emacs/.local/straight/repos
+      git clone --depth 1 https://github.com/nicferrier/emacs-htmlize \
+        ~/.config/emacs/.local/straight/repos/htmlize
+      git clone --depth 1 https://github.com/emacs-weblorg/weblorg \
+        ~/.config/emacs/.local/straight/repos/weblorg
+      git clone --depth 1 https://github.com/emacs-weblorg/templatel \
+        ~/.config/emacs/.local/straight/repos/templatel
   - build: |
       source ~/.local/bin/env
       cd cleberg.net
