@@ -1,4 +1,4 @@
-image: debian/bookworm
+image: ubuntu/lts
 
 packages:
   - emacs-nox
