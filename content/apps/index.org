@@ -16,7 +16,6 @@ Store yet. I will update the =App= links here as soon as Apple publishes them.
 | [[https://apps.apple.com/us/app/daybyday-learn/id6760321939][Day By Day]]      | Learn days, months & seasons!        | [[https://git.sr.ht/~ccleberg/DayByDay][sr.ht]]       |
 | [[https://apps.apple.com/us/app/domaindig/id6760368004][Domain Dig]]      | DNS lookup & SSL certificate checker | [[https://git.sr.ht/~ccleberg/DomainDig][sr.ht]]       |
 | Hutch           | An iOS client for Sourcehut          | [[https://sr.ht/~ccleberg/Hutch/][sr.ht]]       |
-| Space Explorers | Explore the galaxy and learn!        | [[https://git.sr.ht/~ccleberg/SpaceExplorers][sr.ht]]       |
 
 * Web Projects
 
