@@ -11,11 +11,12 @@ Some apps are currently in Apple's review queue and are not available on the App
 Store yet. I will update the =App= links here as soon as Apple publishes them.
 #+end_quote
 
-| App             | Description                          | Source Code |
-|-----------------+--------------------------------------+-------------|
-| [[https://apps.apple.com/us/app/daybyday-learn/id6760321939][Day By Day]]      | Learn days, months & seasons!        | [[https://git.sr.ht/~ccleberg/DayByDay][sr.ht]]       |
-| [[https://apps.apple.com/us/app/domaindig/id6760368004][Domain Dig]]      | DNS lookup & SSL certificate checker | [[https://git.sr.ht/~ccleberg/DomainDig][sr.ht]]       |
-| Hutch           | An iOS client for Sourcehut          | [[https://sr.ht/~ccleberg/Hutch/][sr.ht]]       |
+| App        | Description                          | Source Code |
+|------------+--------------------------------------+-------------|
+| [[https://apps.apple.com/us/app/daybyday-learn/id6760321939][Day By Day]] | Learn days, months & seasons!        | [[https://git.sr.ht/~ccleberg/DayByDay][sr.ht]]       |
+| [[https://apps.apple.com/us/app/domaindig/id6760368004][Domain Dig]] | DNS lookup & SSL certificate checker | [[https://git.sr.ht/~ccleberg/DomainDig][sr.ht]]       |
+| Hutch      | An iOS client for Sourcehut          | [[https://sr.ht/~ccleberg/Hutch/][sr.ht]]       |
+| Rune       | An iOS client for Njalla             | [[https://git.sr.ht/~ccleberg/Rune][sr.ht]]       |
 
 * Web Projects
 
