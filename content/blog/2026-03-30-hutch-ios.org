@@ -1,0 +1,90 @@
+#+date: [2026-03-30 Mon 17:53:50]
+#+title: Announcing Hutch: An iOS Client for Sourcehut
+#+description: Announcing Hutch, an iOS client for Sourcehut. Including links to project resources, features, and roadmap.
+#+slug: hutch-ios
+
+* Hutch
+
+I'm proud to announce that I've released my third (and, in my opinion, most
+useful) iOS app: Hutch.
+
+** Project Links
+
+I don't want to bury the lede, so let me start with links to the app and various
+project pages:
+
+*Product*
+- [[https://apps.apple.com/us/app/hutch-for-sourcehut/id6760742299][App Store]]
+- [[https://hutch.cleberg.net][Website]]
+
+*Development*
+- [[https://git.sr.ht/~ccleberg/Hutch][Source]]
+- [[https://sr.ht/~ccleberg/Hutch][Project]]
+- [[https://todo.sr.ht/~ccleberg/Hutch][Issues]]
+
+** Overview
+
+Hutch is a mobile client for [[https://sourcehut.org][Sourcehut]], a development host & forge. If you're
+not familiar with Sourcehut, it provides a long list of services:
+
+- Git repositories
+- Mercurial repositories
+- CI/CD builds
+- Issue trackers
+- Mailing lists
+- Pastes/snippets
+- Static page hosting
+
+** Features
+
+Hutch provides an interface for the following services:
+- *Projects*:
+  - Aggregate location to link repositories, tickets, & lists together
+- *Repositories* (Git & Mercurial):
+  - README summaries with rendering support for Markdown and Org-Mode
+  - File trees
+  - Commit logs
+  - Branches & tags
+  - Artifacts
+  - Settings
+- *Trackers*:
+  - Create new trackers
+  - Create tasks within trackers
+  - Comment on tasks
+  - Manage assignments, labels, and resolution status
+- *Builds*:
+  - Submit a build manifest manually
+  - Resubmit builds
+  - Edit & resubmit builds
+- *Lists*:
+  - View mailing list messages with built-in patch viewing support
+  - Unified inbox view for unread threads
+- *Pastes*:
+  - Create new pastes with single files, multiple files, and visibility options
+  - View, delete, and change visibility of existing pastes
+- *Meta*:
+  - Profile editing options for your avatar, email, URL, location, and bio
+  - Add & remove SSH and PGP keys
+  - View your personal access tokens (PATs)
+  - Enable/disable app-wide swipe actions
+
+** Roadmap
+
+As this is a solo-dev project (and I'm not a full-time developer), the roadmap
+is flexible and may change based on feedback I receive or things I'm currently
+focused on.
+
+At the time of posting, we're on =v2.5.2=. At this point in time, I have the
+following tagged on my roadmap:
+- Enhance file content rendering (e.g., line numbers, syntax highlighting)
+- Search feature to load a specific user, project, or repository (e.g.,
+  =~hutch/REPO=) that the logged-in user doesn't own
+- Public project discovery for public projects
+
+* Feedback Welcome!
+
+If you use Sourcehut and iOS, please give Hutch a try and let me know your
+thoughts!
+
+If you find bugs or issues, feel free to file them in the [[https://todo.sr.ht/~ccleberg/Hutch][todo]] tracker or email
+the mailing list at [[mailto:~ccleberg/hutch-devel@lists.sr.ht][hutch-announce]].
