@@ -1,48 +1,45 @@
 #+title: now
 #+slug: index
 #+options: toc:nil
-#+date: [2026-01-31 Sat 10:17:09]
+#+date: [2026-04-08 Wed 10:54:00]
 #+description: Read about what I'm doing now.
 
 This is a [[https://nownownow.com/about][/now]] page.
 
 * Work
 
-- Closing out the remaining 12/31 clients and moving on to my 3/31 client.
-- Making /waves/ with the big wigs on automation and standardization initiatives I
-  will be leading nationally.
+- Steadily working through my 3/31 client and working through planning and
+  walkthroughs for all my 9/30 and 12/31 clients.
+- Launching my national Automation & AI initiative for the US today.
 
 * Media
 
-/I play and watch way too many games, shows, and movies to list them all here. If
-you're actually interested, email or message me to talk about media!/
+/I play and watch way too many games, shows, and movies to list them all here.
+If you're actually interested, email or message me to talk about media!/
 
 - Playing some games:
-  - Cyberpunk 2077
-  - Descenders
+  - Diablo IV
+  - Rocket League
   - Runescape 3
 - Watching some shows:
-  - Akudama Drive (2020)
-  - Gachiakuta (2025)
-  - Jujutsu Kaisen (2020)
-  - Michiko & Hatchin (2008)
-  - Solo Leveling (2024)
+  - Fallout (2024)
+  - Home Improvement (1991)
+  - Ridiculousness (2011)
 - Watched some movies:
-  - Get On Up (2014)
-  - Leaving Las Vegas (1995)
-  - Steve-O's Bucket List (2023)
+  - The Banshees of Inisherin (2022)
+  - I'm Thinking of Ending Things (2020)
+  - Solo Mio (2026)
 
 * Tech
 
-- Leaning more into Emacs + Org-Mode.
-- Standardizing an iTerm + Doom Emacs configuration that works across personal
-  and work machines.
+- Launched 3 iOS apps:
+  - [[https://apps.apple.com/us/app/daybyday-learn/id6760321939][DayByDay]]: A simple children's learning app
+  - [[https://apps.apple.com/us/app/domaindig/id6760368004][DomainDig]]: A handy DNS lookup tool with many features
+  - [[https://apps.apple.com/us/app/hutch-for-sourcehut/id6760742299][Hutch for SourceHut]]: A polished SourceHut client in native Swift
+- Continuing to optimize my website and servers.
 
 * Hobbies
 
-- Picking back up more home maintenance now that the temperatures aren't
-  negative outside.
-- Modifying my truck for better hauling, towing, and off-road and all-season
-  utility.
+=Error: Time for hobbies not found=
 
 View the historical [[https://git.sr.ht/~ccleberg/cleberg.net/log/main/item/content/now/index.org][log of changes]] for this page.
