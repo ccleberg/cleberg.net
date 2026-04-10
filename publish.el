@@ -94,14 +94,6 @@
  :output ".build/guides/{{ slug }}.html"
  :url "/guides/{{ slug }}.html")
 
-;; Apps page route
-(weblorg-route
- :name "apps"
- :input-pattern "content/apps/*.org"
- :template "page.html"
- :output ".build/apps/{{ slug }}.html"
- :url "/apps/{{ slug }}.html")
-
 ;; Now page route
 (weblorg-route
  :name "now"
