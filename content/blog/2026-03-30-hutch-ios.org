@@ -2,6 +2,7 @@
 #+title: Announcing Hutch: An iOS Client for Sourcehut
 #+description: Announcing Hutch, an iOS client for Sourcehut. Including links to project resources, features, and roadmap.
 #+slug: hutch-ios
+#+filetags: :development:
 
 * Hutch
 

@@ -29,9 +29,17 @@ import re
 import shutil
 import subprocess
 import sys
+from html import escape
 from urllib.parse import quote
 from datetime import datetime
 from pathlib import Path
+
+
+SITE_TEMPLATE_VARS = {
+    "site_name": "cleberg.net",
+    "site_owner": "Christian Cleberg <hello@cleberg.net>",
+    "site_description": "Stillness amidst the chaos.",
+}
 
 
 def run_ruff():
@@ -46,18 +54,19 @@ def run_ruff():
             sys.exit(1)
 
 
-def update_index_html(html_snippet, template_path="./.build/index.html"):
+def update_marked_section(
+    html_snippet,
+    template_path="./.build/index.html",
+    begin_marker="<!-- BEGIN_POSTS -->",
+    end_marker="<!-- END_POSTS -->",
+):
     """
-    Read the index.html file at `template_path`, replace everything between
-    <!-- BEGIN_POSTS --> and <!-- END_POSTS --> with the provided html_snippet,
-    and write the updated content back to the same file.
+    Read the file at `template_path`, replace everything between `begin_marker`
+    and `end_marker` with the provided html_snippet, and write the updated
+    content back to the same file.
     """
-    # Read the current contents of index.html
     with open(template_path, "r", encoding="utf-8") as f:
         content = f.read()
-
-    begin_marker = "<!-- BEGIN_POSTS -->"
-    end_marker = "<!-- END_POSTS -->"
 
     # Find the indices of the markers
     begin_index = content.find(begin_marker)
@@ -105,18 +114,72 @@ def update_index_html(html_snippet, template_path="./.build/index.html"):
         f.write(new_content)
 
 
-def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
+def render_base_template(main_html, subtitle="", title=None):
     """
-    Scan the `content_dir` for .org blog post files, extract their headers,
-    and return an HTML snippet for the `num_posts` most recent posts.
+    Render a small subset of the site's shared templates for Python-generated
+    pages that still need to follow the common chrome.
+    """
+    base_template = Path("theme/templates/base.html").read_text(encoding="utf-8")
 
-    Expects each .org file to contain headers of the form:
-      #+title:    Post Title
-      #+date:     <YYYY-MM-DD Day HH:MM:SS>
-      #+slug:     post-slug
+    if title is None:
+        title = SITE_TEMPLATE_VARS["site_name"]
 
-    Returns a string containing the section with the three most recent posts,
-    formatted like the snippet in the prompt.
+    rendered = base_template
+    rendered = rendered.replace(
+        "{% block subtitle %}{% endblock %}",
+        escape(subtitle),
+    )
+    rendered = rendered.replace(
+        '{% block title %}{{ site_name | default("cleberg.net") }}{% endblock %}',
+        escape(title),
+    )
+    rendered = rendered.replace(
+        '{% if site_owner is defined %}<meta name="author" content="{{ site_owner }}">{% endif %}',
+        f'<meta name="author" content="{escape(SITE_TEMPLATE_VARS["site_owner"])}">',
+    )
+    rendered = rendered.replace(
+        '{% if site_description is defined %}<meta name="description" content="{{ site_description }}">{% endif %}',
+        f'<meta name="description" content="{escape(SITE_TEMPLATE_VARS["site_description"])}">',
+    )
+    rendered = rendered.replace(
+        '{% if site_keywords is defined %}<meta name="keywords" content="{{ site_keywords }}">{% endif %}',
+        "",
+    )
+    rendered = rendered.replace(
+        '{{ url_for("static", file="styles.min.css") }}',
+        "/styles.min.css",
+    )
+    rendered = rendered.replace("{% block meta %}{% endblock %}", "")
+    rendered = rendered.replace("{% block head %}", "")
+    rendered = rendered.replace("{% endblock %}", "", 1)
+    rendered = rendered.replace("{% block main %}{% endblock %}", main_html)
+
+    return rendered
+
+
+def render_tags_page_html(tags_html):
+    """
+    Render the tags page by using the shared tags/base templates instead of a
+    hand-authored standalone HTML document.
+    """
+    tags_template = Path("theme/templates/tags.html").read_text(encoding="utf-8")
+
+    main_html = tags_template
+    main_html = main_html.replace('{% extends "base.html" %}', "")
+    main_html = main_html.replace(
+        "{% block subtitle %}tags - {% endblock %}",
+        "",
+    )
+    main_html = main_html.replace("{% block main %}", "")
+    main_html = main_html.replace("{% endblock %}", "")
+    main_html = main_html.replace("<!-- BEGIN_TAGS -->\n<!-- END_TAGS -->", tags_html)
+
+    return render_base_template(main_html.strip(), subtitle="tags - ")
+
+
+def get_blog_posts(content_dir="./content/blog"):
+    """
+    Scan blog posts and return normalized metadata for non-draft entries.
     """
     posts = []
 
@@ -124,6 +187,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
         "title": re.compile(r"^#\+title:\s*(.+)$", re.IGNORECASE),
         "date": re.compile(r"^#\+date:\s*[\[<](\d{4}-\d{2}-\d{2})"),
         "slug": re.compile(r"^#\+slug:\s*(.+)$", re.IGNORECASE),
+        "tags": re.compile(r"^#\+filetags:\s*(.+)$", re.IGNORECASE),
         "draft": re.compile(r"^#\+draft:\s*(.+)$", re.IGNORECASE),
     }
 
@@ -131,6 +195,7 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
         title = None
         date_str = None
         slug = None
+        tags = []
         is_draft = False
 
         with org_path.open("r", encoding="utf-8") as f:
@@ -152,6 +217,13 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
                     m = header_patterns["slug"].match(line)
                     if m:
                         slug = m.group(1).strip()
+                        continue
+
+                if not tags:
+                    m = header_patterns["tags"].match(line)
+                    if m:
+                        raw = m.group(1).strip().strip(":")
+                        tags = [t.strip() for t in raw.split(":") if t.strip()]
                         continue
 
                 m = header_patterns["draft"].match(line)
@@ -184,16 +256,20 @@ def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
                     "date_obj": date_obj,
                     "date_full": date_full,
                     "slug": slug,
+                    "tags": tags,
                 }
             )
 
-    # Sort posts by date (newest first)
     posts.sort(key=lambda x: x["date_obj"], reverse=True)
+    return posts
 
-    # Take the top `num_posts`
-    recent = posts[:num_posts]
 
-    # Build HTML lines
+def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
+    """
+    Return an HTML snippet for the `num_posts` most recent blog posts.
+    """
+    recent = get_blog_posts(content_dir)[:num_posts]
+
     lines = []
     for post in recent:
         lines.append('\t<li class="post-list-item">')
@@ -384,15 +460,15 @@ def inject_blog_year_separators(blog_index_path="./.build/blog/index.html"):
     print(f"Blog year separators injected into {blog_index_path}")
 
 
-def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
+def get_tags_html(content_dir="./content/blog"):
     """
-    Scans all blog org files for #+filetags, then writes .build/tags/index.html
-    with one section per tag, each post listed under its tags, sorted newest first.
-    Tags link to anchor IDs on the same page.
+    Build the tag index HTML snippet for the rendered tags template.
     """
-    TAG_ORDER = [
+    preferred_tag_order = [
         "audit",
         "emacs",
+        "development",
+        "ios",
         "linux",
         "personal",
         "privacy",
@@ -401,82 +477,32 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
         "web",
     ]
 
-    header_patterns = {
-        "title": re.compile(r"^#\+title:\s*(.+)$", re.IGNORECASE),
-        "date": re.compile(r"^#\+date:\s*[\[<](\d{4}-\d{2}-\d{2})"),
-        "slug": re.compile(r"^#\+slug:\s*(.+)$", re.IGNORECASE),
-        "tags": re.compile(r"^#\+filetags:\s*(.+)$", re.IGNORECASE),
-        "draft": re.compile(r"^#\+draft:\s*(.+)$", re.IGNORECASE),
-    }
+    tag_map = {}
 
-    tag_map = {tag: [] for tag in TAG_ORDER}
+    for post in get_blog_posts(content_dir):
+        for tag in post["tags"]:
+            tag_map.setdefault(tag, []).append(
+                {
+                    "title": post["title"],
+                    "slug": post["slug"],
+                    "date_obj": post["date_obj"],
+                    "date_str": post["date_str"],
+                }
+            )
 
-    for org_path in Path(content_dir).glob("*.org"):
-        title = date_str = slug = None
-        tags = []
-        is_draft = False
+    ordered_tags = [tag for tag in preferred_tag_order if tag in tag_map]
+    ordered_tags.extend(sorted(tag for tag in tag_map if tag not in preferred_tag_order))
 
-        with org_path.open("r", encoding="utf-8") as f:
-            for line in f:
-                if not title:
-                    m = header_patterns["title"].match(line)
-                    if m:
-                        title = m.group(1).strip()
-                        continue
-                if not date_str:
-                    m = header_patterns["date"].match(line)
-                    if m:
-                        date_str = m.group(1)
-                        continue
-                if not slug:
-                    m = header_patterns["slug"].match(line)
-                    if m:
-                        slug = m.group(1).strip()
-                        continue
-                if not tags:
-                    m = header_patterns["tags"].match(line)
-                    if m:
-                        raw = m.group(1).strip().strip(":")
-                        tags = [t.strip() for t in raw.split(":") if t.strip()]
-                        continue
-                m = header_patterns["draft"].match(line)
-                if m and m.group(1).strip().lower() != "nil":
-                    is_draft = True
-                    break
-                if title and date_str and slug and tags:
-                    break
-
-        if is_draft or not (title and date_str and slug):
-            continue
-
-        try:
-            date_obj = datetime.strptime(date_str, "%Y-%m-%d")
-        except ValueError:
-            continue
-
-        for tag in tags:
-            if tag in tag_map:
-                tag_map[tag].append(
-                    {
-                        "title": title,
-                        "slug": slug,
-                        "date_obj": date_obj,
-                        "date_str": date_str,
-                    }
-                )
-
-    for tag in tag_map:
+    for tag in ordered_tags:
         tag_map[tag].sort(key=lambda x: x["date_obj"], reverse=True)
 
-    # Build TOC
     toc_items = "".join(
         f'<li><a href="#{tag}">{tag}</a> <span class="tag-count">({len(tag_map[tag])})</span></li>'
-        for tag in TAG_ORDER
+        for tag in ordered_tags
     )
 
-    # Build sections
     sections = []
-    for tag in TAG_ORDER:
+    for tag in ordered_tags:
         posts = tag_map[tag]
         items = "\n".join(
             f'<li class="post-list-item">'
@@ -489,48 +515,19 @@ def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
             f'<h2 id="{tag}">{tag}</h2>\n<ul class="post-list">\n{items}\n</ul>'
         )
 
-    html = f"""<!doctype html>
-<html lang=en-us>
-<head>
-<meta charset=utf-8>
-<title>cleberg.net</title>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=author content="Christian Cleberg <hello@cleberg.net>">
-<meta name=description content="Stillness amidst the chaos.">
-<link rel=stylesheet href=/styles.min.css>
-<link rel=icon href=data:,>
-</head>
-<body>
-<a href=#main-content class=skip-link>Skip to content</a>
-<nav aria-label="Site Navigation">
-<ul>
-<li><a href=/>Home</a>
-<li><a href=/apps/>Apps</a>
-<li><a href=/blog/>Blog</a>
-<li><a href=/garden/>Garden</a>
-<li><a href=/guides/>Guides</a>
-<li><a href=/salary/>Salary</a>
-<li><a href=/tags/>Tags</a>
-</ul>
-</nav>
-<main id=main-content>
-<h1>Tags</h1>
-<ul class="tag-toc">{toc_items}</ul>
-{"".join(f"<section>{s}</section>" for s in sections)}
-</main>
-<footer>
-<a href=https://sr.ht/~ccleberg/cleberg.net>Source</a>&#183;
-<a href=/feed.xml>RSS</a>&#183;
-<a href=http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/>Onion</a>&#183;
-<a href=/tips/>Tips</a>
-</footer>
-</body>
-</html>"""
+    return f'<ul class="tag-toc">{toc_items}</ul>\n' + "".join(
+        f"<section>{section}</section>" for section in sections
+    )
 
-    out_dir = Path(build_dir) / "tags"
-    out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / "index.html"
-    out_path.write_text(html, encoding="utf-8")
+
+def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
+    """
+    Render the tags page using the shared template structure.
+    """
+    tags_html = get_tags_html(content_dir)
+    out_path = Path(build_dir) / "tags" / "index.html"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(render_tags_page_html(tags_html), encoding="utf-8")
     print(f"Tags page written to {out_path}")
 
 
@@ -583,7 +580,7 @@ def main():
             minify_css(css_src, css_min)
             run_emacs_publish(dev_mode=False)
             copy_org_sources()
-            update_index_html(html_snippet)
+            update_marked_section(html_snippet)
             inject_blog_year_separators()
             generate_tags_page()
             # minify_html("./.build/index.html", "./.build/index.html")
@@ -599,7 +596,7 @@ def main():
             minify_css(css_src, css_min)
             run_emacs_publish(dev_mode=True)
             copy_org_sources()
-            update_index_html(html_snippet)
+            update_marked_section(html_snippet)
             inject_blog_year_separators()
             generate_tags_page()
             minify_html("./.build/index.html", "./.build/index.html")
