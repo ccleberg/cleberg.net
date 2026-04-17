@@ -16,7 +16,7 @@ project pages:
 
 *Product*
 - [[https://apps.apple.com/us/app/hutch-for-sourcehut/id6760742299][App Store]]
-- [[https://hutch.cleberg.net][Website]]
+- [[https://zerolabs.sh/hutch/][Website]]
 
 *Development*
 - [[https://git.sr.ht/~ccleberg/Hutch][Source]]
