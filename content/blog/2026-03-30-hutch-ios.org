@@ -88,4 +88,4 @@ If you use Sourcehut and iOS, please give Hutch a try and let me know your
 thoughts!
 
 If you find bugs or issues, feel free to file them in the [[https://todo.sr.ht/~ccleberg/Hutch][todo]] tracker or email
-the mailing list at [[mailto:~ccleberg/hutch-devel@lists.sr.ht][hutch-announce]].
+the mailing list at [[mailto:~ccleberg/hutch-devel@lists.sr.ht][hutch-devel]].
