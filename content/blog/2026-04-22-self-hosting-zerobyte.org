@@ -1,0 +1,182 @@
+#+date: [2026-04-22 Wed 09:59:21]
+#+title: Automating Backups with Zerobyte & Cloudflare R2
+#+description: Learn how to self-host Zerobyte and automate your backups!
+#+slug: self-hosting-zerobyte
+#+filetags: :self-hosting:
+
+[[https://zerobyte.app][Zerobyte]] is a slick backup solution you can self host. It's one of the easiest
+apps I've self hosted and the backup jobs are running smoothly.
+
+In this post, I will show you how I've configured backups on my server to backup
+data to Cloudflare R2.
+
+* Installation
+** Docker
+
+First, let's install the app with Docker Compose. Create a directory for your
+=compose.yml= file in a location you'll remember.
+
+#+begin_src bash
+mkdir ~/zerobyte
+cd ~/zerobyte
+nano compose.yml
+#+end_src
+
+Next, paste the following content into the =compose.yml= file. You may want to
+customize the =ports=, =environment=, and =volumes= sections.
+
+#+begin_src yaml
+services:
+  zerobyte:
+    image: ghcr.io/nicotsx/zerobyte:v0.30
+    container_name: zerobyte
+    restart: unless-stopped
+    cap_add:
+      - SYS_ADMIN
+    ports:
+      - "4096:4096"
+    devices:
+      - /dev/fuse:/dev/fuse
+    environment:
+      - TZ=America/Chicago
+      - BASE_URL=https://zb.example.com
+      - APP_SECRET=...
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /var/lib/zerobyte:/var/lib/zerobyte
+      - /path/to/backup:/path/to/backup
+#+end_src
+
+When you're done editing, launch the container.
+
+#+begin_src bash
+sudo docker compose up -d
+#+end_src
+
+At this point, you can access the app via [[http://localhost:4096]].
+
+** Nginx
+
+If you want to be able to access the app remotely, you'll need to utilize
+something like a reverse proxy or tunnelling software.
+
+This example uses Nginx as a reverse proxy. To start, edit a configuration file
+in Nginx:
+
+#+begin_src bash
+cd /etc/nginx/conf.d
+nano zb.conf
+#+end_src
+
+#+begin_src conf
+server {
+    listen 80;
+    server_name zb.example.com;
+    location / { proxy_pass http://127.0.0.1:4096; }
+}
+#+end_src
+
+Once you've created the file, test your Nginx configuration and restart the web
+server.
+
+#+begin_src bash
+sudo nginx -t && sudo systemctl restart nginx.service
+#+end_src
+
+If your version of Nginx uses the =sites-available= structure instead, do this:
+
+#+begin_src bash
+cd /etc/nginx/sites-available
+nano zb
+# Edit the file
+sudo ln -s /etc/nginx/sites-available/zb /etc/nginx/sites-enabled/zb
+#+end_src
+
+You may also need to provision a TLS/SSL certificate and add a =443= block to your
+Nginx configuration above, if you wish to connect securely.
+
+* Configuration
+
+At this point, you will be able to access the app. Upon first login, you will
+need to create an administrator account.
+
+I won't be diving fully into the setup process. I highly suggest reading the
+[[https://zerobyte.app/docs][Zerobyte Docs]]. They are very helpful and will walk you through the setup for
+your provider.
+
+** Volumes
+
+First, create a volume. This is a file or directory on your server that you wish
+to back up. You can see I have two directories connected as volumes.
+
+#+CAPTION: Volumes List
+[[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/volumes_01.webp]]
+
+When you create a volume, you will be able to dictate the name, path, and type.
+
+Remember to add a =volume= in your =compose.yml= file to ensure it's available
+within the app!
+
+#+CAPTION: Volume Configuration
+[[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/volumes_02.webp]]
+
+Finally, you can inspect the files within your volume.
+
+#+CAPTION: Volume Files
+[[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/volumes_03.webp]]
+
+** Repositories
+
+The next step is to connect to a remote repository. This example uses Cloudflare
+R2 buckets.
+
+#+CAPTION: Repositories List
+[[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/repositories_01.webp]]
+
+Within this configuration page, you can see the =Configuration= section in the
+bottom-right detailing the connection information.
+
+#+CAPTION: Repository Configuration
+[[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/repositories_02.webp]]
+
+When each backup runs, it produces a snapshot that you can view and explore.
+
+#+CAPTION: Repository Snapshots
+[[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/repositories_03.webp]]
+
+Within a snapshot, you can review information about the backup job that ran and
+produced the snapshot, as well as the files at that point in time.
+
+#+CAPTION: Snapshot Details
+[[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/repositories_04.webp]]
+
+** Backups
+
+You can create any backup jobs (daily, weekly, monthly, specific days, or with a
+cron pattern). This allows you to specify:
+- The volume to be backed up
+- The repository to back up to
+- The schedule
+- The files to backup (all will be backed up if nothing is specifically selected)
+- Include/exclude patterns
+- Retention policies
+- Custom restic patterns
+
+#+CAPTION: Backup Jobs
+[[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/backups_01.webp]]
+
+Within a backup job, you can configure the related notifications, snapshots, or
+backup/edit/cleanup the job.
+
+#+CAPTION: Backup Job Details
+[[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/backups_02.webp]]
+
+** Notifications
+
+Lastly, you can enable various notification channels to receive alerts when jobs
+start, fail, complete, etc.
+
+I have used an SMTP email provider to send myself emails upon these points.
+
+#+CAPTION: Notification Settings
+[[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/notifications.webp]]
