@@ -58,7 +58,7 @@ At this point, you can access the app via [[http://localhost:4096]].
 ** Nginx
 
 If you want to be able to access the app remotely, you'll need to utilize
-something like a reverse proxy or tunnelling software.
+something like a reverse proxy or tunneling software.
 
 This example uses Nginx as a reverse proxy. To start, edit a configuration file
 in Nginx:
