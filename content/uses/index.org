@@ -16,7 +16,7 @@ threat model justification.
 
 | Technology            | What I Use              | Threat Model                                                                                        |
 |-----------------------+-------------------------+-----------------------------------------------------------------------------------------------------|
-| Registrar             | [[https://njal.la][Njalla]]                  | Registers domains on your behalf. No WHOIS identity exposure.                                       |
+| Registrar             | [[https://cloudflare.com][Cloudflare]]              | WHOIS privacy, low cost, integrates cleanly if you use other Cloudflare products.                   |
 | DNS                   | [[https://cloudflare.com][Cloudflare]]              | Portable DNS, secure infrastructure, and acceptable privacy.                                        |
 | Security              | [[https://cloudflare.com][Cloudflare]] + [[https://github.com/fail2ban/fail2ban][fail2ban]]   | Automated auth-failure bans. Minimal Cloudflare functionality enabled.                              |
 | Routing               | [[https://ui.com/][UniFi]]                   | Local network segmentation.                                                                         |
@@ -33,7 +33,7 @@ threat model justification.
 | Browser(s)            | [[https://www.torproject.org/][Tor]] + [[https://www.apple.com/safari/][Safari]]            | Tor for anonymity-critical use. Safari for hardened daily use.                                      |
 | Version Control       | [[https://git-scm.com/][Git (CLI)]]               | Decentralized. The repo is the backup.                                                              |
 | Git Host              | [[https://sr.ht][SourceHut]] + [[https://github.com/ccleberg][GitHub]]      | SourceHut is the primary and GitHub is the mirror.                                                  |
-| CI/CD                 | [[https://git.sr.ht/~ccleberg/cleberg.net/tree/main/item/build.py][build.py]] + [[https://builds.sr.ht][builds.sr.ht]] | A Python script and SSH. builds.sr.ht for convenience, but not required.                            |
+| CI/CD                 | [[https://git.sr.ht/~ccleberg/cleberg.net/tree/main/item/build.py][build.py]] + [[https://builds.sr.ht][builds.sr.ht]] | A Python script and SSH. builds.sr.ht for convenience but not required.                             |
 | Email Host            | [[https://soverin.com/][Soverin]]                 | Privacy-focused provider.                                                                           |
 | Search Engine         | [[https://docs.searxng.org/][SearXNG]] (self-hosted)   | Queries route through my own instance. No third-party search profile.                               |
 | Backups               | N/A                     | Nothing to back up. No user data. Source mirrored via Git.                                          |
