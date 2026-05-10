@@ -1,16 +1,15 @@
 #+title: now
 #+slug: index
 #+options: toc:nil
-#+date: [2026-04-08 Wed 10:54:00]
+#+date: [2026-05-10 Sun 12:26:24]
 #+description: Read about what I'm doing now.
 
 This is a [[https://nownownow.com/about][/now]] page.
 
 * Work
 
-- Steadily working through my 3/31 client and working through planning and
-  walkthroughs for all my 9/30 and 12/31 clients.
-- Launching my national Automation & AI initiative for the US today.
+- Launched my national Automation & AI initiative for the US.
+- Trying to figure out my future.
 
 * Media
 
@@ -18,24 +17,26 @@ This is a [[https://nownownow.com/about][/now]] page.
 If you're actually interested, email or message me to talk about media!/
 
 - Playing some games:
-  - Diablo IV
+  - Assassin's Creed IV: Black Flag
+  - Call of Duty Black Ops 7
+  - Halo Infinite
+  - PGA Tour
   - Rocket League
-  - Runescape 3
 - Watching some shows:
-  - Fallout (2024)
+  - From the New World (2012)
   - Home Improvement (1991)
-  - Ridiculousness (2011)
+  - Malcolm in the Middle: Life's Still Unfair (2026)
 - Watched some movies:
-  - The Banshees of Inisherin (2022)
-  - I'm Thinking of Ending Things (2020)
-  - Solo Mio (2026)
+  - The Break Up (2006)
+  - Gridiron Gang (2006)
+  - Midnight in Paris (2011)
 
 * Tech
 
 - Launched 3 iOS apps:
   - [[https://apps.apple.com/us/app/daybyday-learn/id6760321939][DayByDay]]: A simple children's learning app
   - [[https://apps.apple.com/us/app/domaindig/id6760368004][DomainDig]]: A handy DNS lookup tool with many features
-  - [[https://apps.apple.com/us/app/hutch-for-sourcehut/id6760742299][Hutch for SourceHut]]: A polished SourceHut client in native Swift
+  - [[https://apps.apple.com/us/app/hutch-for-sourcehut/id6760742299][Hutch for SourceHut]]: A polished sourcehut client in native Swift
 - Continuing to optimize my website and servers.
 
 * Hobbies
