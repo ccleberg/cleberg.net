@@ -10,7 +10,7 @@ img { max-width: 100%; }
 .post-list-year { list-style: none; margin-top: 1rem; margin-bottom: 0.5rem; font-weight: bold; }
 .skip-link { display: none; }
 footer { margin: 2rem 0;}
-pre, blockquote { margin: 1rem 0; padding: 0.5rem; background-color: #cccccc; }
+pre, blockquote { margin: 1rem 0; padding: 0.5rem; background-color: #eee; }
 pre { overflow: auto; white-space: pre; }
 blockquote p { margin: 0; }
 code { color: #942192; }
