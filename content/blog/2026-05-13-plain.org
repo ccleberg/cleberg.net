@@ -1,0 +1,202 @@
+#+date: [2026-05-13 Wed 13:03:00]
+#+title: Plain Text, Plain Language
+#+description: If the file is portable but the writing is opaque, you only solved half the problem.
+#+slug: plain
+#+filetags: :emacs:writing:
+
+* Plain Text Won
+
+There has been a battle around how to format and store text since computers were
+invented.
+
+As computers moved to a more consumer-facing market, developers faced the
+challenge of determining the best way to store text. Early consumer software
+such as WordStar, WordPerfect, and Microsoft Word implemented proprietary
+document formats and rich-text systems, including binary word processor files
+and later formats such as RTF, to let users style, print, and exchange
+documents. These tools made sense for office work, but they also moved writing
+further away from the simplest representation of text: characters in a file.
+
+Plain text never disappeared. It remained the foundation of source code, logs,
+configuration files, email, data formats, documentation, and the web. Now, with
+the rise of LLMs and agentic workflows, it feels even more obvious that plain
+text has won. Corporations may still save Word documents, share PowerPoints, and
+use other formats, but they are increasingly turning around and using agents to
+extract, summarize, transform, and rewrite that same content as Markdown or some
+other plain-text-adjacent format.
+
+Whether another format is used somewhere along the way, the center of gravity is
+moving back toward text that can be read, searched, copied, diffed, transformed,
+and understood without specialized software.
+
+* Optimizing for Usability
+
+Great, Christian believes plain text won. So what?
+
+Let's think about /why/ we store documents and text.
+
+For personal reasons, we may take notes, write stories and poems, send emails
+and messages of other types, post online, and any number of other reasons. For
+work, we do largely the same as we do personally, but we also create
+presentations, documents, memos, letters, notices, manuals, documentation, and
+other artifacts specific to our jobs. Doctors write prescriptions, architects
+create plans, auditors create working papers and reports, and so on.
+
+Think about each of these and then imagine that each was produced by Word or
+another piece of software where the document can only be opened in that specific
+application. If you don't have access to the same application, whether due to
+cost, sanctions, licensing, operating system support, or another reason, you're
+effectively banned from ever viewing that document, even if it's expressly
+intended for you.
+
+In contrast, a plain text document is accessible on every major platform
+available today. Modern browsers can open plain text files directly, depending
+on the file extension and browser settings, and desktop, server, and mobile
+operating systems are capable of opening these files with bundled editors or
+viewers. You don't have to install a separate application, accept a vendor's
+terms, or hope the original software still exists. You can open the file and
+read the content, even if lightweight markup has been applied to it.
+
+** Plain Text Markup
+
+More specifically, I want to talk about a few options beyond literal plain text.
+There are numerous markup languages that provide structure and formatting while
+remaining readable as text, but a few sit at the top.
+
+1. [[https://orgmode.org][Org Mode]]: Org is my personal favorite. While you need Emacs to experience the
+   full functionality of Org's interactive components, Org files remain readable
+   outside of Emacs because the syntax is still plain text.
+2. [[https://daringfireball.net/projects/markdown/][Markdown]]: Markdown is the dominant lightweight markup language. It is used
+   across AI tools, social media, documentation platforms, static site
+   generators, and note-taking apps.
+3. [[https://en.wikipedia.org/wiki/TeX][TeX]]: When you need a language that can handle advanced formatting
+   requirements, such as mathematical expressions or chemical notation, TeX is
+   the obvious choice.
+
+These languages introduce additional characters into a plain text document, but
+they do not usually detract from the readability of the document itself. They
+create documents that can be read directly for quick understanding or rendered
+by software that understands the markup syntax.
+
+* Plain Language
+
+Great, we've established the benefits of plain text and optional markup, but
+that's only half of the battle.
+
+A file can be open and still be opaque. I don't want to open your plain text
+document and struggle to understand the message.
+
+It is entirely possible to write a Markdown document that is portable, durable,
+grep-able, and miserable to read. The format can be simple while the writing
+remains vague, dense, passive, or full of unexplained jargon.
+
+That is where plain language matters.
+
+Plain language is not simplistic language. It does not mean avoiding technical
+terms, removing nuance, or writing for the lowest possible reading level. It
+means writing so the intended reader can understand the point without doing
+unnecessary work.
+
+In practice, that means:
+
+1. Use the simplest word that accurately communicates the idea.
+2. Prefer direct sentences over inflated ones.
+3. Define terms when the audience may not know them.
+4. Put the main point before the supporting detail.
+5. Avoid passive voice when the actor matters.
+6. Remove filler that does not change the meaning.
+
+The same reasons I prefer plain text apply to plain language. Plain text removes
+technical friction. Plain language removes cognitive friction.
+
+A proprietary document format can make content harder to open. Bad writing can
+make content harder to use.
+
+** Plain Text Without Plain Language
+
+Plain text gives you portability. It does not automatically give you clarity.
+
+A =README= can be written in Markdown and still fail to explain what the project
+does. A runbook can be stored in Git and still assume tribal knowledge. An audit
+workpaper can be easy to archive and still fail to explain the conclusion. A
+policy can be available to every employee and still be written in a way that
+discourages anyone from reading it.
+
+Have you ever read through a document or standard that is obviously meant to be
+accessible technologically and yet, you get nothing out of it? You could re-read
+it numerous times and never get an answer because the author was not focused on
+accessible language.
+
+The file is accessible, but the meaning is not, and that matters a lot. A
+document is not useful because it exists in an open format. It is useful when
+someone can read it, understand it, and act on it.
+
+** Plain Language Is Not Anti-Technical
+
+Plain language does not mean removing technical precision. Sometimes the
+technical term is the clearest term.
+
+For example, this is vague:
+
+#+begin_quote
+The authentication subsystem exhibited anomalous behavior resulting in downstream
+workflow degradation.
+#+end_quote
+
+This is clearer:
+
+#+begin_quote
+Login failed for some users, which blocked deployments that required approval.
+#+end_quote
+
+This is still technical, but plain:
+
+#+begin_quote
+The CI runner could not authenticate to the package registry because the token
+expired.
+#+end_quote
+
+The goal is not to make everything casual. The goal is to make the writing carry
+the meaning directly.
+
+** The Same Argument
+
+The argument for plain text and the argument for plain language are the same
+argument applied at different layers.
+
+| Plain text value      | Plain language equivalent |
+|-----------------------+---------------------------|
+| No proprietary format | No proprietary vocabulary |
+| Easy to inspect       | Easy to understand        |
+| Works anywhere        | Works for more readers    |
+| Minimal tooling       | Minimal friction          |
+| Long-term durable     | Long-term interpretable   |
+| Easy to transform     | Easy to act on            |
+
+Plain text is the storage layer and plain language is the interface. Or, said
+more /plainly/, plain text and plain language should depend on each other and
+neither should be ignored.
+
+If the format is portable but the writing is opaque, you only solved half the
+problem.
+
+* Conclusion
+
+Plain text gives information a longer life. It makes writing easier to store,
+move, search, version, inspect, and transform.
+
+But plain text does not guarantee useful writing. You can put bad prose in a
+good format. You can store unclear decisions in Markdown. You can preserve vague
+notes forever. You can make a document technically accessible while leaving it
+practically unreadable.
+
+(Have you ever read a README clearly written by AI without any editing from the
+repository owner? It can quickly become nonsense as the AI tries to constrain
+its content to the best possible README standard, while it loses any meaning of
+the project itself.)
+
+That is why plain language belongs in the same conversation.
+
+If the goal is durable, useful communication, the format and the writing have to
+serve the same purpose. Plain text keeps the document accessible. Plain language
+keeps the meaning accessible.
