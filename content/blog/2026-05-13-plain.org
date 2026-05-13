@@ -116,7 +116,7 @@ make content harder to use.
 
 Plain text gives you portability. It does not automatically give you clarity.
 
-A =README= can be written in Markdown and still fail to explain what the project
+A README can be written in Markdown and still fail to explain what the project
 does. A runbook can be stored in Git and still assume tribal knowledge. An audit
 workpaper can be easy to archive and still fail to explain the conclusion. A
 policy can be available to every employee and still be written in a way that
@@ -127,7 +127,7 @@ accessible technologically and yet, you get nothing out of it? You could re-read
 it numerous times and never get an answer because the author was not focused on
 accessible language.
 
-The file is accessible, but the meaning is not, and that matters a lot. A
+The file is accessible, but the meaning is not and that matters a lot. A
 document is not useful because it exists in an open format. It is useful when
 someone can read it, understand it, and act on it.
 
@@ -190,10 +190,10 @@ good format. You can store unclear decisions in Markdown. You can preserve vague
 notes forever. You can make a document technically accessible while leaving it
 practically unreadable.
 
-(Have you ever read a README clearly written by AI without any editing from the
+Have you ever read a README clearly written by AI without any editing from the
 repository owner? It can quickly become nonsense as the AI tries to constrain
 its content to the best possible README standard, while it loses any meaning of
-the project itself.)
+the project itself.
 
 That is why plain language belongs in the same conversation.
 
