@@ -30,7 +30,7 @@ threat model justification.
 | Editor                | [[https://github.com/doomemacs/doomemacs][Doom Emacs]]              | Editor and markup are the same tool. No proprietary format.                                         |
 | Markup Language       | [[https://orgmode.org][org-mode]]                | Plain text. Readable without any software. Version-control native.                                  |
 | Image Processing      | [[https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/w/webp.rb][webP (CLI)]]              | CLI-only. No GUI, no cloud, no account.                                                             |
-| Browser(s)            | [[https://www.torproject.org/][Tor]] + [[https://www.apple.com/safari/][Safari]]            | Tor for anonymity-critical use. Safari for hardened daily use.                                      |
+| Browser(s)            | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net][LibreWolf]]         | Tor for anonymity-critical use. LibreWolf for hardened daily use.                                   |
 | Version Control       | [[https://git-scm.com/][Git (CLI)]]               | Decentralized. The repo is the backup.                                                              |
 | Git Host              | [[https://sr.ht][SourceHut]] + [[https://github.com/ccleberg][GitHub]]      | SourceHut is the primary and GitHub is the mirror.                                                  |
 | CI/CD                 | [[https://git.sr.ht/~ccleberg/cleberg.net/tree/main/item/build.py][build.py]] + [[https://builds.sr.ht][builds.sr.ht]] | A Python script and SSH. builds.sr.ht for convenience but not required.                             |
