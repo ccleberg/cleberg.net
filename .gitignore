@@ -7,3 +7,4 @@ public/
 readme.html
 venv/
 theme/static/styles.min.css
+__pycache__/
