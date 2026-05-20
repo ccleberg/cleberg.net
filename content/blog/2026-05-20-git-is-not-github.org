@@ -1,0 +1,191 @@
+#+date: [2026-05-20 Wed 11:56:00]
+#+title: Git is Not GitHub
+#+description: Git tracks code history. GitHub and other Git hosts add collaboration, access, review, and workflow controls around it.
+#+slug: git-is-not-github
+#+filetags: :development:
+
+* Git Is Not GitHub
+
+People often use "Git" and "GitHub" interchangeably. Sometimes it's for
+convenience, but often it's a genuine lack of clarity around these two concepts.
+I work with IT auditors daily and you'd be surprised how often I come back to
+explain this topic, which is why I've written an internal document and am
+rolling that into this blog post itself to share with a broader audience.
+
+The simplest possible explanation I can provide is that Git is the version
+control system itself, while GitHub is one of many platforms that offer Git
+hosting, as well as custom features that improve functionality on top of Git
+(e.g., pull requests).
+
+The distinction matters, especially in an audit context, because there are facts
+and features inherent to Git that should be clearly understood before thinking
+about the Git host. For an auditor, this affects decisions around risk
+assessment, procedures to obtain evidence, and documentation of control
+processes.
+
+For example, a developer can create a commit in Git after changing some code or
+files with a repository. This does *not* automatically show that the change was
+reviewed, approved, tested, or deployed through the appropriate process(es).
+
+* Feature Comparison
+
+Let's start by comparing features before we dive into the details. While this is
+not all-encompassing, it helps set the context for the discussion we're about to
+have.
+
+| Feature / activity                    | Git | Git host |
+|---------------------------------------+-----+----------|
+| Track file changes                    | ✓   |          |
+| Create commits                        | ✓   |          |
+| View commit history                   | ✓   | ✓        |
+| View file diffs                       | ✓   | ✓        |
+| Create branches                       | ✓   |          |
+| Merge branches                        | ✓   |          |
+| Rebase commits                        | ✓   |          |
+| Tag releases or versions              | ✓   | ✓        |
+| Clone a repository                    | ✓   |          |
+| Push and pull changes                 | ✓   | ✓        |
+| Store a shared remote repository      |     | ✓        |
+| Browse repository in a web UI         |     | ✓        |
+| Pull requests / merge requests        |     | ✓        |
+| Code review comments                  |     | ✓        |
+| Reviewer approvals                    |     | ✓        |
+| Branch protection rules               |     | ✓        |
+| Required status checks before merge   |     | ✓        |
+| User and team access management       |     | ✓        |
+| Repository admin roles                |     | ✓        |
+| Audit logs                            |     | ✓        |
+| CI/CD pipelines                       |     | ✓        |
+| Deployment environments               |     | ✓        |
+| Secrets / environment variables       |     | ✓        |
+| Issue tracking                        |     | ✓        |
+| Project boards                        |     | ✓        |
+| Security scanning / dependency alerts |     | ✓        |
+
+#+begin_quote
+Git hosts vary by platform. GitHub uses "pull requests," while GitLab commonly
+uses "merge requests." The concept is similar, but the available controls,
+terminology, logs, and evidence differ by host.
+#+end_quote
+
+* Git Tracks the History
+
+Now that we have looked at the feature comparison, let's dive into the details
+of both Git and Git hosts.
+
+[[https://git-scm.com][Git]] is a distributed version control system. It is intended to track changes to
+files over time through a feature called a *commit*: a collection of changes to
+files since the last commit. Developers use it to create these commits, create
+branches, merge changes back into the primary branch, rebase work, tag versions,
+and inspect project history.
+
+Git does not require GitHub, or any other hosting platform. It can run entirely
+on a developer's laptop. A repository can exist locally, on an internal server,
+on a shared network path, or on another Git host.
+
+For example, I can create a local Git repository, expose it through the Git
+protocol, and share this info with a friend or coworker. Then, they can clone my
+repository and we can collaborate by making changes independently and using
+commits, branches, etc. to push changes back and forth with each other. In this
+scenrio, there is *no* host and we are essentially a distributed network of our
+own.
+
+At its core, Git answers technical history questions:
+
+- What changed?
+- Who authored the change?
+- When was the change made?
+- What files were affected?
+- What does this version contain?
+- How did this branch differ from that branch?
+
+That is valuable, but it is not the whole development process. This is where Git
+hosts introduce useful, addition features on top of Git.
+
+* Git Hosts Add the Workflow
+
+A Git host stores Git repositories and adds collaboration, workflow, and
+governance features around them. In an audit or compliance context, this is
+where most of the controls originate that mitigate risks with the system
+development lifecycle (SDLC).
+
+GitHub is the most familiar example, so I will use that in this post, but it is
+not the only one. Other Git hosts include GitLab, Bitbucket, Azure DevOps Repos,
+Sourcehut, Gitea, and Forgejo.
+
+These platforms commonly add features such as:
+
+| Feature                         | Purpose                                                                                           |
+|---------------------------------+---------------------------------------------------------------------------------------------------|
+| Pull requests or merge requests | Propose changes, review them, and merge them into a target branch.                                |
+| Code review comments            | Allow reviewers to comment on specific lines, files, or overall changes.                          |
+| Reviewer approvals              | Record that one or more reviewers approved a proposed change before merge.                        |
+| Branch protection rules         | Restrict how important branches can be changed, such as preventing direct pushes or force pushes. |
+| Required status checks          | Require tests, builds, scans, or other checks to pass before a change can be merged.              |
+| User and team permissions       | Control who can read, write, maintain, or administer repositories.                                |
+| Audit logs                      | Record important administrative, access, repository, and workflow events.                         |
+| Issue tracking                  | Track bugs, enhancements, tasks, and other development work items.                                |
+| Project boards                  | Organize work items by status, priority, sprint, release, or team workflow.                       |
+| CI/CD integrations              | Build, test, package, or deploy code through automated pipelines.                                 |
+| Secrets management              | Store sensitive values used by workflows, such as tokens, keys, and credentials.                  |
+| Security scanning               | Identify risks such as exposed secrets, vulnerable dependencies, and insecure code patterns.      |
+
+That is why the same Git repository can behave differently depending on where it
+is hosted. GitHub, GitLab, Bitbucket, Azure DevOps, and Sourcehut all support
+Git repositories, but their review workflows, permissions, logs, automation, and
+terminology differ.
+
+* Audit Implications
+
+Using GitHub as an example, let's walk through a common audit approach to the
+common change management (CM) or program development (PD) controls.
+
+First, here are some common controls:
+- Changes are reviewed and approved prior to deployment.
+- The repository is configured to:
+  - prevent force pushes;
+  - require X approvals;
+  - prevent approvals from the author or a person who can committed within the
+    pull request;
+  - require testing to pass prior to merging;
+  - include the relevant change ticket(s)/documentation.
+- Users with development access are segregated from users with access to approve
+  and deploy changes.
+  - /OR/: Management performs a review on an XYZ basis to ensure deployed
+    changes were authorized and appropriate.
+- Management performs a review on an XYZ basis to ensure branch protection
+  settings were not inappropriately modified.
+
+Now, where can we find this evidence? Let's step through each
+- Normally, reviews and approvals can be found directly within the pull/merge
+  request. For platforms such as Github, this platform enables code reviews,
+  comments, feedback, and checks directly within the PR flow. In certain cases,
+  this may be documented in a change ticket system and the ticket is referenced
+  within the PR to prove that the PR was tested, reviewed, and approved prior to
+  merging.
+- For configurations, GitHub supports both [[https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule][classic branch protections rules]] and
+  [[https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets][rulesets]], which can enforce all of the checks I mentioned above.
+- For access, it depends on the company's setup. They may be using GitHub
+  Enterprise, which offers them more control over access, and teams can inspect
+  the access inheritence through those Enterprise settings. Otherwise,
+  non-enterprise GitHub organizations can show evidence of access at both the
+  organization level and the repository level. Auditors can inspect the levels
+  of access and inheritence to ensure that no users have the ability to develop
+  changes, manage branch protections, approve changes, and deploy changes.
+- For branch protection settings, management can provide auditors with an export
+  of the audit logs relevant to the in-scope repositories. This will show you if
+  any events occurred that would have disabled or modified the branch
+  protections in place.
+
+If your inspecting a project where CI/CD pipelines matter, you can also dive
+into the team's configuration of their pipeline in terms of the logic, access to
+modify, and any relevant schedules or triggers.
+
+* Conclusion
+
+Hopefully at this point, it's clear that Git is not GitHub. While they are
+related and can be confusing for non-developers, it's important to understand
+the distinction.
+
+Without this understanding, everything can fall apart in your understanding,
+risk assessment, and scoping of an audit.
