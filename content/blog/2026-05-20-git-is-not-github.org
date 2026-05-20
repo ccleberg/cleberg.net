@@ -1,5 +1,5 @@
 #+date: [2026-05-20 Wed 11:56:00]
-#+title: Git is Not GitHub
+#+title: Git Is Not GitHub
 #+description: Git tracks code history. GitHub and other Git hosts add collaboration, access, review, and workflow controls around it.
 #+slug: git-is-not-github
 #+filetags: :development:
