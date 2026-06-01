@@ -491,7 +491,9 @@ def get_tags_html(content_dir="./content/blog"):
             )
 
     ordered_tags = [tag for tag in preferred_tag_order if tag in tag_map]
-    ordered_tags.extend(sorted(tag for tag in tag_map if tag not in preferred_tag_order))
+    ordered_tags.extend(
+        sorted(tag for tag in tag_map if tag not in preferred_tag_order)
+    )
 
     for tag in ordered_tags:
         tag_map[tag].sort(key=lambda x: x["date_obj"], reverse=True)
