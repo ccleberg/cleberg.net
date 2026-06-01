@@ -1,0 +1,132 @@
+#+date: [2026-06-01 Mon 12:02:02]
+#+title: Bring MOTD to macOS
+#+description:
+#+slug: macos-motd
+#+filetags: :mac:
+
+* Messages of the Day (=motd=)
+
+A [[https://en.wikipedia.org/wiki/Message_of_the_day][message of the day]] is, in computer terms, a welcome message that provides
+information and may help users logging onto the system. This is useful for
+numerous reasons, depending on the system, such as community announcements,
+compliance requirements, contextual information for that system, etc.
+
+In this post, I'll be walking through a simple way to generate a message of the
+day for macOS. You can see the end result in this screenshot below:
+
+#+caption: macOS message of the day
+#+attr_html: :alt Terminal output of motd.sh showing the system and user information upon launching a new shell.
+[[https://img.cleberg.net/blog/20260601-macos-motd/macos-motd.webp]]
+
+For an example of a system-provided =motd=, here's the =motd= on my Ubuntu server
+showing the server's default information and any relevant add-ons, such as the
+LAN cockpit URL:
+
+#+caption: Ubuntu message of the day
+#+attr_html: :alt Terminal output of Ubuntu's default server message of the day, showing system information.
+[[https://img.cleberg.net/blog/20260601-macos-motd/ubuntu-motd.webp]]
+
+* Create the Message
+
+First, we need to create the message. In this example, I've created a custom
+shell script below that uses terminal formatting to generate a structured
+output. This script checks for:
+
+- username
+- hostname
+- profile management
+- WiFi SSID
+- IP address
+- Mullvad status
+- battery status
+- uptime
+
+To do this, create a script in your user directory:
+
+#+begin_src shell
+nano ~/.motd.sh
+#+end_src
+
+Then paste the content below and modify as needed:
+
+#+begin_src shell
+BOLD='\033[1m'
+DIM='\033[2m'
+RESET='\033[0m'
+
+HOST=$(scutil --get ComputerName 2>/dev/null || hostname)
+
+IP=$(ipconfig getifaddr en0 2>/dev/null || ipconfig getifaddr en1 2>/dev/null)
+IP=${IP:-unavailable}
+
+SSID=$(networksetup -getairportnetwork en0 2>/dev/null | sed 's/^Current Wi-Fi Network: //')
+case "$SSID" in
+  ""|"You are not associated with an AirPort network.")
+    SSID="unavailable"
+    ;;
+esac
+
+BATTERY=$(pmset -g batt 2>/dev/null | awk -F'; *' '
+  NR==2 {
+    gsub(/^ +| +$/, "", $2)
+    gsub(/^ +| +$/, "", $3)
+    sub(/ present: true$/, "", $3)
+    print $2 ", " $3
+  }
+')
+BATTERY=${BATTERY:-unavailable}
+
+UPTIME=$(uptime | sed 's/^.*up //; s/, [0-9]* user.*//; s/, load averages.*//')
+UPTIME=${UPTIME:-unavailable}
+
+if profiles status -type enrollment 2>/dev/null | grep -qi "MDM enrollment: Yes"; then
+  MANAGED="yes"
+else
+  MANAGED="no"
+fi
+
+VPN="unavailable"
+
+if command -v mullvad >/dev/null 2>&1; then
+  STATUS=$(mullvad status 2>/dev/null)
+  VPN=$(printf '%s\n' "$STATUS" | head -1)
+  VPN=${VPN:-unavailable}
+fi
+
+printf "\n"
+printf "  ${DIM}%-14s${RESET}${BOLD}%s${RESET} ${DIM}%s${RESET}\n" "$USER" "$(uname -sr)"
+printf "  ${DIM}%-14s${RESET}%s\n" "host" "$HOST"
+printf "  ${DIM}%-14s${RESET}%s\n" "managed" "$MANAGED"
+printf "  ${DIM}%-14s${RESET}%s\n" "wifi" "$SSID"
+printf "  ${DIM}%-14s${RESET}%s\n" "ip" "$IP"
+printf "  ${DIM}%-14s${RESET}%s\n" "mullvad" "$VPN"
+printf "  ${DIM}%-14s${RESET}%s\n" "battery" "$BATTERY"
+printf "  ${DIM}%-14s${RESET}%s\n" "uptime" "$UPTIME"
+printf "\n"
+#+end_src
+
+Finally, modify the script file to enable execution:
+
+#+begin_src sh
+chmod +x ~/.motd.sh
+#+end_src
+
+* Load the Message
+
+At this point, the script is ready. We simply need to tell macOS to execute it
+whenever the user launches a new shell.
+
+To do this, open the =.zprofile= file add a line referencing the script:
+
+#+begin_src shell
+nano ~/.zprofile
+#+end_src
+
+#+begin_src
+# Display Message of the Day (MOTD)
+./motd.sh
+#+end_src
+
+All done! This method is easily customizable and allows for use of dotfile
+management systems, such as stow, since the files live in the user's home
+directory.
