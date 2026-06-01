@@ -1,6 +1,6 @@
 #+date: [2026-06-01 Mon 12:02:02]
 #+title: Bring MOTD to macOS
-#+description:
+#+description: Learn how to quickly and easily create a custom message of the day for macOS systems.
 #+slug: macos-motd
 #+filetags: :mac:
 
