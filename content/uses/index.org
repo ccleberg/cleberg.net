@@ -34,7 +34,7 @@ threat model justification.
 | Version Control       | [[https://git-scm.com/][Git (CLI)]]               | Decentralized. The repo is the backup.                                                              |
 | Git Host              | [[https://sr.ht][SourceHut]] + [[https://github.com/ccleberg][GitHub]]      | SourceHut is the primary and GitHub is the mirror.                                                  |
 | CI/CD                 | [[https://git.sr.ht/~ccleberg/cleberg.net/tree/main/item/build.py][build.py]] + [[https://builds.sr.ht][builds.sr.ht]] | A Python script and SSH. builds.sr.ht for convenience but not required.                             |
-| Email Host            | [[https://soverin.com/][Soverin]]                 | Privacy-focused provider.                                                                           |
+| Email Host            | [[https://migadu.com][Migadu]]                  | Straightforward usage-based provider from Switzerland.                                              |
 | Search Engine         | [[https://docs.searxng.org/][SearXNG]] (self-hosted)   | Queries route through my own instance. No third-party search profile.                               |
 | Backups               | N/A                     | Nothing to back up. No user data. Source mirrored via Git.                                          |
 | Monitoring            | N/A                     | Monitoring creates logs. Logs are a liability.                                                      |
