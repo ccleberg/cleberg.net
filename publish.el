@@ -86,14 +86,6 @@
  :output ".build/salary/{{ slug }}.html"
  :url "/salary/{{ slug }}.html")
 
-;; Guides page route
-(weblorg-route
- :name "guides"
- :input-pattern "content/guides/*.org"
- :template "page.html"
- :output ".build/guides/{{ slug }}.html"
- :url "/guides/{{ slug }}.html")
-
 ;; Now page route
 (weblorg-route
  :name "now"
