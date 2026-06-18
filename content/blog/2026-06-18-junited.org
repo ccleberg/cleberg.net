@@ -1,0 +1,15 @@
+#+date: [2026-06-18 Thu 11:53:00]
+#+title: Junited 2026
+#+description: My Junited 2026 list of links.
+#+slug: junited
+#+filetags: :web:
+
+Like others participating in [[https://robertbirming.com/junited/][Junited]] have mentioned, I recently discovered this
+project and love the idea. While the month is more than halfway past, I'll make
+sure to update this post with the best links I discover throughout the remainder
+of June 2026.
+
+- [[https://hypersubject.net/entries/2026/06/smallweb-is-becoming-an-archipelago/][Smallweb is Becoming an Archipelago]]
+- [[https://xvw.lol/en/articles/emacs-start.html][Emacs, how it all started (for me)]]
+- [[https://nelson.cloud/.gitignore-isnt-the-only-way-to-ignore-files-in-git/][.gitignore Isn’t the Only Way To Ignore Files in Git]]
+- [[https://www.lesswrong.com/posts/6Xgy6CAf2jqHhynHL/what-2026-looks-like][What 2026 looks like]]
