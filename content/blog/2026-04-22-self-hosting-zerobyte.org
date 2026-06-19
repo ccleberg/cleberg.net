@@ -7,7 +7,7 @@
 [[https://zerobyte.app][Zerobyte]] is a slick backup solution you can self host. It's one of the easiest
 apps I've self hosted and the backup jobs are running smoothly.
 
-In this post, I will show you how I've configured backups on my server to backup
+In this post, I will show you how I've configured backups on my server to back up
 data to Cloudflare R2.
 
 * Installation
@@ -157,7 +157,7 @@ cron pattern). This allows you to specify:
 - The volume to be backed up
 - The repository to back up to
 - The schedule
-- The files to backup (all will be backed up if nothing is specifically selected)
+- The files to back up (all will be backed up if nothing is specifically selected)
 - Include/exclude patterns
 - Retention policies
 - Custom restic patterns
@@ -166,7 +166,7 @@ cron pattern). This allows you to specify:
 [[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/backups_01.webp]]
 
 Within a backup job, you can configure the related notifications, snapshots, or
-backup/edit/cleanup the job.
+back up, edit, or clean up the job.
 
 #+CAPTION: Backup Job Details
 [[https://img.cleberg.net/blog/20260422-self-hosting-zerobyte/backups_02.webp]]

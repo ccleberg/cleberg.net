@@ -87,7 +87,7 @@ For example, I can create a local Git repository, expose it through the Git
 protocol, and share this info with a friend or coworker. Then, they can clone my
 repository and we can collaborate by making changes independently and using
 commits, branches, etc. to push changes back and forth with each other. In this
-scenrio, there is *no* host and we are essentially a distributed network of our
+scenario, there is *no* host and we are essentially a distributed network of our
 own.
 
 At its core, Git answers technical history questions:
@@ -100,7 +100,7 @@ At its core, Git answers technical history questions:
 - How did this branch differ from that branch?
 
 That is valuable, but it is not the whole development process. This is where Git
-hosts introduce useful, addition features on top of Git.
+hosts introduce useful, additional features on top of Git.
 
 * Git Hosts Add the Workflow
 
@@ -145,7 +145,7 @@ First, here are some common controls:
 - The repository is configured to:
   - prevent force pushes;
   - require X approvals;
-  - prevent approvals from the author or a person who can committed within the
+  - prevent approvals from the author or a person who committed within the
     pull request;
   - require testing to pass prior to merging;
   - include the relevant change ticket(s)/documentation.
@@ -158,26 +158,26 @@ First, here are some common controls:
 
 Now, where can we find this evidence? Let's step through each
 - Normally, reviews and approvals can be found directly within the pull/merge
-  request. For platforms such as Github, this platform enables code reviews,
+  request. For platforms such as GitHub, this platform enables code reviews,
   comments, feedback, and checks directly within the PR flow. In certain cases,
   this may be documented in a change ticket system and the ticket is referenced
   within the PR to prove that the PR was tested, reviewed, and approved prior to
   merging.
-- For configurations, GitHub supports both [[https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule][classic branch protections rules]] and
+- For configurations, GitHub supports both [[https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule][classic branch protection rules]] and
   [[https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets][rulesets]], which can enforce all of the checks I mentioned above.
 - For access, it depends on the company's setup. They may be using GitHub
   Enterprise, which offers them more control over access, and teams can inspect
-  the access inheritence through those Enterprise settings. Otherwise,
+  the access inheritance through those Enterprise settings. Otherwise,
   non-enterprise GitHub organizations can show evidence of access at both the
   organization level and the repository level. Auditors can inspect the levels
-  of access and inheritence to ensure that no users have the ability to develop
+  of access and inheritance to ensure that no users have the ability to develop
   changes, manage branch protections, approve changes, and deploy changes.
 - For branch protection settings, management can provide auditors with an export
   of the audit logs relevant to the in-scope repositories. This will show you if
   any events occurred that would have disabled or modified the branch
   protections in place.
 
-If your inspecting a project where CI/CD pipelines matter, you can also dive
+If you're inspecting a project where CI/CD pipelines matter, you can also dive
 into the team's configuration of their pipeline in terms of the logic, access to
 modify, and any relevant schedules or triggers.
 

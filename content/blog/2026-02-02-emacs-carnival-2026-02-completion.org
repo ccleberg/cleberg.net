@@ -5,7 +5,7 @@
 #+filetags:    :emacs:personal:
 
 I'm having a great time with the Emacs Carnival, as it has inspired me to write
-two posts in such a short time. It's been a much needed inspiration to write
+two posts in such a short time. It's been a much-needed inspiration to write
 during my busy season at work.
 
 Anyway, let's get to it. The topic today is [[https://www.emacswiki.org/emacs/CategoryCompletion][Completion]]: the magical thing that
@@ -45,8 +45,8 @@ time string, like so: ~2026-02-02 21:52:55~.
 ~¯\_(ツ)_/¯~
 
 This comes in handy most at work, where I need to constantly use acronyms and
-take shorthand notes to fill-out phrases that I'm, unfortunately, required to
-re-use constantly. Looking at you, "completeness and accuracy of the data".
+take shorthand notes to fill out phrases that I'm, unfortunately, required to
+reuse constantly. Looking at you, "completeness and accuracy of the data".
 
 * Doom Configuration
 
@@ -66,6 +66,7 @@ Here is how I have my ~:completion~, ~:tools~, and ~:lang~ modules toggled in
        syntax              ; tasing you for every semicolon you forget
        (spell +flyspell)   ; tasing you for misspelling mispelling
        grammar             ; tasing grammar mistake every you make
+
 
        :tools
        (lsp +eglot)        ; M-x vscode
@@ -133,7 +134,7 @@ workflows.
 ** [[https://github.com/leotaku/flycheck-aspell?tab=readme-ov-file][flyspell]]
 
 Flyspell is the last piece to my puzzle, as it allows for easy help in
-correcting grammar errors within the buffer. I combine ~flypell~ + ~syntax~ +
+correcting grammar errors within the buffer. I combine ~flyspell~ + ~syntax~ +
 ~grammar~ for ultimate writing guidance. Whether or not I choose to follow that
 guidance is another story entirely.
 

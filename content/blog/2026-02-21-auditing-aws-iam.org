@@ -115,7 +115,7 @@ individual accounts and provides centralized access management across all of
 them from a single place.
 
 It connects to an identity source, such as AWS's own directory, Active
-Directory, or an externali identity provider (IdP) like Okta or Entra ID, and
+Directory, or an external identity provider (IdP) like Okta or Entra ID, and
 uses that as the source of truth for users and groups. Access is configured
 within Identity Center itself, not inside individual accounts.
 
@@ -295,7 +295,7 @@ exception, here's how to frame it:
 - *Deficiency:* User ~iamtestuser1~ is directly assigned the ~AdministratorAccess~
   permission set in account ~cmc~, rather than receiving access through a group
   assignment.
-- *Root Cause:* Due to {{ root cuase }}, the user ~iamtestuser1~ was inappropriately
+- *Root Cause:* Due to {{ root cause }}, the user ~iamtestuser1~ was inappropriately
   provisioned the ~AdministratorAccess~ permission directly rather than through a
   group assignment.
 - *Risk:* Direct user assignments increase the likelihood of orphaned access

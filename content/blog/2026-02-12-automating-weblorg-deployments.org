@@ -166,7 +166,7 @@ However, that's way too manual for me. Let's be lazy and take it even further.
 
 * GitHub Actions
 
-So, how do we push it further. By removing the need to run a command (outside of
+So, how do we push it further? By removing the need to run a command (outside of
 ~git~) at all!
 
 This process will:

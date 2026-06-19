@@ -116,7 +116,7 @@ chmod +x ~/.motd.sh
 At this point, the script is ready. We simply need to tell macOS to execute it
 whenever the user launches a new shell.
 
-To do this, open the =.zprofile= file add a line referencing the script:
+To do this, open the =.zprofile= file and add a line referencing the script:
 
 #+begin_src shell
 nano ~/.zprofile
