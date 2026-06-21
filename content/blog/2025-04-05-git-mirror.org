@@ -7,7 +7,7 @@
 This is a short post detailing how I maintained repositories on GitHub and
 mirrors on GitLab - including both public and private repositories.
 
-Since GitLab locks pull-only mirrors behing their Premium and Ultimate tiers, I
+Since GitLab locks pull-only mirrors behind their Premium and Ultimate tiers, I
 found a different solution.
 
 * Creating Mirrors

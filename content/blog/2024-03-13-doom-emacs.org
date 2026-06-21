@@ -8,7 +8,7 @@
 
 These screenshots are showing a project opened with projectile, a treemacs side
 pane open with the project contents, multiple buffers tiled next to each other,
-and the help pane open at the bottomm.
+and the help pane open at the bottom.
 
 The themes are =doom-homage-white= and =doom-homage-black=.
 
@@ -42,7 +42,7 @@ that would have helped me learn it faster had I known where to start.
 This post focuses on [[https://github.com/doomemacs/doomemacs][Doom Emacs]], which is an Emacs framework that provides an
 alternative experience to the vanilla [[https://www.gnu.org/software/emacs/][GNU Emacs]].
 
-The [[https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org][Getting Start Guide]] has an extremely detailed walkthrough of installation
+The [[https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org][Getting Started Guide]] has an extremely detailed walkthrough of installation
 for all systems, so please refer to that guide for up-to-date instructions.
 
 I chose to install on macOS, using the Homebrew option with the

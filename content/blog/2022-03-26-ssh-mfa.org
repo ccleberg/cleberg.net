@@ -13,7 +13,7 @@ for other security measures, such as:
 - Disable root SSH
 - Disable SSH password authentication
 - Allow only certain users to login via SSH
-- Allow SSH only from certain internet protocol (IP) addressess
+- Allow SSH only from certain internet protocol (IP) addresses
 
 However, MFA can be added as an additional security measure to ensure that your
 server is protected. This is especially important if you need to allow password

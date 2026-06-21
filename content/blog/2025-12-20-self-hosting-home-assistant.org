@@ -80,7 +80,7 @@ Assistant Hostname=, =Cloudflare Tunnel Name=, and the =Cloudflare Tunnel Token=
 within the Configuration tab of the installed add-on. Once configured, I
 restarted Home Assistant to start fresh.
 
-Next, I opened Cloudflare and configured the tunnel to expore the
+Next, I opened Cloudflare and configured the tunnel to expose the
 =ha.example.com= domain to the =homeassistant.local:8123= address in
 Cloudflare's Zero Trust dashboard.
 

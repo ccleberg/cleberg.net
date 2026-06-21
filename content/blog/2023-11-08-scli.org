@@ -132,7 +132,7 @@ scli
 * Configuration
 
 Lastly, there are a number of configuration options that you can pass
-via the command or in the =~/.config/sclirc= file. See the Github README
+via the command or in the =~/.config/sclirc= file. See the GitHub README
 for more information on configuration options.
 
 #+begin_src sh

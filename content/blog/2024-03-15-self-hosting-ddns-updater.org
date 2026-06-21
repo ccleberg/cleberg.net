@@ -15,7 +15,7 @@ If you've read any of my other posts, you'll notice that I have been searching
 for and using a few different DDNS updating solutions for years. You'll also
 notice that I love any projects that offer a Docker Compose solution.
 
-Luckily, DDNS Upater fits both of these preferences.
+Luckily, DDNS Updater fits both of these preferences.
 
 ** Installation
 

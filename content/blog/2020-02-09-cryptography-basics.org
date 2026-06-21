@@ -149,7 +149,7 @@ encryption method for Windows Active Directory (AD).
 * Cybersecurity Controls
 
 If you're someone who needs solutions on how to control risks associated with
-utilizing a crytograhpic system, start with these basic controls:
+utilizing a cryptographic system, start with these basic controls:
 
 - *Policies:* A policy on the use of cryptographic controls for protection of
   information is implemented and is in accordance with organizational

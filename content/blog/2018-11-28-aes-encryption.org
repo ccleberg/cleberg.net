@@ -23,7 +23,7 @@ Though many papers have been published on the cryptanalysis of AES, the fastest
 single-key attacks on round-reduced AES variants [20, 33] so far are only
 slightly more powerful than those proposed 10 years ago [23,24].
 
-- [[http://research.microsoft.com/en-us/projects/cryptanalysis/aesbc.pdf][Bogdonav, et al.]]
+- [[http://research.microsoft.com/en-us/projects/cryptanalysis/aesbc.pdf][Bogdanov, et al.]]
 #+end_quote
 
 * How Secure is AES?
@@ -42,7 +42,7 @@ Someone may know the method of AES, but without the key, they are powerless.
 To obscure and spread the data out, AES creates a substitution-permutation
 network. Wikipedia has a wonderful [[https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/SubstitutionPermutationNetwork2.png/468px-SubstitutionPermutationNetwork2.png][example of an SP network]] available. This
 network sends the data through a set of S boxes (using the unique key) to
-substitute the bits with another block of bits. Then, a P box will permutate, or
+substitute the bits with another block of bits. Then, a P box will permute, or
 rearrange, the bits. This is performed numerous times, with the last round
 deriving the key. For AES, the key size specifies the number of transformation
 rounds: 10, 12, and 14 rounds for 128-bit, 192-bit, and 256-bit keys,
@@ -63,7 +63,7 @@ respectively.
 This process does not necessarily stop after one full round. Steps 2 through 5
 will repeat for the number of rounds specified by the key. However, the final
 round excludes the MixColumns step. As you can see, this is a fairly complex
-process. One must have a solid understanding of general mathematic principles to
+process. One must have a solid understanding of general mathematical principles to
 fully understand how the sequence works (and to even attempt to find a
 weakness).
 

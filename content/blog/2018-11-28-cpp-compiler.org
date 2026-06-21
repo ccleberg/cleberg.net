@@ -55,7 +55,7 @@ C++ preprocessor includes the code from all the header files, such as =#include
 =iostream= header. This tells the computer that you want to use the =iostream=
 standard library, which contains classes and functions written in the core
 language. This specific header allows you to manipulate input/output streams.
-After all this, you'll end up which a temporary file that contains the expanded
+After all this, you'll end up with a temporary file that contains the expanded
 source code.
 
 In the example of the C++ code above, the =iostream= class would be included in
@@ -66,7 +66,7 @@ the expanded code.
 After the compiler expands the code, the compiler comes into play. The compiler
 takes the C++ code and converts this code into the assembly language, understood
 by the platform. You can see this in action if you head over to the [[https://godbolt.org][GodBolt
-Compiler Explorer]], which shows the compiled converting C++ into assembly
+Compiler Explorer]], which shows the compiler converting C++ into assembly
 dynamically.
 
 For example, the =Hello, world!= code snippet above compiles into the following
@@ -116,13 +116,13 @@ _GLOBAL__sub_I_main:
 
 *** Step 3
 
-Third, the compiled assembles the assembly code into the object code for the
+Third, the compiler assembles the assembly code into the object code for the
 platform. Essentially, this is when the compiler takes the assembly code and
 assembles it into machine code in a binary format. After researching this
 online, I figured out that a lot of compilers will allow you to stop compilation
 at this step. This would be useful for compiling each source code file
 separately. This saves time later if a single file changes, since the developer
-will only need to re-compile single file.
+will only need to re-compile a single file.
 
 *** Step 4
 

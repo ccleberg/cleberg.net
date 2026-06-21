@@ -113,7 +113,7 @@ server {
 
 I am currently blogging with [[https://emacs.love/weblorg/][weblorg]], which uses a custom =publish.el= file to
 build the static site. Within this file, I have configured my deployment process
-to check for the =ENV= variable in thesh and if it's set to =prod=, the script
+to check for the =ENV= variable in the shell and if it's set to =prod=, the script
 will set the base URLs to =https://cleberg.net=. If not, it sets the base URLs
 to =localhost:8000= (which matches the port used in the container above).
 

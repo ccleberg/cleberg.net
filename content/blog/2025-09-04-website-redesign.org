@@ -20,7 +20,7 @@ https://img.cleberg.net/blog/20250905-human-website-design/after.webp
 
 * Inspiration
 
-I've written numerous times on this blog about minimaliasm, so it shouldn't
+I've written numerous times on this blog about minimalism, so it shouldn't
 surprise any readers here that I've redesigned my website again for even more
 minimalism. However, it's a bit different this time as I've historically
 designed my website to be very computer design driven (think monospace fonts and
@@ -98,10 +98,10 @@ blue accent colors for inline code and links, respectively.
 }
 #+end_src
 
-After the update, the focus of the color scheme is focused on a more natual,
+After the update, the focus of the color scheme is focused on a more natural,
 paper-like effect. The light mode focuses on a yellow/orange-tinted paper-like
-substance, with a dark red accent and straightfoward design. Likewise, the dark
-mode scheme uses a charcoal-like color scheme with very simliar accent colors.
+substance, with a dark red accent and straightforward design. Likewise, the dark
+mode scheme uses a charcoal-like color scheme with very similar accent colors.
 
 #+begin_src css
 :root {
@@ -138,7 +138,7 @@ a comfortable and intentional page layout.
 That being said, let's dive into the changes I've made so far:
 
 - *Font style*: I've updated the font style from a monospace font stack to a
-  serif font stack. This created a more natual flow across the screen and less
+  serif font stack. This created a more natural flow across the screen and less
   rigid constraints on the area of the fonts.
 - *Font size*: Related to font style, I naturally had to update the font size as
   well. This allows for natural reading breaks for the eyes, spacing between
@@ -164,7 +164,7 @@ in mind:
 
 - *Color palettes*: The current scheme is good but not great. I'd love to find a
   color palette that feels like reading natural paper.
-- *Emphasized text*: Are links legible enough? Is there enought contrast between
+- *Emphasized text*: Are links legible enough? Is there enough contrast between
   quotes, inline code, links, etc.?
 - *Spacing*: Font sizes, padding, and potentially reducing content.
 - *Layout*: Is there a better structure to this document that would allow for

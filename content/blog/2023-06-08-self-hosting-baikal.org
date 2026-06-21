@@ -47,7 +47,7 @@ docker container:
 sudo docker-compose up -d
 #+end_src
 
-* Intial Setup
+* Initial Setup
 
 As long as no issues came up when starting the container, you should be
 able to visit the server's set-up page at =http://<server_ip>:<port>=.

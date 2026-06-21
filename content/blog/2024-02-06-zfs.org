@@ -146,7 +146,7 @@ sudo zpool add -f tank mirror /dev/sdX /dev/sdY
 I added two 8TB hard drives and this process took around 10 seconds to complete.
 
 When viewing the pool again, you can see that the pool has now doubled in size.
-We have 14.3 TB useable space and the same space used for mirroring.
+We have 14.3 TB usable space and the same space used for mirroring.
 
 #+begin_src sh
 > zfs list
@@ -237,7 +237,7 @@ sudo zpool add tank mirror /dev/sdc /dev/sdd
 When we list the pool again, we can see that our size is now updated to
 approximately 22TB. This represents my hard drives totalling 45.6TB when shown
 with =fdisk -l=, with a Raid10 configuration using 22TB for mirroring and 22TB
-of useable space.
+of usable space.
 
 #+begin_src sh
 > zfs list

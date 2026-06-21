@@ -65,7 +65,7 @@ for my purposes.
 This allows for access to your email without installing an application that
 access native APIs or other potential data sources you may be concerned about.
 This is especially important if you're concerned about allowing permissions to
-device APIs, non-reproducible buils from the App Store, or mobile device
+device APIs, non-reproducible builds from the App Store, or mobile device
 fingerprints.
 
 Lastly, [[https://blog.thunderbird.net/2025/05/thunderbird-for-mobile-april-2025-progress-report/][Thunderbird iOS]] is under development. Keep an eye out for an alpha or
@@ -79,7 +79,7 @@ releases for iOS, I will probably use that.
 
 * Browsers
 
-Your choise of browser is very important if you're concerned with privacy. Any
+Your choice of browser is very important if you're concerned with privacy. Any
 and all links you click will be opened in your default browser, so you need to
 make sure you choose the right browser and configure it properly. Trackers, ads,
 fingerprints, and data leaks are constant threats that should be avoided when
@@ -98,7 +98,7 @@ possible.
 - [[https://brave.com/][Brave]] - Another chromium-based privacy browser. Can sync with other Brave
   browsers via a secure linking process (no account). Fully-featured and great
   privacy defaults. There have been some concerns in the past about the company
-  behind Brave, but I still think it's a decent option for most peoplel.
+  behind Brave, but I still think it's a decent option for most people.
 - [[https://www.apple.com/safari/][Safari]] (with caveats) - Great option if the browsers above don't work for you.
   Be sure to read PrivacyGuide's [[https://www.privacyguides.org/en/mobile-browsers/#safari-ios][Safari]] section for more information on what you
   need to do to lock it down before relying on it full time.

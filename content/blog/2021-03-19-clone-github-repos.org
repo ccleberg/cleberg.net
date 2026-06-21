@@ -117,7 +117,7 @@ do this, let's create another bash script:
 nano change_remote_urls.sh
 #+end_src
 
-Past the following information and be sure to change the URL (uniform resource
+Paste the following information and be sure to change the URL (uniform resource
 locator) information to whichever host you are moving to. For this example, I am
 looping through all of my cloned GitHub directories and changing them to
 Sourcehut (e.g. =<YOUR_NEW_REMOTE_URL>= -> =git@git.sr.ht:~myusername=).

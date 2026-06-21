@@ -70,7 +70,7 @@ goes, we will trust that these functions are mathematically random.
 
 As mentioned in the intro, sampling is only an effective method of auditing when
 it truly represents the entire population. While some audit departments or firms
-pmay consider certain judgmental sample sizes to be adequate, you may need to
+may consider certain judgmental sample sizes to be adequate, you may need to
 rely on statistically-significant confidence levels of sample testing at certain
 
 points. I will demonstrate both here. For statistically-significant confidence

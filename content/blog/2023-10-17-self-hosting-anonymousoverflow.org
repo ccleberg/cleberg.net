@@ -61,7 +61,7 @@ Let's start by creating a configuration file.
 sudo nano /etc/nginx/sites-available/ao
 #+end_src
 
-Within this file, paste the following content and repace
+Within this file, paste the following content and replace
 =ao.example.com= with your URL. You may need to update the SSL
 certificate statements if your certificates are in a different location.
 

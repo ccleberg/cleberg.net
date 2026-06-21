@@ -91,7 +91,7 @@ modem supports DOCSIS 3.0, which is something that I definitely wanted as a
 minimum. The Sagecom router is also standard, no fancy bells or whistles.
 However, it does support the dynamic host configuration protocol (DHCP) for
 internet protocol version 4 (IPv4) and internet protocol version 6 (IPv6), which
-is something iyou can use to route all household traffic through a pi-hole or
+is something you can use to route all household traffic through a pi-hole or
 firewall.
 
 ** TP-Link EAP

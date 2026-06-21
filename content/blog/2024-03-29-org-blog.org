@@ -245,7 +245,7 @@ My only current complaints are:
 
 1. Errors messages are not helpful. It takes work to determine what the error is
    and where it's coming from. I generally have to sit and watch the build
-   process to see the file that weblorg pubslishes right before the error
+   process to see the file that weblorg publishes right before the error
    occurred.
 2. The build process re-builds every single file on each run, which takes a long
    time for a blog of my size. See below for the last time I measured.
