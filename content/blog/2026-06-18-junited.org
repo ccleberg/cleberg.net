@@ -9,7 +9,15 @@ project and love the idea. While the month is more than halfway past, I'll make
 sure to update this post with the best links I discover throughout the remainder
 of June 2026.
 
-- [[https://hypersubject.net/entries/2026/06/smallweb-is-becoming-an-archipelago/][Smallweb is Becoming an Archipelago]]
-- [[https://xvw.lol/en/articles/emacs-start.html][Emacs, how it all started (for me)]]
-- [[https://nelson.cloud/.gitignore-isnt-the-only-way-to-ignore-files-in-git/][.gitignore Isn’t the Only Way To Ignore Files in Git]]
-- [[https://www.lesswrong.com/posts/6Xgy6CAf2jqHhynHL/what-2026-looks-like][What 2026 looks like]]
+- [[https://hypersubject.net/entries/2026/06/smallweb-is-becoming-an-archipelago/][Smallweb is Becoming an Archipelago]]: Coincidentally, I browse most of these
+  websites as well.
+- [[https://xvw.lol/en/articles/emacs-start.html][Emacs, how it all started (for me)]]: I *love* hearing stories about Emacs,
+  especially from beginners.
+- [[https://nelson.cloud/.gitignore-isnt-the-only-way-to-ignore-files-in-git/][.gitignore Isn’t the Only Way To Ignore Files in Git]]: Interesting if you're
+  often using Git.
+- [[https://www.lesswrong.com/posts/6Xgy6CAf2jqHhynHL/what-2026-looks-like][What 2026 looks like]]: A /beautiful/ web page describing the author's predicted
+  future for 2022-2026.
+- [[https://milek7.pl/mailverifyspam/][Don’t verify email addresses by sending spam to them]]: /sigh.../
+- [[https://danielle.bearblog.dev/apparently-im-not-a-woman-because-i-use-linux/][Apparently I'm not a woman because I use Linux]]: Let's continue breaking down
+  walls. There will always be stupid around anyway.
+- [[https://inessential.com/2026/06/15/netnewswire-status.html][NetNewsWire Status]]: One of my absolute favorite apps on iOS.
