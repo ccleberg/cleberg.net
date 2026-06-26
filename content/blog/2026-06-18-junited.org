@@ -21,3 +21,12 @@ of June 2026.
 - [[https://danielle.bearblog.dev/apparently-im-not-a-woman-because-i-use-linux/][Apparently I'm not a woman because I use Linux]]: Let's continue breaking down
   walls. There will always be stupid around anyway.
 - [[https://inessential.com/2026/06/15/netnewswire-status.html][NetNewsWire Status]]: One of my absolute favorite apps on iOS.
+- [[https://en.wikipedia.org/wiki/Van_Halen_test][Van Halen Test]]: One of my favorite concepts. I feel like my teachers used this
+  often to trick students who wouldn't read through all instructions before
+  starting their answers.
+- [[https://www.greptile.com/blog/prs-on-openclaw][PR spam today looks like email spam in the early 2000s]]: Have they considered
+  simply writing terrible software like I do? Then no one will even care to
+  contribute!
+- [[https://expression.fire.org/p/the-papers-please-era-of-the-internet][The ‘papers, please’ era of the internet will decimate your privacy]]: I feel
+  like we've been warning the public of this message for a decade and yet, here
+  we are. Still on the precipice
