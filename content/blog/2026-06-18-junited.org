@@ -29,4 +29,5 @@ of June 2026.
   contribute!
 - [[https://expression.fire.org/p/the-papers-please-era-of-the-internet][The ‘papers, please’ era of the internet will decimate your privacy]]: I feel
   like we've been warning the public of this message for a decade and yet, here
-  we are. Still on the precipice
+  we are. Still on the precipice.
+- [[https://www.dotcom.press/history-of-domains][A Brief History of Domains]]: A fantastic piece.
