@@ -1,0 +1,99 @@
+#+date: [2026-06-26 Fri 23:01:11]
+#+title: I Don't Maintain My Homelab
+#+description: I don't maintain my homelab... it maintains itself.
+#+slug: homelab-maintenance
+#+filetags: :self-hosting:
+
+It's true. I *don't* maintain my homelab... it maintains itself.
+
+Have I reached nirvana? Is this the ultimate goal of homelabbers? It seems
+that I've somehow automated myself out of a job (hobby?) by building a resilient
+homelab.
+
+Let's figure out where it all went "wrong".
+
+* Infrastructure
+** Server
+I have used a few different servers over the years, but have since consolidated
+all of my services onto a single server ([[https://cleberg.net/blog/server-build.html][build guide here]]), reducing the
+complexity of my environment.
+
+Because of the single-server setup, maintenance is down 75% (from four
+servers to one). Yes, clusters and hypervisors and hybrid cloud solutions are
+shiny and fancy and popular, but I just don't care for it. Instead, I have a
+single metal box I can pick up with my hands sitting in my basement.
+
+I /do/ have one more "server": a Raspberry Pi 4, but it uses Home Assistant OS,
+updates itself, and requires literally *zero* maintenance. Is that really a
+server? I guess, by technical definition. But it certainly doesn't feel like it;
+it feels like I've turned a potential server device into a self-sustaining IoT
+device instead.
+
+** Network
+Aside from the server itself, I have a mini rack of UniFi gear (server is in the
+same rack). A UniFi Dream Machine Pro, a switch, and a couple of access points
+(APs) constitute my personal data center sitting in my basement.
+
+Again, it really just maintains itself. UniFi supports automatic and scheduled
+updates, allowing you to disconnect from any manual maintenance of the hardware.
+UniFi truly is a "set it and forget it" platform.
+
+* Software
+
+There's a single crontab line on my server, which runs all updates for my Docker
+services on a weekly basis.
+
+#+begin_src
+0 0 * * 0 docker-update
+#+end_src
+
+I do run a few crontab schedules via the =root= user as well, to account for
+permission issues. These jobs are really just for backups, to be honest. I've
+never required a backup, but it's good to be safe.
+
+#+begin_src
+# Generate a daily system report
+0 8 * * * /home/cmc/daily_sys_report.sh
+
+# Backup
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+## App-aware database dumps
+45 1 * * * mkdir -p /tank/cloud/server/backups/immich && sudo docker exec -t immich_postgres pg_dumpall -U postgres > /tank/cloud/server/backups/immich/immich-postgres-$(date +\%F).sql
+50 1 * * * mkdir -p /tank/cloud/server/backups/piped && sudo docker exec -t piped-postgres pg_dumpall -U piped > /tank/cloud/server/backups/piped/piped-postgres-$(date +\%F).sql
+
+## Backup files to ZFS pool
+0 2 * * * rsync -aHAX --delete /var/lib/plexmediaserver/ /tank/cloud/plexmediaserver/
+5 2 * * * rsync -aHAX --delete /var/www/ /tank/cloud/server/web_server/
+10 2 * * * rsync -aHAX --delete /etc/nginx/ /tank/cloud/server/nginx/
+15 2 * * * rsync -aHAX --delete --exclude='**/postgres/' --exclude='**/postgresql/' --exclude='**/mysql/' --exclude='**/mariadb/' --exclude='**/redis/' --exclude='**/valkey/' --exclude='**/database/' --exclude='**/cache/' --exclude='**/tmp/' --exclude='**/logs/' /home/cmc/docker/ /tank/cloud/server/docker/
+20 2 * * * rsync -aHAX --delete /home/cmc/.ssh/ /tank/cloud/server/ssh/
+#+end_src
+
+Aside from this, the only other required updates are running =apt update= and
+potentially restarting. This requires about 60 seconds of time whenever I want
+to do it.
+
+#+begin_src sh
+sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y
+#+end_src
+
+* The Outcome
+
+So, what's the end result? I've approximated it somewhere around /15 minutes of
+maintenance per month/, barring an emergency.
+
+If that's normal to you, congrats - you've peaked in life. However, that's
+*absolutely absurd* to me. I used to spend days on end building, maintaining, and
+debugging various aspects of my servers, databases, apps, etc.
+
+You know what's even crazier? If I don't have 15 minutes in a month to =ssh= into
+my server and update things, it literally does not affect anything. I could
+probably go 6 months (maybe more?) without touching it and it wouldn't break.
+
+/(This is not a challenge, please don't break my server.)/
+
+What a great situation to be in - especially for someone who's become as busy in
+their career as I have. I feel like I've struck a fantastic balance between
+privacy, security, and convenience.
