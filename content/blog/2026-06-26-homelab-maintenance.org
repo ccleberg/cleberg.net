@@ -50,7 +50,7 @@ services on a weekly basis.
 Which is an alias for:
 
 #+begin_src sh
-for d in ~/docker/*/; do (cd "$d" && sudo docker compose pull && sudo docker compose up -d); done'
+for d in ~/docker/*/; do (cd "$d" && sudo docker compose pull && sudo docker compose up -d); done
 #+end_src
 
 I do run a few crontab schedules via the =root= user as well, to account for
