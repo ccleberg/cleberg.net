@@ -47,6 +47,12 @@ services on a weekly basis.
 0 0 * * 0 docker-update
 #+end_src
 
+Which is an alias for:
+
+#+begin_src sh
+for d in ~/docker/*/; do (cd "$d" && sudo docker compose pull && sudo docker compose up -d); done'
+#+end_src
+
 I do run a few crontab schedules via the =root= user as well, to account for
 permission issues. These jobs are really just for backups, to be honest. I've
 never required a backup, but it's good to be safe.
