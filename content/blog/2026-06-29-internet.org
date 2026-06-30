@@ -85,14 +85,14 @@ whether the evolutions have been good or bad.
 
 As you read on, *please* (*PLEASE!*) send me an email if this post sparks a memory
 or you have thoughts. I genuinely enjoy hearing these stories from anyone, and I
-push for you to send me them as you think of them.
+push for you to send them to me as you think of them.
 
 * 2001: The Family Computer
 
 The family computer. What a throwback. Perhaps you even had a [[https://en.wikipedia.org/wiki/Third_place][third place]]
 computer you visited. Wherever, whatever that computer was - think of that
 computer as you read this. I will be speaking from my perspective and I hope it
-resounds with someone out there.
+resonates with someone out there.
 
 I recall coming home from school, getting through required chores, homework, or
 anything else first. Perhaps you had siblings with which you shared the computer
@@ -114,7 +114,7 @@ graphics. This was the epitome of 2000s technology and people loved it.
 *Side note*: We owned a heavy, wooden CRT TV set from the 1970s or 1980s that hid
 all buttons behind a fake, black "speaker" that you could press to pop open. A
 decade or two after we had tossed this TV into our barn for disposal, my brother
-an I took turns hitting the glass screen it as hard as we could with a baseball
+and I took turns hitting the glass screen as hard as we could with a baseball
 bat.
 
 It never left a mark, regardless of how hard we hit it. Why don't we produce
@@ -155,7 +155,7 @@ At this point, there was no ritual to the internet or even to the computer
 itself. The computer was a tool used for specific tasks, such as my mother
 designing pamphlets in some obscure program for printing, or for fun.
 
-Often times, you would sit down with no particular destination. You were
+Oftentimes, you would sit down with no particular destination. You were
 *exploring*. I use that word specifically because it's how I truly felt. Whenever
 I turned on a computer, I was exploring a digital universe that had not been
 charted before.
@@ -166,7 +166,7 @@ much as you'd like.
 
 * 2004: Exploring the Web
 
-The internet stopped feeling like a software.
+The internet stopped feeling like software.
 
 It became its own world.
 
@@ -196,7 +196,7 @@ internet was endless, borderless, and expansive. There was always a new rabbit
 hole waiting for you. Even if you had to watch every image slowly appear one
 horizontal line at a time.
 
-Before moving on to the next section, do you remember the [[https://www.spacejam.com/1996/][1996 SpaceJame
+Before moving on to the next section, do you remember the [[https://www.spacejam.com/1996/][1996 Space Jam
 website]]? What a modern marvel. Honestly one of the world's wonders.
 
 * 2007: Living There
@@ -254,7 +254,7 @@ minutes later, you could have your own site. There were few, if any,
 restrictions on what you could publish online.
 
 This could lead you to learning HTML and CSS, as many users wanted to customize
-their sites, which generally leads to users discovering the freedom of ownining
+their sites, which generally leads to users discovering the freedom of owning
 their own sites. This included things like mail signatures, avatars,
 forum-specific usernames and more.
 
@@ -314,11 +314,11 @@ descent into a disregard for the users.
 To me, that 2012 era was a turning point. You may personally love a different
 era (1980/1990s gamer, anyone? Any former phreaks out there?), but to me, it
 felt like we kept making leaps in technological capability until we reached the
-point of economical profitability in the 2000s-2010s era, where corporations,
+point of economic profitability in the 2000s-2010s era, where corporations,
 investors, and governments took a serious interest in controlling the internet.
 
 From here on out, the digital landscape seems to have a more sinister appearance
-and affect on us.
+and effect on us.
 
 * 2026: Logging On Today
 
@@ -337,7 +337,7 @@ Fast forward to today: 2026. You want to check the latest headlines in your brow
    thinly-veiled advertisements.
 9. If you searched instead of typing the URL directly, your browser (most likely
    Google) will show you an AI summary loosely related to your search but not
-   really what you were looking for you. Somewhere in the distance, a tree
+   really what you were looking for. Somewhere in the distance, a tree
    wilts.
 10. Below the AI "summary", which somehow takes half of the page space, results
     are loaded. However, the top 3-5 are promoted results, which means they may
@@ -345,7 +345,7 @@ Fast forward to today: 2026. You want to check the latest headlines in your brow
 11. *FINALLY*, below all of that, will be the "real" results. These have been
     predetermined by Google's search algorithm. At this point, you'd suspect it
     would be consistent or at least transparent, right? Wrong. It's a black
-    box - don't ask anymore questions.
+    box - don't ask any more questions.
 12. You may click one, or maybe thirty, results before you find what you're
     looking for.
 13. Great, a website with a real answer. But wait! You're not trustworthy
@@ -395,11 +395,11 @@ scrolls.
 I'm going to yell at clouds now. Be prepared.
 
 I miss the /old/ web, the indie web. Where websites were authored by humans, even
-in capacity underneath a corporation.
+in some capacity underneath a corporation.
 
 We had rudimentary tools to solve the riddle of discovery, but they were tools
 nonetheless. Want to discover and explore new sites? You had search options,
-such as early Google or Jeeves, or third party tools. We had web rings,
+such as early Google or Jeeves, or third-party tools. We had web rings,
 blogrolls, link lists, and other manually-curated pages to discover top-tier
 content.
 
