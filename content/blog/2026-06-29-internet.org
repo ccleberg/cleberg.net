@@ -1,9 +1,8 @@
 #+date: [2026-06-29 Mon 21:12:00]
 #+title: The Internet I Grew Up With Doesn’t Exist Anymore
-#+description:
+#+description: A thorough retrospective of my time on the internet.
 #+slug: internet
 #+filetags: :personal:web:
-#+draft: t
 
 * Introduction
 
