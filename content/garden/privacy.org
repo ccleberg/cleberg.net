@@ -1,0 +1,116 @@
+#+title: 🌱 privacy
+#+slug: privacy
+#+description: Privacy is of the utmost importance.
+#+date: [2026-07-01 Wed 12:23:42]
+
+/Privacy and security often overlap, so I have combined them here as privacy
+relies on security./
+
+* Passwords
+
+For all passwords, I generate and store these within a [[https://bitwarden.com/][Bitwarden]] vault. I chose
+Bitwarden due to its open nature and plethora of clients. If I didn't have to
+maintain passwords for my family, I would prefer a solution like [[https://keepassxc.org/][KeePassXC]] and
+would sync it via Syncthing.
+
+When possible, I prefer a [[https://bitwarden.com/passphrase-generator/][passphrase]] over a [[https://bitwarden.com/password-generator/][password]]. However, some sites have
+short password length limits and a random string of characters may be better.
+
+** Multi-Factor Authentication (MFA)
+
+In order to protect my accounts, I enable MFA whenever possible. My personal
+preferences are:
+- Passkey
+- TOTP
+- Email (begrudgingly)
+- SMS (almost never)
+
+Personally, I use a combination of [[https://apps.apple.com/us/app/bitwarden-authenticator/id6497335175][Bitwarden Authenticator]] for TOTP codes - a
+standalone iOS app that I keep logged out - and the Bitwarden vault's native
+TOTP and passkey functionality.
+
+This ensures two separate locations for TOTP secrets, in case one is lost or
+otherwise inaccessible.
+
+* Email
+
+While email is inherently not a private communication channel, due to its
+unencrypted nature on any sender's or receiver's servers, it's still a central
+method of communication today. Therefore, it's important to take steps to make
+it marginally more private.
+
+First, I choose an email provider that values privacy. This excludes the major
+providers (Google, Microsoft, Yahoo, etc.) and requires us to look at other
+options. Popular email hosts in the privacy community include Proton Mail, Tuta
+Mail, and Mailbox.org.
+
+However, I chose a different path. I registered my own domain name, registered
+with [[https://migadu.com/][Migadu]], and setup custom email addresses on my own domain, such as my
+primary email: [[mailto://hello@cleberg.net][hello@cleberg.net]].
+
+This allows for a few unique features:
+- Custom domains without limits, so I can utilize any domain I own as an email
+  domain as well (unlike Tuta).
+- I enabled catch-all reception, so I can sign up with aliases at-will. E.g.,
+  local.store@cleberg.net will deliver directly to me without having to create
+  that email beforehand.
+- I enabled wildcard addressing, so I can reply from any such custom address.
+- IMAP & SMTP is supported (unlike Proton), so I can use email clients I trust
+  ([[https://www.thunderbird.net][Thunderbird]] & [[https://neomutt.org/][NeoMutt]]).
+- Domain forwarding and redirects. E.g., all mail to =*@example.com= will go to
+  =you@example.org=.
+- Based in Switzerland, if jurisdiction is important to you.
+
+  I'm waiting for [[https://www.tb.pro/][Thundermail]] to be released publicly so I can test it out and
+  compare against Migadu.
+
+* Messaging
+
+When it truly matters, I use [[https://signal.org/][Signal]] as my instant messenger. I have tried
+others, but settled on Signal a while ago and have not lost faith in them yet -
+especially with their helpful username and group chat features.
+
+* DNS & VPNs
+
+On my personal devices, I ensure that I use an always-on VPN. Currently, I am
+using [[https://www.ivpn.net][IVPN]] and previously used [[https://mullvad.net][Mullvad]] for years. On my bittorrent server, I use
+[[https://airvpn.org/][AirVPN]] because it supports reliable port forwarding via the Wireguard CLI.
+
+For devices that cannot use a VPN, I rely on network-wide DNS from my router. On
+the router, I have installed [[https://nextdns.io/][NextDNS]] to ensure any non-VPN devices go through
+NextDNS instead of the ISP's DNS.
+
+* Search Engines
+
+I use my own self-hosted [[https://docs.searxng.org/][SearXNG]] search engine at [[https://search.zerolabs.sh/][search.zerolabs.sh]], which "is
+a metasearch engine, aggregating the results of other search engines while not
+storing information about its users."
+
+When that is not possible (if it's down or a device doesn't allow setting custom
+default search engines), I use DuckDuckGo. It's the next best option.
+
+* Browsers
+
+This section could be /massive/ if I detailed every single option and step in
+securing a private browser. However, I will keep it brief for now.
+
+I utilize [[https://librewolf.net/][LibreWolf]] as my primary browser - a custom version of Firefox with
+sane defaults and privacy-respecting settings.
+
+When required, I use [[https://www.torproject.org/][Tor]] to access onion sites and/or browser sites with
+marginally better privacy and anonymity.
+
+* Cloud Storage
+
+This will be a short section, as I don't actually use "cloud storage" as we know
+it. After years of testing and using various providers, I have settled on
+[[https://syncthing.net/][Syncthing]] with a network of all my personal devices (>= 3 devices at all times).
+
+Previously, I tested Tresorit, pCloud, Proton Drive, Internxt, MEGA, Filen, and
+Ente. However, all of these require /some/ level of trust in the provider. I also
+used [[https://cryptomator.org/][Cryptomator]] to encrypt files *before* they reached the cloud provider, so I
+could use anyone and still feel safe.
+
+However, they all eventually provided one shortcoming or another and I settled
+on Syncthing with *relays turned-off*, as that is what makes the most sense for
+me.
