@@ -123,7 +123,7 @@ that quality anymore?
 If you wanted to use the computer, you had to press a very heavy, circular
 button that would emit a memorable CLUNK as you engaged the button within the
 PC. This would result in an airplane level of whirring while it used maybe a few
-GB of memory and hard drive storage to boot up [[https://en.wikipedia.org/wiki/Windows_95][Windows 95]].
+MB of memory and hard drive storage to boot up [[https://en.wikipedia.org/wiki/Windows_95][Windows 95]].
 
 #+caption: Windows 95 Desktop
 [[https://upload.wikimedia.org/wikipedia/en/e/eb/Windows_95_at_first_run.png]]
