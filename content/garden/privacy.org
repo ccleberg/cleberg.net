@@ -1,4 +1,4 @@
-#+title: 🌱 privacy
+#+title: 🌿 privacy
 #+slug: privacy
 #+description: Privacy is of the utmost importance.
 #+date: [2026-07-01 Wed 12:23:42]
