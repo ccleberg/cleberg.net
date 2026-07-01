@@ -109,7 +109,7 @@ To use the computer, you likely turned on a very heavy CRT monitor. Perhaps it
 even flickered, emitted you a static buzz, or showed a wavy pattern in the
 graphics. This was the epitome of 2000s technology and people loved it.
 
-#+being_quote
+#+begin_quote
 *Side note*: We owned a heavy, wooden CRT TV set from the 1970s or 1980s that hid
 all buttons behind a fake, black "speaker" that you could press to pop open. A
 decade or two after we had tossed this TV into our barn for disposal, my brother
