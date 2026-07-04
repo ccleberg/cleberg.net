@@ -1,15 +1,15 @@
 #+title: now
 #+slug: index
 #+options: toc:nil
-#+date: [2026-05-10 Sun 12:26:24]
+#+date: [2026-07-04 Sat 13:27:08]
 #+description: Read about what I'm doing now.
 
 This is a [[https://nownownow.com/about][/now]] page.
 
 * Work
 
-- Launched my national Automation & AI initiative for the US.
-- Trying to figure out my future.
+I'm on PTO for 3 weeks here and will be trying to focus my time and energy on
+hobbies as much as possible.
 
 * Media
 
@@ -17,27 +17,46 @@ This is a [[https://nownownow.com/about][/now]] page.
 If you're actually interested, email or message me to talk about media!/
 
 - Playing some games:
-  - Assassin's Creed IV: Black Flag
-  - Call of Duty Black Ops 7
-  - Halo Infinite
-  - PGA Tour
+  - Battlefield 6
   - Rocket League
+  - Runescape
+  - Saints Row IV
 - Watching some shows:
-  - From the New World (2012)
-  - Home Improvement (1991)
-  - Malcolm in the Middle: Life's Still Unfair (2026)
+  - Archer (2009)
+  - Breaking Bad (2008)
+  - The Penguin (2024)
 - Watched some movies:
-  - The Break Up (2006)
-  - Gridiron Gang (2006)
-  - Midnight in Paris (2011)
+  - Batman Begins (2005)
 
 * Tech
 
-- Launched 3 iOS apps:
-  - [[https://apps.apple.com/us/app/daybyday-learn/id6760321939][DayByDay]]: A simple children's learning app
-  - [[https://apps.apple.com/us/app/domaindig/id6760368004][DomainDig]]: A handy DNS lookup tool with many features
-  - [[https://apps.apple.com/us/app/hutch-for-sourcehut/id6760742299][Hutch for SourceHut]]: A polished sourcehut client in native Swift
-- Continuing to optimize my website and servers.
+Two of my blog posts were recently featured on Hacker News, lobste.rs, Financial
+Times roundup, Gemini BBS, and more places around the web.
+
+I gathered some metrics to see how my site handled it. Anecdotally, it didn't
+affect my home internet at all, regardless of the traffic.
+
+However, I have anonymous metrics visible in both Cloudflare and GoAccess on the
+web server, so I ran a summary to see what the traffic spike looked like.
+
+In the table below, note that Cloudflare counts all traffic, while GoAccess only
+counts traffic flowing through Nginx - which is primarily =cleberg.net=. Services
+under the =*.zerolabs.sh= subdomains don't flow through Nginx.
+
+| Metric                            | Cloudflare               | GoAccess                                     |
+|-----------------------------------+--------------------------+----------------------------------------------|
+| Coverage window                   | 7 days, Jun 27 to Jul 4  | May 12 to Jul 4                              |
+| Unique visitors                   | 65.81k                   | 23,069                                       |
+| Total requests / hits             | 260.48k                  | 489,386 valid requests                       |
+| Failed requests                   | Not shown                | 1,084                                        |
+| Total data served / bandwidth     | 5 GB                     | 4.35 GiB                                     |
+| Data cached                       | 909 MB                   | N/A                                          |
+| Percent cached                    | 19.7%                    | N/A                                          |
+| Peak visible spike                | ~45k-50k unique visitors | 6,853 unique visitors on Jul 1               |
+| Peak requests                     | ~150k requests           | 114,974 hits on Jul 1                        |
+| Main spike page                   | Not shown in screenshot  | /blog/internet.html, 68,968 hits, 6,772 vis. |
+| Largest visible external referrer | Not shown in screenshot  | news.ycombinator.com, 22,078 hits, 938 vis.  |
+| RSS/feed impact                   | Not shown in screenshot  | /feed.xml, 26,395 hits, 1.82 GiB bandwidth   |
 
 * Hobbies
 
