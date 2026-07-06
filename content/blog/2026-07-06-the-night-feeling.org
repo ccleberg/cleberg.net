@@ -27,30 +27,17 @@ For a large portion of my childhood, I lived on a rural farm in Minnesota. If
 you've never stayed in a remote area, it's hard to explain just how /quiet/ it
 is, especially at night.
 
-#+begin_export html
-<div class="shot-scroll" aria-label="Farm night and sunset photos">
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/winter.webp"
-         alt="Leaning yard light over snowy farm ground under a cloudy moon"
-         loading="lazy">
-    <figcaption>Snowy farm light</figcaption>
-  </figure>
+#+caption: Snowy farm light
+#+attr_html: :alt Leaning yard light over snowy farm ground under a cloudy moon
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/winter.webp]]
 
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/sunset_2.webp"
-         alt="Orange sunset framed by dark tree branches over the farm"
-         loading="lazy">
-    <figcaption>Sunset through trees</figcaption>
-  </figure>
+#+caption: Sunset through trees
+#+attr_html: :alt Orange sunset framed by dark tree branches over the farm
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/sunset_2.webp]]
 
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/sunset_1.webp"
-         alt="Red-orange sunset over a dark rural horizon"
-         loading="lazy">
-    <figcaption>Sunset over the fields</figcaption>
-  </figure>
-</div>
-#+end_export
+#+caption: Sunset over the fields
+#+attr_html: :alt Red-orange sunset over a dark rural horizon
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/sunset_1.webp]]
 
 During winter, heavy snow filled the landscape and acted as a natural sound
 buffer, further quieting the world.
@@ -80,51 +67,29 @@ As I moved into adulthood, work, family, and friends filled more of my time,
 leaving fewer quiet hours to myself. I found solace in the "after hours" -
 traveling home from work, going out for a walk, or taking photos alone.
 
-#+begin_export html
-<div class="shot-scroll" aria-label="After-hours city and travel photos">
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/stl_1.webp"
-         alt="St. Louis skyline at night with the Gateway Arch and a lit KPMG building"
-         loading="lazy">
-    <figcaption>St. Louis skyline</figcaption>
-  </figure>
+#+caption: St. Louis skyline
+#+attr_html: :alt St. Louis skyline at night with the Gateway Arch and a lit KPMG building
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/stl_1.webp]]
 
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/stl_2.webp"
-         alt="Quiet city street facing a bright parking garage entrance at night"
-         loading="lazy">
-    <figcaption>Quiet city street</figcaption>
-  </figure>
+#+caption: Quiet city street
+#+attr_html: :alt Quiet city street facing a bright parking garage entrance at night
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/stl_2.webp]]
 
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/broncos.webp"
-         alt="Neon Bronco's Hamburgers sign glowing over an empty street at night"
-         loading="lazy">
-    <figcaption>Bronco's at night</figcaption>
-  </figure>
+#+caption: Bronco's at night
+#+attr_html: :alt Neon Bronco's Hamburgers sign glowing over an empty street at night
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/broncos.webp]]
 
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/stoplights.webp"
-         alt="Red traffic lights under a bright moon and power lines"
-         loading="lazy">
-    <figcaption>Moonlit stoplights</figcaption>
-  </figure>
+#+caption: Moonlit stoplights
+#+attr_html: :alt Red traffic lights under a bright moon and power lines
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/stoplights.webp]]
 
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/kc_1.webp"
-         alt="Kansas City skyline at night with Union Station lit red"
-         loading="lazy">
-    <figcaption>Kansas City at night</figcaption>
-  </figure>
+#+caption: Kansas City at night
+#+attr_html: :alt Kansas City skyline at night with Union Station lit red
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/kc_1.webp]]
 
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/flight.webp"
-         alt="City lights seen from an airplane window at night"
-         loading="lazy">
-    <figcaption>City lights from the plane</figcaption>
-  </figure>
-</div>
-#+end_export
+#+caption: City lights from the plane
+#+attr_html: :alt City lights seen from an airplane window at night
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/flight.webp]]
 
 I travel a fair amount for my company, which leaves me with the task of finding
 food at odd hours and gives me a reason to explore the cities I visit.
@@ -139,30 +104,17 @@ Sometimes a walk helps me think and get ready to sleep.
 Weather changes the whole shape of nighttime. I've talked about snow, but
 there are several kinds of weather that make the night better.
 
-#+begin_export html
-<div class="shot-scroll" aria-label="Night weather photos">
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/fog.webp"
-         alt="Foggy residential street lit by a hazy streetlight at night"
-         loading="lazy">
-    <figcaption>Foggy streetlight</figcaption>
-  </figure>
+#+caption: Foggy streetlight
+#+attr_html: :alt Foggy residential street lit by a hazy streetlight at night
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/fog.webp]]
 
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/rain.webp"
-         alt="Rain falling over a wet apartment parking lot at night"
-         loading="lazy">
-    <figcaption>Rain outside the apartment</figcaption>
-  </figure>
+#+caption: Rain outside the apartment
+#+attr_html: :alt Rain falling over a wet apartment parking lot at night
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/rain.webp]]
 
-  <figure class="shot-card">
-    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/kc_2.webp"
-         alt="Kansas City sidewalk outside a lit restaurant at night"
-         loading="lazy">
-    <figcaption>Late ramen walk</figcaption>
-  </figure>
-</div>
-#+end_export
+#+caption: Late ramen walk
+#+attr_html: :alt Kansas City sidewalk outside a lit restaurant at night
+[[https://img.cleberg.net/blog/20260706-the-night-feeling/kc_2.webp]]
 
 I currently live close enough to several rivers that produce fog, which rolls
 through my neighborhood and creates dramatic nighttime effects.
