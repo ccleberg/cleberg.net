@@ -7,15 +7,15 @@
 {% elif project_description is defined %}
 <meta property="og:description" content="{{ project_description }}" />
 {% endif %}
+<script src="https://bubbles.town/vote.js" defer></script>
 {% endblock %}
 {% block main %}
 <article>
-    <p><time datetime='{{ post.date|strftime("%Y-%m-%d") }}'>{{ post.date|strftime("%Y-%m-%d") }}</time></p>
     <h1>{{ post.title }}</h1>
-    {% if post.description is defined %}
-        <p>{{ post.description }}</p>
-    {% endif %}
+    <p><time datetime='{{ post.date|strftime("%Y-%m-%d") }}'>{{ post.date|strftime("%Y-%m-%d") }}</time>{% if post.description is defined %} &middot; {{ post.description }}{% endif %}</p>
+    <div class="bubbles-vote"></div>
     <div>{{ post.html | safe }}</div>
     <div><a href="mailto:hello@cleberg.net">Reply via email &rarr;</a></div>
+    <div><i>...or, comment on this post on <a href="https://bubbles.town">Bubbles</a>!</i></div>
 </article>
 {% endblock %}
