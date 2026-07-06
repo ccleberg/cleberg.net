@@ -1,0 +1,193 @@
+#+date: [2026-07-06 Mon 15:16:22]
+#+title: The Night Feeling
+#+description: Night feels peaceful because the world becomes empty and stops demanding a performance.
+#+slug: the-night-feeling
+#+filetags: :personal:
+
+* The Night Feeling
+
+There is a feeling I’ve had most of my life that I’ve never had a good name for.
+
+It shows up at night, usually when nothing is happening. A quiet road. A gas
+station glowing under the only visible lights in a black landscape. A parking
+lot after the store has closed, perhaps lit by a flickering neon sign. A bedroom
+lit by a monitor. The rest of the world asleep, or at least far enough away to
+stop asking anything from me.
+
+It is not exactly loneliness. It is not sadness either, even when it carries
+some of both. It feels closer to relief.
+
+At night, nobody needs me to perform. There are fewer messages to answer, fewer
+decisions to make, fewer people to become for the sake of the room. The world
+stops asking me to keep up with it for a while.
+
+* Nighttime on the Farm
+
+For a large portion of my childhood, I lived on a rural farm in Minnesota. If
+you've never stayed in a remote area, it's hard to explain just how /quiet/ it
+is, especially at night.
+
+#+begin_export html
+<div class="shot-scroll" aria-label="Farm night and sunset photos">
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/winter.webp"
+         alt="Leaning yard light over snowy farm ground under a cloudy moon"
+         loading="lazy">
+    <figcaption>Snowy farm light</figcaption>
+  </figure>
+
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/sunset_2.webp"
+         alt="Orange sunset framed by dark tree branches over the farm"
+         loading="lazy">
+    <figcaption>Sunset through trees</figcaption>
+  </figure>
+
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/sunset_1.webp"
+         alt="Red-orange sunset over a dark rural horizon"
+         loading="lazy">
+    <figcaption>Sunset over the fields</figcaption>
+  </figure>
+</div>
+#+end_export
+
+During winter, heavy snow filled the landscape and acted as a natural sound
+buffer, further quieting the world.
+
+As the sun went down, everything settled. Most of what remained was wind,
+snow, and the occasional sound of an animal moving somewhere nearby.
+
+We had a single wooden pole, partially slanted sideways from decades of weather,
+with a lamp that would emanate a soft, golden glow on a portion of the ground.
+As I looked out from the lamp, it would fade to black in all directions. Off in
+the distance, I would see faint amber circles from other farms, miles away.
+
+At that point, I was free from obligations. No schoolwork. No chores. No family
+talking to me. Nothing else trying to take up space in my head. I was alone in
+the universe and at peace.
+
+Instead of the hum of city traffic and distant sounds of others awake at
+night, rural nighttime brought me closer to nature than I have ever been since.
+
+* After Hours
+
+The setting changed, but the feeling stayed. The empty road became the quiet
+hotel room, the late walk through downtown, the stoplight changing colors for no
+one. I was older, but the night still made room for me in the same way.
+
+As I moved into adulthood, work, family, and friends filled more of my time,
+leaving fewer quiet hours to myself. I found solace in the "after hours" -
+traveling home from work, going out for a walk, or taking photos alone.
+
+#+begin_export html
+<div class="shot-scroll" aria-label="After-hours city and travel photos">
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/stl_1.webp"
+         alt="St. Louis skyline at night with the Gateway Arch and a lit KPMG building"
+         loading="lazy">
+    <figcaption>St. Louis skyline</figcaption>
+  </figure>
+
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/stl_2.webp"
+         alt="Quiet city street facing a bright parking garage entrance at night"
+         loading="lazy">
+    <figcaption>Quiet city street</figcaption>
+  </figure>
+
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/broncos.webp"
+         alt="Neon Bronco's Hamburgers sign glowing over an empty street at night"
+         loading="lazy">
+    <figcaption>Bronco's at night</figcaption>
+  </figure>
+
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/stoplights.webp"
+         alt="Red traffic lights under a bright moon and power lines"
+         loading="lazy">
+    <figcaption>Moonlit stoplights</figcaption>
+  </figure>
+
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/kc_1.webp"
+         alt="Kansas City skyline at night with Union Station lit red"
+         loading="lazy">
+    <figcaption>Kansas City at night</figcaption>
+  </figure>
+
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/flight.webp"
+         alt="City lights seen from an airplane window at night"
+         loading="lazy">
+    <figcaption>City lights from the plane</figcaption>
+  </figure>
+</div>
+#+end_export
+
+I travel a fair amount for my company, which leaves me with the task of finding
+food at odd hours and gives me a reason to explore the cities I visit.
+
+Other than work, this feeling blends into city nights, where people are awake
+and businesses are open somewhere near me. I've lived near downtown twice so
+far, which led to many nighttime adventures when I was bored or couldn't sleep.
+Sometimes a walk helps me think and get ready to sleep.
+
+* Night Weather
+
+Weather changes the whole shape of nighttime. I've talked about snow, but
+there are several kinds of weather that make the night better.
+
+#+begin_export html
+<div class="shot-scroll" aria-label="Night weather photos">
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/fog.webp"
+         alt="Foggy residential street lit by a hazy streetlight at night"
+         loading="lazy">
+    <figcaption>Foggy streetlight</figcaption>
+  </figure>
+
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/rain.webp"
+         alt="Rain falling over a wet apartment parking lot at night"
+         loading="lazy">
+    <figcaption>Rain outside the apartment</figcaption>
+  </figure>
+
+  <figure class="shot-card">
+    <img src="https://img.cleberg.net/blog/20260706-the-night-feeling/kc_2.webp"
+         alt="Kansas City sidewalk outside a lit restaurant at night"
+         loading="lazy">
+    <figcaption>Late ramen walk</figcaption>
+  </figure>
+</div>
+#+end_export
+
+I currently live close enough to several rivers that produce fog, which rolls
+through my neighborhood and creates dramatic nighttime effects.
+
+And my favorite: rain. Rain hitting the roof overnight is probably my favorite
+version of it.
+
+Weather gives the night permission to become even quieter. Rain makes staying
+still feel natural. Fog makes familiar streets feel temporarily removed from the
+ordinary world. Cold air makes lit windows, warm cars, and late meals feel more
+intimate than they would during the day.
+
+* Closing Thoughts
+
+During the day, everything has a role attached to it. Work, errands, messages,
+bills, conversations, traffic, noise. At night, those things lose some of their
+authority. The same streets are still there, but they feel less owned by
+everyone else.
+
+The strange part is how consistent it has been. Nearly everything in my life has
+changed: rooms, cars, people, locations, climate - but the feeling stayed the
+same.
+
+I don’t think I love the night because it is dark. I think I love it because it
+gives everything more space. My responsibilities melt away and I'm left with a
+strange and unique freedom.
+
+The world is still there. It just lowers its voice.
