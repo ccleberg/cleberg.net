@@ -14,12 +14,6 @@ pre, blockquote { margin: 1rem 0; padding: 0.5rem; background-color: #eee; }
 pre { overflow: auto; white-space: pre; }
 blockquote p { margin: 0; }
 code { color: #942192; }
-.shot-scroll { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(220px, 280px); gap: 12px; overflow-x: auto; overscroll-behavior-x: contain; padding: 4px 0 8px; scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; }
-.shot-scroll::-webkit-scrollbar { height: 10px; }
-.shot-scroll::-webkit-scrollbar-thumb { background: var(--border-strong); }
-.shot-card { margin: 0; scroll-snap-align: start; border: 1px solid var(--border); overflow: hidden; background: var(--surface-2); }
-.shot-card img { display: block; width: 100%; height: auto; }
-.shot-card figcaption { padding: 10px 12px 12px; color: var(--text); font-size: 0.9rem; font-weight: 600; }
 @media (prefers-color-scheme: dark) {
 	body { background-color: #181a1b; color: #cccccc; }
 	a, a:visited { color: #68A9F8; }
