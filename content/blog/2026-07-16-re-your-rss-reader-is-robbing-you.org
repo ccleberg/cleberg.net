@@ -1,0 +1,29 @@
+#+date: [2026-07-16 Thu 13:34:04]
+#+title: Re: Your RSS Reader Is Robbing You
+#+description: I am so happy feed readers let me ignore the author's style sheets.
+#+slug: re-your-rss-reader-is-robbing-you
+#+filetags: :web:
+
+To summarize my answer to Antonio's post: good!
+
+I don't read posts in my feed reader to look at styles, I do it to consume
+content - to read their thoughts.
+
+I use my feed reader because it's configured exactly how I like it. The colors
+are tweaked to a palette that's pleasing to my eyes and doesn't cause strain.
+The font family, font size, and other elements are customizable and configured
+exactly how I like them.
+
+I can't tell you how many times I've opened a great blog post and struggled to
+read it and had to enable Reader Mode in my browser just to get through it.
+
+HTML is great because it's a structured markup where we can disregard the web
+server's custom styles and apply our own. In fact, there are whole communities
+around custom style sheets to mold the web into your own comfortable space.
+
+Sure, there are great looking blogs out there. But honestly? There are far more
+poorly-styled blogs or blogs that are fine, but conflict with my own sense of
+style or eye comfort.
+
+Keep it up, RSS. Thanks for shielding me from visual discomfort and flashing
+yellow text on purple backgrouunds.
