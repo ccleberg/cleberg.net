@@ -1,0 +1,88 @@
+#+date: [2026-07-16 Thu 12:37:35]
+#+title: Re: Quoting Linus Torvalds
+#+description: Discussing Linus Torvalds' thoughts on the use of AI in the Linux kernel community.
+#+slug: re-torvalds-on-ai
+#+filetags: :linux:ai:
+
+* Linus on AI
+
+Linus Torvalds' recent defense of AI in the Linux kernel sparked the predictable
+backlash, but the real debate is far more nuanced than that.
+
+This specific blog post is in response to [[https://simonwillison.net/search/?q=linus+torvalds&type=quotation&type_label=Quotation&sort=date][Simon Willison's]] post of the quotation
+below on his website.
+
+As Linus says in his message:
+
+#+begin_quote
+I realize that some people really dislike AI, but this is an area where I'm
+willing to absolutely put my foot down as the top-level maintainer.
+
+Linux is not one of those anti-AI projects, and if somebody has issues with
+that, they can do the open-source thing and fork it.
+
+Or just walk away.
+
+AI is a tool, just like other tools we use. And it's clearly a useful one.
+
+It may not have been that "clearly" even just a year ago, but it's no longer in
+question today.
+
+There are other questions around AI (like what the economy of it will actually
+look like in the end), but "is it useful" is no longer one of those questions.
+Anybody who doubts that clearly hasn't actually used it.
+
+— Linus Torvalds, [[https://lore.kernel.org/linux-media/CAHk-=wi4zC+Ze8e+p3tMv8TtG_80KzsZ1syL9anBtmEh5Z40vg@mail.gmail.com/][Linux Media Mailing List]]
+#+end_quote
+
+* My Thoughts
+
+...and I agree. I do understand some of the push-back from others - such as [[https://lobste.rs/s/pb6d8m/linus_torvalds_on_llm_usage_kernel][the
+commenters on lobste.rs]].
+
+However, online communities tend to drift into the extremes and hard-line their
+opinions without considering broader context.
+
+Linus is right that AI is a tool and a very useful one. The commenters are right
+that there are additional considerations, such as environmental concerns and
+social/cultural impacts, that we need to consider as we approach the usage of AI
+tools. But "AI is bad and should be banned" is neither an answer to those
+questions nor is it an informative take on the collective AI options out there,
+beside the top AI offerings.
+
+This push-back often conflates different issues and muddies the waters of the
+argument: environmental cost/impact, job displacement, corporate capture of
+open-source labor, and code quality. These are all valid concerns and absolutely
+deserve attention. But the solution isn't to bury our head in the sand and avoid
+it. The solution is a logical review of the options and clarifying your stance
+as a maintainer - write up clear contribution guidelines and code review
+standards. These steps work regardless of your stance on AI as a maintainer.
+
+The bottom line here is that AI tools exist and will not be going away.
+Developers will approach our projects with these tools, not to mention attackers
+or hackers looking to exploit open-source projects.
+
+The goal, then, is to level the playing field. How can we enable open-source
+project maintainers to effectively and efficiently maintain their projects while
+protecting both their sanity and users?
+
+Each project may approach this differently, depending on their individual values
+and concerns, but it's silly to dismiss AI outright without discussion. If a
+project's set of maintainers or community decides to ban AI, that's their right.
+But if a maintainer chooses to allow AI in some or all cases, that's also their
+choice.
+
+The reality is simple: maintainers set the rules for their projects. Some will
+embrace AI and some will outright refuse, and we should respect the rules on the
+projects we contribute to. The Linux kernel's openness to it doesn't obligate
+anyone else to accept AI. Linux is saying we get to choose when working on the
+kernel and that's worth defending. Personally, I appreciate that he's willing to
+take a stance one way or the other, rather than avoid making a statement just to
+avoid the conflict.
+
+Lastly, I know some have noted Linus's (often brusque tone) again regarding his
+"fork it or walk away" point. I'll be honest, I agree with him wholeheartedly
+here. That's the whole point of open-source. You don't have to use AI to work on
+the kernel and if you have a strict rule against being involved with projects
+that involve AI, fork it and maintain a non-AI version. Build a community around
+it if your feelings are popular with others.
