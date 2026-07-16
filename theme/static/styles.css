@@ -12,7 +12,8 @@ img { max-width: 100%; }
 footer { margin: 2rem 0;}
 pre, blockquote { margin: 1rem 0; padding: 0.5rem; background-color: #eee; }
 pre { overflow: auto; white-space: pre; }
-blockquote p { margin: 0; }
+blockquote p { margin: 0; margin-bottom: 1rem; }
+blockquote p:last-child { margin-bottom: 0; }
 code { color: #942192; }
 @media (prefers-color-scheme: dark) {
 	body { background-color: #181a1b; color: #cccccc; }
