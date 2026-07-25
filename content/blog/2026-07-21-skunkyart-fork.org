@@ -1,0 +1,55 @@
+#+date: [2026-07-21 Tue]
+#+title: Forking SkunkyArt
+#+description: Announcing my fork of SkunkyArt, an alternative privacy frontend for DeviantArt, now maintained under Zero Labs.
+#+slug: skunkyart-fork
+#+filetags: :development:self-hosting:
+
+* SkunkyArt
+
+I've forked [[https://git.macaw.me/skunky/SkunkyArt][SkunkyArt]], an alternative privacy frontend for DeviantArt that works
+entirely without JavaScript, over to the [[https://github.com/zerolabsco][Zero Labs]] organization on GitHub.
+
+** Project Links
+
+- [[https://github.com/zerolabsco/skunky-art][Source]]
+- [[https://github.com/zerolabsco/skunky-art/blob/master/INSTANCES.md][Instances]]
+- [[https://github.com/zerolabsco/skunky-art/issues][Issues]]
+
+** Why Fork?
+
+I didn't fork this project just for fun. At the time I found it, the upstream
+repository hadn't been updated in over a year, carried a number of unresolved
+bugs, and every instance on its public list was a dead link. Rather than let a
+genuinely useful privacy frontend rot, I decided to pick it up and keep it
+maintained.
+
+** What's Changed So Far
+
+The fork is already a handful of releases ahead of upstream. Highlights so far:
+
+- *Security & hardening*: fixed a forged-subdomain bypass in the media proxy,
+  hardened the HTTP transport, server timeouts, and panic paths, and tightened
+  the random-art retry loop.
+- *Bug fixes*: restored media serving, corrected the cache max-size conversion,
+  fixed the build on macOS, and cleaned up various smaller issues.
+- *Dependencies*: migrated to a maintained fork of the underlying DeviantArt API
+  library, [[https://github.com/zerolabsco/devianter][devianter]], and bumped long-stale dependencies (with Dependabot
+  keeping them current going forward).
+- *Distribution*: prebuilt multi-arch Docker images (=linux/amd64= and =linux/arm64=)
+  are now published to GHCR on every release tag:
+
+#+begin_src sh
+docker pull ghcr.io/zerolabsco/skunky-art:latest
+#+end_src
+
+- *Tooling*: added CI, golangci-lint, and outbound request throttling for
+  DeviantArt.
+
+* Run an Instance!
+
+Since all of the previously listed instances are gone, the instance list is
+starting fresh. If you'd like to host one, the [[https://github.com/zerolabsco/skunky-art][README]] covers setup — including a
+Docker Compose example (plus an optional VPN egress variant) — and you can add
+your instance to the list with a quick PR or issue.
+
+As always, bug reports and contributions are welcome.

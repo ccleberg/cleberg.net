@@ -1,0 +1,56 @@
+#+date: [2026-07-25 Sat 12:00:00]
+#+title: Small Wins on the App Store
+#+description: My first tips and 5-star ratings on the iOS apps I built for fun and open-sourced.
+#+slug: app-store-small-wins
+#+filetags: :development:ios:
+
+I wanted to briefly share a couple achievements I've experienced lately from
+the apps I've published on the iOS app store.
+
+If you're new to my blog: I'm not a full-time developer and don't do this for a
+living. I develop sites, apps, etc. for fun as a hobby. I open-source everything
+I create so others can share or fork as they please, and I've never even
+included a tip option (until now - that iOS developer subscription is
+expensive!).
+
+* My Apps
+
+However, I've launched a few apps on the Apple app store in the last year:
+- [[https://apps.apple.com/us/app/domaindig/id6760368004][DomainDig]] ([[https://github.com/zerolabsco/domain-dig][Source]]) - A domain inspection toolkit for DNS, SSL, ports, etc.
+- [[https://apps.apple.com/us/app/hutch-for-sourcehut/id6760742299][Hutch for Sourcehut]] ([[https://github.com/zerolabsco/hutch][Source]]) - A mobile client for SourceHut.
+- [[https://apps.apple.com/us/app/daybyday-learn/id6760321939][DayByDay]] ([[https://github.com/zerolabsco/daybyday][Source]]) - A children's app to learn various topics through
+  voice-enabled learning cards.
+
+I didn't expect anyone to really use these and I don't promote my apps anywhere.
+
+I created DayByDay for my daughter, as a flashcard-style app that would be easy
+for her to use and something we could do together in the small moments of the
+day.
+
+I created Hutch because I wanted a faster way to use SourceHut on the go,
+especially since I use private mode in Safari and am constantly logged out of my
+accounts. Hutch lets me read my mailing lists, manage tickets, and run builds
+wherever I want.
+
+Finally, I created DomainDig because I was lamenting the updates Njalla made to
+their [[https://check.njal.la/dns/][DNS Checker]] - it used to be a plain text page and is now wrapped in
+Njalla's branding and lacks some info I want when looking into a domain.
+
+* My Achievements
+
+I'm proud to announce two (baby-sized) achievements I didn't expect to happen:
+
+1. I received my first two tips through the Hutch app! For a few dollars, two
+   people have made my whole month. It's extremely satisfying to know someone
+   used the app and found it valuable enough to voluntarily send some money my
+   way.
+2. I received two 5-star ratings on the DomainDig app. Again, such a pleasure to
+   know people do appreciate the value that the app brings.
+
+I'm not going to pretend two tips and two ratings will change anything. I'll
+keep building these apps in the small moments the same way I always have,
+because that's the part I actually enjoy. But it's a nice reminder that "nobody
+will use this" isn't always true. Sometimes a stranger finds the thing you made
+for yourself and gets something out of it too.
+
+So, to the four of you: thank you. You made my month.
