@@ -29,11 +29,10 @@ import re
 import shutil
 import subprocess
 import sys
-from html import escape
-from urllib.parse import quote
 from datetime import datetime
+from html import escape
 from pathlib import Path
-
+from urllib.parse import quote
 
 SITE_TEMPLATE_VARS = {
     "site_name": "cleberg.net",
@@ -45,9 +44,7 @@ SITE_TEMPLATE_VARS = {
 def run_ruff():
     print("Running ruff...")
     for cmd in [["ruff", "check", "--fix"], ["ruff", "format"]]:
-        result = subprocess.run(
-            cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
-        )
+        result = subprocess.run(cmd, capture_output=True, text=True, check=False)
         if result.returncode != 0:
             print(f"ruff error ({' '.join(cmd)}):")
             print(result.stderr, file=sys.stderr)
@@ -300,9 +297,9 @@ def minify_css(src_css, dest_css):
     print(f"Minifying CSS: {src_css} → {dest_css}")
     result = subprocess.run(
         ["minify", "-o", str(dest_css), str(src_css)],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        capture_output=True,
         text=True,
+        check=False,
     )
     if result.returncode != 0:
         print("Error during CSS minification:")
@@ -314,9 +311,9 @@ def minify_html(src_html, dest_html):
     print(f"Minifying HTML: {src_html} → {dest_html}")
     result = subprocess.run(
         ["minify", "-o", str(dest_html), str(src_html)],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        capture_output=True,
         text=True,
+        check=False,
     )
     if result.returncode != 0:
         print("Error during HTML minification:")
@@ -333,6 +330,7 @@ def run_emacs_publish(dev_mode=True):
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
+        check=False,
     )
 
     if result.returncode != 0:
@@ -538,9 +536,9 @@ def deploy_to_server(build_dir, server):
     print(f"Deploying .build/ → {remote_path}")
     result = subprocess.run(
         ["rsync", "-r", "--delete-before", f"{build_dir}/", remote_path],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
+        capture_output=True,
         text=True,
+        check=False,
     )
     if result.returncode != 0:
         print("Error during rsync deployment:")

@@ -6,6 +6,7 @@ plotly.
 """
 
 import locale
+
 import pandas as pd
 import plotly.graph_objs as go
 from pandas import read_csv as pd_read_csv
