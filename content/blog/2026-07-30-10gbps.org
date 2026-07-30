@@ -1,0 +1,249 @@
+#+date: [2026-07-30 Thu 17:14:00]
+#+title: Upgrading My Homelab to 10 Gbps
+#+description: Moving my homelab off 1 Gbps and onto a 10 Gbps backbone.
+#+slug: 10gbps
+#+filetags: :self-hosting:
+
+* Why 10 Gbps?
+
+The short answer: fiber finally became available at my current residence, so I
+jumped on it immediately.
+
+The slightly longer answer is that I'd previously enjoyed proper 1 Gbps fiber,
+but for a while now I'd been stuck limping along on "1 Gbps" cable from Cox
+that, in reality, often crawled along at 100 Mbps regardless of what I did to
+fix it. New modem, new cables, different ports, calls to support - nothing
+mattered. It ran at whatever speed it felt like that day.
+
+So when [[https://fiber.google.com][Google Fiber]] showed up in my neighborhood, I ordered the 8 Gbps package
+immediately. I'll upgrade to their 10 Gbps package the moment it's released, but
+I'm not exactly suffering in the meantime.
+
+A quick note on the title before we go further: my /internet/ is 8 Gbps for now,
+but this post is really about rebuilding my /internal/ network to 10 Gbps end to
+end. The WAN is just the excuse to upgrade everything.
+
+#+caption: My WAN status over the past month.
+#+attr_html: :alt A chart of my WAN status and activity over the past month.
+https://img.cleberg.net/blog/20260730-10gbps/wan_history.webp
+
+In the screenshot above, you can see that Google Fiber was installed on 7/20 and
+UniFi entered WAN failover mode (the blue bar) and then I unplugged Cox on 7/22,
+resulting in the green Google Fiber bar.
+
+As you can also see, Cox was a /train wreck/ - cycling between yellow
+(disconnections, lag, etc.) and red (no internet connection) for the previous
+month.
+
+* What I Was Running Before
+
+Nothing exotic. My network was built entirely on 1 Gbps gear:
+
+- A 24-port UniFi switch in the rack.
+- Two 8-port UniFi switches serving other rooms.
+- A Cox "1 Gbps" WAN that, as mentioned, frequently delivered closer to 100
+  Mbps.
+
+It worked. For years, it was more than enough - I've written before about how my
+[[https://cleberg.net/blog/homelab-maintenance.html][homelab basically maintains itself]], and the network was no exception. But once I
+had real bandwidth coming into the house, 1 Gbps internally became the
+bottleneck instead of the ISP.
+
+As a result, I installed the hardware I'll list in the next section. You can see
+the 10G connections in blue and the 1G connections in green.
+
+#+caption: My homelab infrastructure.
+#+attr_html: :alt A network diagram of my homelab infrastructure.
+https://img.cleberg.net/blog/20260730-10gbps/infrastructure.webp
+
+* The Hardware
+
+Everything here is UniFi. I'm already knee-deep in the ecosystem, and at this
+point fighting it would cost me more time than it's worth. Staying in one
+platform means everything shows up in a single controller and I don't have to
+think about it - which is exactly how I like my homelab.
+
+#+caption: My homelab rack.
+#+attr_html: :alt A photo of my homelab rack of UniFi gear.
+https://img.cleberg.net/blog/20260730-10gbps/rack.webp
+
+This rack shows:
+- UDM Pro router.
+- 10G 24-port switch.
+- Switch panel with keystone jacks.
+- 1G 24-port switch.
+- My server.
+
+This is *before* the Google Fiber installation, so you can see that the WAN RJ45
+port is in use on the UDM Pro instead of the SFP+ port.
+
+I also removed the old 1G switch after this picture and plan to sell it. I just
+didn't want to box it up quite yet when I took this photo.
+
+** Switch
+
+Two switches did the heavy lifting for the upgrade:
+
+- [[https://store.ui.com/us/en/category/switching-professional-max-xg/products/usw-pro-hd-24-poe?variant=usw-pro-hd-24-poe][USW Pro HD 24 PoE]]: the new core switch in the rack, replacing my old 1 Gbps
+  24-port unit.
+- [[https://store.ui.com/us/en/category/switching-utility/products/usw-pro-xg-8-poe?variant=usw-pro-xg-8-poe][USW Pro XG 8 PoE]]: a smaller 10G switch serving another room, replacing one of
+  the old 8-port units.
+
+** NICs
+
+Neither of my two most important machines shipped with 10G, so both needed a new
+network card:
+
+- *Windows gaming PC*: an Intel X520-DA1, a 10G SFP+ card.
+- *Server*: an Intel X710-DA2, a dual-port 10G SFP+ card.
+
+Both are enterprise Intel cards you can find used for very little money, which
+is half the reason I went with them.
+
+The Ubuntu server already had Intel drivers installed, so I wasn't required to
+install anything. I simply slotted the NIC into the PCIe port on the motherboard
+and it worked.
+
+#+caption: The 10G NIC in my server.
+#+attr_html: :alt A photo of the 10G NIC installed in my server.
+https://img.cleberg.net/blog/20260730-10gbps/server_nic.webp
+
+However, the Windows machine was a different story. It did come with an
+installation CD-ROM, but I of course ignored that since I have no disc drive in
+my PC. I tried to find the right drivers online, but Intel's websites are a vast
+wasteland of useless downloads and circular links.
+
+Eventually, I pulled a USB-C disc reader from storage and used the CD, which
+magically installed on the first try and everything started working from there.
+
+That'll teach me (not really).
+
+#+caption: The 10G NIC in my Windows gaming PC.
+#+attr_html: :alt A photo of the 10G NIC installed in my Windows gaming PC.
+https://img.cleberg.net/blog/20260730-10gbps/desktop_nic.webp
+
+** Cabling
+
+This is where 10G gets fiddly, and where most of my shopping list ended up.
+Going 10G means leaving RJ45 behind for SFP+ almost everywhere:
+
+- [[https://store.ui.com/us/en/category/accessories-modules-fiber/collections/accessories-pro-direct-attach-cables/products/uacc-cm-rj45-mg?variant=uacc-cm-rj45-mg][SFP+ to RJ45 Adapter]]: bridges the Google Fiber RJ45 handoff into the SFP+ port
+  on my UDM Pro.
+- [[https://store.ui.com/us/en/category/accessories-cables-dacs/collections/accessories-pro-patch-cables/products/uacc-cable-patch-el?variant=uacc-cable-patch-el-0dot15m-w][UniFi Etherlighting Patch Cable]]: short in-rack runs between the switch, the
+  other rack devices, and the fiber modem.
+- [[https://store.ui.com/us/en/category/accessories-modules-fiber/collections/accessories-pro-direct-attach-cables/products/10gbps-direct-attach-cable?variant=uacc-dac-sfp10-0dot5m][10G Direct Attach Cable (DAC)]]: the short SFP+ runs from the rack switch to the
+  server, and from the second switch to the gaming PC.
+- [[https://store.ui.com/us/en/category/accessories-modules-fiber/collections/accessories-pro-direct-attach-cables/products/10-gbps-active-optical-cable?variant=uacc-aoc-sfp10-20m][10G Active Optical Cable (AOC)]]: the long run between the rack and the 8-port
+  switch in the other room, where a copper DAC won't reach.
+
+** Cost
+
+None of this is cheap, so here's the full damage:
+
+| Item                      | Qty | Price     |
+|---------------------------+-----+-----------|
+| USW Pro HD 24 PoE         |   1 | $999.00   |
+| USW Pro XG 8 PoE          |   1 | $499.00   |
+| SFP+ to RJ45 Adapter      |   1 | $65.00    |
+| UniFi Etherlighting Patch |  27 | $112.97   |
+| Cat6A Keystone Coupler    |   2 | $78.00    |
+| 10G Direct Attach Cable   |   3 | $43.00    |
+| 10G Long-Range DAC (AOC)  |   1 | $55.00    |
+| Intel X520-DA1 NIC        |   1 | $45.00    |
+| Intel X710-DA2 NIC        |   1 | $145.00   |
+|---------------------------+-----+-----------|
+| *Total*                     |     | $2,041.97 |
+
+* The Upgrade
+
+With the parts in hand, the actual topology is straightforward. Bandwidth flows
+in from the street and fans out through the rack:
+
+#+begin_src
+Google Fiber
+    │  (RJ45 → SFP+ adapter)
+    ▼
+UDM Pro
+    │  (Etherlighting patch)
+    ▼
+USW Pro HD 24 (core switch)
+    ├─ DAC ──────────► Server
+    ├─ AOC ──────────► USW Pro XG 8 (other room)
+    │                       └─ DAC ──► Windows Gaming PC
+    └─ ETH ──────────► USW 8-port (1G switch)
+#+end_src
+
+The UDM Pro takes the Google Fiber handoff through the RJ45-to-SFP+ adapter,
+then hands everything down to the new 24-port switch over an Etherlighting patch
+cable. From there, the server hangs directly off the core switch on a short DAC,
+and a long active optical cable carries 10G across the house to the second
+switch, which finally feeds my gaming PC. My surviving 1 Gbps 8-port switch
+still hangs off the core switch too, handling everything that doesn't need 10G.
+
+The physical installation was pretty easy. I needed to replace a drive in my
+server's ZFS pool, so I already needed to get inside the rack. Since I don't use
+rails, I had to unscrew and pull out each device by hand.
+
+From there, the NIC (and HDD) installation in the server was seamless. Just pop
+out one of the metal slots on the back of the server, slot the NIC into the PCIe
+lane, and line up the port with the new opening in the back panel.
+
+All in all, it was easy and simple. No physical snags, only one driver issue on
+the Windows machine (which was my fault for ignoring the provided CD), cabling
+runs were easy, and UniFi updates were minimal.
+
+* Benchmarks
+
+Let's nerd out on the numbers.
+
+** Before
+
+I don't actually have any speed tests from before the upgrade, but the Cox
+connection had degraded even further by the end - down to roughly 70 Mbps for
+the month prior to the upgrade.
+
+Occasionally, I was able to get ~800 Mbps when the connection would work
+properly.
+
+** After
+
+So, here's the catch. I'm not getting the full 8 Gbps currently. When the Google
+tech installed the modem, we confirmed ~ 8500 Mbps together, which means the
+fiber is working through the ONT and the modem.
+
+However, they would not connect directly to my router, which means the Google
+modem is in bridge mode for now.
+
+The speed test below shows an average speed, where I'm getting 5 to 6 Gbps to my
+router. While not the full 8 Gbps, I'm not saturating it anyway, so I haven't
+dug into my UniFi settings to determine what's causing the difference.
+
+#+caption: Speed test from the UniFi controller.
+#+attr_html: :alt A screenshot of a speed test result from the UniFi controller.
+https://img.cleberg.net/blog/20260730-10gbps/speed_unifi.webp
+
+A supplementary test showing speeds directly to my server:
+
+#+caption: Speed test from my server.
+#+attr_html: :alt A screenshot of a speed test result from my server.
+https://img.cleberg.net/blog/20260730-10gbps/speed_server.webp
+
+* Was It Worth It?
+
+Here's the honest part.
+
+Do I /need/ 10 Gbps between my gaming PC and my server? Probably not. The number
+of times a day I move enough data to saturate even 1 Gbps is small, and for most
+of what I do, this changes nothing I'll consciously notice.
+
+But that was never really the point. I finally have an internet connection that
+delivers what I pay for, and a network that won't be the bottleneck for years to
+come. After spending so long fighting a "1 Gbps" connection that never once hit
+1 Gbps, there's something deeply satisfying about watching a transfer actually
+move as fast as the hardware allows.
+
+Instead of constantly monitoring speeds and pausing services so our
+work-from-home connections aren't impacted, I can let my server idle at 400 Mbps
+24/7, not to mention all the other devices in my home.
+
+Was it worth it? For the peace of mind alone: yes.
