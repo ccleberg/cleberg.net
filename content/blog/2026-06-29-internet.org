@@ -103,7 +103,7 @@ with integrated file-compatible drawers and specific spots for your matching
 beige desktop speakers.
 
 #+caption: Gateway Ad from 1992
-[[https://www.vice.com/wp-content/uploads/sites/2/2019/08/1565048739851-image3.png]]
+[[https://img.cleberg.net/blog/20260627-internet/gateway.webp]]
 
 To use the computer, you likely turned on a very heavy CRT monitor. Perhaps it
 even flickered, emitted you a static buzz, or showed a wavy pattern in the
@@ -126,7 +126,7 @@ PC. This would result in an airplane level of whirring while it used maybe a few
 MB of memory and hard drive storage to boot up [[https://en.wikipedia.org/wiki/Windows_95][Windows 95]].
 
 #+caption: Windows 95 Desktop
-[[https://upload.wikimedia.org/wikipedia/en/e/eb/Windows_95_at_first_run.png]]
+[[https://img.cleberg.net/blog/20260627-internet/windows95.webp]]
 
 At this point, the world was your oyster. You could do so many things that
 humans throughout history couldn't do:
