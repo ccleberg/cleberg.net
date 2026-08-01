@@ -94,11 +94,17 @@ Two switches did the heavy lifting for the upgrade:
 Neither of my two most important machines shipped with 10G, so both needed a new
 network card:
 
-- *Windows gaming PC*: an Intel X520-DA1, a 10G SFP+ card.
-- *Server*: an Intel X710-DA2, a dual-port 10G SFP+ card.
+*Windows Gaming PC*: an Intel X520-DA1, a 10G SFP+ card.
 
-Both are enterprise Intel cards you can find used for very little money, which
-is half the reason I went with them.
+#+caption: X520-DA1 NIC for Windows
+#+attr_html: :alt A photo of the X520-DA1 NIC product image.
+[[https://img.cleberg.net/blog/20260730-10gbps/x520-da1.webp]]
+
+*Server*: an Intel X710-DA2, a dual-port 10G SFP+ card.
+
+#+caption: X710-DA2 NIC for Linux
+#+attr_html: :alt A photo of the X710-DA2 product image.
+[[https://img.cleberg.net/blog/20260730-10gbps/x710-da2.webp]]
 
 The Ubuntu server already had Intel drivers installed, so I wasn't required to
 install anything. I simply slotted the NIC into the PCIe port on the motherboard
