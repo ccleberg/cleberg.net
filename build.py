@@ -142,10 +142,6 @@ def render_base_template(main_html, subtitle="", title=None):
         '{% if site_keywords is defined %}<meta name="keywords" content="{{ site_keywords }}">{% endif %}',
         "",
     )
-    rendered = rendered.replace(
-        '{{ url_for("static", file="styles.min.css") }}',
-        "/styles.min.css",
-    )
     rendered = rendered.replace("{% block meta %}{% endblock %}", "")
     rendered = rendered.replace("{% block head %}", "")
     rendered = rendered.replace("{% endblock %}", "", 1)
