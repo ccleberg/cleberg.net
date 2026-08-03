@@ -118,8 +118,10 @@ absolute `img.cleberg.net` URLs, so local previews load images from the
 live host and need no symlink.
 
 Once assets are same-origin, the vhost CSP can tighten `img-src`,
-`style-src`, and `font-src` back to `'self'`. After deploying, purge the
-Cloudflare cache (responses carry a 31-day `max-age`).
+`style-src`, and `font-src` back to `'self'`, and drop `bubbles.town`
+from `script-src`/`connect-src` (the vote widget was removed; only a
+plain link to Bubbles remains). After deploying, purge the Cloudflare
+cache (responses carry a 31-day `max-age`).
 
 ## Creating New Blog Posts
 
