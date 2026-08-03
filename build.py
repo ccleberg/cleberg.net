@@ -317,6 +317,26 @@ def minify_html(src_html, dest_html):
         sys.exit(1)
 
 
+def rewrite_img_urls(build_dir=".build"):
+    """
+    Rewrite absolute img.cleberg.net URLs to root-relative /img/ paths so the
+    onion serves images from its own origin instead of fetching them off-onion.
+    Production only: dev builds keep the absolute URLs so local previews still
+    load images from the live image host.
+
+    Requires the server to serve /var/www/img/ at /img/ on the cleberg.net vhost
+    (e.g. `ln -s /var/www/img /var/www/cleberg.net/img`).
+    """
+    count = 0
+    for html in Path(build_dir).rglob("*.html"):
+        text = html.read_text(encoding="utf-8")
+        new_text = text.replace("https://img.cleberg.net/", "/img/")
+        if new_text != text:
+            count += text.count("https://img.cleberg.net/")
+            html.write_text(new_text, encoding="utf-8")
+    print(f"Rewrote {count} img.cleberg.net references to /img/")
+
+
 def run_emacs_publish(dev_mode=True):
     mode = "development" if dev_mode else "production"
     print(f"Running Emacs publish script ({mode})...")
@@ -579,6 +599,7 @@ def main():
             update_marked_section(html_snippet)
             inject_blog_year_separators()
             generate_tags_page()
+            rewrite_img_urls(build_dir)
             # minify_html("./.build/index.html", "./.build/index.html")
             generate_sitemap()
         if deploy:
