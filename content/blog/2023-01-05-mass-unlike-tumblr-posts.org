@@ -58,7 +58,7 @@ this (this is in Firefox, Chromium should be similar):
 
 #+caption: Firefox Dev Tools
 #+attr_html: :alt Firefox Dev Tools' Console tab will allow you to paste this command.
-[[https:///img.cleberg.net/blog/20230105-mass-unlike-tumblr-posts/dev_console.webp]]
+[[https://img.cleberg.net/blog/20230105-mass-unlike-tumblr-posts/dev_console.webp]]
 
 All you need to do is paste the following snippet into the dev console.
 This code will collect all unlike buttons (=elements=) and then click

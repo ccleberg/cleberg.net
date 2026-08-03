@@ -326,13 +326,18 @@ def rewrite_img_urls(build_dir=".build"):
 
     Requires the server to serve /var/www/img/ at /img/ on the cleberg.net vhost
     (e.g. `ln -s /var/www/img /var/www/cleberg.net/img`).
+
+    The pattern tolerates a stray number of slashes after the scheme
+    (https:/img, https:///img, ...) so a typo in the org source can't silently
+    slip through un-rewritten and ship a broken cross-origin URL.
     """
+    pattern = re.compile(r"https:/+img\.cleberg\.net/")
     count = 0
     for html in Path(build_dir).rglob("*.html"):
         text = html.read_text(encoding="utf-8")
-        new_text = text.replace("https://img.cleberg.net/", "/img/")
-        if new_text != text:
-            count += text.count("https://img.cleberg.net/")
+        new_text, n = pattern.subn("/img/", text)
+        if n:
+            count += n
             html.write_text(new_text, encoding="utf-8")
     print(f"Rewrote {count} img.cleberg.net references to /img/")
 
