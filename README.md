@@ -99,6 +99,28 @@ ENV=prod uv run build.py
 uv run build.py
 ```
 
+## Deployment
+
+Production builds emit root-relative URLs (`/styles.min.css`,
+`/img/blog/...`) instead of absolute `https://` ones so the site renders
+standalone on the onion service without fetching assets off-onion.
+
+This means the web server must serve the image store at `/img/` on the
+`cleberg.net` vhost. The images live at `/var/www/img/` (their own host,
+`img.cleberg.net`); expose them under `cleberg.net/img/` with a symlink:
+
+``` shell
+ln -s /var/www/img /var/www/cleberg.net/img
+```
+
+Without this, images 404 in production. Development builds keep the
+absolute `img.cleberg.net` URLs, so local previews load images from the
+live host and need no symlink.
+
+Once assets are same-origin, the vhost CSP can tighten `img-src`,
+`style-src`, and `font-src` back to `'self'`. After deploying, purge the
+Cloudflare cache (responses carry a 31-day `max-age`).
+
 ## Creating New Blog Posts
 
 To add new blog content, follow this procedure within Emacs:
