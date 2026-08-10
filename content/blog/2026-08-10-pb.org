@@ -1,0 +1,13 @@
+#+date: [2026-08-10 Mon 01:46:00]
+#+title: People & Blogs: Christian
+#+description: Go check out Zach's interview with me!
+#+slug: pb
+#+filetags: :personal:web:
+
+Just a shout-out that I was recently featured on Zachary Kai's People and Blogs
+series.
+
+Go check out the post here: [[https://zacharykai.net/notes/pb/christian][People and Blogs: Christian]]!
+
+Lots of praise to Zach and his predecessor, Manuel Moreale, for their series of
+interviews with various people on the web!
