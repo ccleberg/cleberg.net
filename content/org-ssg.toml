@@ -1,0 +1,95 @@
+# org-ssg configuration for cleberg.net.
+#
+# Lives in content/ because that directory is the site's URL root: content/blog/post.org
+# publishes at /blog/post.html. Neither this file nor templates/ is published.
+#
+#   org-ssg serve content -o /tmp/preview      # write and preview
+#   org-ssg build content -o _site --strict    # build for real, failing on broken links
+#
+# This sits alongside the existing weblorg setup (publish.el, theme/) and changes nothing
+# about it. Delete this file and content/templates/ to remove org-ssg entirely.
+
+[site]
+title = "cleberg.net"
+description = "Stillness amidst the chaos."
+language = "en"
+# Empty keeps every URL relative, so the site works from a preview directory as well as
+# from its real origin. Set it to "https://cleberg.net" when you want canonical links, or
+# an RSS feed — a feed is read away from the site that served it, so its links cannot be
+# relative.
+base_url = ""
+
+[nav]
+# Explicit, because the pages that belong in the nav are not all top-level: /blog/ and
+# /garden/ are generated below, and salary/ is a section index one level down. index.org
+# is deliberately absent — the layout already links home from the site title, and listing
+# it here would print "cleberg.net" twice side by side. Source pages come first in the
+# order listed, then the collections that set `nav = true`.
+mode = "explicit"
+pages = ["salary/index.org"]
+
+[templates]
+dir = "templates"
+
+[highlight]
+theme = "InspiredGitHub"
+
+[html]
+# Level-1 org headings become <h2>, beneath the page title the layout renders as <h1> —
+# which is what the current site does too.
+heading_offset = 1
+toc = true
+section_numbers = false
+
+# --- Generated pages -------------------------------------------------------------
+# These have no source .org file. weblorg produces the equivalents today through its
+# blog-index, garden-index and tags routes.
+
+# The home page. Generated rather than authored, because it is a hand-written
+# introduction *plus* the most recent posts — and the post list is not something to
+# maintain by hand. The prose lives in templates/home.html, which is where weblorg keeps
+# it today too.
+#
+# content/index.org was deleted to make room: it held only #+title and #+description,
+# both of which are now [site] settings above. Restore it any time with
+# `git checkout content/index.org`, but then this collection must output somewhere else —
+# two pages cannot claim one URL, and org-ssg fails the build rather than picking a winner.
+[[collections]]
+source = "blog"
+output = "index.html"
+template = "home.html"
+title = "cleberg.net"
+sort = "date"
+order = "desc"
+
+[[collections]]
+source = "blog"
+output = "blog/index.html"
+template = "list.html"
+title = "Blog"
+sort = "date"
+order = "desc"
+nav = true
+
+[[collections]]
+source = "garden"
+output = "garden/index.html"
+template = "list.html"
+title = "Garden"
+sort = "date"
+order = "desc"
+nav = true
+
+# One page per tag, plus the index the live site already has at /tags/. `source` is empty
+# so it groups across the whole site rather than one section, which is how #+FILETAGS: is
+# used here — tags appear on blog posts and garden notes alike.
+[[collections]]
+source = ""
+group_by = "tags"
+output = "tags/{tag}.html"
+template = "list.html"
+title = "Tagged: {tag}"
+index_output = "tags/index.html"
+index_template = "tags.html"
+index_title = "Tags"
+nav = true
