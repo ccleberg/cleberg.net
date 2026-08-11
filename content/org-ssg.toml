@@ -41,18 +41,12 @@ dir = "templates"
 
 # Blog posts render through post.html — the shared layout plus a reply footer — the way
 # weblorg routes them through theme/templates/post.html. Everything else uses base.html.
+# Blog posts render through post.html, which adds the reply snippet. Nothing else does:
+# the live site also invites replies on garden notes and /now/, and that is a choice
+# rather than something a directory should decide. Any page opts in for itself with
+# `#+TEMPLATE: post.html`, and any post opts out with `#+TEMPLATE: base.html`.
 [[pages]]
 match = "blog"
-template = "post.html"
-
-# The live site invites replies on garden notes and /now/ too, but not on /uses/,
-# /tips/ or /salary/.
-[[pages]]
-match = "garden"
-template = "post.html"
-
-[[pages]]
-match = "now"
 template = "post.html"
 
 [highlight]
