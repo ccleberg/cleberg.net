@@ -13,22 +13,21 @@
 title = "cleberg.net"
 description = "Stillness amidst the chaos."
 language = "en"
-# Empty keeps every URL relative, so the site works from a preview directory as well as
-# from its real origin. Set it to "https://cleberg.net" when you want canonical links, or
-# an RSS feed — a feed is read away from the site that served it, so its links cannot be
-# relative.
-base_url = ""
+# Set, because the layout emits canonical links and /feed.xml — a feed is read away from
+# the site that served it, so its links cannot be relative. Ordinary page-to-page links
+# stay relative regardless, so a preview build still works from a directory.
+base_url = "https://cleberg.net"
 
 [nav]
 # Explicit, because the pages that belong in the nav are not all top-level: /blog/ and
 # /garden/ are generated below, and salary/ is a section index one level down. index.org
-# is deliberately absent — the layout already links home from the site title, and listing
-# it here would print "cleberg.net" twice side by side.
+# is deliberately absent — the layout writes the Home link itself, exactly as weblorg's
+# base.html does.
 #
 # Generated pages are named by their output path, authored ones by their source. Listing
 # them together is what puts Salary last: a collection with `nav = true` that is not
-# listed here gets appended after everything that is. /tags/ is deliberately not listed,
-# so it lands at the end.
+# listed here gets appended after everything that is — which is why the tags collection
+# below does not set `nav = true`: the live nav has no Tags entry.
 mode = "explicit"
 pages = ["blog/index.html", "garden/index.html", "salary/index.org"]
 
@@ -62,14 +61,14 @@ section_numbers = false
 source = "blog"
 output = "index.html"
 template = "home.html"
-title = "cleberg.net"
+title = "Christian Cleberg"
 sort = "date"
 order = "desc"
 
 [[collections]]
 source = "blog"
 output = "blog/index.html"
-template = "list.html"
+template = "blog.html"
 title = "Blog"
 sort = "date"
 order = "desc"
@@ -78,7 +77,7 @@ nav = true
 [[collections]]
 source = "garden"
 output = "garden/index.html"
-template = "list.html"
+template = "garden.html"
 title = "Garden"
 sort = "date"
 order = "desc"
@@ -96,4 +95,13 @@ title = "Tagged: {tag}"
 index_output = "tags/index.html"
 index_template = "tags.html"
 index_title = "Tags"
-nav = true
+
+# The RSS feed. Not a separate feature — a collection whose template happens to be XML,
+# which is why /feed.xml is declared here alongside the HTML listings.
+[[collections]]
+source = "blog"
+output = "feed.xml"
+template = "feed.xml"
+title = "cleberg.net"
+sort = "date"
+order = "desc"

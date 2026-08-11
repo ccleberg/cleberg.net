@@ -1,0 +1,30 @@
+{# The garden index at /garden/, mirroring theme/templates/garden.html.
+   Notes are listed by title and description rather than by date. #}
+{% extends "base.html" %}
+{% block main %}
+<h1>{{ page.title }}</h1>
+<p>Notes in various states of growth. Some are stubs, some are developed. Browse
+around.</p>
+<section>
+<h2>&#127795; The Growth Stages</h2>
+<p>Instead of dates, these metadata labels show how mature a page is:</p>
+<span><strong>&#127793; Seedlings:</strong> Rough notes, raw ideas, or "half-baked"
+thoughts.</span><br>
+<span><strong>&#127807; Budding:</strong> Notes that have some structure and a few
+internal links.</span><br>
+<span><strong>&#127795; Evergreen:</strong> High-conviction ideas that are
+well-researched and stable.</span><br>
+<span><strong>&#127810; Compost:</strong> Ideas you no longer agree with but want to
+keep for historical context.</span><br><br>
+</section>
+<ul>
+{%- for entry in pages %}
+<li>
+<a href="{{ root }}{{ entry.url }}">{{ entry.title }}</a>
+{%- if entry.excerpt %}
+<span>{{ entry.excerpt }}</span>
+{%- endif %}
+</li>
+{%- endfor %}
+</ul>
+{% endblock %}

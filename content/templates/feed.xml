@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+{#- The RSS feed at /feed.xml, mirroring theme/templates/feed.xml. A feed is read away
+    from the site that served it, so every URL here is absolute — which is what
+    `| absolute` needs [site] base_url for.
+
+    One difference from weblorg: <description> carries each post's excerpt rather than its
+    full HTML. org-ssg gives a collection template each entry's metadata, not its rendered
+    body. #}
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }}</title>
+    <atom:link href="{{ page.url | absolute }}" rel="self" type="application/rss+xml" />
+    <link>{{ "index.html" | absolute | replace("index.html", "") }}</link>
+    <description>{{ site.description }}</description>
+    <language>{{ site.language }}</language>
+    <webMaster>hello@cleberg.net (Christian Cleberg)</webMaster>
+{%- for post in pages %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{ post.url | absolute }}</link>
+      <guid isPermaLink="true">{{ post.url | absolute }}</guid>
+      <author>hello@cleberg.net (Christian Cleberg)</author>
+{%- if post.date_iso %}
+      <pubDate>{{ post.date_iso | rfc822 }}</pubDate>
+{%- endif %}
+{%- for tag in post.tags %}
+      <category>{{ tag }}</category>
+{%- endfor %}
+      <description>{{ post.excerpt }}</description>
+    </item>
+{%- endfor %}
+  </channel>
+</rss>

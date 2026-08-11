@@ -1,52 +1,80 @@
-{# Page layout for org-ssg.
+{# Page layout for org-ssg, mirroring theme/templates/base.html.
 
-   Styling comes from styles.css, a verbatim copy of theme/static/styles.css — the
-   stylesheet weblorg already serves. org-ssg publishes assets from inside its source
-   directory, so the copy lives here; `diff content/styles.css theme/static/styles.css`
-   should stay empty, or consolidate the two if you migrate for real.
+   Styling comes from styles.css, copied here from theme/static/ along with gpg.txt,
+   robots.txt and salary.csv — org-ssg publishes assets from inside its source
+   directory, and weblorg's live static root is theme/static/. The copies should stay
+   identical: `diff content/styles.css theme/static/styles.css` and friends should
+   print nothing, or consolidate the two if you migrate for real. weblorg links the
+   minified styles.min.css instead; that file is gitignored build output, and the rules
+   are the same, so the tracked stylesheet is the one to publish from here.
 
-   Available here: page (.title .url .date .date_iso .tags .excerpt .toc .keywords),
-   site, nav, root, stylesheet. See the org-ssg guide chapter on Templates. #}
+   Available here: page (.title .url .source .date .date_iso .tags .excerpt .toc
+   .keywords), site, nav, root, stylesheet. See the org-ssg guide on Templates. #}
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
 <head>
 <meta charset="utf-8">
+<title>{% block subtitle %}{{ page.title }} - {% endblock %}{{ site.title }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.title }} &middot; {{ site.title }}</title>
-{%- if site.base_url %}
-<link rel="canonical" href="{{ page.url | absolute }}">
-{%- endif %}
-{%- if page.excerpt %}
-<meta name="description" content="{{ page.excerpt | truncate(150) }}">
-{%- endif %}
-<link rel="stylesheet" href="{{ root }}styles.css">
+<meta name="author" content="Christian Cleberg &lt;hello@cleberg.net&gt;">
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | truncate(150) }}{% else %}{{ site.description }}{% endif %}">
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:url" content="{{ page.url | absolute | replace("index.html", "") }}">
+<meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | truncate(150) }}{% else %}{{ site.description }}{% endif %}">
+<link rel="canonical" href="{{ page.url | absolute | replace("index.html", "") }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ root }}feed.xml">
+<link rel="stylesheet" href="{{ root }}styles.css" type="text/css">
+<link rel="icon" href="data:,">
+{#- rel="me" identity links. weblorg's base.html writes the last one as <a>, which a
+    browser hoists out of <head>; <link> is the spelling that stays where it is put. #}
+<link href="https://github.com/ccleberg" rel="me">
+<link href="https://gitlab.com/ccleberg" rel="me">
+<link href="mailto:hello@cleberg.net" rel="me">
+<link href="https://c.im/@cmc" rel="me">
 {%- if stylesheet %}
 <link rel="stylesheet" href="{{ stylesheet }}">
 {%- endif %}
 </head>
 <body>
-<header>
-<nav>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<nav aria-label="Site Navigation">
 <ul>
-<li><a href="{{ root }}index.html">{{ site.title }}</a></li>
+<li><a href="{{ root }}index.html">Home</a></li>
 {%- for item in nav %}
 <li><a href="{{ item.url }}">{{ item.title }}</a></li>
 {%- endfor %}
 </ul>
 </nav>
-</header>
-<main>
+
+<main id="main-content">
+{% block main %}
+<article>
 <h1>{{ page.title }}</h1>
 {%- if page.date_iso %}
-<p><time datetime="{{ page.date_iso }}">{{ page.date_iso }}</time></p>
+<p><time datetime="{{ page.date_iso }}">{{ page.date_iso }}</time>{% if page.excerpt %} &middot; {{ page.excerpt }}{% endif %}</p>
 {%- endif %}
 {%- if page.tags %}
 <p>{% for tag in page.tags %}<a href="{{ root }}tags/{{ tag }}.html">#{{ tag }}</a> {% endfor %}</p>
 {%- endif %}
-{% block content %}{{ body | safe }}{% endblock %}
+<div>{% block content %}{{ body | safe }}{% endblock %}</div>
+{#- Blog posts carry a reply footer; other pages do not. org-ssg has no per-page
+    template selection, so the page's own URL is what tells them apart. #}
+{%- if page.url is startingwith("blog/") %}
+<div><a href="mailto:hello@cleberg.net">Reply via email &rarr;</a></div>
+<div><i>...or, comment on this post on <a href="https://bubbles.town/source/cleberg.net">Bubbles</a>!</i></div>
+{%- endif %}
+</article>
+{% endblock %}
 </main>
+
 <footer>
-<p><a href="{{ root }}index.html">{{ site.title }}</a> &mdash; {{ site.description }}</p>
+<a href="https://git.krz.sh/cmc/cleberg.net.git/">Source</a> &middot;
+<a href="{{ root }}feed.xml">RSS</a> &middot;
+<a href="http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/">Onion</a> &middot;
+<a href="{{ root }}tips/index.html">Tips</a> &middot;
+<a href="https://iheartrss.com/">I &hearts; RSS</a>
+<p>[ <a href="https://krz.sh">krz</a> &middot; <a href="https://audit-labs.dev">audit labs</a> ]</p>
 </footer>
 </body>
 </html>

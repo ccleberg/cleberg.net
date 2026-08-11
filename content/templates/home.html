@@ -2,10 +2,13 @@
 
    A generated page, so it has no source .org file — `pages` holds the blog collection's
    entries, newest first, and the prose lives here. This mirrors what weblorg's
-   theme/templates/index.html does today. #}
+   theme/templates/index.html does today, including its bare <title>: the home page is
+   "cleberg.net" and not "cleberg.net - cleberg.net". #}
 {% extends "base.html" %}
-{% block content %}
+{% block subtitle %}{% endblock %}
+{% block main %}
 <section>
+<h1>{{ page.title }}</h1>
 <p>[ <a href="https://krz.sh">krz</a> &middot; <a href="https://audit-labs.dev">audit labs</a> ]</p>
 <p>Privacy &middot; Self-Hosting &middot; iOS</p>
 <p>I build tools, write about systems, and run my own infrastructure. Focused on privacy,
@@ -35,7 +38,7 @@ user control, and long-term utility.</p>
 <ul>
 <li>cgit (primary): <a href="https://git.krz.sh">~cmc</a></li>
 <li>GitHub (mirror): <a href="https://github.com/ccleberg">@ccleberg</a></li>
-<li>Email: <a href="mailto:hello@cleberg.net">hello@cleberg.net</a></li>
+<li>Email: <a href="mailto:hello@cleberg.net">hello@cleberg.net</a> (<a href="{{ root }}gpg.txt">GPG</a>)</li>
 <li>Lemmy: <a href="https://r.nf/u/cmc">@cmc</a></li>
 <li>Mastodon: <a href="https://c.im/@cmc">@cmc</a></li>
 <li>Pixelfed: <a href="https://gram.social/cmc">@cmc</a></li>
