@@ -10,6 +10,27 @@
 
    Available here: page (.title .url .source .date .date_iso .tags .excerpt .toc
    .keywords), site, nav, root, stylesheet. See the org-ssg guide on Templates. #}
+{#- The table of contents, in the shape Emacs exports it. `page.toc` is a tree of
+    {title, anchor, level, children}, and it is empty when the page has no headings or
+    says `#+OPTIONS: toc:nil` — so pages that opt out simply render nothing here. #}
+{%- macro toc_list(entries) -%}
+<ul>
+{%- for e in entries %}
+<li><a href="#{{ e.anchor }}">{{ e.title }}</a>
+{%- if e.children %}{{ toc_list(e.children) }}{% endif %}</li>
+{%- endfor %}
+</ul>
+{%- endmacro %}
+{%- macro toc(entries) -%}
+{%- if entries %}
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+{{- toc_list(entries) }}
+</div>
+</div>
+{%- endif %}
+{%- endmacro %}
 <!DOCTYPE html>
 <html lang="{{ site.language }}">
 <head>
@@ -59,7 +80,9 @@
 {%- endif %}
 {#- Blog posts add a reply footer inside this block; see post.html, which the
     [[pages]] rule in org-ssg.toml selects for everything under blog/. #}
-<div>{% block content %}{{ body | safe }}{% endblock %}</div>
+<div>
+{{- toc(page.toc) }}
+{% block content %}{{ body | safe }}{% endblock %}</div>
 </article>
 {% endblock %}
 </main>
