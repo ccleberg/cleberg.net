@@ -44,7 +44,7 @@ it turns out, this was a perfect solution for me.
 The second issue for my personal use-case is that I am trying to keep the
 contents of my website accessible over time, as described by Brandur,
 in his post entitled [[https://brandur.org/fragments/graceful-degradation-time][Blog with Markdown + Git, and degrade gracefully through
-time]] .
+time]].
 
 This means I cannot rely on a database for comments, since I do not rely on a
 database for any other part of my websites.
