@@ -8,12 +8,14 @@
    Available here: page (.title .url .source .date .date_iso .tags .excerpt .toc
    .keywords), site, nav, root, stylesheet. See the org-ssg guide on Templates. #}
 {#- The table of contents, in the shape Emacs exports it. `page.toc` is a tree of
-    {title, anchor, level, children}, and it is empty when the page has no headings or
-    says `#+OPTIONS: toc:nil` — so pages that opt out simply render nothing here. #}
+    {title, anchor, level, number, children}, and it is empty when the page has no
+    headings or says `#+OPTIONS: toc:nil` — so pages that opt out render nothing here.
+    The number is printed because [html] section_numbers is on; drop it if you turn
+    numbering off, or the contents will number what the headings do not. #}
 {%- macro toc_list(entries) -%}
 <ul>
 {%- for e in entries %}
-<li><a href="#{{ e.anchor }}">{{ e.title }}</a>
+<li><a href="#{{ e.anchor }}">{{ e.number }} {{ e.title }}</a>
 {%- if e.children %}{{ toc_list(e.children) }}{% endif %}</li>
 {%- endfor %}
 </ul>

@@ -45,6 +45,16 @@ dir = "templates"
 match = "blog"
 template = "post.html"
 
+# The live site invites replies on garden notes and /now/ too, but not on /uses/,
+# /tips/ or /salary/.
+[[pages]]
+match = "garden"
+template = "post.html"
+
+[[pages]]
+match = "now"
+template = "post.html"
+
 [highlight]
 theme = "InspiredGitHub"
 
@@ -53,7 +63,10 @@ theme = "InspiredGitHub"
 # which is what the current site does too.
 heading_offset = 1
 toc = true
-section_numbers = false
+# On, because the live site has numbered headings — inherited from Emacs' default rather
+# than chosen, but changing it is a design decision to make deliberately rather than a
+# side effect of switching generators. One line to flip when you want to.
+section_numbers = true
 
 # --- Generated pages -------------------------------------------------------------
 # These have no source .org file. weblorg produces the equivalents today through its
@@ -116,3 +129,7 @@ template = "feed.xml"
 title = "cleberg.net"
 sort = "date"
 order = "desc"
+# Whole posts, not excerpts. The live feed carries full content, and a subscriber handed
+# excerpts instead would notice. Costs a render of every listed post whenever the feed is
+# rebuilt, which is the trade this is worth making for.
+include_content = true
