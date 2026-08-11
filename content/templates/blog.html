@@ -1,0 +1,16 @@
+{# The blog index at /blog/, mirroring theme/templates/blog.html.
+   Separate from list.html because the live page carries its own prose. #}
+{% extends "base.html" %}
+{% block main %}
+<h1>{{ page.title }}</h1>
+<p>Use <code>&#8984; F</code> / <code>Ctrl F</code> to search &middot; <a href="{{ root }}feed.xml">RSS Feed</a></p>
+<p>Want to browse by topic instead? Head over to the <a href="{{ root }}tags/index.html">tags</a> page.</p>
+<ul class="post-list">
+{%- for entry in pages %}
+<li class="post-list-item">
+{%- if entry.date_iso %}<time datetime="{{ entry.date_iso }}">{{ entry.date_iso }}</time>{% endif %}
+<a href="{{ root }}{{ entry.url }}">{{ entry.title }}</a>
+</li>
+{%- endfor %}
+</ul>
+{% endblock %}
