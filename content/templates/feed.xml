@@ -3,9 +3,8 @@
     from the site that served it, so every URL here is absolute — which is what
     `| absolute` needs [site] base_url for.
 
-    One difference from weblorg: <description> carries each post's excerpt rather than its
-    full HTML. org-ssg gives a collection template each entry's metadata, not its rendered
-    body. #}
+    <description> carries each post's full rendered HTML, as weblorg's feed does — the
+    collection sets `include_content` to ask for it. #}
 <rss version="2.0"
      xmlns:content="http://purl.org/rss/1.0/modules/content/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -29,7 +28,7 @@
 {%- for tag in post.tags %}
       <category>{{ tag }}</category>
 {%- endfor %}
-      <description>{{ post.excerpt }}</description>
+      <description><![CDATA[{{ post.content | safe }}]]></description>
     </item>
 {%- endfor %}
   </channel>

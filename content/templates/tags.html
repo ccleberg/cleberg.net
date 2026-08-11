@@ -1,12 +1,19 @@
-{# The tag index at /tags/, mirroring theme/templates/tags.html. Receives `groups` —
-   every tag with its count — rather than `pages`, because it lists tags and not posts. #}
+{# The tag index at /tags/. Receives `groups` — every tag with its count — rather than
+   `pages`, because it lists tags and not posts.
+
+   This deliberately differs in shape from the live weblorg page, which is one page with
+   every post inlined under an `#anchor` per tag. Here each tag is its own page, so a tag
+   has a URL worth linking to and the index stays short. The `id` on each entry keeps the
+   old `/tags/#audit` links landing in the right place — they scroll to the tag and its
+   link, rather than 404ing or dumping the reader at the top of a long page. #}
 {% extends "base.html" %}
 {% block main %}
 <h1>{{ page.title }}</h1>
 <p>Browse posts by topic.</p>
-<ul>
+<ul class="tag-toc">
 {%- for tag in groups %}
-<li><a href="{{ root }}{{ tag.url }}">{{ tag.name }}</a> ({{ tag.count }})</li>
+<li id="{{ tag.slug }}"><a href="{{ root }}{{ tag.url }}">{{ tag.name }}</a>
+<span class="tag-count">({{ tag.count }})</span></li>
 {%- endfor %}
 </ul>
 {% endblock %}
