@@ -1,12 +1,9 @@
 {# Page layout for org-ssg, mirroring theme/templates/base.html.
 
-   Styling comes from styles.css, copied here from theme/static/ along with gpg.txt,
-   robots.txt and salary.csv — org-ssg publishes assets from inside its source
-   directory, and weblorg's live static root is theme/static/. The copies should stay
-   identical: `diff content/styles.css theme/static/styles.css` and friends should
-   print nothing, or consolidate the two if you migrate for real. weblorg links the
-   minified styles.min.css instead; that file is gitignored build output, and the rules
-   are the same, so the tracked stylesheet is the one to publish from here.
+   Styling comes from theme/static/styles.css, published by `[build] assets` in
+   org-ssg.toml — the same directory weblorg serves at /, read in place rather than
+   copied. weblorg links the minified styles.min.css instead; that file is gitignored
+   build output and the rules are the same, so this links the tracked one.
 
    Available here: page (.title .url .source .date .date_iso .tags .excerpt .toc
    .keywords), site, nav, root, stylesheet. See the org-ssg guide on Templates. #}
