@@ -1,12 +1,12 @@
-{# Page layout for org-ssg, mirroring theme/templates/base.html.
+{# Page layout for orgo, mirroring theme/templates/base.html.
 
    Styling comes from theme/static/styles.css, published by `[build] assets` in
-   org-ssg.toml — the same directory weblorg serves at /, read in place rather than
+   orgo.toml — the same directory weblorg serves at /, read in place rather than
    copied. weblorg links the minified styles.min.css instead; that file is gitignored
    build output and the rules are the same, so this links the tracked one.
 
    Available here: page (.title .url .source .date .date_iso .tags .excerpt .toc
-   .keywords), site, nav, root, stylesheet. See the org-ssg guide on Templates. #}
+   .keywords), site, nav, root, stylesheet. See the orgo guide on Templates. #}
 {#- The table of contents, in the shape Emacs exports it. `page.toc` is a tree of
     {title, anchor, level, number, children}, and it is empty when the page has no
     headings or says `#+OPTIONS: toc:nil` — so pages that opt out render nothing here.
@@ -78,7 +78,7 @@
 <p>{% for tag in page.tags %}<a href="{{ root }}tags/{{ tag }}.html">#{{ tag }}</a> {% endfor %}</p>
 {%- endif %}
 {#- Blog posts add a reply footer inside this block; see post.html, which the
-    [[pages]] rule in org-ssg.toml selects for everything under blog/. #}
+    [[pages]] rule in orgo.toml selects for everything under blog/. #}
 <div>
 {{- toc(page.toc) }}
 {% block content %}{{ body | safe }}{% endblock %}</div>

@@ -1,13 +1,13 @@
-# org-ssg configuration for cleberg.net.
+# orgo configuration for cleberg.net.
 #
 # Lives in content/ because that directory is the site's URL root: content/blog/post.org
 # publishes at /blog/post.html. Neither this file nor templates/ is published.
 #
-#   org-ssg serve content -o /tmp/preview      # write and preview
-#   org-ssg build content -o _site --strict    # build for real, failing on broken links
+#   orgo serve content -o /tmp/preview      # write and preview
+#   orgo build content -o _site --strict    # build for real, failing on broken links
 #
 # This sits alongside the existing weblorg setup (publish.el, theme/) and changes nothing
-# about it. Delete this file and content/templates/ to remove org-ssg entirely.
+# about it. Delete this file and content/templates/ to remove orgo entirely.
 
 [site]
 title = "cleberg.net"
@@ -32,7 +32,7 @@ mode = "explicit"
 pages = ["blog/index.html", "garden/index.html", "salary/index.org"]
 
 [build]
-# theme/static/ is weblorg's static root, published at /. org-ssg reads it from here
+# theme/static/ is weblorg's static root, published at /. orgo reads it from here
 # rather than needing its files copied next to the writing — one copy, not two.
 assets = ["../theme/static"]
 
@@ -74,7 +74,7 @@ section_numbers = true
 # content/index.org was deleted to make room: it held only #+title and #+description,
 # both of which are now [site] settings above. Restore it any time with
 # `git checkout content/index.org`, but then this collection must output somewhere else —
-# two pages cannot claim one URL, and org-ssg fails the build rather than picking a winner.
+# two pages cannot claim one URL, and orgo fails the build rather than picking a winner.
 [[collections]]
 source = "blog"
 output = "index.html"
