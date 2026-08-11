@@ -23,10 +23,14 @@ base_url = ""
 # Explicit, because the pages that belong in the nav are not all top-level: /blog/ and
 # /garden/ are generated below, and salary/ is a section index one level down. index.org
 # is deliberately absent — the layout already links home from the site title, and listing
-# it here would print "cleberg.net" twice side by side. Source pages come first in the
-# order listed, then the collections that set `nav = true`.
+# it here would print "cleberg.net" twice side by side.
+#
+# Generated pages are named by their output path, authored ones by their source. Listing
+# them together is what puts Salary last: a collection with `nav = true` that is not
+# listed here gets appended after everything that is. /tags/ is deliberately not listed,
+# so it lands at the end.
 mode = "explicit"
-pages = ["salary/index.org"]
+pages = ["blog/index.html", "garden/index.html", "salary/index.org"]
 
 [templates]
 dir = "templates"
