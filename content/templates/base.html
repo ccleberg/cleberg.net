@@ -1,0 +1,52 @@
+{# Page layout for org-ssg.
+
+   Styling comes from styles.css, a verbatim copy of theme/static/styles.css — the
+   stylesheet weblorg already serves. org-ssg publishes assets from inside its source
+   directory, so the copy lives here; `diff content/styles.css theme/static/styles.css`
+   should stay empty, or consolidate the two if you migrate for real.
+
+   Available here: page (.title .url .date .date_iso .tags .excerpt .toc .keywords),
+   site, nav, root, stylesheet. See the org-ssg guide chapter on Templates. #}
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }} &middot; {{ site.title }}</title>
+{%- if site.base_url %}
+<link rel="canonical" href="{{ page.url | absolute }}">
+{%- endif %}
+{%- if page.excerpt %}
+<meta name="description" content="{{ page.excerpt | truncate(150) }}">
+{%- endif %}
+<link rel="stylesheet" href="{{ root }}styles.css">
+{%- if stylesheet %}
+<link rel="stylesheet" href="{{ stylesheet }}">
+{%- endif %}
+</head>
+<body>
+<header>
+<nav>
+<ul>
+<li><a href="{{ root }}index.html">{{ site.title }}</a></li>
+{%- for item in nav %}
+<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+{%- endfor %}
+</ul>
+</nav>
+</header>
+<main>
+<h1>{{ page.title }}</h1>
+{%- if page.date_iso %}
+<p><time datetime="{{ page.date_iso }}">{{ page.date_iso }}</time></p>
+{%- endif %}
+{%- if page.tags %}
+<p>{% for tag in page.tags %}<a href="{{ root }}tags/{{ tag }}.html">#{{ tag }}</a> {% endfor %}</p>
+{%- endif %}
+{% block content %}{{ body | safe }}{% endblock %}
+</main>
+<footer>
+<p><a href="{{ root }}index.html">{{ site.title }}</a> &mdash; {{ site.description }}</p>
+</footer>
+</body>
+</html>

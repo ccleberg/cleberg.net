@@ -1,0 +1,10 @@
+{# The tag index at /tags/. Receives `groups` — every tag with its count — rather than
+   `pages`, because it lists tags and not posts. #}
+{% extends "base.html" %}
+{% block content %}
+<ul>
+{%- for tag in groups %}
+<li><a href="{{ root }}{{ tag.url }}">{{ tag.name }}</a> ({{ tag.count }})</li>
+{%- endfor %}
+</ul>
+{% endblock %}

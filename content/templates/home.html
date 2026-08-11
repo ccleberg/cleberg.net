@@ -1,0 +1,44 @@
+{# The home page: authored prose plus the most recent posts.
+
+   A generated page, so it has no source .org file — `pages` holds the blog collection's
+   entries, newest first, and the prose lives here. This mirrors what weblorg's
+   theme/templates/index.html does today. #}
+{% extends "base.html" %}
+{% block content %}
+<section>
+<p>[ <a href="https://krz.sh">krz</a> &middot; <a href="https://audit-labs.dev">audit labs</a> ]</p>
+<p>Privacy &middot; Self-Hosting &middot; iOS</p>
+<p>I build tools, write about systems, and run my own infrastructure. Focused on privacy,
+user control, and long-term utility.</p>
+<p><a href="{{ root }}uses/index.html">Uses</a> &middot; <a href="{{ root }}now/index.html">Now</a></p>
+</section>
+
+<section>
+<h2>Recent Posts</h2>
+<p>Things I&rsquo;ve written recently.</p>
+<ul class="post-list">
+{%- for entry in pages %}
+{%- if loop.index <= 3 %}
+<li class="post-list-item">
+{%- if entry.date_iso %}<time datetime="{{ entry.date_iso }}">{{ entry.date_iso }}</time>{% endif %}
+<a href="{{ root }}{{ entry.url }}">{{ entry.title }}</a>
+</li>
+{%- endif %}
+{%- endfor %}
+</ul>
+<p><a href="{{ root }}blog/index.html">All Posts &rarr;</a></p>
+</section>
+
+<section>
+<h2>Elsewhere</h2>
+<p>Places to find me online.</p>
+<ul>
+<li>cgit (primary): <a href="https://git.krz.sh">~cmc</a></li>
+<li>GitHub (mirror): <a href="https://github.com/ccleberg">@ccleberg</a></li>
+<li>Email: <a href="mailto:hello@cleberg.net">hello@cleberg.net</a></li>
+<li>Lemmy: <a href="https://r.nf/u/cmc">@cmc</a></li>
+<li>Mastodon: <a href="https://c.im/@cmc">@cmc</a></li>
+<li>Pixelfed: <a href="https://gram.social/cmc">@cmc</a></li>
+</ul>
+</section>
+{% endblock %}
