@@ -1,0 +1,11 @@
+{# A blog post, mirroring theme/templates/post.html. Everything but the reply footer is
+   the shared layout, so this extends it rather than restating it.
+
+   Selected by the [[pages]] rule for blog/ in org-ssg.toml; a post that wants a different
+   layout says so with #+TEMPLATE:. #}
+{% extends "base.html" %}
+{% block content %}
+{{ body | safe }}
+<div><a href="mailto:hello@cleberg.net">Reply via email &rarr;</a></div>
+<div><i>...or, comment on this post on <a href="https://bubbles.town/source/cleberg.net">Bubbles</a>!</i></div>
+{% endblock %}

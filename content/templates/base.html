@@ -57,13 +57,9 @@
 {%- if page.tags %}
 <p>{% for tag in page.tags %}<a href="{{ root }}tags/{{ tag }}.html">#{{ tag }}</a> {% endfor %}</p>
 {%- endif %}
+{#- Blog posts add a reply footer inside this block; see post.html, which the
+    [[pages]] rule in org-ssg.toml selects for everything under blog/. #}
 <div>{% block content %}{{ body | safe }}{% endblock %}</div>
-{#- Blog posts carry a reply footer; other pages do not. org-ssg has no per-page
-    template selection, so the page's own URL is what tells them apart. #}
-{%- if page.url is startingwith("blog/") %}
-<div><a href="mailto:hello@cleberg.net">Reply via email &rarr;</a></div>
-<div><i>...or, comment on this post on <a href="https://bubbles.town/source/cleberg.net">Bubbles</a>!</i></div>
-{%- endif %}
 </article>
 {% endblock %}
 </main>

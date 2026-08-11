@@ -34,6 +34,12 @@ pages = ["blog/index.html", "garden/index.html", "salary/index.org"]
 [templates]
 dir = "templates"
 
+# Blog posts render through post.html — the shared layout plus a reply footer — the way
+# weblorg routes them through theme/templates/post.html. Everything else uses base.html.
+[[pages]]
+match = "blog"
+template = "post.html"
+
 [highlight]
 theme = "InspiredGitHub"
 
