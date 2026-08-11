@@ -1,5 +1,0 @@
-User-agent: *
-Content-Signal: ai-train=yes, search=yes, ai-input=yes
-Allow: /
-Disallow:
-Sitemap: https://cleberg.net/sitemap.xml

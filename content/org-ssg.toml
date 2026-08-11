@@ -31,6 +31,11 @@ base_url = "https://cleberg.net"
 mode = "explicit"
 pages = ["blog/index.html", "garden/index.html", "salary/index.org"]
 
+[build]
+# theme/static/ is weblorg's static root, published at /. org-ssg reads it from here
+# rather than needing its files copied next to the writing — one copy, not two.
+assets = ["../theme/static"]
+
 [templates]
 dir = "templates"
 
