@@ -1,4 +1,5 @@
 .build/
+.build-dev/
 .DS_Store
 .gitlab-ci-local/
 .ruff_cache/
@@ -6,5 +7,4 @@
 public/
 readme.html
 venv/
-theme/static/styles.min.css
 __pycache__/

@@ -1,9 +1,9 @@
-{# Page layout for orgo, mirroring theme/templates/base.html.
+{# Page layout for the site.
 
    Styling comes from theme/static/styles.css, published by `[build] assets` in
-   orgo.toml — the same directory weblorg serves at /, read in place rather than
-   copied. weblorg links the minified styles.min.css instead; that file is gitignored
-   build output and the rules are the same, so this links the tracked one.
+   orgo.toml and read in place rather than copied. It is served as authored: at ~1KB,
+   minifying it saved 52 bytes over the wire once compressed, which did not pay for a
+   build step and a toolchain dependency.
 
    Available here: page (.title .url .source .date .date_iso .tags .excerpt .toc
    .keywords), site, nav, root, stylesheet. See the orgo guide on Templates. #}
@@ -45,8 +45,8 @@
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ root }}feed.xml">
 <link rel="stylesheet" href="{{ root }}styles.css" type="text/css">
 <link rel="icon" href="data:,">
-{#- rel="me" identity links. weblorg's base.html writes the last one as <a>, which a
-    browser hoists out of <head>; <link> is the spelling that stays where it is put. #}
+{#- rel="me" identity links, spelled as <link> rather than <a>: a browser hoists a
+    stray <a> out of <head>, while <link> stays where it is put. #}
 <link href="https://github.com/ccleberg" rel="me">
 <link href="https://gitlab.com/ccleberg" rel="me">
 <link href="mailto:hello@cleberg.net" rel="me">

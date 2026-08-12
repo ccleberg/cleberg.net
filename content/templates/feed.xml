@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-{#- The RSS feed at /feed.xml, mirroring theme/templates/feed.xml. A feed is read away
-    from the site that served it, so every URL here is absolute — which is what
-    `| absolute` needs [site] base_url for.
+{#- The RSS feed at /feed.xml. A feed is read away from the site that served it, so
+    every URL here is absolute — which is what `| absolute` needs [site] base_url for.
 
-    <description> carries each post's full rendered HTML, as weblorg's feed does — the
-    collection sets `include_content` to ask for it. #}
+    <description> carries each post's full rendered HTML — the collection sets
+    `include_content` to ask for it. #}
 <rss version="2.0"
      xmlns:content="http://purl.org/rss/1.0/modules/content/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"

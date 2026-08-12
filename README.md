@@ -3,23 +3,26 @@
 This repository holds the files for [cleberg.net](https://cleberg.net),
 a static-site with blog posts, personal links, and more.
 
-This site uses [weblorg](https://github.com/emacs-love/weblorg) to build
-the static site, which relies on
-[emacs](https://www.gnu.org/software/emacs/).
+This site uses [orgo](https://github.com/krazywarez/orgo) to build the
+static site.
 
 ## Site Structure
 
 I write content pages (e.g., blog posts) in org-mode and templates in
-HTML. I use Weblorg to build these files into a static site, and then
-deploy them to a web server.
+HTML. orgo builds these files into a static site, and then I deploy
+them to a web server.
 
 The main site components are:
 
-- Org source files containing content, including blog posts and pages.
-- A configuration file (`publish.el`) that specifies publishing
-  parameters like base URL, output directories, and export options.
+- Org source files in `content/`, containing blog posts and pages.
+  That directory is the site's URL root: `content/blog/post.org`
+  publishes at `/blog/post.html`.
+- A configuration file (`content/orgo.toml`) that specifies the base
+  URL, navigation, templates, and the generated pages (home, blog and
+  garden indexes, tags, and the RSS feed).
+- HTML templates in `content/templates/`.
 - Assets such as images and style sheets, located in designated
-  subdirectories.
+  subdirectories. `theme/static/` is published at `/`.
 - Utility scripts (e.g., `build.py`) to facilitate building and
   deployment.
 
@@ -27,24 +30,25 @@ The main site components are:
 
 The publishing system depends on:
 
-- Emacs text editor with Org-Mode.
-- The weblorg package, available at
-  [emacs-love/weblorg](https://github.com/emacs-love/weblorg), which
-  provides advanced Org publishing functionality and theming support.
+- [orgo](https://github.com/krazywarez/orgo), the static site
+  generator, installed with `cargo install --git
+  https://github.com/krazywarez/orgo`.
+- `rsync` for deployment.
+- [uv](https://github.com/astral-sh/uv) to run `build.py`.
 
 ## Configuration
 
-You can customize site settings can within the `publish.el` file. This
-file establishes key variables such as:
+You can customize site settings within the `content/orgo.toml` file.
+This file establishes key variables such as:
 
 - The base URL for links.
-- Output directories.
-- Publishing rules to define which files to convert and how.
-- Theme settings managed by weblorg.
+- Which pages appear in the navigation, and in what order.
+- Per-directory template rules.
+- The collections that generate the indexes, tag pages, and feed.
 
 Users intending to modify site parameters should review and edit this
-file accordingly. The weblorg documentation contains extensive details
-on configuration options and expected formats.
+file accordingly. The orgo documentation contains extensive details on
+configuration options and expected formats.
 
 ## Setup Instructions
 
@@ -62,48 +66,54 @@ For users employing Doom Emacs, open any repository Org file using
 
 ## Building and Publishing the Site
 
-The publishing process involves invoking Emacs with the `publish.el`
-script, which performs the export of Org documents to HTML output.
+The `build.py` script wraps the build: it runs orgo, and then either
+deploys the result or serves it locally.
 
-Configure the environment variable `ENV` as follows:
+Two environment variables control what it does, and both default to
+off:
 
-- If you set `ENV` to `prod`, the script uses production base URL
-  settings as defined in `publish.el`.
-- If you do not set `ENV` or set it differently, the script defaults to
-  development settings, typically using `localhost:8000` as the base
-  URL.
+- `BUILD=true` performs the build.
+- `DEPLOY=true` deploys in production, or starts a development server
+  on port 8000 otherwise.
 
-Example commands to build the site:
+A third, `ENV`, selects the mode. Setting `ENV=prod` rewrites image
+URLs to be root-relative (see Deployment below) and skips the `ruff`
+pass; anything else builds for development.
 
 ``` shell
 # Production build:
-ENV=prod emacs --script publish.el
+ENV=prod BUILD=true uv run build.py
 
 # Development build:
-emacs --script publish.el
+BUILD=true uv run build.py
+
+# Development build, then serve it on localhost:8000:
+BUILD=true DEPLOY=true uv run build.py
 ```
 
-Generated site files reside in the designated output directory, ready
-for deployment. You can deploy the resulting static site files via
-standard file transfer protocols such as `scp` or SFTP.
+Generated site files reside in `.build/` for production and
+`.build-dev/` for development, ready for deployment. You can deploy the
+resulting static site files via standard file transfer protocols such as
+`scp` or SFTP.
 
-The `build.py` script automates the build process. You can execute this
-script with or without the `ENV` variable to perform production or
-development builds respectively.
+Builds are incremental: orgo keeps an `.orgo-cache.json` inside the
+output directory and re-renders only what changed, so the directory is
+left in place between runs. Delete it for a clean build. The two
+environments use separate directories because production rewrites image
+URLs in the output and development does not.
+
+orgo can also build and preview on its own, without `build.py`:
 
 ``` shell
-# Production build script:
-ENV=prod uv run build.py
-
-# Development build script:
-uv run build.py
+orgo serve content -o /tmp/preview
 ```
 
 ## Deployment
 
-Production builds emit root-relative URLs (`/styles.min.css`,
-`/img/blog/...`) instead of absolute `https://` ones so the site renders
-standalone on the onion service without fetching assets off-onion.
+Production builds rewrite image URLs to root-relative ones
+(`/img/blog/...`) instead of absolute `https://img.cleberg.net/` ones so
+the site renders standalone on the onion service without fetching assets
+off-onion. The stylesheet is already same-origin.
 
 This means the web server must serve the image store at `/img/` on the
 `cleberg.net` vhost. The images live at `/var/www/img/` (their own host,
