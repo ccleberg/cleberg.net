@@ -369,7 +369,17 @@ def deploy_to_server(build_dir, server):
     remote_path = f"{server}:/var/www/cleberg.net/"
     print(f"Deploying .build/ → {remote_path}")
     result = subprocess.run(
-        ["rsync", "-r", "--delete-before", f"{build_dir}/", remote_path],
+        # The build cache lives in the output directory because it describes it, but it
+        # is not part of the site. Excluding it also stops --delete removing it locally.
+        [
+            "rsync",
+            "-r",
+            "--delete-before",
+            "--exclude",
+            ".orgo-cache.json",
+            f"{build_dir}/",
+            remote_path,
+        ],
         capture_output=True,
         text=True,
         check=False,
