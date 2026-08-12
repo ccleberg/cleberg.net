@@ -1,8 +1,0 @@
-{% extends "base.html" %}
-{% block subtitle %}{{ post.title }} - {% endblock %}
-{% block main %}
-<article>
-    <h1>{{ post.title }}</h1>
-    <div>{{ post.html | safe }}</div>
-</article>
-{% endblock %}

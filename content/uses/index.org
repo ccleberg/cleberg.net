@@ -24,7 +24,7 @@ threat model justification.
 | Operating System      | [[https://ubuntu.com][Ubuntu]] + [[https://www.apple.com/os/macos/][macOS]]          | Ubuntu: telemetry off, LTS, stable. macOS: workstation only.                                        |
 | Web Server            | [[https://nginx.org][Nginx]] + [[https://community.torproject.org/onion-services/setup/][Tor]]             | Static file serving. Tor layer for censored-network access.                                         |
 | SSL                   | [[https://certbot.eff.org][Certbot]]                 | Free automated TLS. No commercial CA dependency. Ensures Cloudflare can't view unencrypted traffic. |
-| Static Site Generator | [[https://github.com/emacs-love/weblorg][Weblorg]] + [[https://git.sr.ht/~ccleberg/cleberg.net/tree/main/item/build.py][build.py]]      | Org-mode source compiles to plaintext HTML via native Lisp.                                         |
+| Static Site Generator | [[https://github.com/krazywarez/orgo][orgo]] + [[https://git.sr.ht/~ccleberg/cleberg.net/tree/main/item/build.py][build.py]]         | Org-mode source compiles to plaintext HTML. Single binary, no runtime.                              |
 | Terminal              | [[https://iterm2.com/][iTerm2]]                  | Functional. Inherited from macOS.                                                                   |
 | Shell                 | [[https://www.zsh.org/][Zsh]]                     | Portable, POSIX-adjacent, available on every target OS.                                             |
 | Editor                | [[https://github.com/doomemacs/doomemacs][Doom Emacs]]              | Editor and markup are the same tool. No proprietary format.                                         |
