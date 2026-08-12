@@ -1,0 +1,119 @@
+#+date: [2026-08-11 Tue 20:51:00]
+#+title: I Built My Own Org-Mode Static Site Generator
+#+description: I was tired of bolting solutions onto my SSGs, so I built my own.
+#+slug: orgo
+#+filetags: :development:org-mode:
+
+* Introducing: Orgo
+
+For a long time, I've been using [[https://github.com/emacs-love/weblorg][weblorg]], a static site generator (SSG) for
+org-mode. It uses Emacs Lisp, which pairs well with Emacs. However, it has a few
+downsides:
+
+- since it requires Emacs, the set-up and maintenance is heavy
+- it has upstream dependencies that must also be installed and loaded into Emacs
+- it re-runs the full process every time you need to regenerate the site, even
+  if you only change a single character in one file
+- since it runs through Emacs in the background, it takes quite a while to build
+  my site (~180 pages)
+
+So, I decided to spin up my own org-mode-based SSG: [[https://github.com/krazywarez/orgo][orgo]]. This SSG uses org-mode
+(rather than markdown) for its content.
+
+#+caption: The orgo CLI
+#+attr_html: :alt Terminal output of orgo --help, listing the build, watch, serve, clean, audit, and init commands.
+[[https://img.cleberg.net/blog/20260811-orgo/orgo.webp]]
+
+* Results Up Front
+
+I want to highlight the speed first, before I go into the major differences. As
+you can see in the table below, orgo is incredibly fast.
+
+| Method                                 | Time  | Diff        |
+|----------------------------------------+-------+-------------|
+| weblorg (=emacs --script publish.el=)    | 49.0s |             |
+| weblorg + [[https://github.com/ccleberg/cleberg.net/blob/8ec9cdfeae71068a8924dd9f61b9cc28c947ec31/build.py][build.py]]                     | 50.3s |             |
+| orgo, cold build                       | *0.22s* | 223× faster |
+| orgo, nothing changed since last build | *0.13s* | 377× faster |
+
+Additionally, I added a few new features that weblorg didn't provide me:
+
+- Native features I used to build in Python post-weblorg:
+  - Tag listings
+  - Year separators on the blog page
+  - RSS feed
+  - Sitemap
+  - Recent posts lists
+- Syntax highlighting for 75 languages is supported, and you can drop in your
+  own syntax definitions for anything missing.
+- Builds are incremental. Only the pages whose content, config, or templates
+  changed get re-rendered — adding a single post re-renders that post and the
+  index that lists it, and nothing else.
+- There is no Emacs, no package manager, and no runtime to install since orgo is
+  a single binary.
+
+This results in a fast, clean, and simple SSG that stays out of my way instead
+of requiring extensive set-up and maintenance.
+
+* What It Is Built On
+
+/Note: This section is for the nerds. Feel free to skip if you don't care about
+the technology behind orgo./
+
+orgo is Rust, and it leans on a handful of well-worn crates rather than
+reinventing them:
+
+- The org parser is hand-written, about 1,500 lines of it. There is no org-mode
+  crate to lean on, and writing that parser is most of what writing an org SSG
+  turns out to be.
+- Templates run on [[https://crates.io/crates/minijinja][minijinja]], which speaks Jinja2. weblorg's templates are
+  written for templatel, which is close enough that porting them was mostly a
+  rename job.
+- Syntax highlighting is [[https://crates.io/crates/syntect][syntect]], so the definitions and the themes are Sublime
+  Text's. This site renders code with =InspiredGitHub=.
+- Incremental builds hash the content, the config, and the templates with
+  [[https://crates.io/crates/blake3][blake3]]. A page is re-rendered when its hash changes, and the manifest that
+  remembers them is JSON sitting in the output directory.
+- Pages render in parallel with [[https://crates.io/crates/rayon][rayon]], which is straightforward here because
+  each page writes only its own file.
+- The config is TOML, the CLI is [[https://crates.io/crates/clap][clap]], and =orgo serve= is [[https://crates.io/crates/notify][notify]] watching for
+  edits with a [[https://crates.io/crates/tiny_http][tiny_http]] server in front of the output.
+
+* Getting Started
+
+If you use org-mode (or have been looking for a proper org-mode SSG), check it
+out and let me know what you think.
+
+It's as simple as installing, initializing a new site, and serving it!
+
+#+begin_src shell
+cargo install orgo
+orgo init my-site
+orgo serve my-site -o _site
+#+end_src
+
+It can create a new project for you, adapt to your current org site, or simply
+serve your folder of org-mode notes and files.
+
+Three more commands cover the rest of the day-to-day:
+
+- =orgo watch= rebuilds incrementally as files change, driven by filesystem
+  events, without serving anything. This is handy when something else is already
+  serving the output directory.
+- =orgo clean= removes the output directory, cache manifest and all, for when you
+  want to start from scratch.
+- =orgo audit= reports which org constructs a folder actually uses, and marks the
+  ones it doesn't handle.
+
+#+caption: An orgo Audit Report
+#+attr_html: :alt Terminal output of orgo audit, tallying every org construct in a corpus by frequency and marking each one in or out of scope, followed by counts of keywords, block types, drawers, and link schemes.
+[[https://img.cleberg.net/blog/20260811-orgo/audit.webp]]
+
+* The Future
+
+I'll be looking into making some built-in themes soon and exploring other
+features that make it a bit more seamless, as well as adopting to various
+methods different users may expect it to work.
+
+If you have any suggestions, reach out and let me know or open an issue/PR on
+GitHub!
