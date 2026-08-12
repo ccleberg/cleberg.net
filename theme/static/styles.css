@@ -9,6 +9,9 @@ img { max-width: 100%; }
 .post-list-item a { flex-grow: 1; white-space: normal; }
 .post-list-year { list-style: none; margin-top: 1rem; margin-bottom: 0.5rem; font-weight: bold; }
 .skip-link { display: none; }
+table { border-collapse: collapse; }
+table, th, td { border: 1px solid #ccc; }
+th, td { padding: 0.25rem 0.5rem; text-align: left; }
 footer { margin: 2rem 0;}
 pre, blockquote { margin: 1rem 0; padding: 0.5rem; background-color: #eee; }
 pre { overflow: auto; white-space: pre; }
@@ -20,4 +23,5 @@ code { color: #942192; }
 	a, a:visited { color: #68A9F8; }
 	code { color: #ff68e1; }
 	pre, blockquote { background-color: black; }
+	table, th, td { border-color: #444; }
 }
