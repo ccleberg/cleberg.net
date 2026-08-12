@@ -32,7 +32,6 @@ import sys
 from datetime import datetime
 from html import escape
 from pathlib import Path
-from urllib.parse import quote
 
 SITE_TEMPLATE_VARS = {
     "site_name": "cleberg.net",
@@ -49,66 +48,6 @@ def run_ruff():
             print(f"ruff error ({' '.join(cmd)}):")
             print(result.stderr, file=sys.stderr)
             sys.exit(1)
-
-
-def update_marked_section(
-    html_snippet,
-    template_path="./.build/index.html",
-    begin_marker="<!-- BEGIN_POSTS -->",
-    end_marker="<!-- END_POSTS -->",
-):
-    """
-    Read the file at `template_path`, replace everything between `begin_marker`
-    and `end_marker` with the provided html_snippet, and write the updated
-    content back to the same file.
-    """
-    with open(template_path, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    # Find the indices of the markers
-    begin_index = content.find(begin_marker)
-    end_index = content.find(end_marker)
-
-    if begin_index == -1 or end_index == -1:
-        raise ValueError(f"Markers not found in {template_path}")
-
-    # Compute insertion points: after the end of begin_marker line, before end_marker
-    # Include the newline after BEGIN_POSTS
-    insert_start = begin_index + len(begin_marker)
-    # Ensure we capture the newline character if present
-    if content[insert_start : insert_start + 1] == "\n":
-        insert_start += 1
-
-    # If there is a newline before END_POSTS, trim trailing whitespace from snippet block
-    # We will preserve indentation of BEGIN_POSTS line
-    indent = ""
-    # Determine the indentation by looking at characters after the newline that follows begin_marker
-    lines_after_begin = content[begin_index:].splitlines(True)
-    if len(lines_after_begin) > 1:
-        # The second line starts with the indentation to preserve
-        second_line = lines_after_begin[1]
-        indent = ""
-        for ch in second_line:
-            if ch.isspace():
-                indent += ch
-            else:
-                break
-
-    # Prepare the replacement block: indent each line of html_snippet
-    snippet_lines = html_snippet.splitlines()
-    indented_snippet = "\n".join(indent + line for line in snippet_lines) + "\n"
-
-    # Compute the position just before end_marker (excluding any preceding whitespace/newline)
-    end_line_start = content.rfind("\n", 0, end_index)
-    if end_line_start == -1:
-        end_line_start = end_index
-
-    # Construct the new content
-    new_content = content[:insert_start] + indented_snippet + content[end_line_start:]
-
-    # Write back to index.html
-    with open(template_path, "w", encoding="utf-8") as f:
-        f.write(new_content)
 
 
 def render_base_template(main_html, subtitle="", title=None):
@@ -257,24 +196,6 @@ def get_blog_posts(content_dir="./content/blog"):
     return posts
 
 
-def get_recent_posts_html(content_dir="./content/blog", num_posts=3):
-    """
-    Return an HTML snippet for the `num_posts` most recent blog posts.
-    """
-    recent = get_blog_posts(content_dir)[:num_posts]
-
-    lines = []
-    for post in recent:
-        lines.append('\t<li class="post-list-item">')
-        lines.append(
-            f'\t\t<time datetime="{post["date_str"]}">{post["date_full"]}</time>'
-        )
-        lines.append(f'\t\t<a href="/blog/{post["slug"]}.html">{post["title"]}</a>')
-        lines.append("\t</li>")
-
-    return "\n".join(lines)
-
-
 def prompt(prompt_text):
     try:
         return input(prompt_text).strip()
@@ -299,20 +220,6 @@ def minify_css(src_css, dest_css):
     )
     if result.returncode != 0:
         print("Error during CSS minification:")
-        print(result.stderr, file=sys.stderr)
-        sys.exit(1)
-
-
-def minify_html(src_html, dest_html):
-    print(f"Minifying HTML: {src_html} → {dest_html}")
-    result = subprocess.run(
-        ["minify", "-o", str(dest_html), str(src_html)],
-        capture_output=True,
-        text=True,
-        check=False,
-    )
-    if result.returncode != 0:
-        print("Error during HTML minification:")
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
 
@@ -342,30 +249,31 @@ def rewrite_img_urls(build_dir=".build"):
     print(f"Rewrote {count} img.cleberg.net references to /img/")
 
 
-def run_emacs_publish(dev_mode=True):
-    mode = "development" if dev_mode else "production"
-    print(f"Running Emacs publish script ({mode})...")
+def run_orgo_build(dev_mode=True):
+    """
+    Build the site with orgo.
 
+    Replaces the weblorg/Emacs publish. orgo reads content/orgo.toml, so the routes,
+    templates and collections that used to live in publish.el live there now. Four of the
+    steps this script used to perform afterwards are gone with it: the blog index groups
+    itself by year, the tags page is a collection, the recent-posts list is generated from
+    the blog collection, and the sitemap is written by orgo once base_url is set.
+
+    What is left around it is what orgo does not do: minifying CSS, copying the org
+    sources for readers who want them, and rewriting image URLs for the onion.
+    """
+    print("Building with orgo...")
     result = subprocess.run(
-        ["emacs", "--script", "publish.el"],
+        ["orgo", "build", "content", "-o", ".build", "--strict"],
         stdout=subprocess.PIPE,
         stderr=subprocess.STDOUT,
         text=True,
         check=False,
     )
-
+    print(result.stdout, end="")
     if result.returncode != 0:
-        print("Error running publish.el output:")
-        print(result.stdout)
+        print("orgo build failed", file=sys.stderr)
         sys.exit(1)
-
-    annoying_file = Path(".build/cleberg-net.html")
-    if annoying_file.exists():
-        os.remove(annoying_file)
-    else:
-        print(
-            "Warning: .build/cleberg-net.html not found, but Emacs exited successfully."
-        )
 
 
 def copy_org_sources(content_dir="./content", build_dir="./.build/org"):
@@ -393,90 +301,6 @@ def copy_org_sources(content_dir="./content", build_dir="./.build/org"):
         shutil.copy2(src_path, dest_dir / dest_name)
         if slug:
             print(f"  {src_path.name} → {dest_name}")
-
-
-def generate_sitemap(build_dir=".build", base_url="https://cleberg.net"):
-    """
-    Generates a sitemap.xml based on contents of the .build directory.
-    Only includes .html files (except 404.html).
-    """
-    sitemap_entries = []
-    for root, dirs, files in os.walk(build_dir):
-        for filename in files:
-            if filename.endswith(".html") and filename != "404.html":
-                full_path = os.path.join(root, filename)
-                rel_path = os.path.relpath(full_path, build_dir)
-                url_path = "/" + quote(rel_path.replace(os.sep, "/"))
-                # Remove index.html for cleaner URLs
-                if url_path.endswith("/index.html"):
-                    url_path = url_path[:-10] or "/"
-                elif url_path == "/index.html":
-                    url_path = "/"
-                loc = f"{base_url}{url_path}"
-
-                # Last modified time
-                lastmod = datetime.fromtimestamp(os.path.getmtime(full_path)).strftime(
-                    "%Y-%m-%d"
-                )
-
-                sitemap_entries.append(f"""  <url>
-    <loc>{loc}</loc>
-    <lastmod>{lastmod}</lastmod>
-  </url>""")
-
-    sitemap_xml = f"""<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-{os.linesep.join(sitemap_entries)}
-</urlset>
-"""
-    # Write to .build/sitemap.xml
-    sitemap_path = os.path.join(build_dir, "sitemap.xml")
-    with open(sitemap_path, "w", encoding="utf-8") as f:
-        f.write(sitemap_xml)
-    print(f"Sitemap generated at {sitemap_path} with {len(sitemap_entries)} entries.")
-
-
-def inject_blog_year_separators(blog_index_path="./.build/blog/index.html"):
-    """
-    Post-processes the rendered blog index to inject year separator <li> elements
-    between groups of posts. Weblorg/templatel doesn't support mutable loop state,
-    so this runs after the HTML is generated.
-
-    Finds each <li class="post-list-item"> that contains a <time datetime="YYYY-MM-DD">,
-    and inserts <li class="post-list-year">YYYY</li> before the first post of each year.
-    """
-    path = Path(blog_index_path)
-    if not path.exists():
-        print(f"Warning: {blog_index_path} not found, skipping year separators.")
-        return
-
-    content = path.read_text(encoding="utf-8")
-
-    # Match each post list item, capturing the date and the full element
-    item_pattern = re.compile(
-        r'(<li class="post-list-item">.*?</li>)',
-        re.DOTALL,
-    )
-    date_pattern = re.compile(r"datetime=['\"]?(\d{4})-\d{2}-\d{2}['\"]?")
-
-    current_year = None
-
-    def replace_item(m):
-        nonlocal current_year
-        item_html = m.group(1)
-        date_match = date_pattern.search(item_html)
-        if not date_match:
-            return item_html
-        year = date_match.group(1)
-        if year != current_year:
-            current_year = year
-            separator = f'<li class="post-list-year">{year}</li>'
-            return f"{separator}\n{item_html}"
-        return item_html
-
-    new_content = item_pattern.sub(replace_item, content)
-    path.write_text(new_content, encoding="utf-8")
-    print(f"Blog year separators injected into {blog_index_path}")
 
 
 def get_tags_html(content_dir="./content/blog"):
@@ -541,17 +365,6 @@ def get_tags_html(content_dir="./content/blog"):
     )
 
 
-def generate_tags_page(content_dir="./content/blog", build_dir="./.build"):
-    """
-    Render the tags page using the shared template structure.
-    """
-    tags_html = get_tags_html(content_dir)
-    out_path = Path(build_dir) / "tags" / "index.html"
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_text(render_tags_page_html(tags_html), encoding="utf-8")
-    print(f"Tags page written to {out_path}")
-
-
 def deploy_to_server(build_dir, server):
     remote_path = f"{server}:/var/www/cleberg.net/"
     print(f"Deploying .build/ → {remote_path}")
@@ -584,7 +397,6 @@ def main():
     env = os.environ.get("ENV", "").casefold()
     if env != "prod":
         run_ruff()
-    html_snippet = get_recent_posts_html("./content/blog", num_posts=3)
 
     build_dir = Path(".build")
     theme_dir = Path("theme/static")
@@ -599,14 +411,9 @@ def main():
         if build:
             remove_build_directory(build_dir)
             minify_css(css_src, css_min)
-            run_emacs_publish(dev_mode=False)
+            run_orgo_build(dev_mode=False)
             copy_org_sources()
-            update_marked_section(html_snippet)
-            inject_blog_year_separators()
-            generate_tags_page()
             rewrite_img_urls(build_dir)
-            # minify_html("./.build/index.html", "./.build/index.html")
-            generate_sitemap()
         if deploy:
             print("Deploying to production...")
             deploy_to_server(build_dir, "homelab")
@@ -616,13 +423,8 @@ def main():
         if build:
             remove_build_directory(build_dir)
             minify_css(css_src, css_min)
-            run_emacs_publish(dev_mode=True)
+            run_orgo_build(dev_mode=True)
             copy_org_sources()
-            update_marked_section(html_snippet)
-            inject_blog_year_separators()
-            generate_tags_page()
-            minify_html("./.build/index.html", "./.build/index.html")
-            generate_sitemap()
         if deploy:
             start_dev_server(build_dir)
 
