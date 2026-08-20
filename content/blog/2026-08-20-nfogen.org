@@ -18,51 +18,56 @@ credits, installation instructions, BBS/contact info, greetz/notes, etc.
 For example, here's the =bonzai.nfo= file for a patched save game for Lemmings
 III, with credits to those involved and instructions to get in touch.
 
+/Note: The [[http://www.textfiles.com/piracy/NFO/bonzai.nfo][original file]] on textfiles.com contains CP437 bytes decoded as
+Cyrillic, so I converted this example correctly to CP437. If you view the online
+version, you'll notice that the box drawing and group logo are incomprehensible,
+which proves my point later on in the CP437 section./
+
 #+begin_src nfo
-            К                                                   К
+            ║                                                   ║
 
-       лллллК                                                   К
-       лллллК                                                   К
-       лллллпллл  лллллпллл  лллллпллл  лллллпллл  лллллпллл  ппппп
-       лллллКлллл ллллл лллл ллллл лллл ллллл лллл ллллл лллл ллллл
-       лллллКлллл ллллл лллл ллллл лллл ммммммлллл лллллмлллл лллллл
-       лллллКлллл ллллл лллл ллллл лллл ллллл мммм ллллл лллл лллллл
-       ллллл лллл ллллл лллл ллллл лллл ллллл лллл ллллл лллл лллллл
-       лллллКлллл ллллл лллл ллллл лллл ллллл лллл ллллл лллл лллллл
-       лллллКлллл ллллл лллл ллллл лллл ллллл лллл ллллл лллл лллллл
-       ллллл лллл ллллл лллл ллллл лллл ллллл лллл ллллл лллл лллллл
-       пппппппппп пппппппппп ппппп пппп пппппппппп ппппп пппп пппппп
-            К    жФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФЗ     К
-                 К ў BONZAi Ф EVERYTHiNG BUT FRiENDSHiP ў К
-            К    гФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФН     К
+       █████║                                                   ║
+       █████║                                                   ║
+       █████▀███  █████▀███  █████▀███  █████▀███  █████▀███  ▀▀▀▀▀
+       █████║████ █████ ████ █████ ████ █████ ████ █████ ████ █████
+       █████║████ █████ ████ █████ ████ ▄▄▄▄▄▄████ █████▄████ ██████
+       █████║████ █████ ████ █████ ████ █████ ▄▄▄▄ █████ ████ ██████
+       █████ ████ █████ ████ █████ ████ █████ ████ █████ ████ ██████
+       █████║████ █████ ████ █████ ████ █████ ████ █████ ████ ██████
+       █████║████ █████ ████ █████ ████ █████ ████ █████ ████ ██████
+       █████ ████ █████ ████ █████ ████ █████ ████ █████ ████ ██████
+       ▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀ ▀▀▀▀▀ ▀▀▀▀ ▀▀▀▀▀▀
+            ║    ╓────────────────────────────────────────╖     ║
+                 ║ ■ BONZAi ─ EVERYTHiNG BUT FRiENDSHiP ■ ║
+            ║    ╙────────────────────────────────────────╜     ║
                              R E L E A S E D :
-            К                                                   К
-            К     9O BYTES SAVE GAME PATCHER FOR LEMMiNGS III   К
+            ║                                                   ║
+            ║     9O BYTES SAVE GAME PATCHER FOR LEMMiNGS III   ║
 
-            К FiLENAME .............. : ........... BNZ-L3T.ZiP К
-            К TYPE .................. : ............... TRAiNER К
-            К COMPANY ............... : ............. PSYGNOSiS К
-            К CODER .. .............. : ................ SCAMPY К
-            К PACKAGER .............. : ................ SCAMPY К
-            К DATE AT RELEASiNG ..... : ............ 11-27-1994 К
-            К TiME AT RELEASiNG ..... : .............. 15:OO PM К
-            К RELEASE NOTES : ..................... READ BELOW! К
-            К                                                   К
-            К            !!!*!!! IMPORTANT !!!*!!!              К
-            К                                                   К
-            К  NiCE PATCHER FOR A NiCE GAME - THiS PATCHER WAS  К
-            К  KINDA DiFFiCULT BECAUSE OF THE MANY BYTES TO BE  К
-            К  PATCHED. BUT PROBLEMS WiTH PATCHiNG TiME AND     К
-            К  FiLE LENGTH HAVE BEEN SOLVED.                    К
-            К                                                   К
-            К  ENJOY PLAYiN' -SCAMPY!                           К
-            К                                                   К
-            К                                                   К
-            К MEMBERS OF BONZAi ARE . :                         К
-            К                      MOTiV8- SCAMPY- SUM-1- DEViL К
-            К                                                   К
-            К BULLETiN BOARD SYSTEMS  :                         К
-Э  Э  ЭЭ ЭЭЭМ                                  NONE! SEARCHiNG! ШЭЭЭ ЭЭ  Э  Э
+            ║ FiLENAME .............. : ........... BNZ-L3T.ZiP ║
+            ║ TYPE .................. : ............... TRAiNER ║
+            ║ COMPANY ............... : ............. PSYGNOSiS ║
+            ║ CODER .. .............. : ................ SCAMPY ║
+            ║ PACKAGER .............. : ................ SCAMPY ║
+            ║ DATE AT RELEASiNG ..... : ............ 11-27-1994 ║
+            ║ TiME AT RELEASiNG ..... : .............. 15:OO PM ║
+            ║ RELEASE NOTES : ..................... READ BELOW! ║
+            ║                                                   ║
+            ║            !!!*!!! IMPORTANT !!!*!!!              ║
+            ║                                                   ║
+            ║  NiCE PATCHER FOR A NiCE GAME - THiS PATCHER WAS  ║
+            ║  KINDA DiFFiCULT BECAUSE OF THE MANY BYTES TO BE  ║
+            ║  PATCHED. BUT PROBLEMS WiTH PATCHiNG TiME AND     ║
+            ║  FiLE LENGTH HAVE BEEN SOLVED.                    ║
+            ║                                                   ║
+            ║  ENJOY PLAYiN' -SCAMPY!                           ║
+            ║                                                   ║
+            ║                                                   ║
+            ║ MEMBERS OF BONZAi ARE . :                         ║
+            ║                      MOTiV8- SCAMPY- SUM-1- DEViL ║
+            ║                                                   ║
+            ║ BULLETiN BOARD SYSTEMS  :                         ║
+═  ═  ══ ═══╝                                  NONE! SEARCHiNG! ╚═══ ══  ═  ═
 
                                GREETiNGS TO:
               TOXiC  HYBRiD  PENTAGRAM  PARADOX  THHG  G.T.A  TRSI
@@ -72,7 +77,7 @@ III, with credits to those involved and instructions to get in touch.
     CURRENTLY WE ARE SEARCHiNG FOR ALL KiND OF MEMBERS.. LiKE TRADERS
                          SUPPLiERS.. SYSOPS.. ETC.
 
-Э Э   ЭЭ  ЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭ ЭЭ  Э  Э
+═ ═   ══  ══════════════════════════════════════════════════════════ ══  ═  ═
 #+end_src
 
 If you want to browse an archive of NFO files, head over to [[http://www.textfiles.com/piracy/NFO/][textfiles]].
@@ -95,7 +100,7 @@ use code blocks, like I did above).
 One such character set was often used for NFO files: IBM's [[https://en.wikipedia.org/wiki/Code_page_437][CP437]] character set,
 released with the 1981 IBM PC. This set was popular because each character could
 be typed with an alt code in DOS, even if they were not on the user's keyboard.
-E.g., =Alt + 2665= would result in the following character: =♥=.
+E.g., =Alt + 3= would result in the following character: =♥=.
 
 * Introducing: nfogen
 
@@ -104,7 +109,8 @@ recently. As part of this, I started using NFO files for my git repos under my
 new org and wanted a tool that could help me accelerate the generation of these
 files.
 
-Introducing [[https://github.com/krazywarez/nfogen][nfogen]], a small Python utility that can generate NFO files for you based on:
+Introducing [[https://github.com/krazywarez/nfogen][nfogen]], a small Python utility that can generate NFO files for you
+based on:
 - templates
 - profiles
 - configuration files
@@ -172,7 +178,7 @@ generated by nfogen:   nfogen.py -c nfogen.toml
 Next, I ran the following command, which produced the NFO file below:
 
 #+begin_src shell
-nfogen.py -c nfogen.toml -p -o README.nfo
+nfogen.py -c nfogen.toml -o README.nfo
 #+end_src
 
 #+begin_src nfo
@@ -230,12 +236,11 @@ For more examples, browse the [[https://github.com/krazywarez/nfogen/tree/main/e
 * Usage
 ** Installation
 
-The fastest installation method is to clone the repo and use the Python file
-directly:
+The fastest installation method is to fetch and use the Python file directly:
 
 #+begin_src shell
-git clone https://github.com/krazywarez/nfogen.git && cd nfogen
-nfogen.py -i
+curl -O https://raw.githubusercontent.com/krazywarez/nfogen/main/nfogen.py
+python3 nfogen.py -i
 #+end_src
 
 ** Generating a File
@@ -262,9 +267,103 @@ nfogen itself works by parsing the various inputs, determining a style to use
 for the box-drawing/character sets, and rendering the characters individually by
 rows and columns.
 
+** Width
+
+The first issue I ran into was determining the width to use. I settled on 79
+characters, with border characters at both ends, because X. This means that my
+script needs to perform some math to calculate wrapping, padding, and centering
+of text throughout.
+
+The math is relatively simple because CP437 is single-byte and single-width,
+which means I can write functions that depend on that one-to-one correlation
+to calculate the spacing properly.
+
+=_Canvas.__init__= defines a few key variables for width:
+
+#+begin_src python
+self.width = width
+self.inner = width - 4        # single-column content width
+self.cl = (width - 7) // 2    # left panel content width
+self.cr = (width - 7) - self.cl
+self.rfill = width - self.cl - 5
+#+end_src
+
+At a width of 79 characters, this breaks down into:
+
+| Variable   | Value | What it covers                                          |
+|------------+-------+---------------------------------------------------------|
+| =self.width= |    79 | Total line width, borders included                      |
+| =self.inner= |    75 | Single-column content, minus two verticals and two pads |
+| =self.cl=    |    36 | Left panel content width                                |
+| =self.cr=    |    36 | Right panel content, taking the remainder               |
+| =self.rfill= |    38 | Rule segment right of the joint, =cr= plus its two pads   |
+
+These combine into a cohesive 79-chararacter-width NFO file with consistent
+padding and alignment.
+
+** Character Sets
+
+=nfogen= currently supports two different character sets as outputs: UTF-8 and
+CP437. For example, there are =╔ ═ ║= characters in the UTF-8 example, but a real
+CP437 file contains the single bytes =0xC9 0xCD 0xBA=.
+
+However, this doesn't really change the core generation of the NFO file. The
+file itself is charset-independent and the charset only comes into play during
+the final encode of the file.
+
+Referring back to the =bonzai.nfo= file above, it was decoded improperly as
+ISO-8859-5, which resulted in Cyrillic characters instead of the proper charset.
+Defining an appropriate charset and encoding/decoding is critical to ensuring
+the longevity of NFO files.
+
+** Banner Generator
+
+The banner generator is a function by itself, which renders independent from the
+rest of the file and separate from the box geometry. This function defines a set
+of glyphs, takes an input text string from the user, and maps each character to
+its glyph. The result is rendered above the box and is centered, so it does not
+depend on the math applied to the canvas.
+
+If an explicity art file is defined, this generator does not run.
+
+#+begin_src python
+# A compact 5-row block font for the banner generator. Each glyph is five
+# rows joined by "/". Uppercase letters, digits, space, and [<35;44;2Ma few symbols.
+_FONT = {
+    "A": " ### /#   #/#####/#   #/#   #", "B": "#### /#   #/#### /#   #/#### ",
+    "C": " ####/#    /#    /#    / ####", "D": "#### /#   #/#   #/#   #/#### ",
+    # ... through Z, 0-9, space, -, ., !, :
+}
+
+
+def banner(text: str) -> str:
+    """Render text as a 5-row ASCII banner using the built-in block font."""
+    rows = ["", "", "", "", ""]
+    for ch in text.upper():
+        glyph = _FONT.get(ch, _FONT[" "]).split("/")
+        for i in range(5):
+            rows[i] += glyph[i] + "  "
+    return "\n".join(r.rstrip() for r in rows)
+#+end_src
+
+** Resolution Order
+
+Finally, I defined a specific order to the inputs. As stated in the README, the
+order of importance is: =template < profile < config file < CLI flags < prompts=.
+
+This was an opinionated design choice, as I felt that if you were to create a
+template, that should take precedence above all. Then, profiles and
+configurations are additional preconfigured files that require effort to create
+and maintain, which earns them the next spots. Finally, the script falls back to
+CLI arguments, if supplied, and then interactive prompt mode if nothing else
+exists.
+
 * The Future
 
 I'd love to build this tool out to support more character sets, pre-built
 libraries for ASCII art and table layouts, and more customization options.
+
+For now, the tool works and is sufficient for my personal use cases, so I'm
+content with it.
 
 If you're interested in helping, feel free to reach out!
