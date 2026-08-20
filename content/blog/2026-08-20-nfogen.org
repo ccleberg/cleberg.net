@@ -299,7 +299,7 @@ At a width of 79 characters, this breaks down into:
 | =self.cr=    |    36 | Right panel content, taking the remainder               |
 | =self.rfill= |    38 | Rule segment right of the joint, =cr= plus its two pads   |
 
-These combine into a cohesive 79-chararacter-width NFO file with consistent
+These combine into a cohesive 79-character-width NFO file with consistent
 padding and alignment.
 
 ** Character Sets
@@ -325,7 +325,7 @@ of glyphs, takes an input text string from the user, and maps each character to
 its glyph. The result is rendered above the box and is centered, so it does not
 depend on the math applied to the canvas.
 
-If an explicity art file is defined, this generator does not run.
+If an explicit art file is defined, this generator does not run.
 
 #+begin_src python
 # A compact 5-row block font for the banner generator. Each glyph is five
