@@ -270,10 +270,10 @@ rows and columns.
 ** Width
 
 The first issue I ran into was determining the width to use. I settled on 79
-characters, with border characters at both ends, because 80-column terminals,
-minus one so the line doesn't wrap when a terminal auto-wraps at exactly 80.
-This means that my script needs to perform some math to calculate wrapping,
-padding, and centering of text throughout.
+characters, border characters included, because terminals were 80 columns wide
+and a line that hits exactly 80 wraps on its own. This means that my script
+needs to perform some math to calculate wrapping, padding, and centering of text
+throughout.
 
 The math is relatively simple because CP437 is single-byte and single-width,
 which means I can write functions that depend on that one-to-one correlation
