@@ -270,9 +270,10 @@ rows and columns.
 ** Width
 
 The first issue I ran into was determining the width to use. I settled on 79
-characters, with border characters at both ends, because X. This means that my
-script needs to perform some math to calculate wrapping, padding, and centering
-of text throughout.
+characters, with border characters at both ends, because 80-column terminals,
+minus one so the line doesn't wrap when a terminal auto-wraps at exactly 80.
+This means that my script needs to perform some math to calculate wrapping,
+padding, and centering of text throughout.
 
 The math is relatively simple because CP437 is single-byte and single-width,
 which means I can write functions that depend on that one-to-one correlation
@@ -328,7 +329,7 @@ If an explicity art file is defined, this generator does not run.
 
 #+begin_src python
 # A compact 5-row block font for the banner generator. Each glyph is five
-# rows joined by "/". Uppercase letters, digits, space, and [<35;44;2Ma few symbols.
+# rows joined by "/". Uppercase letters, digits, space, and a few symbols.
 _FONT = {
     "A": " ### /#   #/#####/#   #/#   #", "B": "#### /#   #/#### /#   #/#### ",
     "C": " ####/#    /#    /#    / ####", "D": "#### /#   #/#   #/#   #/#### ",
@@ -351,12 +352,11 @@ def banner(text: str) -> str:
 Finally, I defined a specific order to the inputs. As stated in the README, the
 order of importance is: =template < profile < config file < CLI flags < prompts=.
 
-This was an opinionated design choice, as I felt that if you were to create a
-template, that should take precedence above all. Then, profiles and
-configurations are additional preconfigured files that require effort to create
-and maintain, which earns them the next spots. Finally, the script falls back to
-CLI arguments, if supplied, and then interactive prompt mode if nothing else
-exists.
+This was an opinionated design choice, as I felt that if you were to run the
+script in interactive mode, that meant you wanted those to take precedence over
+all. Then again, specifying CLI flags directly when running the script should do
+the same. Finally, specifying configuration files, profiles, and templates will
+take precedence in descending order.
 
 * The Future
 
