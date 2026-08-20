@@ -1,0 +1,270 @@
+#+date: [2026-08-20 Thu 10:24:00]
+#+title: generating scene-style .nfo files in 2026
+#+description: Announcing nfogen, a small utility to generate NFO files.
+#+slug: nfogen
+#+filetags: :development:
+
+* What Is an .nfo File?
+
+If you're unfortunate enough not to have lived through the heyday of =.nfo= files,
+I want to provide some context. Because honestly, this project might seem weird
+or useless without it.
+
+First, an [[https://en.wikipedia.org/wiki/.nfo][NFO]] file (short for info/informational) is a file format originally
+released in 1990. This file format was used by various projects, but especially
+by [[https://en.wikipedia.org/wiki/Warez_scene][warez/scene]] groups to provide info about their projects. This might include
+credits, installation instructions, BBS/contact info, greetz/notes, etc.
+
+For example, here's the =bonzai.nfo= file for a patched save game for Lemmings
+III, with credits to those involved and instructions to get in touch.
+
+#+begin_src nfo
+            К                                                   К
+
+       лллллК                                                   К
+       лллллК                                                   К
+       лллллпллл  лллллпллл  лллллпллл  лллллпллл  лллллпллл  ппппп
+       лллллКлллл ллллл лллл ллллл лллл ллллл лллл ллллл лллл ллллл
+       лллллКлллл ллллл лллл ллллл лллл ммммммлллл лллллмлллл лллллл
+       лллллКлллл ллллл лллл ллллл лллл ллллл мммм ллллл лллл лллллл
+       ллллл лллл ллллл лллл ллллл лллл ллллл лллл ллллл лллл лллллл
+       лллллКлллл ллллл лллл ллллл лллл ллллл лллл ллллл лллл лллллл
+       лллллКлллл ллллл лллл ллллл лллл ллллл лллл ллллл лллл лллллл
+       ллллл лллл ллллл лллл ллллл лллл ллллл лллл ллллл лллл лллллл
+       пппппппппп пппппппппп ппппп пппп пппппппппп ппппп пппп пппппп
+            К    жФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФЗ     К
+                 К ў BONZAi Ф EVERYTHiNG BUT FRiENDSHiP ў К
+            К    гФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФФН     К
+                             R E L E A S E D :
+            К                                                   К
+            К     9O BYTES SAVE GAME PATCHER FOR LEMMiNGS III   К
+
+            К FiLENAME .............. : ........... BNZ-L3T.ZiP К
+            К TYPE .................. : ............... TRAiNER К
+            К COMPANY ............... : ............. PSYGNOSiS К
+            К CODER .. .............. : ................ SCAMPY К
+            К PACKAGER .............. : ................ SCAMPY К
+            К DATE AT RELEASiNG ..... : ............ 11-27-1994 К
+            К TiME AT RELEASiNG ..... : .............. 15:OO PM К
+            К RELEASE NOTES : ..................... READ BELOW! К
+            К                                                   К
+            К            !!!*!!! IMPORTANT !!!*!!!              К
+            К                                                   К
+            К  NiCE PATCHER FOR A NiCE GAME - THiS PATCHER WAS  К
+            К  KINDA DiFFiCULT BECAUSE OF THE MANY BYTES TO BE  К
+            К  PATCHED. BUT PROBLEMS WiTH PATCHiNG TiME AND     К
+            К  FiLE LENGTH HAVE BEEN SOLVED.                    К
+            К                                                   К
+            К  ENJOY PLAYiN' -SCAMPY!                           К
+            К                                                   К
+            К                                                   К
+            К MEMBERS OF BONZAi ARE . :                         К
+            К                      MOTiV8- SCAMPY- SUM-1- DEViL К
+            К                                                   К
+            К BULLETiN BOARD SYSTEMS  :                         К
+Э  Э  ЭЭ ЭЭЭМ                                  NONE! SEARCHiNG! ШЭЭЭ ЭЭ  Э  Э
+
+                               GREETiNGS TO:
+              TOXiC  HYBRiD  PENTAGRAM  PARADOX  THHG  G.T.A  TRSI
+
+     #TO GET iN TOUCH WiTH BNZ LEAVE MAiL TO US ANYWHERE YOU FiND US#
+
+    CURRENTLY WE ARE SEARCHiNG FOR ALL KiND OF MEMBERS.. LiKE TRADERS
+                         SUPPLiERS.. SYSOPS.. ETC.
+
+Э Э   ЭЭ  ЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭЭ ЭЭ  Э  Э
+#+end_src
+
+If you want to browse an archive of NFO files, head over to [[http://www.textfiles.com/piracy/NFO/][textfiles]].
+
+* The Aesthetic
+** ASCII Art and Box Drawing
+
+As you can see in the example above, complex ASCII drawings, logos, and
+structure are a staple of a good NFO file. Commonly, the ASCII art is used to
+create recognizable logos for specific groups in the scene.
+
+This requires fixed-width fonts to be viewed appropriately. E.g., on Windows,
+you could open an NFO file in Notepad and ensure a fixed-width font is selected,
+such as Consolas. Proportional and custom fonts break the flow and structure of
+these files, which is unfortunately the default in modern browsers (unless you
+use code blocks, like I did above).
+
+** Codepage 437
+
+One such character set was often used for NFO files: IBM's [[https://en.wikipedia.org/wiki/Code_page_437][CP437]] character set,
+released with the 1981 IBM PC. This set was popular because each character could
+be typed with an alt code in DOS, even if they were not on the user's keyboard.
+E.g., =Alt + 2665= would result in the following character: =♥=.
+
+* Introducing: nfogen
+
+So, why am I writing about this now? Well, I was feeling nostalgic for NFO files
+recently. As part of this, I started using NFO files for my git repos under my
+new org and wanted a tool that could help me accelerate the generation of these
+files.
+
+Introducing [[https://github.com/krazywarez/nfogen][nfogen]], a small Python utility that can generate NFO files for you based on:
+- templates
+- profiles
+- configuration files
+- CLI flags
+- interactive CLI prompts
+
+This enables fast, customizable, and templatized NFO files you can generate on
+the fly.
+
+** Sample Output
+
+There's no better way to introduce a project than to show a demo, so here's a
+demo of how I generated the =README.nfo= for nfogen itself.
+
+First, I defined =nfogen.toml= so that I could use this as a configuration file
+during generation:
+
+#+begin_src toml
+group = "KRZ"
+site  = "krz.sh"
+width = 79
+style = "double"
+layout = "rows"
+
+banner      = true
+banner_text = "NFOGEN"
+
+footer      = true
+footer_text = "nfogen  //  krazy warez  //  krz.sh"
+
+title      = "nfogen 1.2.2"
+type       = "CLI / library"
+publisher  = "krazy warez"
+language   = "Python 3.11+  (any 3.x with a JSON config)"
+files      = "nfogen.py  --  single file, zero deps"
+url        = "krz.sh"
+
+notes = """
+nfogen builds scene-style ASCII .nfo files from CLI flags, a config
+file, interactive prompts, or any mix of the three.
+
+FEATURES
+  - CP437 or UTF-8 output; single / double / block box styles
+  - two-column release+game info panel, or simple rows
+  - group profiles: reusable logo, members, couriers, boards
+  - mediainfo import auto-fills video / audio / resolution / size
+  - built-in ASCII banner generator for header logos (this one!)
+  - bundled templates: razor, modern, minimal
+
+QUICKSTART
+  nfogen.py --title "Some.App.v1-KRZ" --type APP --banner
+  nfogen.py -c release.toml -p group.toml -o release.nfo
+  nfogen.py -t razor --title "..." --mediainfo dump.json
+  nfogen.py -i                          (prompt for every field)
+
+RESOLUTION ORDER
+  template < profile < config file < CLI flags < prompts
+
+See examples/ for full release nfos and a group profile, and
+templates/ for the bundled presets. This README.nfo was itself
+generated by nfogen:   nfogen.py -c nfogen.toml
+"""
+#+end_src
+
+Next, I ran the following command, which produced the NFO file below:
+
+#+begin_src shell
+nfogen.py -c nfogen.toml -p -o README.nfo
+#+end_src
+
+#+begin_src nfo
+                   #   #  #####   ###    ####  #####  #   #
+                   ##  #  #      #   #  #      #      ##  #
+                   # # #  ###    #   #  #  ##  ###    # # #
+                   #  ##  #      #   #  #   #  #      #  ##
+                   #   #  #       ###    ####  #####  #   #
+
+╔═════════════════════════════════════════════════════════════════════════════╗
+║                           N F O G E N   1 . 2 . 2                           ║
+║                               [ KRZ ]   krz.sh                              ║
+╠═════════════════════════════════════════════════════════════════════════════╣
+║   DATE       2026-08-08                                                     ║
+║   TYPE       CLI / library                                                  ║
+║   PUBLISHER  krazy warez                                                    ║
+║   LANGUAGE   Python 3.11+  (any 3.x with a JSON config)                     ║
+║   FILES      nfogen.py  --  single file, zero deps                          ║
+║   URL        krz.sh                                                         ║
+╠═════════════════════════════════════════════════════════════════════════════╣
+║   NOTES                                                                     ║
+║                                                                             ║
+║   nfogen builds scene-style ASCII .nfo files from CLI flags, a config       ║
+║   file, interactive prompts, or any mix of the three.                       ║
+║                                                                             ║
+║   FEATURES                                                                  ║
+║     - CP437 or UTF-8 output; single / double / block box styles             ║
+║     - two-column release+game info panel, or simple rows                    ║
+║     - group profiles: reusable logo, members, couriers, boards              ║
+║     - mediainfo import auto-fills video / audio / resolution / size         ║
+║     - built-in ASCII banner generator for header logos (this one!)          ║
+║     - bundled templates: razor, modern, minimal                             ║
+║                                                                             ║
+║   QUICKSTART                                                                ║
+║     nfogen.py --title "Some.App.v1-KRZ" --type APP --banner                 ║
+║     nfogen.py -c release.toml -p group.toml -o release.nfo                  ║
+║     nfogen.py -t razor --title "..." --mediainfo dump.json                  ║
+║     nfogen.py -i                          (prompt for every field)          ║
+║                                                                             ║
+║   RESOLUTION ORDER                                                          ║
+║     template < profile < config file < CLI flags < prompts                  ║
+║                                                                             ║
+║   See examples/ for full release nfos and a group profile, and              ║
+║   templates/ for the bundled presets. This README.nfo was itself            ║
+║   generated by nfogen:   nfogen.py -c nfogen.toml                           ║
+╠═════════════════════════════════════════════════════════════════════════════╣
+║                                                                             ║
+║                     nfogen  //  krazy warez  //  krz.sh                     ║
+║                                                                             ║
+╚═════════════════════════════════════════════════════════════════════════════╝
+#+end_src
+
+For more examples, browse the [[https://github.com/krazywarez/nfogen/tree/main/examples][examples]] directory within the repository.
+
+* Usage
+** Installation
+
+The fastest installation method is to clone the repo and use the Python file
+directly:
+
+#+begin_src shell
+git clone https://github.com/krazywarez/nfogen.git && cd nfogen
+nfogen.py -i
+#+end_src
+
+** Generating a File
+
+As noted in the README above, there are numerous ways to generate an NFO file:
+
+#+begin_src shell
+# CLI Flags
+nfogen.py --title "Some.App.v1-KRZ" --type APP --banner
+
+# TOML Configuration Files
+nfogen.py -c release.toml -p group.toml -o release.nfo
+
+# CLI Flags & JSON for mediainfo
+nfogen.py -t razor --title "..." --mediainfo dump.json
+
+# Interactive Mode
+nfogen.py -i
+#+end_src
+
+* How It Works
+
+nfogen itself works by parsing the various inputs, determining a style to use
+for the box-drawing/character sets, and rendering the characters individually by
+rows and columns.
+
+* The Future
+
+I'd love to build this tool out to support more character sets, pre-built
+libraries for ASCII art and table layouts, and more customization options.
+
+If you're interested in helping, feel free to reach out!
