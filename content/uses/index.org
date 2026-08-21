@@ -14,33 +14,33 @@ threat model justification.
 
 * Software
 
-| Technology            | What I Use              | Threat Model                                                                                        |
-|-----------------------+-------------------------+-----------------------------------------------------------------------------------------------------|
-| Registrar             | [[https://cloudflare.com][Cloudflare]]              | WHOIS privacy, low cost, integrates cleanly if you use other Cloudflare products.                   |
-| DNS                   | [[https://cloudflare.com][Cloudflare]]              | Portable DNS, secure infrastructure, and acceptable privacy.                                        |
-| Security              | [[https://cloudflare.com][Cloudflare]] + [[https://github.com/fail2ban/fail2ban][fail2ban]]   | Automated auth-failure bans. Minimal Cloudflare functionality enabled.                              |
-| Routing               | [[https://ui.com/][UniFi]]                   | Local network segmentation.                                                                         |
-| Server                | [[https://cleberg.net/blog/server-build.html][Self-hosted]]             | Physical control. No hypervisor escape vector. No subpoena to a DC.                                 |
-| Operating System      | [[https://ubuntu.com][Ubuntu]] + [[https://www.apple.com/os/macos/][macOS]]          | Ubuntu: telemetry off, LTS, stable. macOS: workstation only.                                        |
-| Web Server            | [[https://nginx.org][Nginx]] + [[https://community.torproject.org/onion-services/setup/][Tor]]             | Static file serving. Tor layer for censored-network access.                                         |
-| SSL                   | [[https://certbot.eff.org][Certbot]]                 | Free automated TLS. No commercial CA dependency. Ensures Cloudflare can't view unencrypted traffic. |
-| Static Site Generator | [[https://github.com/krazywarez/orgo][orgo]] + [[https://git.sr.ht/~ccleberg/cleberg.net/tree/main/item/build.py][build.py]]         | Org-mode source compiles to plaintext HTML. Single binary, no runtime.                              |
-| Terminal              | [[https://iterm2.com/][iTerm2]]                  | Functional. Inherited from macOS.                                                                   |
-| Shell                 | [[https://www.zsh.org/][Zsh]]                     | Portable, POSIX-adjacent, available on every target OS.                                             |
-| Editor                | [[https://github.com/doomemacs/doomemacs][Doom Emacs]]              | Editor and markup are the same tool. No proprietary format.                                         |
-| Markup Language       | [[https://orgmode.org][org-mode]]                | Plain text. Readable without any software. Version-control native.                                  |
-| Image Processing      | [[https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/w/webp.rb][webP (CLI)]]              | CLI-only. No GUI, no cloud, no account.                                                             |
-| Browser(s)            | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net][LibreWolf]]         | Tor for anonymity-critical use. LibreWolf for hardened daily use.                                   |
-| Version Control       | [[https://git-scm.com/][Git (CLI)]]               | Decentralized. The repo is the backup.                                                              |
-| Git Host              | [[https://sr.ht][SourceHut]] + [[https://github.com/ccleberg][GitHub]]      | SourceHut is the primary and GitHub is the mirror.                                                  |
-| CI/CD                 | [[https://git.sr.ht/~ccleberg/cleberg.net/tree/main/item/build.py][build.py]] + [[https://builds.sr.ht][builds.sr.ht]] | A Python script and SSH. builds.sr.ht for convenience but not required.                             |
-| Email Host            | [[https://migadu.com][Migadu]]                  | Straightforward usage-based provider from Switzerland.                                              |
-| Search Engine         | [[https://docs.searxng.org/][SearXNG]] (self-hosted)   | Queries route through my own instance. No third-party search profile.                               |
-| Backups               | N/A                     | Nothing to back up. No user data. Source mirrored via Git.                                          |
-| Monitoring            | N/A                     | Monitoring creates logs. Logs are a liability.                                                      |
-| Analytics             | N/A                     | No interest in visitor data. Content finds its way via RSS.                                         |
-| Social Media          | N/A                     | —                                                                                                   |
-| Newsletter            | RSS Only                | No subscriber list. No email vendor. No data relationship.                                          |
+| Technology            | What I Use            | Threat Model                                                                                        |
+|-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------|
+| Registrar             | [[https://cloudflare.com][Cloudflare]]            | WHOIS privacy, low cost, integrates cleanly if you use other Cloudflare products.                   |
+| DNS                   | [[https://cloudflare.com][Cloudflare]]            | Portable DNS, secure infrastructure, and acceptable privacy.                                        |
+| Security              | [[https://cloudflare.com][Cloudflare]] + [[https://github.com/fail2ban/fail2ban][fail2ban]] | Automated auth-failure bans. Minimal Cloudflare functionality enabled.                              |
+| Routing               | [[https://ui.com/][UniFi]]                 | Local network segmentation.                                                                         |
+| Server                | [[https://cleberg.net/blog/server-build.html][Self-hosted]]           | Physical control. No hypervisor escape vector. No subpoena to a DC.                                 |
+| Operating System      | [[https://ubuntu.com][Ubuntu]] + [[https://www.apple.com/os/macos/][macOS]]        | Ubuntu: telemetry off, LTS, stable. macOS: workstation only.                                        |
+| Web Server            | [[https://nginx.org][Nginx]] + [[https://community.torproject.org/onion-services/setup/][Tor]]           | Static file serving. Tor layer for censored-network access.                                         |
+| SSL                   | [[https://certbot.eff.org][Certbot]]               | Free automated TLS. No commercial CA dependency. Ensures Cloudflare can't view unencrypted traffic. |
+| Static Site Generator | [[https://github.com/krazywarez/orgo][orgo]] + [[https://github.com/ccleberg/cleberg.net/blob/main/build.py][build.py]]       | Org-mode source compiles to plaintext HTML. Single binary, no runtime.                              |
+| Terminal              | [[https://iterm2.com/][iTerm2]]                | Functional. Inherited from macOS.                                                                   |
+| Shell                 | [[https://www.zsh.org/][Zsh]]                   | Portable, POSIX-adjacent, available on every target OS.                                             |
+| Editor                | [[https://github.com/doomemacs/doomemacs][Doom Emacs]]            | Editor and markup are the same tool. No proprietary format.                                         |
+| Markup Language       | [[https://orgmode.org][org-mode]]              | Plain text. Readable without any software. Version-control native.                                  |
+| Image Processing      | [[https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/w/webp.rb][webP (CLI)]]            | CLI-only. No GUI, no cloud, no account.                                                             |
+| Browser(s)            | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net][LibreWolf]]       | Tor for anonymity-critical use. LibreWolf for hardened daily use.                                   |
+| Version Control       | [[https://git-scm.com/][Git (CLI)]]             | Decentralized. The repo is the backup.                                                              |
+| Git Host              | [[https://github.com/ccleberg][GitHub]] + [[https://sr.ht][SourceHut]]    | GitHub is the primary and SourceHut is the mirror.                                                  |
+| CI/CD                 | [[https://github.com/ccleberg/cleberg.net/blob/main/build.py][build.py]]              | A Python script and SSH. No pipeline to depend on.                                                  |
+| Email Host            | [[https://migadu.com][Migadu]]                | Straightforward usage-based provider from Switzerland.                                              |
+| Search Engine         | [[https://docs.searxng.org/][SearXNG]] (self-hosted) | Queries route through my own instance. No third-party search profile.                               |
+| Backups               | N/A                   | Nothing to back up. No user data. Source mirrored via Git.                                          |
+| Monitoring            | N/A                   | Monitoring creates logs. Logs are a liability.                                                      |
+| Analytics             | N/A                   | No interest in visitor data. Content finds its way via RSS.                                         |
+| Social Media          | N/A                   | —                                                                                                   |
+| Newsletter            | RSS Only              | No subscriber list. No email vendor. No data relationship.                                          |
 
 * Hardware
 
