@@ -18,10 +18,16 @@ pre { overflow: auto; white-space: pre; }
 blockquote p { margin: 0; margin-bottom: 1rem; }
 blockquote p:last-child { margin-bottom: 0; }
 code { color: #942192; }
+/* Blocks are coloured by syntax.css, so this is only the fallback for the tokens it
+   leaves unclassified: the highlight theme's own foreground rather than inline code's. */
+pre code { color: #323232; }
 @media (prefers-color-scheme: dark) {
 	body { background-color: #181a1b; color: #cccccc; }
 	a, a:visited { color: #68A9F8; }
 	code { color: #ff68e1; }
-	pre, blockquote { background-color: black; }
+	/* base16-ocean.dark, the `highlight.theme_dark` half of the pair: its colours are
+	   picked for this surface, and pure black crushes the darker ones. */
+	pre, blockquote { background-color: #2b303b; }
+	pre code { color: #c0c5ce; }
 	table, th, td { border-color: #444; }
 }

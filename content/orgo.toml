@@ -44,7 +44,11 @@ match = "blog"
 template = "post.html"
 
 [highlight]
+# Two themes, because the site follows the reader's colour scheme and one theme cannot.
+# orgo writes both into syntax.css, each behind its own prefers-color-scheme query. The
+# block surface they sit on is styles.css' business, and it changes with the scheme too.
 theme = "InspiredGitHub"
+theme_dark = "base16-ocean.dark"
 
 [html]
 # Level-1 org headings become <h2>, beneath the page title the layout renders as <h1> —
