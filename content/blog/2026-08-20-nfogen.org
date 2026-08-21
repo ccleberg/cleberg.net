@@ -1,5 +1,5 @@
 #+date: [2026-08-20 Thu 10:24:00]
-#+title: Generating Scene-Style .nfo Files in 2026
+#+title: Generating Scene-Style NFO Files in 2026
 #+description: Announcing nfogen, a small utility to generate NFO files.
 #+slug: nfogen
 #+filetags: :development:
