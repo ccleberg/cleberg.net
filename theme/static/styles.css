@@ -25,9 +25,7 @@ pre code { color: #323232; }
 	body { background-color: #181a1b; color: #cccccc; }
 	a, a:visited { color: #68A9F8; }
 	code { color: #ff68e1; }
-	/* base16-ocean.dark, the `highlight.theme_dark` half of the pair: its colours are
-	   picked for this surface, and pure black crushes the darker ones. */
-	pre, blockquote { background-color: #2b303b; }
+	pre, blockquote { background-color: #000; }
 	pre code { color: #c0c5ce; }
 	table, th, td { border-color: #444; }
 }
