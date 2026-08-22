@@ -62,6 +62,8 @@ jobs:
           args: >-
             --root-dir ${{ github.workspace }}/.build-dev
             --exclude '\.onion'
+            --exclude '^https?://(localhost|127\.0\.0\.1|0\.0\.0\.0)'
+            --exclude '(\{|%7B|client_id=$)'
             --max-concurrency 8
             --max-retries 2
             --timeout 20
