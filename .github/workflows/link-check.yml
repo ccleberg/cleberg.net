@@ -46,7 +46,11 @@ jobs:
       - name: Internal links
         uses: lycheeverse/lychee-action@v2.9.0
         with:
-          args: --offline --base .build-dev --include-verbatim '.build-dev/**/*.html'
+          args: >-
+            --offline
+            --root-dir ${{ github.workspace }}/.build-dev
+            --include-verbatim
+            '.build-dev/**/*.html'
           fail: true
           output: internal.md
 
@@ -57,6 +61,7 @@ jobs:
         with:
           args: >-
             --exclude-mail
+            --root-dir ${{ github.workspace }}/.build-dev
             --exclude '\.onion'
             --max-concurrency 8
             --max-retries 2
