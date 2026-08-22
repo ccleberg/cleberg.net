@@ -19,7 +19,7 @@ project pages:
 - [[https://zerolabs.sh/hutch/][Website]]
 
 *Development*
-- [[https://git.sr.ht/~ccleberg/Hutch][Source]]
+- [[https://github.com/krazywarez/hutch][Source]]
 - [[https://sr.ht/~ccleberg/Hutch][Project]]
 - [[https://todo.sr.ht/~ccleberg/Hutch][Issues]]
 

@@ -24,7 +24,7 @@ Let's look at everything that fell in place today:
    languages derived their version of Tuesday from the Old Church Slavonic word
    =въторъ=, meaning "the second."
 5. Written in the classic monospaced, digital font (think of digital clocks from
-   the 80s/90s), there is nice symmetry to the numbers ([[https://img.cleberg.net/blog/20220222-tuesday/digital_font.webp][view the image here]]!).
+   the 80s/90s), there is nice symmetry to the numbers.
 6. This one isn't naturally-occurring, but it seems people around the world are
    celebrating the day. For example, a group is putting together [[https://www.eventbrite.com/e/2-22-22-a-collective-wedding-ceremony-at-the-state-capitol-tickets-211434605597][a wedding of
    222 couples at the California State Capitol in Sacramento]], concluding at
