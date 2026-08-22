@@ -60,7 +60,6 @@ jobs:
         uses: lycheeverse/lychee-action@v2.9.0
         with:
           args: >-
-            --exclude-mail
             --root-dir ${{ github.workspace }}/.build-dev
             --exclude '\.onion'
             --max-concurrency 8
@@ -71,6 +70,17 @@ jobs:
             '.build-dev/**/*.html'
           fail: false
           output: external.md
+
+      # `fail: false` stops a dead third-party link failing the job — but it also
+      # swallows lychee refusing to start at all, which reports success while
+      # checking nothing. Assert the report has a summary table in it.
+      - name: External step actually ran
+        run: |
+          if ! grep -q "Total" external.md; then
+            echo "::error::lychee produced no summary — it did not run"
+            cat external.md
+            exit 1
+          fi
 
       - name: Summary
         if: always()
