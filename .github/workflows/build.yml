@@ -9,12 +9,34 @@ permissions:
   contents: read
 
 env:
+  # Pinned so a new ruff release adds rules on your schedule, not mid-PR.
+  RUFF_VERSION: "0.16.4"
   # orgo is installed from crates.io, so nothing bumps this automatically —
   # dependabot does not see `cargo install` in a workflow. Raise it by hand when
   # a new orgo lands, which is also how you find out orgo broke the site.
   ORGO_VERSION: "0.22.0"
 
 jobs:
+  # Separate from the build so a lint failure and a broken page are distinct
+  # signals. build.py runs `ruff check --fix` and `ruff format` on development
+  # builds; these are the verifying forms of the same two commands, reading
+  # the same ruff.toml, so CI cannot disagree with a local dev build.
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install ruff
+        run: pipx install "ruff==$RUFF_VERSION"
+
+      - name: Lint
+        run: |
+          ruff --version
+          ruff check --no-fix
+
+      - name: Format
+        run: ruff format --check --diff
+
   build:
     runs-on: ubuntu-latest
     steps:
