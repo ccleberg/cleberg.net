@@ -4,7 +4,7 @@
 #+slug:        digital-minimalism
 #+filetags:    :linux:privacy:
 
-I've written [[https://cleberg.net/wiki/#digital-garden][a note about minimalism]]
+I've written [[/garden/][a note about minimalism]]
 before, but I wanted to dedicate some time to reflect on digital
 minimalism and how I've been able to minimize the impact of digital
 devices in my life.
