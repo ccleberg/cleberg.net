@@ -6,7 +6,7 @@
 
 * The Problem
 
-I recently [[../zfs/][migrated my hard drives to a ZFS pool]] and found myself stuck in
+I recently [[file:2024-02-06-zfs.org][migrated my hard drives to a ZFS pool]] and found myself stuck in
 Ubuntu's emergency mode after the first reboot I performed after creating the
 ZFS pool.
 

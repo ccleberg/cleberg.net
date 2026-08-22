@@ -6,7 +6,7 @@
 
 * Similar Article Available
 
-If you haven't already, feel free to read my post on [[../aes-encryption/][AES Encryption]].
+If you haven't already, feel free to read my post on [[file:2018-11-28-aes-encryption.org][AES Encryption]].
 
 * What is Cryptography?
 

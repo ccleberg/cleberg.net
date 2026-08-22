@@ -179,7 +179,7 @@ Finally, install the program:
 sudo pacman -S steam
 #+end_src
 
-[[./2020-01-26-steam-on-ntfs-drives.html][Problem Launching Steam Games? Click Here.]]
+[[file:2020-01-26-steam-on-ntfs.org][Problem Launching Steam Games? Click Here.]]
 
 * Command-Line Packages
 

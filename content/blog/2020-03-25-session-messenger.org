@@ -9,7 +9,7 @@
 The company behind Session (Loki Foundation) is from Australia. If you didn't
 know, Australia has introduced [[https://parlinfo.aph.gov.au/parlInfo/download/legislation/bills/r6195_aspassed/toc_pdf/18204b01.pdf][legislation]] mandating companies comply with
 government requests to build back door access into applications. For more
-information, read my article on [[./2020-01-25-aes-encryption.html][AES Encryption]].
+information, read my article on [[file:2018-11-28-aes-encryption.org][AES Encryption]].
 
 * About Session
 
