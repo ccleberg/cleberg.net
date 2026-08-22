@@ -31,13 +31,19 @@ import sys
 from pathlib import Path
 
 
-def run(cmd, error):
-    """Run cmd quietly, exiting with its stderr if it fails."""
+def run(cmd, error, echo=False):
+    """Run cmd quietly, exiting with its stderr if it fails.
+
+    echo prints stdout on success. Only the dry run needs it: its output is the
+    whole reason to run it, and the default of swallowing stdout would hide it.
+    """
     result = subprocess.run(cmd, capture_output=True, text=True, check=False)
     if result.returncode != 0:
         print(error, file=sys.stderr)
         print(result.stderr, file=sys.stderr)
         sys.exit(1)
+    if echo:
+        print(result.stdout, end="")
 
 
 def run_ruff():
@@ -102,23 +108,31 @@ def run_orgo_build(build_dir):
         sys.exit(1)
 
 
-def deploy_to_server(build_dir, server):
+def deploy_to_server(build_dir, server, dry_run=False):
+    """Push the built site to the server, or show what pushing it would do.
+
+    The deploy deletes remote files the build no longer produces, so "what would
+    this remove" is a question worth being able to ask before answering it
+    irreversibly. DRY_RUN=true asks it: rsync connects and compares, then reports
+    instead of transferring.
+    """
     remote_path = f"{server}:/var/www/cleberg.net/"
-    print(f"Deploying {build_dir}/ → {remote_path}")
-    run(
+    print(f"{'Would deploy' if dry_run else 'Deploying'} {build_dir}/ → {remote_path}")
+    cmd = [
+        "rsync",
+        "-r",
+        "--delete-before",
         # The build cache lives in the output directory because it describes it, but it
         # is not part of the site. Excluding it also stops --delete removing it locally.
-        [
-            "rsync",
-            "-r",
-            "--delete-before",
-            "--exclude",
-            ".orgo-cache.json",
-            f"{build_dir}/",
-            remote_path,
-        ],
-        "Error during rsync deployment:",
-    )
+        "--exclude",
+        ".orgo-cache.json",
+    ]
+    if dry_run:
+        # --itemize-changes because --dry-run alone prints almost nothing: the
+        # point is to name every file that would be sent or deleted.
+        cmd += ["--dry-run", "--itemize-changes"]
+    cmd += [f"{build_dir}/", remote_path]
+    run(cmd, "Error during rsync deployment:", echo=dry_run)
 
 
 def start_dev_server(build_dir):
@@ -158,8 +172,13 @@ def main():
 
     if os.environ.get("DEPLOY", "").casefold() == "true":
         if prod:
-            print("Deploying to production...")
-            deploy_to_server(build_dir, "homelab")
+            dry_run = os.environ.get("DRY_RUN", "").casefold() == "true"
+            print(
+                "Dry run — the server will not be modified"
+                if dry_run
+                else "Deploying to production..."
+            )
+            deploy_to_server(build_dir, "homelab", dry_run)
         else:
             start_dev_server(build_dir)
 

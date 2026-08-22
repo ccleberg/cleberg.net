@@ -56,7 +56,7 @@ To obtain a working copy of this repository, execute the following
 commands within a shell environment or Emacs shell interface:
 
 ``` shell
-git clone https://git.sr.ht/~ccleberg/cleberg.net
+git clone https://github.com/ccleberg/cleberg.net
 cd cleberg.net
 emacs -nw
 ```
@@ -69,32 +69,52 @@ For users employing Doom Emacs, open any repository Org file using
 The `build.py` script wraps the build: it runs orgo, and then either
 deploys the result or serves it locally.
 
-Two environment variables control what it does, and both default to
-off:
+Environment variables control what it does, and all default to off:
 
 - `BUILD=true` performs the build.
 - `DEPLOY=true` deploys in production, or starts a development server
   on port 8000 otherwise.
+- `ENV=prod` selects production: image URLs are rewritten to be
+  root-relative (see Deployment below) and the `ruff` pass is skipped.
+  Anything else builds for development.
+- `DRY_RUN=true` turns a production deploy into a report. Production
+  only; ignored everywhere else.
 
-A third, `ENV`, selects the mode. Setting `ENV=prod` rewrites image
-URLs to be root-relative (see Deployment below) and skips the `ruff`
-pass; anything else builds for development.
+Exactly one combination writes to the server:
+
+| `ENV`  | `BUILD` | `DEPLOY` | `DRY_RUN` | What happens                          | Output       | Server            |
+|--------|---------|----------|-----------|---------------------------------------|--------------|-------------------|
+| unset  | `true`  | —        | —         | Development build, `ruff` first       | `.build-dev/`| Untouched         |
+| unset  | `true`  | `true`   | —         | Development build, then serve on :8000| `.build-dev/`| Untouched         |
+| `prod` | `true`  | —        | —         | Production build and image rewrite    | `.build/`    | Untouched         |
+| `prod` | —       | `true`   | `true`    | Reports what a deploy would change    | —            | Read only         |
+| `prod` | `true`  | `true`   | —         | Production build, then deploy         | `.build/`    | **Overwritten**   |
 
 ``` shell
-# Production build:
-ENV=prod BUILD=true uv run build.py
-
 # Development build:
 BUILD=true uv run build.py
 
 # Development build, then serve it on localhost:8000:
 BUILD=true DEPLOY=true uv run build.py
+
+# Production build, no deploy:
+ENV=prod BUILD=true uv run build.py
+
+# What would a deploy change? Connects, compares, transfers nothing:
+ENV=prod DEPLOY=true DRY_RUN=true uv run build.py
+
+# Production build and deploy. This is the one that writes to the server:
+ENV=prod BUILD=true DEPLOY=true uv run build.py
 ```
 
 Generated site files reside in `.build/` for production and
-`.build-dev/` for development, ready for deployment. You can deploy the
-resulting static site files via standard file transfer protocols such as
-`scp` or SFTP.
+`.build-dev/` for development.
+
+The deploy is `rsync --delete-before`, so files the build no longer
+produces are removed from the server. That is what makes the dry run
+worth having: a build that silently produced fewer pages would quietly
+delete the rest. Lines beginning `*deleting` in the dry-run output are
+what the real deploy would remove.
 
 Builds are incremental: orgo keeps an `.orgo-cache.json` inside the
 output directory and re-renders only what changed, so the directory is
