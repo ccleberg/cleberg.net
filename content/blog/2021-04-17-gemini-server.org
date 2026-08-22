@@ -7,7 +7,7 @@
 * Similar Article Available
 
 To read more about Gemini and ways to test out this new protocol without your
-own server, see my previous post [[../launching-a-gemini-capsule/][Launching a Gemini Capsule]].
+own server, see my previous post [[file:2021-03-28-gemini-capsule.org][Launching a Gemini Capsule]].
 
 * Preparation
 

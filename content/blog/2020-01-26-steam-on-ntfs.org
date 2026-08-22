@@ -6,7 +6,7 @@
 
 * Auto-Mount Steam Drives
 
-If you want to see how to install Steam on Linux, see my other post: [[../linux-software/][Linux
+If you want to see how to install Steam on Linux, see my other post: [[file:2020-01-25-linux-software.org][Linux
 Software]].
 
 Are you having trouble launching games, even though they've installed correctly?
