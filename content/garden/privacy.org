@@ -82,7 +82,7 @@ NextDNS instead of the ISP's DNS.
 
 * Search Engines
 
-I use my own self-hosted [[https://docs.searxng.org/][SearXNG]] search engine at [[https://search.zerolabs.sh/][search.zerolabs.sh]], which "is
+I use my own self-hosted [[https://docs.searxng.org/][SearXNG]] search engine at [[https://search.krz.sh/][search.krz.sh]], which "is
 a metasearch engine, aggregating the results of other search engines while not
 storing information about its users."
 

@@ -16,9 +16,9 @@ expensive!).
 * My Apps
 
 However, I've launched a few apps on the Apple app store in the last year:
-- [[https://apps.apple.com/us/app/domaindig/id6760368004][DomainDig]] ([[https://github.com/zerolabsco/domain-dig][Source]]) - A domain inspection toolkit for DNS, SSL, ports, etc.
-- [[https://apps.apple.com/us/app/hutch-for-sourcehut/id6760742299][Hutch for Sourcehut]] ([[https://github.com/zerolabsco/hutch][Source]]) - A mobile client for SourceHut.
-- [[https://apps.apple.com/us/app/daybyday-learn/id6760321939][DayByDay]] ([[https://github.com/zerolabsco/daybyday][Source]]) - A children's app to learn various topics through
+- [[https://apps.apple.com/us/app/domaindig/id6760368004][DomainDig]] ([[https://gitbay.org/krz/domain-dig][Source]]) - A domain inspection toolkit for DNS, SSL, ports, etc.
+- [[https://apps.apple.com/us/app/hutch-for-sourcehut/id6760742299][Hutch for Sourcehut]] ([[https://gitbay.org/krz/hutch][Source]]) - A mobile client for SourceHut.
+- [[https://apps.apple.com/us/app/daybyday-learn/id6760321939][DayByDay]] ([[https://gitbay.org/krz/daybyday][Source]]) - A children's app to learn various topics through
   voice-enabled learning cards.
 
 I didn't expect anyone to really use these and I don't promote my apps anywhere.

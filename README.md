@@ -3,7 +3,7 @@
 This repository holds the files for [cleberg.net](https://cleberg.net),
 a static-site with blog posts, personal links, and more.
 
-This site uses [orgo](https://github.com/krazywarez/orgo) to build the
+This site uses [orgo](https://gitbay.org/krz/orgo) to build the
 static site.
 
 ## Site Structure
@@ -30,9 +30,9 @@ The main site components are:
 
 The publishing system depends on:
 
-- [orgo](https://github.com/krazywarez/orgo), the static site
+- [orgo](https://gitbay.org/krz/orgo), the static site
   generator, installed with `cargo install --git
-  https://github.com/krazywarez/orgo`.
+  https://gitbay.org/krz/orgo`.
 - `rsync` for deployment.
 - [uv](https://github.com/astral-sh/uv) to run `build.py`.
 
@@ -56,7 +56,7 @@ To obtain a working copy of this repository, execute the following
 commands within a shell environment or Emacs shell interface:
 
 ``` shell
-git clone https://github.com/ccleberg/cleberg.net
+git clone https://gitbay.org/cmc/cleberg.net
 cd cleberg.net
 emacs -nw
 ```

@@ -41,7 +41,7 @@ web server, so I ran a summary to see what the traffic spike looked like.
 
 In the table below, note that Cloudflare counts all traffic, while GoAccess only
 counts traffic flowing through Nginx - which is primarily =cleberg.net=. Services
-under the =*.zerolabs.sh= subdomains don't flow through Nginx.
+under the =*.krz.sh= subdomains don't flow through Nginx.
 
 | Metric                            | Cloudflare               | GoAccess                                     |
 |-----------------------------------+--------------------------+----------------------------------------------|
@@ -62,4 +62,4 @@ under the =*.zerolabs.sh= subdomains don't flow through Nginx.
 
 =Error: Time for hobbies not found=
 
-View the historical [[https://git.sr.ht/~ccleberg/cleberg.net/log/main/item/content/now/index.org][log of changes]] for this page.
+View the historical [[https://gitbay.org/cmc/cleberg.net/log?path=content/now/index.org][log of changes]] for this page.

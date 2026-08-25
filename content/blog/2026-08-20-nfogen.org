@@ -109,7 +109,7 @@ recently. As part of this, I started using NFO files for my git repos under my
 new org and wanted a tool that could help me accelerate the generation of these
 files.
 
-Introducing [[https://github.com/krazywarez/nfogen][nfogen]], a small Python utility that can generate NFO files for you
+Introducing [[https://gitbay.org/krz/nfogen][nfogen]], a small Python utility that can generate NFO files for you
 based on:
 - templates
 - profiles
@@ -231,7 +231,7 @@ nfogen.py -c nfogen.toml -o README.nfo
 ╚═════════════════════════════════════════════════════════════════════════════╝
 #+end_src
 
-For more examples, browse the [[https://github.com/krazywarez/nfogen/tree/main/examples][examples]] directory within the repository.
+For more examples, browse the [[https://gitbay.org/krz/nfogen/tree/main/examples][examples]] directory within the repository.
 
 * Usage
 ** Installation
@@ -239,7 +239,7 @@ For more examples, browse the [[https://github.com/krazywarez/nfogen/tree/main/e
 The fastest installation method is to fetch and use the Python file directly:
 
 #+begin_src shell
-curl -O https://raw.githubusercontent.com/krazywarez/nfogen/main/nfogen.py
+curl -O https://gitbay.org/krz/nfogen/raw/main/nfogen.py
 python3 nfogen.py -i
 #+end_src
 

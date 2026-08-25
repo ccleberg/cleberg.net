@@ -24,7 +24,7 @@ threat model justification.
 | Operating System      | [[https://ubuntu.com][Ubuntu]] + [[https://www.apple.com/os/macos/][macOS]]        | Ubuntu: telemetry off, LTS, stable. macOS: workstation only.                                        |
 | Web Server            | [[https://nginx.org][Nginx]] + [[https://community.torproject.org/onion-services/setup/][Tor]]           | Static file serving. Tor layer for censored-network access.                                         |
 | SSL                   | [[https://certbot.eff.org][Certbot]]               | Free automated TLS. No commercial CA dependency. Ensures Cloudflare can't view unencrypted traffic. |
-| Static Site Generator | [[https://github.com/krazywarez/orgo][orgo]] + [[https://github.com/ccleberg/cleberg.net/blob/main/build.py][build.py]]       | Org-mode source compiles to plaintext HTML. Single binary, no runtime.                              |
+| Static Site Generator | [[https://gitbay.org/krz/orgo][orgo]] + [[https://gitbay.org/cmc/cleberg.net/blob/main/build.py][build.py]]       | Org-mode source compiles to plaintext HTML. Single binary, no runtime.                              |
 | Terminal              | [[https://iterm2.com/][iTerm2]]                | Functional. Inherited from macOS.                                                                   |
 | Shell                 | [[https://www.zsh.org/][Zsh]]                   | Portable, POSIX-adjacent, available on every target OS.                                             |
 | Editor                | [[https://github.com/doomemacs/doomemacs][Doom Emacs]]            | Editor and markup are the same tool. No proprietary format.                                         |
@@ -32,8 +32,8 @@ threat model justification.
 | Image Processing      | [[https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/w/webp.rb][webP (CLI)]]            | CLI-only. No GUI, no cloud, no account.                                                             |
 | Browser(s)            | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net][LibreWolf]]       | Tor for anonymity-critical use. LibreWolf for hardened daily use.                                   |
 | Version Control       | [[https://git-scm.com/][Git (CLI)]]             | Decentralized. The repo is the backup.                                                              |
-| Git Host              | [[https://github.com/ccleberg][GitHub]] + [[https://sr.ht][SourceHut]]    | GitHub is the primary and SourceHut is the mirror.                                                  |
-| CI/CD                 | [[https://github.com/ccleberg/cleberg.net/blob/main/build.py][build.py]]              | A Python script and SSH. No pipeline to depend on.                                                  |
+| Git Host              | [[https://gitbay.org/cmc][GitBay]] + [[https://github.com/ccleberg][GitHub]]       | GitBay is the primary and GitHub is the mirror.                                                     |
+| CI/CD                 | [[https://gitbay.org/cmc/cleberg.net/blob/main/build.py][build.py]]              | A Python script and SSH. No pipeline to depend on.                                                  |
 | Email Host            | [[https://migadu.com][Migadu]]                | Straightforward usage-based provider from Switzerland.                                              |
 | Search Engine         | [[https://docs.searxng.org/][SearXNG]] (self-hosted) | Queries route through my own instance. No third-party search profile.                               |
 | Backups               | N/A                   | Nothing to back up. No user data. Source mirrored via Git.                                          |

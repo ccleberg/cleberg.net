@@ -44,7 +44,7 @@ With all of that out of the way, let's get on with it.
 * Core Changes
 
 Below is a quick audit of the original style sheet and markup, and the elements
-I've removed or added. For more in-depth information, refer to the [[https://github.com/ccleberg/cleberg.net/commit/6eb7d43fc257638583e6a4ffefefc47f730595e4][git diff]].
+I've removed or added. For more in-depth information, refer to the [[https://gitbay.org/cmc/cleberg.net/commit/6eb7d43fc257638583e6a4ffefefc47f730595e4][git diff]].
 
 w*HTML*
 
