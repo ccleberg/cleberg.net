@@ -1,0 +1,173 @@
+# CI for cleberg.net.
+#
+# Every job runs on a plain host under the ci-runner account: no containers,
+# no per-job image, and /usr is read-only. Only $HOME (/var/lib/gitbay-runner)
+# survives between builds, so each pinned tool is installed there once and
+# version-checked on every run. The clone itself is fresh and discarded.
+#
+# lint and build run on every push. link-check runs on its cron.
+
+jobs:
+  # Separate from the build so a lint failure and a broken page are distinct
+  # signals. build.py runs `ruff check --fix` and `ruff format` on development
+  # builds; these are the verifying forms of the same two commands, reading the
+  # same ruff.toml, so CI cannot disagree with a local dev build.
+  lint:
+    steps:
+      # Pinned so a new ruff release adds rules on your schedule, not mid-push.
+      # Changing the version here reinstalls it on the next build.
+      - |
+        set -eu
+        v=0.16.4
+        d=$HOME/tools/ruff
+        if ! "$d/bin/ruff" --version 2>/dev/null | grep -qx "ruff $v"; then
+          rm -rf "$d"
+          python3 -m venv "$d"
+          "$d/bin/pip" install --quiet --disable-pip-version-check "ruff==$v"
+        fi
+        "$d/bin/ruff" --version
+
+      - $HOME/tools/ruff/bin/ruff check --no-fix
+
+      - $HOME/tools/ruff/bin/ruff format --check --diff
+
+  build:
+    steps:
+      # rustup is here only to build orgo; nothing else on the runner uses it.
+      - |
+        set -eu
+        if [ ! -x "$HOME/.cargo/bin/cargo" ]; then
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+            | sh -s -- -y --no-modify-path --profile minimal
+        fi
+        "$HOME/.cargo/bin/cargo" --version
+
+      # orgo is installed from crates.io and takes minutes to compile, so it is
+      # rebuilt only when this version changes. Nothing bumps it automatically:
+      # raise it by hand, which is also how you find out orgo broke the site.
+      - |
+        set -eu
+        v=0.22.0
+        if ! "$HOME/.cargo/bin/orgo" --version 2>/dev/null | grep -qx "orgo $v"; then
+          "$HOME/.cargo/bin/cargo" install orgo --version "$v" --locked
+        fi
+        "$HOME/.cargo/bin/orgo" --version
+        python3 --version
+
+      # build.py deploys with rsync when DEPLOY=true and ENV=prod. This build
+      # passes neither, but "we did not set the variable" is an assumption, not
+      # a guarantee. Shadowing rsync with a failing stub turns it into one: if
+      # the deploy path is ever reached from CI, the step fails loudly instead
+      # of quietly reaching for a production host.
+      #
+      # ENV=prod is deliberate. The development path in build.py runs
+      # `ruff check --fix` and `ruff format`, which rewrite files in place — CI
+      # should verify the tree, not edit it. Production is also the build that
+      # actually ships, including the onion image-URL rewrite. DEPLOY is left
+      # unset, so main() builds and stops.
+      - |
+        set -eu
+        mkdir -p .ci-bin
+        cat > .ci-bin/rsync <<'EOF'
+        #!/bin/sh
+        echo "rsync was invoked from CI — the deploy path must never run here" >&2
+        exit 1
+        EOF
+        chmod +x .ci-bin/rsync
+        PATH="$PWD/.ci-bin:$HOME/.cargo/bin:$PATH" ENV=prod BUILD=true python3 build.py
+
+      - |
+        set -eu
+        pages=$(find .build -name '*.html' | wc -l)
+        echo "built $pages html pages"
+        if [ "$pages" -lt 100 ]; then
+          echo "only $pages pages built; expected the full site" >&2
+          exit 1
+        fi
+
+  # Weekly rather than per-push: most of these links are external, and the web
+  # is flaky enough that a per-push run would fail for reasons no author
+  # controls. A scheduled job does not run on push, so edits here are only
+  # exercised by the next scheduled run.
+  link-check:
+    schedule: "0 7 * * 1"
+    steps:
+      - |
+        set -eu
+        if [ ! -x "$HOME/.cargo/bin/cargo" ]; then
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
+            | sh -s -- -y --no-modify-path --profile minimal
+        fi
+        v=0.22.0
+        if ! "$HOME/.cargo/bin/orgo" --version 2>/dev/null | grep -qx "orgo $v"; then
+          "$HOME/.cargo/bin/cargo" install orgo --version "$v" --locked
+        fi
+        "$HOME/.cargo/bin/orgo" --version
+
+      # Prebuilt release binary, checksum-verified, kept in $HOME between runs.
+      - |
+        set -eu
+        v=0.24.2
+        d=$HOME/tools/lychee
+        if ! "$d/lychee" --version 2>/dev/null | grep -qx "lychee $v"; then
+          rm -rf "$d"
+          mkdir -p "$d"
+          t=lychee-x86_64-unknown-linux-gnu.tar.gz
+          base=https://github.com/lycheeverse/lychee/releases/download/lychee-v$v
+          curl -sSfL -o "$d/$t" "$base/$t"
+          curl -sSfL -o "$d/$t.sha256" "$base/$t.sha256"
+          (cd "$d" && sha256sum -c "$t.sha256")
+          tar -xzf "$d/$t" -C "$d" --strip-components=1
+        fi
+        "$d/lychee" --version
+
+      # orgo directly, not build.py. A production build rewrites img.cleberg.net
+      # URLs to /img/, which is served from a different docroot and would look
+      # like 198 broken links here. The development output keeps them absolute,
+      # so the image host gets checked for real.
+      - $HOME/.cargo/bin/orgo build content -o .build-dev --strict
+
+      # Internal links are the half worth gating on: they are entirely within
+      # this repo, so a failure is always a real defect and always fixable here.
+      - |
+        set -eu
+        st=0
+        "$HOME/tools/lychee/lychee" \
+          --offline \
+          --root-dir "$PWD/.build-dev" \
+          --include-verbatim \
+          --no-progress \
+          --format markdown \
+          --output internal.md \
+          '.build-dev/**/*.html' || st=$?
+        cat internal.md 2>/dev/null || echo "no report"
+        exit $st
+
+      # External links are reported, not gated. A dead third-party link is worth
+      # knowing about, but it is not a reason to block the site. Swallowing the
+      # exit status also swallows lychee refusing to start at all, which would
+      # report success while checking nothing, so assert the report has a
+      # summary table in it.
+      - |
+        set -eu
+        st=0
+        "$HOME/tools/lychee/lychee" \
+          --root-dir "$PWD/.build-dev" \
+          --exclude '\.onion' \
+          --exclude '^https?://(localhost|127\.0\.0\.1|0\.0\.0\.0)' \
+          --exclude '(\{|%7B|client_id=$)' \
+          --max-concurrency 8 \
+          --max-retries 2 \
+          --timeout 20 \
+          --accept 200,206,301,302,303,307,308,401,403,429 \
+          --include-verbatim \
+          --no-progress \
+          --format markdown \
+          --output external.md \
+          '.build-dev/**/*.html' || st=$?
+        cat external.md 2>/dev/null || echo "no report"
+        if ! grep -q "Total" external.md 2>/dev/null; then
+          echo "lychee produced no summary — it did not run" >&2
+          exit 1
+        fi
+        echo "external check exited $st; not gating"
