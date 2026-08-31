@@ -45,13 +45,20 @@ jobs:
       # orgo is installed from crates.io and takes minutes to compile, so it is
       # rebuilt only when this version changes. Nothing bumps it automatically:
       # raise it by hand, which is also how you find out orgo broke the site.
+      #
+      # --root pins where it lands, like ruff and lychee below. Without it cargo
+      # installs under whatever cargo home the runner sets, which is not $HOME:
+      # the binary goes somewhere this file does not name, and the next run's
+      # `cargo install` declines to repeat itself because its metadata already
+      # records the version as installed.
       - |
         set -eu
         v=0.22.0
-        if ! "$HOME/.cargo/bin/orgo" --version 2>/dev/null | grep -qx "orgo $v"; then
-          "$HOME/.cargo/bin/cargo" install orgo --version "$v" --locked
+        if ! "$HOME/tools/orgo/bin/orgo" --version 2>/dev/null | grep -qx "orgo $v"; then
+          "$HOME/.cargo/bin/cargo" install orgo --version "$v" --locked \
+            --root "$HOME/tools/orgo"
         fi
-        "$HOME/.cargo/bin/orgo" --version
+        "$HOME/tools/orgo/bin/orgo" --version
         python3 --version
 
       # build.py deploys with rsync when DEPLOY=true and ENV=prod. This build
@@ -74,7 +81,7 @@ jobs:
         exit 1
         EOF
         chmod +x .ci-bin/rsync
-        PATH="$PWD/.ci-bin:$HOME/.cargo/bin:$PATH" ENV=prod BUILD=true python3 build.py
+        PATH="$PWD/.ci-bin:$HOME/tools/orgo/bin:$PATH" ENV=prod BUILD=true python3 build.py
 
       - |
         set -eu
@@ -99,10 +106,11 @@ jobs:
             | sh -s -- -y --no-modify-path --profile minimal
         fi
         v=0.22.0
-        if ! "$HOME/.cargo/bin/orgo" --version 2>/dev/null | grep -qx "orgo $v"; then
-          "$HOME/.cargo/bin/cargo" install orgo --version "$v" --locked
+        if ! "$HOME/tools/orgo/bin/orgo" --version 2>/dev/null | grep -qx "orgo $v"; then
+          "$HOME/.cargo/bin/cargo" install orgo --version "$v" --locked \
+            --root "$HOME/tools/orgo"
         fi
-        "$HOME/.cargo/bin/orgo" --version
+        "$HOME/tools/orgo/bin/orgo" --version
 
       # Prebuilt release binary, checksum-verified, kept in $HOME between runs.
       - |
@@ -125,7 +133,7 @@ jobs:
       # URLs to /img/, which is served from a different docroot and would look
       # like 198 broken links here. The development output keeps them absolute,
       # so the image host gets checked for real.
-      - $HOME/.cargo/bin/orgo build content -o .build-dev --strict
+      - $HOME/tools/orgo/bin/orgo build content -o .build-dev --strict
 
       # Internal links are the half worth gating on: they are entirely within
       # this repo, so a failure is always a real defect and always fixable here.

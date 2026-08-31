@@ -66,8 +66,9 @@ For users employing Doom Emacs, open any repository Org file using
 
 ## Building and Publishing the Site
 
-The `build.py` script wraps the build: it runs orgo, and then either
-deploys the result or serves it locally.
+The `build.py` script wraps the build: it runs orgo, rewrites the footer's
+orgo version to match the orgo that ran, and then either deploys the result
+or serves it locally.
 
 Environment variables control what it does, and all default to off:
 

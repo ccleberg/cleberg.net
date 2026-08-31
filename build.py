@@ -4,6 +4,7 @@ This script automates the process of building and deploying the website.
 It handles tasks such as:
 
 - Running orgo to generate site content.
+- Rewriting the footer's orgo version to match the orgo that built the site.
 - Rewriting image URLs for the onion service (production only).
 - Optionally deploying the built site to a remote server.
 - Starting a local development server for previewing changes.
@@ -75,6 +76,63 @@ def rewrite_img_urls(build_dir=".build"):
             count += n
             html.write_text(new_text, encoding="utf-8")
     print(f"Rewrote {count} img.cleberg.net references to /img/")
+
+
+# The footer's "Powered by orgo <version>" note. Matching the whole phrase rewrites a
+# page carrying an old version as readily as one still carrying the template's
+# placeholder, and leaves prose that ends a paragraph with a link to orgo alone.
+ORGO_NOTE = re.compile(
+    r'(Powered by <a href="https://gitbay\.org/krz/orgo">orgo</a> )[^<]*(</p>)'
+)
+
+
+def orgo_version():
+    """The version reported by the orgo on PATH, e.g. "0.22.0"."""
+    result = subprocess.run(
+        ["orgo", "--version"], capture_output=True, text=True, check=False
+    )
+    if result.returncode != 0:
+        print("Could not read the orgo version:", file=sys.stderr)
+        print(result.stderr, file=sys.stderr)
+        sys.exit(1)
+    # `orgo --version` prints "orgo X.Y.Z". Anything else means the output format
+    # changed, and guessing at it would ship a wrong version to every page.
+    parts = result.stdout.split()
+    if len(parts) != 2 or parts[0] != "orgo":
+        print(f"Unexpected `orgo --version` output: {result.stdout!r}", file=sys.stderr)
+        sys.exit(1)
+    return parts[1]
+
+
+def rewrite_orgo_version(build_dir):
+    """Point the footer's orgo version at the orgo that just built the site.
+
+    Runs over every page rather than only the re-rendered ones, because the build cache
+    keys on a cache *format* version and not on orgo's release version: after a version
+    bump that leaves the format alone, the pages carried over from the previous build
+    would otherwise keep printing the old one.
+
+    The whole point of this is that the note cannot go stale, so a footer that no longer
+    matches is a failure and not a no-op — matching nothing anywhere means the note was
+    removed or its markup changed, and a silent pass would ship the template's
+    placeholder to every page.
+    """
+    version = orgo_version()
+    count = 0
+    for html in Path(build_dir).rglob("*.html"):
+        text = html.read_text(encoding="utf-8")
+        new_text, n = ORGO_NOTE.subn(rf"\g<1>{version}\g<2>", text)
+        if n and new_text != text:
+            html.write_text(new_text, encoding="utf-8")
+        count += n
+    if count == 0:
+        print(
+            "No 'Powered by orgo' note found in the build — the footer in "
+            "content/templates/base.html no longer matches ORGO_NOTE",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+    print(f"Set the footer orgo version to {version} on {count} pages")
 
 
 def run_orgo_build(build_dir):
@@ -164,6 +222,7 @@ def main():
 
     if os.environ.get("BUILD", "").casefold() == "true":
         run_orgo_build(build_dir)
+        rewrite_orgo_version(build_dir)
         # The onion needs same-origin images; dev previews keep the absolute URLs.
         # Runs over every page, not just the re-rendered ones, so a page carried over
         # from an earlier build is rewritten too.
