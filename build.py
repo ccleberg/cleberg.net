@@ -178,7 +178,10 @@ def deploy_to_server(build_dir, server, dry_run=False):
     print(f"{'Would deploy' if dry_run else 'Deploying'} {build_dir}/ → {remote_path}")
     cmd = [
         "rsync",
-        "-r",
+        "-rt",
+        # -t, or rsync gives every transferred file the time it arrived, no two
+        # deploys agree on a timestamp, and the next run re-sends the whole site
+        # because mtimes never match. With it, only what changed goes over.
         "--delete-before",
         # The build cache lives in the output directory because it describes it, but it
         # is not part of the site. Excluding it also stops --delete removing it locally.
