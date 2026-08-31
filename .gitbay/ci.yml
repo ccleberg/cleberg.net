@@ -53,7 +53,7 @@ jobs:
       # records the version as installed.
       - |
         set -eu
-        v=0.22.0
+        v=0.24.0
         if ! "$HOME/tools/orgo/bin/orgo" --version 2>/dev/null | grep -qx "orgo $v"; then
           "$HOME/.cargo/bin/cargo" install orgo --version "$v" --locked \
             --root "$HOME/tools/orgo"
@@ -105,7 +105,7 @@ jobs:
           curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs \
             | sh -s -- -y --no-modify-path --profile minimal
         fi
-        v=0.22.0
+        v=0.24.0
         if ! "$HOME/tools/orgo/bin/orgo" --version 2>/dev/null | grep -qx "orgo $v"; then
           "$HOME/.cargo/bin/cargo" install orgo --version "$v" --locked \
             --root "$HOME/tools/orgo"
