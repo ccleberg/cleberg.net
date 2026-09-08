@@ -1,7 +1,7 @@
 #+title: now
 #+slug: index
 #+options: toc:nil
-#+date: [2026-07-04 Sat 13:27:08]
+#+date: [2026-09-08 Tue 02:33:00]
 #+description: Read about what I'm doing now.
 
 This is a [[https://nownownow.com/about][/now]] page.
@@ -17,46 +17,26 @@ hobbies as much as possible.
 If you're actually interested, email or message me to talk about media!/
 
 - Playing some games:
-  - Battlefield 6
   - Rocket League
-  - Runescape
-  - Saints Row IV
+  - The Sims 4
 - Watching some shows:
-  - Archer (2009)
-  - Breaking Bad (2008)
-  - The Penguin (2024)
+  - Cheers (1982)
+  - Futurama (1999)
 - Watched some movies:
-  - Batman Begins (2005)
+  - The Break Up (2006)
+  - Jackass: Best and Last (2026)
+  - Office Space (1999)
 
 * Tech
 
-Two of my blog posts were recently featured on Hacker News, lobste.rs, Financial
-Times roundup, Gemini BBS, and more places around the web.
-
-I gathered some metrics to see how my site handled it. Anecdotally, it didn't
-affect my home internet at all, regardless of the traffic.
-
-However, I have anonymous metrics visible in both Cloudflare and GoAccess on the
-web server, so I ran a summary to see what the traffic spike looked like.
-
-In the table below, note that Cloudflare counts all traffic, while GoAccess only
-counts traffic flowing through Nginx - which is primarily =cleberg.net=. Services
-under the =*.krz.sh= subdomains don't flow through Nginx.
-
-| Metric                            | Cloudflare               | GoAccess                                     |
-|-----------------------------------+--------------------------+----------------------------------------------|
-| Coverage window                   | 7 days, Jun 27 to Jul 4  | May 12 to Jul 4                              |
-| Unique visitors                   | 65.81k                   | 23,069                                       |
-| Total requests / hits             | 260.48k                  | 489,386 valid requests                       |
-| Failed requests                   | Not shown                | 1,084                                        |
-| Total data served / bandwidth     | 5 GB                     | 4.35 GiB                                     |
-| Data cached                       | 909 MB                   | N/A                                          |
-| Percent cached                    | 19.7%                    | N/A                                          |
-| Peak visible spike                | ~45k-50k unique visitors | 6,853 unique visitors on Jul 1               |
-| Peak requests                     | ~150k requests           | 114,974 hits on Jul 1                        |
-| Main spike page                   | Not shown in screenshot  | /blog/internet.html, 68,968 hits, 6,772 vis. |
-| Largest visible external referrer | Not shown in screenshot  | news.ycombinator.com, 22,078 hits, 938 vis.  |
-| RSS/feed impact                   | Not shown in screenshot  | /feed.xml, 26,395 hits, 1.82 GiB bandwidth   |
+I've been working on my new git forge, [[https://gitbay.org][gitbay]], and various other services:
+- [[https://gitbay.org/krz/gitbay-ios][gitbay-ios]]: an ios companion for gitbay
+- [[https://gitbay.org/krz/ambient-companions][ambient-companions]]: terminal and macos menu bar companions (pets) that stay
+  alive by your computer usage
+- [[https://gitbay.org/krz/omaha-metro-blotter][omaha-metro-blotter]]: upgraded this from a crime map to a flock and police
+  monitoring map
+- =ssh-text-adventure=: an upcoming game I'm developing where anyone can ssh into
+  my machine and play text adventures that live on my server
 
 * Hobbies
 

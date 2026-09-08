@@ -32,7 +32,7 @@ threat model justification.
 | Image Processing      | [[https://github.com/Homebrew/homebrew-core/blob/HEAD/Formula/w/webp.rb][webP (CLI)]]            | CLI-only. No GUI, no cloud, no account.                                                             |
 | Browser(s)            | [[https://www.torproject.org/][Tor]] + [[https://librewolf.net][LibreWolf]]       | Tor for anonymity-critical use. LibreWolf for hardened daily use.                                   |
 | Version Control       | [[https://git-scm.com/][Git (CLI)]]             | Decentralized. The repo is the backup.                                                              |
-| Git Host              | [[https://gitbay.org/cmc][GitBay]] + [[https://github.com/ccleberg][GitHub]]       | GitBay is the primary and GitHub is the mirror.                                                     |
+| Git Host              | [[https://gitbay.org/cmc][gitbay]] + [[https://github.com/ccleberg][GitHub]]       | gitbay is the primary and GitHub is the mirror.                                                     |
 | CI/CD                 | [[https://gitbay.org/cmc/cleberg.net/blob/main/build.py][build.py]]              | A Python script and SSH. No pipeline to depend on.                                                  |
 | Email Host            | [[https://migadu.com][Migadu]]                | Straightforward usage-based provider from Switzerland.                                              |
 | Search Engine         | [[https://docs.searxng.org/][SearXNG]] (self-hosted) | Queries route through my own instance. No third-party search profile.                               |
