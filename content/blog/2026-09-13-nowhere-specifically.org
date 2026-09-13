@@ -1,0 +1,169 @@
+#+date: [2026-09-13 Sun 00:37:10]
+#+title: Nowhere, Specifically
+#+description: Liminal spaces confirm one thing: you're not supposed to be here...
+#+slug: nowhere-specifically
+#+filetags: :personal:
+
+* Overview
+
+What is a [[https://en.wikipedia.org/wiki/Liminal_space][liminal space]]?
+
+If you look online, you'll find hallways, empty pools, or malls with the lights
+off. You scroll through and experience the same eerie feeling each time: "This
+feels off. It feels like something is wrong, but I can't pin it down."
+
+The feeling is real and the good news is that you're not alone. There's a real
+reason these places do that to you, and it turns out the word we all use for
+them is describing something else entirely. I've felt a strong connection with
+liminal spaces my whole life and I wanted to sit down here and write about it
+for a while, similar to [[https://cleberg.net/blog/the-night-feeling.html][The Night Feeling]], which I wrote recently.
+
+* Where It Happens
+
+A hotel hallway at 3 AM.
+
+A bus station lounge between connections.
+
+A parking ramp stairwell, lit by a lone sodium lamp, flooded with yellow light.
+
+#+caption: An empty hallway after hours
+#+attr_html: :alt Empty interior corridor at night with a brick wall on the left, recessed ceiling lights, a speckled floor, and a single wooden door at the far end
+[[https://img.cleberg.net/blog/20260913-nowhere-specifically/liminal.webp]]
+
+Imagine yourself standing in one of these locations. Look around and picture the
+carpet, the silence or the sounds of strangers somewhere in the distance, the
+light and shadows bouncing off the walls. Nothing is happening. Nothing was ever
+supposed to happen here; the room was built for you to walk through it, and yet
+you stopped.
+
+I often find myself standing on an empty street, meant to be bustling with
+traffic, looking around at the pure absence as I exist in that space by myself.
+The lamps shine down, flickering and glowing yellow. The bugs chirp and make
+sounds throughout, letting you know that there are hundreds or thousands of
+creatures around you, but it feels empty nonetheless.
+
+* The Feeling
+
+It's not fear, or loneliness, or nostalgia. You're simply somewhere you have no
+reason to be, at a time nobody intended for you to be there. Or you're in a
+place you'll never think of again. Or a place where you know no one has ever
+stood still.
+
+It's strange, because these are the same conditions I wrote about loving at
+night: empty space, no one asking anything of me. At night that emptiness felt
+like permission to be alone in my own space, but here it feels like a mistake.
+
+#+caption: An empty parking deck under the University of Melbourne. Photo by [[https://commons.wikimedia.org/wiki/File:Melbourne_Uni_underground_carpark_interior.jpg][Canley]], [[https://creativecommons.org/licenses/by-sa/4.0/][CC BY-SA 4.0]]
+#+attr_html: :alt Empty underground parking deck with rows of flared concrete columns, painted bays, and no cars in the foreground
+[[https://img.cleberg.net/blog/20260913-nowhere-specifically/garage.webp]]
+
+* The Effect
+
+These spaces are built to move people through them, accounting for the nonstop
+movement of crowds. Take the crowds out of the picture and suddenly the room is
+useless. The airport terminal without people is a room without a purpose. When
+you stumble upon one of these rooms, this is where you encounter that uneasy
+feeling.
+
+A big factor in this uneasy feeling is that they're built for large groups of
+people. Mall hallways are meant to support crowds of people moving
+quickly in all directions, popping in and out of shops. When you find them
+empty, or with a single person in them, the spaces feel enormous.
+
+#+caption: An empty mall concourse at night. Photo by [[https://commons.wikimedia.org/wiki/File:Interior_of_City-Center_empty_of_people_on_a_night_in_January_2025.jpg][JIP]], [[https://creativecommons.org/licenses/by-sa/4.0/][CC BY-SA 4.0]]
+#+attr_html: :alt Empty shopping mall concourse at night, lit shop windows along one side, a juice bar along the other, and no people anywhere in the frame
+[[https://img.cleberg.net/blog/20260913-nowhere-specifically/mall.webp]]
+
+These places aren't built to belong anywhere. A hotel hallway in one city looks
+like a hotel hallway in any other city, because neither one was meant to tell
+you where you are. The anthropologist Marc Augé called these [[https://en.wikipedia.org/wiki/Non-place][non-places]]:
+motorways, hotel rooms, airports, malls. A real place gives you an identity and
+a reason to be there. A non-place gives you neither. When you stop in one,
+there's nothing in the room to tell you where you are, and the uneasy feeling
+grows.
+
+#+caption: A hotel corridor in Butte, Montana. Photo by [[https://commons.wikimedia.org/wiki/File:Finlen_Hotel_hallway,_Butte_America,_January_2020_01.jpg][Montanabw]], [[https://creativecommons.org/licenses/by-sa/4.0/][CC BY-SA 4.0]]
+#+attr_html: :alt Empty hotel corridor with dark patterned carpet, pale green walls, globe pendant lights, and doorways receding into the distance
+[[https://img.cleberg.net/blog/20260913-nowhere-specifically/hotel.webp]]
+
+Part of the strangeness is that you recognize these rooms without ever having
+been in them. The drop ceilings, fluorescent lights, and commercial carpet
+are the same in thousands of buildings, so any one of them looks like all the
+others you've walked through. You end up with a place you can recognize but
+never identify. This is also how dreams can work, which is why people so often
+describe these images as dreamlike.
+
+The missing people are the focal point of the experience. People have described
+these spaces as an uncanny valley of architecture: familiar enough to read as
+normal, empty enough to read as wrong. A room built for hundreds with nobody in
+it suggests that something happened to everyone else, or that you're the only
+one left. Nothing in the room says that, but you feel it anyway.
+
+Most of these interiors come from the 80s, 90s, and early 2000s, which means
+they're the childhood environments of the people making and sharing the images.
+The mall, the school hallway, the motel pool are all places you spent time in
+before you had any say about where you went. Then COVID emptied real public
+space for everyone at once, and the whole thing stopped being a niche
+interest.
+
+#+caption: A school corridor with nobody in it. Photo by [[https://commons.wikimedia.org/wiki/File:Lorain_High_School_hallway.jpg][Matt Dempsey]], [[https://creativecommons.org/licenses/by-sa/2.0/][CC BY-SA 2.0]]
+#+attr_html: :alt Empty school corridor with glazed tile walls, fluorescent ceiling lights, a polished terrazzo floor, and an exit sign at the far end
+[[https://img.cleberg.net/blog/20260913-nowhere-specifically/school.webp]]
+
+* The Backrooms
+
+The best known version of all this is the [[https://en.wikipedia.org/wiki/The_Backrooms][Backrooms]]. In May 2019, someone on
+4chan's paranormal board asked for images that "just feel off," and one of the
+replies was a photo of a room with pale yellow walls, fluorescent lights, and a
+tilted camera angle. Another user wrote a caption about noclipping out of bounds
+in real life and ending up there. That was the whole thing, and it worked: a
+room built for people, with no people, that you can recognize and can't place.
+
+#+caption: The original backrooms photo, released into the public domain by Bob Mazza ([[https://commons.wikimedia.org/wiki/File:HobbyTown_USA_Oshkosh_interior_under_construction_2002_%28The_Backrooms%29.jpg][CC0]])
+#+attr_html: :alt Empty second-floor room with pale yellow patterned wallpaper, tan carpet, and rows of fluorescent lights, photographed during renovation
+[[https://img.cleberg.net/blog/20260913-nowhere-specifically/backrooms.webp]]
+
+From there, it has grown exponentially. People added levels, then rules, then
+monsters. Kane Parsons' YouTube shorts in early 2022 turned it into a full
+horror franchise and took it mainstream.
+
+Something got lost in that. The original photo is unsettling because nothing is
+there. Once you put a creature in the room, the emptiness isn't doing the work
+anymore; the monster is. It becomes a normal horror story that happens to be set
+in a hallway, and the specific feeling that made anyone care about the photo in
+the first place is gone.
+
+* Liminal Is the Wrong Word
+
+That brings up the word itself. [[https://en.wikipedia.org/wiki/Liminality][Liminal]] comes from the Latin =limen=, meaning
+threshold. The anthropologist [[https://en.wikipedia.org/wiki/Arnold_van_Gennep][Arnold van Gennep]] used it in 1909 to describe the
+middle stage of a rite of passage: you're separated from your old role, you
+spend time in between, and then you're brought back in with a new one. [[https://en.wikipedia.org/wiki/Victor_Turner][Victor
+Turner]] picked the idea up in the 1960s and it spread from there.
+
+The important part is that liminality describes a person, not a room. It's a
+state you're in while you're changing from one thing into another, and it ends
+when the change is done. A graduation is liminal. A funeral is liminal. A
+hallway isn't.
+
+So the spaces in these photos aren't liminal. They're non-places, and the
+feeling you get standing in one is the absence of the crowd they were built for.
+Calling that liminal borrows a word for something that was never about rooms at
+all.
+
+* Oshkosh, Wisconsin
+
+In 2024, people finally [[https://boingboing.net/2024/05/30/original-backrooms-photo-of-yellowing-office-dungeon-finally-identified-as-oshkosh-hobbytown.html][tracked down]] where the original Backrooms photo was
+taken. It's the second floor of [[https://pbswisconsin.org/article/how-a-furniture-store-in-oshkosh-became-a-portal-to-another-dimension/][a building on Oregon Street]]. That address held
+Rohner's Furniture until 1994, and HobbyTown bought it in 2002 and started
+remodeling. Someone photographed the empty upstairs that June and posted it to
+the store's renovation blog the following year.
+
+That's it. The most reproduced image of dread on the internet is a hobby shop's
+construction photo. Nobody was trapped there and nothing was wrong with the
+room. It was a store that wasn't finished yet. The building is a hobby shop
+again today, and the spot where the photo was taken is now a carpet racetrack
+for radio controlled cars.
+
+Nothing in that photo was between one thing and another except the store. The
+room was never liminal. You were.
