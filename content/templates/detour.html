@@ -1,0 +1,42 @@
+{# The detour series index at /detour/.
+
+   Receives every blog post and filters to the ones tagged `detour`, because a
+   collection selects by directory and these posts live in blog/ with everything else —
+   they belong in the blog index and the feed like any other post.
+
+   Number and name come from the title (`detour #001: Name`). Location and rating come
+   from `#+LOCATION:` and `#+RATING:`, which the post also states in its own metadata
+   block; a listing cannot read prose, so the two structured fields are repeated as
+   keywords.
+
+   The rating prints stars and the "N/5" text both. Stars alone would reach a screen
+   reader as a run of unexplained symbols. #}
+{% extends "base.html" %}
+{% block main %}
+<h1>{{ page.title }}</h1>
+<p>Museums, roadside attractions, public art, and local landmarks worth leaving
+the highway for. One post per place.</p>
+
+<h2>Rating scale</h2>
+<dl>
+<dt>★☆☆☆☆ (1/5)</dt><dd>Only if you're already in the parking lot.</dd>
+<dt>★★☆☆☆ (2/5)</dt><dd>Worth a stop if it's on your route.</dd>
+<dt>★★★☆☆ (3/5)</dt><dd>Worth a short detour, under 30 minutes.</dd>
+<dt>★★★★☆ (4/5)</dt><dd>Worth planning an afternoon around.</dd>
+<dt>★★★★★ (5/5)</dt><dd>Worth a dedicated road trip.</dd>
+</dl>
+
+<h2>The list</h2>
+<ul class="detour-list">
+{%- for entry in pages if "detour" in entry.tags %}
+<li>
+<a href="{{ root }}{{ entry.url }}">{{ entry.title }}</a>
+<span class="detour-meta">
+{%- if entry.keywords.location %}{{ entry.keywords.location }}{% endif %}
+{%- if entry.keywords.location and entry.keywords.rating %} · {% endif %}
+{%- if entry.keywords.rating %}{{ "★" * entry.keywords.rating | int }}{{ "☆" * (5 - entry.keywords.rating | int) }} ({{ entry.keywords.rating }}/5){% endif %}
+</span>
+</li>
+{%- endfor %}
+</ul>
+{% endblock %}

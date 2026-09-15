@@ -1,0 +1,29 @@
+# Starting point for a detour post. Copy to content/blog/YYYY-MM-DD-detour-NNN-slug.org
+# and fill in. This directory is not published, so the file is not a page.
+#
+# NNN is zero-padded and sequential. #+LOCATION: and #+RATING: are what the series index
+# at /detour/ reads; the block below is what the reader sees. Keep them in agreement.
+#
+# Ratings: 1 only if you're already in the parking lot, 2 worth a stop if it's on your
+# route, 3 worth a short detour under 30 minutes, 4 worth planning an afternoon around,
+# 5 worth a dedicated road trip.
+
+#+date: [YYYY-MM-DD Day 00:00:00]
+#+title: detour #NNN: NAME
+#+description:
+#+slug: detour-NNN-SLUG
+#+filetags: :detour:
+#+location: CITY, ST
+#+rating: N
+
+#+begin_detour
+- Location :: CITY, ST · [[OSM_URL][map]]
+- Admission :: PRICES (as of YYYY-MM)
+- Hours :: SUMMARY; check the [[OFFICIAL_URL][official site]]
+- Visited :: YYYY-MM
+- Worth the drive :: ★★★★☆ (N/5)
+#+end_detour
+
+* Overview
+
+* Going

@@ -18,6 +18,15 @@ pre { overflow: auto; white-space: pre; }
 blockquote p { margin: 0; margin-bottom: 1rem; }
 blockquote p:last-child { margin-bottom: 0; }
 code { color: #942192; }
+/* The metadata block on a detour post. currentColor for the rule, so the dark scheme
+   below needs no override. */
+.detour { border-left: 3px solid currentColor; padding: .5rem 1rem; margin: 1rem 0 2rem; font-size: .95em; }
+.detour dl { margin: 0; }
+.detour dt { font-weight: bold; }
+.detour dd { margin: 0 0 .4rem 0; }
+.detour-list { padding-inline-start: 0; }
+.detour-list li { list-style: none; margin-bottom: .75rem; }
+.detour-meta { display: block; font-size: .95em; }
 /* Blocks are coloured by syntax.css, so this is only the fallback for the tokens it
    leaves unclassified: the highlight theme's own foreground rather than inline code's. */
 pre code { color: #323232; }
