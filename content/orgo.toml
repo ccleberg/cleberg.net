@@ -25,7 +25,7 @@ base_url = "https://cleberg.net"
 # listed here gets appended after everything that is — which is why the tags collection
 # below does not set `nav = true`: the live nav has no Tags entry.
 mode = "explicit"
-pages = ["blog/index.html", "garden/index.html", "detour/index.html", "salary/index.org"]
+pages = ["blog/index.html", "garden/index.html", "salary/index.org"]
 
 [build]
 # theme/static/ is the site's static root, published at /. orgo reads it from here
@@ -100,6 +100,9 @@ nav = true
 # The detour series index. `source` is blog rather than a directory of its own, because
 # these are ordinary blog posts — they belong in the blog index and the feed — and a
 # collection cannot select by tag. detour.html does that filtering itself.
+#
+# Deliberately out of the nav: `nav = true` is absent and [nav] does not list it, which
+# are both required to keep it out. Posts link to it; the nav does not.
 [[collections]]
 source = "blog"
 output = "detour/index.html"
@@ -107,7 +110,6 @@ template = "detour.html"
 title = "detour"
 sort = "date"
 order = "asc"
-nav = true
 
 # One page per tag, plus the index the live site already has at /tags/. `source` is empty
 # so it groups across the whole site rather than one section, which is how #+FILETAGS: is
