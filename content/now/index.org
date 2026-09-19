@@ -1,15 +1,19 @@
 #+title: now
 #+slug: index
 #+options: toc:nil
-#+date: [2026-09-08 Tue 02:33:00]
+#+date: [2026-09-19 Sat 12:31:00]
 #+description: Read about what I'm doing now.
 
 This is a [[https://nownownow.com/about][/now]] page.
 
-* Work
+* Tech
 
-I'm on PTO for 3 weeks here and will be trying to focus my time and energy on
-hobbies as much as possible.
+I've been working on my new git forge, [[https://gitbay.org][gitbay]], and various other services:
+- [[https://gitbay.org/krz/gitbay-ios][gitbay-ios]]: an ios companion for gitbay
+- [[https://gitbay.org/krz/hypo][hypo]]: a static photo gallery system
+- [[https://gitbay.org/krz/skunky-art][skunky-art]]: the fork I maintain of SkunkyArt
+
+View the historical [[https://gitbay.org/cmc/cleberg.net/log?path=content/now/index.org][log of changes]] for this page.
 
 * Media
 
@@ -18,8 +22,8 @@ If you're actually interested, email or message me to talk about media!/
 
 - Playing some games:
   - Rocket League
-  - The Sims 4
 - Watching some shows:
+  - Archer (2009)
   - Cheers (1982)
   - Futurama (1999)
 - Watched some movies:
@@ -27,19 +31,6 @@ If you're actually interested, email or message me to talk about media!/
   - Jackass: Best and Last (2026)
   - Office Space (1999)
 
-* Tech
+* Work
 
-I've been working on my new git forge, [[https://gitbay.org][gitbay]], and various other services:
-- [[https://gitbay.org/krz/gitbay-ios][gitbay-ios]]: an ios companion for gitbay
-- [[https://gitbay.org/krz/ambient-companions][ambient-companions]]: terminal and macos menu bar companions (pets) that stay
-  alive by your computer usage
-- [[https://gitbay.org/krz/omaha-metro-blotter][omaha-metro-blotter]]: upgraded this from a crime map to a flock and police
-  monitoring map
-- =ssh-text-adventure=: an upcoming game I'm developing where anyone can ssh into
-  my machine and play text adventures that live on my server
-
-* Hobbies
-
-=Error: Time for hobbies not found=
-
-View the historical [[https://gitbay.org/cmc/cleberg.net/log?path=content/now/index.org][log of changes]] for this page.
+Busy season, yet again.
