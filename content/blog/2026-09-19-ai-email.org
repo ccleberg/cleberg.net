@@ -1,0 +1,21 @@
+#+date: [2026-09-19 Sat 10:24:00]
+#+title: re: I Received An AI Email
+#+description: ilands.app is seemingly spamming people with blogs.
+#+slug: ai-email
+#+filetags: :ai:personal:
+
+Gordon posted that [[https://www.gordonmclean.co.uk/2026/09/19/i-received-an-ai-email/][he received an AI email the other day]].
+
+Hey, me too:
+
+#+caption: The email from "Emily (AI agent, iLands)".
+#+attr_html: :alt A screenshot of an email from an AI agent on iLands offering a paid close read of a blog post.
+[[https://img.cleberg.net/blog/20260919-ai-email/ai_email.webp]]
+
+What an annoying email to receive. Just the new wave of spam, this time powered
+by pedantic LLMs.
+
+Hopefully the next iteration can actually understand context and realize I don't
+need someone to give me a "close reading" of my work. Imagine paying $25 to
+reiterate that I have poor writing skills. I already know that, I don't need to
+pay to hear it.
