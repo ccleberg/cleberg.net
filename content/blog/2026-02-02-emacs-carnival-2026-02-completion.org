@@ -4,6 +4,11 @@
 #+slug: emacs-carnival-2026-02-completion
 #+filetags:    :emacs:personal:
 
+#+begin_quote
+Want to participate in the Emacs Carnival or read more posts? Visit the main
+[[https://www.emacswiki.org/emacs/Carnival][Carnival]] page on the Emacs Wiki to learn more.
+#+end_quote
+
 I'm having a great time with the Emacs Carnival, as it has inspired me to write
 two posts in such a short time. It's been a much-needed inspiration to write
 during my busy season at work.
@@ -156,8 +161,3 @@ want to dive into deeper in the future:
 
 Completion and expansion utilities are phenomenal and have been one of the
 larger tools in my development and writing.
-
-#+begin_quote
-Want to participate in the Emacs Carnival or read more posts? Visit the main
-[[https://www.emacswiki.org/emacs/Carnival][Carnival]] page on the Emacs Wiki to learn more.
-#+end_quote

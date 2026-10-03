@@ -4,6 +4,11 @@
 #+slug: indiweb-carnival-2026-02-intersecting-interests
 #+filetags:    :personal:web:
 
+#+begin_quote
+Want to participate in the IndieWeb Carnival or read more posts? Visit the main
+[[https://indieweb.org/IndieWeb_Carnival][Carnival]] page to learn more.
+#+end_quote
+
 I thought about this topic for a long time today before starting to write this
 post, as I don't think of myself as someone with intersecting interests. I
 generally lean pretty hard into interests and in my mind, they're all
