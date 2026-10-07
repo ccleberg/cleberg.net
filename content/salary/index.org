@@ -21,6 +21,7 @@ screens. For the full dataset with all fields, you can view the [[https://cleber
 
 | Title                       | Department                   | Company   | Year | Salary   |
 |-----------------------------+------------------------------+-----------+------+----------|
+| Manager                     | Technology Assurance - Audit | [[https://kpmg.com/us/][KPMG]]      | 2026 | $158,000 |
 | Manager                     | Technology Assurance - Audit | [[https://kpmg.com/us/][KPMG]]      | 2025 | $147,600 |
 | Manager                     | Technology Assurance - Audit | [[https://kpmg.com/us/][KPMG]]      | 2024 | $141,200 |
 | Senior                      | Technology Assurance - Audit | [[https://kpmg.com/us/][KPMG]]      | 2023 | $116,700 |
@@ -36,9 +37,17 @@ screens. For the full dataset with all fields, you can view the [[https://cleber
 
 ** Salary Visualization
 
-#+caption: Salary Visualization
-#+attr_html: :alt A visualization of salary data over time from the table above.
-[[https://img.cleberg.net/blog/salary/salary.webp]]
+#+begin_export html
+<figure>
+<a href="https://img.cleberg.net/blog/salary/salary.webp">
+<picture>
+<source srcset="https://img.cleberg.net/blog/salary/salary-dark.webp" media="(prefers-color-scheme: dark)">
+<img src="https://img.cleberg.net/blog/salary/salary.webp" alt="Step chart of annualized pay by job from 2017 to 2027. Each job is a horizontal segment colored by company and labeled with its pay and title. Hourly jobs are dotted and show the hourly rate. The area after today is shaded.">
+</picture>
+</a>
+<figcaption>Salary visualization. Click for full size.</figcaption>
+</figure>
+#+end_export
 
 [[https://xeiaso.net/salary-transparency/][Xe Iaso]] put it better than I would:
 
