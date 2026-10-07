@@ -43,7 +43,7 @@ BRAND = {
     "KPMG": "#00338d",
 }
 PATTERN = {"salaried": "", "hourly": "/"}
-BAR_HEIGHT = 1800  # in dollars, about 6px at the default figure size
+BAR_HEIGHT = 1400  # in dollars, about 6px at the default figure size
 HOURS_PER_YEAR = 2080
 
 
@@ -170,7 +170,8 @@ def build_figure(df: pd.DataFrame, theme: str = "light") -> go.Figure:
     )
     fig.add_annotation(
         x=0,
-        y=-0.2,
+        y=0,
+        yshift=-105,
         xref="paper",
         yref="paper",
         text=(
@@ -195,9 +196,9 @@ def build_figure(df: pd.DataFrame, theme: str = "light") -> go.Figure:
         paper_bgcolor=t["surface"],
         plot_bgcolor=t["surface"],
         font={"family": "monospace", "size": 14, "color": t["text"]},
-        margin={"l": 90, "r": 40, "t": 70, "b": 150},
+        margin={"l": 90, "r": 40, "t": 70, "b": 140},
         width=1600,
-        height=800,
+        height=1000,
         xaxis={
             "type": "date",
             "showgrid": True,
@@ -216,7 +217,7 @@ def build_figure(df: pd.DataFrame, theme: str = "light") -> go.Figure:
         legend={
             "orientation": "h",
             "yanchor": "top",
-            "y": -0.09,
+            "y": -0.07,
             "xanchor": "center",
             "x": 0.5,
             "title": None,
