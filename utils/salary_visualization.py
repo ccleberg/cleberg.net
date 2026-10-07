@@ -15,9 +15,7 @@ import plotly.graph_objs as go
 
 CSV_PATH = "~/git/cmc/cleberg.net/theme/static/salary.csv"
 
-# Surfaces match theme/static/styles.css. Series colors are one per company in
-# order of first appearance; the dark steps are the same hues re-stepped for
-# the dark surface.
+# Surfaces match theme/static/styles.css.
 THEMES = {
     "light": {
         "surface": "#ffffff",
@@ -25,7 +23,6 @@ THEMES = {
         "muted": "#52514e",
         "grid": "#f0efec",
         "band": "#f8f8f6",
-        "palette": ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"],
     },
     "dark": {
         "surface": "#181a1b",
@@ -33,10 +30,20 @@ THEMES = {
         "muted": "#c3c2b7",
         "grid": "#262829",
         "band": "#1f2122",
-        "palette": ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#008300"],
     },
 }
-DASH = {"salaried": "solid", "hourly": "dot"}
+# Each employer's brand color. Walgreens is the uniform blue rather than the
+# logo red; Nebraska is darkened to separate it from Ameritas.
+BRAND = {
+    "Walgreens": "#5fb3e8",
+    "University of Nebraska": "#9b0000",
+    "Ameritas": "#d51e22",
+    "Nelnet": "#afd135",
+    "Ernst & Young": "#ffe600",
+    "KPMG": "#00338d",
+}
+PATTERN = {"salaried": "", "hourly": "/"}
+BAR_HEIGHT = 1800  # in dollars, about 6px at the default figure size
 HOURS_PER_YEAR = 2080
 
 
@@ -62,56 +69,59 @@ def build_figure(df: pd.DataFrame, theme: str = "light") -> go.Figure:
     t = THEMES[theme]
     fig = go.Figure()
     companies = list(dict.fromkeys(df["Company"]))
-    colors = dict(zip(companies, t["palette"]))
+    colors = BRAND
 
-    # Thin connectors between a job's end and the next job's start, drawn
-    # first so the salary segments sit on top. Concurrent jobs get none.
+    # Thin connectors between a job's end and the next job's start, as shapes
+    # on the below layer so they never cover a bar's border. Concurrent jobs
+    # get none.
     ends = {row["End"]: row for _, row in df.iterrows()}
     for _, row in df.iterrows():
         prev = ends.get(row["Start"])
         if prev is None:
             continue
-        fig.add_trace(
-            go.Scatter(
-                x=[row["Start"], row["Start"]],
-                y=[prev["Salary"], row["Salary"]],
-                mode="lines",
-                line={"color": t["grid"], "width": 1.5},
-                hoverinfo="skip",
-                showlegend=False,
-            )
+        fig.add_shape(
+            type="line",
+            x0=row["Start"],
+            x1=row["Start"],
+            y0=prev["Salary"],
+            y1=row["Salary"],
+            line={"color": t["grid"], "width": 1.5},
+            layer="below",
         )
 
-    # One trace per company and pay type. Hourly jobs are dotted. Legend
-    # entries are separate dummy traces so every company swatch is solid.
+    # One bar trace per company and pay type, drawn as horizontal bars so
+    # each segment gets a border. Hourly jobs are hatched. Legend entries are
+    # separate dummy traces so every company swatch is solid.
+    def marker(color: str, pay: str) -> dict:
+        return {
+            "color": color,
+            "line": {"color": t["text"], "width": 1},
+            "pattern": {
+                "shape": PATTERN[pay],
+                "fgcolor": t["surface"],
+                "bgcolor": color,
+                "size": 5,
+                "solidity": 0.4,
+            },
+        }
+
     for (company, pay), rows in df.groupby(["Company", "PayType"]):
-        xs: list = []
-        ys: list = []
-        for _, row in rows.iterrows():
-            xs += [row["Start"], row["End"], None]
-            ys += [row["Salary"], row["Salary"], None]
         fig.add_trace(
-            go.Scatter(
-                x=xs,
-                y=ys,
-                mode="lines",
-                line={"color": colors[company], "width": 4, "dash": DASH[pay]},
+            go.Bar(
+                orientation="h",
+                base=rows["Start"],
+                x=(rows["End"] - rows["Start"]).dt.total_seconds() * 1000,
+                y=rows["Salary"],
+                width=BAR_HEIGHT,
+                marker=marker(colors[company], pay),
                 hoverinfo="skip",
                 showlegend=False,
             )
         )
-    entries = [(c, colors[c], "solid") for c in companies]
-    entries += [(pay.capitalize(), t["muted"], dash) for pay, dash in DASH.items()]
-    for name, color, dash in entries:
-        fig.add_trace(
-            go.Scatter(
-                x=[None],
-                y=[None],
-                mode="lines",
-                name=name,
-                line={"color": color, "width": 4, "dash": dash},
-            )
-        )
+    entries = [(c, colors[c], "salaried") for c in companies]
+    entries += [(pay.capitalize(), t["muted"], pay) for pay in PATTERN]
+    for name, color, pay in entries:
+        fig.add_trace(go.Bar(x=[None], y=[None], name=name, marker=marker(color, pay)))
 
     # Direct labels above each segment, starting at the segment's left end so
     # they extend over the empty space under the next, higher step. The last
@@ -131,7 +141,7 @@ def build_figure(df: pd.DataFrame, theme: str = "light") -> go.Figure:
             xanchor="right" if i == last else "left",
             y=row["Salary"],
             yanchor="bottom" if above else "top",
-            yshift=5 if above else -5,
+            yshift=6 if above else -6,
             text=label(row, t["muted"]),
             showarrow=False,
             font={"color": t["text"], "size": 14},
@@ -181,6 +191,7 @@ def build_figure(df: pd.DataFrame, theme: str = "light") -> go.Figure:
             "x": 0.03,
         },
         template="plotly_white",
+        barmode="overlay",
         paper_bgcolor=t["surface"],
         plot_bgcolor=t["surface"],
         font={"family": "monospace", "size": 14, "color": t["text"]},
@@ -188,6 +199,7 @@ def build_figure(df: pd.DataFrame, theme: str = "light") -> go.Figure:
         width=1600,
         height=800,
         xaxis={
+            "type": "date",
             "showgrid": True,
             "gridcolor": t["grid"],
             "dtick": "M12",

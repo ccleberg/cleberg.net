@@ -13,7 +13,7 @@ what this page is for: I believe the playing field should be level.
 <a href="https://img.cleberg.net/blog/salary/salary.webp">
 <picture>
 <source srcset="https://img.cleberg.net/blog/salary/salary-dark.webp" media="(prefers-color-scheme: dark)">
-<img src="https://img.cleberg.net/blog/salary/salary.webp" alt="Step chart of annualized pay by job from 2017 to 2027. Each job is a horizontal segment colored by company and labeled with its pay and title. Hourly jobs are dotted and show the hourly rate. The area after today is shaded.">
+<img src="https://img.cleberg.net/blog/salary/salary.webp" alt="Step chart of annualized pay by job from 2017 to 2027. Each job is a horizontal segment colored by company and labeled with its pay and title. Hourly jobs are hatched and show the hourly rate. The area after today is shaded.">
 </picture>
 </a>
 <figcaption>Salary visualization. Click for full size.</figcaption>
