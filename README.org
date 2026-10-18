@@ -28,8 +28,7 @@ The main site components are:
 
 The publishing system depends on:
 
-- [[https://gitbay.org/krz/orgo][orgo]], the static site
-  generator, installed with =cargo install --git
+- [[https://gitbay.org/krz/orgo][orgo]], the static site generator, installed with =cargo install --git
   https://gitbay.org/krz/orgo=.
 - =rsync= for deployment.
 - [[https://github.com/astral-sh/uv][uv]] to run =build.py=.
