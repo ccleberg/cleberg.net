@@ -25,6 +25,7 @@ Author:
     Christian Cleberg <hello@cleberg.net>
 """
 
+import hashlib
 import os
 import re
 import subprocess
@@ -135,6 +136,45 @@ def rewrite_orgo_version(build_dir):
     print(f"Set the footer orgo version to {version} on {count} pages")
 
 
+# Stylesheet links, with or without a ?v= from an earlier build. Cloudflare and browsers
+# cache these for a year, so the URL has to change whenever the file does.
+STYLESHEETS = ("styles.css", "syntax.css")
+STYLESHEET_LINK = re.compile(
+    r'(<link rel="stylesheet" href="[^"]*?)(styles\.css|syntax\.css)(?:\?v=[0-9a-f]+)?(")'
+)
+
+
+def rewrite_stylesheet_versions(build_dir):
+    """Append ?v=<content hash> to every page's stylesheet links.
+
+    Runs over every page for the same reason as rewrite_orgo_version: a page carried
+    over from an earlier build still names the old hash. A build that matches no link
+    fails, because shipping unversioned links means the next CSS change sits behind
+    a year-long cache.
+    """
+    versions = {
+        name: hashlib.sha256((Path(build_dir) / name).read_bytes()).hexdigest()[:10]
+        for name in STYLESHEETS
+    }
+    count = 0
+    for html in Path(build_dir).rglob("*.html"):
+        text = html.read_text(encoding="utf-8")
+        new_text, n = STYLESHEET_LINK.subn(
+            lambda m: f"{m[1]}{m[2]}?v={versions[m[2]]}{m[3]}", text
+        )
+        if n and new_text != text:
+            html.write_text(new_text, encoding="utf-8")
+        count += n
+    if count == 0:
+        print(
+            "No stylesheet links found in the build — the <link> tags in "
+            "content/templates/base.html no longer match STYLESHEET_LINK",
+            file=sys.stderr,
+        )
+        sys.exit(1)
+    print(f"Versioned {count} stylesheet links: {versions}")
+
+
 def run_orgo_build(build_dir):
     """
     Build the site with orgo.
@@ -226,6 +266,7 @@ def main():
     if os.environ.get("BUILD", "").casefold() == "true":
         run_orgo_build(build_dir)
         rewrite_orgo_version(build_dir)
+        rewrite_stylesheet_versions(build_dir)
         # The onion needs same-origin images; dev previews keep the absolute URLs.
         # Runs over every page, not just the re-rendered ones, so a page carried over
         # from an earlier build is rewritten too.
