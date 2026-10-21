@@ -75,7 +75,7 @@
 <p><time datetime="{{ page.date_iso }}">{{ page.date_iso }}</time>{% if page.excerpt %} &middot; {{ page.excerpt }}{% endif %}</p>
 {%- endif %}
 {%- if page.tags %}
-<p>{% for tag in page.tags %}<a href="{{ root }}tags/{{ tag }}.html">#{{ tag }}</a> {% endfor %}</p>
+<p class="tags">:{% for tag in page.tags %}<a href="{{ root }}tags/{{ tag }}.html">{{ tag }}</a>:{% endfor %}</p>
 {%- endif %}
 {#- Blog posts add a reply footer inside this block; see post.html, which the
     [[pages]] rule in orgo.toml selects for everything under blog/. #}

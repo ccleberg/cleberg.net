@@ -1,40 +1,77 @@
-body { max-width: 800px; margin: 0 auto; padding: 1rem; }
-a, a:visited { color: #0000ff; }
-nav ul { list-style: none; padding: 0; display: flex; flex-direction: row; }
-nav ul li { padding-right: 0.5rem;}
+:root {
+	--bg: #fbfaf6; --fg: #2b2b2b; --muted: #77746d; --link: #2a5db0; --rule: #e2ded3;
+	--h1: #6a3a99; --h2: #2e6b3c; --h3: #8a4b00; --tag: #9b5a00; --block: #f0ede4;
+	--mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+body { max-width: 800px; margin: 0 auto; padding: 1rem; background-color: var(--bg); color: var(--fg); font-family: var(--mono); font-size: 0.9rem; line-height: 1.6; }
+h1, h2, h3, h4 { font-size: 1em; font-weight: bold; margin: 1.5rem 0 0.75rem; }
+h1 { color: var(--fg); }
+h1::before { content: "#+title: "; color: var(--muted); font-weight: normal; }
+h2 { color: var(--h1); }
+h2::before { content: "* "; }
+h3 { color: var(--h2); }
+h3::before { content: "** "; }
+h4 { color: var(--h3); }
+h4::before { content: "*** "; }
+a, a:visited { color: var(--link); text-underline-offset: 2px; }
+nav ul { list-style: none; padding: 0; display: flex; flex-direction: row; flex-wrap: wrap; }
+nav ul li { padding-right: 1ch; }
+nav ul li::after { content: " |"; color: var(--muted); }
+nav ul li:last-child::after { content: ""; }
+ul { padding-left: 2ch; }
+ul > li { list-style: none; }
+ul > li::before { content: "- "; margin-left: -2ch; color: var(--muted); }
+nav li::before, .post-list li::before, .detour-list li::before { content: none; }
 img { max-width: 100%; }
+time { color: var(--muted); white-space: nowrap; }
+time::before { content: "<"; }
+time::after { content: ">"; }
+.tags, .tags a, .tags a:visited { color: var(--tag); text-decoration: none; }
 .post-list { padding: 0; padding-inline-start: 0; }
-.post-list-item { display: flex; list-style: none; align-items: baseline; }
-.post-list-item time { padding-right: 0.5rem; white-space: nowrap; }
+.post-list-item { display: flex; list-style: none; align-items: baseline; gap: 1ch; }
 .post-list-item a { flex-grow: 1; white-space: normal; }
-.post-list-year { list-style: none; margin-top: 1rem; margin-bottom: 0.5rem; font-weight: bold; }
+.post-list-year { list-style: none; margin-top: 1rem; margin-bottom: 0.5rem; font-weight: bold; color: var(--h1); }
+.post-list-year::before { content: "* "; }
 .skip-link { display: none; }
 table { border-collapse: collapse; }
-table, th, td { border: 1px solid #ccc; }
+table, th, td { border: 1px solid var(--rule); }
 th, td { padding: 0.25rem 0.5rem; text-align: left; }
-footer { margin: 2rem 0;}
-pre, blockquote { margin: 1rem 0; padding: 0.5rem; background-color: #eee; }
+footer { margin: 2rem 0; color: var(--muted); }
+pre, blockquote { margin: 1rem 0; padding: 0.5rem 1ch 0.5rem 3ch; }
+pre, blockquote, .detour, .seealso { background-color: var(--block); }
 pre { overflow: auto; white-space: pre; }
+pre::before { content: "#+begin_src"; display: block; margin-left: -2ch; color: var(--muted); }
+pre::after { content: "#+end_src"; display: block; margin-left: -2ch; color: var(--muted); }
+blockquote::before { content: "#+begin_quote"; display: block; margin-left: -2ch; color: var(--muted); }
+blockquote::after { content: "#+end_quote"; display: block; margin-left: -2ch; color: var(--muted); }
 blockquote p { margin: 0; margin-bottom: 1rem; }
 blockquote p:last-child { margin-bottom: 0; }
-code { color: #942192; }
-/* The metadata block on a detour post. currentColor for the rule, so the dark scheme
-   below needs no override. */
-.detour { border-left: 3px solid currentColor; padding: .5rem 1rem; margin: 1rem 0 2rem; font-size: .95em; }
+code { color: var(--tag); }
+figcaption { color: var(--muted); }
+/* The metadata block on a detour post, shown as a property drawer. */
+.detour { margin: 1rem 0 2rem; padding: 0.5rem 1ch; }
+.detour::before { content: ":PROPERTIES:"; color: var(--muted); }
+.detour::after { content: ":END:"; color: var(--muted); }
 .detour dl { margin: 0; }
-.detour dt { font-weight: bold; }
-.detour dd { margin: 0 0 .4rem 0; }
+.detour dt { display: inline; color: var(--tag); }
+.detour dt::before, .detour dt::after { content: ":"; }
+.detour dd { display: inline; margin: 0 0 0 1ch; }
+.detour dd::after { content: ""; display: block; }
 .detour-list { padding-inline-start: 0; }
 .detour-list li { list-style: none; margin-bottom: .75rem; }
-.detour-meta { display: block; font-size: .95em; }
+.detour-meta { display: block; color: var(--muted); }
+/* #+begin_seealso: a line of related links under a section. */
+.seealso { margin: 1rem 0; padding: 0.5rem 1ch; }
+.seealso::before { content: "#+begin_seealso"; display: block; color: var(--muted); }
+.seealso::after { content: "#+end_seealso"; display: block; color: var(--muted); }
+.seealso p { margin: 0 0 0 2ch; }
 /* Blocks are coloured by syntax.css, so this is only the fallback for the tokens it
    leaves unclassified: the highlight theme's own foreground rather than inline code's. */
 pre code { color: #323232; }
 @media (prefers-color-scheme: dark) {
-	body { background-color: #181a1b; color: #cccccc; }
-	a, a:visited { color: #68A9F8; }
-	code { color: #ff68e1; }
-	pre, blockquote { background-color: #000; }
+	:root {
+		--bg: #0b0c0e; --fg: #d6d6d0; --muted: #8a8b90; --link: #7fb0f0; --rule: #2a2b30;
+		--h1: #c79bf2; --h2: #8fcf9a; --h3: #f0c27a; --tag: #e0a85a; --block: #17181c;
+	}
 	pre code { color: #c0c5ce; }
-	table, th, td { border-color: #444; }
 }
