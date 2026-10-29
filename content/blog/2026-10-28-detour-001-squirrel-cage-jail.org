@@ -1,0 +1,142 @@
+#+date: [2026-10-28 Wed 00:00:00]
+#+title: detour #001: Squirrel Cage Jail
+#+description: A visit to the historic three-story rotary jail in Council Bluffs, Iowa.
+#+slug: detour-001-squirrel-cage-jail
+#+filetags: :detour:
+#+location: Council Bluffs, IA
+#+rating: 3
+
+#+begin_detour
+- Location :: Council Bluffs, IA · [[https://www.openstreetmap.org/node/367085605#map=19/41.257791/-95.851927][map]]
+- Admission :: $10 adults, $8 seniors/students, $5 youth (as of 2026-10)
+- Hours :: Thu–Sat 10am–5pm, Sun 1pm–4pm; check the [[https://www.thehistoricalsociety.org][official site]]
+- Visited :: 2026-07
+- Worth the drive :: ★★★☆☆ (3/5)
+#+end_detour
+
+Part of [[/detour/][detour]], a series on places worth leaving the highway for.
+
+* Overview
+
+Just across the Missouri River from Omaha, in downtown Council Bluffs, sits the
+Pottawattamie County Squirrel Cage Jail. It was built in 1885, held prisoners
+until 1969, and is the only three-story rotary jail ever made. Only three rotary
+jails survive today: this one, a one-story jail in Gallatin, Missouri, and a
+two-story jail in Crawfordsville, Indiana. The Historical Society of
+Pottawattamie County now runs the Council Bluffs jail as a museum.
+
+If you've never heard of a rotary jail, the idea is simple and a little absurd.
+William H. Brown and Benjamin F. Haugh patented the design in 1881: instead of
+lining cells up along a corridor, you put the inmates in pie-shaped cells inside
+a large iron drum and spin it. Each floor has a single opening, and the jailer
+turns a hand crank until the cell he wants lines up with it. That way, one guard
+can control every prisoner in the building without ever stepping into the
+cellblock. The drum in Council Bluffs holds three tiers of ten cells each and
+weighs about forty-five tons.
+
+#+caption: Model and floor plan of the rotary jail
+#+attr_html: :alt An acrylic model and patent schematic showing the pie-shaped cells arranged in a circle around a central spindle inside the octagonal outer cage
+[[https://img.cleberg.net/blog/20261028-detour-001-squirrel-cage-jail/jail-model.webp]]
+
+It didn't take long for the problems to show up. Any inmate with an arm or leg
+through the bars while the drum turned would have it crushed against the outer
+cage, and some inmates started doing it on purpose. A broken arm got you moved
+to the infirmary, and the infirmary only had a wooden ceiling between you and
+the outside, so a few of them broke through it and shimmied down the drainpipes
+to escape.
+
+Over the years, the weight of the drum caused the central bearings and shafts to
+sag until the crank was nearly impossible to turn. Fire was an even bigger
+worry, since the only way to get everyone out was to rotate the drum one cell at
+a time past the single exit.
+
+* The Experience
+
+From the outside, 226 Pearl Street looks like any other Victorian brick building
+downtown. You walk in through the booking room, and right away you're standing
+next to the jail's only solitary cell. It isn't really a room at all - it's the
+gap between two steel doors that separate the booking room from a narrow
+hallway. Once both doors were shut, the inmate had a solid steel door at their
+back and a barred one in front of them, with barely enough space for a modern
+adult to fit. You can't sit down in there, and you can hardly bend your knees.
+
+#+caption: The solitary confinement corridor
+#+attr_html: :alt A narrow, dim steel hallway lit by hanging incandescent bulbs, with a barred steel door on the left and vertical iron bars on the right
+[[https://img.cleberg.net/blog/20261028-detour-001-squirrel-cage-jail/corridor.webp]]
+
+The hallway on the other side runs straight into the first-floor cell area. It
+was a shortcut, letting jailers get a rowdy inmate locked up quickly without
+going through all the normal cell doors.
+
+Once you're in the cell room, the drum takes up most of the space. The hand
+crank and gears that turned it are still on the first floor, and it's hard to
+picture one person moving all of that iron by hand. The cells are narrow wedges
+that shrink toward the center, and standing in one, there isn't a single
+parallel wall or a window in sight.
+
+#+caption: Inside a wedge-shaped cell
+#+attr_html: :alt Interior of a pie-slice cell through iron bars, showing narrow tapering steel walls, two bunk beds, and a single ceiling bulb
+[[https://img.cleberg.net/blog/20261028-detour-001-squirrel-cage-jail/pie-cell.webp]]
+
+Make sure to look up while you're in there. The steel ceiling is covered in
+names and dates that inmates scratched and painted over the decades, and it's
+all still there.
+
+#+caption: Inmate graffiti etched into the steel ceiling
+#+attr_html: :alt Riveted steel ceiling covered in names and dates carved and painted by prisoners across the mid-twentieth century
+[[https://img.cleberg.net/blog/20261028-detour-001-squirrel-cage-jail/graffiti.webp]]
+
+The first floor is also where inmates showered, if you can call it that. The
+shower was a bare pipe sticking out of the wall in a wide open space, with no
+privacy at all.
+
+Upstairs on the second floor, there's a drop hatch in the floor. Getting down to
+the first floor the proper way meant unlocking and relocking door after door,
+which took far too long when a fight broke out below. Instead, guards would
+unlock the hatch and jump straight down.
+
+At the top of the building, you can look straight down onto the top of the drum.
+
+#+caption: The central pivot axle and radial cage structure from above
+#+attr_html: :alt Looking down at the massive circular iron framework and central riveted steel pivot beam supporting the rotating cell drum
+[[https://img.cleberg.net/blog/20261028-detour-001-squirrel-cage-jail/rotary-mechanism.webp]]
+
+This view explains one of the jail's worst problems. Each cell's toilet sat at
+the center of the cylinder, where there was almost no ventilation, so the smell
+drifted straight up the drum and into the apartment where the jailer lived with
+his family.
+
+#+caption: The fourth-floor family quarters
+#+attr_html: :alt A vintage bathroom with green peeling walls, clawfoot tub, patterned rug, and lace curtains over an arched window overlooking downtown Council Bluffs
+[[https://img.cleberg.net/blog/20261028-detour-001-squirrel-cage-jail/quarters-bathroom.webp]]
+
+The apartment itself is a strange contrast to everything below it. It has a
+clawfoot tub, lace curtains, and arched windows looking out over downtown, all
+one flight of stairs away from the cells and their smell.
+
+Throughout the building, there are reminders of who was actually held here.
+
+#+caption: Daily inmate tally slate
+#+attr_html: :alt A slate chalkboard hanging against a white brick wall listing handwritten chalk counts for bullpen, holdover, hospital, women, and trusties totaling 44
+[[https://img.cleberg.net/blog/20261028-detour-001-squirrel-cage-jail/tally-slate.webp]]
+
+A chalk slate tallies the day's count by where each inmate was held: bullpen,
+holdover, hospital, women, and trusties. The jail also had a children's wing,
+which held children as young as infants. Most of them were there because the
+jail doubled as child services at the time, but some were held as genuine
+"criminals." One display case even holds real rope from the nooses used to hang
+some of the jail's prisoners.
+
+Local tourism leans heavily on ghost stories and paranormal tours, but you don't
+need any of that here. The building is strange enough on its own.
+
+* Going
+
+The jail is in downtown Council Bluffs, a couple of minutes off the I-80 / I-29
+interchange and about ten minutes from downtown Omaha. You can park on Pearl
+Street right out front or in the small lot next door.
+
+Tours are self-guided, but there are docents throughout the building who can
+explain the drum, the infirmary, and the family quarters. Plan on 45 minutes to
+an hour. If you're driving through Omaha or Council Bluffs, or anywhere along
+I-80, it's worth the stop.

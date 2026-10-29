@@ -52,11 +52,10 @@ figcaption { color: var(--muted); }
 .detour { margin: 1rem 0 2rem; padding: 0.5rem 1ch; }
 .detour::before { content: ":PROPERTIES:"; color: var(--muted); }
 .detour::after { content: ":END:"; color: var(--muted); }
-.detour dl { margin: 0; }
-.detour dt { display: inline; color: var(--tag); }
+.detour dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); column-gap: 1ch; align-items: baseline; margin: 0; }
+.detour dt { color: var(--tag); }
 .detour dt::before, .detour dt::after { content: ":"; }
-.detour dd { display: inline; margin: 0 0 0 1ch; }
-.detour dd::after { content: ""; display: block; }
+.detour dd { margin: 0; }
 .detour-list { padding-inline-start: 0; }
 .detour-list li { list-style: none; margin-bottom: .75rem; }
 .detour-meta { display: block; color: var(--muted); }
