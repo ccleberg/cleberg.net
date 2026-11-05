@@ -2,6 +2,7 @@
 #+title: Forking SkunkyArt
 #+description: Announcing my fork of SkunkyArt, an alternative privacy frontend for DeviantArt, now maintained under krz.
 #+slug: skunkyart-fork
+#+project: skunky-art
 #+filetags: :development:self-hosting:
 
 * SkunkyArt

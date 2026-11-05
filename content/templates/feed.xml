@@ -27,7 +27,7 @@
 {%- for tag in post.tags %}
       <category>{{ tag }}</category>
 {%- endfor %}
-      <description><![CDATA[{{ post.content | safe }}]]></description>
+      <description><![CDATA[{{ post.content | safe }}{% set project = post.keywords.project %}{% include "project.html" %}]]></description>
     </item>
 {%- endfor %}
   </channel>

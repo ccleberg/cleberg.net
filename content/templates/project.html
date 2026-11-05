@@ -1,0 +1,25 @@
+{# A line naming the org behind a post's project, set by `#+PROJECT: <key>` in the post.
+
+   Included by post.html and feed.xml, both of which set `project` to the post's keyword
+   before including this. An unknown key renders nothing. Links are absolute, since the
+   feed is read away from the site. #}
+{%- set orgs = {
+  "krz": {"name": "krz", "url": "https://krz.sh/", "blurb": "which builds small native apps and self-hosted, privacy-respecting frontends"},
+  "audit-labs": {"name": "Audit Labs", "url": "https://audit-labs.dev/", "blurb": "which makes open-source tools for collecting, sealing, and reporting audit evidence"},
+} %}
+{%- set projects = {
+  "krz": {"org": "krz"},
+  "hutch": {"org": "krz", "name": "Hutch", "url": "https://krz.sh/apps/hutch/"},
+  "orgo": {"org": "krz", "name": "orgo", "url": "https://gitbay.org/krz/orgo"},
+  "nfogen": {"org": "krz", "name": "nfogen", "url": "https://gitbay.org/krz/nfogen"},
+  "skunky-art": {"org": "krz", "name": "SkunkyArt", "url": "https://gitbay.org/krz/skunky-art"},
+  "audit-tools": {"org": "audit-labs", "name": "audit-tools", "url": "https://gitbay.org/audit-labs/audit-tools"},
+} %}
+{%- set p = projects[project] if project in projects else none %}
+{%- if p %}
+{%- set o = orgs[p.org] %}
+<div class="project"><i>
+{%- if p.name %}<a href="{{ p.url }}">{{ p.name }}</a> is part of <a href="{{ o.url }}">{{ o.name }}</a>, {{ o.blurb }}.
+{%- else %}The projects in this post are part of <a href="{{ o.url }}">{{ o.name }}</a>, {{ o.blurb }}.
+{%- endif %}</i></div>
+{%- endif %}

@@ -2,6 +2,7 @@
 #+title: Generating Scene-Style NFO Files in 2026
 #+description: Announcing nfogen, a small utility to generate NFO files.
 #+slug: nfogen
+#+project: nfogen
 #+filetags: :development:
 
 * What Is an .nfo File?

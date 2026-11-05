@@ -2,6 +2,7 @@
 #+title: Small Wins on the App Store
 #+description: My first tips and 5-star ratings on the iOS apps I built for fun and open-sourced.
 #+slug: app-store-small-wins
+#+project: krz
 #+filetags: :development:ios:
 
 I wanted to briefly share a couple achievements I've experienced lately from

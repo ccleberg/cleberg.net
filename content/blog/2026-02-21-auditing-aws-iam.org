@@ -2,6 +2,7 @@
 #+title:       Auditing AWS IAM Users
 #+description: How to audit IAM user assignments in AWS.
 #+slug: auditing-aws-iam
+#+project: audit-tools
 #+filetags:    :audit:
 
 If you've ever asked an IT team for a list of who has access to an AWS account,

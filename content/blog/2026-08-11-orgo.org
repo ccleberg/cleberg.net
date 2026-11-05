@@ -2,6 +2,7 @@
 #+title: I Built My Own Org-Mode Static Site Generator
 #+description: I was tired of bolting solutions onto my SSGs, so I built my own.
 #+slug: orgo
+#+project: orgo
 #+filetags: :development:org-mode:
 #+OPTIONS: ^:{}
 
