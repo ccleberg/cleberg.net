@@ -21,7 +21,7 @@ can appear restricted at one layer while still being exposed at another.
 This post walks through a script that checks all three layers for every bucket
 in the account and produces a CSV report.
 
-The script used in this post is available at [[https://github.com/audit-labs/audit-tools/blob/main/applications/aws/aws_s3_buckets.sh][audit-labs/audit-tools]].
+The script used in this post is available at [[https://gitbay.org/audit-labs/audit-tools/blob/main/applications/aws/aws_s3_buckets.sh][audit-labs/audit-tools]].
 
 * Background: How S3 Controls Public Access
 

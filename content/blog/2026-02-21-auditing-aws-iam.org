@@ -18,7 +18,7 @@ To solve this problem, this post walks through a script that does it for you and
 explains what to look for once you have the output. This is something I've used
 in practice and want to share, as cloud auditing knowledge seems scarce.
 
-The script is available at [[https://github.com/audit-labs/audit-tools/blob/main/applications/aws/aws_iam_users.sh][audit-labs/audit-tools]].
+The script is available at [[https://gitbay.org/audit-labs/audit-tools/blob/main/applications/aws/aws_iam_users.sh][audit-labs/audit-tools]].
 
 * Background: How AWS Provisions Access
 
