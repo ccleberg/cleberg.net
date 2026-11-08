@@ -17,15 +17,15 @@ base_url = "https://cleberg.net"
 
 [nav]
 # Explicit, because the pages that belong in the nav are not all top-level: /blog/ and
-# /garden/ are generated below, and salary/ is a section index one level down. index.org
-# is deliberately absent — the layout writes the Home link itself.
+# /garden/ are generated below. index.org is deliberately absent — the layout writes the
+# Home link itself.
 #
-# Generated pages are named by their output path, authored ones by their source. Listing
-# them together is what puts Salary last: a collection with `nav = true` that is not
-# listed here gets appended after everything that is — which is why the tags collection
-# below does not set `nav = true`: the live nav has no Tags entry.
+# Generated pages are named by their output path, authored ones by their source. A
+# collection with `nav = true` that is not listed here gets appended after everything
+# that is — which is why the tags collection below does not set `nav = true`: the live
+# nav has no Tags entry.
 mode = "explicit"
-pages = ["blog/index.html", "garden/index.html", "work/index.org", "salary/index.org"]
+pages = ["blog/index.html", "garden/index.html", "work/index.org"]
 
 [build]
 # theme/static/ is the site's static root, published at /. orgo reads it from here
