@@ -26,7 +26,8 @@ header.site, footer.site { max-width: var(--wide); margin: 0 auto; padding: 1.5r
 header.site .mark { color: var(--fg); font-weight: 650; text-decoration: none; }
 header.site ul, footer.site ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
 header.site nav a { color: var(--soft); text-decoration: none; }
-header.site nav a:hover { color: var(--fg); }
+header.site nav a:hover, header.site nav a[aria-current] { color: var(--fg); }
+header.site nav a[aria-current] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .45em; }
 footer.site { border-top: 1px solid var(--rule); margin-top: clamp(3rem, 7vw, 5rem); padding-bottom: 3rem; color: var(--soft); font-size: .95rem; }
 footer.site a { color: var(--soft); }
 footer.site a:hover { color: var(--fg); }

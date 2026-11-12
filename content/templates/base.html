@@ -62,8 +62,14 @@
 <a class="mark" href="{{ root }}index.html">Christian Cleberg</a>
 <nav aria-label="Site Navigation">
 <ul>
+{#- orgo gives the current page's entry the url "#"; link it to itself instead and mark
+    it, so the nav says where you are. #}
 {%- for item in nav %}
+{%- if item.url == "#" %}
+<li><a href="{{ root }}{{ page.url }}" aria-current="page">{{ item.title | capitalize }}</a></li>
+{%- else %}
 <li><a href="{{ item.url }}">{{ item.title | capitalize }}</a></li>
+{%- endif %}
 {%- endfor %}
 </ul>
 </nav>
