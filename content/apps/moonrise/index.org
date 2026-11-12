@@ -6,21 +6,21 @@
 #+TAGLINE: Night sky, planets, missions.
 #+PLATFORMS: iPhone, iPad, Mac, Apple Watch
 #+TINT: #0a1424
-#+ICON: https://i.krz.sh/apps/moonrise/icon.png
-#+HERO: https://i.krz.sh/apps/moonrise/hero.jpg?v=5.8.0.1
+#+ICON: https://img.cleberg.net/apps/moonrise/icon.png
+#+HERO: https://img.cleberg.net/apps/moonrise/hero.jpg?v=5.8.0.1
 #+REPO: https://gitbay.org/krz/moonrise
 #+PRIVACY: https://krz.sh/privacy/moonrise/
 #+HIGHLIGHT_1: Your sky | Stars, planets and the Moon for your place and time, from 3000 BCE to 3000 CE.
 #+HIGHLIGHT_2: Live space | The Sun and solar wind now, aurora alerts, launches, eclipses, satellite passes and the Deep Space Network.
 #+HIGHLIGHT_3: Library | 370 pages on planets, moons, stars, constellations, deep-sky objects and spacecraft.
-#+SHOT_1: https://i.krz.sh/apps/moonrise/screenshots/web/01-sky.jpg?v=5.8.0.1 | Sky | the sky where you are
-#+SHOT_2: https://i.krz.sh/apps/moonrise/screenshots/web/02-tonight.jpg?v=5.8.0.1 | Tonight | moon, planets and passes tonight
-#+SHOT_3: https://i.krz.sh/apps/moonrise/screenshots/web/03-system.jpg?v=5.8.0.1 | Solar system map | probes leaving the solar system
-#+SHOT_4: https://i.krz.sh/apps/moonrise/screenshots/web/04-3d.jpg?v=5.8.0.1 | Solar system in 3D | the solar system in 3D
-#+SHOT_5: https://i.krz.sh/apps/moonrise/screenshots/web/05-sun.jpg?v=5.8.0.1 | Sun | the Sun now, and the aurora
-#+SHOT_6: https://i.krz.sh/apps/moonrise/screenshots/web/06-launches.jpg?v=5.8.0.1 | Launches | launches with countdowns
-#+SHOT_7: https://i.krz.sh/apps/moonrise/screenshots/web/07-library.jpg?v=5.8.0.1 | Library | a library of 370 pages
-#+SHOT_8: https://i.krz.sh/apps/moonrise/screenshots/web/08-jupiter.jpg?v=5.8.0.1 | Jupiter | every planet and major moon
+#+SHOT_1: https://img.cleberg.net/apps/moonrise/screenshots/web/01-sky.jpg?v=5.8.0.1 | Sky | the sky where you are
+#+SHOT_2: https://img.cleberg.net/apps/moonrise/screenshots/web/02-tonight.jpg?v=5.8.0.1 | Tonight | moon, planets and passes tonight
+#+SHOT_3: https://img.cleberg.net/apps/moonrise/screenshots/web/03-system.jpg?v=5.8.0.1 | Solar system map | probes leaving the solar system
+#+SHOT_4: https://img.cleberg.net/apps/moonrise/screenshots/web/04-3d.jpg?v=5.8.0.1 | Solar system in 3D | the solar system in 3D
+#+SHOT_5: https://img.cleberg.net/apps/moonrise/screenshots/web/05-sun.jpg?v=5.8.0.1 | Sun | the Sun now, and the aurora
+#+SHOT_6: https://img.cleberg.net/apps/moonrise/screenshots/web/06-launches.jpg?v=5.8.0.1 | Launches | launches with countdowns
+#+SHOT_7: https://img.cleberg.net/apps/moonrise/screenshots/web/07-library.jpg?v=5.8.0.1 | Library | a library of 370 pages
+#+SHOT_8: https://img.cleberg.net/apps/moonrise/screenshots/web/08-jupiter.jpg?v=5.8.0.1 | Jupiter | every planet and major moon
 
 Moonrise draws the sky above you from real data: about 130,000 stars down to
 magnitude 9, all 88 constellations, the Milky Way, 900 galaxies, clusters and

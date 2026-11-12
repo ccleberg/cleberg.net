@@ -6,21 +6,21 @@
 #+TAGLINE: SourceHut workflows, built for mobile.
 #+PLATFORMS: iPhone
 #+TINT: #3d5a80
-#+ICON: https://i.krz.sh/apps/hutch/icon.png
-#+HERO: https://i.krz.sh/apps/hutch/hero.jpg
+#+ICON: https://img.cleberg.net/apps/hutch/icon.png
+#+HERO: https://img.cleberg.net/apps/hutch/hero.jpg
 #+APPSTORE: https://apps.apple.com/us/app/hutch-for-sourcehut/id6760742299
 #+REPO: https://gitbay.org/krz/hutch
 #+PRIVACY: https://krz.sh/privacy/hutch/
 #+HIGHLIGHT_1: Review patches | Threaded mail with rendered diffs, replies through Apple Mail.
 #+HIGHLIGHT_2: Watch builds | Submit, monitor, retry and read logs from builds.sr.ht.
 #+HIGHLIGHT_3: Triage tickets | Assignees, labels, resolutions and comments across trackers.
-#+SHOT_1: https://i.krz.sh/apps/hutch/screenshots/web/01_patch.jpg | Patch review | review patches anywhere
-#+SHOT_2: https://i.krz.sh/apps/hutch/screenshots/web/02_thread.jpg | Threaded inbox | stay on top of discussions
-#+SHOT_3: https://i.krz.sh/apps/hutch/screenshots/web/03_builds.jpg | Builds | monitor builds in real time
-#+SHOT_4: https://i.krz.sh/apps/hutch/screenshots/web/04_tickets.jpg | Tickets | manage issues on the go
-#+SHOT_5: https://i.krz.sh/apps/hutch/screenshots/web/05_repo.jpg | Repository diff | explore your code
-#+SHOT_6: https://i.krz.sh/apps/hutch/screenshots/web/06_projects.jpg | Projects | everything in one place
-#+SHOT_7: https://i.krz.sh/apps/hutch/screenshots/web/07_actions.jpg | Build submission | take action instantly
+#+SHOT_1: https://img.cleberg.net/apps/hutch/screenshots/web/01_patch.jpg | Patch review | review patches anywhere
+#+SHOT_2: https://img.cleberg.net/apps/hutch/screenshots/web/02_thread.jpg | Threaded inbox | stay on top of discussions
+#+SHOT_3: https://img.cleberg.net/apps/hutch/screenshots/web/03_builds.jpg | Builds | monitor builds in real time
+#+SHOT_4: https://img.cleberg.net/apps/hutch/screenshots/web/04_tickets.jpg | Tickets | manage issues on the go
+#+SHOT_5: https://img.cleberg.net/apps/hutch/screenshots/web/05_repo.jpg | Repository diff | explore your code
+#+SHOT_6: https://img.cleberg.net/apps/hutch/screenshots/web/06_projects.jpg | Projects | everything in one place
+#+SHOT_7: https://img.cleberg.net/apps/hutch/screenshots/web/07_actions.jpg | Build submission | take action instantly
 
 Hutch is a fast, native iOS app for working with [[https://sr.ht][SourceHut]] when
 you’re away from your desk. it focuses on what matters on mobile: triaging work,

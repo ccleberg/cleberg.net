@@ -7,14 +7,14 @@
 #+PLATFORMS: iPhone, iPad, Mac
 #+TINT: #2a5bd7
 #+PRIVACY: https://krz.sh/privacy/hellsite/
-#+ICON: https://i.krz.sh/apps/hellsite/icon.png?v=0.1.0
-#+HERO: https://i.krz.sh/apps/hellsite/hero.jpg?v=0.1.0
-#+SHOT_1: https://i.krz.sh/apps/hellsite/screenshots/web/01-dashboard.jpg?v=0.1.0 | Dashboard | the dashboard Tumblr sends, in order
-#+SHOT_2: https://i.krz.sh/apps/hellsite/screenshots/web/02-post.jpg?v=0.1.0 | Post | a post with its notes
-#+SHOT_3: https://i.krz.sh/apps/hellsite/screenshots/web/03-blog.jpg?v=0.1.0 | Blog | a blog with its header and posts
-#+SHOT_4: https://i.krz.sh/apps/hellsite/screenshots/web/04-gallery.jpg?v=0.1.0 | Gallery | photo and video posts as a grid
-#+SHOT_5: https://i.krz.sh/apps/hellsite/screenshots/web/05-explore.jpg?v=0.1.0 | Explore | tags, lists and read later
-#+SHOT_6: https://i.krz.sh/apps/hellsite/screenshots/web/06-compose.jpg?v=0.1.0 | Compose | write a post, queue or draft it
+#+ICON: https://img.cleberg.net/apps/hellsite/icon.png?v=0.1.0
+#+HERO: https://img.cleberg.net/apps/hellsite/hero.jpg?v=0.1.0
+#+SHOT_1: https://img.cleberg.net/apps/hellsite/screenshots/web/01-dashboard.jpg?v=0.1.0 | Dashboard | the dashboard Tumblr sends, in order
+#+SHOT_2: https://img.cleberg.net/apps/hellsite/screenshots/web/02-post.jpg?v=0.1.0 | Post | a post with its notes
+#+SHOT_3: https://img.cleberg.net/apps/hellsite/screenshots/web/03-blog.jpg?v=0.1.0 | Blog | a blog with its header and posts
+#+SHOT_4: https://img.cleberg.net/apps/hellsite/screenshots/web/04-gallery.jpg?v=0.1.0 | Gallery | photo and video posts as a grid
+#+SHOT_5: https://img.cleberg.net/apps/hellsite/screenshots/web/05-explore.jpg?v=0.1.0 | Explore | tags, lists and read later
+#+SHOT_6: https://img.cleberg.net/apps/hellsite/screenshots/web/06-compose.jpg?v=0.1.0 | Compose | write a post, queue or draft it
 #+HIGHLIGHT_1: Pick up where you left off | After a day away, one tap takes you back to the last post you read, on any of your devices.
 #+HIGHLIGHT_2: Post from anywhere | Write posts with photos, keep drafts, fill your queue and answer asks.
 #+HIGHLIGHT_3: At home on Apple devices | Widgets, Shortcuts, Handoff, sharing from other apps, and keyboard shortcuts on Mac.

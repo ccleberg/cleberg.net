@@ -6,22 +6,22 @@
 #+TAGLINE: See how any domain is really configured and served.
 #+PLATFORMS: iPhone, iPad
 #+TINT: #1c57bd
-#+ICON: https://i.krz.sh/apps/domaindig/icon.png?v=5.5.3
-#+HERO: https://i.krz.sh/apps/domaindig/hero.jpg?v=5.5.3
+#+ICON: https://img.cleberg.net/apps/domaindig/icon.png?v=5.5.3
+#+HERO: https://img.cleberg.net/apps/domaindig/hero.jpg?v=5.5.3
 #+APPSTORE: https://apps.apple.com/us/app/domaindig/id6760368004
 #+REPO: https://gitbay.org/krz/domain-dig
 #+PRIVACY: https://krz.sh/privacy/domain-dig/
 #+HIGHLIGHT_1: Every record | A to PTR, DNSSEC, the redirect chain and what answers on the wire.
 #+HIGHLIGHT_2: Email and TLS | SPF, DMARC, DKIM, MTA-STS and BIMI; the certificate, chain and cipher.
 #+HIGHLIGHT_3: A portfolio, not a lookup | Track domains, monitor them on a schedule, keep the snapshots and audit them.
-#+SHOT_1: https://i.krz.sh/apps/domaindig/screenshots/web/01.jpg?v=5.5.3 | Lookup, summary and risk score | run a lookup, see everything
-#+SHOT_2: https://i.krz.sh/apps/domaindig/screenshots/web/02.jpg?v=5.5.3 | DNS records and DNSSEC | every record, with DNSSEC
-#+SHOT_3: https://i.krz.sh/apps/domaindig/screenshots/web/03.jpg?v=5.5.3 | Email security checks | SPF, DMARC, DKIM, MTA-STS, BIMI
-#+SHOT_4: https://i.krz.sh/apps/domaindig/screenshots/web/04.jpg?v=5.5.3 | TLS certificate details | the certificate, chain and cipher
-#+SHOT_5: https://i.krz.sh/apps/domaindig/screenshots/web/05.jpg?v=5.5.3 | IP location and port scan | where it resolves, and what answers
-#+SHOT_6: https://i.krz.sh/apps/domaindig/screenshots/web/06.jpg?v=5.5.3 | Portfolio dashboard | the whole portfolio at a glance
-#+SHOT_7: https://i.krz.sh/apps/domaindig/screenshots/web/07.jpg?v=5.5.3 | Watchlist | watch the domains that matter
-#+SHOT_8: https://i.krz.sh/apps/domaindig/screenshots/web/08.jpg?v=5.5.3 | Resolver and network settings | your resolver, your enrichment
+#+SHOT_1: https://img.cleberg.net/apps/domaindig/screenshots/web/01.jpg?v=5.5.3 | Lookup, summary and risk score | run a lookup, see everything
+#+SHOT_2: https://img.cleberg.net/apps/domaindig/screenshots/web/02.jpg?v=5.5.3 | DNS records and DNSSEC | every record, with DNSSEC
+#+SHOT_3: https://img.cleberg.net/apps/domaindig/screenshots/web/03.jpg?v=5.5.3 | Email security checks | SPF, DMARC, DKIM, MTA-STS, BIMI
+#+SHOT_4: https://img.cleberg.net/apps/domaindig/screenshots/web/04.jpg?v=5.5.3 | TLS certificate details | the certificate, chain and cipher
+#+SHOT_5: https://img.cleberg.net/apps/domaindig/screenshots/web/05.jpg?v=5.5.3 | IP location and port scan | where it resolves, and what answers
+#+SHOT_6: https://img.cleberg.net/apps/domaindig/screenshots/web/06.jpg?v=5.5.3 | Portfolio dashboard | the whole portfolio at a glance
+#+SHOT_7: https://img.cleberg.net/apps/domaindig/screenshots/web/07.jpg?v=5.5.3 | Watchlist | watch the domains that matter
+#+SHOT_8: https://img.cleberg.net/apps/domaindig/screenshots/web/08.jpg?v=5.5.3 | Resolver and network settings | your resolver, your enrichment
 
 Domain Dig is a fast, native app for inspecting a domain end to end. enter a
 name and get a full report: DNS records, email-security posture, the live TLS

@@ -6,20 +6,20 @@
 #+TAGLINE: Your org files, wherever you are.
 #+PLATFORMS: Mac, iPhone, iPad
 #+TINT: #5b7a2e
-#+ICON: https://i.krz.sh/apps/orgstar/icon.png
-#+HERO: https://i.krz.sh/apps/orgstar/hero.jpg?v=0.7.0
+#+ICON: https://img.cleberg.net/apps/orgstar/icon.png
+#+HERO: https://img.cleberg.net/apps/orgstar/hero.jpg?v=0.7.0
 #+APPSTORE: https://apps.apple.com/us/app/orgstar-org-mode-agenda/id6821552018
 #+REPO: https://gitbay.org/krz/orgstar
 #+PRIVACY: https://krz.sh/privacy/orgstar/
 #+HIGHLIGHT_1: Plain text | Reads and writes the same files Emacs does, byte for byte.
 #+HIGHLIGHT_2: Agenda | Scheduled items, deadlines, habits and calendar events.
 #+HIGHLIGHT_3: Capture anywhere | Templates from the app, share sheet, Shortcuts and widgets.
-#+SHOT_1: https://i.krz.sh/apps/orgstar/screenshots/web/01-agenda.jpg | Agenda | the agenda across your files
-#+SHOT_2: https://i.krz.sh/apps/orgstar/screenshots/web/02-reader.jpg | Reader | read with folding
-#+SHOT_3: https://i.krz.sh/apps/orgstar/screenshots/web/03-editor.jpg | Editor | edit with Org's commands
-#+SHOT_4: https://i.krz.sh/apps/orgstar/screenshots/web/04-tables.jpg | Tables | tables and formulas
-#+SHOT_5: https://i.krz.sh/apps/orgstar/screenshots/web/05-capture.jpg | Capture | capture with templates
-#+SHOT_6: https://i.krz.sh/apps/orgstar/screenshots/web/06-search.jpg | Search | search everything
+#+SHOT_1: https://img.cleberg.net/apps/orgstar/screenshots/web/01-agenda.jpg | Agenda | the agenda across your files
+#+SHOT_2: https://img.cleberg.net/apps/orgstar/screenshots/web/02-reader.jpg | Reader | read with folding
+#+SHOT_3: https://img.cleberg.net/apps/orgstar/screenshots/web/03-editor.jpg | Editor | edit with Org's commands
+#+SHOT_4: https://img.cleberg.net/apps/orgstar/screenshots/web/04-tables.jpg | Tables | tables and formulas
+#+SHOT_5: https://img.cleberg.net/apps/orgstar/screenshots/web/05-capture.jpg | Capture | capture with templates
+#+SHOT_6: https://img.cleberg.net/apps/orgstar/screenshots/web/06-search.jpg | Search | search everything
 
 orgstar is a native editor for [[https://orgmode.org][Org mode]] files on the Mac,
 with an app for iPhone and iPad. it reads and writes the same plain-text files

@@ -6,19 +6,19 @@
 #+TAGLINE: Your forge, from the couch.
 #+PLATFORMS: iPhone, iPad
 #+TINT: #4338ca
-#+ICON: https://i.krz.sh/apps/gitbay/icon.png
-#+HERO: https://i.krz.sh/apps/gitbay/hero.jpg
+#+ICON: https://img.cleberg.net/apps/gitbay/icon.png
+#+HERO: https://img.cleberg.net/apps/gitbay/hero.jpg
 #+APPSTORE: https://apps.apple.com/us/app/gitbay/id6806399095
 #+REPO: https://gitbay.org/krz/gitbay-ios
 #+PRIVACY: https://gitbay.org/privacy
 #+HIGHLIGHT_1: Review and merge | Unified diffs, inline comments and approvals.
 #+HIGHLIGHT_2: Watch builds | Pick a job and read the logs when a build goes red.
 #+HIGHLIGHT_3: No passwords | A scoped token minted over SSH, kept in the keychain.
-#+SHOT_1: https://i.krz.sh/apps/gitbay/screenshots/web/01_dashboard.jpg | Dashboard | what is waiting on you
-#+SHOT_2: https://i.krz.sh/apps/gitbay/screenshots/web/02_repo.jpg | Repository | every repository surface in one list
-#+SHOT_3: https://i.krz.sh/apps/gitbay/screenshots/web/03_mr_list.jpg | Merge requests | merge requests, open through merged
-#+SHOT_4: https://i.krz.sh/apps/gitbay/screenshots/web/04_mr_detail.jpg | Merge request detail | description, checks, reviews, commits
-#+SHOT_5: https://i.krz.sh/apps/gitbay/screenshots/web/05_diff.jpg | Unified diff | read the diff, then decide
+#+SHOT_1: https://img.cleberg.net/apps/gitbay/screenshots/web/01_dashboard.jpg | Dashboard | what is waiting on you
+#+SHOT_2: https://img.cleberg.net/apps/gitbay/screenshots/web/02_repo.jpg | Repository | every repository surface in one list
+#+SHOT_3: https://img.cleberg.net/apps/gitbay/screenshots/web/03_mr_list.jpg | Merge requests | merge requests, open through merged
+#+SHOT_4: https://img.cleberg.net/apps/gitbay/screenshots/web/04_mr_detail.jpg | Merge request detail | description, checks, reviews, commits
+#+SHOT_5: https://img.cleberg.net/apps/gitbay/screenshots/web/05_diff.jpg | Unified diff | read the diff, then decide
 
 gitbay is a native iOS app for [[https://gitbay.org][gitbay]], a CLI-first git
 forge where SSH is the API and the command line is the product. the app is the
