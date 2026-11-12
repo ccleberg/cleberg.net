@@ -135,7 +135,7 @@ pre code { color: #323232; }
 @media (prefers-reduced-motion: reduce) { .screen .apps img { transition: none; } }
 
 /* A band per app: the top of each app page */
-.band { background: var(--tint); color: #f2f4f8; scroll-margin-top: 0; }
+.band { background: color-mix(in srgb, var(--tint) 80%, #000); color: #f2f4f8; scroll-margin-top: 0; }
 .band-in { max-width: var(--wide); margin: 0 auto; padding: clamp(3rem, 7vw, 6rem) var(--pad); display: grid; grid-template-columns: 5fr 7fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
 .band.flip .band-in { grid-template-columns: 7fr 5fr; }
 .band.flip .band-copy { order: 2; }
@@ -147,7 +147,7 @@ pre code { color: #323232; }
 .band dl { margin: 2rem 0 0; display: grid; gap: 1rem; }
 .band dt { font-weight: 600; }
 .band dd { margin: 0; opacity: .78; }
-.band-meta { margin: 1.75rem 0 0; font-size: .92rem; opacity: .7; }
+.band-meta { margin: 1.75rem 0 0; font-size: .92rem; opacity: .82; }
 .band-links { list-style: none; padding: 0; margin: .75rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .band-links a { display: inline-block; padding: .45rem 1rem; border-radius: 999px; background: rgba(255, 255, 255, .14); color: #fff; text-decoration: none; font-weight: 500; }
 .band-links li:first-child a { background: #f2f4f8; color: var(--tint); }
