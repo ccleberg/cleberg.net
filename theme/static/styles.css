@@ -25,13 +25,13 @@ img { max-width: 100%; height: auto; }
 
 /* Header and footer */
 header.site, footer.site { max-width: var(--wide); margin: 0 auto; padding: 1.5rem var(--pad); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .5rem 1.5rem; }
-header.site .mark { color: var(--fg); font-weight: 650; text-decoration: none; }
+header.site .mark { display: inline-block; padding: .55rem 0; color: var(--fg); font-weight: 650; text-decoration: none; }
 header.site ul, footer.site ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; }
-header.site nav a { color: var(--soft); text-decoration: none; }
+header.site nav a { display: inline-block; padding: .55rem 0; color: var(--soft); text-decoration: none; }
 header.site nav a:hover, header.site nav a[aria-current] { color: var(--fg); }
 header.site nav a[aria-current] { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .45em; }
 footer.site { border-top: 1px solid var(--rule); margin-top: clamp(3rem, 7vw, 5rem); padding-bottom: 3rem; color: var(--soft); font-size: .95rem; }
-footer.site a { color: var(--soft); }
+footer.site a { display: inline-block; padding: .55rem 0; color: var(--soft); }
 footer.site a:hover { color: var(--fg); }
 footer.site .built { margin: 0; }
 
@@ -46,7 +46,7 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.015em; font-weight: 650; }
 .meta { color: var(--soft); margin: 0 0 1rem; }
 time { color: var(--soft); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .page ul.tags { list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-wrap: wrap; gap: .4rem; }
-ul.tags a { display: inline-block; padding: .2rem .75rem; border-radius: 999px; background: var(--raise); color: var(--fg); text-decoration: none; font-size: .9rem; }
+ul.tags a { display: inline-block; padding: .55rem .9rem; border-radius: 999px; background: var(--raise); color: var(--fg); text-decoration: none; font-size: .9rem; }
 ul.tags a:hover { background: var(--fg); color: var(--bg); }
 .page ul, .page ol { padding-left: 1.25rem; }
 .page li { margin: .25rem 0; }
@@ -210,7 +210,7 @@ pre code { color: #323232; }
 .w-hosted .w-num { margin: 0; font-size: 3.4rem; line-height: 1; font-weight: 700; letter-spacing: -.04em; color: #fff; }
 .w-hosted p { margin: .3rem 0 1rem; font-size: .92rem; }
 .w-hosted ul { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: auto; }
-.w-hosted ul a { display: inline-block; padding: .2rem .6rem; border-radius: 999px; background: rgba(255, 255, 255, .12); color: #fff; text-decoration: none; font-size: .85rem; }
+.w-hosted ul a { display: inline-block; padding: .6rem .8rem; border-radius: 999px; background: rgba(255, 255, 255, .12); color: #fff; text-decoration: none; font-size: .85rem; }
 .w-hosted ul a:hover { background: rgba(255, 255, 255, .24); }
 .w-elsewhere li { padding: .3rem 0; }
 .w-elsewhere a { color: var(--fg); text-decoration: none; font-weight: 500; }
