@@ -17,14 +17,14 @@ well-researched and stable.</span><br>
 <span><strong>&#127810; Compost:</strong> Ideas you no longer agree with but want to
 keep for historical context.</span><br><br>
 </section>
-<ul>
+<ul class="post-rows">
 {%- for entry in pages %}
-<li>
-<a href="{{ root }}{{ entry.url }}">{{ entry.title }}</a>
+<li><a href="{{ root }}{{ entry.url }}">
+<strong>{{ entry.title }}</strong>
 {%- if entry.excerpt %}
 <span>{{ entry.excerpt }}</span>
 {%- endif %}
-</li>
+</a></li>
 {%- endfor %}
 </ul>
 {% endblock %}

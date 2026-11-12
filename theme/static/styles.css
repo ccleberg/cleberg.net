@@ -87,7 +87,7 @@ pre code { color: #323232; }
 .project i { font-style: normal; }
 
 /* Lists of posts and tags */
-.post-list, .detour-list, .tag-toc, .garden-list { list-style: none; padding: 0 !important; margin: 1.5rem 0 0; }
+.post-list, .detour-list, .tag-toc { list-style: none; padding: 0 !important; margin: 1.5rem 0 0; }
 .post-list-item { display: flex; gap: 1.25rem; align-items: baseline; padding: .65rem 0; border-top: 1px solid var(--rule); margin: 0 !important; }
 .post-list-item time { flex: 0 0 6.5rem; font-size: .92rem; }
 .post-list-item a { color: var(--fg); text-decoration: none; font-weight: 500; }
@@ -245,7 +245,7 @@ kbd { font-family: var(--mono); font-size: .85em; background: var(--raise); bord
 .year { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 2rem; margin-top: clamp(3rem, 6vw, 4.5rem); }
 .year h2 { margin: 0; font-size: clamp(2.4rem, 5vw, 3.6rem); line-height: 1; letter-spacing: -.04em; position: sticky; top: 1.5rem; align-self: start; font-variant-numeric: tabular-nums; }
 .year h2 span { display: block; margin-top: .5rem; font-size: .9rem; font-weight: 400; letter-spacing: 0; color: var(--soft); }
-.post-rows { list-style: none; margin: 0; padding: 0; }
+ul.post-rows { list-style: none; margin: 0; padding: 0; }
 .post-rows a { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 1.5rem; padding: .9rem 0; border-top: 1px solid var(--rule); color: var(--fg); text-decoration: none; }
 .post-rows strong { font-weight: 550; font-size: 1.08rem; }
 .post-rows span { grid-column: 1; color: var(--soft); font-size: .95rem; margin-top: .15rem; }
