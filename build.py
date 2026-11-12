@@ -83,7 +83,7 @@ def rewrite_img_urls(build_dir=".build"):
 # page carrying an old version as readily as one still carrying the template's
 # placeholder, and leaves prose that ends a paragraph with a link to orgo alone.
 ORGO_NOTE = re.compile(
-    r'(built with <a href="https://gitbay\.org/krz/orgo">orgo</a> )[^<]*(</p>)'
+    r'([Bb]uilt with <a href="https://gitbay\.org/krz/orgo">orgo</a> )[^<]*(</p>)'
 )
 
 
