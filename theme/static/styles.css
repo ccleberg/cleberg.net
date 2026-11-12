@@ -124,7 +124,7 @@ pre code { color: #323232; }
 .screen .apps a, .screen .apps li > div { display: flex; flex-direction: column; align-items: center; text-decoration: none; color: #fff; font-size: .78rem; text-shadow: 0 1px 2px rgba(0, 0, 0, .4); }
 .screen .apps img, .screen .blank { width: 100%; max-width: 76px; aspect-ratio: 1; border-radius: 22%; box-shadow: 0 0 0 1px rgba(255, 255, 255, .16), 0 6px 14px -6px rgba(0, 0, 0, .6); transition: transform .25s cubic-bezier(.2, .7, .2, 1); }
 .screen .apps a:hover img { transform: scale(1.06); }
-.screen .apps span { margin-top: .4rem; white-space: nowrap; }
+.screen .apps span:not(.blank) { margin-top: .4rem; white-space: nowrap; }
 .screen .blank { display: block; background: rgba(255, 255, 255, .18); border: 1px dashed rgba(255, 255, 255, .5); }
 .screen .dock { margin-top: auto; background: rgba(255, 255, 255, .16); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); border-radius: 30px; padding: .9rem; display: flex; justify-content: space-around; }
 .screen .dock a { color: #fff; text-decoration: none; font-size: .78rem; display: flex; flex-direction: column; align-items: center; gap: .3rem; }
