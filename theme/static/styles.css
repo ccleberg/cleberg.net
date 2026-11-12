@@ -13,7 +13,7 @@
 	:root { --bg: #111317; --fg: #ebebe6; --soft: #9a9da4; --raise: #1b1d23; --rule: #2a2c33; --link: #8db6f2; --visited: #c79bf2; --focus: #8db6f2; }
 }
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; color-scheme: light dark; }
 body { margin: 0; background: var(--bg); color: var(--fg); font: 400 1.0625rem/1.65 var(--font); -webkit-font-smoothing: antialiased; }
 a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: .18em; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
