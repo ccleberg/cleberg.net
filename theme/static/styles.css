@@ -37,7 +37,7 @@ footer.site .built { margin: 0; }
 
 /* Reading pages */
 .page { max-width: calc(var(--read) + 2 * var(--pad)); margin: 0 auto; padding: clamp(2rem, 6vw, 4rem) var(--pad) 0; }
-h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.015em; font-weight: 650; }
+h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -.015em; font-weight: 650; text-wrap: balance; }
 .page h1 { margin: 0 0 1rem; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.05; letter-spacing: -.035em; }
 .page h2 { margin: 2.75rem 0 .75rem; font-size: 1.5rem; }
 .page h3 { margin: 2rem 0 .5rem; font-size: 1.2rem; }
