@@ -152,6 +152,12 @@ pre code { color: #323232; }
 @media (prefers-reduced-motion: reduce) { .screen .apps img { transition: none; } }
 
 /* A band per app: the top of each app page */
+/* Tints for app bands (.t-<apps dir>) and software icons (.t-<name>). They are classes
+   because the CSP's style-src 'self' blocks style attributes. */
+.t-hutch { --tint: #3d5a80; } .t-domain-dig { --tint: #1c57bd; } .t-gitbay { --tint: #4338ca; } .t-orgstar { --tint: #5b7a2e; }
+.t-daybyday { --tint: #c2410c; } .t-moonrise { --tint: #0a1424; } .t-hellsite { --tint: #2a5bd7; }
+.t-orgo { --tint: #248a3d; } .w-software .t-gitbay { --tint: #3634a3; } .t-org-live { --tint: #0c817b; } .t-nfogen { --tint: #6c6c70; }
+.t-skunkyart { --tint: #c93400; } .t-1kb { --tint: #d70015; }
 .band { background: color-mix(in srgb, var(--tint) 80%, #000); color: #f5f5f7; }
 .band-in { max-width: var(--wide); margin: 0 auto; padding: var(--s-section) var(--pad); display: grid; grid-template-columns: 5fr 7fr; gap: var(--s-gutter); align-items: center; }
 .band-head { display: flex; align-items: center; gap: var(--s-4); }

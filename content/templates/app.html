@@ -1,14 +1,15 @@
 {# An app page, for everything under apps/. Selected by the [[pages]] rule in orgo.toml.
 
    The org files are krz.sh's app pages (krz/krz.sh content/apps/), so the keywords are
-   theirs: #+TINT, #+ICON, #+HERO, #+TAGLINE, #+PLATFORMS, #+APPSTORE, #+REPO, #+PRIVACY,
+   theirs: #+TINT (copied into styles.css as a .t-<dir> class, since the CSP blocks style
+   attributes), #+ICON, #+HERO, #+TAGLINE, #+PLATFORMS, #+APPSTORE, #+REPO, #+PRIVACY,
    #+HIGHLIGHT_n ("title | text") and #+SHOT_n ("src | alt | caption"). The body is the
    app's write-up. #}
 {% extends "base.html" %}
 {% block mainclass %}app{% endblock %}
 {% block main %}
 {%- set k = page.keywords %}
-<section class="band" style="--tint: {{ k.tint }}">
+<section class="band t-{{ (page.url | split("/"))[1] }}">
 <div class="band-in">
 <div class="band-copy">
 <p class="back"><a href="{{ root }}index.html">All apps</a></p>

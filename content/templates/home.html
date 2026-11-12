@@ -94,7 +94,7 @@ along the way.</p>
 <h2>Software</h2>
 <ul>
 {%- for s in work.software %}
-<li><a href="{{ s.url }}"><i style="--tint: {{ s.tint }}" aria-hidden="true">{{ s.name[:1] | upper }}</i><strong>{{ s.name }}</strong><span>{{ s.desc }}</span></a></li>
+<li><a href="{{ s.url }}"><i class="t-{{ s.name | lower }}" aria-hidden="true">{{ s.name[:1] | upper }}</i><strong>{{ s.name }}</strong><span>{{ s.desc }}</span></a></li>
 {%- endfor %}
 </ul>
 </section>
