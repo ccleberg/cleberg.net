@@ -99,10 +99,11 @@ pre code { color: #323232; }
 .detour-list a:hover { text-decoration: underline; }
 .detour-meta { display: block; color: var(--soft); font-size: .92rem; }
 .tag-toc { display: flex; flex-wrap: wrap; gap: .5rem; }
-.tag-toc li { margin: 0 !important; }
-.tag-toc a { display: inline-block; padding: .3rem .85rem; border-radius: 999px; background: var(--raise); color: var(--fg); text-decoration: none; }
-.tag-toc a:hover { background: var(--fg); color: var(--bg); }
-.tag-count { color: var(--soft); font-size: .88rem; margin-left: .25rem; }
+.tag-toc li { margin: 0 !important; display: flex; align-items: baseline; border-radius: 999px; background: var(--raise); }
+.tag-toc a { display: inline-block; padding: .55rem .25rem .55rem 1rem; border-radius: 999px; color: var(--fg); text-decoration: none; }
+.tag-toc li:hover { background: var(--fg); }
+.tag-toc li:hover a, .tag-toc li:hover .tag-count { color: var(--bg); }
+.tag-count { color: var(--soft); font-size: .88rem; padding-right: 1rem; font-variant-numeric: tabular-nums; }
 @media (max-width: 560px) { .post-list-item { flex-direction: column; gap: 0; } .post-list-item time { flex: none; } }
 
 /* Home: hero with the tablet */
