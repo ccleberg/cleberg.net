@@ -1,0 +1,27 @@
+#+TITLE: Day by Day
+#+SLUG: index
+#+OPTIONS: toc:nil num:nil
+#+DESCRIPTION: An educational iOS app with learning games for young children.
+#+WEIGHT: 4
+#+PLATFORMS: iPhone, iPad
+#+TINT: #c2410c
+#+ICON: https://i.krz.sh/apps/daybyday/icon.png
+#+HERO: https://i.krz.sh/apps/daybyday/hero.jpg?v=2.0
+#+APPSTORE: https://apps.apple.com/us/app/daybyday-learn/id6760321939
+#+REPO: https://gitbay.org/krz/daybyday
+#+PRIVACY: https://krz.sh/privacy/daybyday/
+#+HIGHLIGHT_1: Learning games | Find it, week train, tracing, counting and more across 11 topics.
+#+HIGHLIGHT_2: For little hands | Big pictures, no reading needed, and every prompt spoken aloud.
+#+HIGHLIGHT_3: No data collected | No ads, no accounts, nothing leaves the device.
+#+SHOT_1: https://i.krz.sh/apps/daybyday/screenshots/web/01-home.jpg?v=2.0 | Home | pick a topic
+#+SHOT_2: https://i.krz.sh/apps/daybyday/screenshots/web/02-routine.jpg?v=2.0 | Today | a daily routine for each child
+#+SHOT_3: https://i.krz.sh/apps/daybyday/screenshots/web/03-animals.jpg?v=2.0 | Animals | cards with sounds and facts
+#+SHOT_4: https://i.krz.sh/apps/daybyday/screenshots/web/04-train.jpg?v=2.0 | Week train | put the days in order
+#+SHOT_5: https://i.krz.sh/apps/daybyday/screenshots/web/05-trace.jpg?v=2.0 | Tracing | trace letters and shapes
+#+SHOT_6: https://i.krz.sh/apps/daybyday/screenshots/web/06-calendar.jpg?v=2.0 | Stickers | a sticker for every day
+
+Day by Day is a gentle, ad-free iOS app of learning games for children aged
+4 and 5: days, months, seasons, numbers, colors, shapes, letters, animals,
+weather, body parts, and food. A friendly owl asks the questions, a daily routine
+ends with a sticker on the calendar, and practice adapts to what each child is
+still learning. Designed for little hands, with no data collection.

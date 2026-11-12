@@ -1,0 +1,71 @@
+#+TITLE: gitbay
+#+SLUG: index
+#+OPTIONS: toc:nil num:nil
+#+DESCRIPTION: A native iOS client for gitbay, a CLI-first git forge.
+#+WEIGHT: 3
+#+TAGLINE: Your forge, from the couch.
+#+PLATFORMS: iPhone, iPad
+#+TINT: #4338ca
+#+ICON: https://i.krz.sh/apps/gitbay/icon.png
+#+HERO: https://i.krz.sh/apps/gitbay/hero.jpg
+#+APPSTORE: https://apps.apple.com/us/app/gitbay/id6806399095
+#+REPO: https://gitbay.org/krz/gitbay-ios
+#+PRIVACY: https://gitbay.org/privacy
+#+HIGHLIGHT_1: Review and merge | Unified diffs, inline comments and approvals.
+#+HIGHLIGHT_2: Watch builds | Pick a job and read the logs when a build goes red.
+#+HIGHLIGHT_3: No passwords | A scoped token minted over SSH, kept in the keychain.
+#+SHOT_1: https://i.krz.sh/apps/gitbay/screenshots/web/01_dashboard.jpg | Dashboard | what is waiting on you
+#+SHOT_2: https://i.krz.sh/apps/gitbay/screenshots/web/02_repo.jpg | Repository | every repository surface in one list
+#+SHOT_3: https://i.krz.sh/apps/gitbay/screenshots/web/03_mr_list.jpg | Merge requests | merge requests, open through merged
+#+SHOT_4: https://i.krz.sh/apps/gitbay/screenshots/web/04_mr_detail.jpg | Merge request detail | description, checks, reviews, commits
+#+SHOT_5: https://i.krz.sh/apps/gitbay/screenshots/web/05_diff.jpg | Unified diff | read the diff, then decide
+
+gitbay is a native iOS app for [[https://gitbay.org][gitbay]], a CLI-first git
+forge where SSH is the API and the command line is the product. the app is the
+other half of that: a reading, reviewing and responding surface for the times
+you are not at a keyboard. universal, for iPhone and iPad.
+
+* why it exists
+gitbay is built so the terminal is the primary interface, and nothing about it
+needs a browser. but review does not always happen at a desk. this app is for
+the parts of the work that are decisions rather than typing: reading a diff,
+answering a question, approving a merge, checking why a build went red. it does
+that without pretending a phone is a workstation.
+
+* what it does
+- read and review merge requests, with a unified diff and inline comments
+- triage issues: labels, assignees, milestones, comments
+- browse repositories: file tree, blobs with syntax highlighting, history at a
+  ref or per file, blame, branches and tags
+- edit a file on a branch, when the fix is one line
+- watch builds, pick a job, read the logs
+- read releases and the wiki
+- explore repositories, follow activity, and read profiles
+
+* READMEs that render properly
+Markdown and Org both render. Org is not converted to HTML and shown in a web
+view; it renders as native views through
+[[https://gitbay.org/krz/org-swift][OrgSwiftUI]], so the text is selectable, it
+scales with Dynamic Type, and VoiceOver reads it. syntax highlighting inside
+source blocks follows the system light and dark appearance.
+
+* your key is your identity
+there are no passwords and no krz account. auth is a bearer token you mint over
+SSH on a machine that already has your key:
+
+#+begin_src sh
+gitbay auth token create --name iphone --scope full --ttl 90d
+#+end_src
+
+the token lives in the iOS keychain. a read-only token works too, it just
+cannot comment or merge.
+
+* any instance
+gitbay.org is not special. the host is entered at sign-in, so the app works
+against whatever instance you run.
+
+* no analytics, no ads, no SDKs
+the app talks to your instance and to nothing else. there are no trackers, no
+advertising, and no third-party analytics: two dependencies in total, both for
+rendering. what you read and what you write stays between your device and your
+forge.

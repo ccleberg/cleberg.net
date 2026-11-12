@@ -1,47 +1,102 @@
-{# The home page: authored prose plus the most recent posts.
+{# The home page: an introduction with the apps on a tablet home screen, then the rest of
+   the work and the latest writing as widgets.
 
-   A generated page, so it has no source .org file — `pages` holds the blog collection's
-   entries, newest first, and the prose lives here. The <title> is bare on purpose: the
-   home page is "cleberg.net" and not "cleberg.net - cleberg.net". #}
+   A generated page with no source .org file. Its collection covers the whole site, so
+   `pages` is split here by path: apps/ for the home screen, blog/ for the posts. The
+   rest of the work lives in data/work.html. The <title> is bare on purpose: the home
+   page is "cleberg.net" and not "cleberg.net - cleberg.net". #}
 {% extends "base.html" %}
+{% import "data/work.html" as work %}
 {% block subtitle %}{% endblock %}
+{% block mainclass %}home{% endblock %}
 {% block main %}
-<section>
-<h1>{{ page.title }}</h1>
-<p>privacy &middot; self-hosting &middot; ios</p>
-<p>I build tools, write about systems, and run my own infrastructure. Focused on privacy,
-user control, and long-term utility.</p>
-<p>I also run <a href="https://krz.sh">krz</a>, which makes small native apps and
-self-hosted services, and <a href="https://audit-labs.dev">Audit Labs</a>, open-source
-tools for audit evidence. More on my <a href="{{ root }}work/index.html">work</a> page.</p>
-<p><a href="{{ root }}uses/index.html">uses</a> &middot; <a href="{{ root }}now/index.html">now</a></p>
+{%- set apps = pages | selectattr("source", "startingwith", "apps/") | sort(attribute="keywords.weight") %}
+{%- set posts = pages | selectattr("source", "startingwith", "blog/") | list %}
+<section class="hero">
+<div class="hero-copy">
+<h1>Small apps, built to last, with no tracking.</h1>
+<p>I'm Christian Cleberg. I build native apps and self-hosted services under
+<a href="https://krz.sh">krz</a>, open tools for audit evidence under
+<a href="https://audit-labs.dev">Audit Labs</a>, and write about privacy, self-hosting
+and iOS.</p>
+<p class="hint">Tap an app to open it.</p>
+</div>
+<div class="tablet">
+<div class="screen">
+<div class="status" aria-hidden="true"><span>9:41</span><span>krz</span></div>
+<ul class="apps" aria-label="Apps">
+{%- for app in apps %}
+<li><a href="{{ root }}{{ app.url }}"><img src="{{ app.keywords.icon }}" alt="" width="76" height="76"><span>{{ app.title }}</span></a></li>
+{%- endfor %}
+<li><div><span class="blank" aria-hidden="true"></span><span>{{ work.teaser.name }}</span></div></li>
+</ul>
+<ul class="dock" aria-label="Sections">
+<li><a href="{{ root }}blog/index.html"><i class="d-blog">B</i>Blog</a></li>
+<li><a href="{{ root }}garden/index.html"><i class="d-garden">G</i>Garden</a></li>
+<li><a href="{{ root }}now/index.html"><i class="d-now">N</i>Now</a></li>
+<li><a href="{{ root }}uses/index.html"><i class="d-uses">U</i>Uses</a></li>
+</ul>
+</div>
+</div>
 </section>
 
-<section>
-<h2>recent posts</h2>
-<p>Things I've written recently.</p>
-<ul class="post-list">
-{%- for entry in pages %}
-{%- if loop.index <= 3 %}
-<li class="post-list-item">
-{%- if entry.date_iso %}<time datetime="{{ entry.date_iso }}">{{ entry.date_iso }}</time>{% endif %}
-<a href="{{ root }}{{ entry.url }}">{{ entry.title }}</a>
-</li>
-{%- endif %}
+<div class="widgets">
+<section class="w w-writing">
+<h2>Latest writing</h2>
+{%- set first = posts[0] %}
+<a class="w-lead" href="{{ root }}{{ first.url }}">
+<time datetime="{{ first.date_iso }}">{{ first.date_iso }}</time>
+<strong>{{ first.title }}</strong>
+{%- if first.excerpt %}<span>{{ first.excerpt }}</span>{% endif %}
+</a>
+<ul>
+{%- for entry in posts[1:5] %}
+<li><a href="{{ root }}{{ entry.url }}"><strong>{{ entry.title }}</strong><time datetime="{{ entry.date_iso }}">{{ entry.date_iso }}</time></a></li>
 {%- endfor %}
 </ul>
-<p><a href="{{ root }}blog/index.html">All Posts &rarr;</a></p>
+<a class="w-more" href="{{ root }}blog/index.html">All {{ posts | length }} posts</a>
 </section>
 
-<section>
-<h2>elsewhere</h2>
-<p>Places to find me online.</p>
+<section class="w w-audit">
+<h2><a href="https://audit-labs.dev">Audit Labs</a></h2>
+<p>Open-source tools that take audit evidence from a live system to a scored framework.
+<a href="https://gitbay.org/audit-labs/gh-attest">gh-attest</a> records GitHub settings
+along the way.</p>
+<ol>
+{%- for s in work.audit_chain %}
+<li><a href="{{ s.url }}"><span>{{ s.step }}</span><strong>{{ s.name }}</strong></a></li>
+{%- endfor %}
+</ol>
+</section>
+
+<section class="w w-hosted">
+<h2><a href="https://krz.sh/services/">Hosted on krz.sh</a></h2>
+<p class="w-num">12</p>
+<p>public frontends and tools, free to use.</p>
 <ul>
-<li>gitbay: <a href="https://gitbay.org/cmc">@cmc</a></li>
-<li>email: <a href="mailto:hello@cleberg.net">hello@cleberg.net</a> (<a href="{{ root }}gpg.txt">GPG</a>)</li>
-<li>lemmy: <a href="https://r.nf/u/cmc">@cmc</a></li>
-<li>mastodon: <a href="https://c.im/@cmc">@cmc</a></li>
-<li>pixelfed: <a href="https://gram.social/cmc">@cmc</a></li>
+{%- for h in work.hosted %}<li><a href="{{ h[1] }}">{{ h[0] }}</a></li>{% endfor %}
 </ul>
 </section>
+
+<section class="w w-elsewhere">
+<h2>Elsewhere</h2>
+<ul>
+<li><a href="mailto:hello@cleberg.net">Email</a> <a class="sub" href="{{ root }}gpg.txt">GPG</a></li>
+<li><a href="https://gitbay.org/cmc">gitbay</a></li>
+<li><a href="https://c.im/@cmc">Mastodon</a></li>
+<li><a href="https://r.nf/u/cmc">Lemmy</a></li>
+<li><a href="https://gram.social/cmc">Pixelfed</a></li>
+<li><a href="{{ root }}feed.xml">RSS</a></li>
+</ul>
+</section>
+
+<section class="w w-software">
+<h2>Software</h2>
+<ul>
+{%- for s in work.software %}
+<li><a href="{{ s.url }}"><i style="--tint: {{ s.tint }}" aria-hidden="true">{{ s.name[:1] | upper }}</i><strong>{{ s.name }}</strong><span>{{ s.desc }}</span></a></li>
+{%- endfor %}
+</ul>
+</section>
+</div>
 {% endblock %}

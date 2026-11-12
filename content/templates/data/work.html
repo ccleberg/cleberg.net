@@ -1,0 +1,30 @@
+{#- The work on the home page that is not an app. Imported by home.html; the apps
+    themselves are the pages under apps/.
+
+    `teaser` is the unannounced app: no page, no link. Software entries carry a tint for
+    their icon. The Audit Labs chain is in the order evidence moves through it. -#}
+{%- set teaser = {"name": "Coming", "tint": "#2f4858"} -%}
+
+{%- set software = [
+  {"name": "orgo", "url": "https://gitbay.org/krz/orgo", "desc": "builds this site", "tint": "#5b7a2e"},
+  {"name": "gitbay", "url": "https://gitbay.org", "desc": "a CLI-first git forge", "tint": "#4338ca"},
+  {"name": "org-live", "url": "https://org.krz.sh", "desc": "org on the web", "tint": "#0f766e"},
+  {"name": "nfogen", "url": "https://gitbay.org/krz/nfogen", "desc": "NFO files", "tint": "#1c1e24"},
+  {"name": "SkunkyArt", "url": "https://gitbay.org/krz/skunky-art", "desc": "DeviantArt frontend", "tint": "#b45309"},
+  {"name": "1kb", "url": "https://rogue.krz.sh/1kb/#g", "desc": "tiny roguelike", "tint": "#9f1239"},
+] -%}
+
+{%- set audit_chain = [
+  {"step": "Collect", "name": "audit-tools", "url": "https://gitbay.org/audit-labs/audit-tools"},
+  {"step": "Seal", "name": "evidence-seal", "url": "https://gitbay.org/audit-labs/evidence-seal"},
+  {"step": "Report", "name": "audit-report", "url": "https://gitbay.org/audit-labs/audit-report"},
+  {"step": "Score", "name": "control-coverage", "url": "https://gitbay.org/audit-labs/control-coverage"},
+] -%}
+
+{%- set hosted = [
+  ["SearXNG", "https://search.krz.sh"],
+  ["Piped", "https://pipedapi.krz.sh"],
+  ["BreezeWiki", "https://bw.krz.sh"],
+  ["CyberChef", "https://cc.krz.sh"],
+  ["Send", "https://send.krz.sh"],
+] -%}

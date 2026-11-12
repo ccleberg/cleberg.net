@@ -1,0 +1,49 @@
+{# An app page, for everything under apps/. Selected by the [[pages]] rule in orgo.toml.
+
+   The org files are krz.sh's app pages (krz/krz.sh content/apps/), so the keywords are
+   theirs: #+TINT, #+ICON, #+HERO, #+TAGLINE, #+PLATFORMS, #+APPSTORE, #+REPO, #+PRIVACY,
+   #+HIGHLIGHT_n ("title | text") and #+SHOT_n ("src | alt | caption"). The body is the
+   app's write-up. #}
+{% extends "base.html" %}
+{% block mainclass %}app{% endblock %}
+{% block main %}
+{%- set k = page.keywords %}
+<section class="band" style="--tint: {{ k.tint }}">
+<div class="band-in">
+<div class="band-copy">
+<p class="back"><a href="{{ root }}index.html">All apps</a></p>
+<div class="band-head"><img src="{{ k.icon }}" alt="" width="72" height="72"><h1>{{ page.title }}</h1></div>
+<p class="band-tag">{{ k.tagline | default(k.description) }}</p>
+{%- if k.highlight_1 %}
+<dl>
+{%- for i in range(1, 10) if k["highlight_" ~ i] %}{% set h = k["highlight_" ~ i] | split(" | ") %}
+<div><dt>{{ h[0] }}</dt><dd>{{ h[1] }}</dd></div>
+{%- endfor %}
+</dl>
+{%- endif %}
+<p class="band-meta">{{ k.platforms }}</p>
+<ul class="band-links">
+{%- if k.appstore %}<li><a href="{{ k.appstore }}">App Store</a></li>{% endif %}
+{%- if k.repo %}<li><a href="{{ k.repo }}">Source</a></li>{% endif %}
+{%- if k.privacy %}<li><a href="{{ k.privacy }}">Privacy</a></li>{% endif %}
+</ul>
+</div>
+<div class="band-shot"><img src="{{ k.hero }}" alt="{{ page.title }} on {{ k.platforms }}"></div>
+</div>
+</section>
+
+{%- if k.shot_1 %}
+<section class="shots" aria-label="Screenshots">
+<ul tabindex="0">
+{%- for i in range(1, 21) if k["shot_" ~ i] %}{% set s = k["shot_" ~ i] | split(" | ") %}
+<li><figure><img loading="lazy" src="{{ s[0] }}" alt="{{ s[1] }}"><figcaption><strong>{{ s[1] }}</strong>{{ s[2] }}</figcaption></figure></li>
+{%- endfor %}
+</ul>
+</section>
+{%- endif %}
+
+<article class="page app-body">
+{%- if k.description %}<p class="lede">{{ k.description }}</p>{% endif %}
+{{ body | safe }}
+</article>
+{% endblock %}

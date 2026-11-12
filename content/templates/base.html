@@ -1,9 +1,8 @@
 {# Page layout for the site.
 
    Styling comes from theme/static/styles.css, published by `[build] assets` in
-   orgo.toml and read in place rather than copied. It is served as authored: at ~1KB,
-   minifying it saved 52 bytes over the wire once compressed, which did not pay for a
-   build step and a toolchain dependency.
+   orgo.toml and read in place rather than copied. It is served as authored, without a
+   minifying build step. The one web font, Onest, is self-hosted from theme/static/fonts/.
 
    Available here: page (.title .url .source .date .date_iso .tags .excerpt .toc
    .keywords), site, nav, root, stylesheet. See the orgo guide on Templates. #}
@@ -43,6 +42,7 @@
 <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | truncate(150) }}{% else %}{{ site.description }}{% endif %}">
 <link rel="canonical" href="{{ page.url | absolute | replace("index.html", "") }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ root }}feed.xml">
+<link rel="preload" href="{{ root }}fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ root }}styles.css" type="text/css">
 <link rel="icon" href="data:,">
 {#- rel="me" identity links, spelled as <link> rather than <a>: a browser hoists a
@@ -58,24 +58,28 @@
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
 
+<header class="site">
+<a class="mark" href="{{ root }}index.html">Christian Cleberg</a>
 <nav aria-label="Site Navigation">
 <ul>
-<li><a href="{{ root }}index.html">home</a></li>
 {%- for item in nav %}
-<li><a href="{{ item.url }}">{{ item.title | lower }}</a></li>
+<li><a href="{{ item.url }}">{{ item.title | capitalize }}</a></li>
 {%- endfor %}
 </ul>
 </nav>
+</header>
 
-<main id="main-content">
+{#- The home page overrides `mainclass` to run its bands edge to edge; every other page
+    reads in a single column. #}
+<main id="main-content" class="{% block mainclass %}page{% endblock %}">
 {% block main %}
 <article>
 <h1>{{ page.title }}</h1>
 {%- if page.date_iso %}
-<p><time datetime="{{ page.date_iso }}">{{ page.date_iso }}</time>{% if page.excerpt %} &middot; {{ page.excerpt }}{% endif %}</p>
+<p class="meta"><time datetime="{{ page.date_iso }}">{{ page.date_iso }}</time>{% if page.excerpt %} &middot; {{ page.excerpt }}{% endif %}</p>
 {%- endif %}
 {%- if page.tags %}
-<p class="tags">:{% for tag in page.tags %}<a href="{{ root }}tags/{{ tag }}.html">{{ tag }}</a>:{% endfor %}</p>
+<ul class="tags">{% for tag in page.tags %}<li><a href="{{ root }}tags/{{ tag }}.html">{{ tag }}</a></li>{% endfor %}</ul>
 {%- endif %}
 {#- Blog posts add a reply footer inside this block; see post.html, which the
     [[pages]] rule in orgo.toml selects for everything under blog/. #}
@@ -86,14 +90,17 @@
 {% endblock %}
 </main>
 
-<footer>
-<a href="https://gitbay.org/cmc/cleberg.net">source</a> &middot;
-<a href="{{ root }}feed.xml">rss</a> &middot;
-<a href="http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/">onion</a> &middot;
-<a href="{{ root }}tips/index.html">tips</a> &middot;
-<a href="https://iheartrss.com/">i &hearts; rss</a>
-<p>[ <a href="https://krz.sh">krz</a> &middot; <a href="https://audit-labs.dev">audit labs</a> ]</p>
-<p>built with <a href="https://gitbay.org/krz/orgo">orgo</a> ORGO_VERSION</p>
+<footer class="site">
+<p class="built">Built with <a href="https://gitbay.org/krz/orgo">orgo</a> ORGO_VERSION</p>
+<ul>
+<li><a href="https://krz.sh">krz</a></li>
+<li><a href="https://audit-labs.dev">Audit Labs</a></li>
+<li><a href="https://gitbay.org/cmc/cleberg.net">Source</a></li>
+<li><a href="{{ root }}feed.xml">RSS</a></li>
+<li><a href="http://paske4urhs6nttrtlkuwa5cowum3fjkc6yv6kl4ncx3mjxcd77764nqd.onion/">Onion</a></li>
+<li><a href="{{ root }}tips/index.html">Tips</a></li>
+<li><a href="https://iheartrss.com/">i &hearts; rss</a></li>
+</ul>
 </footer>
 </body>
 </html>

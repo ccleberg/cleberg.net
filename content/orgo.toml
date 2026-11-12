@@ -17,15 +17,15 @@ base_url = "https://cleberg.net"
 
 [nav]
 # Explicit, because the pages that belong in the nav are not all top-level: /blog/ and
-# /garden/ are generated below. index.org is deliberately absent — the layout writes the
-# Home link itself.
+# /garden/ are generated below. index.org is deliberately absent — the layout's name
+# mark links home. The work lives on the home page; /work/ only redirects there.
 #
 # Generated pages are named by their output path, authored ones by their source. A
 # collection with `nav = true` that is not listed here gets appended after everything
 # that is — which is why the tags collection below does not set `nav = true`: the live
 # nav has no Tags entry.
 mode = "explicit"
-pages = ["blog/index.html", "garden/index.html", "work/index.org"]
+pages = ["blog/index.html", "garden/index.html", "now/index.org", "uses/index.org"]
 
 [build]
 # theme/static/ is the site's static root, published at /. orgo reads it from here
@@ -42,6 +42,11 @@ dir = "templates"
 [[pages]]
 match = "blog"
 template = "post.html"
+
+# The app pages, copied from krz.sh's and read by the same keywords.
+[[pages]]
+match = "apps"
+template = "app.html"
 
 [highlight]
 # Two themes, because the site follows the reader's colour scheme and one theme cannot.
@@ -71,8 +76,11 @@ section_numbers = true
 # both of which are now [site] settings above. Restore it any time with
 # `git checkout content/index.org`, but then this collection must output somewhere else —
 # two pages cannot claim one URL, and orgo fails the build rather than picking a winner.
+#
+# `source` is empty so the page sees both the apps and the posts; home.html splits them
+# by path.
 [[collections]]
-source = "blog"
+source = ""
 output = "index.html"
 template = "home.html"
 title = "Christian Cleberg"

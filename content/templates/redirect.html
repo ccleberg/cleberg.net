@@ -1,0 +1,16 @@
+{# A page that has moved. `#+REDIRECT:` names the new location relative to the site
+   root; the meta refresh sends browsers there and the link covers anything that does
+   not follow it. Not extended from base.html, so it carries no layout. #}
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+<meta charset="utf-8">
+<title>{{ page.title }} - {{ site.title }}</title>
+<meta http-equiv="refresh" content="0; url={{ root }}{{ page.keywords.redirect }}">
+<link rel="canonical" href="{{ page.keywords.redirect | absolute }}">
+<meta name="robots" content="noindex">
+</head>
+<body>
+<p>Moved to <a href="{{ root }}{{ page.keywords.redirect }}">{{ page.keywords.redirect }}</a>.</p>
+</body>
+</html>

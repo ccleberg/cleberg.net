@@ -1,34 +1,56 @@
 {# The blog index at /blog/.
-   Separate from list.html because the page carries its own prose. #}
+   Separate from list.html because the page carries its own prose. The three newest
+   posts lead as cards; the full archive follows, grouped by year. #}
 {% extends "base.html" %}
 
-{#- Group the list under year headings, as the live site does. Set to false for one flat
-    list; styles.css has .post-list-year either way. `page.year` comes from #+DATE:, and
-    a post without one lands in its own group at the end rather than being dropped. #}
+{#- Group the archive under year headings, as the live site does. Set to false for one
+    flat list. `page.year` comes from #+DATE:, and a post without one lands in its own
+    group at the end rather than being dropped. #}
 {%- set group_by_year = true %}
 
+{%- macro row(entry) %}
+<li><a href="{{ root }}{{ entry.url }}">
+<strong>{{ entry.title }}</strong>
+{%- if entry.excerpt %}<span>{{ entry.excerpt }}</span>{% endif %}
+{%- if entry.date_iso %}<time datetime="{{ entry.date_iso }}">{{ entry.date_iso[5:] }}</time>{% endif %}
+</a></li>
+{%- endmacro %}
+
+{% block mainclass %}wide{% endblock %}
 {% block main %}
+<header class="blog-head">
 <h1>{{ page.title }}</h1>
-<p>Use <code>&#8984; F</code> / <code>Ctrl F</code> to search &middot; <a href="{{ root }}feed.xml">RSS Feed</a></p>
-<p>Want to browse by topic instead? Head over to the <a href="{{ root }}tags/index.html">tags</a> page.</p>
-<ul class="post-list">
+<p>{{ pages | length }} posts on privacy, self-hosting, iOS, audit work and the places
+in between. Use <kbd>&#8984; F</kbd> or <kbd>Ctrl F</kbd> to search.</p>
+<ul class="chips">
+<li><a href="{{ root }}tags/index.html">Browse by tag</a></li>
+<li><a href="{{ root }}detour/index.html">detour series</a></li>
+<li><a href="{{ root }}feed.xml">RSS feed</a></li>
+</ul>
+</header>
+
+<ul class="post-cards">
+{%- for entry in pages[:3] %}
+<li><a href="{{ root }}{{ entry.url }}">
+<time datetime="{{ entry.date_iso }}">{{ entry.date_iso }}</time>
+<strong>{{ entry.title }}</strong>
+{%- if entry.excerpt %}<span>{{ entry.excerpt }}</span>{% endif %}
+</a></li>
+{%- endfor %}
+</ul>
+
 {%- if group_by_year %}
 {%- for year, posts in pages | groupby("year") | reverse %}
-<li class="post-list-year">{{ year if year else "undated" }}</li>
-{%- for entry in posts %}
-<li class="post-list-item">
-{%- if entry.date_iso %}<time datetime="{{ entry.date_iso }}">{{ entry.date_iso }}</time>{% endif %}
-<a href="{{ root }}{{ entry.url }}">{{ entry.title }}</a>
-</li>
-{%- endfor %}
+<section class="year">
+<h2>{{ year if year else "Undated" }}<span>{{ posts | length }} posts</span></h2>
+<ul class="post-rows">
+{%- for entry in posts %}{{ row(entry) }}{% endfor %}
+</ul>
+</section>
 {%- endfor %}
 {%- else %}
-{%- for entry in pages %}
-<li class="post-list-item">
-{%- if entry.date_iso %}<time datetime="{{ entry.date_iso }}">{{ entry.date_iso }}</time>{% endif %}
-<a href="{{ root }}{{ entry.url }}">{{ entry.title }}</a>
-</li>
-{%- endfor %}
-{%- endif %}
+<ul class="post-rows">
+{%- for entry in pages %}{{ row(entry) }}{% endfor %}
 </ul>
+{%- endif %}
 {% endblock %}

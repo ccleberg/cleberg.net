@@ -1,0 +1,40 @@
+#+TITLE: hellsite.
+#+SLUG: index
+#+OPTIONS: toc:nil num:nil
+#+DESCRIPTION: A native Tumblr client for iPhone, iPad and Mac.
+#+WEIGHT: 6
+#+TAGLINE: Tumblr, native.
+#+PLATFORMS: iPhone, iPad, Mac
+#+TINT: #2a5bd7
+#+PRIVACY: https://krz.sh/privacy/hellsite/
+#+ICON: https://i.krz.sh/apps/hellsite/icon.png?v=0.1.0
+#+HERO: https://i.krz.sh/apps/hellsite/hero.jpg?v=0.1.0
+#+SHOT_1: https://i.krz.sh/apps/hellsite/screenshots/web/01-dashboard.jpg?v=0.1.0 | Dashboard | the dashboard Tumblr sends, in order
+#+SHOT_2: https://i.krz.sh/apps/hellsite/screenshots/web/02-post.jpg?v=0.1.0 | Post | a post with its notes
+#+SHOT_3: https://i.krz.sh/apps/hellsite/screenshots/web/03-blog.jpg?v=0.1.0 | Blog | a blog with its header and posts
+#+SHOT_4: https://i.krz.sh/apps/hellsite/screenshots/web/04-gallery.jpg?v=0.1.0 | Gallery | photo and video posts as a grid
+#+SHOT_5: https://i.krz.sh/apps/hellsite/screenshots/web/05-explore.jpg?v=0.1.0 | Explore | tags, lists and read later
+#+SHOT_6: https://i.krz.sh/apps/hellsite/screenshots/web/06-compose.jpg?v=0.1.0 | Compose | write a post, queue or draft it
+#+HIGHLIGHT_1: Pick up where you left off | After a day away, one tap takes you back to the last post you read, on any of your devices.
+#+HIGHLIGHT_2: Post from anywhere | Write posts with photos, keep drafts, fill your queue and answer asks.
+#+HIGHLIGHT_3: At home on Apple devices | Widgets, Shortcuts, Handoff, sharing from other apps, and keyboard shortcuts on Mac.
+
+hellsite. is a Tumblr app for iPhone, iPad and Mac. Read your dashboard, blogs
+and tags; like, reblog and follow; write posts with photos, keep drafts,
+schedule posts in your queue and answer asks. Activity shows your notes and
+new followers, with notifications if you want them.
+
+The dashboard is the one Tumblr sends, in the same order. hellsite. remembers
+the last post you read, so after a day away you can jump straight back and
+read up to the newest, and that place follows you from your phone to your Mac.
+Calm mode hides note counts, keeps GIFs and video still until you tap them,
+and holds new posts until you ask for them. Posts with content warnings you
+choose, or from blogs and words you mute, fold away behind a tap.
+
+There's a gallery for photo and video posts, a reading view for long text,
+lists that read several blogs as one feed, and a shelf for posts to read
+later. For your own blog there are post stats, a queue planner and a way to
+fix a tag across many posts at once. On iPad and Mac the feed sits next to the
+post you're reading, and each window on Mac can use its own account.
+
+No ads, no tracking, no account with us. You sign in with Tumblr.

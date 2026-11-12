@@ -1,0 +1,54 @@
+#+TITLE: Moonrise
+#+SLUG: index
+#+OPTIONS: toc:nil num:nil
+#+DESCRIPTION: The sky tonight, the solar system, the Sun and launches, with a library of 370 pages, for iPhone, iPad and Apple Watch.
+#+WEIGHT: 5
+#+TAGLINE: Night sky, planets, missions.
+#+PLATFORMS: iPhone, iPad, Mac, Apple Watch
+#+TINT: #0a1424
+#+ICON: https://i.krz.sh/apps/moonrise/icon.png
+#+HERO: https://i.krz.sh/apps/moonrise/hero.jpg?v=5.8.0.1
+#+REPO: https://gitbay.org/krz/moonrise
+#+PRIVACY: https://krz.sh/privacy/moonrise/
+#+HIGHLIGHT_1: Your sky | Stars, planets and the Moon for your place and time, from 3000 BCE to 3000 CE.
+#+HIGHLIGHT_2: Live space | The Sun and solar wind now, aurora alerts, launches, eclipses, satellite passes and the Deep Space Network.
+#+HIGHLIGHT_3: Library | 370 pages on planets, moons, stars, constellations, deep-sky objects and spacecraft.
+#+SHOT_1: https://i.krz.sh/apps/moonrise/screenshots/web/01-sky.jpg?v=5.8.0.1 | Sky | the sky where you are
+#+SHOT_2: https://i.krz.sh/apps/moonrise/screenshots/web/02-tonight.jpg?v=5.8.0.1 | Tonight | moon, planets and passes tonight
+#+SHOT_3: https://i.krz.sh/apps/moonrise/screenshots/web/03-system.jpg?v=5.8.0.1 | Solar system map | probes leaving the solar system
+#+SHOT_4: https://i.krz.sh/apps/moonrise/screenshots/web/04-3d.jpg?v=5.8.0.1 | Solar system in 3D | the solar system in 3D
+#+SHOT_5: https://i.krz.sh/apps/moonrise/screenshots/web/05-sun.jpg?v=5.8.0.1 | Sun | the Sun now, and the aurora
+#+SHOT_6: https://i.krz.sh/apps/moonrise/screenshots/web/06-launches.jpg?v=5.8.0.1 | Launches | launches with countdowns
+#+SHOT_7: https://i.krz.sh/apps/moonrise/screenshots/web/07-library.jpg?v=5.8.0.1 | Library | a library of 370 pages
+#+SHOT_8: https://i.krz.sh/apps/moonrise/screenshots/web/08-jupiter.jpg?v=5.8.0.1 | Jupiter | every planet and major moon
+
+Moonrise draws the sky above you from real data: about 130,000 stars down to
+magnitude 9, all 88 constellations, the Milky Way, 900 galaxies, clusters and
+nebulae, bright comets, the planets and the Moon at its true phase, with sky
+cultures, guided tours, a horizon you can draw and a red night mode. Hold the
+phone up to see the sky over the camera.
+
+The System tab shows the planets, comets and spacecraft from above or in 3D,
+between 1958 and 2050, including Juno, Europa Clipper, JUICE, Psyche, Lucy and
+Parker Solar Probe. The Sun tab shows NASA’s latest images with active regions
+labelled, the solar wind, the coronagraph, NOAA’s solar wind forecast, the
+solar cycle, the aurora forecast and today’s golden and blue hours.
+
+Events lists the year’s eclipses, meteor showers and planets at their best.
+Eclipses come with local contact times, cloud history along the path, the
+nearest place to see totality, an exposure guide and taps on the wrist from
+Apple Watch. Launches have countdowns on the Lock Screen that update as the
+launch is held or scrubbed, and can start on their own for the rockets and
+providers you follow. Geomagnetic storms, meteor shower nights, satellite
+passes and eclipses can go on the Lock Screen too.
+
+The observing log keeps plain-text files and tracks programs such as the
+Messier list. It exports variable star estimates for the AAVSO, comet
+observations for COBS and meteor counts for the IMO. The Library covers the
+solar system, stars, deep-sky objects, spacecraft and rockets. Widgets show
+the Moon, the planets, Kp, the next launch, Voyager 1 and the Sun; the Apple
+Watch app shows the Moon and the planets; Control Center controls open the
+Sky, Sun and Launches tabs.
+
+No accounts, ads or tracking. Location stays on the device; anything that can
+be computed works offline.
