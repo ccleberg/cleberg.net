@@ -14,3 +14,15 @@ Feel free to send it my way.
 | Bitcoin (BTC)           | =3F1BnCovRyUKaX2Hm65ZHsPtY7uHhbKbqr=                   |
 | ETH/USDC: Ethereum/Base | =0xB5699A4FE445c08D740F3F7515BA41C4d8c5e801=           |
 | Solana (SOL)            | =5en9mVaivJwYqEhb9UfvfXLjsJJvxde4zZNGpsN5AfaA=         |
+
+* Sponsors
+
+Nobody here yet, so the top spot is open. Sponsor me on
+[[https://github.com/sponsors/ccleberg][GitHub]] and your name goes here:
+
+- $25 a month: your name or logo, linked, at the top of this list
+- $10 a month: your name, linked
+- $50 one time: your name, with an optional link, under past sponsors
+
+I add names by hand, so give it a few days. Your GitHub profile is the default;
+shoot me a message if you want a different name or link shown.
