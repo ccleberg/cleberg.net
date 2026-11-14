@@ -3,11 +3,14 @@
 #+options: toc:nil
 
 Want to support me for whatever reason? Extra rich and want to throw money away?
-Look, I'm here for it. I have set up sponsoring via GitHub for now. If you want
-to donate another way, shoot me a message.
+Look, I'm here for it. You can sponsor me via GitHub or send crypto to one of
+the addresses below. If you want to donate another way, shoot me a message.
 
 Feel free to send it my way.
 
 | Method                  | Address                                                |
 |-------------------------+--------------------------------------------------------|
 | GitHub                  | [[https://github.com/sponsors/ccleberg][@ccleberg]]                                              |
+| Bitcoin (BTC)           | =3F1BnCovRyUKaX2Hm65ZHsPtY7uHhbKbqr=                   |
+| ETH/USDC: Ethereum/Base | =0xB5699A4FE445c08D740F3F7515BA41C4d8c5e801=           |
+| Solana (SOL)            | =5en9mVaivJwYqEhb9UfvfXLjsJJvxde4zZNGpsN5AfaA=         |
