@@ -40,7 +40,7 @@ The fork is already a handful of releases ahead of upstream. Highlights so far:
   are now published to GHCR on every release tag:
 
 #+begin_src sh
-docker pull ghcr.io/krazywarez/skunky-art:latest
+docker pull ghcr.io/krz-labs/skunky-art:latest
 #+end_src
 
 - *Tooling*: added CI, golangci-lint, and outbound request throttling for
