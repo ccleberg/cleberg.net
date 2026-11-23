@@ -6,7 +6,7 @@
 /Privacy and security often overlap, so I have combined them here as privacy
 relies on security./
 
-* Passwords
+* Authentication
 
 For all passwords, I generate and store these within a [[https://bitwarden.com/][Bitwarden]] vault. I chose
 Bitwarden due to its open nature and plethora of clients. If I didn't have to
@@ -15,6 +15,10 @@ would sync it via Syncthing.
 
 When possible, I prefer a [[https://bitwarden.com/passphrase-generator/][passphrase]] over a [[https://bitwarden.com/password-generator/][password]]. However, some sites have
 short password length limits and a random string of characters may be better.
+
+I'd love to use physical passkeys more (e.g., [[https://www.yubico.com/][Yubico]]), but the support is still
+fairly lacking and requiring a backup key is a bit more hassle than it's worth
+to me.
 
 ** Multi-Factor Authentication (MFA)
 
@@ -76,9 +80,10 @@ On my personal devices, I ensure that I use an always-on VPN. Currently, I am
 using [[https://www.ivpn.net][IVPN]] and previously used [[https://mullvad.net][Mullvad]] for years. On my bittorrent server, I use
 [[https://airvpn.org/][AirVPN]] because it supports reliable port forwarding via the Wireguard CLI.
 
-For devices that cannot use a VPN, I rely on network-wide DNS from my router. On
-the router, I have installed [[https://nextdns.io/][NextDNS]] to ensure any non-VPN devices go through
-NextDNS instead of the ISP's DNS.
+For devices that cannot use a VPN, I rely on network-wide DNS from my router. I
+used to use [[https://nextdns.io/][NextDNS]] on my UDM Pro router, but I've since switched to encrypted
+DNS via Cloudflare. This blog post inspired my setup: [[https://george.tsiokos.com/posts/2024/09/doh-unifi-cloudflare-zero-trust/][DNS over HTTPS (DoH) with
+Ubiquiti & Cloudflare Zero Trust]].
 
 * Search Engines
 
@@ -87,7 +92,7 @@ a metasearch engine, aggregating the results of other search engines while not
 storing information about its users."
 
 When that is not possible (if it's down or a device doesn't allow setting custom
-default search engines), I use DuckDuckGo. It's the next best option.
+default search engines), I use [[https://duckduckgo.com][DuckDuckGo]]. It's the next best option.
 
 * Browsers
 
@@ -99,6 +104,8 @@ sane defaults and privacy-respecting settings.
 
 When required, I use [[https://www.torproject.org/][Tor]] to access onion sites and/or browser sites with
 marginally better privacy and anonymity.
+
+Separately, [[https://ladybird.org/][Ladybird]] is now in Alpha and I'm keeping a close eye on it.
 
 * Cloud Storage
 

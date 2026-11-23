@@ -1,15 +1,16 @@
-#+title: now
+#+title: Now
 #+slug: index
 #+options: toc:nil
-#+date: [2026-11-10 Tue 23:40:00]
+#+date: [2026-11-23 Mon 16:04:00]
 #+description: Read about what I'm doing now.
 
 This is a [[https://nownownow.com/about][/now]] page.
 
 * Tech
 
-I've been working on my new git forge, [[https://gitbay.org][gitbay]], and various other services:
+I've been working on my new git forge, [[https://gitbay.org][gitbay]], and various other apps and services:
 - [[https://gitbay.org/krz/gitbay-ios][gitbay-ios]]: an ios companion for gitbay
+- [[https://krz.sh/apps/hellsite/][hellsite]]: a better tumblr client
 - [[https://gitbay.org/krz/moonrise][moonrise]]: a night-sky and outer space exploration app for ios, including
   augmented reality support
 - [[https://gitbay.org/krz/org-live][org-live]]: updated my live org-mode rendering website from JS to Swift
@@ -25,9 +26,10 @@ View the historical [[https://gitbay.org/cmc/cleberg.net/log?path=content/now/in
 If you're actually interested, email or message me to talk about media!/
 
 - Playing some games:
+  - Halo: CE
   - Rocket League
+  - Runescape
 - Watching some shows:
-  - Archer (2009)
   - Cheers (1982)
   - Futurama (1999)
 - Watched some movies:

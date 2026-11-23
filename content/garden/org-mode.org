@@ -1,7 +1,24 @@
 #+title: 🌱 org-mode
 #+slug: org-mode
 #+description: Tidbits about the best plaintext language: org-mode.
-#+date: [2026-02-21 Sat 12:39:27]
+#+date: [2026-11-23 Mon 16:05:00]
+
+* Apps
+
+I use my own custom-built app, [[https://krz.sh/apps/orgstar/][orgstar]], for both macOS and iOS. The macOS
+version from GitHub can do more than the App Store macOS version since it can
+shell out commands to =emacs= when the app itself can't perform something.
+
+The primary benefit of these apps are the Apple integrations and ease of use,
+such as calendar and reminder integrations, menu bar quick actions, mobile-first
+designs, and more.
+
+However, both the iOS and macOS apps are phenomenal for my full use case and
+I've tried my best to build it for as many org-mode users as possible.
+
+Otherwise, I use standard emacs installations on Linux machines and =emacs= from
+Homebrew on macOS. On top of this, I always use Doom Emacs with my own custom
+dotfiles.
 
 * Time Reporting
 

@@ -1,4 +1,4 @@
-#+title: uses
+#+title: Uses
 #+slug: index
 #+options: toc:nil
 
