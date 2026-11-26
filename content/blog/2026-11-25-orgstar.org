@@ -1,0 +1,210 @@
+#+date: [2026-11-25 Wed 18:00:00]
+#+title: I Built My Own Org-Mode App for Mac and iPhone
+#+description: Why I built orgstar, an org-mode editor and agenda for Mac, iPhone and iPad, and what it does.
+#+slug: orgstar
+#+project: orgstar
+#+filetags: :development:org-mode:
+#+OPTIONS: ^:{}
+
+I've developed a habit recently of building custom programs for my specific
+problems rather than trying to shoehorn an existing program into the space.
+Sometimes it's worth it and sometimes I reinvent the wheel a bit, but it's great
+experience regardless.
+
+* The Problem
+
+My notes, tasks, and schedule all live in a folder of org-mode files. On my
+Linux machines and my Mac, that means Doom Emacs. On my phone, it meant [[https://beorgapp.com/][Beorg]],
+with Syncthing moving the files between devices.
+
+That setup worked, but it had a few gaps I kept running into:
+
+- Emacs isn't on my phone or iPad, so anything I did away from a computer went
+  through a separate app with its own subset of org.
+- Any app that touches my files has to leave them alone. If it reformats a
+  drawer or rewrites a timestamp I didn't touch, Emacs and Syncthing see a
+  change, and I get a diff or a sync conflict.
+- I wanted the Apple-side features that Emacs can't give me: Calendar and
+  Reminders in the agenda, widgets, a menu bar clock, the share sheet, and
+  Shortcuts.
+
+So I built my own: [[https://krz.sh/apps/orgstar/][orgstar]], a native org-mode editor and agenda for Mac, iPhone,
+and iPad. It reads and writes the same =.org= files Emacs does, and it leaves
+every byte you didn't change as it was.
+
+#+caption: The orgstar Editor on macOS
+#+attr_html: :alt The orgstar Mac window with a sidebar of org files, an outline of the current file, and work.org open in the editor showing TODO, NEXT, WAITING and DONE headings with tags, deadlines, scheduled timestamps and a checklist.
+[[https://img.cleberg.net/blog/20261125-orgstar/mac-01-editor.webp]]
+
+* What It Does
+
+orgstar covers the parts of org-mode I use every day, and adds the things a
+native app can do that Emacs can't. Here's how each piece fits into a normal
+day.
+
+** Plan the day in the agenda
+
+The agenda pulls scheduled items, deadlines, and timestamps from every file in
+your folders into one list by day, week, or month. It shows habits, the current
+time, and how far ahead reminders are set. With Calendar and Reminders turned on,
+your events and reminders show up in the same list, so there's one place to
+look in the morning instead of three.
+
+orgstar sends a notification before each timed entry, the same way
+=appt-message-warning-time= does in Emacs. On iPhone, the app icon's badge counts
+anything overdue.
+
+#+caption: The Agenda on macOS
+#+attr_html: :alt The orgstar agenda showing a week of entries grouped by day, each with a time or Scheduled/Due label, its source file, tags, and a colored TODO, NEXT or WAITING keyword.
+[[https://img.cleberg.net/blog/20261125-orgstar/mac-02-agenda.webp]]
+
+** Move work along on the board
+
+The board shows every task across your files as a table, or as columns by TODO
+keyword. Drag a card from TODO to NEXT and the keyword changes in the file. It's
+a quick way to see what's in progress and what's stuck in WAITING without
+writing a custom agenda view.
+
+#+caption: The Board on macOS
+#+attr_html: :alt The orgstar board in kanban mode with TODO, NEXT, WAITING and DONE columns, each card showing a task's title, file, tags and its scheduled date or deadline.
+[[https://img.cleberg.net/blog/20261125-orgstar/mac-06-board.webp]]
+
+** Capture from anywhere
+
+Capture uses org's own templates, so the ones in your Emacs config work as they
+are. On the Mac, =⌃⌥Space= opens a small capture window from any app. You can also
+capture from the share sheet, Shortcuts, widgets, or =org-protocol://= links, so
+browser bookmarklets written for Emacs keep working. Refile sends an entry to
+another heading in any of your files once you've sorted it out.
+
+#+caption: Capture on macOS
+#+attr_html: :alt The orgstar Capture window with a Personal todo template filing into todo.org under Inbox, a TODO heading being typed, and Cancel, Refile and File It buttons.
+[[https://img.cleberg.net/blog/20261125-orgstar/mac-04-capture.webp]]
+
+** Edit with the keys you already know
+
+The editor styles headings, TODO keywords, priorities, tags, timestamps, links,
+lists, tables, and source blocks as you type, and supports folding and the usual
+structure editing (promote, demote, move subtrees). Pick Emacs, Mac, or Doom
+(Vim) keys. If you already have an Emacs or Doom config, Settings ▸ General ▸
+Import from Emacs carries over your org settings, folders, capture templates,
+key bindings, and agenda views.
+
+If you forget a key, the command palette lists every command with its bindings.
+
+#+caption: The Command Palette
+#+attr_html: :alt The orgstar Run command palette listing commands such as Agenda, Align Table and Archive Subtree, each with its Emacs and Doom key bindings on the right.
+[[https://img.cleberg.net/blog/20261125-orgstar/mac-08-palette.webp]]
+
+** Track time
+
+Clock in and out of any entry, and orgstar writes the =CLOCK= lines to its
+=LOGBOOK= as Emacs does. On the Mac, the running clock sits in the menu bar. On
+iPhone, it shows on the Lock Screen and in the Dynamic Island as a Live
+Activity, with a Clock Out button. Clock reports total your time by entry and
+by day over any date range.
+
+** Tables and code blocks
+
+Tables align as you type, and =#+TBLFM= formulas recalculate in place, so a
+running log or a budget totals itself. Source blocks run and write their output
+to =#+RESULTS:=, and tangling writes them out to files, as =org-babel-tangle=
+does. The Mac download runs any language you have installed; the App Store
+versions run Emacs Lisp in orgstar's own interpreter.
+
+#+caption: A Table Formula and a Python Block With Its Results
+#+attr_html: :alt runs.org in the orgstar editor: a run log table whose TBLFM line sums the distance column into a Total row, followed by a Python source block that prints the pace of each run and its RESULTS block below it.
+[[https://img.cleberg.net/blog/20261125-orgstar/mac-05-code.webp]]
+
+** Linked notes
+
+If you keep org-roam style notes with =:ID:= properties and =id:= links, orgstar
+handles them: find and insert nodes, see backlinks next to the editor, keep daily
+notes, and browse a graph of how everything links together.
+
+#+caption: The Note Graph on macOS
+#+attr_html: :alt The orgstar Graph window showing 21 linked notes as dots and lines, with the open note, Org mode, highlighted in orange at the center and notes such as Emacs, Babel, Agenda and Plain text around it.
+[[https://img.cleberg.net/blog/20261125-orgstar/mac-07-graph.webp]]
+
+** Find, share, and protect
+
+- *Search* covers file names, headings, and text. On the Mac, =.org= files also
+  show up in Spotlight and preview in Quick Look.
+- *Export* to HTML, Markdown, PDF, Word, RTF, ODT, LaTeX, iCalendar, or plain
+  text, or copy a selection as rich text to paste into an email.
+- *Encrypted entries* written by org-crypt can be decrypted and edited, and new
+  ones encrypted in a format Emacs reads.
+- *Attachments* work like org-attach, including photos from the iPhone's library.
+
+** On iPhone, iPad, and Apple Watch
+
+The iOS app has the same editor, agenda, capture, search, clocking, export, and
+tangling as the Mac, and works on any folder in iCloud Drive or another app's
+storage, such as a Syncthing folder. On top of that:
+
+- Home Screen and Lock Screen widgets for today's agenda, habits, and one-tap
+  capture.
+- The clock's Live Activity on the Lock Screen.
+- An Apple Watch app that shows today's agenda, marks entries done, stops the
+  running clock, and takes dictated captures.
+
+#+caption: The Agenda, Editor and Capture on iPhone
+#+attr_html: :alt Three iPhone screenshots side by side: the orgstar agenda listing the day's timed entries with TODO and NEXT keywords; work.org in the editor with headings, deadlines and a key bar above the keyboard; and the Capture screen with a Personal todo template, a TODO being typed, and State, Priority and Scheduled fields.
+[[https://img.cleberg.net/blog/20261125-orgstar/ios-row.webp]]
+
+** Living next to Emacs
+
+orgstar never takes over your files. There's no account and no database of your
+notes; settings are plain files under =~/.config/orgstar/= that can sit in your
+dotfiles. Edit a file in Emacs on one machine and orgstar on another, and
+Syncthing or iCloud keeps them in step. If both change the same file, orgstar
+merges the edits, and if they truly conflict, it shows you both versions instead
+of picking one.
+
+* Under the Hood
+
+/Note: This section is for the nerds. Feel free to skip it./
+
+orgstar is Swift. All of the org logic lives in one package, =OrgCore=, which
+imports nothing from AppKit or UIKit, so the Mac and iOS apps share the same
+parser, agenda, and commands.
+
+- *A lossless parser.* The syntax tree reproduces the file exactly, whitespace
+  included, and anything it doesn't recognize is kept as raw text. On save, only
+  the bytes you edited are rewritten, so line endings, encodings, and syntax
+  orgstar doesn't understand all survive. The tree is built like rust-analyzer's
+  rowan, with node ranges in UTF-16 so the editor and parser never convert
+  offsets.
+- *Incremental reparsing.* An edit reparses only the element it touches, unless
+  it changes structure (a new heading or block delimiter), in which case it
+  reparses forward until the old and new trees line up again.
+- *Commands as data.* Every action is a pure function that returns minimal text
+  edits. Keys, menus, the palette, and the iOS toolbar all call the same
+  commands, and the Emacs, Mac, and Doom keymaps are just TOML files.
+- *Safe saves.* Before writing, orgstar compares the file on disk with the
+  version it last read. If something else changed it, orgstar runs a three-way
+  merge, writes atomically, and keeps both versions in a recovery folder.
+- *A throwaway index.* Search and the agenda run on a SQLite index rebuilt from
+  the files, which can be deleted at any time.
+- *Tested against Emacs.* Oracle tests run the same file and command through a
+  pinned =emacs --batch= and compare the resulting bytes, cursor, and undo
+  state. The repository has about 1,200 tests.
+
+* Getting It
+
+orgstar is on the [[https://apps.apple.com/us/app/orgstar-org-mode-agenda/id6821552018][App Store]] for Mac, iPhone, and iPad. The Mac app also comes as
+a notarized download that can run code blocks in any installed language and hand
+exports off to Emacs:
+
+#+begin_src shell
+brew tap krz/tap https://gitbay.org/krz/homebrew-tap.git
+brew install --cask orgstar
+#+end_src
+
+Editing, the agenda, capture, clocking, tables, search, and HTML and Markdown
+export are free. orgstar+ adds the rest (running code blocks, the other export
+formats, widgets, the Watch app, Calendar and Reminders, and more). The [[https://krz.sh/apps/orgstar/][app page]]
+has the details, and the [[https://krz.gitbay.site/orgstar/][manual]] documents every feature.
+
+If you use org-mode, give it a try and let me know what you think, or open an
+issue on [[https://gitbay.org/krz/orgstar][gitbay]].
