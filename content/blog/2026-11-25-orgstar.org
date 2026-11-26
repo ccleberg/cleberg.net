@@ -6,6 +6,10 @@
 #+filetags: :development:org-mode:
 #+OPTIONS: ^:{}
 
+#+caption: orgstar, a native org-mode editor
+#+attr_html: :alt Three iPhones on a green background running orgstar: work.org open in the editor with TODO, NEXT, WAITING and DONE headings, the agenda for Oct 16 to Oct 25 listing timed and scheduled tasks, and home.org showing a groceries checklist and a run log table.
+[[https://img.cleberg.net/blog/20261125-orgstar/hero.webp]]
+
 I've developed a habit recently of building custom programs for my specific
 problems rather than trying to shoehorn an existing program into the space.
 Sometimes it's worth it and sometimes I reinvent the wheel a bit, but it's great
