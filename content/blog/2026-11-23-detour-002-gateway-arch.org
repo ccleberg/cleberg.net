@@ -1,0 +1,119 @@
+#+date: [2026-11-23 Mon 16:46:00]
+#+title: detour #002: Gateway Arch National Park
+#+description: A visit to the Gateway Arch National Park in St. Louis, MO.
+#+slug: detour-002-gateway-arch
+#+filetags: :detour:
+#+location: St. Louis, MO
+#+rating: 3
+
+#+begin_detour
+- Location :: St. Louis, MO · [[https://www.openstreetmap.org/relation/12813920#map=19/38.624612/-90.184969][map]]
+- Admission :: Grounds, Visitor Center and museum free; tram to the top $19 adults, $15 youth (as of 2026-11)
+- Hours :: Daily, roughly 9am–6pm, later in summer; check the [[https://www.gatewayarch.com/plan-your-visit/#hours][official site]]
+- Visited :: 2025-07
+- Worth the drive :: ★★★☆☆ (3/5)
+#+end_detour
+
+Part of [[/detour/][detour]], a series on places worth leaving the highway for.
+
+* Overview
+
+The Gateway Arch sits on the St. Louis riverfront as a monument to westward
+expansion. The site started as the Jefferson National Expansion Memorial in
+1935, and Eero Saarinen's design won the competition for it in 1947. The arch is
+an inverted catenary curve, 630 feet tall and 630 feet wide at the base, built
+from stainless steel over concrete. Construction ran from 1963 to 1965, and the
+tram to the top opened in 1967. In 2018 the memorial was renamed Gateway Arch
+National Park, which made it the smallest national park in the country.
+
+#+caption: Wide view of the Gateway Arch and Visitor Center plaza
+#+attr_html: :alt Wide-angle view of the tan plaza leading to the sunken glass Visitor Center entrance framed by two dark Gateway Arch National Park signs, green lawns, and the full arch against a deep blue sky
+[[https://img.cleberg.net/blog/20261123-detour-002-gateway-arch/entrance-wide.webp]]
+
+* The Experience
+
+I was in St. Louis for work, and the arch was a short walk from the office, so I
+went over after work one evening. The walk through the park is the best part of
+getting there: green lawns, trees, and old buildings on every side of the arch.
+During the winter season, the park is usually decorated with festive lights as
+well.
+
+#+caption: The Gateway Arch rising above the underground Visitor Center entrance
+#+attr_html: :alt Visitors walking across the plaza toward the curved glass entrance of the Gateway Arch National Park Visitor Center with the full stainless steel arch rising against a blue sky with scattered white clouds
+[[https://img.cleberg.net/blog/20261123-detour-002-gateway-arch/entrance.webp]]
+
+The Visitor Center is underground, under the lawn between the legs of the arch,
+which I thought was a great way to keep the grounds open. Inside there are
+museum areas that I'd love to go through next time. This time I was racing the
+clock to catch one of the last tram rides of the day, so I walked straight past
+them. I'd love to visit again in the future and experience all the other aspects
+of the park.
+
+#+caption: Looking up along the stainless steel curve from the base of the Arch
+#+attr_html: :alt Low-angle view from the grassy park grounds looking steeply upward along one reflective stainless steel leg of the Gateway Arch curving overhead against a bright blue sky, with river bridges visible in the background
+[[https://img.cleberg.net/blog/20261123-detour-002-gateway-arch/looking-up.webp]]
+
+The tram up is a string of small pods, each with five seats, and they are not
+built for someone my size. I squeezed in as the last passenger in my car, and an
+older woman across from me pointed out that I was too big for it. She was
+correct. Even by myself, it would've been uncomfortable, but putting 5 people in
+there together is more uncomfortable than the smallest airplace seat I've been
+in.
+
+Luckily, the tram ride is only a few minutes long to the top and the windows let
+you see the extensive stairwells and internals of the arch as you climb.
+
+#+caption: Inside one of the tram cars (photo: [[https://commons.wikimedia.org/wiki/File:Gateway_Arch_tram_car.JPG][Robert Lawton]], [[https://creativecommons.org/licenses/by-sa/2.5][CC BY-SA 2.5]])
+#+attr_html: :alt The inside of a Gateway Arch tram car: a small white egg-shaped pod with five molded seats around a narrow floor and a round door at the far end
+[[https://img.cleberg.net/blog/20261123-detour-002-gateway-arch/tram-car.webp]]
+
+* Views from the Top
+
+When you reach the top, the observation deck is a narrow, low room with small
+slanted windows on both sides. For some reason, I have a thing for views from up
+high, and this one did not disappoint.
+
+#+caption: Height marker next to an observation deck window at the top of the Arch
+#+attr_html: :alt Interior of the Gateway Arch observation deck with textured gray walls, a rectangular National Park Service sign reading Gateway Arch 630 Feet 192 M, and a small angled window looking down at the green-domed Old Courthouse
+[[https://img.cleberg.net/blog/20261123-detour-002-gateway-arch/630ft-sign.webp]]
+
+#+caption: Classic triangular Gateway Arch sign beside a viewing window
+#+attr_html: :alt Triangular sign inside the observation deck reading 192 M, 630 Feet, Gateway Arch St. Louis with an arch outline and National Park Service emblem beside a narrow viewing window overlooking the Old Courthouse
+[[https://img.cleberg.net/blog/20261123-detour-002-gateway-arch/vintage-sign.webp]]
+
+The west windows look over the park, the Old Courthouse, Busch Stadium, and
+downtown St. Louis.
+
+You're able to see all the way west to a surprising extent. In the photo below,
+you can see a cluster of taller buildings far out - that's Clayton, a district
+approximately 8 miles west of the Arch. At this height, the horizon should
+extend out as far as 50 miles, which would include parts of the St. Charles
+County side on a clear day. This photo was in July, so you can see the effects
+of haze clouding the horizon beyond Clayton.
+
+#+caption: Westward view of downtown St. Louis from the top of the Arch
+#+attr_html: :alt Elevated panoramic view looking west from the Gateway Arch observation deck over the green park lawn, the circular Visitor Center entrance, the green-domed Old Courthouse at center, Busch Stadium to the left, and the downtown St. Louis skyline
+[[https://img.cleberg.net/blog/20261123-detour-002-gateway-arch/skyline-view.webp]]
+
+The east windows look across the Mississippi into Illinois, with the arch's
+shadow stretched out over the water.
+
+#+caption: The Mississippi River and the Arch's shadow looking east toward Illinois
+#+attr_html: :alt High aerial view looking east from the top of the Gateway Arch across the brown Mississippi River toward Illinois, with the dark curved shadow of the Arch cast onto the water alongside riverfront docks and distant bridges
+[[https://img.cleberg.net/blog/20261123-detour-002-gateway-arch/river-view.webp]]
+
+If you lean into a window, you can see straight down to both legs in the grass.
+
+#+caption: Looking straight down at the Arch's legs and shadow
+#+attr_html: :alt Steep downward view from the top of the Gateway Arch showing both stainless steel legs anchored in the grassy park grounds below and the full curved shadow of the Arch stretching across the riverfront into the Mississippi River
+[[https://img.cleberg.net/blog/20261123-detour-002-gateway-arch/looking-down.webp]]
+
+All in all, it's a great stop and definitely worth the time if you're near St.
+Louis. I certainly wouldn't make a trip /just/ for this park, but it's pretty cool
+regardless.
+
+* Going
+
+The arch is in downtown St. Louis, right off I-70, I-55, I-64 and I-44. If
+you're in town, it's an easy stop. Get there with enough time for the museum
+before your tram, which is the part I'll be going back for.
