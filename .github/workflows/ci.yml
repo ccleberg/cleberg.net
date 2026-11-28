@@ -1,4 +1,4 @@
-# lint and build run on every push and pull request. link-check runs weekly.
+# lint and build run on pushes to main and on pull requests. link-check runs weekly.
 name: ci
 
 on:
