@@ -9,7 +9,7 @@
 #+ICON: https://img.cleberg.net/apps/domaindig/icon.png?v=5.5.3
 #+HERO: https://img.cleberg.net/apps/domaindig/hero.jpg?v=5.5.3
 #+APPSTORE: https://apps.apple.com/us/app/domaindig/id6760368004
-#+REPO: https://gitbay.org/krz/domain-dig
+#+REPO: https://github.com/krz-labs/domain-dig
 #+PRIVACY: https://krz.sh/privacy/domain-dig/
 #+HIGHLIGHT_1: Every record | A to PTR, DNSSEC, the redirect chain and what answers on the wire.
 #+HIGHLIGHT_2: Email and TLS | SPF, DMARC, DKIM, MTA-STS and BIMI; the certificate, chain and cipher.

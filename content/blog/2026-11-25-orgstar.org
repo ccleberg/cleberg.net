@@ -201,14 +201,14 @@ a notarized download that can run code blocks in any installed language and hand
 exports off to Emacs:
 
 #+begin_src shell
-brew tap krz/tap https://gitbay.org/krz/homebrew-tap.git
+brew tap krz-labs/tap
 brew install --cask orgstar
 #+end_src
 
 Editing, the agenda, capture, clocking, tables, search, and HTML and Markdown
 export are free. orgstar+ adds the rest (running code blocks, the other export
 formats, widgets, the Watch app, Calendar and Reminders, and more). The [[https://krz.sh/apps/orgstar/][app page]]
-has the details, and the [[https://krz.gitbay.site/orgstar/][manual]] documents every feature.
+has the details, and the [[https://files.krz.sh/orgstar/][manual]] documents every feature.
 
 If you use org-mode, give it a try and let me know what you think, or open an
-issue on [[https://gitbay.org/krz/orgstar][gitbay]].
+issue on [[https://github.com/krz-labs/orgstar/issues][GitHub]].

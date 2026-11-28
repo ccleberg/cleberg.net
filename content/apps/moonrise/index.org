@@ -8,7 +8,7 @@
 #+TINT: #0a1424
 #+ICON: https://img.cleberg.net/apps/moonrise/icon.png
 #+HERO: https://img.cleberg.net/apps/moonrise/hero.jpg?v=5.8.0.1
-#+REPO: https://gitbay.org/krz/moonrise
+#+REPO: https://github.com/krz-labs/moonrise
 #+PRIVACY: https://krz.sh/privacy/moonrise/
 #+HIGHLIGHT_1: Your sky | Stars, planets and the Moon for your place and time, from 3000 BCE to 3000 CE.
 #+HIGHLIGHT_2: Live space | The Sun and solar wind now, aurora alerts, launches, eclipses, satellite passes and the Deep Space Network.

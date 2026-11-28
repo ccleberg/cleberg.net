@@ -19,7 +19,7 @@ downsides:
 - since it runs through Emacs in the background, it takes quite a while to build
   my site (~180 pages)
 
-So, I decided to spin up my own org-mode-based SSG: [[https://gitbay.org/krz/orgo][orgo]]. This SSG uses org-mode
+So, I decided to spin up my own org-mode-based SSG: [[https://github.com/krz-labs/orgo][orgo]]. This SSG uses org-mode
 (rather than markdown) for its content.
 
 #+caption: The orgo CLI
@@ -34,7 +34,7 @@ you can see in the table below, orgo is incredibly fast.
 | Method                                 | Time  | Diff        |
 |----------------------------------------+-------+-------------|
 | weblorg (=emacs --script publish.el=)    | 49.0s |             |
-| weblorg + [[https://gitbay.org/cmc/cleberg.net/blob/8ec9cdfeae71068a8924dd9f61b9cc28c947ec31/build.py][build.py]]                     | 50.3s |             |
+| weblorg + [[https://github.com/ccleberg/cleberg.net/blob/8ec9cdfeae71068a8924dd9f61b9cc28c947ec31/build.py][build.py]]                     | 50.3s |             |
 | orgo, cold build                       | *0.22s* | 223× faster |
 | orgo, nothing changed since last build | *0.13s* | 377× faster |
 

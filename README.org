@@ -3,7 +3,7 @@
 This repository holds the files for [[https://cleberg.net][cleberg.net]],
 a static-site with blog posts, personal links, and more.
 
-This site uses [[https://gitbay.org/krz/orgo][orgo]] to build the
+This site uses [[https://github.com/krz-labs/orgo][orgo]] to build the
 static site.
 
 ** Site Structure
@@ -27,8 +27,8 @@ The main site components are:
 
 The publishing system depends on:
 
-- [[https://gitbay.org/krz/orgo][orgo]], the static site generator, installed with =cargo install --git
-  https://gitbay.org/krz/orgo=.
+- [[https://github.com/krz-labs/orgo][orgo]], the static site generator, installed with =cargo install --git
+  https://github.com/krz-labs/orgo=.
 - =rsync= for deployment.
 - [[https://github.com/astral-sh/uv][uv]] to run =build.py=.
 

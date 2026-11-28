@@ -9,7 +9,7 @@
 #+ICON: https://img.cleberg.net/apps/orgstar/icon.png
 #+HERO: https://img.cleberg.net/apps/orgstar/hero.jpg?v=0.7.0
 #+APPSTORE: https://apps.apple.com/us/app/orgstar-org-mode-agenda/id6821552018
-#+REPO: https://gitbay.org/krz/orgstar
+#+REPO: https://github.com/krz-labs/orgstar
 #+PRIVACY: https://krz.sh/privacy/orgstar/
 #+HIGHLIGHT_1: Plain text | Reads and writes the same files Emacs does, byte for byte.
 #+HIGHLIGHT_2: Agenda | Scheduled items, deadlines, habits and calendar events.
@@ -51,7 +51,7 @@ languages, and export through Emacs when it is installed. install it with
 Homebrew:
 
 #+begin_src sh
-brew tap krz/tap https://gitbay.org/krz/homebrew-tap.git
+brew tap krz-labs/tap
 brew install --cask orgstar
 #+end_src
 
@@ -63,7 +63,7 @@ or another app’s storage, such as a Syncthing folder.
 
 * the manual
 every feature is documented in the
-[[https://krz.gitbay.site/orgstar/][orgstar manual]].
+[[https://files.krz.sh/orgstar/][orgstar manual]].
 
 * no analytics, no ads, no SDKs
 no accounts, no tracking, no third-party SDKs. your notes stay in your folders.
