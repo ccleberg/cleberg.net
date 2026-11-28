@@ -1,0 +1,95 @@
+# lint and build run on every push and pull request. link-check runs weekly.
+name: ci
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  RUFF_VERSION: 0.16.4
+  ORGO_VERSION: 0.24.0
+  LYCHEE_VERSION: 0.24.2
+
+jobs:
+  lint:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - run: pip install --quiet --disable-pip-version-check "ruff==$RUFF_VERSION"
+      - run: ruff check --no-fix
+      - run: ruff format --check --diff
+
+  build:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - run: cargo install orgo --version "$ORGO_VERSION" --locked --root "$HOME/tools/orgo"
+      # build.py deploys with rsync when DEPLOY=true and ENV=prod. A failing
+      # rsync stub makes sure CI can never reach the production host.
+      # ENV=prod skips the development path, which rewrites files with ruff.
+      - run: |
+          mkdir -p .ci-bin
+          printf '#!/bin/sh\necho "rsync was invoked from CI" >&2\nexit 1\n' > .ci-bin/rsync
+          chmod +x .ci-bin/rsync
+          PATH="$PWD/.ci-bin:$HOME/tools/orgo/bin:$PATH" ENV=prod BUILD=true python3 build.py
+      - run: |
+          pages=$(find .build -name '*.html' | wc -l)
+          echo "built $pages html pages"
+          if [ "$pages" -lt 100 ]; then
+            echo "only $pages pages built; expected the full site" >&2
+            exit 1
+          fi
+
+  link-check:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - run: cargo install orgo --version "$ORGO_VERSION" --locked --root "$HOME/tools/orgo"
+      - run: |
+          d=$HOME/tools/lychee
+          mkdir -p "$d"
+          t=lychee-x86_64-unknown-linux-gnu.tar.gz
+          base=https://github.com/lycheeverse/lychee/releases/download/lychee-v$LYCHEE_VERSION
+          curl -sSfL -o "$d/$t" "$base/$t"
+          curl -sSfL -o "$d/$t.sha256" "$base/$t.sha256"
+          (cd "$d" && sha256sum -c "$t.sha256")
+          tar -xzf "$d/$t" -C "$d" --strip-components=1
+          echo "$d" >> "$GITHUB_PATH"
+      # orgo directly, not build.py: a production build rewrites img.cleberg.net
+      # URLs to /img/, which would show as broken links here.
+      - run: "$HOME/tools/orgo/bin/orgo build content -o .build-dev --strict"
+      # Internal links are gated; every failure is fixable in this repo.
+      - run: |
+          st=0
+          lychee --offline --root-dir "$PWD/.build-dev" --include-verbatim \
+            --no-progress --format markdown --output internal.md \
+            '.build-dev/**/*.html' || st=$?
+          cat internal.md 2>/dev/null || echo "no report"
+          exit $st
+      # External links are reported, not gated. The summary check catches
+      # lychee failing to start, which would otherwise pass silently.
+      - run: |
+          st=0
+          lychee --root-dir "$PWD/.build-dev" \
+            --exclude '\.onion' \
+            --exclude '^https?://(localhost|127\.0\.0\.1|0\.0\.0\.0)' \
+            --exclude '(\{|%7B|client_id=$)' \
+            --max-concurrency 8 --max-retries 2 --timeout 20 \
+            --accept 200,206,301,302,303,307,308,401,403,429 \
+            --include-verbatim --no-progress --format markdown \
+            --output external.md '.build-dev/**/*.html' || st=$?
+          cat external.md 2>/dev/null || echo "no report"
+          if ! grep -q "Total" external.md 2>/dev/null; then
+            echo "lychee produced no summary; it did not run" >&2
+            exit 1
+          fi
+          echo "external check exited $st; not gating"
