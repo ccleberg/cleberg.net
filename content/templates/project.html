@@ -10,10 +10,10 @@
 {%- set projects = {
   "krz": {"org": "krz"},
   "hutch": {"org": "krz", "name": "Hutch", "url": "https://krz.sh/apps/hutch/"},
-  "orgo": {"org": "krz", "name": "orgo", "url": "https://gitbay.org/krz/orgo"},
-  "nfogen": {"org": "krz", "name": "nfogen", "url": "https://gitbay.org/krz/nfogen"},
-  "skunky-art": {"org": "krz", "name": "SkunkyArt", "url": "https://gitbay.org/krz/skunky-art"},
-  "audit-tools": {"org": "audit-labs", "name": "audit-tools", "url": "https://gitbay.org/audit-labs/audit-tools"},
+  "orgo": {"org": "krz", "name": "orgo", "url": "https://github.com/krz-labs/orgo"},
+  "nfogen": {"org": "krz", "name": "nfogen", "url": "https://github.com/krz-labs/nfogen"},
+  "skunky-art": {"org": "krz", "name": "SkunkyArt", "url": "https://github.com/krz-labs/skunky-art"},
+  "audit-tools": {"org": "audit-labs", "name": "audit-tools", "url": "https://github.com/audit-labs/audit-tools"},
 } %}
 {%- set p = projects[project] if project in projects else none %}
 {%- if p %}

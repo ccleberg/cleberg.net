@@ -8,7 +8,7 @@
 #+ICON: https://img.cleberg.net/apps/daybyday/icon.png
 #+HERO: https://img.cleberg.net/apps/daybyday/hero.jpg?v=2.0
 #+APPSTORE: https://apps.apple.com/us/app/daybyday-learn/id6760321939
-#+REPO: https://gitbay.org/krz/daybyday
+#+REPO: https://github.com/krz-labs/daybyday
 #+PRIVACY: https://krz.sh/privacy/daybyday/
 #+HIGHLIGHT_1: Learning games | Find it, week train, tracing, counting and more across 11 topics.
 #+HIGHLIGHT_2: For little hands | Big pictures, no reading needed, and every prompt spoken aloud.

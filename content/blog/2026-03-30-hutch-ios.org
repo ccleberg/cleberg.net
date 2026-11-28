@@ -20,9 +20,9 @@ project pages:
 - [[https://krz.sh/apps/hutch/][Website]]
 
 *Development*
-- [[https://gitbay.org/krz/hutch][Source]]
+- [[https://github.com/krz-labs/hutch][Source]]
 - [[https://krz.sh/apps/hutch/][Project]]
-- [[https://gitbay.org/krz/hutch/issues][Issues]]
+- [[https://github.com/krz-labs/hutch/issues][Issues]]
 
 ** Overview
 
@@ -88,4 +88,4 @@ following tagged on my roadmap:
 If you use Sourcehut and iOS, please give Hutch a try and let me know your
 thoughts!
 
-If you find bugs or issues, feel free to file them in the [[https://gitbay.org/krz/hutch/issues][issues]] tracker.
+If you find bugs or issues, feel free to file them in the [[https://github.com/krz-labs/hutch/issues][issues]] tracker.

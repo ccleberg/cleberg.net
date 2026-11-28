@@ -8,17 +8,17 @@ This is a [[https://nownownow.com/about][/now]] page.
 
 * Tech
 
-I've been working on my new git forge, [[https://gitbay.org][gitbay]], and various other apps and services:
-- [[https://gitbay.org/krz/gitbay-ios][gitbay-ios]]: an ios companion for gitbay
+I've been working on my new git forge, [[https://github.com/krz-labs/gitbay][gitbay]], and various other apps and services:
+- [[https://github.com/krz-labs/gitbay-ios][gitbay-ios]]: an ios companion for gitbay
 - [[https://krz.sh/apps/hellsite/][hellsite]]: a better tumblr client
-- [[https://gitbay.org/krz/moonrise][moonrise]]: a night-sky and outer space exploration app for ios, including
+- [[https://github.com/krz-labs/moonrise][moonrise]]: a night-sky and outer space exploration app for ios, including
   augmented reality support
-- [[https://gitbay.org/krz/org-live][org-live]]: updated my live org-mode rendering website from JS to Swift
-- [[https://gitbay.org/krz/orgo][orgo]]: an org-mode based static-site generator
-- [[https://gitbay.org/krz/orgstar][orgstar]]: a native macos & ios app for org-mode files
-- [[https://gitbay.org/krz/skunky-art][skunky-art]]: the fork I maintain of SkunkyArt
+- [[https://github.com/krz-labs/org-live][org-live]]: updated my live org-mode rendering website from JS to Swift
+- [[https://github.com/krz-labs/orgo][orgo]]: an org-mode based static-site generator
+- [[https://github.com/krz-labs/orgstar][orgstar]]: a native macos & ios app for org-mode files
+- [[https://github.com/krz-labs/skunky-art][skunky-art]]: the fork I maintain of SkunkyArt
 
-View the historical [[https://gitbay.org/cmc/cleberg.net/log?path=content/now/index.org][log of changes]] for this page.
+View the historical [[https://github.com/ccleberg/cleberg.net/commits/main/content/now/index.org][log of changes]] for this page.
 
 * Media
 
